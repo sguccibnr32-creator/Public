@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Large data files (not redistributable)
+*.csv.gz
+*.csv.gz.*
+*.fits
+*.fits.gz
+data/Rotmod_LTG/
+data/phase1/
+
+# HSC data (10+ GB, not redistributable)
+931720.csv*
+
+# Generated outputs
+*.pdf
+*.png
+phase_b_output/
+phase_a_output/
+
+# Broken name files
+broken_names/
+
+# Local config
+.env
