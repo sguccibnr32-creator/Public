@@ -1,0 +1,693 @@
+<!-- WordPress カスタムHTMLブロックにそのまま貼り付けてください -->
+<!-- 膜宇宙論モデル v4.7.8 統合版 (dSph拡張を追加) -->
+<div style="font-family: 'Noto Serif JP', 'Georgia', serif; max-width: 860px; margin: 0 auto; padding: 40px 24px; color: #1a1a2e; line-height: 1.9;">
+
+  <!-- タイトル -->
+<h1 style="font-size: 38px; font-weight: 900; letter-spacing: 0.04em; color: #0f0f1a; border-left: 6px solid #e94560; padding-left: 20px; margin-bottom: 8px;">
+    MOND は膜モデルの特殊ケースだった——g<sub>c</sub> 幾何平均法則の発見</h1>
+<p style="font-size: 13px; color: #888; margin-top: 0; margin-bottom: 48px;">膜宇宙論モデル v4.7.8 統合版｜ 坂口 忍（坂口製麺所）</p>
+
+  <!-- v4.7.8 更新通知 (最新) -->
+<div style="background: #fff0f3; border-left: 5px solid #e94560; padding: 16px 24px; border-radius: 6px; margin-bottom: 24px; font-size: 15px; line-height: 1.9;">
+    <strong style="color: #c0392b">【v4.7.8 更新注記（2026年4月16日） — dSph 拡張】</strong>
+
+圧力支持系（矮小楕円体銀河 dSph）への理論拡張を追加しました（新§⑩）。
+
+<strong>v4.7.8 の主要新結果（全4件 A級）：</strong>
+
+・<strong>J3 体制逆転の発見</strong>：dSph では M<sub>J,mem</sub> ≪ M<sub>J,std</sub> で膜とバリオンの因果方向が SPARC と逆転。C15 は直接適用不可（+1.5 dex オフセット）だが、その起源は体制転換として理論的に特定された（28/31 dSph で確認）。
+
+・<strong>Bernoulli 予測 G<sub>Strigari</sub> = s₀(1−s₀) a₀ = 0.228 a₀</strong>：U(ε;c) の c→0 極限から膜の固有揺らぎが Strigari 普遍加速度スケールを第一原理的に予測。dSph 31銀河 (0.240 a₀, 5% 一致) と SPARC ブリッジ銀河外側 (0.219 a₀, 4% 一致) の 2 独立集団で再現。
+
+・<strong>C15 → Strigari 連続遷移</strong>：ブリッジ銀河 4個 (ESO444-G084, NGC2915, NGC1705, NGC3741) が銀河内半径方向に Υ_dyn の有意な連続増加 (z = 2.4〜21.6) を示し、SPARC 内側 → J3 遷移帯 → dSph 外側へと連続に繋がることを確認。
+
+・<strong>g<sub>obs</sub> の M<sub>bar</sub> 独立性</strong>：dSph 内での多変量回帰 (0.2σ null) で膜理論の真の非トートロジー予測として確認。逆に純粋 Strigari 普遍性 (g<sub>obs</sub> = const) は r<sub>h</sub> 依存性 (−3.4σ, dSph sigma-size 関係に起因) で部分的に棄却。
+
+・<strong>H4 仮説の再解釈</strong>：従来「gc ∝ M<sub>dyn</sub>⁻¹」とされた相関は、σ<sup>0</sup> × r<sub>h</sub><sup>−1.5</sup> と分解され、実体は r<sub>h</sub>⁻³ᐟ² 単独依存であることが判明（σ 寄与ゼロ）。</div>
+
+  <!-- v4.7 更新通知 (履歴) -->
+<div style="background: #fff8e1; border-left: 5px solid #f5a623; padding: 16px 24px; border-radius: 6px; margin-bottom: 40px; font-size: 15px; line-height: 1.9;">
+    <strong style="color: #e65100">【v4.7.6 更新注記（2026年4月15日）】</strong>
+本記事を v4.7.6 統合版に基づき更新しました。
+
+<strong>v4.7.6 の追加（2026年4月15日）：</strong>
+・§6.8.1 Υ<sub>d</sub> 指数の部分的第一原理導出（T_m=√6 で β=-0.33、観測 -0.361 との 8% 差、B+ 級）
+・§6.9 HSC-SSP Y3 の 2-halo 寄与を実測（Δslope=+0.034±0.064、0.5σ示唆）
+・HSC slope tension を 2.2σ → ~1σ に緩和（C15+B+2h = +0.126 vs 観測 +0.166±0.041）
+・GitHub Repository 公開: <a href="https://github.com/sguccibnr32-creator/Public">sguccibnr32-creator/Public</a>（MIT License, 220 スクリプト, <a href="https://github.com/sguccibnr32-creator/Public/releases/tag/v4.7.6">Release v4.7.6</a> + PDF 添付）
+
+<strong>v4.7（2026年4月13日）の主な変更点：</strong>
+・条件15最終形を確定（g<sub>c</sub> = 0.584 × Υ<sub>d</sub><sup>−0.361</sup> × √(a₀ × v<sub>flat</sub>²/h<sub>R</sub>)、scatter 0.286 dex = 固有限界）
+・κ=0 確定により理論構造を簡素化（条件14動力学的定式化を棄却、条件15のみの1層構造へ）
+・N-1（ηの導出）を「外部パラメータ」として解決。N-1'（α=0.5の起源）を深MOND帰結として解決
+・LITTLE THINGS 26銀河による外部検証結果を追記</div>
+
+<!-- イントロ -->
+<p style="font-size: 17px; background: #f7f7fb; border-radius: 8px; padding: 20px 24px; border-left: 4px solid #e94560;">
+    銀河の回転曲線を説明する「修正ニュートン力学（MOND）」は、50年以上にわたり経験則として使われてきた。しかし<strong>なぜ a₀ という定数が存在するのか</strong>、その理由は誰も説明できなかった。膜宇宙論はこの問いに答える——MOND は膜モデルの特殊ケースとして弾性自由エネルギーの平衡条件から解析的に導出される（T-3・4章）。そして<strong>臨界加速度 g<sub>c</sub> が普遍定数ではなく、膜固有スケール a₀ と局所動力学的面密度 Σ<sub>dyn</sub> の幾何平均として決定される</strong>ことが SPARC 175銀河で確立された（5章）。v4.7 では κ=0（膜剛性ゼロ）が確定し、膜は各半径で独立に応答する局所理論として簡素化された。v4.7.8 では圧力支持系（dSph 31銀河）への拡張が加わり、<strong>Strigari 普遍加速度が膜の熱的 Bernoulli 揺らぎ s₀(1−s₀) a₀ として第一原理導出</strong>された（§⑩）。</p>
+  <!-- セクション1 -->
+<h2 style="font-size: 38px; font-weight: 800; margin-top: 56px; margin-bottom: 16px; color: #e94560;">
+    ① MOND とは何か——そして何が足りなかったか</h2>
+<p style="font-size: 16px;">
+    銀河の外縁部では星がニュートン力学の予測より速く回転する。1983年、ミルグロムはこれを説明するために MOND（修正ニュートン力学）を提唱した。加速度が臨界値 a₀ を下回ると重力が増幅される、という経験則だ。</p>
+
+<div style="background: #1a1a2e; color: #e8e8f0; font-family: 'Courier New', monospace; font-size: 14px; padding: 20px 24px; border-radius: 8px; margin: 16px 0;">
+    MOND の補間関数（simple 形）：
+
+g_obs = (1/2)·(g_N + √(g_N² + 4·a₀·g_N))
+
+a₀ = 1.2 × 10⁻¹⁰ m/s²（普遍定数として仮定）
+
+強重力域（g_N ≫ a₀）：g_obs ≈ g_N（ニュートン的）
+弱重力域（g_N ≪ a₀）：g_obs ≈ √(a₀·g_N)（増幅）
+
+<span style="color:#e94560; font-weight:bold;">→ なぜ a₀ がこの値なのか——MOND は答えを持たない</span></div>
+<p style="font-size: 16px;">
+    MOND は銀河の回転曲線を驚くほど正確に説明するが、<strong>第一原理的な理論的根拠を持たない経験則</strong>だ。膜宇宙論はこの欠落を埋める。</p>
+  <!-- セクション2 -->
+<h2 style="font-size: 38px; font-weight: 800; margin-top: 56px; margin-bottom: 16px; color: #e94560;">
+    ② 膜宇宙論の公理系——15の条件</h2>
+<p style="font-size: 16px;">
+    膜宇宙論は15の条件（公理）から出発する（1章）。重力子は余剰次元に逃げるのではなく、<strong>膜の折り畳まれた奥に封じ込められている</strong>（条件1〜3）。</p>
+
+<div style="background: #f7f7fb; border-radius: 8px; padding: 20px 24px; border-left: 4px solid #e94560; font-size: 15px; margin: 16px 0;">
+    <strong>理論の骨格となる核心条件：</strong>
+
+<strong>条件4（遮断効果）：</strong>膜が重力子の力を部分的に遮断する
+→ 重力が電磁気力より 10³⁶ 倍弱い理由
+
+<strong>条件5（AB効果）：</strong>膜はAharonov-Bohm効果でポテンシャルを透過させる
+→ 重力が完全にゼロにならない理由
+
+<strong>条件6（展開トリガー）：</strong>超重力状態で膜が展開し重力が増大する
+→ 銀河外縁での「余分な重力」の起源
+
+<strong>条件11（宇宙初期の折り畳み）：</strong>折り畳みは宇宙初期に完了し歪みエネルギーを蓄える
+→ 現在の重力構造の起源
+
+<strong>条件13（暗黒物質の2分類）：</strong>
+Ψ₀（暗黒物質P）：物質のない空間の膜ポテンシャル
+ΔΨ（暗黒物質G）：物質のある空間の膜展開による増分
+
+<strong>条件14-15（膜の内部構造）：</strong>
+塑性領域（強く折り畳まれ展開困難）と弾性領域（弱く折り畳まれ展開容易）の二相構造。
+塑性領域含有量が銀河形成・BH形成を制御するという仮説（8-9章で観測的支持）。
+
+<span style="color: #795548; font-size: 14px;">
+【v4.7注記】条件14の動力学的定式化 g<sub>c,eff</sub>(r) は棄却（κ=0確定）。概念的仮説（B⁻級）として残存。
+条件15の g<sub>c</sub> 決定法則（幾何平均法則）はA級確立。BH形成との接続は候補レベル。</span></div>
+<!-- セクション3 -->
+<h2 style="font-size: 38px; font-weight: 800; margin-top: 56px; margin-bottom: 16px; color: #e94560;">
+    ③ MOND の解析的導出——膜の臨界条件から</h2>
+<p style="font-size: 16px;">
+    弾性自由エネルギー U(ε;c) の平衡条件から、有効加速度が解析的に導出される（T-3・4章）。解析解 ε_eq の閉形式が確立され、独立検証残差 10⁻¹³ 以下を確認済み。</p>
+
+<div style="background: #1a1a2e; color: #e8e8f0; font-family: 'Courier New', monospace; font-size: 14px; padding: 20px 24px; border-radius: 8px; margin: 16px 0;">
+    弾性ポテンシャル（式(3)）：
+U(ε;c) = −ε − ε²/2 − c·ln(1−ε)
+
+平衡条件の解析解（式(4)）：
+ε_eq = (−x + √((x+2)²−4c)) / 2　（x = g_N/g_c）
+
+一般化MOND加速度（式(5)）：
+g_obs = (1/2)·(g_N + √(g_N² + 4·g_c·g_N))
+
+極限の確認：
+g_N ≫ g_c：g_obs ≈ g_N　（ニュートン域・膜は大きく展開）
+g_N ≪ g_c：g_obs ≈ √(g_c·g_N)　（MOND域・膜展開が制限される）
+
+<span style="color:#e94560; font-weight:bold;">g_c = a₀ を代入 → MOND の simple 補間関数と数学的に完全一致
+★ MOND は膜モデルの特殊ケース（g_c = a₀）として解析的に導出される</span>
+
+<span style="color:#f5a623;">【v4.7】κ=0 確定により、この局所平衡 μ(x) = x/(1+x) は
+各半径で独立に成立。RMS = 0.090 dex（3003点、167銀河）</span></div>
+<p style="font-size: 16px;">
+    これは MOND が「経験則」から「膜の弾性物理から必然的に導かれる帰結」へと格上げされることを意味する。同時に、<strong>g<sub>c</sub> = a₀ という仮定が緩められる可能性</strong>——つまり g<sub>c</sub> が銀河ごとに異なりうる——が理論的に開かれた。v4.7 では κ=0（膜剛性ゼロ）が確定し、膜は空間的な「弾性記憶」を持たず各半径で独立に応答することが判明している。膜ラグランジアンは L ≈ U(ε;c) に簡素化される。</p>
+  <!-- セクション4 -->
+<h2 style="font-size: 38px; font-weight: 800; margin-top: 56px; margin-bottom: 16px; color: #e94560;">
+    ④ SPARC 5銀河による観測的検証（6章）</h2>
+<p style="font-size: 16px;">
+    SPARC データベース（Lelli et al. 2016, 175銀河）より形態型分散（Sb, Sc, Sd, Sm）と質量分散（v_flat=56-256 km/s）を代表する5銀河を選択し、バリオン速度成分を直接使用してフィットした。フリーパラメータは Υ, v_flat, r_s の3個。</p>
+
+<table style="width:100%; border-collapse:collapse; font-size:15px; margin-top: 16px;">
+<thead>
+<tr style="background:#e94560; color:#fff;">
+<th style="padding:12px 16px; text-align:left;">銀河</th>
+<th style="padding:12px 16px; text-align:left;">形態</th>
+<th style="padding:12px 16px; text-align:left;">Υ</th>
+<th style="padding:12px 16px; text-align:left;">v_flat [km/s]</th>
+<th style="padding:12px 16px; text-align:left;">r_s [kpc]</th>
+<th style="padding:12px 16px; text-align:left;">χ²/dof</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:#f7f7fb;">
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">NGC 3198</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">Sc</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">0.96±0.01</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">119.4±0.7</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">11.0±0.2</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold;">2.99</td>
+</tr>
+<tr>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">NGC 2841</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">Sb</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">0.45±0.02</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">256.0±1.6</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">3.3±0.1</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold;">1.60</td>
+</tr>
+<tr style="background:#f7f7fb;">
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">IC 2574</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">Sm</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">1.90±0.07</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">56.4±3.0</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">7.7±0.3</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold;">1.84</td>
+</tr>
+<tr>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">UGC 02885</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">Sc</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">1.01±0.03</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">224.8±5.9</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">37.2±1.8</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold;">1.94</td>
+</tr>
+<tr style="background:#f7f7fb;">
+<td style="padding:11px 16px;">NGC 0300</td>
+<td style="padding:11px 16px;">Sd</td>
+<td style="padding:11px 16px;">1.67±0.08</td>
+<td style="padding:11px 16px;">76.8±1.5</td>
+<td style="padding:11px 16px;">5.5±0.3</td>
+<td style="padding:11px 16px; font-weight:bold;">1.22</td>
+</tr>
+</tbody>
+</table>
+<p style="font-size: 14px; color: #666; margin-top: 8px;">
+    全点で eVobs ≥ 1.0 km/s の下限処理を適用。T-5（9章）で167銀河に拡張し統計的妥当性を検証済み（χ²/dof中央値 0.70）。</p>
+  <!-- セクション5 -->
+<h2 style="font-size: 38px; font-weight: 800; margin-top: 56px; margin-bottom: 16px; color: #e94560;">
+    ⑤ 核心発見——g<sub>c</sub> 幾何平均法則（5章）</h2>
+<p style="font-size: 16px;">
+    残存課題 T-3「g<sub>c</sub> の定量決定」を解決するため、SPARC 175銀河の RAR（Radial Acceleration Relation）から g<sub>c</sub> を銀河ごとに測定し、バリオン面密度プロキシ G·Σ₀ との関係を解析した。</p>
+
+<div style="background: #1a1a2e; color: #e8e8f0; font-family: 'Courier New', monospace; font-size: 14px; padding: 20px 24px; border-radius: 8px; margin: 16px 0;">
+    測定結果：
+
+g_c = η · a₀^(1−α) · (G·Σ₀)^α
+
+α = 0.545 ± 0.041
+
+仮説検定：
+α = 0（MOND: g_c = 定数）　：p = 2.0×10⁻²⁷　<strong>棄却</strong>
+α = 0.5（厳密幾何平均）　　：p = 0.27　　　　　<strong>棄却できない</strong>
+α = 1（純 G·Σ₀ 比例）　：p = 2.2×10⁻²¹　<strong>棄却</strong>
+
+<span style="color:#e94560; font-weight:bold;">確立した法則（式(5')）：
+g_c = η · √(a₀ · G · Σ₀)
+ΔAIC = −130（MOND に対し）</span></div>
+<!-- v4.7 条件15最終形 -->
+<div style="background: #e8f5e9; border-left: 4px solid #4caf50; padding: 16px 24px; border-radius: 6px; margin: 24px 0; font-size: 15px; line-height: 2.0;">
+    <strong style="color: #2e7d32;">条件15 最終形（v4.7 確定）：</strong>
+
+<span style="font-family: 'Courier New', monospace; font-size: 15px;">g<sub>c</sub> = 0.584 × Υ<sub>d</sub><sup>−0.361</sup> × √(a₀ × v<sub>flat</sub>² / h<sub>R</sub>)</span>
+
+α = 0.5（固定、最適）｜β = −0.361 ± 0.078｜η₀ = 0.584
+R² = 0.607｜scatter = 0.286 dex（固有限界）｜LOO scatter = 0.290 dex
+MOND棄却：p = 1.66 × 10⁻⁵³
+
+<strong>scatter 分解：</strong>固有物理分散 0.227 dex (63.5%) + 測定誤差 0.173 dex (36.5%)
+固有分散の94%は還元不能な銀河間多様性（全既知パラメータ投入でLOO 1.7%改善のみ）</div>
+<p style="font-size: 16px;">
+    α = 0.5 が自然な値である理由は、v4.7 では<strong>深MOND極限からの導出</strong>（P5検証・32章）によって解決された。x = g<sub>N</sub>/g<sub>c</sub> ≪ 1 で展開すると g<sub>eff</sub> ≈ √(g<sub>N</sub> · g<sub>c</sub>) となり、フラット回転条件と組み合わせて v<sub>flat</sub>⁴ = G·M<sub>bar</sub>·g<sub>c</sub>（膜BTFR）が得られる。有限ディスクの g<sub>N</sub>(r) 構造を考慮すると α ≈ 0.47 が導かれ（p(0.5) = 0.43）、MOND遷移域の寄与を加えて観測値 0.545 と整合する。</p>
+
+<div style="background: #1a1a2e; color: #e8e8f0; font-family: 'Courier New', monospace; font-size: 14px; padding: 20px 24px; border-radius: 8px; margin: 16px 0;">
+    <span style="color:#f5a623; font-weight:bold;">α=0.5 の導出鎖（v4.7 完全）：</span>
+
+公理 → U(ε;c) → 平衡条件 → MOND補間（Step 0-3）
+→ 深MOND極限 g_eff ≈ √(g_N·g_c)（Step 4）
+→ 膜BTFR: v_flat⁴ = G·M_bar·g_c（Step 5）
+→ 有限ディスク: α_deep = 0.471±0.036, p(0.5)=0.43（Step 6）
+
+αの3層構造：深MOND(0.47) + MOND遷移(+0.05) + 残差(+0.02) = 0.54
+
+<span style="color:#e94560; font-weight:bold;">α=0.5 は「経験則」ではなく深MOND極限の必然的帰結</span></div>
+<!-- セクション6 -->
+<h2 style="font-size: 38px; font-weight: 800; margin-top: 56px; margin-bottom: 16px; color: #e94560;">
+    ⑥ MOND の位置づけの変更</h2>
+<p style="font-size: 16px;">
+    幾何平均法則は MOND を否定しない。むしろ<strong>MOND がなぜ機能するのか</strong>の理由を与える。</p>
+
+<div style="background: #f7f7fb; border-radius: 8px; padding: 20px 24px; border-left: 4px solid #e94560; font-size: 15px; margin: 16px 0;">
+    <strong>MOND が成立する条件：</strong>
+
+g<sub>c</sub> = η·√(a₀·G·Σ₀) において
+「平均的な銀河」：G·Σ₀ ≈ a₀/η² のとき g<sub>c</sub> ≈ a₀
+→ MOND が回収される
+
+<strong>MOND からのずれが出る場合：</strong>
+
+矮小銀河（低 Σ₀）：g<sub>c</sub> &lt; a₀ → MOND より弱い補正
+大質量銀河（高 Σ₀）：g<sub>c</sub> &gt; a₀ → MOND より強い補正
+
+矮小銀河の 94% で g<sub>c</sub>(galaxy) モデルが MOND を改善（ΔAIC = −139）
+
+<span style="color:#e94560; font-weight:bold;">MOND の a₀ は g<sub>c</sub> の「全銀河平均」——幾何平均法則が MOND を包含する</span>
+
+<span style="color: #795548; font-size: 14px;">【v4.7追記】深MOND逆変換により MOND（g<sub>c</sub>=定数）は
+p = 8×10⁻³³（12σ）で棄却——SPARC 167銀河の深MOND領域で確認</span></div>
+<!-- セクション7 -->
+<h2 style="font-size: 38px; font-weight: 800; margin-top: 56px; margin-bottom: 16px; color: #e94560;">
+    ⑦ η の構造——残差が語ること（5-5節、30章）</h2>
+<p style="font-size: 16px;">
+    幾何平均で説明できない残差に相関する変数を解析した。v4.7 ではηの導出問題（N-1）が解決され、ηは外部パラメータとして位置づけられた。</p>
+
+<div style="background: #1a1a2e; color: #e8e8f0; font-family: 'Courier New', monospace; font-size: 14px; padding: 20px 24px; border-radius: 8px; margin: 16px 0;">
+    <span style="color:#e94560; font-weight:bold;">条件15 最終形のη（v4.7確定）：</span>
+
+η = 0.584 × Υ_d^(−0.361)
+
+β = −0.361 ± 0.078（LOO検証済み、dAIC = −14.2）
+
+<span style="color:#f5a623;">η は proxy 構成要素（v_flat, h_R, GΣ₀）と完全に無相関：
+v_flat: R² = 0.006（無相関）
+h_R:   R² = 0.000（完全に無相関）
+GΣ₀:  R² = 0.009（無相関）
+→ 幾何平均で吸収済みの量は残差に現れない</span>
+
+3変数モデル（参考）：
+η = η₀ · Υ_d^(−0.44) · compact^(−0.35) · 10^(0.019·disk_dom)
+MOND 比残差改善：39.4%（LOO-CV 劣化 2.5%・過剰適合なし）
+→ compact, disk_dom の追加効果は LOO で限定的。最終形は Υ_d 単変数
+
+</div>
+<p style="font-size: 16px;">
+    N-1（ηの導出）はv4.7で解決された。式(5')と式(5)の連立から η = v<sub>flat</sub>⁴ / [G·M<sub>bar</sub>·√(a₀·v<sub>flat</sub>²/h<sub>R</sub>)] と構造的に書け（30章）、η の Υ<sub>d</sub> 依存性（β ≈ −0.36）は BTFR と幾何平均法則の連立から必然的に生じる。β の値自体は銀河集団の v<sub>flat</sub>–Υ<sub>d</sub> 相関・I₀–Υ<sub>d</sub> 相関に依存する<strong>外部パラメータ</strong>であり、膜理論が予測すべき量ではない（42章）。</p>
+  <!-- セクション8 -->
+<h2 style="font-size: 38px; font-weight: 800; margin-top: 56px; margin-bottom: 16px; color: #e94560;">
+    ⑧ 完全方程式系（v4.7・13式）</h2>
+<p style="font-size: 16px;">
+    v4.7 では方程式系が13式のまま維持される（3章）。式(7) tanh は撤回済み（MOND式(5)が優位: ΔAIC=+3.94）。v4.6で追加された条件14+15統合式 g<sub>c,eff</sub>(r) はv4.7で棄却・除外されたため、式番号に変更はない。</p>
+
+<table style="width:100%; border-collapse:collapse; font-size:15px; margin-top: 16px;">
+<thead>
+<tr style="background:#e94560; color:#fff;">
+<th style="padding:12px 16px; text-align:left;">式番号</th>
+<th style="padding:12px 16px; text-align:left;">方程式（概要）</th>
+<th style="padding:12px 16px; text-align:left;">役割</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:#f7f7fb;">
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">(1)</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">Ψ_total = Ψ₀ + C·(D_max−D)</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">全ポテンシャル</td>
+</tr>
+<tr>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">(2)</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">F = U(ε;c) − x·ε</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">自由エネルギー</td>
+</tr>
+<tr style="background:#f7f7fb;">
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">(3)</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">U(ε;c) = −ε − ε²/2 − c·ln(1−ε)</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">弾性ポテンシャル</td>
+</tr>
+<tr>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">(4)</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">ε_eq = (−x+√((x+2)²−4c))/2</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">平衡条件（解析解）</td>
+</tr>
+<tr style="background:#f7f7fb;">
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#e94560;">(5)</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#e94560;">g_obs = (g_N+√(g_N²+4·g_c·g_N))/2</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#e94560;">一般化MOND（T-3導出）</td>
+</tr>
+<tr>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#e94560;">(5')</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#e94560;">g_c = η(Υ_d)·√(a₀·v<sub>flat</sub>²/h<sub>R</sub>)</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#e94560;">幾何平均法則（v4.7最終形）</td>
+</tr>
+<tr style="background:#f7f7fb;">
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">(6)</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">dD/dr = −k_s·T(r,r_s)/r</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">D の空間勾配</td>
+</tr>
+<tr>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">(7)</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">v_c² = v_bar² + v_flat²·T(r,r_s)</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">観測量との接続</td>
+</tr>
+<tr style="background:#f7f7fb;">
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">(8)</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">log c = −0.894+0.278 log M_*−…</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">c の銀河物性依存式</td>
+</tr>
+<tr>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">(9)</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">c ≈ 1−f_p</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">c の膜物性解釈</td>
+</tr>
+<tr style="background:#f7f7fb;">
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">(10a-d)</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">光伝播モデルB</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">光路距離δ・折り目再配線</td>
+</tr>
+<tr>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">(11a-c)</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">τ_D·∂_t D = D_eq−D（+3段ヒステリシス）</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">D の動力学（T-1完全版）</td>
+</tr>
+<tr style="background:#f7f7fb;">
+<td style="padding:11px 16px;">(12)</td>
+<td style="padding:11px 16px;">P_rewire_eff = S_up × P_rewire_base</td>
+<td style="padding:11px 16px;">膜-光路統一メモリ</td>
+</tr>
+</tbody>
+</table>
+<p style="font-size: 14px; color: #666; margin-top: 12px;">
+  【v4.7注記】旧v4.6で追加された条件14+15統合式 g<sub>c,eff</sub>(r) = g<sub>c</sub>×[0.12+0.51×exp(−r/(4.7h<sub>R</sub>))] は棄却・除外。κ=0 が確定し、条件14パターンは条件15バイアスの半径投影と判明したため（43-44章）。膜ラグランジアンは L ≈ U(ε;c)（勾配項不要）。</p>
+<!-- セクション9 -->
+<h2 style="font-size: 38px; font-weight: 800; margin-top: 56px; margin-bottom: 16px; color: #e94560;">
+    ⑨ 課題状況——v4.7.8 統合版時点（20-21章）</h2>
+<p style="font-size: 16px;">
+    v4.7 では多くの課題が解決済みとなり、一部は棄却された。v4.7.8 では dSph 拡張により圧力支持系への適用性が確認された。</p>
+
+<table style="width:100%; border-collapse:collapse; font-size:15px; margin-top: 16px;">
+<thead>
+<tr style="background:#e94560; color:#fff;">
+<th style="padding:12px 16px; text-align:left;">課題</th>
+<th style="padding:12px 16px; text-align:left;">内容</th>
+<th style="padding:12px 16px; text-align:left;">状態（v4.7.8）</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:#f7f7fb;">
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">T-1</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">D(r) の動力学</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#4caf50;">整理完了（11章）</td>
+</tr>
+<tr>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">T-3</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">g<sub>c</sub> の定量決定</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#4caf50;">整理完了（5章・式(5')）</td>
+</tr>
+<tr style="background:#f7f7fb;">
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">T-5</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">SPARC 全銀河への拡張</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#4caf50;">整理完了（9章・167銀河）</td>
+</tr>
+<tr>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">T-7</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">U(ε;c) の第一原理導出</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#4caf50;">整理完了（12章・補題1-4、MF精度限界あり）</td>
+</tr>
+<tr style="background:#f7f7fb;">
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">T-9</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">g<sub>c</sub> の物性依存性定式化</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#4caf50;">整理完了（式(8)・R²=0.66、閉鎖は残存）</td>
+</tr>
+<tr>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">T-8</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">クラスタースケール拡張</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">進行中（14章・HSC弱レンズ cl1 B+級）</td>
+</tr>
+<tr style="background:#f7f7fb;">
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">N-1</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">η の導出</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#4caf50;">解決——η は外部パラメータ（30章）。η₀=0.584 の導出は残存</td>
+</tr>
+<tr>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">N-1'</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">α=0.5 の起源</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#4caf50;">解決——深MOND極限の帰結（32章・P5検証）</td>
+</tr>
+<tr style="background:#f7f7fb;">
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#e94560;">N-2 ★</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">外部データ検証</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#e94560;">最優先。LITTLE THINGS 26銀河で部分的達成（22章・B+級）。
+BIG-SPARC / MaNGA / PROBES 待ち</td>
+</tr>
+<tr>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">κ推定</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">膜剛性係数の推定</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#4caf50;">確定——κ ≈ 0（43章）。勾配項不要</td>
+</tr>
+<tr style="background:#f7f7fb;">
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">条件14</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">動力学的r依存性</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#d32f2f;">棄却——条件15バイアスの投影（44章）</td>
+</tr>
+<tr>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#c0392b;">dSph ★</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">圧力支持系への拡張</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#c0392b;">解決（v4.7.8）——J3体制逆転の発見、Bernoulli予測 G = 0.228 a₀ が 2集団で独立再現（§⑩）</td>
+</tr>
+</tbody>
+</table>
+<p style="font-size: 14px; color: #666; margin-top: 12px;">
+  LITTLE THINGS（Oh et al. 2015）26銀河（全て矮小不規則銀河）との合同解析で α = 0.576 ± 0.047, p(0.5) = 0.109（棄却不可）。MOND棄却は p = 4×10⁻²⁵ にさらに強化された（22章）。SPARCジャックナイフ検証（半分割×1000回）でも α(train) = 0.545 ± 0.037, α(test) = 0.550 ± 0.038 と頑健性を確認（23章）。</p>
+
+<!-- ============================================================ -->
+<!-- セクション10 (新規): dSph 拡張 -->
+<!-- ============================================================ -->
+<h2 style="font-size: 38px; font-weight: 800; margin-top: 56px; margin-bottom: 16px; color: #e94560;">
+    ⑩ dSph 拡張——圧力支持系への適用と Bernoulli 予測（v4.7.8）</h2>
+<p style="font-size: 16px;">
+    v4.7.7 までの枠組みは回転支持系（SPARC 渦巻銀河と矮小不規則銀河）で確立された。v4.7.8 では<strong>圧力支持系である矮小楕円体銀河（dSph）</strong>に拡張し、質的に新しい体制を発見した——そこでは膜の自発的熱揺らぎが支配的になり、c→0 極限の固有状態から Strigari 普遍加速度が第一原理的に導出される。</p>
+
+<h3 style="font-size: 22px; font-weight: 700; margin-top: 32px; margin-bottom: 12px; color: #1a1a2e;">
+    10.1 dSph サンプル構築（31銀河）</h3>
+<p style="font-size: 16px;">
+    MW衛星 15個（Walker+2009, Simon&Geha 2007, Simon 2019）、M31衛星 11個（Collins+2013, Tollerud+2012）、孤立系 3個（Cetus, Phoenix, Tucana）、不明系 2個の合計 31 dSph を収集。半径 r<sub>h</sub> は McConnachie (2012)、動力学加速度は Wolf+2010 の g<sub>obs</sub> = 3σ<sub>los</sub>²/r<sub>h</sub> で評価。</p>
+
+<h3 style="font-size: 22px; font-weight: 700; margin-top: 32px; margin-bottom: 12px; color: #1a1a2e;">
+    10.2 C15 直接適用の破綻と J3 体制逆転</h3>
+<p style="font-size: 16px;">
+    C15 公式を dSph に直接適用すると、<strong>+1.5 dex の系統的バイアス + 0.9 dex の散布</strong>が観測される。4つのモデル変種（C15_naive, SCE_naive, SCE_Q_J, C15_Q_J）は全て同様の残差を示し、Υ<sub>d</sub> 変換でもオフセットは吸収不能（scatter 不変）。</p>
+
+<div style="background: #1a1a2e; color: #e8e8f0; font-family: 'Courier New', monospace; font-size: 14px; padding: 20px 24px; border-radius: 8px; margin: 16px 0;">
+    <span style="color:#e94560; font-weight:bold;">J3 体制逆転——根本原因の特定：</span>
+
+膜Jeans質量 M_J,mem = (4π/3) ρ (c_s² / g_eff)³
+標準Jeans質量 M_J,std の大小関係：
+
+SPARC（回転支持）：M_J,std ≤ M_J,mem
+  → バリオン分布が膜状態を駆動（C15 成立）
+
+dSph（圧力支持）：M_J,mem ≪ M_J,std（28/31 銀河で確認）
+  → 膜が構造を設定、バリオンが追従
+
+<span style="color:#f5a623; font-weight:bold;">★ 因果の方向が逆転する
+→ dSph では g_c は Σ₀ ではなく膜固有パラメータ（T_m, a₀）で決定</span></div>
+
+<h3 style="font-size: 22px; font-weight: 700; margin-top: 32px; margin-bottom: 12px; color: #1a1a2e;">
+    10.3 統一 RAR プロット——SPARC と dSph の連続性</h3>
+<p style="font-size: 16px;">
+    SPARC Rotmod_LTG 全 3,389 半径点と dSph 31銀河を同一 log(g<sub>bar</sub>/a₀)–log(g<sub>obs</sub>/a₀) 面に重ね描きし、Υ<sub>dyn</sub> = g<sub>obs</sub>/g<sub>bar</sub> で体制を分類：</p>
+
+<table style="width:100%; border-collapse:collapse; font-size:15px; margin-top: 16px;">
+<thead>
+<tr style="background:#e94560; color:#fff;">
+<th style="padding:12px 16px; text-align:left;">集団</th>
+<th style="padding:12px 16px; text-align:left;">N</th>
+<th style="padding:12px 16px; text-align:left;">Υ<sub>dyn</sub> 中央値</th>
+<th style="padding:12px 16px; text-align:left;">体制解釈</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:#f7f7fb;">
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">SPARC RAR 雲（全半径）</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">3,389</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">2.75</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">バリオン駆動</td>
+</tr>
+<tr>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">SPARC 銀河（外側）</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">175</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">3 (典型)</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec;">C15 体制</td>
+</tr>
+<tr style="background:#f7f7fb;">
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#c0392b;">ブリッジ銀河 外側</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#c0392b;">30</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#c0392b;">12.76</td>
+<td style="padding:11px 16px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#c0392b;">★ J3 遷移帯</td>
+</tr>
+<tr>
+<td style="padding:11px 16px;">dSph</td>
+<td style="padding:11px 16px;">31</td>
+<td style="padding:11px 16px;">35.11</td>
+<td style="padding:11px 16px;">膜駆動</td>
+</tr>
+</tbody>
+</table>
+<p style="font-size: 16px; margin-top: 16px;">
+    帯域 <strong>10 &lt; Υ<sub>dyn</sub> &lt; 30 を「J3 遷移帯」</strong>と定義。SPARC 175銀河のうち外側 Υ<sub>dyn</sub> &gt; 10 を満たすのはわずか 4 個——ESO444-G084, NGC2915, NGC1705, NGC3741——これらを<strong>ブリッジ銀河</strong>と呼ぶ。</p>
+
+<h3 style="font-size: 22px; font-weight: 700; margin-top: 32px; margin-bottom: 12px; color: #1a1a2e;">
+    10.4 c→0 極限と Bernoulli 予測</h3>
+<p style="font-size: 16px;">
+    J3 体制では結合 c（バリオン駆動）が 0 に近づき、膜は固有の熱平衡状態に入る。自己無撞着方程式 Eq.(6) の Q→0 極限は<strong>普遍的自発弾性率</strong>を与える：</p>
+
+<div style="background: #1a1a2e; color: #e8e8f0; font-family: 'Courier New', monospace; font-size: 14px; padding: 20px 24px; border-radius: 8px; margin: 16px 0;">
+    <span style="color:#f5a623; font-weight:bold;">c→0 極限の固有膜状態：</span>
+
+s₀ = 1 / (1 + exp(3 / (2 T_m)))
+
+T_m = √6 で数値評価：
+  exp(3/(2√6)) = exp(0.6124) = 1.8450
+  <span style="color:#e94560;">★ s₀ = 0.3515（膜の普遍的自発弾性率）</span>
+
+小 Q 展開（非解析的）：
+  s(Q) ≈ s₀ + α_s √Q + O(Q),  α_s = 0.110
+
+Bernoulli 分散（2状態系の普遍揺らぎ）：
+  Var(s) = s₀ (1 − s₀) = 0.3515 × 0.6485 = 0.228
+
+<span style="color:#e94560; font-weight:bold;">★ G_Strigari = s₀(1 − s₀) a₀ = 0.228 a₀
+          = 2.74 × 10⁻¹¹ m/s²（Strigari 普遍加速度）</span>
+
+dSph 用 g_c 公式：
+  g_c,dSph(g_bar) = [s₀(1−s₀)]² a₀² / g_bar</div>
+
+<h3 style="font-size: 22px; font-weight: 700; margin-top: 32px; margin-bottom: 12px; color: #1a1a2e;">
+    10.5 ブリッジ銀河 4個での連続遷移確認</h3>
+<p style="font-size: 16px;">
+    ブリッジ銀河 4個の Rotmod_LTG データで半径分解解析を実施。Υ<sub>dyn</sub>(R) が銀河内で内側（C15 域）から外側（J3 域）へ連続的に増加するかテスト。</p>
+
+<table style="width:100%; border-collapse:collapse; font-size:14px; margin-top: 16px;">
+<thead>
+<tr style="background:#e94560; color:#fff;">
+<th style="padding:10px 12px; text-align:left;">銀河</th>
+<th style="padding:10px 12px; text-align:left;">N</th>
+<th style="padding:10px 12px; text-align:left;">R [kpc]</th>
+<th style="padding:10px 12px; text-align:left;">Υ 内→外</th>
+<th style="padding:10px 12px; text-align:left;">slope z</th>
+<th style="padding:10px 12px; text-align:left;">MW p</th>
+<th style="padding:10px 12px; text-align:left;">外側 g<sub>obs</sub> [a₀]</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:#f7f7fb;">
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec;">ESO444-G084</td>
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec;">7</td>
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec;">0.26-4.44</td>
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec;">6.1→11.3</td>
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec;">+2.4</td>
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec;">0.029</td>
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec;">0.317</td>
+</tr>
+<tr>
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec;">NGC2915</td>
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec;">30</td>
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec;">0.34-10.04</td>
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec;">11.4→13.2</td>
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#c0392b;">+12.3</td>
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec;">0.0003</td>
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec; font-weight:bold; color:#c0392b;">0.219 (予測と1%)</td>
+</tr>
+<tr style="background:#f7f7fb;">
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec;">NGC1705</td>
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec;">14</td>
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec;">0.22-6.00</td>
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec;">5.4→12.3</td>
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec;">+6.8</td>
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec;">0.0003</td>
+<td style="padding:9px 12px; border-bottom:1px solid #e0e0ec;">0.282</td>
+</tr>
+<tr>
+<td style="padding:9px 12px;">NGC3741</td>
+<td style="padding:9px 12px;">21</td>
+<td style="padding:9px 12px;">0.23-7.00</td>
+<td style="padding:9px 12px;">5.9→11.5</td>
+<td style="padding:9px 12px; font-weight:bold; color:#c0392b;">+21.6</td>
+<td style="padding:9px 12px;">0.0001</td>
+<td style="padding:9px 12px;">0.124</td>
+</tr>
+</tbody>
+</table>
+<p style="font-size: 16px; margin-top: 16px;">
+    <strong>A級判定 4/4 基準すべて達成</strong>——(a) 全4銀河で Υ<sub>dyn</sub>(R) が有意に増加（|z| = 2.4 〜 21.6）、(b) 外側 &gt; 内側 Mann-Whitney 検定 4/4 有意（p &lt; 0.03）、(c) ブリッジ外側中央値 Υ<sub>dyn</sub> = 12.76 は J3 遷移帯の中央、(d) ブリッジ外側 g<sub>obs</sub> 中央値 = 0.219 a₀ が Bernoulli 予測 0.228 a₀ と <strong>4% 一致</strong>。</p>
+
+<div style="background: #e8f5e9; border-left: 4px solid #4caf50; padding: 16px 24px; border-radius: 6px; margin: 24px 0; font-size: 15px; line-height: 2.0;">
+    <strong style="color: #2e7d32;">Bernoulli 予測の 2集団独立再現：</strong>
+
+<strong>集団1</strong>（圧力支持系）：dSph 31銀河
+  g<sub>obs</sub> 中央値 = 0.240 a₀
+  予測との比 = 1.053（<strong>5% 一致</strong>）
+
+<strong>集団2</strong>（回転支持系の外縁部）：ブリッジ銀河外側 30点
+  g<sub>obs</sub> 中央値 = 0.219 a₀
+  予測との比 = 0.961（<strong>4% 一致</strong>）
+
+→ 動力学的支持（圧力 vs 回転）が異なる 2 集団で、単一の理論予測値 G = s₀(1−s₀) a₀ が独立に再現される。フリーパラメータなしの非自明予測（MOND 単独では説明困難）。</div>
+
+<h3 style="font-size: 22px; font-weight: 700; margin-top: 32px; margin-bottom: 12px; color: #1a1a2e;">
+    10.6 トートロジー分離——真に非自明な予測内容</h3>
+<p style="font-size: 16px;">
+    候補D gc = G²/g<sub>bar</sub> の slope = −1 は、定義 gc = g<sub>obs</sub>²/g<sub>bar</sub> と Strigari 関係 g<sub>obs</sub> ≈ const の合成的帰結にすぎない可能性がある。これを多変量回帰で分離した。</p>
+
+<div style="background: #1a1a2e; color: #e8e8f0; font-family: 'Courier New', monospace; font-size: 14px; padding: 20px 24px; border-radius: 8px; margin: 16px 0;">
+    定義チェック（log g_obs ~ σ, r_h, M_bar 多変量）：
+  slopes = (+2.000, -1.000, -0.000), R² = 1.0000
+  → g_obs = 3σ²/r_h の定義を完全再現（トートロジー部分）
+
+<span style="color:#f5a623; font-weight:bold;">Strigari null 検定（単変量）：</span>
+  g_obs vs σ       : slope +0.75 ± 0.33  → +2.3σ （marginal）
+  g_obs vs r_h     : slope -0.47 ± 0.14  → -3.4σ <span style="color:#e94560;">★ 棄却</span>
+  g_obs vs M_bar   : slope -0.008±0.049  → -0.2σ <span style="color:#4caf50;">★ null 成立</span>
+
+<span style="color:#e94560; font-weight:bold;">結論：</span>
+・M_bar 独立性（null）= 膜理論の真の非トートロジー予測【A級確認】
+・r_h 依存性（有意）= dSph の σ-size 関係 σ ∝ r_h^0.27 に由来
+  （McConnachie 2012, Brasseur 2011 が観測的に確立）
+  → 純粋 Strigari（g_obs = 普遍定数）は部分的に棄却
+
+<span style="color:#f5a623;">H4（gc ∝ M_dyn^-1）の正体：</span>
+  gc = σ^(+0.00±0.81) × r_h^(-1.51±0.37)
+  → σ 寄与ゼロ、実体は r_h^-1.5 単独依存</div>
+<p style="font-size: 16px;">
+    <strong>真の膜予測は「g<sub>obs</sub> の M<sub>bar</sub> 独立性」</strong>であり、0.2σ で null として確認された。「slope = -1」は定義と Strigari の合成的帰結であり独立予測ではない。r<sub>h</sub> 依存性は膜理論の mean-field 近似を越える追加物理（dSph の σ-size 関係の起源）として残る。</p>
+
+<h3 style="font-size: 22px; font-weight: 700; margin-top: 32px; margin-bottom: 12px; color: #1a1a2e;">
+    10.7 dSph 拡張の成果と残存課題</h3>
+
+<div style="background: #f7f7fb; border-radius: 8px; padding: 20px 24px; border-left: 4px solid #e94560; font-size: 15px; margin: 16px 0;">
+    <strong>A級確立（v4.7.8 新規）：</strong>
+(i) J3 体制逆転（28/31 dSph で確認）
+(ii) c→0 極限固有状態 s₀ = 0.3515 の導出
+(iii) Bernoulli 予測 G = 0.228 a₀ が 2 独立集団で 4-5% 一致
+(iv) C15 → Strigari 連続遷移（ブリッジ銀河 4/4、4基準すべて達成）
+(v) g<sub>obs</sub> M<sub>bar</sub> 独立性（0.2σ null）
+
+<strong>開問題：</strong>
+(a) dSph の σ ∝ r<sub>h</sub><sup>0.27</sup> スケーリングの第一原理的起源
+  → 高次 cumulant か潮汐履歴など mean-field を越える物理が要
+(b) 個別銀河公式 gc = [s₀(1−s₀)]² a₀² / g<sub>bar</sub> は散布 0.7 dex が残る（B級）
+(c) 極矮小 dSph（Υ<sub>dyn</sub> &gt; 100）は現サンプル外、独立解析が必要</div>
+
+  <!-- 結論 -->
+<h2 style="font-size: 38px; font-weight: 800; margin-top: 56px; margin-bottom: 16px; color: #e94560;">
+    結論</h2>
+<p style="font-size: 16px;">成果は6層で整理できる：</p>
+
+<ol style="font-size: 16px; padding-left: 24px; line-height: 2.4;">
+ 	<li><strong>MOND の解析的導出</strong>：弾性自由エネルギー U(ε;c) の平衡条件から MOND が特殊ケース（g<sub>c</sub> = a₀）として第一原理的に導出された（T-3・4章・Level A）</li>
+ 	<li><strong>g<sub>c</sub> 幾何平均法則の確立</strong>：g<sub>c</sub> = 0.584·Υ<sub>d</sub><sup>−0.36</sup>·√(a₀·Σ<sub>dyn</sub>)。α=0.5 は深MOND極限から導出。SPARC 175銀河 + LITTLE THINGS 26銀河。scatter 0.286 dex（固有限界）。ΔAIC=−130（5章・Level A）</li>
+ 	<li><strong>MOND の位置づけ変更</strong>：MOND の a₀ は g<sub>c</sub> の「全銀河平均」。深MOND逆変換で MOND を p = 8×10⁻³³ で棄却</li>
+ 	<li><strong>κ=0 と理論簡素化</strong>（v4.7新規）：膜剛性ゼロ確定。条件14動力学を棄却。条件15のみの1層構造へ簡素化。各半径で μ(x) = x/(1+x) が独立に成立（RMS = 0.090 dex）</li>
+ 	<li><strong>完全方程式系（13式）</strong>：式(5) 一般化MOND + 式(5') 幾何平均法則を含む13式体系が確立。膜ラグランジアン L ≈ U(ε;c)（勾配項不要）</li>
+ 	<li><strong>dSph 拡張と Bernoulli 予測</strong>（v4.7.8新規）：圧力支持系で J3 体制逆転を発見。c→0 極限の Bernoulli 分散 s₀(1−s₀) a₀ = 0.228 a₀ が Strigari 普遍加速度を第一原理導出。2 独立集団（dSph 5%・ブリッジ 4%）で再現。連続遷移をブリッジ銀河 4/4 で確認。膜理論は回転支持系と圧力支持系を統一的に記述する（Level A）</li>
+</ol>
+<div style="background:#fff0f3; border-left:5px solid #e94560; padding:20px 24px; border-radius:6px; margin-top:32px; font-size:16px;">
+    MOND は「なぜかうまくいく経験則」ではなくなった。<strong>膜の弾性エネルギーが臨界条件に達する瞬間——膜固有エネルギーとバリオン結合エネルギーが釣り合う点——に g<sub>c</sub> が存在し、その幾何平均が銀河の回転曲線を支配する</strong>。MOND の a₀ はその全銀河平均に過ぎない。矮小銀河では g<sub>c</sub> が a₀ より小さく、大質量銀河では大きい——この予測は SPARC 175銀河と LITTLE THINGS 26銀河で確認された。v4.7 では κ=0 が確定し、膜は各半径で独立に応答する局所理論として簡素化された。scatter 0.286 dex の94%は還元不能な銀河間多様性であり、同じ動力学的面密度を持つ銀河でも膜の折り畳み履歴が異なれば異なる g<sub>c</sub> を持つ。<strong>そして v4.7.8 では、圧力支持系 dSph への拡張により膜理論の射程が明らかになった</strong>——バリオン結合が消失する極限で膜は自発的熱揺らぎ s₀(1−s₀) a₀ = 0.228 a₀ を示し、これが Strigari 普遍加速度の正体である。回転支持系から圧力支持系まで、MOND 以前に統一的な説明を持たなかった一連の「普遍的加速度」は、膜の弾性-熱力学から第一原理的に導出される。</div>
+<p style="font-size: 14px; color: #999; margin-top: 24px; padding: 12px 16px; background: #f7f7fb; border-radius: 6px;">
+    ※ 確立度の整理（20章準拠・v4.7.8更新）：MOND の解析的導出【A級】/ g<sub>c</sub> 幾何平均法則（α=0.5）【A級・SPARC 175 + LT 26銀河 LOO-CV】/ α=0.5 の深MOND導出【A級・P5検証】/ η の関数形（Υ<sub>d</sub><sup>−0.36</sup>）【A級・LOO劣化2.5%】/ κ ≈ 0【A級・43章】/ 条件14 = 条件15バイアスの投影【A級・44章】/ scatter 固有限界【A級・45章】/ 弱レンズ cl1【B+級・14章】/ HSC-SSP Y3 C15 確認【A級】/ <strong>J3 体制逆転【A級・v4.7.8】</strong>／ <strong>Bernoulli 予測 G = 0.228 a₀【A級・2集団独立再現】</strong>／ <strong>C15→Strigari 連続遷移【A級・ブリッジ 4/4】</strong>／ <strong>g<sub>obs</sub> M<sub>bar</sub> 独立性【A級・0.2σ null】</strong>／ 条件14動力学【棄却・v4.7】/ 純粋 Strigari 普遍性【部分棄却・r<sub>h</sub> 依存 3.4σ】/ η₀=0.584 の理論的導出【未解決】/ 個別 dSph gc 公式【B級・散布 0.7 dex】/ 外部検証（BIG-SPARC/MaNGA）【最優先・N-2】</p>
+  <!-- フッター -->
+
+<hr style="margin-top: 56px; border: none; border-top: 1px solid #e0e0ec;">
+<p style="font-size: 13px; color: #999; margin-top: 16px;">
+    膜宇宙論モデル v4.7.8 統合版｜ 使用データ：SPARC（Lelli et al. 2016）175銀河, LITTLE THINGS（Oh et al. 2015）26銀河, HSC-SSP Y3, Miyaoka 2018, McConnachie (2012) 31 dSph, Walker et al. (2009), Wolf et al. (2010), Collins et al. (2013), Strigari et al. (2008)｜ 坂口 忍（坂口製麺所）｜ 2026年4月16日更新</p>
+
+</div>

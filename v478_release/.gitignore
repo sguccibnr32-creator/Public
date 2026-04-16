@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor
+.vscode/
+.idea/
+*.sublime-*
+
+# Temporary
+*.tmp
+*.bak
+*.log
+
+# Large datasets (not redistributed)
+Rotmod_LTG/
+*.mrt
+TA3_gc_independent.csv
+dsph_jeans_c15_v1.csv
+
+# Preview / intermediate files
+preview*.png
+prev*.png
+p0ii-*.png
+*.aux
+*.toc
+
+# Claude-side intermediate output
+/home/claude/
