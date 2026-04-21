@@ -1,0 +1,942 @@
+% =============================================================================
+% Membrane Cosmology v4.8 companion paper (English version)
+%   FIRAS mu-distortion upper bound and universal density coupling:
+%   closed-form derivation (foundation layer)
+%
+%   Shinobu Sakaguchi, 2026-04
+%   English translation of v4.8 companion (original: 日本語, 14 pages)
+%   Target: arXiv astro-ph.CO + hep-th cross
+%
+%   Compile: pdflatex membrane_v48_en && bibtex membrane_v48_en && pdflatex x2
+% =============================================================================
+\documentclass[11pt,a4paper]{article}
+
+% ---------------- core packages ---------------------------------------------
+\usepackage[a4paper,margin=22mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks,breaklinks=true]{hyperref}
+\usepackage[round,authoryear,sort&compress]{natbib}
+\usepackage[most]{tcolorbox}
+
+% ---------------- section formatting ----------------------------------------
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{3.2ex plus 1ex minus .2ex}{1.6ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{2.4ex plus .8ex minus .2ex}{1.2ex plus .2ex}
+
+% ---------------- typography tuning -----------------------------------------
+\setlength{\emergencystretch}{3em}
+\tolerance=1000
+\hbadness=5000
+
+% ---------------- colors ----------------------------------------------------
+\definecolor{colKey}{RGB}{230,242,252}
+\definecolor{colNote}{RGB}{240,246,252}
+\definecolor{colWarn}{RGB}{255,243,220}
+
+% ---------------- boxed environments ----------------------------------------
+\newtcolorbox{keybox}{
+  enhanced, breakable, colback=colKey, colframe=colKey!80!black,
+  boxrule=0.3pt, arc=1pt, left=6pt, right=6pt, top=4pt, bottom=4pt,
+  before skip=6pt, after skip=6pt
+}
+\newtcolorbox{notebox}{
+  enhanced, breakable, colback=colNote, colframe=colNote!80!black,
+  boxrule=0.3pt, arc=1pt, left=6pt, right=6pt, top=4pt, bottom=4pt,
+  before skip=6pt, after skip=6pt
+}
+\newtcolorbox{warnbox}{
+  enhanced, breakable, colback=colWarn, colframe=colWarn!80!black,
+  boxrule=0.3pt, arc=1pt, left=6pt, right=6pt, top=4pt, bottom=4pt,
+  before skip=6pt, after skip=6pt
+}
+
+% ---------------- physics symbol shortcuts ----------------------------------
+\newcommand{\Ten}[1]{\times 10^{#1}}
+\newcommand{\epso}{\epsilon_0}
+\newcommand{\kmem}{k_{\mathrm{mem}}}
+\newcommand{\cmem}{c_{\mathrm{mem}}}
+\newcommand{\Vxi}{V_{\xi}}
+\newcommand{\Vxivoid}{V_{\xi,\mathrm{void}}}
+\newcommand{\Tm}{T_{m}}
+\newcommand{\Nmode}{N_{\mathrm{mode}}}
+\newcommand{\nmode}{n_{\mathrm{mode}}}
+\newcommand{\aPT}{\alpha_{\mathrm{PT}}}
+\newcommand{\taum}{\tau_{m}}
+\newcommand{\taur}{\tau_{\mathrm{relax}}}
+\newcommand{\bal}{b_{\alpha}}
+\newcommand{\umem}{u_{\mathrm{mem}}}
+\newcommand{\rhomem}{\rho_{\mathrm{mem},0}}
+\newcommand{\rhog}{\rho_{\gamma,0}}
+\newcommand{\rhogal}{\rho_{\mathrm{gal}}}
+\newcommand{\Imu}{I_{\mu}}
+\newcommand{\Wmu}{W_{\mu}}
+\newcommand{\APT}{A_{\mathrm{PT}}}
+\newcommand{\BFIRAS}{B_{\mathrm{FIRAS,combo}}}
+\newcommand{\Lambdauv}{\Lambda_{\mathrm{UV}}}
+\newcommand{\GammaA}{\Gamma_{A}}
+\newcommand{\GammaAp}{\Gamma_{A}'}
+\newcommand{\GammaB}{\Gamma_{B}}
+\newcommand{\GammaC}{\Gamma_{C}}
+\newcommand{\Gammaref}{\Gamma_{\mathrm{ref}}}
+\newcommand{\Gammaact}{\Gamma_{\mathrm{actual}}}
+\newcommand{\muFIRAS}{\mu_{\mathrm{FIRAS}}}
+\newcommand{\ZMU}{Z_{\mu}}
+\newcommand{\ZDC}{Z_{\mathrm{DC}}}
+\newcommand{\msigma}{m_{\sigma}}
+\newcommand{\gobs}{g_{\mathrm{obs}}}
+\newcommand{\gc}{g_{c}}
+\newcommand{\vflat}{v_{\mathrm{flat}}}
+\newcommand{\hR}{h_{R}}
+\newcommand{\Yd}{\Upsilon_{d}}
+\newcommand{\Jhalf}{J_{\mathrm{half}}}
+\newcommand{\clt}{c_{\mathrm{lt}}}
+\newcommand{\fopt}{f_{\mathrm{opt}}}
+\newcommand{\Rvoid}{R_{\mathrm{void}}}
+\newcommand{\vchar}{v_{\mathrm{char}}}
+\newcommand{\AIC}{\Delta\mathrm{AIC}}
+
+% ---------------- title data ------------------------------------------------
+\title{\bfseries Membrane Cosmology Foundation Layer:\\
+Closed-form Derivation of FIRAS $\mu$-distortion Upper Bound\\
+and Universal Density Coupling\\[4pt]
+\large --- v4.7.8 companion paper (v4.8) ---}
+\author{Shinobu Sakaguchi\\[2pt]
+\small Sakaguchi Seimensho (Independent Research), Shis\={o}, Hyogo, Japan\\
+\small \texttt{sakaguchi-physics.com}}
+\date{April 2026}
+
+% =============================================================================
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+% ---------------- Abstract --------------------------------------------------
+\begin{abstract}
+\small\noindent
+The membrane cosmology v4.7.8 main body~\citep{Sakaguchi2026a} has established Condition 15 (C15)
+at A-grade on three independent fronts---SPARC 175 galaxies, dSph 31 galaxies, and HSC-SSP Y3 +
+GAMA DR4 + KiDS---rejecting MOND at $p = 1.66 \times 10^{-53}$. This companion paper provides the
+theoretical foundation layer supporting that observational establishment, giving it in closed form
+and confirming consistency with observations at 2.32\% agreement using NGC 3198 as anchor.
+
+\smallskip\noindent
+There are five core results:
+(M1) Expanding the FIRAS $\mu$-distortion bound~\citep{Fixsen1996} via the Chluba 2016 $\Wmu$
+kernel with $\Vxi$ primary, we derive
+$\aPT^{\mathrm{upper}} = 2.96 \times 10^{-53}$ (phase-transition coupling upper bound).
+(M2) Through $\aPT^{\mathrm{upper}}$ we set a FIRAS-only bound
+$\taum \in [1.9 \times 10^{10},\; 1.4 \times 10^{53}]$ s on the membrane memory time,
+narrowed to a 5-decade span (38 orders tightened) by the causality constraint from the Local Void
+($R = 22$ Mpc).
+(M3) The SI canonical definition of the mode number $\Nmode$ (Eq.~2B-II) reproduces the NGC 3198
+$\kmem \cdot \Nmode$ product at 2.32\% precision (A-grade).
+(M4) The symbol $\chi$ carries two distinct variables
+$\chi_E\,[\mathrm{s}^2]$ and $\chi_F\,[\mathrm{m}^{3/2}/\mathrm{s}^2]$, with no universal conversion
+between them, stated explicitly.
+(M5) The Pantheon+ result~\citep{Scolnic2022} $f = 0.379$ does not contribute to the $\mu$
+kernel (explicit null).
+
+\smallskip\noindent
+In addition, coupling slopes obtained from SPARC 124 galaxies (after bridge exclusion) and dSph 30
+galaxies---$\bal = +0.1084$ vs $+0.1127$---agree to within 0.5\% over a 3.92 dex density range,
+operationally establishing the universal coupling $\umem \cdot \rhogal^{2\bal}$
+(C3 internal memo v3, A-grade). This result decides $\alpha$ (linear) versus $\gamma$ (threshold)
+model discrimination in favor of $\alpha$ via the Akaike information criterion
+($\AIC = -2.00$), providing an operational constraint
+``variation efficiency $\sim 11\%$ (amplitude) / $\sim 5.5\%$ (power)''
+that requires no dark-matter particle model.
+The two values reflect the same $\bal = 0.11$ under two reference-choice conventions
+($\rho^1$ amplitude vs $\rho^2$ power); the first-principles conversion efficiency is a heuristic
+pair pending the C3-3 ($\taum$ estimate) + \S 7.8 (C3-4 P1--P4 branching ratios) analyses.
+
+\smallskip\noindent
+\textbf{Limitations:}
+(i) The SI absolute calibration of the dimensionless $\Tm = \sqrt{6}$ cannot be determined
+internally, leaving a 96-order gap between the $\sigma$ rest-energy candidate and the membrane
+coherence candidate.
+(ii) Determining the absolute value of the membrane memory rate $\Gammaact$ remains a parallel
+evaluation across three routes (normal mode / FDT / observational proxy), reducible to an
+energy-branching problem that requires a choice of $\taur$ physics. These limitations are targeted
+for the next version (21 cm + CMB TT cross-check).
+
+\smallskip\noindent\textbf{Keywords:} membrane cosmology, dark matter alternative, MOND rejection,
+FIRAS $\mu$-distortion, universal density coupling, C15
+\end{abstract}
+
+\clearpage
+
+% =============================================================================
+\section{Introduction}
+% =============================================================================
+
+\subsection{Observational establishment (v4.7.8 main body)}
+The v4.7.8 main body~\citep{Sakaguchi2026a} frames dark-matter phenomena as arising from the
+folding structure of an elastic membrane rather than from a particle species. Observationally, it
+established the following:
+(i) The Condition 15 final form
+$\gc = 0.584 \cdot \Yd^{-0.361} \cdot \sqrt{a_0 \cdot \vflat^2 / \hR}$ holds on SPARC 175 galaxies
+with $R^2 = 0.607$, $\AIC = -14.2$, and LOO-CV stability~\citep{Lelli2016}.
+(ii) The Bernoulli universal relation $G_{\mathrm{Strigari}} = s_0 (1 - s_0)\,a_0 = 0.228\,a_0$ is
+reproduced in two independent samples: dSph 31 galaxies ($0.240\,a_0$, 4\% agreement) and SPARC
+bridge outer 30 points ($0.219\,a_0$, 4\% agreement)~\citep{McConnachie2012, Strigari2008}.
+(iii) The HSC-SSP Y3 + GAMA DR4 three-field combined analysis (157{,}338 lenses, 503M pairs) yields
+$\gc = 2.73 \pm 0.11\,a_0$ independently, with $\AIC(\mathrm{C15\;vs\;MOND}) = +472$ (22$\sigma$).
+(iv) MOND is rejected at $p = 1.66 \times 10^{-53}$.
+
+\subsection{Why a companion paper is needed}
+The v4.7.8 main body is phenomenologically complete (19 conclusions), but the physical origin of
+each condition---why $\gc$ takes this functional form, what range $\taum$ lies in, what $\aPT$
+means---is only briefly touched upon. This companion paper does not alter the v4.7.8 conclusions;
+instead, it makes their theoretical foundation explicit as a chain of more than eleven closed-form
+equations.
+
+The combined material is too large for a single paper (v4.7.8 is already 12 pages). Separate
+publication is more accessible for both observational and theoretical readerships (separation
+strategy finalized at Session +6). This companion paper is submitted independently to arXiv as v4.8
+and stands non-interferingly with v4.7.8.
+
+\subsection{Roadmap}
+\S 2 introduces the Q-core 3-judgment set and the Form B potential, taking the
+Fluctuation-Dissipation relation (Eq.~I) for the equilibrium variance of the membrane strain field
+$\epsilon$ as the starting point and chaining four core equations (Eqs.~I, II-b, II-d, III, IV;
+foundation\_$\alpha$1).
+\S 3 gives the SI canonical definition of the mode number $\Nmode$ (Eq.~2B-II) and the symbolic
+closed form of the UV cutoff $\Lambdauv$ (Eq.~2C-0; foundation\_$\alpha$2).
+\S 4 expands the FIRAS $\mu$-distortion via the Chluba 2016 $\Wmu$ kernel and derives
+$\aPT^{\mathrm{upper}}$ and the $\taum$ bound.
+\S 5 presents the observational cross-checks (NGC 3198 2.32\% PASS; universal $\bal = 0.11$ across
+3.92 dex).
+\S 6 organizes the five main claims M1--M5, and \S 7 discusses limitations and future work.
+All numerical anchors and references are collected in the Appendix.
+
+\begin{notebox}
+\textbf{Note to the reader:}
+This paper focuses on tracing the closed-form chain
+(Eq.~I $\to$ II-b $\to$ II-d $\to$ III $\to$ IV $\to$ 2A-I/II $\to$ 2B-I/II $\to$ 2C-0 $\to$
+iv-d-I/II/III/IV $\to$ iv-e-I)
+and entrusts individual derivation details to the accompanying document
+\texttt{foundation\_integrated.pdf} (15 pages, with cross-references in Appendix A).
+The present paper concentrates on making the argument structure explicit; computational
+reproducibility is ensured by the accompanying scripts (executable via \texttt{uv run},
+Windows Claude Code environment verified).
+\end{notebox}
+
+\subsection{Preview of main claims (M1--M5)}
+\begin{center}\small
+\begin{tabular}{@{}cllp{52mm}@{}}
+\toprule
+\# & Claim & Section & Core number \\
+\midrule
+M1 & $\aPT^{\mathrm{upper}} = 2.96 \times 10^{-53}$ ($\Vxi$ primary) & \S 4 & FIRAS $\mu < 9 \times 10^{-5}$ \\
+M2 & $\taum$ bound $[1.9 \times 10^{10},\, 1.4 \times 10^{53}]$ s $\to$ 5 decades & \S 4, 5 & Local Void $R=22$ Mpc \\
+M3 & Eq.~2B-II SI canonical & \S 3 & NGC 3198 2.32\% PASS \\
+M4 & $\chi_E,\chi_F$ independent (no universal conversion) & \S 3, 7 & $[\mathrm{s}^2]$ vs $[\mathrm{m}^{3/2}/\mathrm{s}^2]$ \\
+M5 & $f=0.379$ non-contributing to $\mu$ kernel (explicit null) & \S 7 & Pantheon+~\citep{Scolnic2022} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% =============================================================================
+\section{Theoretical Framework: Form B + FDT + Picture T}
+% =============================================================================
+
+\subsection{Q-core 3-judgment set}
+As the starting point of the entire foundation we adopt three judgments. These are minimal choices
+required by both internal consistency and observational anchoring; every closed form below presumes
+all three.
+
+\begin{keybox}
+\textbf{Q-core1 (C-judge):} $\chi_E = a_0 / \kmem\;[\mathrm{s}^2]$. \\
+\quad Adopting the MOND external anchor $a_0$ avoids circular reference. \\[2pt]
+\textbf{Q-core2 (P-T):} $\msigma^2$ (static curvature) and $\taum$ (dynamic relaxation) combine as
+an orthogonal, independent product. \\[2pt]
+\textbf{Q-core3 (staged adoption):} Stage 1 (volume average) $\to$ Stage 2 (precision), two stages.
+\end{keybox}
+
+\subsection{Form B potential and $\Tm = \sqrt{6}$}
+We adopt the effective potential
+$U(\epsilon; c) = -\epsilon - \epsilon^2/2 - c\,\ln(1 - \epsilon)$ (Form B, established at v4.7.6).
+Solving $dU/d\epsilon = 0$ gives $\epso = \sqrt{1 - c}$, and $w(c)^2 = U''(\epso) = 2\epso/(1 - \epso)$
+guarantees thermodynamic stability over $c \in (0, 1)$. At the canonical $c_0 = 0.83$ (SPARC+dSph
+volume average) we have $\epso = 0.412311$ and $w(c)^2 = 1.4032$.
+
+The critical temperature of the $Z_2$ symmetry-breaking is given dimensionlessly as
+$\Tm = \sqrt{6}$ (Lemma 5; v4.7.6 A-grade~\citep{v476internal}). This value is a universal constant
+obtained by combining the Gaussian evaluation of the 4-point correlator with the mean-field
+critical exponent $z \cdot \nu = 1/2$. Translation to a physical unit (Kelvin equivalent) cannot be
+decided internally (see \S 7).
+
+\subsection{foundation\_$\alpha$1: the four core equations}
+From the Langevin dynamics of the membrane strain field, four core equations are obtained in chain
+(established in Sessions +2 to +6).
+
+\begin{keybox}
+\begin{align*}
+\text{Eq.~I (FDT):}\quad &\langle \delta\epsilon^2 \rangle_{\mathrm{eq}} = \Tm / w(c)^2 = 1.745 \quad (c_0 = 0.83) \\
+\text{Eq.~II-b:}\quad &\msigma^2(c) = 4\epso \cdot w(c)^2 \cdot (\kmem / a_0) \\
+\text{Eq.~II-d:}\quad &\Jhalf(c) = (8\kmem^2 \Tm^2 \Gamma / a_0^2) \cdot \epso(1 - \epso) \\
+\text{Eq.~III:}\quad &\msigma^2 \cdot \langle \delta\epsilon^2 \rangle_{\mathrm{eq}} = 4\epso\Tm \cdot (\kmem / a_0) \\
+\text{Eq.~IV:}\quad &\mu = \APT \cdot \Imu \quad \text{(Stage 1/2 factorization)}
+\end{align*}
+\end{keybox}
+
+Eq.~III is a structural identity: $w(c)^2$ cancels in the product of Eqs.~I and II-b, and the
+right-hand side reduces to a function of $c_0$ through $\epso$ alone. The Jeans volume-halved
+quantity $\Jhalf$ reproduces 30 dSph galaxies in the Phase C2 analysis independently of the Strigari
+relation ($\pm 5\%$) and functions as an observational anchor of the closed-form system.
+
+\medskip\noindent
+\textbf{Factorization of Eq.~IV.}
+The $\mu$-distortion is a direct product of $\APT$ (prefactor) and $\Imu$ (kernel integral):
+\[
+\APT = \frac{4\aPT \Tm \kmem \Gamma \Nmode}{a_0} \cdot \frac{\rhomem^2}{\rhog}.
+\]
+$\Imu$ is the integral under the Chluba $\Wmu$ kernel, separated into Stage 1 (closed form) and
+Stage 2 (precision). The ratio $\mathrm{S2/S1} = 0.8747$ is $c_0$-independent at machine precision
+($\mathrm{std} = 2 \times 10^{-16}$), a strong testament to the correctness of the integrand
+structure (as shown in \S 4).
+
+% =============================================================================
+\section{foundation\_$\alpha$2: $\cmem$, $\Nmode$, and $\Lambdauv$}
+% =============================================================================
+
+\subsection{Step 2-A: membrane sound speed $\cmem$ and $\chi_F$}
+We define a new force-conjugate quantity $\chi_F$ that connects the membrane sound speed $\cmem$
+to $\chi$ of Q-core1. The two $\chi$'s are easily conflated by symbolic identity but are clearly
+distinguished by their dimensions (see M4 below).
+
+\begin{keybox}
+\begin{align*}
+\text{Eq.~2A-I:}\quad &\kmem^2 = a_0 / \cmem^2 \\
+\text{Eq.~2A-II:}\quad &\chi_F = \cmem \cdot \sqrt{a_0}\;\; [\mathrm{m}^{3/2}/\mathrm{s}^2]
+\end{align*}
+\end{keybox}
+
+The numerical evaluation at $c_0 = 0.83$ adopts the $\fopt(c) \cdot \vflat$ mapping of the v3.7
+Chap.~18 Table~18-3. From $\fopt(0.83) = 1.9163$ (Sb-type neighborhood extrapolation) and
+$\vflat^{\mathrm{universal}} = 2.00 \times 10^{5}$ m/s, we obtain
+$\cmem = 3.833 \times 10^{5}$ m/s, $\chi_F = 4.198\;\mathrm{m}^{3/2}/\mathrm{s}^2$, and
+$\kmem = 2.861 \times 10^{-8}\;\mathrm{m}^{-1}$. Because the extrapolation is from two points, its
+accuracy is a reserved issue (\S 7).
+
+\subsection{Step 2-B: SI canonical $\Nmode$ (M3)}
+The membrane mode density $\nmode\;[\mathrm{m}^{-3}]$ and the mode number per unit energy
+$\Nmode\;[\mathrm{J}^{-1}]$ are given in terms of $\Lambdauv$ (UV cutoff) and $\cmem$. The core of
+M3 is that numerical substitution must always use Eq.~2B-II.
+
+\begin{keybox}
+\begin{align*}
+\text{Eq.~2B-I:}\quad &\nmode = \frac{V \cdot \Lambdauv^3}{6\pi^2 \hbar^3 \cmem^3}\;\; [\mathrm{m}^{-3}] \\
+\text{Eq.~2B-II:}\quad &\Nmode = \frac{V \cdot \Lambdauv^2}{6\pi^2 \hbar^3 \cmem^3}\;\; [\mathrm{J}^{-1}]
+\quad \leftarrow\;\text{SI canonical}
+\end{align*}
+\end{keybox}
+
+The most stringent cross-check with observation is achieved at NGC 3198. The observed value of the
+$\kmem \cdot \Nmode$ product fixed by C15 is $2.93 \times 10^{38}$; the foundation prediction via
+Eq.~2B-II is $2.998 \times 10^{38}$, a relative difference of 2.32\% (A-grade, Session +8). This
+cross-check is the strongest endorsement of the SI canonical nature of Eq.~2B-II and constitutes
+the empirical content of claim M3.
+
+\subsection{Step 2-C: symbolic closed form of $\Lambdauv$}
+For the same $\Nmode$, a symbolic closed form Eq.~2C-0 that explicitly includes $\clt$ (speed of
+light) also exists. It is useful for structural investigations (UV-IR duality, dimensional scans)
+but fails catastrophically under SI numerical substitution.
+
+\begin{keybox}
+\begin{align*}
+\text{Eq.~2C-0:}\quad \Lambdauv = 2\,\clt^2 \cdot w(c) \cdot \sqrt{\epso(c)} \cdot \cmem^{-1/2} \cdot a_0^{-1/4}
+\end{align*}
+(symbolic; numerical substitution forbidden)
+\end{keybox}
+At $c_0 = 0.83$: $\Lambdauv = 9.549 \times 10^{-49}$ J (v3.7 Table 18-4 linear extrapolation;
+requires verification due to 2-point extrapolation).
+
+\medskip\noindent
+\textbf{132-order discrepancy.}
+Substituting the SI numerical value at $c_0 = 0.83$ directly into Eq.~2C-II causes
+$\clt^{n}$ ($n \sim 20$) to diverge near $10^{170}$, producing a discrepancy of $10^{132}$ against
+the correctly-signed value via Eq.~2B-II (NGC 3198 consistent value $\sim 10^{38}$). This is a
+qualitative, not numerical, breakdown, and the role separation between Eq.~2B-II and Eq.~2C-II is
+a non-retractable rule.
+
+\subsection{Stage 2 $\Imu$ integration and the Chluba $\Wmu$ kernel}
+The time integral of the $\mu$-distortion kernel is expanded via the Chluba 2016 $\Wmu(z)$ shape
+function:
+
+\begin{keybox}
+\textbf{Eq.~iv-d-II-a (Chluba $\Wmu$):}
+\begin{align*}
+\Wmu(z) &= \left(1 - \exp\left(-\left(z/\ZMU\right)^{1.88}\right)\right) \cdot \exp\left(-\left(z/\ZDC\right)^{2.5}\right) \\
+\ZMU &= 5 \times 10^{4},\quad \ZDC = 1.98 \times 10^{6}
+\end{align*}
+
+\textbf{Eq.~iv-d-I (Stage 1 closed form):}
+\[
+\Imu^{S1}(c_0) = \epso(c_0) \cdot \frac{\ln((1+\ZDC)/(1+\ZMU))}{H_0 \sqrt{\Omega_R}}
+\]
+At $c_0 = 0.83$: $\Imu^{S1} = 7.2275 \times 10^{19}$ s (expected $7.26 \times 10^{19}$, 0.45\% PASS).
+
+\textbf{Eq.~iv-d-II v2 (Stage 2 integrand):}
+\[
+\text{integrand}(z, c_0) = \epso(c_0) \cdot \Wmu(z) \cdot (1+z) / H(z)
+\]
+\end{keybox}
+
+That $(1+z)$ appears in the numerator of the Stage 2 integrand is critical. A swap with the
+denominator produces a systematic error on the order of 30\%, whereas the correct placement leaves
+$\mathrm{S2/S1} = 0.8747$ independent of $c_0$ at machine precision
+($\mathrm{std} = 2 \times 10^{-16}$). This invariance serves as a self-diagnostic of the Stage 2
+implementation.
+
+% =============================================================================
+\section{Results I: FIRAS $\mu$-distortion and $\aPT^{\mathrm{upper}}$ (M1, M2)}
+% =============================================================================
+
+\subsection{Closed form of $\BFIRAS$}
+Connecting the FIRAS $\mu$ upper bound~\citep{Fixsen1996} $\muFIRAS < 9 \times 10^{-5}$ to the
+$\APT$ prefactor of Eq.~IV yields the following closed form:
+
+\begin{keybox}
+\textbf{Eq.~iv-d-III:}
+\[
+\BFIRAS(c_0) = \frac{\muFIRAS \cdot A_0 \cdot \rhog}{4\,\Tm\,\Gammaref\,\rhomem^2\,\Imu(c_0)}
+\]
+At $c_0 = 0.83$: $\BFIRAS = 1.516 \times 10^{-12}\;[\mathrm{J}^{-1}\,\mathrm{m}^{-1/2}]$.
+\end{keybox}
+
+\begin{notebox}
+\textbf{A1 operational working hypothesis (inherited \#1--17).}
+The numerical anchors of this section (in particular $\rhomem = 2.3 \times 10^{-27}\;\mathrm{kg/m}^3$)
+presuppose the v4.7.8 main-body assumption $\rhomem = \rho_{\mathrm{DM},0}$ (operational). A1 is a
+working hypothesis at the observational-establishment stage; the present foundation guarantees the
+consistency of closed forms under A1.
+\end{notebox}
+
+We unify SI units with $\rhomem = 2.3 \times 10^{-27}\;\mathrm{kg/m}^3$ (A1) and
+$\rhog = 4.6 \times 10^{-31}\;\mathrm{kg/m}^3$. $\Gammaref = 1$ is a placeholder; the linear scaling
+rule (see \S 6) guarantees that the actual $\Gammaact$ can be applied a posteriori.
+
+\subsection{Derivation of $\aPT^{\mathrm{upper}}$ (M1)}
+The closed form Eq.~iv-d-IV that provides an upper bound on $\aPT$ from $\BFIRAS$ becomes a
+$\cmem$-linear contracted form (after $\Vxi$ adoption). The sensitivity to the mode-volume choice
+$V$ is shown below:
+
+\begin{center}\small
+\begin{tabular}{@{}llrl@{}}
+\toprule
+$V$ choice & $V\;[\mathrm{m}^3]$ & $\aPT^{\mathrm{upper}}$ & Interpretation \\
+\midrule
+$\Vxi$ (membrane coherence) & $7.683 \times 10^{63}$ & $2.96 \times 10^{-53}$ & primary (consistent with $a_0$ independence) \\
+$V_{\mathrm{cosmo}}$ (geometric) & $1.060 \times 10^{79}$ & $2.15 \times 10^{-68}$ & conservative upper \\
+Ratio $V_{\mathrm{cosmo}}/\Vxi$ & $\sim 1.38 \times 10^{15}$ & $\sim 1.38 \times 10^{15}$ & linear scaling in $V$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Adopting $\Vxi$ as primary is the only choice consistent with the ``$a_0$ independence'' structural
+finding of foundation\_$\alpha$2. $V_{\mathrm{cosmo}}$ includes geometric volumes above galaxy-cluster
+scales and thus overestimates physical coherence.
+
+\begin{keybox}
+\textbf{M1 claim:} $\aPT^{\mathrm{upper}} = 2.96 \times 10^{-53}$ ($\Vxi$ primary, $c_0 = 0.83$).
+\end{keybox}
+
+\subsection{$\taum$ bound and Local Void narrowing (M2)}
+Inverting through $\aPT^{\mathrm{upper}}$ onto the membrane memory time $\taum$, we obtain two ends
+---a FIRAS-only upper bound and a causality lower bound:
+
+\begin{align*}
+\taum^{\mathrm{upper}}\;(\Vxi, \mathrm{FIRAS\text{-}only}) &= 1.418 \times 10^{53}\;\mathrm{s} \\
+\taum^{\mathrm{lower}}\;(\mathrm{causal},\;z = 5 \times 10^{4}\;\mathrm{Hubble}) &= 1.906 \times 10^{10}\;\mathrm{s}\;\;(\sim 605\;\mathrm{yr}) \\
+&\Rightarrow\;\text{FIRAS-only span} = 40\text{--}58\;\text{decades}
+\end{align*}
+
+This span can be narrowed by the causality constraint of the P2 void. We define the void-interior
+$\taum$ upper bound as the minimum of two routes via Eq.~iv-e-I:
+
+\begin{keybox}
+\textbf{Eq.~iv-e-I:} $B_{\taum,\mathrm{void}} = \Rvoid / \vchar$ (min of 2 routes).\\[2pt]
+\quad Route 1 (causality): $B_{\mathrm{causal}} = \Rvoid / \clt$\\
+\quad Route 2 (dynamical): $B_{\mathrm{dyn}} = \Rvoid / v_{\mathrm{flat,void,median}}$\\[2pt]
+\quad $\taum^{\mathrm{upper,final}} = \min(B_{\taum,\mathrm{void}}, \tau_{\mathrm{FIRAS}})$
+\end{keybox}
+
+\begin{notebox}
+\textbf{$\Vxivoid$ primary selection (\#27).}
+Within a void, the mode volume has two candidates: $\Vxivoid$ (membrane coherence volume, primary)
+and $V_{\mathrm{void}}$ (geometric volume, conservative upper). This paper adopts $\Vxivoid$ as
+primary to maintain consistency with the $\Vxi$-primary policy of \S 4.2. This selection preserves
+consistency with both the $a_0$-independence structural finding of foundation\_$\alpha$2 and the
+void narrowing.
+\end{notebox}
+
+At the Local Void ($R = 22$ Mpc)~\citep{Kreckel2011} we obtain
+$B_{\mathrm{causal}} \sim 2.26 \times 10^{15}$ s; using this as an upper end,
+$\taum \in [1.9 \times 10^{10},\; \sim 2 \times 10^{15}]$ s, compressed to 5 decades (38 orders
+tighter). Bootes void ($R = 55$) and Corona Borealis void ($R = 60$) give looser bounds than the
+Local Void.
+
+\begin{warnbox}
+The $\Rvoid$ values of the five-void sample (Local / Bootes / Cetus / Sculptor / Corona Borealis)
+in this section include design estimates as of Session +15; they will be finalized after literature
+verification on the Windows side~\citep{Kreckel2011, Pan2012, Ricciardelli2014}.
+$\rho_{\mathrm{void}}/\bar{\rho}$ and $c_{\mathrm{void,median}}$ are assumed to have 30--50\%
+uncertainty.
+\end{warnbox}
+
+\subsubsection{Tentative numerical values for the 5-void sample}
+\begin{center}\small
+\begin{tabular}{@{}lrrll@{}}
+\toprule
+void & $R\;[\mathrm{Mpc}]$ & $B_{\mathrm{causal}}\;[\mathrm{s}]$ & source (tentative) & note \\
+\midrule
+Local Void & 22 & $2.26 \times 10^{15}$ & \citet{Kreckel2011} & tightest \\
+Sculptor Void & 25 & $2.57 \times 10^{15}$ & \citet{Pan2012} & SDSS DR7 catalog \\
+Cetus Void & 30 & $3.09 \times 10^{15}$ & \citet{Pan2012} & SDSS DR7 catalog \\
+Bootes Void & 55 & $5.66 \times 10^{15}$ & Kirshner+1981 & classical void \\
+Corona Borealis & 60 & $6.17 \times 10^{15}$ & \citet{Ricciardelli2014} & largest \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The Local Void gives the tightest upper bound; at $R = 22$ Mpc it lies closest to our Galaxy, so
+the causality constraint is most effective. The more distant voids have longer propagation times
+$B_{\mathrm{causal}} = R/\clt$ and hence provide only looser bounds. The M2 narrowing claim relies
+on the Local Void; the measurement precision of its $R$~\citep{Kreckel2011} is the dominant
+systematic source of the final value.
+
+\begin{keybox}
+\textbf{M2 claim.}
+The bound $\taum \in [1.9 \times 10^{10},\; 1.4 \times 10^{53}]$ s (FIRAS-only) narrows to the
+5-decade span $[1.9 \times 10^{10},\; 2 \times 10^{15}]$ s under the Local Void causality
+constraint. A 5-decade span is observationally meaningful and is cross-checkable against future
+probes (21 cm, CMB TT).
+\end{keybox}
+
+% =============================================================================
+\section{Results II: universal density coupling $\bal$ and $\Gammaact$}
+% =============================================================================
+
+\subsection{C3 foundation: $\alpha$ vs $\gamma$ model comparison}
+In C3-2 we took as candidates for the $\rhogal$ dependence of $\umem$:
+(a) linear coupling $F = \lambda\,\rhogal$ ($\alpha$ model), and
+(b) threshold coupling $F = \lambda\,\rhogal - 2\,\epsilon_\star$ ($\gamma$ model).
+We compare the two directly on SPARC and dSph.
+
+\subsection{SPARC-only analysis ($N = 124$)}
+From SPARC 175 galaxies, with a quality flag $Q < 3$, $\vflat > 0$, and finite $\gc^{\mathrm{C15}}$,
+and excluding the four bridge galaxies by the Phase C2 protocol (ESO444-G084, NGC2915, NGC1705,
+NGC3741), we obtain a primary sample of $N = 124$. The bridge exclusion is justified by
+Lesson~91 (bridge / extreme-regime pre-cut protocol): it averts a spurious $\rho = +0.85$ driven
+by NGC3741 alone. After exclusion the true signal is partial $\rho = +0.522$ $[+0.369, +0.645]$,
+$\sigma = 6.37$, $\AIC$ vs null $= +46.8$ (A-grade).
+
+In a direct $\alpha$ vs $\gamma$ comparison, the partial NLL difference is $0.001$ (machine
+precision), and the partial Spearman $\rho$'s are exactly equal ($0.5496 = 0.5496$). The optimal
+$\lambda_p$ for $\gamma$ saturates at the grid upper end ($10{,}000$), placing all SPARC 124
+galaxies above threshold and mathematically converging $\gamma \to \alpha$. With the $+1$ parameter
+AIC penalty this yields $\AIC(\alpha - \gamma) = -2.00$, favoring $\alpha$ by parsimony
+(Lesson~92: \textit{parsimony first}).
+
+\subsection{dSph extension and 3.92 dex universal coupling}
+Within the SPARC density range of 2 dex, $\alpha$ vs $\gamma$ is indiscriminable; dSph is 3--4 dex
+lower in $\rhogal$ than SPARC and differentially tests the existence of a threshold structure.
+For the dSph 30 galaxies based on~\citet{McConnachie2012} (Sgr excluded, $\Upsilon_V = 1$):
+
+\begin{align*}
+\text{partial Spearman } \rho &= +0.557,\;\; \sigma = 3.27 \\
+\bal\;(\mathrm{dSph}) &= +0.1127 \\
+\AIC(\alpha - \gamma) &= -2.00\;\;(\alpha\;\text{favored, SCE delta sensitivity robust})
+\end{align*}
+
+The SPARC+dSph combined $N = 154$ at 3.92 dex density range yields $\AIC(\alpha - \gamma) = -1.76$
+(LRT $p = 0.31$); no $\gamma$ threshold is detected. The most important finding is the numerical
+agreement of slopes between the two independent samples:
+
+\begin{center}\small
+\begin{tabular}{@{}lrcl@{}}
+\toprule
+sample & $N$ & $\bal$ (partial) & note \\
+\midrule
+SPARC (bridge excluded) & 124 & $+0.1084$ & $\gc^{\mathrm{C15}}$ anchor \\
+dSph (Sgr excluded) & 30 & $+0.1127$ & $G_{\mathrm{Strigari}}$ anchor \\
+$|\text{diff}|$ & -- & $0.0042$ (within 0.5\%) & across 3.92 dex \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{keybox}
+\textbf{Lesson 93 (universal coupling = slope agreement).}
+The fact that slopes independently fit under different physical regimes (SPARC $\gc^{\mathrm{C15}}$
+vs dSph $G_{\mathrm{Strigari}}$) agree within 0.5\% over 3.92 dex meets the operational definition
+of the universal coupling $\umem \propto \rhogal^2$. The key point of this section is that the
+evidence is the \emph{numerical agreement of slopes}, not the statistical significance of a
+correlation.
+\end{keybox}
+
+\subsubsection{Phase C3 methodology triptych (Lessons 91--93)}
+The three lessons newly established in Phase C3 Step 2-3 are methodological principles applicable
+to general observational-data analyses and will be retained in future extensions (UFD extension,
+void galaxy morphology samples, etc.):
+
+\begin{center}\small
+\begin{tabular}{@{}cp{40mm}p{70mm}@{}}
+\toprule
+\# & Proposition & Operational content \\
+\midrule
+91 & bridge / extreme-regime pre-cut protocol & Prior exclusion on the grounds of physical-regime
+uniformity. SPARC 4 bridge galaxies; dSph Sgr. \\
+92 & parsimony first & Information criteria (AIC/BIC) take priority over Spearman strength;
+model-selection discipline. \\
+93 & universal coupling = slope agreement & Numerical slope agreement (within 1\%) between two
+independent samples is the operational definition of universality. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+These three lessons provide the evidentiary standard for connecting the closed-form system to
+observations within the foundation. A significant correlation alone (e.g.\ $\rho > 0$) is a
+necessary but not sufficient condition for universality; the stronger requirement of numerical
+slope agreement gives the first operational empirical warrant for a foundation hypothesis.
+
+\subsection{Parallel evaluation of $\Gammaact$ across three routes}
+We attempt to estimate the absolute value of $\Gammaact$ from the universal
+$\bal = 0.11 \pm 0.005$. We evaluate three routes in parallel and ensure internal consistency
+(absolute-value claims by a single route are withheld):
+
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}l >{\raggedright\arraybackslash}X l l >{\raggedright\arraybackslash}X@{}}
+\toprule
+route & expression & result & units & assessment \\
+\midrule
+A: normal mode & $(1-\bal)/\bal \cdot \mathrm{mode\_factor}$ & $8.091$ & dim.less & strong candidate \\
+B: FDT relax. & $\chi_F / (V'' \taur)$ & $4 {\times} 10^{-18}\sim 10^{-10}$ & $\mathrm{m}^{3/2}/\mathrm{s}$ & 4 $\taur$ candidates \\
+C: obs.\ proxy & SPARC memory $> 10$ Gyr & $< 5.75 {\times} 10^{-18}$ & $\mathrm{m}^{3/2}/\mathrm{s}$ & upper only \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Route A interprets $\bal = 0.11$ as the $\umem \to \text{stress}$ conversion efficiency
+(an operational expression of the C3-4 energy branching). $\GammaA = 8.091$ is a naive
+representation of this branching (11\% observable : 89\% dissipation / gravitational wave /
+internal conversion). Route B shows a 7-decade spread over four $\taur$ candidates
+(Hubble / galaxy dynamical / kpc crossing / BE thermalization), leaving the $\taur$ choice
+unresolved (\S 7). Route C provides only a conservative upper bound from SPARC memory $> 10$ Gyr.
+
+\subsubsection{Three-route integrated assessment and integrity}
+The parallel evaluation across three routes is the core of non-retractable item \#30 and reflects
+the foundation's inherent skepticism toward absolute-value claims from a single route. Route A is
+derived from the observational grounding of the universal $\bal = 0.11$ and therefore carries more
+direct evidence than the other two. The 7-decade spread of Route B reflects the ambiguity of the
+$\taur$ physical choice, and Route C provides only a conservative upper bound.
+
+As an internal consistency check, normalizing Route A (dimensionless 8.091) and Route B (Hubble-time
+adoption $4.12 \times 10^{-18}\;\mathrm{m}^{3/2}/\mathrm{s}$) by the foundation scale
+($\chi_F \cdot V'' \cdot \Tm / \hbar$, non-retractable \#29) shows a hint of order-of-magnitude
+agreement (a quantitative determination awaits the C3-4 energy-branching analysis). This internal
+consistency sets a future-work direction for determining the absolute value of $\Gammaact$
+(\S 7.2).
+
+\subsubsection{\texorpdfstring{Two interpretations of $\bal = 0.11$ (11\% vs 5.5\% unification, \#17 treatment)}{Two interpretations of b\_alpha = 0.11}}
+The v4.7.8 non-retractable \#17 is ``11\% / 5.5\% treatment'', giving two operational interpretations
+for the same $\bal = 0.11$:
+
+\begin{center}\small
+\begin{tabular}{@{}lllc@{}}
+\toprule
+interpretation & basis & efficiency formula & value \\
+\midrule
+(i) memo v3 p.6 & $\rho^{1}$ (amplitude) & $\bal / 1$ & 11\% \\
+(ii) \S 7.6 p.3 & $\rho^{2}$ (power, $\umem$ source) & $\bal / 2$ & 5.5\% \\
+\midrule
+essence of difference & amplitude vs power & one sqrt step & factor of 2 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{notebox}
+\textbf{Both interpretations reference the same $\bal = 0.11$ under different convention choices
+and are not numerically inconsistent.}
+Against the path-A prescription $\umem \propto F^2 \propto \rhogal^2$,
+$\bal/2 = 5.5\%$ represents the source power fraction while
+$\bal/1 = 11\%$ represents the residual-$g$ amplitude fraction. Both are heuristic; the
+first-principles $\umem \to \text{stress} \to \gobs$ conversion efficiency will be fixed in the v4.9
+phase through C3-3 ($\taum$ physical estimate) and \S 7.8 (C3-4 P1--P4 branching ratios, the
+energy-branching-ratio section).
+\end{notebox}
+
+Accordingly, Route A keeps two versions of its expression:
+\begin{itemize}[leftmargin=*,itemsep=2pt]
+\item $\GammaA = 8.091$ (amplitude basis, $(1 - \bal)/\bal = 0.89/0.11$)
+\item $\GammaAp = 17.18$ (power basis, $(1 - \bal/2)/(\bal/2) = 0.945/0.055$)
+\end{itemize}
+These are different representations of the same phenomenon and are not numerically inconsistent.
+
+
+% =============================================================================
+\section{Discussion: M4, M5, and overall consistency}
+% =============================================================================
+
+\subsection{Independence of the $\chi$ dual (M4)}
+The symbol $\chi$ refers to two independent variables in the present foundation. The $\chi_E$ of
+Q-core1 (originating in the v4.2 supplementary section A; dimension $[\mathrm{s}^2]$) derives from
+the MOND anchor $a_0 / \kmem$, while the $\chi_F$ of Eq.~2A-II (dimension
+$[\mathrm{m}^{3/2}/\mathrm{s}^2]$) derives from the membrane sound speed $\cmem \sqrt{a_0}$. Their
+dimensional ratio
+$[\mathrm{m}^{3/2}/\mathrm{s}^2]/[\mathrm{s}^2] = [\mathrm{m}^{3/2}/\mathrm{s}^4]$
+has no universal physical meaning, and the two $\chi$'s must be carefully distinguished throughout
+the paper. This companion paper acknowledges the absence of any universal conversion positively
+under the banner M4.
+
+\subsection{$f = 0.379$ explicit null (M5)}
+The dark-component fraction $f = 0.379 \pm 0.029$ as independently measured by
+Pantheon+~\citep{Scolnic2022} is a cosmological quantity independent of $c_0 = 0.83$
+(SPARC+dSph volume average). In particular it does not contribute to the $\mu$-distortion kernel of
+this foundation (no $f$ appears in the integrand). By stating this separation explicitly as an M5
+null, we prevent reader confusion (a spurious relation $f \sim 1 - c_0$, or an assumed $f$
+dependence of the $\mu$ kernel).
+
+\subsection{Linear scaling rule and modularity}
+The linear scaling rule against the placeholder $\Gammaref = 1$ (established in Session +10,
+non-retractable) guarantees modularity of the entire foundation:
+
+\begin{center}\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+quantity & $\Gammaact$ dependence & note \\
+\midrule
+$\tau_{\mathrm{from\_firas}}$ & proportional to $\Gammaact$ & linear \\
+$\aPT^{\mathrm{upper}}$ & invariant & cancelled through $\BFIRAS$ \\
+$\BFIRAS$ & proportional to $1/\Gammaact$ & inverse \\
+$\taum^{\mathrm{upper}}$ (FIRAS-only) & proportional to $\Gammaact$ & via FIRAS \\
+$\taum^{\mathrm{upper}}$ (void-bound) & invariant & purely geometric \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+This table gives an explicit recipe for how the numerical results of the present paper will update
+once the absolute value of $\Gammaact$ (discussed in \S 7) is established. M1 ($\aPT^{\mathrm{upper}}$)
+is invariant, while M2 (the FIRAS-only upper bound on $\taum$) is subject to linear scaling.
+
+\subsection{Stage 2 self-diagnostic and $\mathrm{S2/S1} = 0.8747$}
+The Stage 1 / Stage 2 ratio $\mathrm{S2/S1} = 0.8747$ being independent of $c_0$
+($\mathrm{std} = 2 \times 10^{-16}$, machine precision) is strong evidence that the $(1+z)$
+numerator placement in the Eq.~iv-d-II v2 integrand is correct. Interchanging the numerator and
+denominator would produce a $c_0$-dependence at $\mathrm{std} \sim 30\%$. This invariance serves as
+a self-diagnostic for the Stage 2 implementation and remains a regression test for future numerical
+re-evaluations.
+
+\subsection{Non-interference with the v4.7.8 main body}
+\begin{center}\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+aspect & v4.7.8 main body & v4.8 foundation \\
+\midrule
+layer & observational establishment & theoretical foundation \\
+main conclusion & C15, MOND rejection $p = 1.66 \times 10^{-53}$ & $\aPT^{\mathrm{upper}}$, $\taum$ bound \\
+statistical power & SPARC 175 + dSph 31 + HSC 503M & NGC 3198 2.32\% + Lessons 91--93 \\
+arXiv category & astro-ph.CO & astro-ph.CO + hep-th cross \\
+mutual dependence & -- & presupposes v4.7.8 results (unchanged) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+This companion does not alter the conclusions of v4.7.8. As a purely additive layer, it provides
+theoretical foundation to the observational establishment of v4.7.8.
+
+% =============================================================================
+\section{Limitations and Future Work}
+% =============================================================================
+
+\subsection{The 96-order gap in SI absolute calibration of $\Tm$}
+In translating $\Tm = \sqrt{6}$ to a physical unit (Kelvin equivalent), a 96-order gap persists
+between the $\sigma$ rest-energy route (a) and the membrane coherence route (b). Route (a) gives
+$\hbar \cdot \Omega_\sigma \sim 10^{-45}$ J (micro scale), while route (b) gives
+$\rhomem \cdot \Vxi \cdot \clt^2 \sim 10^{47}$ J (macro scale). These are hierarchically distinct
+physical quantities---individual quantum excitation versus collective mode excitation---and cannot
+be decided internally. Simultaneous use of external anchors (FIRAS + CMB TT + 21 cm) is the top
+priority for the next version.
+
+\subsection{Determining the absolute value of $\Gammaact$ + unifying 11\%/5.5\% first-principles efficiency}
+The dimensional consistency between Route A (dimensionless 8.091 / 17.18) and Route B (SI
+$4 \times 10^{-18}\sim 10^{-10}\;\mathrm{m}^{3/2}/\mathrm{s}$ with four candidates) is unresolved.
+We adopt normalization by the foundation scale ($\chi_F V'' \Tm / \hbar$) as primary
+(non-retractable \#29), but resolution of the $\taur$ choice in Route B requires addressing the
+C3-4 energy-branching problem. Route A's neighborhood is judged a strong candidate, but an
+absolute-value claim is withheld.
+
+In addition, the two heuristic interpretations written together in \S 5.4.2---11\% (amplitude basis)
+and 5.5\% (power basis)---should be consolidated into a single first-principles
+$\umem \to \text{stress} \to \gobs$ conversion efficiency. This will be fixed jointly in the v4.9
+phase through completion of C3-3 ($\taum$ physical estimate) and \S 7.8 (C3-4 P1--P4 branching
+ratios). These two tasks (the absolute value of $\Gammaact$ and the 11\%/5.5\% unification) are
+treated as the same pending item.
+
+\subsection{Extrapolation accuracy of $\Lambdauv$ and $\cmem$}
+$\cmem(0.83) = 3.833 \times 10^{5}$ m/s is an Sb-type neighborhood extrapolation from two points of
+the v3.7 Chap.~18 Table~18-3 (range $c \in [0.3, 0.8]$); physical verification outside the range
+(at 0.83) is incomplete. Similarly, $\Lambdauv(0.83) = 9.549 \times 10^{-49}$ J is a linear
+extrapolation from Table~18-4. Improving both extrapolations requires additional samples of
+$\cmem(c)$ and independent measurements of $\Lambdauv(c)$ (precision CMB spectral distortion
+measurements, PIXIE~\citep{Kogut2011}).
+
+\subsection{Void sample literature consistency}
+The $\Rvoid$ values for the five voids used in the M2 narrowing (Local / Bootes / Cetus /
+Sculptor / Corona Borealis) include tentative figures and will be fixed in a formal version via
+direct input from~\citet{Kreckel2011, Pan2012, Ricciardelli2014} through Windows implementation
+task (a) (see Appendix~A). $\rho_{\mathrm{void}}/\bar{\rho}$ and $c_{\mathrm{void,median}}$ are
+assumed to have 30--50\% uncertainty; the final version will add void-by-void uncertainty
+propagation.
+
+\subsection{UFD extension (C3 next version)}
+In the Phase C2 strict 15 subset, 7/15 are below threshold and a marginal $\gamma$ hint remains with
+$\AIC = +0.17$ (a boundary case of Lesson~93). With $N = 15$ the matter cannot be decided, and
+securing statistical power through an ultra-faint dwarf (UFD) extension (Segue I/II, Reticulum II,
+Boötes II) is the observational priority of the next version. UFDs may allow judging the existence
+of a threshold at density regions 1--2 dex below dSph.
+
+\subsection{v4.9 next-version roadmap}
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}c >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X@{}}
+\toprule
+priority & issue & external input & expectation \\
+\midrule
+1 & $\Tm$ SI absolute calibration (resolving the 96-order gap) & FIRAS + CMB TT + 21 cm & decide route (a)/(b) \\
+2 & $\Gammaact$ absolute value + 11\%/5.5\% unification & C3-4 energy-branching analysis & Route A/B consistency \\
+3 & void literature consistency (finalizing M2 narrow) & \citet{Kreckel2011, Pan2012} & formal 5-decade span \\
+4 & $\cmem, \Lambdauv$ extrapolation accuracy & precision Chap.~18 Table for $c \in (0.8, 1)$ & physical verification \\
+5 & UFD extension (C3-2 discrimination) & Segue I/II, Ret II, Bo\"o II & threshold reality \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+% =============================================================================
+\section{Conclusions}
+% =============================================================================
+
+This companion paper (v4.8) makes explicit the theoretical foundation layer of the membrane
+cosmology v4.7.8 main body~\citep{Sakaguchi2026a} as a chain of more than eleven closed-form
+equations. The results are summarized as five main claims plus the universal density coupling:
+
+\begin{itemize}[leftmargin=*,itemsep=3pt]
+\item \textbf{(M1)} FIRAS $\mu$-distortion~\citep{Fixsen1996} + Chluba 2016 $\Wmu$ kernel + $\Vxi$
+primary gives $\aPT^{\mathrm{upper}} = 2.96 \times 10^{-53}$ ($c_0 = 0.83$).
+
+\item \textbf{(M2)} The $\taum$ bound $[1.9 \times 10^{10},\; 1.4 \times 10^{53}]$ s (FIRAS-only,
+40--58 decades) narrows to 5 decades (38 orders tighter) under the Local Void ($R = 22$ Mpc)
+causality constraint of Eq.~iv-e-I.
+
+\item \textbf{(M3)} The SI canonical definition of $\Nmode$ (Eq.~2B-II) reproduces the
+$\kmem \cdot \Nmode$ product at NGC 3198 at 2.32\% precision (A-grade).
+
+\item \textbf{(M4)} The two variables carried by the symbol $\chi$,
+$\chi_E\,[\mathrm{s}^2]$ vs $\chi_F\,[\mathrm{m}^{3/2}/\mathrm{s}^2]$, are independent, and no
+universal conversion exists.
+
+\item \textbf{(M5)} $f = 0.379$ from Pantheon+~\citep{Scolnic2022} does not contribute to the
+$\mu$ kernel (explicit null).
+\end{itemize}
+
+As an independent finding, the coupling slopes from SPARC 124 galaxies (bridge excluded) and dSph
+30 galaxies, $\bal = +0.1084$ vs $+0.1127$, agree within 0.5\% over the 3.92 dex density range,
+operationally establishing the universal coupling (C3 memo v3, A-grade; Lessons 91--93). This
+rejects the $\gamma$ (threshold) model at $\AIC = -2.00$ and provides the operational constraint
+``$\umem \to \gobs$ variation efficiency $\sim 11\%$ (amplitude) / $\sim 5.5\%$ (power)'' that
+requires no dark-matter particle model. The two values coexist as different convention bases for
+the same $\bal = 0.11$ ($\rho^1$ vs $\rho^2$); the first-principles conversion efficiency will be
+fixed in the v4.9 phase (C3-3 + \S 7.8).
+
+The verification path of this foundation is already supported by two independent tests: the NGC
+3198 2.32\% PASS (the strongest anchor of the $\Nmode$ closed form) and the $c_0$ independence of
+$\mathrm{S2/S1} = 0.8747$ (a self-diagnostic for the Stage 2 implementation). Three limitations
+remain (\S 7): the 96-order gap in $\Tm$ SI calibration, the absolute value of $\Gammaact$, and the
+first-principles unification of 11\%/5.5\%. These will be addressed jointly in the v4.9 next version
+using external anchors (FIRAS + CMB TT + 21 cm).
+
+\begin{sloppypar}
+The accompanying materials of this paper (\texttt{foundation\_integrated.pdf}, 15 pages, 13 build
+scripts, \texttt{c3\_3c\_p2\_void\_template.csv}, \texttt{foundation\_gamma\_actual.py}) are
+reproducibly executable via \texttt{uv run} in the Windows Claude Code environment and will be
+released on the GitHub Public repo (MIT License)~\citep{Sakaguchi2026b}. Cross-references for all
+non-retractable items \#1--31 are collected in Appendix~A of
+\texttt{foundation\_integrated.pdf}.
+\end{sloppypar}
+
+% =============================================================================
+\bibliographystyle{plainnat}
+\bibliography{refs_v48_en}
+
+\clearpage
+% =============================================================================
+\appendix
+\section{Numerical anchor quick-reference ($c_0 = 0.83$ canonical)}
+% =============================================================================
+
+\begin{center}\small
+\begin{longtable}{@{}lll@{}}
+\toprule
+Quantity & Value & Source \\
+\midrule\endfirsthead
+\toprule
+Quantity & Value & Source \\
+\midrule\endhead
+$c_0$ (SPARC+dSph vol avg) & $0.83$ & v4.7.8 \S 6 \\
+$\epso(0.83) = \sqrt{1 - c}$ & $0.412311$ & Form B \\
+$w(0.83)^2$ & $1.4032$ & Form B \\
+$\Tm$ (dimensionless) & $\sqrt{6} = 2.449$ & Lemma 5~\citep{v476internal} \\
+$\cmem(0.83)$ & $3.833 \times 10^{5}$ m/s & v3.7 Table 18-3 extrapolation \\
+$\chi_F(0.83)$ & $4.198\;\mathrm{m}^{3/2}/\mathrm{s}^2$ & Eq.~2A-II \\
+$V''(\phi_0, x=0)$ & $2.31$ & Chap.~18 Q1-$\alpha$ \\
+$\Lambdauv(0.83)$ & $9.549 \times 10^{-49}$ J & Table 18-4 extrapolation \\
+$\Vxi(0.83)$ & $7.683 \times 10^{63}\;\mathrm{m}^3$ & coherence volume \\
+$\BFIRAS$ & $1.516 \times 10^{-12}\;[\mathrm{J}^{-1}\mathrm{m}^{-1/2}]$ & Eq.~iv-d-III \\
+$\Imu^{S1}(0.83)$ & $7.2275 \times 10^{19}$ s (0.45\% PASS) & Eq.~iv-d-I \\
+$\mathrm{S2/S1}$ ($c_0$ independent) & $0.8747$ ($\mathrm{std} = 2 \times 10^{-16}$) & Eq.~iv-d-II v2 \\
+$\aPT^{\mathrm{upper}}\;(\Vxi)$ & $2.96 \times 10^{-53}$ & M1 \\
+$\taum^{\mathrm{upper}}$ (FIRAS) & $1.418 \times 10^{53}$ s & $\Vxi$ primary \\
+$\taum^{\mathrm{upper}}$ (Local Void) & $\sim 2.26 \times 10^{15}$ s & M2 narrow, 5 decades \\
+$\taum^{\mathrm{lower}}$ (causal $z = 5 \times 10^4$) & $1.906 \times 10^{10}$ s (605 yr) & causality \\
+NGC 3198 $\kmem \cdot \Nmode$ & 2.32\% PASS & M3, Eq.~2B-II verification \\
+$\bal$ (universal) & $+0.11 \pm 0.005$ & across 3.92 dex \\
+$\GammaA$ (amplitude, dimensionless) & $8.091$ & Route A (11\% version) \\
+$\GammaAp$ (power, dimensionless) & $17.18$ & Route A' (5.5\% version) \\
+$\GammaB$ (FDT, 4 candidates) & $4.12 \times 10^{-18}\sim 9.58 \times 10^{-11}\;\mathrm{m}^{3/2}/\mathrm{s}$ & Route B \\
+$\GammaC$ upper & $< 5.75 \times 10^{-18}\;\mathrm{m}^{3/2}/\mathrm{s}$ & Route C (SPARC memory) \\
+$f$ (Pantheon+) & $0.379 \pm 0.029$ & M5, $\mu$-kernel non-contributing \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\section{Cross-reference of non-retractable items \#1--31}
+
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}l l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X@{}}
+\toprule
+Range & Origin session & Main content & Reference in this paper \\
+\midrule
+\#1--17 & inherited from v4.7.8 & $\kappa = 0$, $\Tm = \sqrt{6}$, Form B, Q-core 3, Eqs.~I--IV, 11\%/5.5\% treatment & \S 2, \S 5.4.2 \\
+\#18--21 & C3 memo v3 & universal $\bal = 0.11$, Lessons 91--93 & \S 5.2--5.3.1, Abstract \\
+\#22--25 & Session +11 & $\chi$ dual, 2B-II/2C-II, dimensionless $\Tm$, eps\_scale (a)(b) & \S 6.1, \S 3.2--3.3, \S 7.1 \\
+\#26--28 & Session +13 & Eq.~iv-e-I 2 routes, $\Vxivoid$, min structure & \S 4.3 \\
+\#29--31 & Session +14 & dimensionless foundation scale, 3 routes, $\bal$ direct & \S 5.4 \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\end{document}

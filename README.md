@@ -31,17 +31,19 @@ Public/
 ├── LICENSE                        ← MIT License
 ├── CHANGELOG.md                   ← version 履歴
 │
-├── papers/                        ← 論文 PDF 群 (6 files)
+├── papers/                        ← 論文 PDF 群 (7 files)
 │   ├── membrane_arxiv_v478.pdf              — v4.7.8 本体 LaTeX 修正版 (18p, English) ⭐
 │   ├── membrane_arxiv_v478_original.pdf     — v4.7.8 ReportLab original (13p, archive)
 │   ├── membrane_v48_companion.pdf           — v4.8 companion LuaLaTeX (14p, 日本語) ⭐
+│   ├── membrane_v48_en_companion.pdf        — v4.8 companion pdfLaTeX (13p, English) ⭐ NEW
 │   ├── membrane_v48_body_reportlab.pdf      — v4.8 ReportLab オリジナル (13p, v3 patched)
 │   ├── foundation_integrated.pdf            — foundation layer catalog (15p)
 │   └── cross_reference_audit_v3.pdf         — QA record (5p)
 │
-├── latex_v478/                    ← v4.7.8 本体 LaTeX source (pdfLaTeX)
-├── latex_v48/                     ← v4.8 companion LaTeX source (LuaLaTeX)
-├── arxiv/                         ← arXiv upload-ready tarballs (2 本)
+├── latex_v478/                    ← v4.7.8 本体 LaTeX source (pdfLaTeX, English)
+├── latex_v48/                     ← v4.8 companion LaTeX source (LuaLaTeX, 日本語)
+├── latex_v48_en/                  ← v4.8 companion LaTeX source (pdfLaTeX, English) ⭐ NEW
+├── arxiv/                         ← arXiv upload-ready tarballs (3 本)
 ├── reportlab_source/              ← ReportLab PDF build scripts (3 files)
 └── docs/                          ← WordPress HTML, layout spec, arXiv guide
 ```
@@ -56,11 +58,17 @@ Public/
 **arXiv**: `arXiv:XXXX.XXXXX [astro-ph.CO]` (forthcoming) <!-- 採番後に記入 -->
 **PDF**: [`papers/membrane_arxiv_v478.pdf`](papers/membrane_arxiv_v478.pdf)
 
-### v4.8 companion paper
+### v4.8 companion paper (日本語版)
 **Title**: 膜宇宙論 foundation layer: FIRAS μ 歪み上限と universal density coupling の閉形式導出 (v4.7.8 companion paper, v4.8)
 **Language**: 日本語, 14 pages, 15 references
-**arXiv**: `arXiv:YYYY.YYYYY [astro-ph.CO + hep-th]` (forthcoming) <!-- 採番後に記入 -->
+**arXiv**: `arXiv:ZZZZ.ZZZZZ [astro-ph.CO + hep-th]` (forthcoming, optional) <!-- 採番後に記入 -->
 **PDF**: [`papers/membrane_v48_companion.pdf`](papers/membrane_v48_companion.pdf)
+
+### v4.8 companion paper (English version) ⭐ NEW
+**Title**: *Membrane Cosmology Foundation Layer: Closed-form Derivation of FIRAS μ-distortion Upper Bound and Universal Density Coupling (v4.7.8 companion paper, v4.8)*
+**Language**: English, 13 pages, 11 references (consolidated, same content as Japanese version)
+**arXiv**: `arXiv:YYYY.YYYYY [astro-ph.CO + hep-th]` (forthcoming, **primary**) <!-- 採番後に記入 -->
+**PDF**: [`papers/membrane_v48_en_companion.pdf`](papers/membrane_v48_en_companion.pdf)
 
 ---
 
@@ -68,7 +76,7 @@ Public/
 
 | Release | Date | 内容 | Download |
 |---|---|---|---|
-| **v4.8** ⭐ latest | 2026-04-21 | v4.7.8 affiliation rev. + v4.8 companion paper | [v48_release.zip](https://github.com/sguccibnr32-creator/Public/releases/download/v4.8/v48_release.zip) |
+| **v4.8** ⭐ latest | 2026-04-21 | affiliation rev. + v4.8 companion paper (bilingual ja+en) | [v48_release.zip](https://github.com/sguccibnr32-creator/Public/releases/download/v4.8/v48_release.zip) |
 | v4.7.8 | 2026-04 | observational establishment 完成版、19 結論 | [Releases page](https://github.com/sguccibnr32-creator/Public/releases) |
 | v4.7.6 | 2026-04 | self-consistent equation η₀ origin, T_m confirmation | [Releases page](https://github.com/sguccibnr32-creator/Public/releases) |
 
@@ -80,15 +88,21 @@ Public/
 
 ### LaTeX ビルド
 
-v4.7.8 本体 (pdfLaTeX):
+v4.7.8 本体 (pdfLaTeX, English):
 ```bash
 cd latex_v478/
 make
 ```
 
-v4.8 companion (LuaLaTeX + luatexja):
+v4.8 companion 日本語版 (LuaLaTeX + luatexja):
 ```bash
 cd latex_v48/
+make
+```
+
+v4.8 companion 英語版 (pdfLaTeX): ⭐ NEW
+```bash
+cd latex_v48_en/
 make
 ```
 
@@ -155,16 +169,30 @@ dSph 31 銀河 (0.240 a₀, 5%) と SPARC bridge 外側 (0.219 a₀, 4%) で独�
   note   = {v4.7.8 (2026-04-21 affiliation rev.)}
 }
 
-@misc{Sakaguchi2026b,
-  author = {Sakaguchi, Shinobu (坂口 忍)},
-  title  = {膜宇宙論 foundation layer: FIRAS μ 歪み上限と universal density coupling の閉形式導出 --- v4.7.8 companion paper (v4.8)},
+@misc{Sakaguchi2026b_en,
+  author = {Sakaguchi, Shinobu},
+  title  = {Membrane Cosmology Foundation Layer: Closed-form Derivation of FIRAS
+            μ-distortion Upper Bound and Universal Density Coupling
+            (v4.7.8 companion paper, v4.8)},
   year   = {2026},
   eprint = {YYYY.YYYYY},
   archivePrefix = {arXiv},
   primaryClass = {astro-ph.CO},
-  note   = {Companion to arXiv:XXXX.XXXXX}
+  note   = {English version, companion to arXiv:XXXX.XXXXX}
+}
+
+@misc{Sakaguchi2026b_ja,
+  author = {Sakaguchi, Shinobu (坂口 忍)},
+  title  = {膜宇宙論 foundation layer: FIRAS μ 歪み上限と universal density coupling の閉形式導出 --- v4.7.8 companion paper (v4.8)},
+  year   = {2026},
+  eprint = {ZZZZ.ZZZZZ},
+  archivePrefix = {arXiv},
+  primaryClass = {astro-ph.CO},
+  note   = {Japanese version, companion to arXiv:XXXX.XXXXX; English version: arXiv:YYYY.YYYYY}
 }
 ```
+
+**推奨引用**: 国際誌には `Sakaguchi2026a` + `Sakaguchi2026b_en`、日本語文献には `Sakaguchi2026a` + `Sakaguchi2026b_ja` を使用。
 
 ---
 

@@ -4,7 +4,30 @@
 
 ## v4.8 (2026-04-21) — Current release
 
-**arXiv 投稿 READY (v4.7.8 本体 + v4.8 companion の 2 論文併行投稿体制、affiliation 修正統合版)**
+**arXiv 投稿 READY (v4.7.8 本体 + v4.8 companion 日本語 + v4.8 companion 英語 の 3 論文併行投稿体制、affiliation 修正 + 英語版統合版)**
+
+### Added — v4.8 companion 英語版 (本 release の追加更新)
+- **`papers/membrane_v48_en_companion.pdf`** — v4.8 companion 英語版 PDF (pdfLaTeX、13 頁、international readers 向け)
+- **`latex_v48_en/`** — v4.8 companion 英語版 LaTeX source (5 files、pdfLaTeX 互換)
+  - `membrane_v48_en.tex` (本文 942 行)
+  - `refs_v48_en.bib` (11 件 BibTeX、DOI 付)
+  - `membrane_v48_en.bbl` (BibTeX 処理済)
+  - `Makefile` (pdflatex x3 + bibtex)
+  - `README_v48_en_tex.md` (ビルド手順)
+- **`arxiv/membrane_v48_en_arxiv.tar.gz`** — v4.8 companion 英語版 arXiv ready-to-upload package (22 KB)
+- `docs/arxiv_submission_guide.md` — 英語版 Step 2a / 日本語版 Step 2b の分離投稿手順を追加
+- `docs/wordpress_page_v48.html` — 英語版 PDF ダウンロードボタンを追加
+
+### 英語版の性質
+- 日本語原本 (`membrane_v48_companion.pdf`, 14p LuaLaTeX) の完全英訳
+- 全数値 anchor、全閉形式、全 retract 不可 #1–31、全 M1–M5 claims を保持
+- 頁数: 13p(pdfLaTeX typography で日本語版より 1 頁少なく収束)
+- overfull hbox 0 件、undefined reference 0 件(tabularx で roadmap / Γ route table の折り返し対応)
+- 固有名詞: `Shinobu Sakaguchi`、`Sakaguchi Seimensho (Independent Research), Shisō, Hyogo, Japan`
+
+### arXiv 投稿戦略の拡張
+- **推奨 (新)**: v4.8 companion は**英語版を primary submission**、日本語版は sakaguchi-physics.com + GitHub で公開
+- **並行投稿も可**: 英語版 (Step 2a) + 日本語版 (Step 2b) を独立 arXiv submission として投稿、相互に cross-reference
 
 ### Changed — v4.7.8 affiliation 修正 (本 release の主要更新)
 - **Before** (2026-04 original ReportLab PDF, `papers/membrane_arxiv_v478_original.pdf` として archive):

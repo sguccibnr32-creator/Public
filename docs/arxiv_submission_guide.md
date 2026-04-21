@@ -1,6 +1,9 @@
-# arXiv 投稿ガイド (v4.7.8 本体 + v4.8 companion の併行投稿)
+# arXiv 投稿ガイド (v4.7.8 本体 + v4.8 companion 英語 + v4.8 companion 日本語 の併行投稿)
 
-本ガイドは 2026-04-21 affiliation 修正統合版の arXiv 投稿手順を step-by-step で説明します。
+本ガイドは 2026-04-21 affiliation 修正 + 英語版統合版の arXiv 投稿手順を step-by-step で説明します。
+
+**新方針 (推奨)**: v4.8 companion は英語版を arXiv primary submission、日本語版は GitHub + WordPress のみ。
+**代替**: 英語版と日本語版を独立 arXiv submission で並行投稿。
 
 ## 投稿前チェックリスト
 
@@ -10,8 +13,9 @@
   - 参考: https://arxiv.org/help/endorsement
 - [ ] ORCID ID 取得済(推奨、publication history 追跡用)
 - [ ] `arxiv/membrane_v478_arxiv.tar.gz` (32 KB) のダウンロード確認
-- [ ] `arxiv/membrane_v48_arxiv.tar.gz` (24 KB) のダウンロード確認
-- [ ] 両 tarball の standalone compile test 済 (本リリースで済)
+- [ ] `arxiv/membrane_v48_en_arxiv.tar.gz` (22 KB、**英語版、primary**) のダウンロード確認
+- [ ] `arxiv/membrane_v48_arxiv.tar.gz` (24 KB、日本語版、optional) のダウンロード確認
+- [ ] 全 tarball の standalone compile test 済 (本リリースで済)
 
 ---
 
@@ -53,15 +57,15 @@ Announcement date: ____________
 
 ---
 
-## Step 2: v4.8 companion paper の arXiv 投稿
+## Step 2a: v4.8 companion paper 英語版 の arXiv 投稿 ⭐ **推奨 primary**
 
-**重要**: Step 1 で採番された v4.7.8 の arXiv ID を v4.8 の reference に反映する。
+**重要**: Step 1 で採番された v4.7.8 の arXiv ID を v4.8 英語版の reference に反映する。
 
-### 2-1. 事前準備: references.bib の更新
-`latex_v48/references.bib` の `Sakaguchi2026a` エントリを編集:
+### 2a-1. 事前準備: refs_v48_en.bib の更新
+`latex_v48_en/refs_v48_en.bib` の `Sakaguchi2026a` エントリを編集:
 ```bibtex
 @MISC{Sakaguchi2026a,
-  author       = {{Sakaguchi}, S. (坂口 忍)},
+  author       = {{Sakaguchi}, S.},
   title        = {{Galactic Rotation Without Dark Matter from Elastic Membrane Cosmology:
                    The Geometric Mean Law and Observational Tests (v4.7.8)}},
   howpublished = {arXiv preprint},
@@ -74,42 +78,97 @@ Announcement date: ____________
 
 編集後、再コンパイルして tarball を再作成:
 ```bash
+cd latex_v48_en/
+make clean
+make
+make arxiv
+```
+
+### 2a-2. 投稿画面へアクセス
+https://arxiv.org/submit で "Start New Submission"
+
+### 2a-3. メタデータ入力
+
+| フィールド | 入力値 |
+|---|---|
+| **Title** | `Membrane Cosmology Foundation Layer: Closed-form Derivation of FIRAS μ-distortion Upper Bound and Universal Density Coupling (v4.7.8 companion paper, v4.8)` |
+| **Author(s)** | `Shinobu Sakaguchi` |
+| **Affiliation** | `Sakaguchi Seimensho (Independent Research), Shisō, Hyogo, Japan` |
+| **Abstract** | 論文 Abstract 全文 (コピー&ペースト)、または arXiv が tex から自動抽出 |
+| **Comments** | `v4.7.8 companion paper (English version). 13 pages, 11 references. Companion to arXiv:2604.XXXXX (v4.7.8 main body).` |
+| **Primary category** | `astro-ph.CO` |
+| **Cross-list** | **`hep-th`** を追加 |
+
+### 2a-4. ソースファイルアップロード
+- upload: **`arxiv/membrane_v48_en_arxiv.tar.gz`** (2a-1 で更新後の場合は make arxiv で再生成済のもの)
+- arXiv は pdfLaTeX を自動で走らせる (英語のみのため問題なし)
+- auto-compilation で 13 頁 PDF 生成確認
+
+### 2a-5. arXiv ID 記録
+```
+arXiv ID (v4.8 English): arXiv:____________
+Announcement date: ____________
+```
+
+---
+
+## Step 2b: v4.8 companion paper 日本語版 の arXiv 投稿 (optional、国内読者向け)
+
+**判断**: Step 2a の英語版のみで十分と判断する場合は Step 2b をスキップ可。
+日本語圏読者への配慮として独立 submission を行う場合のみ実行。
+
+### 2b-1. 事前準備: references.bib の更新
+`latex_v48/references.bib` の `Sakaguchi2026a` エントリを Step 1 の arXiv ID に更新:
+```bibtex
+@MISC{Sakaguchi2026a,
+  author       = {{Sakaguchi}, S. (坂口 忍)},
+  title        = {{Galactic Rotation Without Dark Matter from Elastic Membrane Cosmology:
+                   The Geometric Mean Law and Observational Tests (v4.7.8)}},
+  howpublished = {arXiv preprint},
+  year         = {2026},
+  note         = {arXiv:2604.XXXXX [astro-ph.CO]},
+  eprint       = {2604.XXXXX},
+  archivePrefix = {arXiv}
+}
+```
+
+編集後、再コンパイル:
+```bash
 cd latex_v48/
 make clean
 make
 make arxiv
 ```
 
-### 2-2. 投稿画面へアクセス
+### 2b-2. 投稿画面へアクセス
 https://arxiv.org/submit で "Start New Submission"
 
-### 2-3. メタデータ入力
+### 2b-3. メタデータ入力
 
 | フィールド | 入力値 |
 |---|---|
 | **Title** | `膜宇宙論 foundation layer: FIRAS μ 歪み上限と universal density coupling の閉形式導出 --- v4.7.8 companion paper (v4.8)` |
-| **English title** | `Membrane Cosmology Foundation Layer: Closed-form Derivation of FIRAS μ-distortion Upper Bound and Universal Density Coupling (v4.7.8 companion paper, v4.8)` |
+| **English title** | `Membrane Cosmology Foundation Layer: Closed-form Derivation of FIRAS μ-distortion Upper Bound and Universal Density Coupling (v4.7.8 companion paper, v4.8; Japanese version)` |
 | **Author(s)** | `Shinobu Sakaguchi (坂口 忍)` |
 | **Affiliation** | `Sakaguchi Seimensho (Independent Research), Shisō, Hyogo, Japan` |
 | **Abstract** | Abstract (日本語) + English summary 2-3 sentences 併記を推奨 |
-| **Comments** | `v4.7.8 companion paper. 14 pages, 15 references. Companion to arXiv:2604.XXXXX (v4.7.8 main body). Japanese language paper with English abstract.` |
+| **Comments** | `v4.7.8 companion paper (Japanese version). 14 pages, 15 references. English version: arXiv:YYYY.YYYYY. Companion to arXiv:XXXX.XXXXX.` |
 | **Primary category** | `astro-ph.CO` |
-| **Cross-list** | `hep-th` (High Energy Physics - Theory) を追加 |
-| **Journal-ref** | 空欄(preprint のみ) |
+| **Cross-list** | `hep-th` |
 
-### 2-4. ソースファイルアップロード
-- upload: **`arxiv/membrane_v48_arxiv.tar.gz`** (2-1 で更新した場合は make arxiv で再生成済のもの)
+### 2b-4. ソースファイルアップロード
+- upload: **`arxiv/membrane_v48_arxiv.tar.gz`**
 - arXiv は LuaLaTeX を自動検出(`ltjsarticle` class から判定)
-- auto-compilation で 14 頁 PDF 生成確認
+- auto-compile が日本語で失敗する場合のため、`latex_v48/README_tex.md` の compile instruction を comment 欄に含める
 
-### 2-5. 日本語論文特有の注意
+### 2b-5. 日本語論文特有の注意
 - arXiv は日本語論文を受け入れ可能だが、**English abstract** を必須とするため Abstract 欄には英語 summary も記載
-- auto-compile が日本語で失敗する場合のため、`latex_v48/README_tex.md` の compile instruction を comment 欄または source に含めておく
-- 同梱 `.bbl` が LuaLaTeX 出力であることを確認
+- 英語版 (Step 2a) が primary なので日本語版の審査遅延リスクは低い
+- Comments 欄で英語版への cross-reference を明示
 
-### 2-6. arXiv ID 記録
+### 2b-6. arXiv ID 記録
 ```
-arXiv ID (v4.8): arXiv:____________  (←ここに記録)
+arXiv ID (v4.8 Japanese, optional): arXiv:____________
 Announcement date: ____________
 ```
 
@@ -263,21 +322,31 @@ Anyone who wants to cite:
 
 ## 優先順位と recommendation
 
-**投稿順序**: **Step 1 (v4.7.8) → Step 2 (v4.8) → Step 3 (GitHub) → Step 4 (WordPress)**
+**投稿順序**: **Step 1 (v4.7.8) → Step 2a (v4.8 英語) → [optional Step 2b (v4.8 日本語)] → Step 3 (GitHub) → Step 4 (WordPress)**
 
 ### なぜこの順序か
 1. v4.7.8 を先行投稿することで **priority claim**(優先権主張)を確立
-2. v4.8 companion は v4.7.8 arXiv ID を reference に含める必要があるため順序依存
-3. GitHub release は arXiv ID を含める形で公開
-4. WordPress は最終的に全 ID を統合して公開
+2. v4.8 companion (英語版) は v4.7.8 arXiv ID を reference に含める必要があるため順序依存
+3. 日本語版 (Step 2b) は optional、英語版で international reach を確保してから判断
+4. GitHub release は v4.7.8 + v4.8 英語の arXiv ID を含める形で公開
+5. WordPress は最終的に全 ID を統合して公開
 
 ### 推定所要時間
 - Step 1: 30 分 (初回 arXiv 投稿、endorsement 取得済の場合)
-- Step 2: 30 分 (v4.7.8 ID 反映 + 再 compile + 投稿)
+- Step 2a: 30 分 (v4.7.8 ID 反映 + 再 compile + 投稿、英語版)
+- Step 2b: 30 分 (optional、日本語版)
 - Step 3: 15 分
 - Step 4: 15 分 (HTML コピペ + ID 反映)
-- **合計: 1.5 時間 (endorsement 取得済の場合)**
+- **合計: 1.5 時間** (Step 2a まで、推奨) / **2 時間** (Step 2b 含む)
 
 ### endorsement 未取得の場合
 - endorsement 取得に 1-2 週間要する場合あり
 - 先に Step 3, 4 (GitHub + WordPress) を arXiv ID なしで公開し、ID 採番後に追記する戦略も可能
+
+### 英語版のみ投稿する戦略的理由
+1. **International reach**: astro-ph.CO の reader base はほぼ全員英語読解可能
+2. **Referee 確保**: 日本語版は astro-ph の査読者プール制約によ り moderation 遅延リスク
+3. **Citation tracking**: NASA ADS / Google Scholar / Semantic Scholar での発見性は英語版が有利
+4. **日本語読者**: sakaguchi-physics.com + GitHub で日本語版 PDF を公開すれば日本語圏 reach も確保可能
+
+したがって、**英語版 (Step 2a) のみ arXiv 投稿、日本語版は GitHub + WordPress でのみ公開**が最も効率的。

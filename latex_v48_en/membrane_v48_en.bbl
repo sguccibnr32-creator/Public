@@ -1,0 +1,103 @@
+\begin{thebibliography}{12}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{Fixsen} et~al.(1996){Fixsen}, {Cheng}, {Gales}, {Mather}, {Shafer},
+  and {Wright}]{Fixsen1996}
+D.~J. {Fixsen}, E.~S. {Cheng}, J.~M. {Gales}, J.~C. {Mather}, R.~A. {Shafer},
+  and E.~L. {Wright}.
+\newblock {The Cosmic Microwave Background spectrum from the full COBE FIRAS
+  data set}.
+\newblock \emph{The Astrophysical Journal}, 473:\penalty0 576, 1996.
+\newblock \doi{10.1086/178173}.
+
+\bibitem[{Kogut} et~al.(2011){Kogut}, {Fixsen}, {Chuss}, {Dotson},
+  et~al.]{Kogut2011}
+A.~{Kogut}, D.~J. {Fixsen}, D.~T. {Chuss}, J.~{Dotson}, et~al.
+\newblock {The Primordial Inflation Explorer (PIXIE): a nulling polarimeter for
+  cosmic microwave background observations}.
+\newblock \emph{Journal of Cosmology and Astroparticle Physics}, 2011\penalty0
+  (07):\penalty0 025, 2011.
+\newblock \doi{10.1088/1475-7516/2011/07/025}.
+
+\bibitem[{Kreckel} et~al.(2011){Kreckel}, {Platen}, {Arag{\'o}n-Calvo}, {van
+  Gorkom}, et~al.]{Kreckel2011}
+K.~{Kreckel}, E.~{Platen}, M.~A. {Arag{\'o}n-Calvo}, J.~H. {van Gorkom}, et~al.
+\newblock {Galaxies in the Local Void: I. Tip of the red giant branch distances
+  to nearby dwarfs}.
+\newblock \emph{The Astronomical Journal}, 735\penalty0 (1):\penalty0 6, 2011.
+\newblock \doi{10.1088/0004-6256/141/1/4}.
+
+\bibitem[{Lelli} et~al.(2016){Lelli}, {McGaugh}, and {Schombert}]{Lelli2016}
+F.~{Lelli}, S.~S. {McGaugh}, and J.~M. {Schombert}.
+\newblock {SPARC: Mass models for 175 disk galaxies with Spitzer photometry and
+  accurate rotation curves}.
+\newblock \emph{The Astronomical Journal}, 152\penalty0 (6):\penalty0 157,
+  2016.
+\newblock \doi{10.3847/0004-6256/152/6/157}.
+
+\bibitem[{McConnachie}(2012)]{McConnachie2012}
+A.~W. {McConnachie}.
+\newblock {The observed properties of dwarf galaxies in and around the Local
+  Group}.
+\newblock \emph{The Astronomical Journal}, 144\penalty0 (1):\penalty0 4, 2012.
+\newblock \doi{10.1088/0004-6256/144/1/4}.
+
+\bibitem[{Pan} et~al.(2012){Pan}, {Vogeley}, {Hoyle}, {Choi}, and
+  {Park}]{Pan2012}
+D.~C. {Pan}, M.~S. {Vogeley}, F.~{Hoyle}, Y.-Y. {Choi}, and C.~{Park}.
+\newblock {Cosmic voids in Sloan Digital Sky Survey Data Release 7}.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  421\penalty0 (2):\penalty0 926--934, 2012.
+\newblock \doi{10.1111/j.1365-2966.2011.20197.x}.
+
+\bibitem[{Ricciardelli} et~al.(2014){Ricciardelli}, {Cava}, {Varela}, and
+  {Quilis}]{Ricciardelli2014}
+E.~{Ricciardelli}, A.~{Cava}, J.~{Varela}, and V.~{Quilis}.
+\newblock {The star formation activity in cosmic voids}.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  445\penalty0 (4):\penalty0 4045--4054, 2014.
+\newblock \doi{10.1093/mnras/stu2061}.
+
+\bibitem[{Sakaguchi}(2026{\natexlab{a}})]{Sakaguchi2026a}
+S.~{Sakaguchi}.
+\newblock {Galactic Rotation Without Dark Matter from Elastic Membrane
+  Cosmology: The Geometric Mean Law and Observational Tests (v4.7.8)}.
+\newblock arXiv preprint, 2026{\natexlab{a}}.
+\newblock v4.7.8 main body, 18 pages, 38 references. Affiliation rev.
+  2026-04-21.
+
+\bibitem[{Sakaguchi}(2026{\natexlab{b}})]{Sakaguchi2026b}
+S.~{Sakaguchi}.
+\newblock {Foundation Integrated: Session +11--+15 archive}.
+\newblock \url{https://github.com/sguccibnr32-creator/Public},
+  2026{\natexlab{b}}.
+\newblock MIT License, companion materials to v4.8.
+
+\bibitem[{Sakaguchi}(2026{\natexlab{c}})]{v476internal}
+S.~{Sakaguchi}.
+\newblock {Membrane Cosmology v4.7.6: Lemma 5, Z$_2$ SSB critical temperature
+  $T_m = \sqrt{6}$}.
+\newblock internal archive, 2026{\natexlab{c}}.
+\newblock foundation lemma, confirmed A-grade.
+
+\bibitem[{Scolnic} et~al.(2022){Scolnic}, {Brout}, {Carr}, {Riess},
+  et~al.]{Scolnic2022}
+D.~{Scolnic}, D.~{Brout}, A.~{Carr}, A.~G. {Riess}, et~al.
+\newblock {The Pantheon+ analysis: the full dataset and light-curve release}.
+\newblock \emph{The Astrophysical Journal}, 938\penalty0 (2):\penalty0 113,
+  2022.
+\newblock \doi{10.3847/1538-4357/ac8b7a}.
+
+\bibitem[{Strigari} et~al.(2008){Strigari}, {Bullock}, {Kaplinghat}, {Simon},
+  {Geha}, {Willman}, and {Walker}]{Strigari2008}
+L.~E. {Strigari}, J.~S. {Bullock}, M.~{Kaplinghat}, J.~D. {Simon}, M.~{Geha},
+  B.~{Willman}, and M.~G. {Walker}.
+\newblock {A common mass scale for satellite galaxies of the Milky Way}.
+\newblock \emph{Nature}, 454\penalty0 (7208):\penalty0 1096--1097, 2008.
+\newblock \doi{10.1038/nature07222}.
+
+\end{thebibliography}
