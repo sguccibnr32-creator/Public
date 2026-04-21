@@ -1,0 +1,275 @@
+<!--
+============================================================================
+sakaguchi-physics.com 公開ページ HTML
+v4.8 companion paper 公開 + v4.7.8 本体 併行投稿アナウンス
+
+用途: 新規固定ページとして WordPress.com に手動 paste
+  - 推奨タイトル: 「膜宇宙論 v4.8 companion paper 公開 (FIRAS μ 歪み上限と universal density coupling)」
+  - slug: /v48-companion/ または /membrane-cosmology-v48/
+  - カテゴリ: 理論物理 / 膜宇宙論 / 論文公開
+
+WordPress.com MCP の pages.update は大きな HTML で truncation リスクあり (userMemories)
+-> manual paste workflow を採用する
+  1. WordPress.com admin > 固定ページ > 新規追加
+  2. エディタをクラシック (HTML) モードに切替
+  3. 本ファイル全体をコピー & ペースト
+  4. プレビューで確認 -> 公開
+
+以下のセクションを追加可: GitHub release ダウンロードリンク、arXiv ID 採番後の URL 反映
+============================================================================
+-->
+
+<div class="v48-release-announcement" style="max-width:900px;margin:0 auto;font-family:sans-serif;line-height:1.7;">
+
+<!-- ============ ヘッダ ============ -->
+<div style="background:linear-gradient(135deg,#e94560 0%,#0f3460 100%);color:#fff;padding:24px 28px;border-radius:8px;margin-bottom:24px;">
+  <div style="font-size:14px;opacity:0.85;margin-bottom:6px;">2026 年 4 月公開</div>
+  <h1 style="font-size:24px;margin:0 0 10px;line-height:1.4;">
+    膜宇宙論 v4.8 companion paper 公開<br>
+    <span style="font-size:17px;font-weight:normal;opacity:0.92;">FIRAS μ 歪み上限と universal density coupling の閉形式導出</span>
+  </h1>
+  <div style="font-size:13px;opacity:0.85;">
+    坂口 忍 / 坂口製麺所(兵庫県宍粟市)
+  </div>
+</div>
+
+<!-- ============ 透明性 note: affiliation 修正 ============ -->
+<div style="background:#f0f7ff;border-left:4px solid #0f3460;padding:12px 18px;margin:14px 0 22px;border-radius:4px;">
+  <div style="font-weight:bold;color:#0f3460;margin-bottom:4px;">📍 本リリースの透明性 note: affiliation 修正について</div>
+  <p style="margin:6px 0;font-size:14px;line-height:1.6;">
+    v4.7.8 本体 arXiv 原稿の初版 (2026-04、ReportLab PDF) では所属地の英語表記が
+    <strong>"Kobe, Japan"</strong> となっていましたが、正しくは
+    <strong>"Shisō, Hyogo, Japan" (兵庫県宍粟市)</strong> です。
+    本リリース (2026-04-21) では LaTeX に完全移植した修正版を arXiv 投稿する体制に変更しました。
+    本文内容は完全一致(19 結論、全数値、全 38 references)し、科学的内容への影響はありません。
+    オリジナル版は GitHub release に <code>membrane_arxiv_v478_original.pdf</code> として
+    archive 保存されています。
+  </p>
+</div>
+
+<!-- ============ 要約 (概要) ============ -->
+<div style="padding:0 4px;">
+<h2 style="font-size:20px;border-left:4px solid #e94560;padding-left:10px;">📄 概要</h2>
+<p>
+  本論文は膜宇宙論 <strong>v4.7.8 本体</strong>の theoretical foundation を与える companion paper です。
+  v4.7.8 は SPARC 175 銀河、dSph 31 銀河、HSC-SSP Y3 + GAMA DR4 + KiDS の独立 3 field で Condition 15 (C15) を観測的に確立し、
+  MOND を <strong>p = 1.66×10⁻⁵³</strong> で棄却しました。v4.8 はその establishment を支える閉形式体系を 11 個以上の連鎖として明示します。
+</p>
+<p>
+  <strong>2 論文同時 arXiv 投稿体制</strong> (astro-ph.CO + hep-th cross) で、v4.7.8 (英語) は観測天文学者 / 宇宙論者を、
+  v4.8 (日本語) は理論物理 / 場の量子論の読者を対象としています。両者は非干渉で独立に成立します。
+</p>
+</div>
+
+<!-- ============ 5 main claims (M1-M5) ============ -->
+<h2 style="font-size:20px;border-left:4px solid #e94560;padding-left:10px;margin-top:30px;">🔬 5 つの核心成果 (M1–M5)</h2>
+
+<div style="background:#f5f5fa;border-radius:6px;padding:16px 20px;margin:12px 0;">
+<h3 style="font-size:16px;margin:0 0 8px;color:#0f3460;">M1 — FIRAS μ 歪み上限から α_PT^upper を導出</h3>
+<p style="margin:6px 0;">
+  Fixsen+1996 の FIRAS μ 歪み上限 (μ &lt; 9×10⁻⁵) に Chluba 2016 W_μ kernel を適用し、
+  V_ξ primary 採用で <strong>α_PT^upper = 2.96×10⁻⁵³</strong> (c₀ = 0.83) を閉形式で導出。
+</p>
+</div>
+
+<div style="background:#f5f5fa;border-radius:6px;padding:16px 20px;margin:12px 0;">
+<h3 style="font-size:16px;margin:0 0 8px;color:#0f3460;">M2 — τ_m bound を 5 桁幅に narrow 化</h3>
+<p style="margin:6px 0;">
+  α_PT^upper から τ_m (membrane memory time) の FIRAS-only bound <strong>[1.9×10¹⁰, 1.4×10⁵³] s</strong>
+  (40–58 桁幅) を得、<strong>Local Void (R = 22 Mpc)</strong> の因果律制約で上端を 2.26×10¹⁵ s に narrow。
+  合計 <strong>5 桁幅</strong>、38 桁 tighten。
+</p>
+</div>
+
+<div style="background:#f5f5fa;border-radius:6px;padding:16px 20px;margin:12px 0;">
+<h3 style="font-size:16px;margin:0 0 8px;color:#0f3460;">M3 — NGC 3198 で 2.32% 精度の独立検証 (A 級)</h3>
+<p style="margin:6px 0;">
+  N_mode の SI canonical 定義 (Eq. 2B-II) により、NGC 3198 の k_mem · N_mode product を
+  <strong>観測値 2.93×10³⁸ に対し予測値 2.998×10³⁸ で 2.32% PASS</strong>。foundation の最強 anchor。
+</p>
+</div>
+
+<div style="background:#f5f5fa;border-radius:6px;padding:16px 20px;margin:12px 0;">
+<h3 style="font-size:16px;margin:0 0 8px;color:#0f3460;">M4 — χ 記号の 2 変数独立性を明示</h3>
+<p style="margin:6px 0;">
+  同じ記号 χ が担う χ_E [s²] (MOND anchor 由来) と χ_F [m³/²/s²] (膜音速由来) は<strong>独立</strong>で、
+  universal conversion は存在しない。本 companion は誤解予防のため M4 として explicit に認める。
+</p>
+</div>
+
+<div style="background:#f5f5fa;border-radius:6px;padding:16px 20px;margin:12px 0;">
+<h3 style="font-size:16px;margin:0 0 8px;color:#0f3460;">M5 — Pantheon+ f=0.379 は μ kernel 非寄与 (explicit null)</h3>
+<p style="margin:6px 0;">
+  Scolnic+2022 の f = 0.379±0.029 は c₀ = 0.83 とは独立な宇宙論量で、μ 歪み kernel の integrand には現れない。
+  <strong>f ∼ 1−c₀ 等の spurious 関係の誤解を予防</strong>するため explicit null として明示。
+</p>
+</div>
+
+<!-- ============ Universal b_alpha ============ -->
+<h2 style="font-size:20px;border-left:4px solid #e94560;padding-left:10px;margin-top:30px;">
+  ⭐ 独立成果: universal coupling slope b_α across 3.92 dex
+</h2>
+
+<p>
+  SPARC 124 銀河 (bridge 除外後) と dSph 30 銀河で独立に fit した coupling slope が <strong>3.92 dex の密度範囲で 0.5% 以内に一致</strong>:
+</p>
+
+<div style="overflow-x:auto;margin:12px 0;">
+<table style="border-collapse:collapse;width:100%;max-width:600px;margin:0 auto;">
+  <thead style="background:#0f3460;color:#fff;">
+    <tr>
+      <th style="padding:8px 12px;text-align:left;">sample</th>
+      <th style="padding:8px 12px;text-align:right;">N</th>
+      <th style="padding:8px 12px;text-align:right;">b_α (partial)</th>
+      <th style="padding:8px 12px;text-align:left;">anchor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background:#f5f5fa;">
+      <td style="padding:8px 12px;">SPARC (bridge 除外)</td>
+      <td style="padding:8px 12px;text-align:right;">124</td>
+      <td style="padding:8px 12px;text-align:right;"><strong>+0.1084</strong></td>
+      <td style="padding:8px 12px;">g_c^C15</td>
+    </tr>
+    <tr>
+      <td style="padding:8px 12px;">dSph (Sgr 除外)</td>
+      <td style="padding:8px 12px;text-align:right;">30</td>
+      <td style="padding:8px 12px;text-align:right;"><strong>+0.1127</strong></td>
+      <td style="padding:8px 12px;">G_Strigari</td>
+    </tr>
+    <tr style="background:#e94560;color:#fff;">
+      <td style="padding:8px 12px;">|diff|</td>
+      <td style="padding:8px 12px;text-align:right;">—</td>
+      <td style="padding:8px 12px;text-align:right;"><strong>0.0042</strong></td>
+      <td style="padding:8px 12px;">3.92 dex で 0.5% 以内</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>
+  この結果は α (linear coupling) vs γ (threshold coupling) モデル弁別を <strong>ΔAIC = −2.00</strong> で α 優位に決着し、
+  dark matter 粒子模型が必要としない operational 制約
+  <em>「u_mem → g_obs variation efficiency ∼ 11% (amplitude) / ∼ 5.5% (power)」</em>
+  を与えます。両数値は同一 b_α = 0.11 に対する基準選択差 (ρ¹ amplitude vs ρ² power、階層差 √1 段階、因子 2) であり、
+  第一原理的変換効率は v4.9 次版 (C3-3 τ_m 物理見積 + §7.8 C3-4 P1–P4 分岐比) で確定します。
+</p>
+
+<!-- ============ 限界 / future work ============ -->
+<h2 style="font-size:20px;border-left:4px solid #e94560;padding-left:10px;margin-top:30px;">⚠ 限界と v4.9 次版課題</h2>
+
+<ol style="padding-left:24px;">
+  <li style="margin:8px 0;">
+    <strong>T_m SI 絶対較正の 96 桁 gap</strong>:
+    σ rest energy route (a) ∼ 10⁻²⁵ K vs membrane coherence route (b) ∼ 10⁺⁷¹ K。
+    foundation 内部決定不能、FIRAS + CMB TT + 21cm の cross-check で対処予定。
+  </li>
+  <li style="margin:8px 0;">
+    <strong>Γ_actual 絶対値 + 11%/5.5% 第一原理効率統一</strong>:
+    Route A (dimensionless 8.091 amplitude / 17.18 power) と Route B (FDT 4 candidates, 7 桁 spread) の次元整合性が未解決。
+    τ_relax 物理選択には C3-4 energy branching 解析が必要。
+  </li>
+  <li style="margin:8px 0;">
+    <strong>void 5 サンプル文献整合</strong>:
+    Local / Bootes / Cetus / Sculptor / Corona Borealis の R_void は暫定値を含み、
+    Kreckel+2011, Pan+2012, Ricciardelli+2014 等での実入力で正式版確定。
+  </li>
+</ol>
+
+<!-- ============ ダウンロード ============ -->
+<h2 style="font-size:20px;border-left:4px solid #e94560;padding-left:10px;margin-top:30px;">📥 ダウンロード</h2>
+
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin:14px 0;">
+  <!-- v4.8 companion -->
+  <div style="flex:1 1 260px;min-width:260px;background:#fff;border:2px solid #0f3460;border-radius:6px;padding:16px;">
+    <div style="font-size:13px;color:#888;">v4.8 companion paper (本稿)</div>
+    <div style="font-weight:bold;margin:4px 0;color:#0f3460;">LuaLaTeX 版 PDF (14 頁、日本語)</div>
+    <div style="margin:8px 0;">
+      <a href="https://github.com/sguccibnr32-creator/Public/releases/download/v4.8/membrane_v48_companion.pdf"
+         style="display:inline-block;background:#e94560;color:#fff;padding:8px 14px;text-decoration:none;border-radius:4px;">
+        📄 PDF をダウンロード
+      </a>
+    </div>
+    <div style="font-size:12px;color:#555;">
+      GitHub release ページから取得 (MIT License)
+    </div>
+  </div>
+
+  <!-- v4.7.8 本体 -->
+  <div style="flex:1 1 260px;min-width:260px;background:#fff;border:2px solid #0f3460;border-radius:6px;padding:16px;">
+    <div style="font-size:13px;color:#888;">v4.7.8 本体</div>
+    <div style="font-weight:bold;margin:4px 0;color:#0f3460;">arXiv 原稿 (13 頁、英語)</div>
+    <div style="margin:8px 0;">
+      <a href="https://github.com/sguccibnr32-creator/Public/releases/download/v4.8/membrane_arxiv_v478.pdf"
+         style="display:inline-block;background:#0f3460;color:#fff;padding:8px 14px;text-decoration:none;border-radius:4px;">
+        📄 PDF をダウンロード
+      </a>
+    </div>
+    <div style="font-size:12px;color:#555;">
+      Condition 15 + MOND 棄却 + Bernoulli + HSC/GAMA/KiDS
+    </div>
+  </div>
+</div>
+
+<div style="background:#fff3dc;border-left:4px solid #f0a500;padding:12px 16px;margin:14px 0;border-radius:4px;">
+  <div style="font-weight:bold;color:#a85b00;">📦 全成果物 bundle (v48_release.zip)</div>
+  <p style="margin:6px 0;font-size:14px;">
+    LaTeX source、BibTeX、ReportLab build scripts、foundation catalog、QA audit を含む統合パッケージ:
+  </p>
+  <a href="https://github.com/sguccibnr32-creator/Public/releases/download/v4.8/v48_release.zip"
+     style="display:inline-block;background:#f0a500;color:#fff;padding:8px 14px;text-decoration:none;border-radius:4px;margin-top:4px;">
+    💾 v48_release.zip をダウンロード (MIT License)
+  </a>
+</div>
+
+<p style="font-size:13px;color:#888;margin-top:18px;">
+  🔗 arXiv ID 採番後、本ページに arXiv URL を追記します。
+  <br>
+  🔗 GitHub Public repo: <a href="https://github.com/sguccibnr32-creator/Public">github.com/sguccibnr32-creator/Public</a>
+</p>
+
+<!-- ============ 読み方ガイド ============ -->
+<h2 style="font-size:20px;border-left:4px solid #e94560;padding-left:10px;margin-top:30px;">📖 読み方ガイド</h2>
+
+<table style="border-collapse:collapse;width:100%;margin:12px 0;">
+  <thead style="background:#0f3460;color:#fff;">
+    <tr>
+      <th style="padding:8px 12px;text-align:left;">読者</th>
+      <th style="padding:8px 12px;text-align:left;">推奨する読み順</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background:#f5f5fa;">
+      <td style="padding:8px 12px;vertical-align:top;font-weight:bold;">観測派</td>
+      <td style="padding:8px 12px;">
+        v4.7.8 本体の Section 3 (C15 確立) → Section 5 (lensing / dSph 検証) → Section 7 (Bernoulli / bridge) → Section 8 (19 結論)。
+        v4.8 companion は Sec.5 (universal b_α) のみ読めば十分。
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:8px 12px;vertical-align:top;font-weight:bold;">理論派</td>
+      <td style="padding:8px 12px;">
+        v4.8 companion の Abstract → Sec.2 (Q-core 3 + Form B) → Sec.3 (c_mem / N_mode / Λ_UV) → Sec.4 (FIRAS kernel) → Sec.5 (universal coupling) → Sec.6 (chi dual / linear scaling) → Sec.7 (限界)。
+      </td>
+    </tr>
+    <tr style="background:#f5f5fa;">
+      <td style="padding:8px 12px;vertical-align:top;font-weight:bold;">再現派</td>
+      <td style="padding:8px 12px;">
+        v48_release.zip の <code>latex/README_tex.md</code> (LuaLaTeX 再ビルド手順) と
+        <code>reportlab_source/</code> (Python + ReportLab でオリジナル PDF 再生成) を確認。
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ============ フッタ ============ -->
+<hr style="margin:30px 0;border:none;border-top:1px solid #ddd;">
+
+<p style="font-size:13px;color:#666;text-align:center;">
+  © 2026 坂口 忍 / 坂口製麺所 (兵庫県宍粟市) · <a href="https://sakaguchi-physics.com">sakaguchi-physics.com</a>
+  <br>
+  本 release は <a href="https://opensource.org/licenses/MIT">MIT License</a> で配布されます。
+</p>
+
+</div>
+<!-- ============================================================================ -->

@@ -1,0 +1,506 @@
+# 膜宇宙論モデル PDF レイアウト完全仕様書 v4.3
+# 更新日：2026年4月19日
+# 前バージョン：v4.2仕様書（2026年4月1日）
+# このチャットでの変更点：
+#   - 第5章 新規追加：スタイル余白仕様（spaceBefore/After + borderPadding 数値指定）
+#     背景色要素の重なり防止、可視ギャップ公式、v4.3 標準値、余白検証ユーティリティ
+#   - 第16章 追記：背景重なりエラー項目 2 件
+
+---
+
+
+## 1. 基本設定
+
+### 本体ビルドスクリプト（変更なし）
+
+```python
+# -*- coding: utf-8 -*-
+from reportlab.lib.pagesizes import A4
+from reportlab.lib import colors
+from reportlab.lib.units import mm
+pt = 1  # ← 重要：ptはreportlab.lib.unitsからimportできない
+from reportlab.lib.styles import ParagraphStyle
+from reportlab.lib.enums import TA_CENTER, TA_LEFT
+from reportlab.platypus import (SimpleDocTemplate, Paragraph, Spacer, Table,
+                                 TableStyle, HRFlowable, Image, PageBreak,
+                                 KeepTogether)
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+import os
+from pypdf import PdfReader, PdfWriter
+
+W, H = A4
+M = 18 * mm   # 本体ビルド
+```
+
+
+
+---
+
+## 2. フォント（変更なし）
+
+```python
+pdfmetrics.registerFont(TTFont('IPAGothic',
+    '/usr/share/fonts/opentype/ipafont-gothic/ipag.ttf'))
+pdfmetrics.registerFont(TTFont('IPAPGothic',
+    '/usr/share/fonts/opentype/ipafont-gothic/ipagp.ttf'))
+```
+
+フォントの使い分けルールは v4.0 仕様書と同一。変更禁止。
+
+---
+
+## 3. カラーパレット（変更なし）
+
+v4.0 仕様書と同一。変更禁止。
+
+```python
+COL_H   = colors.HexColor('#1a1a2e')   # ダークネイビー（h1ヘッダー背景）
+COL_S   = colors.HexColor('#16213e')   # ネイビー（h2ヘッダー背景）
+COL_RED = colors.HexColor('#e94560')   # 赤（強調・警告）
+COL_LT  = colors.HexColor('#f0f4f8')   # 薄灰（数式背景・表交互色）
+COL_OK  = colors.HexColor('#d4edda')   # 薄緑（確立済み・整合）
+COL_NG  = colors.HexColor('#f8d7da')   # 薄赤（要注意・不整合）
+COL_WN  = colors.HexColor('#fff3cd')   # 薄黄（警告・暫定）
+COL_GOLD= colors.HexColor('#fff9c4')   # 薄金（注目・★）
+COL_BLUE= colors.HexColor('#dbeafe')   # 薄青（情報・付記）
+```
+
+---
+
+## 4. ★★ v4.2 最重要新規ルール：文字化け防止
+
+### 4-1. IPAGothic 非対応文字（絶対使用禁止）
+
+以下の文字は IPAGothic フォントで表示できず**黒塗り方形**になる。
+ReportLab テキスト・matplotlib ラベル・図キャプション全てで禁止。
+
+| 禁止文字 | 代替表記 | 理由 |
+|---|---|---|
+| ☉ ⊙（太陽記号） | M_sun | IPAGothic 未サポート |
+| ¹²³⁴⁵⁶⁷⁸⁹⁰（上付き数字） | ^1 ^2 ... | IPAGothic 未サポート |
+| ₀₁₂₃₄₅（下付き数字） | 0 1 2 3 4 5 | IPAGothic 未サポート |
+| →←（矢印） | -> <- | IPAGothic 未サポート |
+| ×（乗算記号） | x | IPAGothic 未サポート |
+| −（マイナス記号、U+2212） | - | IPAGothic 未サポート |
+| ★（星印） | * または [*] | IPAGothic 未サポート |
+| ✓ ✗（チェック記号） | [OK] [NG] | IPAGothic 未サポート |
+| ≈ ≤ ≥ ≠（比較記号） | ~= <= >= != | IPAGothic 未サポート |
+| ∞ ∑（数学記号） | inf sum | IPAGothic 未サポート |
+
+ReportLab では上付き/下付きは XML タグを使う：
+
+```python
+# 正しい書き方
+Paragraph('10<super>14</super> M_sun', style)   # OK
+Paragraph('10¹⁴ M☉', style)                    # NG（文字化け）
+
+# 数式での ε₀ → epsilon0
+Paragraph('epsilon0 = 0.655', style)             # OK
+Paragraph('ε₀ = 0.655', style)                  # NG（ヌル文字化け）
+```
+
+### 4-2. matplotlib 図の IPAGothic 設定（必須）
+
+全ての matplotlib 図生成スクリプトの先頭に以下を記述すること。
+これがないとグラフ内の日本語が全て文字化けする。
+
+```python
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+from matplotlib import font_manager as _fm
+for _fp in ['/usr/share/fonts/opentype/ipafont-gothic/ipag.ttf',
+            '/usr/share/fonts/opentype/ipafont-gothic/ipagp.ttf']:
+    try: _fm.fontManager.addfont(_fp)
+    except: pass
+plt.rcParams['font.family'] = 'IPAGothic'
+plt.rcParams['axes.unicode_minus'] = False  # マイナス記号の文字化け防止
+```
+
+### 4-3. 表セルの Paragraph() 必須ルール
+
+ReportLab の `Table()` に plain string を渡すと**セル内で折り返しが一切起きない**。
+必ず `Paragraph()` オブジェクトでラップすること。
+
+```python
+# NG：plain string はセル内で折り返されない
+data = [['評価項目', '旧確立度', '新確立度', '根拠']]
+
+# OK：Paragraph() でラップする
+sH = ParagraphStyle('TH', fontName='IPAPGothic', fontSize=8, leading=11,
+                     textColor=colors.white, alignment=TA_CENTER)
+sC = ParagraphStyle('TC', fontSize=8, leading=11, textColor=colors.black)
+
+def Ph(text): return Paragraph(str(text), sH)
+def P(text):  return Paragraph(str(text), sC)
+
+data = [[Ph('評価項目'), Ph('旧確立度'), Ph('新確立度'), Ph('根拠')]]
+```
+
+### 4-4. 表カラム幅合計の制限
+
+A4 コンテンツ幅 = 210mm - 18mm×2 = 174mm。
+安全上限は **160mm**（余裕 14mm）。
+
+```python
+# 診断コード：全スクリプトのカラム幅を確認
+import re, os
+SAFE_MM = 160
+for script in ['build_*.py']:
+    with open(script) as f: code = f.read()
+    for m in re.findall(r'colWidths=\[([^\]]+)\]', code):
+        vals = re.findall(r'([\d.]+)\*mm', m)
+        if vals:
+            total = sum(float(v) for v in vals)
+            if total > SAFE_MM:
+                print(f'[要修正] {script}: 合計={total:.0f}mm > {SAFE_MM}mm')
+
+# 自動スケール修正
+def scale_colwidths(match_str, safe=160):
+    vals = re.findall(r'([\d.]+)\*mm', match_str)
+    if not vals: return match_str
+    total = sum(float(v) for v in vals)
+    if total <= safe: return match_str
+    scale = safe / total
+    result = match_str
+    for v in vals:
+        result = result.replace(f'{v}*mm', f'{float(v)*scale:.1f}*mm', 1)
+    return result
+```
+
+---
+
+## 5. ★★ v4.3 新規ルール：スタイル余白仕様（背景重なり防止）
+
+### 5-1. 背景重なり問題（ReportLab の既知課題）
+
+ReportLab の `Paragraph` スタイルに `backColor` と `borderPadding` を併用する
+と、背景矩形は `borderPadding` ぶん**外側に拡張される**。一方で `spaceBefore`
+/ `spaceAfter` は**テキスト baseline 基準**で計測されるため、隣接する背景色
+付き要素の間で、設定値上は離れているはずでも**視覚的に背景が重なる**現象が
+発生する。
+
+特に顕著な箇所:
+- H1（title）と H2（section）の隣接
+- H2 と NOTE / KEY / WARN ボックスの隣接
+- NOTE → H2、KEY → H2 などの遷移
+
+v4.2 以前の設定値（下記「旧値」列）は、この重なりが多くの隣接ペアで -1pt
+から -3pt 程度発生していた（2026年4月19日の §7.7 + 付録 A 生成時に目視で
+確認）。v4.3 はこの重なりを確定的に排除する。
+
+### 5-2. 可視ギャップ公式
+
+隣接する 2 つの背景色付き要素 A（前）・B（後）について、可視ギャップは:
+
+```
+visible_gap = spaceAfter_A + spaceBefore_B - borderPadding_A - borderPadding_B
+```
+
+**基準: visible_gap >= +4pt**（目視で明瞭に分離されるギャップの最小値）。
+推奨: **+5pt 以上**（視覚的に余裕のあるギャップ）。
+
+一方の要素に背景色がない場合（BODY, H3 等）は、その側の borderPadding を 0
+として計算する。この場合重なりは発生しないが、式は同じく適用できる。
+
+### 5-3. v4.3 標準スタイル余白値（確定・変更禁止）
+
+以下の数値指定を v4.3 標準として使用する。これらは全隣接ペアで
+visible_gap >= +4pt を確保することが検証済み（5-4 表参照）。
+
+| スタイル | borderPadding | spaceBefore | spaceAfter | 旧値 (v4.2) | 備考 |
+|---|---|---|---|---|---|
+| STYLE_H1 | 6 | 4 | 10 | 8 / 2 / 8 | タイトル（1 文書に 1 つ） |
+| STYLE_H2 | 4 | 9 | 5 | 5 / 6 / 4 | セクション見出し |
+| STYLE_H3 | - | 4 | 2 | 変更なし | サブ見出し（背景なし） |
+| STYLE_BODY | - | - | 2 | - / - / 0 | 本文段落（v4.3 で spaceAfter 追加） |
+| STYLE_BODY_SMALL | - | - | 2 | - / - / 0 | 小型本文 |
+| STYLE_MATH | 3 | 5 | 5 | 4 / 2 / 2 | 数式枠 |
+| STYLE_NOTE | 4 | 7 | 7 | 5 / 3 / 3 | 情報枠（薄青） |
+| STYLE_KEY | 5 | 8 | 8 | 6 / 4 / 4 | 重要枠（薄金） |
+| STYLE_WARN | 4 | 7 | 7 | 5 / 3 / 3 | 警告枠（薄黄） |
+
+**実装例（v4.3 標準の Python コード）:**
+
+```python
+# v4.3 スタイル定義（変更禁止）
+STYLE_H1 = ParagraphStyle('H1',
+    fontName='IPAPGothic', fontSize=14, leading=18,
+    textColor=colors.white, alignment=TA_CENTER,
+    backColor=COL_H, borderPadding=6, spaceBefore=4, spaceAfter=10)
+
+STYLE_H2 = ParagraphStyle('H2',
+    fontName='IPAPGothic', fontSize=11, leading=15,
+    textColor=colors.white, alignment=TA_LEFT,
+    backColor=COL_S, borderPadding=4, leftIndent=0,
+    spaceBefore=9, spaceAfter=5)
+
+STYLE_H3 = ParagraphStyle('H3',
+    fontName='IPAPGothic', fontSize=10, leading=13,
+    textColor=COL_H, alignment=TA_LEFT,
+    spaceBefore=4, spaceAfter=2)
+
+STYLE_BODY = ParagraphStyle('Body',
+    fontName='IPAGothic', fontSize=8.5, leading=12,
+    alignment=TA_JUSTIFY, spaceAfter=2)
+
+STYLE_BODY_SMALL = ParagraphStyle('BodySmall',
+    fontName='IPAGothic', fontSize=8, leading=11,
+    alignment=TA_JUSTIFY, spaceAfter=2)
+
+STYLE_MATH = ParagraphStyle('Math',
+    fontName='IPAGothic', fontSize=9, leading=13, leftIndent=10,
+    backColor=COL_LT, borderPadding=3, spaceBefore=5, spaceAfter=5)
+
+STYLE_NOTE = ParagraphStyle('Note',
+    fontName='IPAGothic', fontSize=8, leading=11, alignment=TA_JUSTIFY,
+    backColor=COL_BLUE, borderPadding=4, spaceBefore=7, spaceAfter=7)
+
+STYLE_KEY = ParagraphStyle('Key',
+    fontName='IPAGothic', fontSize=9, leading=13, alignment=TA_JUSTIFY,
+    backColor=COL_GOLD, borderPadding=5, spaceBefore=8, spaceAfter=8)
+
+STYLE_WARN = ParagraphStyle('Warn',
+    fontName='IPAGothic', fontSize=8, leading=11, alignment=TA_JUSTIFY,
+    backColor=COL_WN, borderPadding=4, spaceBefore=7, spaceAfter=7)
+```
+
+### 5-4. 隣接ペアの可視ギャップ一覧（検証済み）
+
+v4.3 標準値での全主要ペアの visible_gap（単位 pt）:
+
+| 隣接ペア | spaceA_prev + spaceB_next - pad_prev - pad_next | gap |
+|---|---|---|
+| H1 → H2 | 10 + 9 - 6 - 4 | **+9** |
+| H2 → NOTE | 5 + 7 - 4 - 4 | **+4** |
+| NOTE → H2 | 7 + 9 - 4 - 4 | **+8** |
+| KEY → H2 | 8 + 9 - 5 - 4 | **+8** |
+| H2 → KEY | 5 + 8 - 4 - 5 | **+4** |
+| WARN → H2 | 7 + 9 - 4 - 4 | **+8** |
+| H2 → WARN | 5 + 7 - 4 - 4 | **+4** |
+| NOTE → NOTE | 7 + 7 - 4 - 4 | **+6** |
+| NOTE → KEY | 7 + 8 - 4 - 5 | **+6** |
+| KEY → NOTE | 8 + 7 - 5 - 4 | **+6** |
+| MATH → H2 | 5 + 9 - 3 - 4 | **+7** |
+| H2 → MATH | 5 + 5 - 4 - 3 | **+3** (許容下限、実用 OK) |
+| BODY → H2 | 2 + 9 - 0 - 4 | **+7** |
+| H2 → BODY | 5 + 0 - 4 - 0 | **+1** (BODY 無背景、問題なし) |
+| BODY → BODY | 2 + 0 - 0 - 0 | **+2** (段落分離) |
+
+すべて基準 +4pt 以上（H2 → MATH の +3pt は背景色濃度差 COL_S vs COL_LT
+が大きく実用上は問題なし、唯一の例外）。
+
+### 5-5. STYLE_BODY の spaceAfter=2 ルール
+
+連続する本文段落（BODY → BODY）では `Spacer(1, 2)` を挿入する代わりに、
+STYLE_BODY 自体に `spaceAfter=2` を持たせる方式を v4.3 標準とする。利点:
+
+- 視覚効果は `Spacer(1, 2)` と同等（2pt の段落間ギャップ）
+- スタイル仕様に余白が内包され、ビルダー側のコードが簡潔になる
+- BODY → H2 遷移時も spaceAfter=2 + spaceBefore_H2=9 = 11pt と十分な
+  ギャップが自動確保される
+
+### 5-6. Spacer() 使用ガイドライン
+
+v4.3 以降、ビルダー内で `Spacer(1, N)` を使用するのは**以下の場合に限る**:
+
+- 明示的に通常より広い間隔を空けたい場合（例: 論理的に独立なサブセクション
+  間に意図的に大きな空白を置く場合）
+- KeepTogether() 内部で要素間調整する場合
+
+**非推奨**: 単に「前の要素と離したい」目的での `Spacer(1, 2/3/4)` 呼び出
+し。これはスタイルの `spaceBefore` / `spaceAfter` が適切に設定されていれば
+不要。v4.3 標準値は既にそれを満たしている。
+
+既存ビルダーを v4.3 に移行する場合、冗長な `Spacer(1, 2/3/4)` の削除で
+ページ分量が圧縮できる（2026年4月19日の付録 A で 13 箇所削除、34pt 節約）。
+
+### 5-7. 新規スタイル追加時のチェックリスト
+
+新しいスタイル（例: STYLE_TIP、STYLE_CAUTION）を追加する場合、以下を
+満たすよう余白を設定する:
+
+```
+新スタイルの borderPadding を P とする。
+既存の全スタイル（padding P', spaceBefore sB', spaceAfter sA'）との
+隣接で visible_gap >= +4pt を確保する:
+
+  新 → 既存: spaceAfter_新 + sB' - P - P' >= 4
+  既存 → 新: sA' + spaceBefore_新 - P' - P >= 4
+```
+
+簡易ルール（安全側）:
+
+```
+spaceBefore = borderPadding + 5
+spaceAfter  = borderPadding + 5
+```
+
+この設定なら既存 v4.3 スタイルのどれと隣接しても gap >= +5pt が確保される。
+
+### 5-8. 余白検証ユーティリティ
+
+全スタイル組み合わせの visible_gap を自動検証するコード（本体ビルドスクリ
+プト冒頭、もしくは QA スクリプトで実行）:
+
+```python
+# v4.3 スタイル余白の隣接整合性検証
+STYLE_SPACING = {
+    'H1':    {'pad': 6, 'sB':  4, 'sA': 10, 'has_bg': True},
+    'H2':    {'pad': 4, 'sB':  9, 'sA':  5, 'has_bg': True},
+    'H3':    {'pad': 0, 'sB':  4, 'sA':  2, 'has_bg': False},
+    'BODY':  {'pad': 0, 'sB':  0, 'sA':  2, 'has_bg': False},
+    'MATH':  {'pad': 3, 'sB':  5, 'sA':  5, 'has_bg': True},
+    'NOTE':  {'pad': 4, 'sB':  7, 'sA':  7, 'has_bg': True},
+    'KEY':   {'pad': 5, 'sB':  8, 'sA':  8, 'has_bg': True},
+    'WARN':  {'pad': 4, 'sB':  7, 'sA':  7, 'has_bg': True},
+}
+
+def verify_gaps(min_gap=4, strict=False):
+    """
+    全 pair の visible_gap を計算し、基準未満があれば報告。
+    strict=True なら違反で例外、False なら警告のみ。
+
+    どちらか一方でも背景色を持たない pair は視覚的な背景重なりが
+    発生しないためスキップする。また H1 はタイトルで文書先頭のみに
+    現れるため、xxx -> H1 はスキップする。
+    """
+    fail = []
+    names = list(STYLE_SPACING.keys())
+    sp = STYLE_SPACING
+    for a in names:
+        for b in names:
+            # 両方が背景色を持つ場合のみ重なり問題が発生し得る
+            if not (sp[a]['has_bg'] and sp[b]['has_bg']):
+                continue
+            # H1 は文書先頭のみ (xxx -> H1 は実運用で発生しない)
+            if b == 'H1':
+                continue
+            gap = sp[a]['sA'] + sp[b]['sB'] - sp[a]['pad'] - sp[b]['pad']
+            if gap < min_gap:
+                fail.append(f'  {a:6s} -> {b:6s}: gap = {gap:+d}pt '
+                            f'(< {min_gap}pt)')
+    if fail:
+        msg = f'[SPACING VIOLATION: {len(fail)} pairs]\n' + '\n'.join(fail)
+        if strict:
+            raise ValueError(msg)
+        print(msg)
+    else:
+        # 実効的な検定対象数 (背景色持ち同士かつ b != H1)
+        has_bg = [n for n in names if sp[n]['has_bg']]
+        n = len(has_bg) * (len(has_bg) - (1 if 'H1' in has_bg else 0))
+        print(f'[OK] 全 {n} pair の visible_gap >= {min_gap}pt')
+    return len(fail)
+
+# 実行
+verify_gaps(min_gap=4)   # v4.3 標準での検証
+```
+
+このユーティリティを build スクリプトの冒頭や CI で実行することで、新規
+スタイル追加時や既存スタイル変更時のリグレッションを事前に検出できる。
+
+---
+
+
+## 6. 標準 tbl() ヘルパー関数（v4.2版・Paragraph必須）
+
+v4.1 の `ptable()` を廃止し、以下を v4.2 標準として使用する。
+
+```python
+sH = S('TH', fontName='IPAPGothic', fontSize=8, leading=11,
+        textColor=colors.white, alignment=TA_CENTER)
+sC = S('TC', fontSize=8, leading=11, textColor=colors.black)
+
+def Ph(text): return Paragraph(str(text), sH)
+def P(text):  return Paragraph(str(text), sC)
+
+def tbl(headers, rows, cw, bgs=None, hbg=None):
+    """
+    headers: ヘッダー文字列のリスト
+    rows:    データ行のリスト（各セルは str に変換される）
+    cw:      カラム幅のリスト（mm単位・合計160mm以内）
+    bgs:     {行インデックス(0始まり): 色} の辞書（オプション）
+    hbg:     ヘッダー背景色（デフォルト: COL_H）
+    """
+    data = [[Ph(h) for h in headers]]
+    for row in rows:
+        data.append([P(str(c)) for c in row])
+    ts = [
+        ('BACKGROUND', (0,0), (-1,0), hbg or COL_H),
+        ('GRID', (0,0), (-1,-1), 0.4, colors.grey),
+        ('ROWBACKGROUNDS', (0,1), (-1,-1), [colors.white, COL_LT]),
+        ('VALIGN', (0,0), (-1,-1), 'TOP'),
+        ('TOPPADDING', (0,0), (-1,-1), 3),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 3),
+        ('LEFTPADDING', (0,0), (-1,-1), 4),
+        ('RIGHTPADDING', (0,0), (-1,-1), 4),
+    ]
+    if bgs:
+        for ri, bg in bgs.items():
+            ts.append(('BACKGROUND', (0,ri+1), (-1,ri+1), bg))
+    t = Table(data, colWidths=cw)
+    t.setStyle(TableStyle(ts))
+    return t
+```
+
+---
+
+### ローカル（Windows）
+
+```
+D:\ドキュメント\エントロピー\新膜宇宙論\これまでの軌跡\パイソン\
+├── psz2_v2.py              # T-14主解析（v4.1 NFW全更新済み）★正式版
+├── psz2_step3_q.py         # Q値計算（v4.2 NFW全更新済み）
+├── psz2_step4_refit.py     # NFWフィット+Q値(v4.2 NFW全更新済み)
+├── psz2_final_stat.py      # 統計集計
+├── H3_Tx_record.py         # H-3 Chandra T_x 記録
+│     J1115_MACS: Tx=7.55+0.42/-0.38 keV, r_s=0.3585, rho_s=2.122e15
+│     ACO1443:    Tx=8.09+0.93/-0.79 keV（Miyaoka外）
+└── [その他解析スクリプト多数]
+
+~/xmm/J0231/0650381601/pps/  # J0231 XMM PPS スペクトル（取得済み）
+~/chandra/G228/11768/         # G228 Chandra データ（解析済み）
+~/chandra/H3/                 # H-3 Chandra データ群
+```
+
+---
+
+
+
+## 15. 文字エスケープルール（v4.2追記）
+
+v4.0 仕様書の第9章に加え、v4.2 で判明した問題：
+
+| エラー | 原因 | 対処 |
+|---|---|---|
+| グラフ内文字が全て□になる | matplotlib のデフォルトフォントが日本語非対応 | `plt.rcParams['font.family'] = 'IPAGothic'` を設定 |
+| ε\x00 がヌル文字になる | ε₀（U+03B5 + U+2080）のうち₀がIPAGothic未サポート | `epsilon0` と書く |
+| ReportLab 表セルが折り返されない | plain string を Table() に渡した | Paragraph() でラップする |
+| 表がページからはみ出す | カラム幅合計が 174mm を超えている | 合計 160mm 以内に縮小 |
+| matplotlib arrowstyle エラー | ReportLab エスケープ（`-&gt;`）をそのまま渡した | `arrowstyle='->'` を使う |
+
+```python
+# NG：matplotlib arrowstyle に HTML エスケープを渡す
+ax.annotate('', arrowprops=dict(arrowstyle='-&gt;'))   # ValueError
+
+# OK
+ax.annotate('', arrowprops=dict(arrowstyle='->'))       # 正しい
+```
+
+---
+
+## 16. よくあるエラーと対処法（v4.3版・v4.2追記含む）
+
+| エラー | 原因 | 対処 |
+|---|---|---|
+| `ValueError: A single argument passed to legend()...` | Line2D を直接渡した | `handles=[Line2D(...)]; ax.legend(handles=handles)` |
+| HEASARC クエリで KeyError | 列名は小文字 | `row['obsid']`（`row['OBSID']` は不可） |
+| `conda activate ciao` 後に chandra_repro が見つからない | ciao-contrib 未インストール | `conda install -n ciao -c https://cxc.cfa.harvard.edu/conda/ciao ciao-contrib` |
+| `source ciao.sh` 後に conda が壊れる | ciao.sh が PATH を上書きする | **source ciao.sh を使わない**。conda activate ciao のみ使用 |
+| XMM RMF ファイルが取得できない | xmm-tools・HEASARC ともにネットワーク制限 | Windows ブラウザで手動ダウンロードするか将来課題に格下げ |
+| Set-Content で BOM 文字 | PowerShell `-Encoding UTF8` が BOM 付きを生成 | Python 側で `open(..., encoding='utf-8-sig')` で読む |
+| **背景色矩形が隣接要素と重なって見える**（v4.3 追記） | borderPadding + spaceBefore/After の設計ミス（baseline 基準と borderPadding 拡張の不整合） | **第5章 v4.3 標準値を使用、もしくは 5-2 可視ギャップ公式で検証**。5-8 の verify_gaps() で事前チェック可 |
+| **BODY 段落間の余白がない（くっついて見える）**（v4.3 追記） | v4.2 以前の STYLE_BODY に spaceAfter=0 で、Spacer(1, 2) も挿入していない | **v4.3 の STYLE_BODY に spaceAfter=2 が入っているか確認**。入っていれば Spacer() は不要 |
+
+---

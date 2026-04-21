@@ -1,0 +1,278 @@
+\begin{thebibliography}{38}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{Babyk} et~al.(2018){Babyk}, {McNamara}, {Nulsen}, {Russell},
+  et~al.]{Babyk2018}
+Iu.~V. {Babyk}, B.~R. {McNamara}, P.~E.~J. {Nulsen}, H.~R. {Russell}, et~al.
+\newblock {A Universal Entropy Profile for the Hot Atmospheres of Galaxies and
+  Clusters}.
+\newblock \emph{The Astrophysical Journal}, 857:\penalty0 32, 2018.
+\newblock \doi{10.3847/1538-4357/aab3c9}.
+
+\bibitem[{Brasseur} et~al.(2011){Brasseur}, {Martin}, {Maccio}, {Rix}, and
+  {Kang}]{Brasseur2011}
+C.~M. {Brasseur}, N.~F. {Martin}, A.~V. {Maccio}, H.-W. {Rix}, and X.~{Kang}.
+\newblock {Nature versus Nurture: Luminous Satellite Galaxies and the Chemical
+  Evolution of Their Hosts}.
+\newblock \emph{The Astrophysical Journal}, 729:\penalty0 23, 2011.
+\newblock \doi{10.1088/0004-637X/729/1/23}.
+
+\bibitem[{Brout} et~al.(2022){Brout}, {Scolnic}, {Popovic}, {Riess},
+  et~al.]{Brout2022}
+D.~{Brout}, D.~{Scolnic}, B.~{Popovic}, A.~G. {Riess}, et~al.
+\newblock {The Pantheon+ Analysis: Cosmological Constraints}.
+\newblock \emph{The Astrophysical Journal}, 938:\penalty0 110, 2022.
+\newblock \doi{10.3847/1538-4357/ac8e04}.
+
+\bibitem[{Brouwer} et~al.(2021){Brouwer}, {Demchenko}, {Harnois-D{\'e}raps},
+  {Bilicki}, et~al.]{Brouwer2021}
+M.~M. {Brouwer}, V.~{Demchenko}, J.~{Harnois-D{\'e}raps}, M.~{Bilicki}, et~al.
+\newblock {The weak gravitational lensing signal around galaxies in the KiDS
+  survey: dependence on galaxy colour and Sersic index}.
+\newblock \emph{Astronomy \& Astrophysics}, 650:\penalty0 A113, 2021.
+\newblock \doi{10.1051/0004-6361/202040164}.
+
+\bibitem[{Collins} et~al.(2013){Collins}, {Chapman}, {Rich}, {Ibata},
+  et~al.]{Collins2013}
+M.~L.~M. {Collins}, S.~C. {Chapman}, R.~M. {Rich}, R.~A. {Ibata}, et~al.
+\newblock {A Kinematic Study of the Andromeda Dwarf Spheroidal System}.
+\newblock \emph{The Astrophysical Journal}, 768:\penalty0 172, 2013.
+\newblock \doi{10.1088/0004-637X/768/2/172}.
+
+\bibitem[{Dalal} et~al.(2023){Dalal}, {Li}, {Nicola}, et~al.]{Dalal2023}
+R.~{Dalal}, X.~{Li}, A.~{Nicola}, et~al.
+\newblock {Hyper Suprime-Cam Year 3 Results: Cosmology from cosmic shear power
+  spectra}.
+\newblock \emph{Physical Review D}, 108:\penalty0 123519, 2023.
+\newblock \doi{10.1103/PhysRevD.108.123519}.
+
+\bibitem[{Hunter} et~al.(2012){Hunter}, {Ficut-Vicas}, {Ashley}, {Brinks},
+  et~al.]{Hunter2012}
+D.~A. {Hunter}, D.~{Ficut-Vicas}, T.~{Ashley}, E.~{Brinks}, et~al.
+\newblock {Little Things}.
+\newblock \emph{The Astronomical Journal}, 144:\penalty0 134, 2012.
+\newblock \doi{10.1088/0004-6256/144/5/134}.
+
+\bibitem[{Hunter} et~al.(2021){Hunter}, {Elmegreen}, {Oh}, et~al.]{Hunter2021}
+D.~A. {Hunter}, B.~G. {Elmegreen}, S.-H. {Oh}, et~al.
+\newblock {The LITTLE THINGS Stellar Disks}.
+\newblock \emph{The Astronomical Journal}, 161:\penalty0 71, 2021.
+\newblock \doi{10.3847/1538-3881/abd089}.
+
+\bibitem[{Iorio} et~al.(2017){Iorio}, {Fraternali}, {Nipoti}, {Di Teodoro},
+  {Read}, and {Battaglia}]{Iorio2017}
+G.~{Iorio}, F.~{Fraternali}, C.~{Nipoti}, E.~{Di Teodoro}, J.~I. {Read}, and
+  G.~{Battaglia}.
+\newblock {LITTLE THINGS in 3D: robust determination of the circular velocity
+  of dwarf irregular galaxies}.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  466:\penalty0 4159, 2017.
+\newblock \doi{10.1093/mnras/stw3285}.
+
+\bibitem[{Julio} et~al.(2025)]{Julio2025}
+M.~P. {Julio} et~al.
+\newblock {Weak lensing RAR}.
+\newblock \emph{Astronomy \& Astrophysics}, 703:\penalty0 A106, 2025.
+
+\bibitem[{Kacharov} et~al.(2017){Kacharov}, {Battaglia}, {Rejkuba},
+  et~al.]{Kacharov2017}
+N.~{Kacharov}, G.~{Battaglia}, M.~{Rejkuba}, et~al.
+\newblock {Stellar kinematics in isolated dwarfs}.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  466:\penalty0 2006, 2017.
+\newblock \doi{10.1093/mnras/stw3188}.
+
+\bibitem[{Lelli} et~al.(2016){Lelli}, {McGaugh}, and {Schombert}]{Lelli2016}
+F.~{Lelli}, S.~S. {McGaugh}, and J.~M. {Schombert}.
+\newblock {SPARC: Mass Models for 175 Disk Galaxies with Spitzer Photometry and
+  Accurate Rotation Curves}.
+\newblock \emph{The Astronomical Journal}, 152:\penalty0 157, 2016.
+\newblock \doi{10.3847/0004-6256/152/6/157}.
+
+\bibitem[{Lewis} et~al.(2007){Lewis}, {Ibata}, {Chapman}, {McConnachie},
+  et~al.]{Lewis2007}
+G.~F. {Lewis}, R.~A. {Ibata}, S.~C. {Chapman}, A.~W. {McConnachie}, et~al.
+\newblock {Kinematics of the Andromeda System}.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  375:\penalty0 1364, 2007.
+\newblock \doi{10.1111/j.1365-2966.2006.11385.x}.
+
+\bibitem[{Li} et~al.(2022){Li}, {Miyatake}, {Luo}, et~al.]{Li2022}
+X.~{Li}, H.~{Miyatake}, W.~{Luo}, et~al.
+\newblock {HSC Year 3 Shape Catalogue: Image Simulation Calibration}.
+\newblock \emph{Publications of the Astronomical Society of Japan},
+  74:\penalty0 421, 2022.
+\newblock \doi{10.1093/pasj/psac006}.
+
+\bibitem[{Maartens} and {Koyama}(2010)]{MaartensKoyama2010}
+R.~{Maartens} and K.~{Koyama}.
+\newblock {Brane-World Gravity}.
+\newblock \emph{Living Reviews in Relativity}, 13:\penalty0 5, 2010.
+\newblock \doi{10.12942/lrr-2010-5}.
+
+\bibitem[{Mandelbaum} et~al.(2018){Mandelbaum}, {Lanusse}, {Leauthaud},
+  et~al.]{Mandelbaum2018}
+R.~{Mandelbaum}, F.~{Lanusse}, A.~{Leauthaud}, et~al.
+\newblock {HSC shear catalog calibration via image simulations}.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  481:\penalty0 3170, 2018.
+\newblock \doi{10.1093/mnras/sty2420}.
+
+\bibitem[{McConnachie}(2012)]{McConnachie2012}
+A.~W. {McConnachie}.
+\newblock {The Observed Properties of Dwarf Galaxies in and around the Local
+  Group}.
+\newblock \emph{The Astronomical Journal}, 144:\penalty0 4, 2012.
+\newblock \doi{10.1088/0004-6256/144/1/4}.
+
+\bibitem[{McGaugh} and {Schombert}(2014)]{McGaughSchombert2014}
+S.~S. {McGaugh} and J.~M. {Schombert}.
+\newblock {Color-Mass-to-Light-Ratio Relations for Disk Galaxies}.
+\newblock \emph{The Astronomical Journal}, 148:\penalty0 77, 2014.
+\newblock \doi{10.1088/0004-6256/148/5/77}.
+
+\bibitem[{Meidt} et~al.(2014){Meidt}, {Schinnerer}, {van de Ven},
+  et~al.]{Meidt2014}
+S.~E. {Meidt}, E.~{Schinnerer}, G.~{van de Ven}, et~al.
+\newblock {Reconstructing the Stellar Mass Distributions of Galaxies Using S4G
+  IRAC 3.6 and 4.5 Micron Images}.
+\newblock \emph{The Astrophysical Journal}, 788:\penalty0 144, 2014.
+\newblock \doi{10.1088/0004-637X/788/2/144}.
+
+\bibitem[{Milgrom}(1983)]{Milgrom1983}
+M.~{Milgrom}.
+\newblock {A modification of the Newtonian dynamics as a possible alternative
+  to the hidden mass hypothesis}.
+\newblock \emph{The Astrophysical Journal}, 270:\penalty0 365, 1983.
+\newblock \doi{10.1086/161130}.
+
+\bibitem[{Miyaoka} et~al.(2019){Miyaoka}, {Okabe}, et~al.]{Miyaoka2019}
+K.~{Miyaoka}, N.~{Okabe}, et~al.
+\newblock {Weak-lensing study of XMM cluster sample with HSC-SSP data}.
+\newblock \emph{Publications of the Astronomical Society of Japan},
+  71:\penalty0 62, 2019.
+\newblock \doi{10.1093/pasj/psz037}.
+
+\bibitem[{More} et~al.(2023){More}, {Sugiyama}, {Miyatake}, et~al.]{More2023}
+S.~{More}, S.~{Sugiyama}, H.~{Miyatake}, et~al.
+\newblock {Hyper Suprime-Cam Year 3 Results: Measurements of Clustering of
+  SDSS-BOSS Galaxies, Galaxy-Galaxy Lensing, and Cosmic Shear}.
+\newblock \emph{Physical Review D}, 108:\penalty0 123520, 2023.
+\newblock \doi{10.1103/PhysRevD.108.123520}.
+
+\bibitem[{Oh} et~al.(2015){Oh}, {Hunter}, {Brinks}, et~al.]{Oh2015}
+S.-H. {Oh}, D.~A. {Hunter}, E.~{Brinks}, et~al.
+\newblock {High-Resolution Mass Models of Dwarf Galaxies from LITTLE THINGS}.
+\newblock \emph{The Astronomical Journal}, 149:\penalty0 180, 2015.
+\newblock \doi{10.1088/0004-6256/149/6/180}.
+
+\bibitem[{Randall} and {Sundrum}(1999)]{RandallSundrum1999}
+L.~{Randall} and R.~{Sundrum}.
+\newblock {An Alternative to Compactification}.
+\newblock \emph{Physical Review Letters}, 83:\penalty0 3370, 1999.
+\newblock \doi{10.1103/PhysRevLett.83.4690}.
+
+\bibitem[{Rau} et~al.(2023){Rau}, {Dalal}, {Zhang}, et~al.]{Rau2023}
+M.~M. {Rau}, R.~{Dalal}, T.~{Zhang}, et~al.
+\newblock {Weak lensing tomographic redshift distributions for HSC Y3}.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  524:\penalty0 5109, 2023.
+\newblock \doi{10.1093/mnras/stad1962}.
+
+\bibitem[{Rubin} and {Ford}(1980)]{RubinFord1980}
+V.~C. {Rubin} and Jr. {Ford}, W.~K.
+\newblock {Rotational Properties of 21 Sc Galaxies with a Large Range of
+  Luminosities and Radii}.
+\newblock \emph{The Astrophysical Journal}, 238:\penalty0 471, 1980.
+\newblock \doi{10.1086/158003}.
+
+\bibitem[{Schombert} et~al.(2019){Schombert}, {McGaugh}, and
+  {Lelli}]{Schombert2019}
+J.~M. {Schombert}, S.~S. {McGaugh}, and F.~{Lelli}.
+\newblock {The Mass Discrepancy-Acceleration Relation in Early-Type Galaxies}.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  483:\penalty0 1496, 2019.
+\newblock \doi{10.1093/mnras/sty3203}.
+
+\bibitem[{Simon}(2019)]{Simon2019}
+J.~D. {Simon}.
+\newblock {The Faintest Dwarf Galaxies}.
+\newblock \emph{Annual Review of Astronomy and Astrophysics}, 57:\penalty0 375,
+  2019.
+\newblock \doi{10.1146/annurev-astro-091918-104453}.
+
+\bibitem[{Simon} and {Geha}(2007)]{SimonGeha2007}
+J.~D. {Simon} and M.~{Geha}.
+\newblock {The Kinematics of the Ultra-faint Milky Way Satellites}.
+\newblock \emph{The Astrophysical Journal}, 670:\penalty0 313, 2007.
+\newblock \doi{10.1086/521816}.
+
+\bibitem[{Stone} et~al.(2021){Stone}, {Courteau}, {Cuillandre},
+  et~al.]{Stone2021}
+C.~{Stone}, S.~{Courteau}, J.-C. {Cuillandre}, et~al.
+\newblock {PROBES: Photometry and Rotation Curve Observations from
+  Extragalactic Surveys}.
+\newblock \emph{The Astrophysical Journal Supplement Series}, 256:\penalty0 33,
+  2021.
+\newblock \doi{10.3847/1538-4365/ac1195}.
+
+\bibitem[{Strigari} et~al.(2008){Strigari}, {Bullock}, {Kaplinghat}, {Simon},
+  {Geha}, {Willman}, and {Walker}]{Strigari2008}
+L.~E. {Strigari}, J.~S. {Bullock}, M.~{Kaplinghat}, J.~D. {Simon}, M.~{Geha},
+  B.~{Willman}, and M.~G. {Walker}.
+\newblock {A common mass scale for satellite galaxies of the Milky Way}.
+\newblock \emph{Nature}, 454:\penalty0 1096, 2008.
+\newblock \doi{10.1038/nature07222}.
+
+\bibitem[{Tollerud} et~al.(2012){Tollerud}, {Beaton}, {Geha},
+  et~al.]{Tollerud2012}
+E.~J. {Tollerud}, R.~L. {Beaton}, M.~C. {Geha}, et~al.
+\newblock {The SPLASH Survey: Spectroscopy of 15 M31 Dwarf Spheroidal Satellite
+  Galaxies}.
+\newblock \emph{The Astrophysical Journal}, 752:\penalty0 45, 2012.
+\newblock \doi{10.1088/0004-637X/752/1/45}.
+
+\bibitem[{Tully} and {Fisher}(1977)]{TullyFisher1977}
+R.~B. {Tully} and J.~R. {Fisher}.
+\newblock {A new method of determining distances to galaxies}.
+\newblock \emph{Astronomy \& Astrophysics}, 54:\penalty0 661, 1977.
+
+\bibitem[{Tumlinson} et~al.(2017){Tumlinson}, {Peeples}, and
+  {Werk}]{Tumlinson2017}
+J.~{Tumlinson}, M.~S. {Peeples}, and J.~K. {Werk}.
+\newblock {The Circumgalactic Medium}.
+\newblock \emph{Annual Review of Astronomy and Astrophysics}, 55:\penalty0 389,
+  2017.
+\newblock \doi{10.1146/annurev-astro-091916-055240}.
+
+\bibitem[{Verlinde}(2017)]{Verlinde2017}
+E.~P. {Verlinde}.
+\newblock {Emergent Gravity and the Dark Universe}.
+\newblock \emph{SciPost Physics}, 2:\penalty0 016, 2017.
+\newblock \doi{10.21468/SciPostPhys.2.3.016}.
+
+\bibitem[{Walker} et~al.(2009){Walker}, {Mateo}, {Olszewski},
+  et~al.]{Walker2009}
+M.~G. {Walker}, M.~{Mateo}, E.~W. {Olszewski}, et~al.
+\newblock {A Universal Mass Profile for Dwarf Spheroidal Galaxies?}
+\newblock \emph{The Astrophysical Journal}, 704:\penalty0 1274, 2009.
+\newblock \doi{10.1088/0004-637X/704/2/1274}.
+
+\bibitem[{Wolf} et~al.(2010){Wolf}, {Martinez}, {Bullock}, et~al.]{Wolf2010}
+J.~{Wolf}, G.~D. {Martinez}, J.~S. {Bullock}, et~al.
+\newblock {Accurate masses for dispersion-supported galaxies}.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  406:\penalty0 1220, 2010.
+\newblock \doi{10.1111/j.1365-2966.2010.16753.x}.
+
+\bibitem[{Zhang} et~al.(2012){Zhang}, {Hunter}, {Elmegreen}, et~al.]{Zhang2012}
+H.-X. {Zhang}, D.~A. {Hunter}, B.~G. {Elmegreen}, et~al.
+\newblock {Stellar Populations and Ages of LITTLE THINGS Dwarf Galaxies}.
+\newblock \emph{The Astronomical Journal}, 143:\penalty0 47, 2012.
+\newblock \doi{10.1088/0004-6256/143/2/47}.
+
+\end{thebibliography}

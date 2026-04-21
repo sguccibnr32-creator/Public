@@ -1,0 +1,1087 @@
+% =============================================================================
+% Membrane Cosmology v4.7.8 (English main body)
+%   Galactic Rotation Without Dark Matter from Elastic Membrane Cosmology:
+%   The Geometric Mean Law and Observational Tests
+%
+%   Sakaguchi Shinobu, 2026-04
+%   Rebuild from ReportLab PDF (57 KB, 13 pages, English)
+%   Target: arXiv astro-ph.CO
+%
+%   Revision log:
+%     v4.7.8 (2026-04, original): "rev. LV independence"
+%     v4.7.8 (2026-04-21, this): affiliation correction
+%       Kobe, Japan -> Shiso, Hyogo, Japan (correct address: 兵庫県宍粟市)
+%
+%   Compile: pdflatex membrane_v478 && bibtex membrane_v478 && pdflatex x2
+% =============================================================================
+\documentclass[11pt,a4paper]{article}
+
+% ---------------- core packages ---------------------------------------------
+\usepackage[a4paper,margin=22mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks,breaklinks=true]{hyperref}
+\usepackage[round,authoryear,sort&compress]{natbib}
+
+% ---------------- section formatting ----------------------------------------
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{3.2ex plus 1ex minus .2ex}{1.6ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{2.4ex plus .8ex minus .2ex}{1.2ex plus .2ex}
+
+% ---------------- typography tuning ----------------------------------------
+\setlength{\emergencystretch}{3em}  % handle occasional overfull hbox
+\tolerance=1000
+\hbadness=5000
+
+% ---------------- number formatting macros ----------------------------------
+\newcommand{\e}[1]{\times 10^{#1}}
+
+% ---------------- physics symbol shortcuts ----------------------------------
+\newcommand{\gobs}{g_{\rm obs}}
+\newcommand{\gbar}{g_{\rm bar}}
+\newcommand{\gN}{g_{N}}
+\newcommand{\gc}{g_{c}}
+\newcommand{\ao}{a_{0}}
+\newcommand{\vflat}{v_{\rm flat}}
+\newcommand{\hR}{h_{R}}
+\newcommand{\Yd}{\Upsilon_{d}}
+\newcommand{\Ys}{\Upsilon_{\ast}}
+\newcommand{\Ydyn}{\Upsilon_{\rm dyn}}
+\newcommand{\Tm}{T_{m}}
+\newcommand{\so}{s_{0}}
+\newcommand{\sigdyn}{\Sigma_{\rm dyn}}
+\newcommand{\sigbar}{\Sigma_{\rm bar}}
+\newcommand{\siglos}{\sigma_{\rm los}}
+\newcommand{\rh}{r_{h}}
+\newcommand{\LV}{L_{V}}
+\newcommand{\epso}{\epsilon_{0}}
+\newcommand{\kap}{\kappa}
+\newcommand{\Mhalf}{M_{\rm half}}
+\newcommand{\Mdyn}{M_{\rm dyn}}
+\newcommand{\Mbar}{M_{\rm bar}}
+\newcommand{\Mjmem}{M_{J,{\rm mem}}}
+\newcommand{\Mjstd}{M_{J,{\rm std}}}
+\newcommand{\fgas}{f_{\rm gas}}
+\newcommand{\Sgal}{S_{\rm gal}}
+\newcommand{\Gstr}{G_{\rm Strigari}}
+\newcommand{\fp}{f_{p}}
+\newcommand{\mustar}{\mu_{\ast}}
+\newcommand{\AIC}{\Delta{\rm AIC}}
+\newcommand{\chisq}{\chi^{2}}
+
+% ---------------- title ------------------------------------------------------
+\title{\bfseries Galactic Rotation Without Dark Matter\\
+from Elastic Membrane Cosmology:\\[4pt]
+\large The Geometric Mean Law and Observational Tests}
+\author{Shinobu Sakaguchi\\[2pt]
+\small Sakaguchi Seimensho (Independent Research), Shis\={o}, Hyogo, Japan\\
+\small \texttt{sakaguchi-physics.com}}
+\date{April 2026 (v4.7.8, 2026-04-21 affiliation rev.)}
+
+% =============================================================================
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+% ---------------- Abstract --------------------------------------------------
+\begin{abstract}
+\small\noindent
+We present a membrane cosmology framework in which gravitational strength is modulated by the folding state
+of a higher-dimensional elastic membrane, producing an effective gravitational acceleration
+$\gobs = (\gN + \sqrt{\gN^2 + 4\gc\gN})/2$ that accounts for observed galactic rotation curves without invoking
+dark matter. The central result is the \emph{geometric mean law}: the critical acceleration
+$\gc = \eta\sqrt{\ao G \Sigma_0}$ is determined as the exact geometric mean ($\alpha=0.5$) of the universal
+MOND scale $\ao$ and the local dynamical surface density $G\Sigma_0$, established from 175 SPARC galaxies with
+$\AIC = -130$ versus MOND and confirmed by extended jackknife resampling. The Condition~15 final form
+$\gc = 0.584\,\Yd^{-0.361}\sqrt{\ao\,\vflat^2/\hR}$ achieves $R^2 = 0.607$ with scatter $= 0.286$ dex,
+established as an intrinsic limit (94\% irreducible). The membrane rigidity $\kap \sim 10^{-40}$ kpc$^2$ is
+effectively zero, simplifying the Lagrangian to $\mathcal{L} \approx U(\epsilon; c)$ with no gradient term.
+Each radius independently obeys $\mu(x) = x/(1+x)$ at RMS $= 0.090$ dex. SPARC-internal LITTLE THINGS dwarf
+verification ($N=8$, $\vflat = 15\text{--}55$ km/s) yields scatter $= 0.232$ dex with KS $p=0.67$ versus the
+full sample, confirming C15 consistency across the mass range. MOND rejection is established through three
+independent methods ($p = 2 \times 10^{-27}$, $p = 8 \times 10^{-33}$, $p < 0.001$).
+
+\smallskip\noindent
+Version 4.7.8 extends the framework to pressure-supported dwarf spheroidal (dSph) galaxies. Direct C15
+application to 31 dSph systems fails with $+1.5$ dex systematic bias, traced to an inversion of the
+Jeans-mass hierarchy: $\Mjmem \ll \Mjstd$ in dSph (vs $\Mjstd \lesssim \Mjmem$ in SPARC), reversing the
+direction of membrane--baryon coupling. In the $c \to 0$ limit of $U(\epsilon; c)$, the thermal Bernoulli
+variance $\so(1-\so)$ predicts a universal acceleration scale $\Gstr = \so(1-\so)\,\ao = 0.228\,\ao$ with
+$\Tm = \sqrt{6}$. The prediction is verified in two independent populations: 31 dSph galaxies ($0.240\,\ao$,
+5\% agreement) and 30 radius points from four SPARC bridge galaxies with outer $\Ydyn > 10$ ($0.219\,\ao$,
+4\% agreement). All four bridge galaxies (ESO444-G084, NGC2915, NGC1705, NGC3741) show statistically
+significant radial increase of $\Ydyn$ ($z = 2.4$ to $21.6$), confirming a continuous
+C15~$\to$~Strigari transition within individual galaxies. Multivariate regression
+$\log\gobs$ vs $(\log\sigma, \log\rh, \log\LV)$ verifies $\LV$-independence at machine precision
+($\beta_{L_V} = -2\e{-7}$, $R^2 = 1.0000$), confirmed independently by partial correlation. A four-component
+scatter decomposition shows 89.4\% of the 0.350 dex residual scatter is physical, with the Milky Way and M31
+satellite populations yielding identical mean offsets from the Bernoulli prediction ($+0.030$ vs $+0.032$
+dex), indicating that $\Gstr$ is independent of the host galactic environment.
+
+\smallskip\noindent\textbf{Keywords:} dark matter alternatives; galactic rotation curves; membrane cosmology;
+geometric mean law; modified gravity; weak gravitational lensing; dwarf spheroidal galaxies; Strigari relation
+\end{abstract}
+
+\clearpage
+
+% =============================================================================
+\section{Introduction}
+% =============================================================================
+
+The flat rotation curves of spiral galaxies~\citep{RubinFord1980} and the success of the Tully--Fisher
+relation~\citep{TullyFisher1977} have long been interpreted as evidence for dark matter halos. Alternative
+approaches, including Modified Newtonian Dynamics (MOND;~\citealt{Milgrom1983}), Emergent
+Gravity~\citep{Verlinde2017}, and various scalar-tensor theories, seek to reproduce these observations
+through modifications of gravitational dynamics rather than new matter species.
+
+Here we propose a membrane cosmology framework rooted in brane-world scenarios~\citep{RandallSundrum1999}.
+The central idea is that gravitons propagate in a $(4+1)$-dimensional bulk, but are partially screened by
+folds in the membrane carrying Standard Model matter. This screening modulates the effective Newton constant
+locally, producing rotation-curve fits without a dark matter halo.
+
+The key advance is the \emph{geometric mean law}: the critical acceleration $\gc$ that governs the transition
+from Newtonian to MOND-like behaviour is not a universal constant (as MOND assumes) but varies from galaxy
+to galaxy as the geometric mean of a universal scale $\ao$ and a local dynamical surface density $G\Sigma_0$.
+This law is established from 175 SPARC galaxies with $\AIC = -130$ versus MOND. In v4.7, the theory is
+substantially simplified: the membrane rigidity $\kap$ is confirmed to be zero, eliminating the gradient
+term from the Lagrangian and reducing the free parameter count by four.
+
+The paper is organised as follows. Section~2 presents the theoretical framework including the $\kap=0$
+simplification. Section~3 establishes the geometric mean law and Condition~15 final form. Section~4
+summarises statistical verification. Section~5 presents observational tests including weak lensing and dwarf
+galaxy verification. Section~6 discusses comparison with MOND and remaining challenges. Section~7 extends
+the framework to pressure-supported dwarf spheroidal systems via the $c \to 0$ limit of the elastic potential,
+deriving the Bernoulli prediction $\Gstr = \so(1-\so)\,\ao$ and verifying continuous C15$\to$Strigari
+transition in SPARC bridge galaxies, with $\LV$-independence verified at machine precision and scatter
+decomposed into its physical components. Section~8 summarises.
+
+% =============================================================================
+\section{Theoretical Framework}
+% =============================================================================
+
+\subsection{Brane-world setup and gravitational screening}
+Consider a $(4+1)$-dimensional spacetime with the Randall--Sundrum metric. Standard Model fields are confined
+to the membrane at $y=0$. When the membrane is folded with local depth $D(r)$, gravitational flux lines are
+partially redirected. We parametrise the fold by a dimensionless field $\epsilon(x)$ with equilibrium value
+satisfying $U'(\epso) = 0$, where:
+\begin{equation}
+U(\epsilon; c) = -\epsilon - \frac{\epsilon^2}{2} - c\ln(1 - \epsilon), \qquad 0 < \epsilon < 1.
+\label{eq:Uepsc}
+\end{equation}
+The effective gravitational acceleration felt by a test mass is:
+\begin{equation}
+\gobs(r) = \frac{\gN(r) + \sqrt{\gN(r)^2 + 4\gc\gN(r)}}{2}.
+\label{eq:gobs}
+\end{equation}
+This is mathematically identical to the MOND simple interpolation function but arises from the equilibrium
+condition of the elastic potential $U(\epsilon;c)$ --- a first-principles derivation rather than an empirical
+ansatz. The general-$c$ equilibrium condition is:
+\begin{equation}
+\frac{c - 1 + \epsilon^2}{1 - \epsilon} = \frac{\gN}{\gc}.
+\label{eq:eqcond}
+\end{equation}
+
+\subsection{Local equilibrium and membrane rigidity (v4.7)}
+The membrane Lagrangian in principle contains a gradient term:
+$\mathcal{L}[\epsilon] = U(\epsilon;c) + \kap (d\epsilon/dr)^2$. We estimate $\kap$ directly from SPARC
+rotation curve data using both the Euler--Lagrange equation and the $E_{\rm grad}/E_{\rm local}$ ratio at each
+radius.
+
+\textbf{Result:} $\kap \sim 10^{-40}$ kpc$^2$ with 1.03 dex scatter and CV $= 3.14$ (non-universal).
+The rigidity length $\ell_\kap \sim 0$ kpc: the membrane has no spatial elastic memory. The inverse
+prediction $B = 2\kap/(U'' \hR^2) = 0.000$, compared to the empirical value $0.51$ from previous versions
+--- a complete failure. Consequently:
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+\item The gradient term is physically irrelevant: $\mathcal{L} \approx U(\epsilon; c)$.
+\item The membrane responds independently at each radius: each point on the rotation curve obeys
+$\mu(x) = x/(1+x)$ with a single $\gc$ per galaxy. Simple interpolation applied independently at 3003 data
+points across 167 galaxies gives RMS $= 0.090$ dex.
+\item The Euler--Lagrange derivation pathway is abandoned.
+\item Equations~\eqref{eq:Uepsc}--\eqref{eq:eqcond} constitute the complete dynamical content of the framework.
+\end{enumerate}
+
+% =============================================================================
+\section{The Geometric Mean Law}
+% =============================================================================
+
+\subsection{Measurement of $\gc$}
+For each SPARC galaxy, $\gc$ is measured directly from the Radial Acceleration Relation (RAR) without using
+the scale radius $r_s$, avoiding circularity with the rotation curve fit. The characteristic acceleration
+scale is $G\Sigma_0 = \vflat^2/\hR$.
+
+\subsection{Core result}
+\begin{equation}
+\gc = \eta \cdot \ao^{(1-\alpha)} \cdot (G\Sigma_0)^{\alpha}, \qquad \alpha = 0.545 \pm 0.041.
+\label{eq:geomean}
+\end{equation}
+
+\begin{center}\small
+\begin{tabular}{@{}lrl@{}}
+\toprule
+Hypothesis & $p$-value & Decision \\
+\midrule
+$\alpha = 0$ (MOND: $\gc = $ const) & $2.0 \times 10^{-27}$ & Rejected \\
+$\alpha = 0.5$ (geometric mean) & $0.27$ & Cannot reject \\
+$\alpha = 1.0$ (pure $G\Sigma_0$) & $2.2 \times 10^{-21}$ & Rejected \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Model comparison}
+\begin{center}\small
+\begin{tabular}{@{}lcr@{}}
+\toprule
+Model & Params & $\AIC$ vs MOND \\
+\midrule
+A: MOND ($\gc = \ao$) & 0 & 0 (baseline) \\
+C: Geometric mean ($\alpha=0.5$ fixed) & 1 & $-130$ \\
+B: Geometric mean ($\alpha$ free) & 2 & $-130$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Condition~15 final form (v4.7 definitive)}
+\begin{equation}
+\gc = 0.584 \cdot \Yd^{-0.361} \cdot \sqrt{\ao \cdot \vflat^2/\hR}.
+\label{eq:C15}
+\end{equation}
+\begin{center}\small
+\begin{tabular}{@{}llp{60mm}@{}}
+\toprule
+Parameter & Value & Note \\
+\midrule
+$\alpha$ (fixed) & $0.5$ & Optimal; $\alpha$ free gives $+0.3\%$ improvement \\
+$\beta$ ($\Yd$ exponent) & $-0.361 \pm 0.078$ & LOO verified, $\AIC = -14.2$ \\
+$\eta_0$ & $0.584$ & (see Sec.~6.8) \\
+$R^2$ & $0.607$ & Scatter $= 0.286$ dex (intrinsic limit) \\
+LOO scatter & $0.290$ dex & No overfitting \\
+$b_{\vflat}/(-b_{\hR})$ & $1.985$ & Theory prediction: 2.0 (exact match) \\
+MOND rejection & $p = 1.66 \times 10^{-53}$ & Decisive \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Scatter decomposition:}
+\begin{center}\small
+\begin{tabular}{@{}lcr@{}}
+\toprule
+Component & $\sigma$ (dex) & Fraction \\
+\midrule
+Intrinsic physical variance & $0.227$ & $63.5\%$ \\
+$\gc$ measurement error & $0.152$ & $28.3\%$ \\
+$\Yd + \vflat + \hR$ input & $\sim 0.08$ & $8.2\%$ \\
+\textbf{Total} & $0.286$ & $100\%$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Jackknife verification}
+\begin{center}\small
+\begin{tabular}{@{}lp{80mm}@{}}
+\toprule
+Test & Result \\
+\midrule
+Half-split $\times 1000$ & $\alpha_{\rm train} = 0.545 \pm 0.037$, $\alpha_{\rm test} = 0.550 \pm 0.038$ \\
+Leave-50-out $\times 500$ & $\alpha = 0.546 \pm 0.024$, range $[0.483, 0.638]$ \\
+Bootstrap $\times 1000$ & $\alpha = 0.548 \pm 0.038$, 95\% CI $[0.478, 0.626]$ \\
+Improves over MOND & $100\%$ of splits (median $31\%$) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Decomposition and origin of $\alpha = 0.5$}
+Element substitution analysis reveals that the $\gc$ measurement method (tanh fit vs direct median) is
+irrelevant; what matters is per-galaxy $\Yd$ optimisation. Direct median with $\Yd = 0.5$ fixed gives
+$\alpha = 0.432$, but with $\Yd$ individually optimised gives $\alpha = 0.546$ --- identical to the tanh result.
+The origin of $\alpha = 0.5$ is identified as an algebraic consequence of the deep-MOND limit. With
+$\gN \ll \gc$, Eq.~\eqref{eq:gobs} reduces to $g_{\rm eff} = \sqrt{\gN\gc}$. Direct fitting yields
+$\alpha = 0.471 \pm 0.036$, $p(0.5) = 0.43$ (A-grade). Three-layer decomposition: deep-MOND (0.47) +
+MOND transition ($+0.05$) + residual scatter ($+0.02$) $= 0.545$.
+
+\subsection{Component decomposition}
+$\gc \sim \vflat^{1.10}\,\hR^{-0.56}$, $R^2 = 0.529$. Both exponents are consistent with the geometric mean
+prediction ($\vflat^{1.0}\,\hR^{-0.5}$): $p(\vflat = 1.0) = 0.24$, $p(\hR = -0.5) = 0.49$. Total baryonic mass
+$\Mbar$ alone gives $R^2 = 0.021$ --- mass does not drive $\gc$. The surface density proxy
+$\sigdyn = \vflat^2/\hR$ is the essential quantity.
+
+\subsection{C15 as minimal sufficient statistic (v4.7)}
+Six models incorporating a galaxy-level plasticity indicator $\Sgal$ (constructed from $\fgas$, $\Yd$,
+SBdisk0, T-type) are tested against C15. All six are rejected (LOO improvement $< 2\%$, no model satisfies
+both LOO $> 5\%$ and $\AIC < -5$). The decisive finding: in model M1 (C15 + $\Sgal$), the $\Sgal$
+coefficient reverses sign ($+0.44$) compared to the raw partial correlation ($\rho = -0.23$), indicating
+that $\Sgal$'s apparent predictive power is entirely absorbed by $\sigdyn$ already present in C15. Forward
+stepwise regression with all available parameters ($I_0$, $\fgas$, T-type, quality $Q$) achieves at most
+$1.7\%$ improvement (LOO). Distance, inclination, and velocity errors are non-significant ($p > 0.3$). C15
+is the minimal sufficient statistic for $\gc$ prediction. Grade: A.
+
+% =============================================================================
+\section{Statistical Verification}
+% =============================================================================
+
+\subsection{SPARC 167 galaxies}
+Extending $\gc$ measurement to 167 SPARC galaxies (quality cut $\chisq/\text{dof} < 10$):
+median $\gc/\ao = 0.24$, with systematic Hubble-type dependence (Spearman $r = -0.760$, $p < 0.0001$).
+$\gc$ decreases by a factor of 22 from Sab to Im type. The null correlation of $r_s$ with $\gc$
+($r = 0.018$, n.s.) demonstrates that $\gc$ is determined by membrane material properties, not spatial
+location.
+
+\subsection{First-principles derivation of $F_{\rm conf}$}
+The confining term $F_{\rm conf} = -c\ln(1 - \epsilon)$ in $U(\epsilon; c)$ is derived from the configuration
+entropy of the kink--fold network via forest~$+$~cavity mean-field effective theory (Lemmas 1--4, all
+established). Observational confirmation: $z_{\rm kin}$ shows $r = -0.507$ ($p = 2 \e{-12}$) anti-correlation
+with $\gc/\ao$, and two independent proxies agree at $r = 0.809$ ($p < 10^{-38}$), supporting the physical
+reality of the fold density $n_{\rm fold}$. Self-consistency: $\alpha = 0.5$ follows from the deep-MOND
+algebraic structure and the BTFR--$\vflat$--$\hR$ closure (slope $= 0.545 \pm 0.075$, prediction 0.5,
+$0.6\sigma$).
+
+% =============================================================================
+\section{Observational Tests}
+% =============================================================================
+
+\subsection{Weak-lensing Q-value test}
+Nine galaxy clusters from the~\citet{Miyaoka2019} sample with HSC-SSP weak-lensing data: $Q > 1$ in 9/9
+clusters (100\%). Wilcoxon $p = 0.0020$ (Grade A). Sign of $\alpha$ confirmed at 98.4\%.
+
+\subsection{HSC-SSP cl1 analysis}
+\begin{center}\small
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Model & $\chisq/\text{dof}$ & $\AIC$ vs NFW \\
+\midrule
+NFW ($M_{200}, c_{200}$) & $1.98$ & $0$ \\
+MOND ($\gc = \ao$, Abel) & $1.69$ & $-4.9$ \\
+Membrane ($\gc$ free, Abel) & $1.54$ & $-4.4$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+$\gc = 1.58\,\ao$ (68\% CI: $[1.12, 2.00]$). $\ao$ is within 95\% CI. Level B$+$ (systematic issues:
+$M_{\rm lens}/M_{\sigma_v} = 7.5$, $\gc$ method dependence). Future surveys (Rubin LSST, Euclid) needed.
+
+\subsection{LITTLE THINGS dwarf verification (v4.7)}
+Eight LITTLE THINGS dwarf irregular galaxies~\citep{Oh2015} are identified within the SPARC 175 sample,
+spanning $\vflat = 15\text{--}55$ km/s and $\gc/\ao = 0.1\text{--}0.65$:
+
+\begin{center}\small
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Metric & LT subset (N=8) & Full SPARC & non-LT \\
+\midrule
+C15 scatter (dex) & $0.232$ & $0.286$ & $0.288$ \\
+Median bias (dex) & $-0.189$ & $+0.000$ & $+0.004$ \\
+KS test $p$ & $0.67$ & --- & --- \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+KS $p = 0.67$ confirms that dwarf residuals are drawn from the same distribution. C15 holds uniformly across
+the mass range. Combined with the full-sample LITTLE THINGS result ($N = 178$, $\alpha = 0.576 \pm 0.047$,
+$p(0.5) = 0.109$), three independent MOND rejection pathways are established.
+
+\paragraph{Non-SPARC external verification (v4.7.7).}
+To extend the dwarf verification beyond the SPARC sample, we applied C15 to 18 non-SPARC LITTLE THINGS
+galaxies from~\citet{Oh2015} with baryon-separated rotation curves from VLA HI and Spitzer 3.6~$\mu$m
+photometry. Galaxy-specific $\Yd$ values were estimated from SED-derived stellar masses~\citep{Zhang2012}
+and V-band luminosities. After quality cuts excluding 5 galaxies with known kinematic anomalies (starburst,
+outflow contamination, or insufficient $V_{\rm bar}$ coverage), the remaining 11 high-quality galaxies yield
+scatter $= 0.289$ dex with bias $= -0.004$ dex. A KS test confirms that non-SPARC and SPARC-internal
+residuals are drawn from the same distribution ($p = 0.73$). Combined with the SPARC-internal result ($N =
+8$, scatter $= 0.232$ dex), C15 is verified across the full dwarf mass range $\vflat = 12\text{--}125$ km/s
+with no systematic deviation. Grade: A (upgraded from B$+$ via independent external confirmation).
+
+% =============================================================================
+\section{Comparison with MOND and Remaining Challenges}
+% =============================================================================
+
+\subsection{MOND as special case}
+MOND's $\ao$ is recovered as the all-galaxy average of $\gc$. An ``average galaxy'' ($G\Sigma_0 \sim \ao/\eta^2$)
+gives $\gc \sim \ao$, recovering MOND. MOND is a special case of the membrane framework. MOND rejection is
+established through three independent methods: RAR-based ($p = 2\e{-27}$), deep-MOND inversion
+($p = 8\e{-33}$), and LITTLE THINGS independent ($p < 0.001$).
+
+\subsection{$V_{\rm bar}$ bottleneck}
+The primary obstacle to Level A external verification is the $V_{\rm bar}$ bottleneck: baryon-separated
+rotation curves are publicly available only in SPARC and LITTLE THINGS. PROBES (3{,}158 galaxies) and MaNGA
+DynPop (10{,}296) provide only $V_{\rm obs}$, yielding $\alpha \sim 1.0$ with fixed $\Yd = 0.5$. These are
+repositioned for large-sample precision measurement rather than independent verification. BIG-SPARC ($\sim
+4000$ galaxies, in preparation) will provide the definitive external test.
+
+\subsection{$\kap = 0$ and theory simplification (v4.7)}
+The $\kap = 0$ result (Sec.~2.2) has far-reaching consequences for the theory structure:
+\begin{center}\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+Aspect & Before (v4.6) & After (v4.7) \\
+\midrule
+Lagrangian & $\mathcal{L} = U(\epsilon;c) + \kap(d\epsilon/dr)^2$ & $\mathcal{L} \approx U(\epsilon;c)$ \\
+$\gc$ structure & C15 global + C14 radial & C15 only \\
+Scatter & 0.286 dex (improvable?) & 0.286 dex (intrinsic limit) \\
+Free params removed & A, B, $\tau$, $\kap$ & All four eliminated \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The Condition~14 dynamical formulation $g_{c,\rm eff}(r) = \gc[0.12 + 0.51\exp(-r/(4.7\hR))]$ reported in
+v4.6 is retracted. The pattern is a projection of C15 prediction bias onto the radial coordinate. The
+conceptual hypothesis of plastic/elastic two-phase membrane structure (M3 $\epsilon$ threshold,
+$\AIC_c = -5.1$) remains at B$-$grade as an interpretive framework.
+
+\subsection{$\hR$ partial correlation}
+The scale-length $\hR$ shows zero raw correlation with $\gc$ ($\rho = -0.022$) but a significant partial
+correlation after controlling for $\vflat$ ($\rho = -0.472$). Decomposition: 69\% from outer-disk MOND
+transition (A-grade), 18\% from $x(r)$ profile higher-order effects (B$-$grade, reattributed from gradient
+energy in v4.7), 13\% residual.
+
+\subsection{BTFR slope and Simpson's paradox}
+The membrane BTFR slope $= 1.20$ is a statistical confound independent of $\gc$: setting $\gc = \ao$
+(constant) yields the same slope 1.196. Simpson's paradox arises from $\vflat$ driving both BTFR axes.
+Within-bin slope $= 0.542 \pm 0.069$ (bootstrap 95\% CI $[0.400, 0.668]$, $p(0.5) = 0.494$) provides a
+non-circular confirmation of $\alpha = 0.5$. In dwarf galaxies ($\vflat < 47$ km/s), $b_{gc} = 2.32$: the
+membrane fold state dominates rotation velocity, a distinctive prediction with no analogue in standard dark
+matter models.
+
+\subsection{Deep-MOND $\gc$--$\sigbar$ independence}
+In the deep-MOND regime (bottom 30\% by $\gc$), $\gc$ is uncorrelated with baryonic surface density:
+$r(\gc, \sigbar) = +0.066$. In contrast, $r(\gc, \sigdyn) = +0.727$. The ratio $\sigbar/\sigdyn$
+anti-correlates with $\gc$ ($r = -0.648$): from $\sim 0.7$ in low-$\gc$ galaxies to $\sim 0.14$ in high-$\gc$.
+The membrane responds to dynamical stress-energy, not baryonic mass content. The self-referential closure
+$\gc \sim \sigbar^{1/3}$ fails because its premise is empirically false. Grade: A.
+
+\subsection{Intrinsic scatter limit}
+Two independent optimisation pathways fail to reduce the 0.286 dex scatter: (i) $\alpha(\gc)$ tanh transition
+achieves 3\% improvement ($\AIC = -2.4$, 4 extra parameters --- insufficient); (ii) all additional galaxy
+parameters achieve at most 1.7\% (LOO). The scatter-minimising $\alpha(\gc)$ parameters contradict the
+sliding-window $\alpha$ in direction, confirming that local statistical slopes and global prediction accuracy
+are distinct quantities. The Rotmod-derived local $\gc$ (0.244 dex) provides a lower bound. Grade: A.
+
+\subsection{Plasticity narrative and self-consistent equation (v4.7.6)}
+The $\Yd$ dependence of $\eta$ is a structural consequence of the BTFR + GML system, not a ``plasticity
+proxy''. All plasticity indicators ($\fgas$, SBdisk0, T-type) are different aspects of $\sigdyn$ variation
+already captured by C15. The morphological-type bridge (T-type vs $\Sgal$, $\rho = +0.89$,
+$p = 4\e{-60}$) establishes a strong conceptual correspondence but adds no predictive power.
+``Plasticity'' is an explanatory narrative, not a predictive variable. Grade: A (bridge) / X ($\Sgal$
+prediction).
+
+\paragraph{Theoretical basis for $\eta_0$ (v4.7.6).}
+The C15 normalisation $\eta_0 = 0.584$ can be given a partial first-principles interpretation through the
+membrane self-consistent equation. Define the elastic fraction $s = 1 - \fp$, where $\fp$ is the plastic
+content of the membrane at a given galaxy. The dimensionless dynamical structure parameter
+$Q = \sqrt{\vflat^2/(\ao \hR)}$ measures the fold-driving stress. The equilibrium elastic fraction satisfies:
+\begin{equation}
+s = \frac{1}{1 + \exp(-\Delta U(sQ)/\Tm)},
+\label{eq:SCE}
+\end{equation}
+where $\Delta U(c) = -3/2 + 2\sqrt{c} - c/2 - (c/2)\ln(c)$ for $0 < c \le 1$ is the potential energy
+difference between the folded and unfolded membrane states, derived from $U(\epsilon; c)$ (Eq.~\ref{eq:Uepsc}).
+The effective membrane temperature $\Tm = \sqrt{6}$ is the $Z_2$ symmetry-breaking critical temperature
+(Lemma~5). Key properties of Eq.~\eqref{eq:SCE}: $\Delta U(0) = -3/2$ (deep plastic well), $\Delta U(1) = 0$
+with $\Delta U'(1) = 0$ (inflection point), guaranteeing a unique solution for each $Q$.
+
+Applying Eq.~\eqref{eq:SCE} to the 159 SPARC galaxies in the TA3 sample, the SPARC-averaged elastic fraction
+is $\langle s \rangle = 0.58$, matching $\eta_0 = 0.584$ to within 1\%. This identifies $\eta_0$ as the mean
+elastic fraction of the membrane across the observed galaxy population: $\eta_0 = \langle 1 - \fp
+\rangle_{\rm SPARC}$. Grade: B$+$.
+
+\paragraph{$\Yd$ as independent variable (v4.7.6).}
+The extended model $\gc/\ao = A\,s(Q, \Tm)\,Q\,\Yd^{\beta}$ with $\Tm = \sqrt{6}$ yields $\beta = -0.331$ and
+scatter $= 0.2845$ dex, compared to the C15 empirical $\beta = -0.361$ (8\% difference). Crucially, the
+residuals of the pure $s(Q)$ model ($\Yd^{\beta}$ omitted) correlate with $\Yd$ at $r = -0.296$
+($p = 7 \e{-5}$), demonstrating that $\Yd$ cannot be derived from $Q$ alone. The membrane state space is at
+least two-dimensional: dynamical structure ($Q$) and material composition ($\Yd$). Grade: A ($\Yd$
+independence).
+
+\paragraph{Partial correlation test (v4.7.7).}
+To test whether the $\gc$--$\Yd$ correlation is mediated by gas fraction, we compute the partial correlation
+$r(\log\gc, \log\Yd | \fgas)$ using the SPARC 175 sample ($\fgas = 1.33\,M_{\rm HI}/(1.33\,M_{\rm HI} + \Yd
+L_{3.6})$). The partial correlation is $r = -0.437$ ($p = 1.6\e{-9}$), slightly stronger than the raw
+$r = -0.428$. The attenuation ratio is 1.02: conditioning on $\fgas$ does not weaken the correlation. The
+decisive result is $r(\gc, \fgas) = +0.061$ ($p = 0.42$): $\gc$ is uncorrelated with gas fraction. This rules
+out the common-cause model $\fp \to \gc$ and $\fp \to \Yd$ mediated by $\fgas$. Instead, $\Yd$ itself is the
+direct observational proxy of the membrane plastic fraction $\fp$. Grade: A.
+
+\paragraph{Resolution of the $\beta$ discrepancy (v4.7.7).}
+The 8.3\% difference between the self-consistent equation prediction ($\beta = -0.331$ at $\Tm = \sqrt{6}$)
+and the C15 empirical value ($\beta = -0.361$) is fully explained as a finite-temperature absorption effect.
+A systematic $\Tm$ scan confirms that at $\Tm \to \infty$ ($s = 0.5 =$ const), the model recovers $\beta =
+-0.361$ exactly: C15 implicitly assumes constant $s$. At finite $\Tm = \sqrt{6}$, the variation of $s(Q)$
+across the galaxy population absorbs 8.3\% of the $\Yd$ dependence, reducing the direct $\beta$ from $-0.361$
+to $-0.331$. This absorption requires no parameter adjustment and arises from the $Q$-dependent structure of
+$\Delta U(c)$. The scatter-minimising $\Tm = 2.35$ is consistent with $\sqrt{6} = 2.449$ to within
+$0.24\sigma$, providing independent empirical support for the $Z_2$ SSB critical temperature. Grade: A
+($\beta$ discrepancy resolved; $\Tm = \sqrt{6}$ confirmed by scatter optimisation).
+
+\subsection{Weak Lensing RAR: KiDS-1000 and HSC-SSP Y3 (v4.7.6)}
+We examined the KiDS-1000 weak lensing Radial Acceleration Relation~\citep{Brouwer2021} for consistency with
+C15. The KiDS lensing RAR extends the rotation-curve RAR by two decades in $\gobs$ into the low-acceleration
+regime ($\gobs \sim 10^{-15}$ to $10^{-12}$ m/s$^2$), using stacked Excess Surface Density (ESD) profiles of
+$\sim 1$ million isolated galaxies from the KiDS-bright sample.
+
+Following~\citet{Brouwer2021}, we adopt their nominal circumgalactic gas (CGM) model
+($M_{\rm hot}/M_\ast = 1$, isothermal profile, truncation radius $R_{\rm acc} = 100$ kpc). A universal
+correction factor $C(\gbar) = {\rm ESD}_{\rm hotgas}(\gbar)/{\rm ESD}_{\rm no\text{-}hotgas}(\gbar)$ is derived
+from the full-sample (no mass bins) ESD pair and applied to four stellar mass bins
+($\log_{10} M_\ast/M_\odot = [8.5, 10.3, 10.6, 10.8, 11.0]$). Per-bin $\gc$ is then fitted using the membrane RAR.
+
+Under the nominal CGM model, the hot-gas-corrected per-bin $\gc$ values show a positive $M_\ast$ slope
+($+0.138$ in $\log\gc$ vs $\log M_\ast$), consistent in sign and order of magnitude with the C15 prediction
+($+0.075$). The per-bin ratio $\gc^{\rm obs}/\gc^{\rm C15}$ ranges from 0.77 to 1.05 across all four bins,
+with Bin~4 ($\log M_\ast = 10.9$) achieving exact agreement (ratio $= 1.00$).
+
+However, a systematic sensitivity analysis reveals that this result is not robust to CGM mass uncertainty.
+Scanning $M_{\rm hot}/M_\ast$ over the observationally permitted range $[0.3, 3.0]$~\citep{Tumlinson2017,
+Babyk2018}, the formal $\Delta\chisq({\rm MOND} - {\rm C15})$ computed with the full $60 \times 60$
+covariance matrix reverses sign: $\Delta\chisq = -10.6$ at $\fgas = 0.3$ (MOND preferred) versus $+147.7$ at
+$\fgas = 1.0$ (C15 preferred). Introducing a physically motivated $M_\ast$-dependent correction
+($R_{\rm acc} \propto M_\ast^{0.4}$) further reduces the C15 preference to $\Delta\chisq = +0.8$ at
+$\fgas = 1.0$, rendering the two models statistically indistinguishable.
+
+\begin{sloppypar}
+The~\citet{Brouwer2021} colour and S\'ersic-index bins (their Fig.~8) provide a complementary test.
+Splitting by colour or S\'ersic index, we find $\gc({\rm red})/\gc({\rm blue}) = 2.3$ to $2.8$ and
+$\gc({\rm high-}n)/\gc({\rm low-}n) = 2.4$ to $2.5$, with the ordering stable across $\fgas = 0$ to 1.0
+($\Delta\chisq({\rm uniform} - {\rm split}) = +127$ for colour, $+67$ for S\'ersic). This result is
+CGM-robust because the hot-gas correction affects both morphological bins approximately equally, preserving
+the $\gc$ ratio.
+\end{sloppypar}
+
+However, a SPARC cross-check reveals that this ordering is dominated by the colour-magnitude relation rather
+than a pure morphological effect. In SPARC, the median $\gc$ ratio between early-type ($T \le 3$) and
+late-type ($T > 3$) galaxies is 0.92, with no statistically significant difference (Mann--Whitney $p = 0.35$).
+C15 predicts a ratio of 1.7, arising entirely from $\sigdyn = \vflat^2/\hR$ differences, with zero
+contribution from $\Yd$ (both groups share median $\Yd = 0.30$ in the TA3 sample). The KiDS ratio of 2.3 to
+2.8 exceeds both the SPARC observation and the C15 prediction, indicating that the colour/S\'ersic bins
+primarily separate galaxies by stellar mass rather than by morphological type, with the $\gc$ ordering
+reflecting the underlying $M_\ast$--$\sigdyn$ correlation.
+
+In summary, the KiDS lensing data are consistent with both C15 and MOND at the current level of systematic
+uncertainty. The stellar-mass test cannot discriminate between the two models due to CGM mass uncertainty,
+and the colour/S\'ersic test, while CGM-robust, is dominated by the colour-magnitude relation rather than an
+independent morphological signal. Definitive tests will require future surveys combining high-precision weak
+lensing (Euclid, Rubin LSST) with resolved CGM measurements (eROSITA, SKA), and colour-binned analysis
+within narrow stellar-mass slices to isolate pure morphological effects. Grade: B (both tests). $M_\ast$
+test: CGM-limited. Colour/S\'ersic test: CGM-robust but colour-$M_\ast$ degenerate.
+
+\paragraph{HSC-SSP Y3 independent lensing RAR (v4.7.4).}
+To provide an independent test of the lensing RAR obtained with KiDS-1000, we constructed a fully
+independent weak-lensing pipeline using the Hyper Suprime-Cam Subaru Strategic Program Year 3 (HSC-SSP Y3)
+shape catalogue as source galaxies and the Galaxy and Mass Assembly Data Release 4 (GAMA DR4) spectroscopic
+survey as lens galaxies. The HSC-SSP Y3 catalogue contains 35.7 million galaxies with shapes measured via
+the Re-Gaussianization (regauss) method, reaching an effective source number density of 19.9 arcmin$^{-2}$
+with a median $i$-band seeing of 0.6~arcsec. GAMA~DR4 provides accurate spectroscopic redshifts
+($N_Q \ge 3$) and stellar masses across three equatorial fields (G09, G12, G15), each spanning 60~deg$^2$.
+
+We selected isolated lens galaxies from GAMA~DR4 via the G3C group catalogue, retaining only central
+galaxies (RankIterCen $= 1$) with $0.05 < z < 0.5$ and $\log_{10}(M_\ast/M_\odot) < 11.0$, the latter
+matching the isolation criterion of~\citet{Brouwer2021}. This yielded 157{,}338 isolated lenses across three
+fields: 49{,}272 (G09), 55{,}402 (G12), 52{,}664 (G15). The baryonic acceleration was computed per lens as
+$\gbar = G M_{\rm gal}/R^2$, treating each lens as a baryonic point mass~\citep[][Eq.~2]{Brouwer2021}, with
+pairs binned in 15 logarithmic $\gbar$ bins spanning $10^{-15}$ to $5\e{-12}$ m~s$^{-2}$. A total of 503
+million lens--source pairs were accumulated.
+
+Systematic corrections were applied as follows. The HSC regauss shear responsivity
+$\mathcal{R} = 1 - \langle e_{\rm rms}^2 \rangle$ was computed per field ($\mathcal{R} \sim 0.86$). The
+multiplicative shear bias for HSC Y3 regauss is controlled at $|m| < 10^{-2}$ through image-simulation
+calibration~\citep{Li2022, Mandelbaum2018}, contributing $< 1\%$ ESD uncertainty. The observed acceleration
+was obtained via the SIS approximation $\gobs = 4G\Delta\Sigma$~\citep[][Eq.~7]{Brouwer2021}. The cross
+component ${\rm ESD}_\times$ is consistent with zero across all bins, confirming the absence of significant
+additive systematics. Statistical uncertainties were estimated using a 24-patch spatial jackknife (8 per
+field) yielding the full $15 \times 15$ covariance matrix.
+
+A critical systematic-robustness test is the consistency of results across independent survey fields.
+Fitting the interpolation $\gobs = \gbar/(1 - \exp(-\sqrt{\gbar/\gc}))$ independently in each field yields
+$\gc = 2.91 \pm 0.19\,\ao$ (G09), $2.64 \pm 0.16\,\ao$ (G12), $2.64 \pm 0.23\,\ao$ (G15). The inter-field
+consistency $\chisq = 1.37$ (2 d.o.f., $p = 0.50$) confirms that all three fields are statistically
+consistent at the $1\sigma$ level, with no evidence for field-dependent systematics.
+
+Combining all three fields yields $\gc = 2.73 \pm 0.11\,\ao$ for the full isolated lens sample. Comparing
+C15 ($\gc$ free) to MOND ($\gc = \ao$ fixed) using the full jackknife covariance matrix yields
+$\chisq_{\rm MOND} = 539.3$ versus $\chisq_{\rm C15} = 65.0$, giving $\Delta\chisq = +474$ and
+$\AIC = +472$, corresponding to a $\sim 22$-sigma preference for C15 over MOND. The lensing RAR of isolated
+galaxies at Mpc scales is incompatible with a universal acceleration scale $\gc = \ao$ as predicted by MOND.
+
+The $\gc$--$M_\ast$ relation provides a further discriminant. Fitting $\gc$ in four stellar-mass bins
+between $\log_{10} M_\ast = 8.5$ and $11.0$, we find a monotonic increase from $\gc = 2.00 \pm 0.27\,\ao$
+(lowest $M_\ast$) to $3.41 \pm 0.21\,\ao$ (highest $M_\ast$), with a log--log slope of $+0.166 \pm 0.041$.
+MOND predicts zero slope and is rejected at $4.0\sigma$ ($p < 0.001$). C15, which predicts a positive slope
+of $+0.075$ from the $\sigdyn$ dependence, is consistent at the $2.2\sigma$ level ($p = 0.029$). The observed
+slope being approximately twice the C15 prediction suggests that the $\sigdyn$ dependence at Mpc lensing
+scales may be steeper than at kpc rotation-curve scales, potentially reflecting the transition from
+baryon-dominated to halo-dominated regimes. This is a quantitative prediction for future refinement of the
+membrane framework.
+
+In summary, the HSC-SSP Y3 lensing RAR independently confirms the C15 framework at high significance:
+(i) $\gc = 2.73 \pm 0.11\,\ao$ is inconsistent with the MOND universal value $\ao$ at $> 15\sigma$;
+(ii) the $\gc$--$M_\ast$ slope rejects MOND at $4\sigma$ while remaining consistent with C15's predicted
+positive slope;
+(iii) all three GAMA fields yield consistent $\gc$ values ($p = 0.50$);
+(iv) combined with the KiDS-1000 analysis, the lensing RAR evidence upgrades from B grade (KiDS alone,
+CGM-limited) to A grade (independent HSC confirmation with systematic verification). The observed factor
+$\sim 2$ excess of the slope over the C15 prediction is noted as a quantitative tension requiring
+theoretical investigation, but does not affect the qualitative conclusion that $\gc$ varies with galaxy
+properties as predicted by membrane cosmology and contrary to MOND.
+
+\paragraph{Slope budget analysis (v4.7.6).}
+The factor $\sim 2$ excess of the observed $\gc$--$M_\ast$ slope ($+0.166 \pm 0.041$) over the C15
+prediction ($+0.075$) reported above constituted a $2.2\sigma$ tension. We decompose this excess into
+identified physical contributions.
+
+First, the 2-halo contribution to the lensing ESD slope was measured empirically by separating the 1-halo
+and total (1h+2h) regimes in each $M_\ast$ bin. Fitting $\gc$ using only the 1-halo-dominated radial range
+($R < 200$ kpc) and comparing to the full-range fit yields $\Delta\text{slope}_{\rm 2h} = +0.034 \pm 0.064$
+($0.5\sigma$). The sign is consistent with the physical expectation that more massive galaxies reside in
+denser large-scale environments, enhancing the outer ESD and steepening the apparent $\gc$--$M_\ast$
+relation.
+
+Second, the light-propagation model (Eqs.~10a--10d) predicts a small additional slope contribution of
+$+0.017$ from the $R$-dependent gravitational Aharonov--Bohm phase shift (Sec.~2).
+
+The combined slope budget is:
+\begin{center}\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+Source & Slope contribution & Status \\
+\midrule
+C15 ($\sigdyn$ dependence) & $+0.075$ & A-grade (SPARC) \\
+Model B (AB phase shift) & $+0.017$ & B-grade \\
+2-halo environment & $+0.034 \pm 0.064$ & B-grade ($0.5\sigma$) \\
+\midrule
+Total predicted & $+0.126$ & \\
+Observed & $+0.166 \pm 0.041$ & \\
+Residual tension & $0.98\sigma$ & Resolved \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The slope tension is reduced from $2.2\sigma$ to $0.98\sigma$, within the expected statistical fluctuation.
+While the individual 2-halo and Model~B contributions are each non-significant, their combined effect
+accounts for the observed excess. Future surveys with higher signal-to-noise (Euclid Wide, Rubin LSST) are
+expected to detect the 2-halo contribution at $2\text{--}3\sigma$ significance.
+
+% =============================================================================
+\section{Pressure-Supported Dwarf Spheroidal Extension}
+% =============================================================================
+
+The v4.7.7 framework was developed against rotation-supported systems (SPARC spirals and dwarf irregulars).
+This section extends the framework to pressure-supported dwarf spheroidal (dSph) galaxies, exposing a
+qualitatively new regime in which the baryonic driving of the membrane fails and the spontaneous $c \to 0$
+equilibrium of $U(\epsilon; c)$ dominates. The resulting Bernoulli-variance prediction
+$\Gstr = \so(1 - \so)\,\ao$ is verified in two statistically independent populations to 4--5\% accuracy.
+
+\subsection{dSph sample construction}
+We assembled a catalogue of 31 dSph galaxies: 15 Milky Way satellites ($\siglos$ from~\citealt{Walker2009};
+\citealt{SimonGeha2007}; \citealt{Simon2019}), 11 M31 satellites~\citep{Collins2013, Tollerud2012}, 3
+isolated systems (Cetus, Phoenix, Tucana), and 2 unclassified dwarfs. Half-light radii $\rh$ were taken
+from~\citet{McConnachie2012}, with the Walker estimator $\Mdyn = 2.5\,\siglos^2\,\rh/G$ used for $\sigma$
+back-calculation in the VizieR catalogue (coefficient 2.5, confirmed by
+$\sigma_{\rm wolf}/\sigma_{\rm lit} = 0.997$). Dynamical accelerations were computed via the~\citet{Wolf2010}
+relation $\gobs = 3\siglos^2/\rh$, and baryonic accelerations from stellar mass with $\Ys = 1$ assumed.
+
+\subsection{C15 direct application fails: J3 regime inversion}
+Applying the C15 formula (Eq.~\ref{eq:C15}) to the dSph sample yields a systematic offset of $+1.5$ dex with
+scatter 0.9 dex. Four model variants (C15\_naive, SCE\_naive, SCE\_Q\_J, C15\_Q\_J) give statistically
+indistinguishable residuals. The $\Yd$ transformation does not absorb the offset (scatter invariant under
+$\Yd$ scan). Auxiliary hypotheses contribute insufficiently: H1 (3D topology) $+0.15$ dex, H2 (virial
+coefficient $\beta_c = 2$ vs $\sqrt{3}$) $+0.25$ dex, combined $+0.40$ dex (29\% of the observed offset).
+H3 (membrane hysteresis alone) is rejected by three independent tests (isolated $>$ satellite $\gc$; zero
+distance correlation; inferior AIC versus constant-model).
+
+The failure traces to an inversion of the Jeans-mass hierarchy. Define the membrane Jeans mass
+$\Mjmem = (4\pi/3)\rho(c_s^2/g_{\rm eff})^3$ and the standard Jeans mass $\Mjstd$. In SPARC, $\Mjstd \le
+\Mjmem$ and baryonic distribution drives the membrane state (C15 valid). In dSph, $\Mjmem \ll \Mjstd$ in 28
+of 31 systems, and the membrane sets the structure while baryons follow. The direction of causality is
+reversed, and $\gc$ is no longer a function of baryonic surface density $\Sigma_0$. Grade: A.
+
+\subsection{Unified RAR: SPARC $\times$ dSph and J3 transition band}
+Overlaying 3{,}389 SPARC RAR-cloud points from Rotmod\_LTG~\citep{Lelli2016} with the 31 dSph sample on the
+$\log(\gbar/\ao)$--$\log(\gobs/\ao)$ plane reveals two populations occupying distinct
+$\Ydyn = \gobs/\gbar$ ranges:
+
+\begin{center}\small
+\begin{tabular}{@{}lrrl@{}}
+\toprule
+Sample & $N$ & median $\Ydyn$ & Interpretation \\
+\midrule
+SPARC RAR cloud (all radii) & 3{,}389 & 2.75 & baryon-dominated \\
+SPARC galaxy-level (outer) & 175 & 3 (typical) & C15 regime \\
+Bridge galaxy outer (40\%) & 30 & 12.76 & J3 transition band \\
+dSph & 31 & 35.11 & membrane-dominated \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+We designate the band $10 < \Ydyn < 30$ the J3 transition band. Only 4 of 175 SPARC galaxies reach outer
+$\Ydyn > 10$: ESO444-G084, NGC2915, NGC1705, NGC3741. These ``bridge galaxies'' span the SPARC--dSph gap and
+permit radius-resolved verification of the transition.
+
+\subsection{Reformulation via $c \to 0$ limit of $U(\epsilon; c)$}
+In the J3 regime the coupling $c$ (set by baryonic driving) approaches zero, and the membrane enters its
+intrinsic thermal equilibrium. The self-consistent equation Eq.~\eqref{eq:SCE} in the $Q \to 0$ limit yields
+a universal spontaneous elastic fraction:
+\begin{equation}
+\so = \frac{1}{1 + \exp(3/(2\Tm))}.
+\label{eq:s0}
+\end{equation}
+With $\Tm = \sqrt{6}$, this gives $\so = 0.3515$. The leading small-$Q$ correction is non-analytic:
+\begin{equation}
+s(Q) \approx \so + \alpha_s \sqrt{Q} + O(Q), \qquad \alpha_s = \frac{2E}{F\Tm}\so^{3/2} = 0.110,
+\label{eq:sQ}
+\end{equation}
+where $E = \exp(3/(2\Tm))$ and $F = 1 + E$. The $\sqrt{Q}$ structure originates from the $\ln(1 - \epsilon)$
+term in $U(\epsilon; c)$ and is characteristic of the $c \to 0$ singularity. Numerical SCE verification
+confirms agreement with the asymptotic expansion to within 4\% relative error for $Q < 0.3$.
+
+\subsection{Bernoulli prediction: $\Gstr = \so(1 - \so)\ao$}
+In the $c \to 0$ regime the membrane occupies a thermal two-state (folded/unfolded) equilibrium with mean
+$\so$ and variance $\so(1 - \so)$ (Bernoulli distribution). We identify this intrinsic variance with the
+universal acceleration scale underlying the~\citet{Strigari2008} dSph relation:
+\begin{equation}
+\Gstr = \so(1 - \so)\,\ao = 0.228\,\ao = 2.74\e{-11}\;{\rm m\,s^{-2}}.
+\label{eq:GStrigari}
+\end{equation}
+The corresponding dSph $\gc$ formula, obtained via $\gc = \gobs^2/\gbar$ at the deep-MOND limit:
+\begin{equation}
+\gc^{\rm dSph}(\gbar) = \frac{[\so(1 - \so)]^2 \ao^2}{\gbar}.
+\label{eq:gcdSph}
+\end{equation}
+Of eight tested dimensionless combinations involving $\so$ and $\Tm$, only the Bernoulli variance form
+matches the observed dSph-sample ensemble mean within 5\%. Alternative forms $\so\ao$ ($0.35\,\ao$,
+$+47\%$ error), $(1 - \so)/\Tm$ ($0.26\,\ao$, $+10\%$), and $1/(2\Tm)$ ($0.20\,\ao$, $-15\%$) are rejected at
+the $> 2\sigma$ level. Grade: B$+$ (single-population match; independent verification in Sec.~7.7).
+
+\subsection{Tautology separation: definitional vs predictive content}
+A methodological question arises: the slope $-1$ of $\log\gc$ vs $\log\gbar$ is a consequence of the
+Strigari condition $\gobs \sim$ const combined with the deep-MOND extraction $\gc = \gobs^2/\gbar$, and
+therefore has no independent predictive content. We separate the definitional from the predictive components
+via multivariate regression on the 31-dSph sample.
+
+\paragraph{Regression A ($\gobs$ basis).}
+Regressing $\log\gobs$ on $(\log\sigma, \log\rh, \log\LV)$ with 1000-iteration bootstrap yields:
+\begin{center}\small
+\begin{tabular}{@{}lccll@{}}
+\toprule
+Coefficient & Observed & Theory & $z$-score & Verdict \\
+\midrule
+$\beta_\sigma$ & $+2.000 \pm 0.000$ & $+2.0$ & $+1.2$ & definitional \\
+$\beta_{\rh}$ & $-1.000 \pm 0.000$ & $-1.0$ & $+0.7$ & definitional \\
+$\beta_{\LV}$ & $-2\e{-7}$ & $0$ & $-1.4$ & null confirmed \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The fit achieves $R^2 = 1.0000$ with residual standard deviation at machine precision, recovering the Wolf
+estimator $\gobs = 3\sigma^2/\rh$ as an exact identity. The $\LV$ coefficient at $2\e{-7}$ is the strongest
+possible statement of $\Mbar$-independence: luminosity adds no information beyond $\sigma$ and $\rh$.
+
+\paragraph{Orthogonalized regression.}
+The dSph $\sigma$--size relation ($\log\sigma = +0.263\log\rh + $ const, consistent
+with~\citealt{McConnachie2012}) introduces collinearity between $\sigma$ and $\rh$. Orthogonalizing $\sigma$
+against $\rh$ and refitting preserves $\beta_{\LV} \approx 0$, providing an independent verification free of
+collinearity artifacts.
+
+\paragraph{Partial correlation.}
+A third independent route: the partial correlation $r(\gobs, \LV | \sigma, \rh) = -0.236$ ($p = 0.20$) is
+statistically insignificant, while $r(\gobs, \sigma | \rh, \LV)$ and $r(\gobs, \rh | \sigma, \LV)$ both
+approach $\pm 1$ as required by the Wolf identity. Three independent methods (multivariate regression,
+orthogonalization, partial correlation) concur: $\LV$ contributes no predictive information to $\gobs$ at
+the machine-precision level.
+
+\paragraph{Regression B ($\gc$ basis) --- quantitative confirmation of tautology.}
+Fitting $\log\gc$ (where $\gc = \gobs^2/\gbar$) on the same variables yields
+$(\beta_\sigma, \beta_{\rh}, \beta_{\LV}) = (+3.82, +0.16, -1.07)$, compared to the definitional expectation
+$(+4, 0, -1)$ derived from $\gbar \propto \LV/\rh^2$. All three coefficients match the definitional
+prediction within 0.2, confirming that the apparent slope $-1$ of $\log\gc$ vs $\log\LV$ carries zero
+predictive content.
+
+\paragraph{Consequence for the H4 hypothesis.}
+The earlier H4 conjecture $\gc \propto \Mdyn^{-1}$ decomposes, via the Wolf identity, into $\gc \propto
+\rh^{-3/2}$ with zero $\sigma$ contribution. The partial-correlation analysis on $\gc$ itself confirms:
+$\beta_\sigma = 0.00 \pm 0.81$, $\beta_{\rh} = -1.51 \pm 0.37$. The observed ``mass scaling'' is entirely a
+radius effect.
+
+The $\rh$-dependence of $\gobs$ ($-3.4\sigma$ marginal trend) is inconsistent with strict Strigari
+universality ($\gobs = $ const) and instead reflects the empirical $\sigma$--size scaling $\sigma \propto
+\rh^{0.27}$~\citep{Brasseur2011, McConnachie2012}, which is not derived from the mean-field $c \to 0$
+analysis. The origin of this scaling is deferred to future work.
+
+\subsubsection{Scatter decomposition: 89\% of residual scatter is physical}
+To quantify the information content of the 0.350 dex scatter in $\log(\gobs/\ao)$ around the Bernoulli
+prediction, we decompose the total variance into four components: definitional (unavoidable given observed
+$\sigma$ and $\rh$), measurement (Monte Carlo error propagation with 5\% $\sigma$ and 10\% $\rh$ relative
+uncertainties), host environment (between-host variance across MW / M31 / Isolated populations), and
+physical residual.
+
+\begin{center}\small
+\begin{tabular}{@{}lrrl@{}}
+\toprule
+Component & $\sigma$ (dex) & Var. fraction & Origin \\
+\midrule
+Total & $0.350$ & $100.0\%$ & $\log(\gobs/\ao)$ vs $\log(\Gstr/\ao)$ \\
+Measurement & $0.062$ & $3.2\%$ & MC propagation, 1000 draws \\
+Host (between) & $0.095$ & $7.4\%$ & MW / M31 / Isolated offsets \\
+Physical residual & $0.331$ & $89.4\%$ & $\sigma$--size projection (primary) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The measurement contribution is negligible (3.2\%), confirming that the scatter is not limited by
+observational precision. The host-environment contribution is small (7.4\%), but its structure carries a
+strong independent test:
+
+\begin{center}\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Host & $N$ & Scatter (dex) & Mean offset (dex) \\
+\midrule
+MW satellites & $15$ & $0.323$ & $+0.030$ \\
+M31 satellites & $11$ & $0.410$ & $+0.032$ \\
+Isolated & $3$ & $0.332$ & $+0.164$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The MW and M31 satellite populations yield essentially identical mean offsets from the Bernoulli prediction
+($+0.030$ vs $+0.032$ dex, difference $< 5\%$ of their individual scatters). This is a non-trivial
+cross-check: two independent host galaxies of comparable mass (both $\sim 10^{12}\,M_\odot$) produce
+populations that calibrate $\Gstr$ to the same value, indicating that the prediction is independent of the
+host galactic environment. The Isolated sample shows a marginally higher offset ($+0.164$ dex) with small
+$N = 3$, in the same direction as the bridge-galaxy outer points ($+0.219\,\ao$, Sec.~7.7).
+
+The residual physical scatter (0.331 dex) is dominated by the dSph $\sigma$--size scaling $\sigma \propto
+\rh^{0.27}$, which propagates through the Wolf identity into $\gobs$. Derivation of this relation from first
+principles is a candidate task for future work beyond the mean-field $c \to 0$ analysis of the present theory.
+
+\paragraph{Summary of Section~7.6.}
+(i) Three independent methods verify $\LV$-independence of $\gobs$ at machine precision, elevating the
+Bernoulli prediction from population-mean agreement to a direct functional null. (ii) The $-1$ slope of
+$\log\gc$ vs $\log\LV$ is quantitatively shown to be a definitional projection of the $\gbar$ construction.
+(iii) The 0.350 dex residual scatter is 89\% physical and 3\% measurement; MW and M31 populations
+independently calibrate $\Gstr$ to the same value, establishing host-environment independence as an
+additional A-grade result of v4.7.8.
+
+\subsection{Bridge galaxy verification: continuous C15~$\to$~Strigari transition}
+For the four bridge galaxies with outer $\Ydyn > 10$ (Sec.~7.3), Rotmod\_LTG data permit radius-resolved
+analysis. Radial profiles of $\gobs(R)$ and $\gbar(R)$ are constructed, and $\Ydyn(R)$ is tested for
+monotonic radial increase. We define four A-grade criteria:
+
+\begin{center}\small
+\begin{tabular}{@{}lrrrrrrrr@{}}
+\toprule
+Galaxy & $N$ & $R$ [kpc] & $\Upsilon_{\rm in}$ & $\Upsilon_{\rm out}$ &
+slope$(\log\Upsilon, \log R)$ & $z$ & MW $p$ & outer $\gobs$ [$\ao$] \\
+\midrule
+ESO444-G084 & 7 & 0.26--4.44 & 6.1 & 11.3 & $+0.31 \pm 0.13$ & $+2.4$ & $0.029$ & $0.317$ \\
+NGC2915 & 30 & 0.34--10.04 & 11.4 & 13.2 & $+1.13 \pm 0.09$ & $+12.3$ & $0.0003$ & $0.219$ \\
+NGC1705 & 14 & 0.22--6.00 & 5.4 & 12.3 & $+0.46 \pm 0.07$ & $+6.8$ & $0.0003$ & $0.282$ \\
+NGC3741 & 21 & 0.23--7.00 & 5.9 & 11.5 & $+0.55 \pm 0.03$ & $+21.6$ & $0.0001$ & $0.124$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+All four bridge galaxies show statistically significant radial increase of $\Ydyn$ (criterion~a: 4/4 at
+$|z| > 2$) and outer-vs-inner differences confirmed by Mann--Whitney tests (criterion~b: 4/4 at $p < 0.03$).
+The ensemble outer $\Ydyn$ median $= 12.76$ falls squarely in the J3 transition band (criterion~c). The
+ensemble outer $\gobs$ median $= 0.219\,\ao$ agrees with the Bernoulli prediction (Eq.~\ref{eq:GStrigari},
+$0.228\,\ao$) to 4\% (criterion~d). All four criteria A-grade satisfied.
+
+\subsection{Two-population independent verification of the Bernoulli prediction}
+The dSph sample (Sec.~7.5, pressure-supported systems) and the SPARC bridge galaxy outer points (Sec.~7.7,
+rotation-supported outer disks) constitute two statistically independent populations. Both reproduce the
+Bernoulli prediction $\Gstr = 0.228\,\ao$ at similar precision:
+
+\begin{center}\small
+\begin{tabular}{@{}lrrrl@{}}
+\toprule
+Population & $N$ & $\gobs$ [$\ao$] & Ratio to Bernoulli & Agreement \\
+\midrule
+Bernoulli prediction (Eq.~\ref{eq:GStrigari}) & --- & $0.228$ & $1.000$ & --- \\
+dSph sample (Sec.~7.5) & 31 & $0.240$ & $1.053$ & 5\% \\
+Bridge outer points (Sec.~7.7) & 30 & $0.219$ & $0.961$ & 4\% \\
+NGC2915 outer alone & 12 & $0.219$ & $0.961$ & 4\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The two populations differ in dynamical support (pressure vs rotation), typical mass scale
+($\sim 10^7\,M_\odot$ vs $\sim 10^9\,M_\odot$), typical acceleration ($\gbar \sim 10^{-3}\,\ao$ vs
+$10^{-2}\,\ao$), and data reduction pathway (Wolf $\siglos$ vs Rotmod $V_{\rm bar}$). The common agreement
+with a single theoretical constant derived from a two-parameter ($\Tm$, $\so$) theory, with no free fitting,
+constitutes a non-trivial confirmation of the membrane $c \to 0$ limit. Grade: A (upgraded from B$+$ via
+independent bridge-galaxy verification).
+
+\subsection{Summary of dSph extension}
+Results established in v4.7.8:
+\begin{enumerate}[leftmargin=*,itemsep=2pt,label=(\roman*)]
+\item C15 direct application to dSph fails at $+1.5$ dex (Sec.~7.2).
+\item The failure is explained by J3 regime inversion $\Mjmem \ll \Mjstd$ in 28/31 dSph (A grade).
+\item The $c \to 0$ limit of $U(\epsilon; c)$ yields a universal spontaneous equilibrium $\so = 0.3515$ at
+$\Tm = \sqrt{6}$ (A grade).
+\item The Bernoulli variance $\so(1 - \so)\ao = 0.228\,\ao$ matches the observed Strigari scale in both
+dSph (5\%) and SPARC bridge outer points (4\%) with no free parameter (A grade).
+\item All four bridge galaxies show significant radial transition to the J3 regime (A grade, 4/4 criteria).
+\item The $\LV$-independence of $\gobs$ in dSph is verified at machine precision
+($\beta_{\LV} = -2\e{-7}$, $R^2 = 1.0000$), cross-checked by orthogonalized regression and partial
+correlation (A grade).
+\item Scatter decomposition shows 89.4\% of the 0.350 dex residual is physical, with MW and M31 satellite
+populations yielding identical mean offsets ($+0.030$ vs $+0.032$ dex) from the Bernoulli prediction,
+establishing host-environment independence of $\Gstr$ (A grade).
+\end{enumerate}
+
+\textbf{Open issues:} (a) The $\rh$-dependence of $\gobs$ ($-3.4\sigma$) reflects the empirical dSph
+$\sigma$--size scaling not predicted by mean-field analysis; the individual-galaxy formula
+(Eq.~\ref{eq:gcdSph}) remains B-grade (0.7 dex scatter). (b) Higher-order cumulants beyond the mean-field
+Bernoulli variance, or mean-field-breaking tidal dynamics, may be required to account for the residual 0.34
+dex $\gobs$ scatter. (c) Ultra-faint dSph ($\Ydyn > 100$) lie at the extrapolation limit of the current
+sample and warrant independent analysis.
+
+% =============================================================================
+\section{Conclusions}
+% =============================================================================
+
+We have presented a membrane cosmology framework with the following established results:
+
+\begin{enumerate}[leftmargin=*,itemsep=4pt,label=\textbf{\arabic*.}]
+\item \textbf{Geometric mean law (A-grade):} $\gc = \eta\sqrt{\ao\,G\Sigma_0}$, $\alpha = 0.5$,
+$\AIC = -130$ vs MOND, 175 SPARC galaxies. Jackknife-verified (96.5\%). Origin: deep-MOND algebraic
+consequence ($\alpha = 0.471 \pm 0.036$, $p(0.5) = 0.43$).
+
+\item \textbf{MOND from first principles (A-grade):} Simple interpolation $\mu(x) = x/(1+x)$ derived from
+elastic membrane potential equilibrium. Not an empirical ansatz.
+
+\item \textbf{C15 final form (A-grade):} $\gc = 0.584\,\Yd^{-0.361}\sqrt{\ao\,\vflat^2/\hR}$.
+$R^2 = 0.607$, scatter $= 0.286$ dex. MOND rejected at $p = 1.66\e{-53}$.
+
+\item \textbf{C15 is minimal sufficient statistic (A-grade, v4.7):} Six $\Sgal$ models all rejected. All
+parameter additions yield LOO $< 2\%$. 94\% of intrinsic variance irreducible. Scatter $=$ membrane fold diversity.
+
+\item \textbf{$\kap = 0$: membrane rigidity zero (A-grade, v4.7):} $\kap \sim 10^{-40}$ kpc$^2$.
+$\mathcal{L} \approx U(\epsilon; c)$. Each radius obeys $\mu(x)$ independently. Four free parameters eliminated.
+
+\item \textbf{C14 pattern is C15 bias projection (A-grade, v4.7):} Ratio $\gc^{\rm local}/\gc^{\rm global} =
+1.035$. RMS $= 0.090$ dex. C14 dynamical formulation retracted.
+
+\item \textbf{$F_{\rm conf}$ derivation (A-grade):} $-c\ln(1 - \epsilon)$ from forest~$+$~cavity MF effective
+theory (Lemmas 1--4).
+
+\item \textbf{Weak lensing $Q > 1$ in 9/9 clusters (A-grade):} Wilcoxon $p = 0.0020$. cl1: membrane
+$\AIC = -4.4$ vs NFW. Level B$+$.
+
+\item \textbf{Deep-MOND: $\gc$ independent of $\sigbar$ (A-grade):} $r(\gc, \sigbar) = 0.07$. Membrane
+responds to $\sigdyn$ ($r = 0.73$), not baryonic mass.
+
+\item \textbf{BTFR slope is Simpson's paradox artifact (A-grade):} Within-bin slope $= 0.54 \pm 0.07$
+confirms $\alpha = 0.5$ non-circularly. Dwarf $b_{gc} = 2.32$: membrane dominates rotation.
+
+\item \textbf{Dwarf regime verified (A, v4.7.7):} SPARC-internal: 8 LITTLE THINGS dwarfs, scatter $= 0.232$
+dex, KS $p = 0.67$. External: 11 non-SPARC LITTLE THINGS~\citep{Oh2015}, scatter $= 0.289$ dex, bias
+$= -0.004$ dex, KS $p = 0.73$. C15 uniform across $\vflat = 12\text{--}125$ km/s. Upgraded from B$+$ via
+independent confirmation.
+
+\item \textbf{Morphological-type bridge (A-grade, v4.7):} T-type vs $\Sgal$: $\rho = +0.89$,
+$p = 4\e{-60}$. Conceptual correspondence; no additional predictive power.
+
+\item \textbf{Weak lensing RAR (A grade, v4.7.6):} KiDS-1000~\citep{Brouwer2021} constrains C15 at Mpc
+scales but is CGM-limited (B grade). Independent HSC-SSP Y3 + GAMA DR4 analysis (157{,}338 isolated lenses,
+503M pairs, 3 fields) yields $\gc = 2.73 \pm 0.11\,\ao$, $\AIC = +472$ favouring C15 over MOND.
+$\gc$--$M_\ast$ slope ($+0.166 \pm 0.041$) rejects MOND at $4\sigma$. Slope budget: C15 ($+0.075$) + Model~B
+($+0.017$) + 2-halo ($+0.034$) $= +0.126$, reducing the initial $2.2\sigma$ tension to $0.98\sigma$.
+
+\item \textbf{Self-consistent equation and $\eta_0$ origin (A, v4.7.7):} Membrane self-consistent equation
+$s = 1/(1 + \exp(-\Delta U(sQ)/\Tm))$ with $\Tm = \sqrt{6}$ yields $\langle s \rangle = 0.58$, identifying
+$\eta_0 = 0.584$ as the mean elastic fraction. The 8.3\% $\beta$ discrepancy ($-0.331$ vs $-0.361$) is
+resolved as finite-$\Tm$ absorption of $\Yd$ dependence by $s(Q)$, requiring no parameter adjustment.
+$\Tm = \sqrt{6}$ confirmed by scatter optimisation ($\Tm^{\rm opt} = 2.35$, $0.24\sigma$ from $\sqrt{6}$).
+$\Yd$ independence verified by partial correlation: $r(\gc, \Yd | \fgas) = -0.437$, $r(\gc, \fgas) = +0.06$
+(n.s.).
+
+\item \textbf{J3 regime inversion (A, v4.7.8):} Direct C15 application to 31 dSph galaxies fails with $+1.5$
+dex systematic bias (four model variants consistent), not absorbed by $\Yd$ transformation. Root cause:
+$\Mjmem \ll \Mjstd$ in 28/31 dSph (vs $\Mjstd \le \Mjmem$ in SPARC), inverting the causal direction of
+membrane--baryon coupling. In the J3 regime, $\gc$ is set by intrinsic membrane parameters ($\Tm$, $\ao$),
+not by baryonic surface density.
+
+\item \textbf{Bernoulli prediction $\Gstr = \so(1 - \so)\,\ao$ (A, v4.7.8):} The $c \to 0$ limit of
+$U(\epsilon; c)$ gives $\so = 1/(1 + \exp(3/(2\Tm))) = 0.3515$ ($\Tm = \sqrt{6}$). The thermal Bernoulli
+variance predicts $\Gstr = 0.228\,\ao$ ($= 2.74\e{-11}$ m/s$^2$). Verified in two independent populations:
+dSph 31-galaxy sample ($0.240\,\ao$, 5\% agreement) and bridge galaxy outer points ($0.219\,\ao$, 4\%
+agreement). Non-analytic $\sqrt{Q}$ correction $s(Q) \approx \so + 0.110\sqrt{Q}$ arises from the
+$\ln(1 - \epsilon)$ term.
+
+\item \textbf{Continuous C15~$\to$~Strigari transition (A, v4.7.8):} Four SPARC bridge galaxies
+(ESO444-G084, NGC2915, NGC1705, NGC3741) with outer $\Ydyn > 10$ exhibit statistically significant radial
+increase of $\Ydyn(R)$ (4/4 galaxies, $z = 2.4$ to $21.6$). Mann--Whitney tests confirm outer $>$ inner
+$\Upsilon$ in 4/4 galaxies ($p < 0.03$). Bridge outer median $\Ydyn = 12.76$ sits at the center of the J3
+transition band ($10\text{--}30$). All four A-grade criteria satisfied: the membrane regime transitions
+continuously within individual galaxies.
+
+\item \textbf{$\gobs$ $\LV$-independence at machine precision (A, v4.7.8):} Multivariate regression
+$\log\gobs$ vs $(\log\sigma, \log\rh, \log\LV)$ in 31 dSph galaxies yields $\beta_{\LV} = -2\e{-7}$ with
+$R^2 = 1.0000$, recovering $\gobs = 3\sigma^2/\rh$ as an exact identity. The $\LV$ contribution is at
+machine-precision level. Cross-verified by orthogonalized regression and partial correlation
+$r(\gobs, \LV | \sigma, \rh) = -0.236$ ($p = 0.20$). The apparent slope $-1$ of $\log\gc$ vs $\log\LV$ is
+shown to be the definitional consequence of $\gc = \gobs^2/\gbar$: regression yields
+$(\beta_\sigma, \beta_{\rh}, \beta_{\LV}) = (+3.82, +0.16, -1.07)$, all within 0.2 of the definitional
+prediction $(+4, 0, -1)$.
+
+\item \textbf{Scatter decomposition and host-environment independence (A, v4.7.8):} Four-component
+decomposition of the 0.350 dex $\gobs$ scatter around the Bernoulli prediction: measurement 0.062 dex
+(3.2\%), host-between 0.095 dex (7.4\%), physical residual 0.331 dex (89.4\%). MW satellites ($N = 15$) and
+M31 satellites ($N = 11$) yield essentially identical mean offsets from $\Gstr$ ($+0.030$ vs $+0.032$ dex),
+establishing that $\Gstr$ is independent of the host galactic environment. Measurement contribution is
+negligible; the physical residual is dominated by the dSph $\sigma$--size relation $\sigma \propto
+\rh^{0.27}$.
+\end{enumerate}
+
+\paragraph{Retracted/revised in v4.7.8:}
+Condition~14 dynamical formulation $g_{c,\rm eff}(r)$ (v4.7); $\kap \to A, B, \tau$ inverse estimation;
+Euler--Lagrange derivation pathway; gradient term $\kap(d\epsilon/dr)^2$; $\Sgal$ predictive significance;
+H3 hysteresis-only hypothesis for dSph offset (rejected in v4.7.8 by three independent tests); strict
+Strigari universality ($\gobs = $ const) --- the $\rh$ dependence is accommodated by the empirical
+$\sigma$--size relation, with $\gobs$ $\Mbar$-independence retained as the membrane prediction.
+
+\paragraph{Priority future work:}
+(1) BIG-SPARC external verification ($\sim 4000$ galaxies).
+(2) Non-SPARC LITTLE THINGS galaxies: full 3.6~$\mu$m photometry for precise $\Yd$.
+(3) Ultra-faint dSph verification ($\Ydyn > 100$ regime, $N > 50$ sample).
+(4) Rubin LSST / Euclid weak lensing (2-halo detection at $2\text{--}3\sigma$).
+(5) Independent $\Tm$ verification from non-SPARC datasets.
+(6) Theoretical origin of the dSph $\sigma$--size relation $\sigma \propto \rh^{0.27}$: identify whether
+higher cumulants beyond the mean-field $\so(1 - \so)$, or mean-field-breaking dynamical effects (tidal
+history, formation epoch), dominate the 0.34 dex $\gobs$ scatter.
+
+% =============================================================================
+\section*{Acknowledgments}
+% =============================================================================
+
+This research is based on observations made with ESO Telescopes at the La Silla Paranal Observatory under
+programme IDs 177.A-3016, 177.A-3017, 177.A-3018, and 179.A-2004, and on data products produced by the KiDS
+consortium. The KiDS production team acknowledges support from: Deutsche Forschungsgemeinschaft; ERC; NOVA
+and NWO-M grants; Target; the University of Padova; and the University Federico~II (Naples).
+
+The Hyper Suprime-Cam (HSC) collaboration includes the astronomical communities of Japan and Taiwan, and
+Princeton University. The HSC instrumentation and software were developed by the National Astronomical
+Observatory of Japan (NAOJ), the Kavli Institute for the Physics and Mathematics of the Universe (Kavli
+IPMU), the University of Tokyo, KEK, ASIAA, and Princeton University. Funding was contributed by the FIRST
+program from the Japanese Cabinet Office, MEXT, JSPS, JST, the Toray Science Foundation, NAOJ, Kavli IPMU,
+KEK, ASIAA, and Princeton University. GAMA is a joint European--Australasian project based around a
+spectroscopic campaign using the Anglo-Australian Telescope, funded by STFC (UK), ARC (Australia), AAO, and
+participating institutions.
+
+% =============================================================================
+\bibliographystyle{plainnat}
+\nocite{*}  % show all references in refs_v478.bib (matches original v4.7.8 References list)
+\bibliography{refs_v478}
+
+\end{document}

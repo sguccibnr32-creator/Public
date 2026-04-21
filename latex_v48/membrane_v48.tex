@@ -1,0 +1,871 @@
+% =============================================================================
+% Membrane Cosmology v4.8 companion paper
+%   FIRAS mu-distortion upper bound and universal density coupling
+%   closed-form derivation (foundation layer)
+%
+%   Sakaguchi Shinobu (坂口 忍), 2026-04
+%   Migrated from ReportLab PDF (v3 patched, 13 pages)
+%   Target: arXiv astro-ph.CO + hep-th cross
+%
+%   Compile: lualatex membrane_v48 && bibtex membrane_v48 && lualatex x2
+% =============================================================================
+\documentclass[11pt,a4paper]{ltjsarticle}
+
+% ---------------- core packages ---------------------------------------------
+\usepackage[a4paper,margin=20mm,headheight=14pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[hidelinks,breaklinks=true]{hyperref}
+\usepackage[round,authoryear,sort&compress]{natbib}
+\usepackage[most]{tcolorbox}
+
+% ---------------- Japanese font setup (luatexja) ----------------------------
+\usepackage[no-math]{luatexja-fontspec}
+\setmainjfont[BoldFont=IPAGothic]{IPAPGothic}
+\setsansjfont{IPAGothic}
+
+% ---------------- section formatting ----------------------------------------
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{3.2ex plus 1ex minus .2ex}{1.6ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{2.4ex plus .8ex minus .2ex}{1.2ex plus .2ex}
+
+% ---------------- colors (boxed notes) --------------------------------------
+\definecolor{colKey}{RGB}{230,242,252}   % key finding (pale blue)
+\definecolor{colNote}{RGB}{240,246,252}  % note (very pale blue)
+\definecolor{colWarn}{RGB}{255,243,220}  % warning (pale orange)
+\definecolor{colMath}{RGB}{245,245,250}  % math background (pale gray)
+
+% ---------------- boxed environments (tcolorbox-based) ---------------------
+\newtcolorbox{keybox}{
+  enhanced, breakable, colback=colKey, colframe=colKey!80!black,
+  boxrule=0.3pt, arc=1pt, left=6pt, right=6pt, top=4pt, bottom=4pt,
+  before skip=6pt, after skip=6pt
+}
+\newtcolorbox{notebox}{
+  enhanced, breakable, colback=colNote, colframe=colNote!80!black,
+  boxrule=0.3pt, arc=1pt, left=6pt, right=6pt, top=4pt, bottom=4pt,
+  before skip=6pt, after skip=6pt
+}
+\newtcolorbox{warnbox}{
+  enhanced, breakable, colback=colWarn, colframe=colWarn!80!black,
+  boxrule=0.3pt, arc=1pt, left=6pt, right=6pt, top=4pt, bottom=4pt,
+  before skip=6pt, after skip=6pt
+}
+
+% ---------------- number formatting macros ----------------------------------
+% \Ten{-53} -> \times 10^{-53}
+\newcommand{\Ten}[1]{\times 10^{#1}}
+% \ee{2.96}{-53} -> 2.96 x 10^{-53}  (exponent-form number)
+\newcommand{\ee}[2]{#1 \times 10^{#2}}
+
+% ---------------- physics symbol shortcuts ----------------------------------
+\newcommand{\epso}{\epsilon_0}
+\newcommand{\kmem}{k_{\mathrm{mem}}}
+\newcommand{\cmem}{c_{\mathrm{mem}}}
+\newcommand{\Vxi}{V_{\xi}}
+\newcommand{\Vxivoid}{V_{\xi,\mathrm{void}}}
+\newcommand{\Tm}{T_{m}}
+\newcommand{\Nmode}{N_{\mathrm{mode}}}
+\newcommand{\nmode}{n_{\mathrm{mode}}}
+\newcommand{\aPT}{\alpha_{\mathrm{PT}}}
+\newcommand{\taum}{\tau_{m}}
+\newcommand{\taur}{\tau_{\mathrm{relax}}}
+\newcommand{\bal}{b_{\alpha}}
+\newcommand{\umem}{u_{\mathrm{mem}}}
+\newcommand{\rhomem}{\rho_{\mathrm{mem},0}}
+\newcommand{\rhog}{\rho_{\gamma,0}}
+\newcommand{\rhogal}{\rho_{\mathrm{gal}}}
+\newcommand{\Imu}{I_{\mu}}
+\newcommand{\Wmu}{W_{\mu}}
+\newcommand{\APT}{A_{\mathrm{PT}}}
+\newcommand{\BFIRAS}{B_{\mathrm{FIRAS,combo}}}
+\newcommand{\Lambdauv}{\Lambda_{\mathrm{UV}}}
+\newcommand{\GammaA}{\Gamma_{A}}
+\newcommand{\GammaAp}{\Gamma_{A}'}
+\newcommand{\GammaB}{\Gamma_{B}}
+\newcommand{\GammaC}{\Gamma_{C}}
+\newcommand{\Gammaref}{\Gamma_{\mathrm{ref}}}
+\newcommand{\Gammaact}{\Gamma_{\mathrm{actual}}}
+\newcommand{\muFIRAS}{\mu_{\mathrm{FIRAS}}}
+\newcommand{\ZMU}{Z_{\mu}}
+\newcommand{\ZDC}{Z_{\mathrm{DC}}}
+\newcommand{\msigma}{m_{\sigma}}
+\newcommand{\gobs}{g_{\mathrm{obs}}}
+\newcommand{\gbar}{g_{\mathrm{bar}}}
+\newcommand{\gc}{g_{c}}
+\newcommand{\vflat}{v_{\mathrm{flat}}}
+\newcommand{\hR}{h_{R}}
+\newcommand{\Yd}{\Upsilon_{d}}
+\newcommand{\Jhalf}{J_{\mathrm{half}}}
+\newcommand{\clt}{c_{\mathrm{lt}}}       % light-time speed (c)
+\newcommand{\fopt}{f_{\mathrm{opt}}}
+\newcommand{\Rvoid}{R_{\mathrm{void}}}
+\newcommand{\vchar}{v_{\mathrm{char}}}
+\newcommand{\AIC}{\Delta\mathrm{AIC}}
+\newcommand{\LOO}{\mathrm{LOO}}
+
+% ---------------- title data ------------------------------------------------
+\title{\bfseries 膜宇宙論 foundation layer:\\
+FIRAS $\mu$ 歪み上限と universal density coupling の閉形式導出\\[2pt]
+\large --- v4.7.8 companion paper (v4.8) ---}
+\author{坂口 忍 (Sakaguchi Shinobu)\\
+\small 坂口製麺所(兵庫県宍粟市)~/~\texttt{sakaguchi-physics.com}}
+\date{2026 年 4 月版}
+
+% =============================================================================
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+% ---------------- Abstract --------------------------------------------------
+\begin{abstract}
+\small\noindent
+膜宇宙論 v4.7.8 本体~\citep{Sakaguchi2026a} は SPARC 175 銀河、dSph 31 銀河、HSC-SSP Y3 + GAMA DR4 + KiDS
+の独立 3 field で Condition 15 (C15) を A 級 establish し、MOND を
+$p = 1.66 \times 10^{-53}$ で棄却した。本 companion paper はその observational establishment
+を支える理論的 foundation layer を閉形式で与え、観測との整合性を NGC 3198 anchor で 2.32\% 一致として確認する。
+
+\smallskip\noindent
+核心的成果は 5 点:
+(M1) FIRAS $\mu$ 歪み~\citep{Fixsen1996} を Chluba 2016 $\Wmu$ kernel で展開し、$\Vxi$ primary 採用で
+$\aPT^{\mathrm{upper}} = 2.96 \times 10^{-53}$ (phase transition coupling 上限) を導出。
+(M2) $\aPT^{\mathrm{upper}}$ を通じて membrane memory time $\taum$ に
+$[1.9 \times 10^{10},\; 1.4 \times 10^{53}]$ s の FIRAS-only bound を与え、Local Void ($R=22$ Mpc)
+の因果律制約で 5 桁幅に narrow 化 (38 桁 tighten)。
+(M3) mode 数 $\Nmode$ の SI canonical 定義 (Eq. 2B-II) により、NGC 3198 の
+$\kmem \cdot \Nmode$ product が 2.32\% 精度で再現 (A 級)。
+(M4) 記号 $\chi$ が担う 2 変数 $\chi_E\,[\mathrm{s}^2]$ と $\chi_F\,[\mathrm{m}^{3/2}/\mathrm{s}^2]$
+は独立であり、universal conversion は存在しないことを明示。
+(M5) Pantheon+ \citep{Scolnic2022} による $f=0.379$ は $\mu$ kernel に寄与しない (explicit null)。
+
+\smallskip\noindent
+加えて SPARC 124 銀河 (bridge 除外後) と dSph 30 銀河で得た coupling slope
+$\bal = +0.1084$ vs $+0.1127$ は 3.92 dex の密度範囲で 0.5\% 以内に一致し、
+$\umem \cdot \rhogal^{2\bal}$ の universal coupling を operational に establish する
+(C3 内部メモ v3 A 級)。本結果は $\alpha$ (linear) vs $\gamma$ (threshold) のモデル弁別を
+Akaike 情報量基準で $\alpha$ 優位 ($\AIC = -2.00$) に決着し、dark matter 粒子模型が必要としない
+``variation efficiency $\sim 11\%$ (amplitude) / $\sim 5.5\%$ (power)'' という operational 制約を与える。
+両数値は同一 $\bal=0.11$ に対する基準選択の差 ($\rho^1$ amplitude vs $\rho^2$ power) であり、
+第一原理的変換効率は C3-3 ($\taum$ 物理見積) + \S 7.8 (C3-4 P1-P4 分岐比) 完了待ちの heuristic 併記である。
+
+\smallskip\noindent
+限界: (i) 無次元 $\Tm = \sqrt{6}$ の SI 絶対較正は foundation 内部では決定不能で、
+$\sigma$ rest energy 候補と membrane coherence 候補の間に 96 桁 gap が残る。
+(ii) membrane memory rate $\Gammaact$ の絶対値決定は 3 route (normal mode / FDT / 観測 proxy) の
+並行評価に留まり、$\taur$ 物理選択を要する energy branching 問題に帰着する。
+これら限界は v4.8 次版 (21cm + CMB TT cross-check) で対処予定。
+
+\smallskip\noindent\textbf{Keywords:} membrane cosmology, dark matter alternative, MOND rejection,
+FIRAS $\mu$-distortion, universal density coupling, C15
+\end{abstract}
+
+\clearpage
+
+% =============================================================================
+\section{Introduction}
+% =============================================================================
+
+\subsection{Observational establishment (v4.7.8 本体)}
+膜宇宙論 v4.7.8 本体~\citep{Sakaguchi2026a} は dark matter 現象を粒子ではなく
+膜折れ畳み構造由来とする framework で、観測的に以下を establish した:
+(i) Condition 15 最終形 $\gc = 0.584 \cdot \Yd^{-0.361} \cdot \sqrt{a_0 \cdot \vflat^2 / \hR}$ を
+SPARC 175 銀河で $R^2 = 0.607$、$\AIC = -14.2$、LOO-CV 安定で確立~\citep{Lelli2016c}。
+(ii) Bernoulli 普遍関係 $G_{\mathrm{Strigari}} = s_0 (1 - s_0)\,a_0 = 0.228\,a_0$ を dSph 31 銀河
+($0.240\,a_0$、4\% 以内) と SPARC bridge 外側 30 点 ($0.219\,a_0$、4\% 以内) の 2 独立サンプルで
+再現~\citep{McConnachie2012, Strigari2008}。
+(iii) HSC-SSP Y3 + GAMA DR4 の 3 field 統合 (157{,}338 lenses, 503M pairs) で
+$\gc = 2.73 \pm 0.11\,a_0$ 独立再現、$\AIC(\mathrm{C15\;vs\;MOND}) = +472$ (22 $\sigma$)。
+(iv) MOND を $p = 1.66 \times 10^{-53}$ で棄却。
+
+\subsection{なぜ companion paper が必要か}
+v4.7.8 は現象論的には完結している (19 結論)。しかし各 condition の物理的由来
+(何故 $\gc$ がこの関数形なのか、$\taum$ はどの範囲にあるのか、$\aPT$ は何を意味するのか) は
+本体では簡潔に触れるに留まった。本 companion paper は v4.7.8 の結論を変えずに、
+その theoretical foundation を 11 以上の閉形式の連鎖として明示する。
+
+本構造は single-paper で扱うには材料が過剰 (v4.7.8 既に 12 頁) であり、分離 publish
+の方が観測派読者と理論派読者の双方に accessible と判断した (Session +6 確定の分離戦略)。
+本 companion paper は v4.8 として arXiv に独立投稿し、v4.7.8 とは非干渉に成立する。
+
+\subsection{本論文の構成 (roadmap)}
+\S 2 で Q-core 3 判断と Form B ポテンシャルを導入し、膜 strain field $\epsilon$ の
+平衡分散を与える Fluctuation-Dissipation 関係 (Eq. I) を出発点として
+4 主式 (Eq. I, II-b, II-d, III, IV) を連鎖接続する (foundation\_$\alpha$1)。
+\S 3 で mode 数 $\Nmode$ の SI canonical 定義 (Eq. 2B-II) と UV cutoff $\Lambdauv$ の symbolic
+閉形式 (Eq. 2C-0) を与える (foundation\_$\alpha$2)。
+\S 4 で FIRAS $\mu$ 歪みを Chluba 2016 $\Wmu$ kernel で展開し、
+$\aPT^{\mathrm{upper}}$ と $\taum$ bound を導出。
+\S 5 で観測との cross-check (NGC 3198 2.32\% PASS、universal $\bal = 0.11$ across 3.92 dex) を提示。
+\S 6 で 5 main claims M1--M5 を整理、\S 7 で限界と将来課題を論じる。
+Appendix に全数値 anchor と参考文献を収録。
+
+\begin{notebox}
+\textbf{読者への注意:}
+本論文は閉形式の連鎖
+(Eq. I $\to$ II-b $\to$ II-d $\to$ III $\to$ IV $\to$ 2A-I/II $\to$ 2B-I/II $\to$ 2C-0 $\to$
+iv-d-I/II/III/IV $\to$ iv-e-I)
+を追うことを主目的とし、個々の導出詳細は付属成果物
+\texttt{foundation\_integrated.pdf} (15 頁、Appendix A で cross-reference) に委ねる。
+本論文は argument 構造の明示に集中するため、計算の再現は付属 script
+(\texttt{uv run} で実行可能、Windows Claude Code 環境確認済) で担保する。
+\end{notebox}
+
+\subsection{Main claims (M1--M5) の予告}
+\begin{center}\small
+\begin{tabular}{@{}cllp{52mm}@{}}
+\toprule
+\# & Claim & 節 & 核心数値 \\
+\midrule
+M1 & $\aPT^{\mathrm{upper}} = 2.96 \times 10^{-53}$ ($\Vxi$ primary) & \S 4 & FIRAS $\mu < 9 \times 10^{-5}$ \\
+M2 & $\taum$ bound $[1.9 \times 10^{10},\, 1.4 \times 10^{53}]$ s $\to$ 5 桁幅 & \S 4, 5 & Local Void $R=22$ Mpc \\
+M3 & Eq. 2B-II SI canonical & \S 3 & NGC 3198 2.32\% PASS \\
+M4 & $\chi_E,\chi_F$ 独立 (universal conversion 不存在) & \S 3, 7 & $[\mathrm{s}^2]$ vs $[\mathrm{m}^{3/2}/\mathrm{s}^2]$ \\
+M5 & $f=0.379$ $\mu$ kernel 非寄与 (explicit null) & \S 7 & Pantheon+ \citep{Scolnic2022} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% =============================================================================
+\section{Theoretical Framework: Form B + FDT + Picture T}
+% =============================================================================
+
+\subsection{Q-core 3 判断}
+全 foundation の起点として 3 判断を採用する。これらは内部整合性と観測 anchor の両方から
+要請される minimal な選択で、以降の閉形式は全て 3 判断を前提とする。
+
+\begin{keybox}
+\textbf{Q-core1 (C-judge):} $\chi_E = a_0 / \kmem\;[\mathrm{s}^2]$\\
+\quad MOND 外部 anchor $a_0$ 採用により循環参照を回避。\\[2pt]
+\textbf{Q-core2 (P-T):} $\msigma^2$ (static curvature) と $\taum$ (dynamic relaxation) は
+直交する独立 product として結合する。\\[2pt]
+\textbf{Q-core3 (段階採用):} Stage 1 (volume avg) $\to$ Stage 2 (精密化) の 2 段。
+\end{keybox}
+
+\subsection{Form B ポテンシャルと $\Tm=\sqrt{6}$}
+effective potential $U(\epsilon; c) = -\epsilon - \epsilon^2/2 - c\,\ln(1 - \epsilon)$ を採用
+(Form B、v4.7.6 確立)。$dU/d\epsilon = 0$ から $\epso = \sqrt{1 - c}$ が得られ、
+$w(c)^2 = U''(\epso) = 2\epso/(1 - \epso)$ が thermodynamic stability を
+$c \in (0, 1)$ の全域で保証する。canonical $c_0 = 0.83$ (SPARC+dSph volume average) で
+$\epso = 0.412311$、$w(c)^2 = 1.4032$。
+
+$Z_2$ 対称性自発的破れの臨界温度 $\Tm = \sqrt{6}$ を無次元で与える (補題 5、v4.7.6 A 級)。
+本値は 4-point correlator の Gaussian 評価と mean-field 臨界指数 $z \cdot \nu = 1/2$ の連立から
+得られる universal constant。物理単位への翻訳 (ケルビン等価) は本 foundation 内部では
+決定不能 (\S 7 参照)。
+
+\subsection{foundation\_$\alpha$1: 4 主式}
+膜 strain field の Langevin dynamics から、以下 4 主式が連鎖して得られる (Session +2--+6 で確立)。
+
+\begin{keybox}
+\begin{align*}
+\text{Eq. I (FDT):}\quad &\langle \delta\epsilon^2 \rangle_{\mathrm{eq}} = \Tm / w(c)^2 = 1.745 \quad (c_0 = 0.83) \\
+\text{Eq. II-b:}\quad &\msigma^2(c) = 4\epso \cdot w(c)^2 \cdot (\kmem / a_0) \\
+\text{Eq. II-d:}\quad &\Jhalf(c) = (8\kmem^2 \Tm^2 \Gamma / a_0^2) \cdot \epso(1 - \epso) \\
+\text{Eq. III:}\quad &\msigma^2 \cdot \langle \delta\epsilon^2 \rangle_{\mathrm{eq}} = 4\epso\Tm \cdot (\kmem / a_0) \\
+\text{Eq. IV:}\quad &\mu = \APT \cdot \Imu \quad \text{(Stage 1/2 因数分解)}
+\end{align*}
+\end{keybox}
+
+Eq. III は Eq. I と Eq. II-b の積から $w(c)^2$ が消去される構造的恒等式で、右辺は $c_0$ の関数として
+$\epso$ のみに帰着する。Jeans volume-halved $\Jhalf$ は Phase C2 dSph 解析で Strigari 関係と独立に
+30 銀河再現 ($\pm 5\%$)、閉形式の観測 anchor として機能する。
+
+\medskip\noindent
+\textbf{Eq. IV の因数分解:}
+$\mu$ 歪み $= \APT$ (prefactor) $\cdot \Imu$ (kernel integral) の直積。
+\[
+\APT = \frac{4\aPT \Tm \kmem \Gamma \Nmode}{a_0} \cdot \frac{\rhomem^2}{\rhog}.
+\]
+$\Imu$ は Chluba $\Wmu$ kernel 下の integral で Stage 1 (closed form) と Stage 2 (精密) に分離される。
+$\mathrm{S2/S1} = 0.8747$ が $c_0$ 非依存 ($\mathrm{std} = 2 \times 10^{-16}$、機械精度) であることが
+\S 4 で示すように integrand 構造の正しさの強い証左となる。
+
+% =============================================================================
+\section{foundation\_$\alpha$2: $\cmem$ + $\Nmode$ + $\Lambdauv$}
+% =============================================================================
+
+\subsection{Step 2-A: 膜固有音速 $\cmem$ と $\chi_F$}
+膜音速 $\cmem$ を Q-core1 の $\chi$ に接続する force-conjugate 量として $\chi_F$ を新たに定義する。
+$\chi$ は記号上の同一性から混同を招きやすいが、次元で明瞭に区別される (後述 M4)。
+
+\begin{keybox}
+\begin{align*}
+\text{Eq. 2A-I:}\quad &\kmem^2 = a_0 / \cmem^2 \\
+\text{Eq. 2A-II:}\quad &\chi_F = \cmem \cdot \sqrt{a_0}\;\; [\mathrm{m}^{3/2}/\mathrm{s}^2]
+\end{align*}
+\end{keybox}
+
+$\cmem(c_0 = 0.83)$ の数値評価は v3.7 Chap 18 Table 18-3 の $\fopt(c) \cdot \vflat$ mapping を採用。
+$\fopt(0.83) = 1.9163$ (Sb 型近傍外挿) と $\vflat^{\mathrm{universal}} = 2.00 \times 10^{5}$ m/s から
+$\cmem = 3.833 \times 10^{5}$ m/s、$\chi_F = 4.198\;\mathrm{m}^{3/2}/\mathrm{s}^2$、
+$\kmem = 2.861 \times 10^{-8}\;\mathrm{m}^{-1}$。外挿が 2 点から行われるため精度は保留事項 (\S 7)。
+
+\subsection{Step 2-B: SI canonical な $\Nmode$ (M3)}
+膜 mode 密度 $\nmode\;[\mathrm{m}^{-3}]$ と mode 数 per unit energy $\Nmode\;[\mathrm{J}^{-1}]$ を
+$\Lambdauv$ (UV cutoff) と $\cmem$ で与える。数値代入には必ず Eq. 2B-II を用いることが M3 の核心である。
+
+\begin{keybox}
+\begin{align*}
+\text{Eq. 2B-I:}\quad &\nmode = \frac{V \cdot \Lambdauv^3}{6\pi^2 \hbar^3 \cmem^3}\;\; [\mathrm{m}^{-3}] \\
+\text{Eq. 2B-II:}\quad &\Nmode = \frac{V \cdot \Lambdauv^2}{6\pi^2 \hbar^3 \cmem^3}\;\; [\mathrm{J}^{-1}]
+\quad \leftarrow\;\text{SI canonical}
+\end{align*}
+\end{keybox}
+
+観測との最も厳しい cross-check は NGC 3198 で実現する。C15 から決まる $\kmem \cdot \Nmode$ product の
+観測値は $2.93 \times 10^{38}$、本 foundation の Eq. 2B-II 予測値は $2.998 \times 10^{38}$、
+relative diff $= 2.32\%$ で PASS (A 級、Session +8)。本 cross-check は Eq. 2B-II の SI canonical 性の
+最強の支持であり、主張 M3 の実証内容となる。
+
+\subsection{Step 2-C: $\Lambdauv$ の symbolic 閉形式}
+同じ $\Nmode$ に対し、$\clt$ (光速) を陽に含む symbolic 閉形式 Eq. 2C-0 も存在する。
+本式は構造調査 (UV-IR duality, dimensional scan) には有用だが、SI 数値代入に使うと破綻する。
+
+\begin{keybox}
+\begin{align*}
+\text{Eq. 2C-0:}\quad &\Lambdauv = 2\,\clt^2 \cdot w(c) \cdot \sqrt{\epso(c)} \cdot \cmem^{-1/2} \cdot a_0^{-1/4}
+\quad \text{(symbolic、数値代入不可)}
+\end{align*}
+\end{keybox}
+$c_0 = 0.83$: $\Lambdauv = 9.549 \times 10^{-49}$ J
+(v3.7 Table 18-4 線形外挿、2 点外挿で要検証)
+
+\medskip\noindent
+\textbf{132 桁乖離:}
+Eq. 2C-II に $c_0 = 0.83$ の SI 数値を直接代入すると、$\clt^{n}$ ($n \sim 20$) が $10^{170}$ 近傍で発散し、
+Eq. 2B-II 経由の正値 (NGC 3198 整合値 $\sim 10^{38}$) との間に $10^{132}$ 倍の乖離が生じる。
+これは数値誤差ではなく定性的な破綻であり、Eq. 2B-II vs Eq. 2C-II の役割分担は retract 不可規約とする。
+
+\subsection{Stage 2 $\Imu$ integration と Chluba $\Wmu$ kernel}
+$\mu$ 歪み kernel の時間積分を Chluba 2016 $\Wmu(z)$ shape 関数で展開する:
+
+\begin{keybox}
+\textbf{Eq. iv-d-II-a (Chluba $\Wmu$):}
+\begin{align*}
+\Wmu(z) &= \left(1 - \exp\left(-\left(z/\ZMU\right)^{1.88}\right)\right) \cdot \exp\left(-\left(z/\ZDC\right)^{2.5}\right) \\
+\ZMU &= 5 \times 10^{4},\quad \ZDC = 1.98 \times 10^{6}
+\end{align*}
+
+\textbf{Eq. iv-d-I (Stage 1 closed):}
+\[
+\Imu^{S1}(c_0) = \epso(c_0) \cdot \frac{\ln((1+\ZDC)/(1+\ZMU))}{H_0 \sqrt{\Omega_R}}
+\]
+$c_0 = 0.83$: $\Imu^{S1} = 7.2275 \times 10^{19}$ s (期待 $7.26 \times 10^{19}$ 比 0.45\% PASS)
+
+\textbf{Eq. iv-d-II v2 (Stage 2 integrand):}
+\[
+\text{integrand}(z, c_0) = \epso(c_0) \cdot \Wmu(z) \cdot (1+z) / H(z)
+\]
+\end{keybox}
+
+Stage 2 integrand で $(1+z)$ が分子位置を占めることが critical である。分母との取り違えは 30\% 程度の
+systematic error を生むが、正しい配置では $\mathrm{S2/S1} = 0.8747$ が機械精度
+($\mathrm{std} = 2 \times 10^{-16}$) で $c_0$ 非依存となる。本 invariance が Stage 2 実装の
+自己診断として機能する。
+
+% =============================================================================
+\section{Results I: FIRAS $\mu$ 歪みと $\aPT^{\mathrm{upper}}$ (M1, M2)}
+% =============================================================================
+
+\subsection{$\BFIRAS$ の閉形式}
+FIRAS $\mu$ 上限~\citep{Fixsen1996} $\muFIRAS < 9 \times 10^{-5}$ を Eq. IV の $\APT$ prefactor に繋ぎ、
+以下の閉形式が得られる:
+
+\begin{keybox}
+\textbf{Eq. iv-d-III:}
+\[
+\BFIRAS(c_0) = \frac{\muFIRAS \cdot A_0 \cdot \rhog}{4\,\Tm\,\Gammaref\,\rhomem^2\,\Imu(c_0)}
+\]
+$c_0 = 0.83$: $\BFIRAS = 1.516 \times 10^{-12}\;[\mathrm{J}^{-1}\,\mathrm{m}^{-1/2}]$
+\end{keybox}
+
+\begin{notebox}
+\textbf{A1 operational working hypothesis (\#1--17 継承):}
+本節の数値 anchor (特に $\rhomem = 2.3 \times 10^{-27}\;\mathrm{kg/m}^3$) は v4.7.8 本体の仮定
+$\rhomem = \rho_{\mathrm{DM},0}$ (operational) を前提とする。A1 は observational establishment
+段階の作業仮定であり、本 foundation は A1 の下で閉形式の整合性を保証する。
+\end{notebox}
+
+SI 単位統一 $\rhomem = 2.3 \times 10^{-27}\;\mathrm{kg/m}^3$ (A1)、
+$\rhog = 4.6 \times 10^{-31}\;\mathrm{kg/m}^3$ を前提。$\Gammaref = 1$ は placeholder で、
+実 $\Gammaact$ を後適用する linear scaling rule (後述 \S 6) が保証される。
+
+\subsection{$\aPT^{\mathrm{upper}}$ 導出 (M1)}
+$\BFIRAS$ から $\aPT$ に上限を与える閉形式 Eq. iv-d-IV は $\cmem$ linear 縮約形となる
+($\Vxi$ 採用後)。$V$ (mode volume) 選択の感度を以下に示す:
+
+\begin{center}\small
+\begin{tabular}{@{}llrl@{}}
+\toprule
+$V$ 選択 & $V\;[\mathrm{m}^3]$ & $\aPT^{\mathrm{upper}}$ & 解釈 \\
+\midrule
+$\Vxi$ (膜 coherence) & $7.683 \times 10^{63}$ & $2.96 \times 10^{-53}$ & primary ($a_0$ 独立性と整合) \\
+$V_{\mathrm{cosmo}}$ (geometric) & $1.060 \times 10^{79}$ & $2.15 \times 10^{-68}$ & conservative upper \\
+比 $V_{\mathrm{cosmo}}/\Vxi$ & $\sim 1.38 \times 10^{15}$ & $\sim 1.38 \times 10^{15}$ & $V$ に線形 scaling \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+$\Vxi$ primary 採用は foundation\_$\alpha$2 の ``$a_0$ 独立性'' structural finding と整合する唯一の選択である。
+$V_{\mathrm{cosmo}}$ は銀河団スケール以上の geometric volume を含むため physical coherence を過大評価する。
+
+\begin{keybox}
+\textbf{M1 の主張:} $\aPT^{\mathrm{upper}} = 2.96 \times 10^{-53}$ ($\Vxi$ primary、$c_0 = 0.83$)。
+\end{keybox}
+
+\subsection{$\taum$ bound と Local Void narrow 化 (M2)}
+$\aPT^{\mathrm{upper}}$ を通じて membrane memory time $\taum$ に逆写像すると、FIRAS-only 上限と
+因果律下限の 2 端を得る:
+
+\begin{align*}
+\taum^{\mathrm{upper}}\;(\Vxi, \mathrm{FIRAS\text{-}only}) &= 1.418 \times 10^{53}\;\mathrm{s} \\
+\taum^{\mathrm{lower}}\;(\mathrm{causal},\;z = 5 \times 10^{4}\;\mathrm{Hubble}) &= 1.906 \times 10^{10}\;\mathrm{s}\;\;(\sim 605\;\mathrm{yr}) \\
+&\Rightarrow\;\text{FIRAS-only 幅} = 40\text{--}58\;\text{桁}
+\end{align*}
+
+本幅は P2 void の因果律制約で narrow 化できる。void 内 $\taum$ 上限を Eq. iv-e-I で 2 route の minimum として定義:
+
+\begin{keybox}
+\textbf{Eq. iv-e-I:} $B_{\taum,\mathrm{void}} = \Rvoid / \vchar$ (2 route, min 採用)\\[2pt]
+\quad Route 1 (causality): $B_{\mathrm{causal}} = \Rvoid / \clt$\\
+\quad Route 2 (dynamical): $B_{\mathrm{dyn}} = \Rvoid / v_{\mathrm{flat,void,median}}$\\[2pt]
+\quad $\taum^{\mathrm{upper,final}} = \min(B_{\taum,\mathrm{void}}, \tau_{\mathrm{FIRAS}})$
+\end{keybox}
+
+\begin{notebox}
+\textbf{$\Vxivoid$ primary 選択 (\#27):}
+void 内 mode volume には $\Vxivoid$ (membrane coherence volume、primary) と
+$V_{\mathrm{void}}$ (geometric volume、conservative upper) の 2 候補があり、
+本論文は \S 4.2 の $\Vxi$ primary 方針と整合させて $\Vxivoid$ を primary とする。
+本選択は foundation\_$\alpha$2 の $a_0$ 独立性 structural finding と void narrow 化の両方で一貫性を保つ。
+\end{notebox}
+
+Local Void ($R = 22$ Mpc)~\citep{Kreckel2011} で $B_{\mathrm{causal}} \sim 2.26 \times 10^{15}$ s が得られ、
+これを上端として $\taum \in [1.9 \times 10^{10},\; \sim 2 \times 10^{15}]$ s に 5 桁幅まで圧縮される
+(38 桁 tighten)。Bootes void ($R = 55$) や Corona Borealis void ($R = 60$) は Local Void より
+緩い上限を与える。
+
+\begin{warnbox}
+本節の void 5 サンプル (Local / Bootes / Cetus / Sculptor / Corona Borealis) の $\Rvoid$ 数値は
+Session +15 時点での設計推定値を含み、Windows 側での文献確認
+(\citealt{Kreckel2011, Pan2012, Ricciardelli2014}) を経て正式版で確定する。
+$\rho_{\mathrm{void}}/\bar{\rho}$ と $c_{\mathrm{void,median}}$ は 30--50\% 誤差想定。
+\end{warnbox}
+
+\subsubsection{5 void sample の暫定数値}
+\begin{center}\small
+\begin{tabular}{@{}lrrll@{}}
+\toprule
+void & $R\;[\mathrm{Mpc}]$ & $B_{\mathrm{causal}}\;[\mathrm{s}]$ & source (暫定) & 備考 \\
+\midrule
+Local Void & 22 & $2.26 \times 10^{15}$ & \citet{Kreckel2011} & tightest \\
+Sculptor Void & 25 & $2.57 \times 10^{15}$ & \citet{Pan2012} & SDSS DR7 catalog \\
+Cetus Void & 30 & $3.09 \times 10^{15}$ & \citet{Pan2012} & SDSS DR7 catalog \\
+Bootes Void & 55 & $5.66 \times 10^{15}$ & Kirshner+1981 & 古典 void \\
+Corona Borealis & 60 & $6.17 \times 10^{15}$ & \citet{Ricciardelli2014} & 最大 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+最も tight な上限を与えるのは Local Void で、$R = 22$ Mpc と我々の銀河から近距離にあるため
+causality 制約が最も効く。他の void は距離が大きい分、伝播時間 $B_{\mathrm{causal}} = R/\clt$ が
+長くなり、より緩い上限しか与えない。M2 narrow 化の主張は Local Void に依拠しており、
+同 void の $R$ 測定精度~\citep{Kreckel2011} が最終数値の主要 systematic 源となる。
+
+\begin{keybox}
+\textbf{M2 の主張:}
+$\taum \in [1.9 \times 10^{10},\; 1.4 \times 10^{53}]$ s (FIRAS-only) は Local Void 因果律で
+5 桁幅 $[1.9 \times 10^{10},\; 2 \times 10^{15}]$ s に narrow 化。5 桁幅は observationally 有意な
+制約範囲で、次版 (21cm, CMB TT) と cross-check 可能。
+\end{keybox}
+
+% =============================================================================
+\section{Results II: universal density coupling $\bal$ と $\Gammaact$}
+% =============================================================================
+
+\subsection{C3 foundation: $\alpha$ vs $\gamma$ model comparison}
+C3-2 では $\umem$ の $\rhogal$ 依存性として
+(a) linear coupling $F = \lambda\,\rhogal$ ($\alpha$ model) と
+(b) threshold coupling $F = \lambda\,\rhogal - 2\,\epsilon_\star$ ($\gamma$ model) を候補とした。
+両者を SPARC と dSph で直接比較する。
+
+\subsection{SPARC 単独解析 ($N=124$)}
+SPARC 175 銀河から $Q < 3$ 品質フラグ、$\vflat > 0$ と $\gc^{\mathrm{C15}}$ finite、
+Phase C2 protocol 準拠の bridge 4 銀河
+(ESO444-G084, NGC2915, NGC1705, NGC3741) 除外で $N=124$ primary sample を得る。
+bridge 除外は教訓 91 (bridge/extreme-regime pre-cut protocol) の根拠で、NGC3741 単独駆動による
+偽陽性 $\rho = +0.85$ を回避する。除外後の真の信号値 partial $\rho = +0.522$
+$[+0.369,\; +0.645]$、$\sigma = 6.37$、$\AIC$ vs null $= +46.8$ で A 級。
+
+$\alpha$ vs $\gamma$ の直接比較では partial NLL 差 $= 0.001$ (機械精度)、
+partial Spearman $\rho$ は完全一致 ($0.5496 = 0.5496$)。$\gamma$ 最適 $\lambda_p$ が grid 上端 (10000) で
+飽和し、SPARC 全 124 銀河が above-threshold となる結果、$\gamma \to \alpha$ 数学的収束が起こる。
+AIC の $+1$ parameter penalty により $\AIC(\alpha - \gamma) = -2.00$ で parsimony で $\alpha$ 優位
+(教訓 92: parsimony first)。
+
+\subsection{dSph 拡張と 3.92 dex universal coupling}
+SPARC 密度範囲 2 dex 内では $\alpha$ vs $\gamma$ 弁別が不能だが、dSph は $\rhogal$ が SPARC より
+3--4 dex 低く、閾値構造の有無を differential に検定できる。\citet{McConnachie2012} base の
+dSph 30 銀河 (Sgr 除外、$\Upsilon_V = 1$) で:
+
+\begin{align*}
+\text{partial Spearman } \rho &= +0.557,\;\; \sigma = 3.27 \\
+\bal\;(\mathrm{dSph}) &= +0.1127 \\
+\AIC(\alpha - \gamma) &= -2.00\;\;(\alpha\;\text{優位、SCE delta sensitivity robust})
+\end{align*}
+
+SPARC+dSph 統合 $N=154$, 3.92 dex 密度範囲で $\AIC(\alpha - \gamma) = -1.76$ (LRT $p = 0.31$)、
+$\gamma$ threshold は未検出。最重要発見は 2 独立サンプルの slope 数値一致:
+
+\begin{center}\small
+\begin{tabular}{@{}lrcl@{}}
+\toprule
+sample & $N$ & $\bal$ (partial) & 備考 \\
+\midrule
+SPARC (bridge 除外) & 124 & $+0.1084$ & $\gc^{\mathrm{C15}}$ anchor \\
+dSph (Sgr 除外) & 30 & $+0.1127$ & $G_{\mathrm{Strigari}}$ anchor \\
+$|\text{diff}|$ & -- & $0.0042$ (0.5\% 以内) & 3.92 dex across \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{keybox}
+\textbf{教訓 93 (universal coupling = slope agreement):}
+異なる物理体制 (SPARC $\gc^{\mathrm{C15}}$ vs dSph $G_{\mathrm{Strigari}}$) で独立に fit した
+slope が 3.92 dex にわたって 0.5\% 以内で一致することは、$\umem \propto \rhogal^2$ の
+universal coupling の operational 定義を満たす。correlation の有意性ではなく
+slope の数値一致が証拠である点が本節の核心。
+\end{keybox}
+
+\subsubsection{Phase C3 方法論三点セット (教訓 91--93)}
+Phase C3 Step 2-3 で新規確立した 3 教訓は、一般的な観測データ解析に適用可能な方法論原則であり、
+将来の拡張 (UFD extension, void galaxy morphology sample 等) でも保持される:
+
+\begin{center}\small
+\begin{tabular}{@{}cp{40mm}p{70mm}@{}}
+\toprule
+\# & 命題 & operational 内容 \\
+\midrule
+91 & bridge/extreme-regime pre-cut protocol & 物理的体制の統一性で事前除外。SPARC bridge 4 銀河、dSph Sgr。 \\
+92 & parsimony first & 情報量基準 (AIC/BIC) は Spearman 強度より優先。model 選択規律。 \\
+93 & universal coupling = slope agreement & 2 独立サンプルの slope 数値一致 (1\% 以内) が universal の operational 定義。 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+これら 3 教訓は foundation 内部で閉形式体系を観測に接続する際の証拠基準を提供する。単に相関が有意であること
+($\rho > 0$ 等) は universal の必要条件だが十分条件ではなく、slope 数値一致という強い要求によって
+初めて foundation 仮説の operational 実証が得られる。
+
+\subsection{$\Gammaact$ 3 route 並行評価}
+universal $\bal = 0.11 \pm 0.005$ から $\Gammaact$ の絶対値推定を試みる。以下 3 route を並行評価し、
+internal consistency を担保する (単一 route の絶対値主張は保留):
+
+\begin{center}\small
+\begin{tabular}{@{}clllll@{}}
+\toprule
+route & 式 & 結果 & 次元 & 判定 \\
+\midrule
+A: 膜 normal mode & $(1-\bal)/\bal \cdot \mathrm{mode\_factor}$ & $8.091$ & dimensionless & strong candidate \\
+B: FDT relaxation & $\chi_F / (V'' \taur)$ & $4 \times 10^{-18}\sim 10^{-10}$ & $\mathrm{m}^{3/2}/\mathrm{s}$ & $\taur$ 4 候補 \\
+C: 観測 proxy & SPARC memory $> 10$ Gyr & $< 5.75 \times 10^{-18}$ & $\mathrm{m}^{3/2}/\mathrm{s}$ & upper only \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Route A は $\bal = 0.11$ を $\umem \to \text{stress}$ 変換効率 (C3-4 energy branching の
+operational 表現) と解釈する。$\GammaA = 8.091$ はこの branching
+(11\% observable : 89\% dissipation/gravitational wave/internal conversion) の素朴表現である。
+Route B は 4 $\taur$ 候補 (Hubble / galaxy dyn / kpc crossing / BE thermalization) で
+7 桁 spread を示し、$\taur$ 物理選択が未解決 (\S 7)。Route C は SPARC memory $> 10$ Gyr からの
+upper bound (保守的)。
+
+\subsubsection{3 route 統合判定と integrity}
+3 route の並行評価は retract 不可 \#30 の核心で、単一 route による絶対値主張を保留する foundation の
+inherent skepticism を反映する。Route A は universal $\bal = 0.11$ の observational 根拠から
+導かれるため、他 2 route より直接的証拠を持つ。Route B の 7 桁 spread は $\taur$ 物理選択の
+多義性を反映し、Route C は保守的 upper のみを与える。
+
+内部整合性 check として Route A (dimensionless 8.091) と Route B (Hubble time 採用
+$4.12 \times 10^{-18}\;\mathrm{m}^{3/2}/\mathrm{s}$) を foundation scale
+($\chi_F \cdot V'' \cdot \Tm / \hbar$、retract 不可 \#29) で正規化して比較すると、
+order of magnitude が近接する兆候が見える (定量的な確定は C3-4 energy branching 解析後)。本整合性は
+$\Gammaact$ 絶対値決定の future work 指針となり、\S 7.2 の課題として残す。
+
+\subsubsection{\texorpdfstring{$\bal = 0.11$ の 2 解釈 (11\% vs 5.5\% 統一、\#17 処理)}{b\_alpha = 0.11 の 2 解釈}}
+v4.7.8 本体の retract 不可 \#17 は ``11\% / 5.5\% 処理'' であり、同一 $\bal = 0.11$ に対する
+2 つの operational 解釈を併記する:
+
+\begin{center}\small
+\begin{tabular}{@{}lllc@{}}
+\toprule
+解釈 & 基準 & 効率式 & 数値 \\
+\midrule
+(i) memo v3 p6 & $\rho^{1}$ (amplitude) & $\bal / 1$ & 11\% \\
+(ii) \S 7.6 p3 & $\rho^{2}$ (power, $\umem$ source) & $\bal / 2$ & 5.5\% \\
+\midrule
+差の本質 & amplitude vs power & sqrt 一段階 & 因子 2 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{notebox}
+\textbf{両解釈は同一 $\bal = 0.11$ の基準選択差であり、数値矛盾ではない。}
+path A 規定 $\umem \propto F^2 \propto \rhogal^2$ に対し、$\bal/2 = 5.5\%$ が source power fraction、
+$\bal/1 = 11\%$ が residual $g$ amplitude fraction を表す。どちらも heuristic で、
+第一原理的 $\umem \to \text{stress} \to \gobs$ 変換効率は $\delta\epsilon, \bar{\rho}_{\mathrm{eff}}, \taum$ 導出 (C3-3) と
+P1--P4 分岐比 (C3-4、\S 7.8 energy branching ratio section) を経て v4.9 phase で確定する。
+\end{notebox}
+
+したがって Route A の表現は 2 版を保持する:
+\begin{itemize}[leftmargin=*,itemsep=2pt]
+\item $\GammaA = 8.091$ (amplitude 基準、$(1 - \bal)/\bal = 0.89/0.11$)
+\item $\GammaAp = 17.18$ (power 基準、$(1 - \bal/2)/(\bal/2) = 0.945/0.055$)
+\end{itemize}
+両者は同一現象の別表現であり、数値矛盾ではない。
+
+
+% =============================================================================
+\section{Discussion: M4, M5 と全体整合性}
+% =============================================================================
+
+\subsection{$\chi$ dual の独立性 (M4)}
+記号 $\chi$ は本 foundation で 2 つの独立変数を指す。Q-core1 の $\chi_E$ (v4.2 補節 A 起点、
+次元 $[\mathrm{s}^2]$) は MOND anchor $a_0 / \kmem$ 由来で、Eq. 2A-II の $\chi_F$
+(次元 $[\mathrm{m}^{3/2}/\mathrm{s}^2]$) は膜音速 $\cmem \sqrt{a_0}$ 由来である。
+両者の次元比 $[\mathrm{m}^{3/2}/\mathrm{s}^2]/[\mathrm{s}^2] = [\mathrm{m}^{3/2}/\mathrm{s}^4]$ は
+universal な物理意味を持たず、両 $\chi$ は論文内で注意深く区別する必要がある。本 companion paper は
+M4 の形で universal conversion の不存在を積極的に認める。
+
+\subsection{$f = 0.379$ explicit null (M5)}
+Pantheon+ 独立測定~\citep{Scolnic2022} による universe の暗黒成分割合 $f = 0.379 \pm 0.029$ は
+$c_0 = 0.83$ (SPARC+dSph volume average) とは independent な宇宙論的量である。特に本 foundation の
+$\mu$ 歪み kernel には寄与しない (integrand で $f$ が現れない)。本分離を M5 として explicit null で
+明示することで、読者の誤解 ($f \sim 1 - c_0$ 等の spurious 関係、あるいは $\mu$ kernel への
+$f$ 依存の仮定) を予防する。
+
+\subsection{linear scaling rule と modularity}
+$\Gammaref = 1$ placeholder に対する linear scaling rule (Session +10 確立、retract 不可) は
+foundation 全体の modularity を保証する。
+
+\begin{center}\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+量 & $\Gammaact$ 依存性 & 備考 \\
+\midrule
+$\tau_{\mathrm{from\_firas}}$ & proportional to $\Gammaact$ & 線形 \\
+$\aPT^{\mathrm{upper}}$ & invariant & $\BFIRAS$ 経由で相殺 \\
+$\BFIRAS$ & proportional to $1/\Gammaact$ & 逆比例 \\
+$\taum^{\mathrm{upper}}$ (FIRAS-only) & proportional to $\Gammaact$ & FIRAS 経由 \\
+$\taum^{\mathrm{upper}}$ (void-bound) & invariant & 純 geometric \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+本 table は \S 7 で論じる $\Gammaact$ 絶対値が将来確定した際、本論文の数値結果がどう update されるかの
+明示的 recipe である。M1 ($\aPT^{\mathrm{upper}}$) は invariant である一方、
+M2 ($\taum$ FIRAS-only 上限) は linear scaling 対象。
+
+\subsection{Stage 2 の自己診断と $\mathrm{S2/S1} = 0.8747$}
+Stage 1 と Stage 2 の比 $\mathrm{S2/S1} = 0.8747$ が $c_0$ に依存しない
+($\mathrm{std} = 2 \times 10^{-16}$、機械精度) ことは Eq. iv-d-II v2 integrand の
+$(1+z)$ 分子配置が正しい強い証拠である。$(1+z)$ 分母取り違えの場合、$c_0$ 依存性が
+$\mathrm{std} \sim 30\%$ で現れる。本 invariance は Stage 2 実装の自己診断として機能し、
+将来の数値 re-evaluation でも regression test として活用できる。
+
+\subsection{v4.7.8 本体との非干渉性}
+\begin{center}\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+側面 & v4.7.8 本体 & v4.8 foundation \\
+\midrule
+層 & observational establishment & theoretical foundation \\
+主結論 & C15, MOND 棄却 $p = 1.66 \times 10^{-53}$ & $\aPT^{\mathrm{upper}}$, $\taum$ bound \\
+統計 power & SPARC 175 + dSph 31 + HSC 503M & NGC 3198 2.32\% + 教訓 91--93 \\
+arXiv cat & astro-ph.CO & astro-ph.CO + hep-th cross \\
+相互依存 & -- & v4.7.8 結果を前提 (変更せず) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+本 companion は v4.7.8 の結論を変更しない。純粋な追加 layer として、v4.7.8 の observational
+establishment に theoretical foundation を提供する。
+
+% =============================================================================
+\section{Limitations and Future Work}
+% =============================================================================
+
+\subsection{$\Tm$ SI 絶対較正の 96 桁 gap}
+$\Tm = \sqrt{6}$ の物理単位 (ケルビン等価) への翻訳において、$\sigma$ rest energy route (a) と
+membrane coherence route (b) で 96 桁の gap が残る。route (a) は
+$\hbar \cdot \Omega_\sigma \sim 10^{-45}$ J 近傍 (micro scale)、
+route (b) は $\rhomem \cdot \Vxi \cdot \clt^2$ 相当 $\sim 10^{47}$ J (macro scale) を与える。
+両者は individual quantum excitation vs collective mode excitation の階層的別物理量であり、
+foundation 内部では決定不能。外部 anchor (FIRAS + CMB TT + 21cm) の同時利用が次版の最優先課題。
+
+\subsection{$\Gammaact$ 絶対値決定 + 11\%/5.5\% 第一原理効率統一}
+Route A (dimensionless 8.091 / 17.18) と Route B (SI $4 \times 10^{-18}\sim 10^{-10}\;\mathrm{m}^{3/2}/\mathrm{s}$
+4 候補) の次元整合性は未解決。foundation scale ($\chi_F V'' \Tm / \hbar$) での正規化を
+primary 採用 (retract 不可 \#29) するも、Route B の $\taur$ 選択には C3-4 energy branching
+問題の解決が必要。Route A 近傍が strong candidate と判断されるが、絶対値主張は保留する。
+
+加えて、\S 5.4.2 で併記した 11\% (amplitude 基準) と 5.5\% (power 基準) の両 heuristic 解釈は
+同一の第一原理的 $\umem \to \text{stress} \to \gobs$ 変換効率に集約されるべきで、
+C3-3 ($\taum$ 物理見積) + \S 7.8 (C3-4 P1--P4 分岐比) の完了を通じて v4.9 phase で同時に確定する。
+本 2 課題 ($\Gammaact$ 絶対値と 11\%/5.5\% 統一) は同一 pending として扱う。
+
+\subsection{$\Lambdauv$ および $\cmem$ 外挿精度}
+$\cmem(0.83) = 3.833 \times 10^{5}$ m/s は v3.7 Chap 18 Table 18-3 の 2 点
+($c \in [0.3, 0.8]$ 範囲) からの Sb 型近傍外挿で、範囲外 (0.83) の物理的検証が未完。
+同様に $\Lambdauv(0.83) = 9.549 \times 10^{-49}$ J も Table 18-4 線形外挿。両外挿精度の向上には
+$\cmem(c)$ 追加サンプルと $\Lambdauv(c)$ の独立測定 (CMB spectral distortion 精密化、
+\citet{Kogut2011} PIXIE) が必要。
+
+\subsection{void サンプル文献整合}
+M2 の narrow 化に用いた 5 void (Local / Bootes / Cetus / Sculptor / Corona Borealis) の $\Rvoid$ 数値は
+暫定値を含み、Windows 実装 task (a) で \citet{Kreckel2011, Pan2012, Ricciardelli2014} からの実入力で
+正式版を確定する (Appendix A 参照)。$\rho_{\mathrm{void}}/\bar{\rho}$ と $c_{\mathrm{void,median}}$ は
+30--50\% 誤差想定で、最終版では void-by-void の uncertainty propagation を加える。
+
+\subsection{UFD extension (C3 次版)}
+Phase C2 strict 15 subset で 7/15 below-threshold、$\AIC = +0.17$ の marginal $\gamma$ hint が残存する
+(教訓 93 の boundary case)。$N=15$ では決定不能で、ultra-faint dwarf (UFD) 拡張
+(Segue I/II, Reticulum II, Boötes II) による統計力確保が次版の観測的 priority。UFD は dSph より
+1--2 dex 低密度の領域で threshold 実在性を判定できる可能性がある。
+
+\subsection{v4.9 次版 roadmap}
+\begin{center}\small
+\begin{tabular}{@{}clll@{}}
+\toprule
+priority & 課題 & 外部 input & 期待 \\
+\midrule
+1 & $\Tm$ SI 絶対較正 (96 桁 gap 解消) & FIRAS + CMB TT + 21cm & route (a)/(b) 決着 \\
+2 & $\Gammaact$ 絶対値 + 11\%/5.5\% 統一 & C3-4 energy branching 解析 & Route A/B 整合 \\
+3 & void 文献整合 (M2 narrow 確定) & \citet{Kreckel2011, Pan2012} & 5 桁幅の正式版 \\
+4 & $\cmem, \Lambdauv$ 外挿精度 & $c \in (0.8, 1)$ 精密 Chap 18 Table & 要物理検証 \\
+5 & UFD extension (C3-2 弁別) & Segue I/II, Ret II, Boö II & threshold 実在性 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% =============================================================================
+\section{Conclusions}
+% =============================================================================
+
+本 companion paper (v4.8) は膜宇宙論 v4.7.8 本体~\citep{Sakaguchi2026a} の theoretical foundation
+layer を 11 以上の閉形式の連鎖として明示した。結果は 5 main claims + universal density coupling に
+集約される:
+
+\begin{itemize}[leftmargin=*,itemsep=3pt]
+\item \textbf{(M1)} FIRAS $\mu$ 歪み~\citep{Fixsen1996} + Chluba 2016 $\Wmu$ kernel + $\Vxi$ primary から
+$\aPT^{\mathrm{upper}} = 2.96 \times 10^{-53}$ ($c_0 = 0.83$)。
+
+\item \textbf{(M2)} $\taum$ bound $[1.9 \times 10^{10},\; 1.4 \times 10^{53}]$ s (FIRAS-only、40--58 桁幅)
+$\to$ Local Void ($R = 22$ Mpc) の Eq. iv-e-I 因果律で 5 桁幅に narrow 化 (38 桁 tighten)。
+
+\item \textbf{(M3)} $\Nmode$ の SI canonical 定義 (Eq. 2B-II) が NGC 3198 の
+$\kmem \cdot \Nmode$ product を 2.32\% 精度で再現 (A 級)。
+
+\item \textbf{(M4)} 記号 $\chi$ の 2 変数 $\chi_E\,[\mathrm{s}^2]$ vs $\chi_F\,[\mathrm{m}^{3/2}/\mathrm{s}^2]$ は
+独立で、universal conversion は存在しない。
+
+\item \textbf{(M5)} Pantheon+~\citep{Scolnic2022} による $f = 0.379$ は $\mu$ kernel に寄与しない
+(explicit null)。
+\end{itemize}
+
+独立の発見として、SPARC 124 銀河 (bridge 除外) と dSph 30 銀河で coupling slope
+$\bal = +0.1084$ vs $+0.1127$ が 3.92 dex の密度範囲で 0.5\% 以内に一致し、universal coupling を
+operational に establish した (C3 memo v3 A 級、教訓 91--93)。本結果は $\gamma$ (threshold) モデルを
+$\AIC = -2.00$ で棄却し、dark matter 粒子模型が要しない ``$\umem \to \gobs$ variation efficiency
+$\sim 11\%$ (amplitude) / $\sim 5.5\%$ (power)'' の operational 制約を与える。両併記は同一 $\bal = 0.11$ に
+対する基準選択差 ($\rho^1$ vs $\rho^2$) であり、第一原理的変換効率は v4.9 phase (C3-3 + \S 7.8) で確定する。
+
+本 foundation の検証 path は NGC 3198 2.32\% PASS ($\Nmode$ 閉形式の最強 anchor) と
+$\mathrm{S2/S1} = 0.8747$ の $c_0$ 非依存性 (Stage 2 implementation の自己診断) の 2 独立 test で
+既に裏付けられている。限界として $\Tm$ SI 絶対較正の 96 桁 gap、$\Gammaact$ 絶対値、および
+11\%/5.5\% 第一原理統一の 3 件が残る (\S 7)。これらは FIRAS + CMB TT + 21cm の外部 anchor を利用する
+v4.9 次版で同時に対処する。
+
+\begin{sloppypar}
+本論文の付属成果物 (\texttt{foundation\_integrated.pdf} 15 頁、13 build scripts、
+\texttt{c3\_3c\_p2\_void\_template.csv}、\texttt{foundation\_gamma\_actual.py}) は Windows Claude Code
+環境で \texttt{uv run} による再現実行が可能で、GitHub Public repo (MIT License) で公開予定
+\citep{Sakaguchi2026b}。全 retract 不可事項 \#1--31 の cross-reference は
+\texttt{foundation\_integrated.pdf} Appendix A に収録。
+\end{sloppypar}
+
+% =============================================================================
+\section*{References}
+% =============================================================================
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\clearpage
+% =============================================================================
+\appendix
+\section{数値 anchor 速見表 ($c_0 = 0.83$ canonical)}
+% =============================================================================
+
+\begin{center}\small
+\begin{longtable}{@{}lll@{}}
+\toprule
+量 & 値 & 出所 \\
+\midrule\endfirsthead
+\toprule
+量 & 値 & 出所 \\
+\midrule\endhead
+$c_0$ (SPARC+dSph vol avg) & $0.83$ & v4.7.8 \S 6 \\
+$\epso(0.83) = \sqrt{1 - c}$ & $0.412311$ & Form B \\
+$w(0.83)^2$ & $1.4032$ & Form B \\
+$\Tm$ (無次元保持) & $\sqrt{6} = 2.449$ & 補題 5~\citep{v4.7.6internal} \\
+$\cmem(0.83)$ & $3.833 \times 10^{5}$ m/s & v3.7 Table 18-3 外挿 \\
+$\chi_F(0.83)$ & $4.198\;\mathrm{m}^{3/2}/\mathrm{s}^2$ & Eq. 2A-II \\
+$V''(\phi_0, x=0)$ & $2.31$ & Chap 18 Q1-$\alpha$ \\
+$\Lambdauv(0.83)$ & $9.549 \times 10^{-49}$ J & Table 18-4 外挿 \\
+$\Vxi(0.83)$ & $7.683 \times 10^{63}\;\mathrm{m}^3$ & coherence volume \\
+$\BFIRAS$ & $1.516 \times 10^{-12}\;[\mathrm{J}^{-1}\mathrm{m}^{-1/2}]$ & Eq. iv-d-III \\
+$\Imu^{S1}(0.83)$ & $7.2275 \times 10^{19}$ s (0.45\% PASS) & Eq. iv-d-I \\
+$\mathrm{S2/S1}$ ($c_0$ 非依存) & $0.8747$ ($\mathrm{std} = 2 \times 10^{-16}$) & Eq. iv-d-II v2 \\
+$\aPT^{\mathrm{upper}}\;(\Vxi)$ & $2.96 \times 10^{-53}$ & M1 \\
+$\taum^{\mathrm{upper}}$ (FIRAS) & $1.418 \times 10^{53}$ s & $\Vxi$ primary \\
+$\taum^{\mathrm{upper}}$ (Local Void) & $\sim 2.26 \times 10^{15}$ s & M2 narrow 5 桁幅 \\
+$\taum^{\mathrm{lower}}$ (causal $z = 5 \times 10^4$) & $1.906 \times 10^{10}$ s (605 yr) & 因果律 \\
+NGC 3198 $\kmem \cdot \Nmode$ & 2.32\% PASS & M3 Eq. 2B-II 検証 \\
+$\bal$ (universal) & $+0.11 \pm 0.005$ & 3.92 dex across \\
+$\GammaA$ (amplitude, dimensionless) & $8.091$ & Route A (11\% 版) \\
+$\GammaAp$ (power, dimensionless) & $17.18$ & Route A' (5.5\% 版) \\
+$\GammaB$ (FDT 4 候補) & $4.12 \times 10^{-18}\sim 9.58 \times 10^{-11}\;\mathrm{m}^{3/2}/\mathrm{s}$ & Route B \\
+$\GammaC$ upper & $< 5.75 \times 10^{-18}\;\mathrm{m}^{3/2}/\mathrm{s}$ & Route C (SPARC memory) \\
+$f$ (Pantheon+) & $0.379 \pm 0.029$ & M5 $\mu$ kernel 非寄与 \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\section{Retract 不可事項 \#1--31 cross-reference}
+
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}l l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X@{}}
+\toprule
+範囲 & 起源 session & 主要内容 & 本論文参照 \\
+\midrule
+\#1--17 & v4.7.8 継承 & $\kappa = 0$, $\Tm = \sqrt{6}$, Form B, Q-core 3, Eq. I--IV, 11\%/5.5\% 処理 & \S 2, \S 5.4.2 \\
+\#18--21 & C3 memo v3 & universal $\bal = 0.11$, 教訓 91--93 & \S 5.2--5.3a, Abstract \\
+\#22--25 & Session +11 & $\chi$ dual, 2B-II/2C-II, $\Tm$ 無次元, eps\_scale (a)(b) & \S 6.1, \S 3.2--3.3, \S 7.1 \\
+\#26--28 & Session +13 & Eq. iv-e-I 2 route, $\Vxivoid$, min 構造 & \S 4.3 \\
+\#29--31 & Session +14 & foundation scale 無次元化, 3 route, $\bal$ 直結 & \S 5.4 \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\end{document}

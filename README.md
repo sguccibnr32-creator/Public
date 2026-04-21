@@ -1,104 +1,190 @@
-# Membrane Cosmology
+# Membrane Cosmology — Public Research Archive
 
-> Galactic rotation curves without dark matter.
+膜宇宙論 (Membrane Cosmology) framework の公開 research archive。
+dark matter 現象を elastic membrane の折れ畳み構造から説明するアプローチで、
+SPARC 175 銀河 + dSph 31 銀河 + HSC-SSP Y3 + GAMA DR4 weak lensing で検証済。
 
-arXiv 論文 **v4.7.6** (2026-04-15) の全再現スクリプト。総 255 ファイル。
+**Author**: 坂口 忍 (Shinobu Sakaguchi) / 坂口製麺所 (Sakaguchi Seimensho), 兵庫県宍粟市 (Shisō, Hyogo, Japan)
+**Web**: https://sakaguchi-physics.com
+**License**: [MIT](LICENSE)
 
-## ステータス
+---
 
-- **有効 baseline**: v4.7.6 (§6.8.1 Yd 部分導出 + §6.9 f_2h 実測)
-- **撤回**: v4.7.5 (r_s=Rdisk/2 バグ依存)。詳細: `archive/retracted/README.md`
-- **PDF**: `../../膜宇宙論再考察AB効果有り/arxiv/membrane_arxiv_v476_rebuild.pdf` (33KB, 8pages)
+## 🏆 主要成果
 
-## 論文対応表
+| 項目 | 統計 |
+|---|---|
+| **MOND 棄却** | p = 1.66×10⁻⁵³ (3 独立手法) |
+| **C15 final form**: g_c = 0.584·Υ_d⁻⁰·³⁶¹·√(a₀·v_flat²/h_R) | R² = 0.607 (SPARC 175) |
+| **HSC weak lensing**: g_c = 2.73±0.11 a₀ | ΔAIC = +472 (22σ vs MOND) |
+| **Bernoulli relation**: G_Strigari = s₀(1−s₀)a₀ = 0.228 a₀ | dSph 5%, bridge 4% 一致 |
+| **FIRAS μ 上限**: α_PT^upper = 2.96×10⁻⁵³ | V_ξ primary, NGC 3198 2.32% PASS |
+| **universal b_α = 0.11** across 3.92 dex | SPARC vs dSph 0.5% 以内一致 |
 
-| 論文箇所 | 主要スクリプト | 出力 |
-|---|---|---|
-| §3 C15 最終形 (gc = 0.584·Yd^{-0.361}·√(a0v²/hR)) | `core/sparc/sparc_eta_derivation.py` | TA3_gc_independent.csv |
-| §3.3 MOND 棄却 p=1.66e-53 | `core/sparc/sparc_cond15_*.py` | |
-| §4 C15 minimal sufficient (6 Sgal models) | `core/sparc/sparc_cond15_sgal_model.py` | |
-| §5 BTFR Simpson's paradox | `core/sparc/sparc_btfr_withinbin.py` | |
-| §5 deep-MOND Σdyn 応答 | `core/sparc/sparc_deep_mond_inversion.py` | |
-| §6.7 LITTLE THINGS dwarf | `core/dwarfs/little_things_step2.py` | |
-| **§6.8.1 Yd 自己無撞着 (v4.7.6 NEW)** | `theory/plasticity_direct_gc.py` | plasticity_direct_gc.png |
-| §6.9 KiDS-1000 | `core/sparc/kids_extract.py` | |
-| §6.9 HSC-SSP Y3 3視野 | `core/phase_b/phase_b_step3_three_fields.py` | phase_b_output/ |
-| **§6.9 P15 f_2h empirical (v4.7.6 NEW)** | `twohalo/f2h_empirical_slope_v2.py` | f2h_empirical_slope_v2.png |
-| §7 Item 13 結論 | (複合) | |
+---
 
-## rs_tanh 定義 (重要)
+## 📁 ディレクトリ構成
 
-TA3_gc_independent.csv の `rs_tanh` 列は **回転曲線の tanh フィット** から得られる。
-**生成スクリプト**: `core/sparc_fit/fit_tanh.py`, `fit_tanh2_all.py`。
-
-- **正しい使用**: C15/Yd 関連の r_s (median ~ 2.6 kpc, range 0.1-20 kpc)
-- **誤用 (v4.7.5 撤回原因)**: `Rdisk/2` (MRT Table 1 の disk scale length の半分、median ~ 1.2 kpc)
-
-## 実行順序 (v4.7.6 再現)
-
-```bash
-# 1. SPARC 基盤
-python core/sparc_fit/fit_tanh2_all.py             # rs_tanh
-python data_prep/TA3_gc_measurement.py             # gc_a0, Yd
-python core/sparc/sparc_eta_derivation.py          # eta0, beta
-
-# 2. HSC-SSP Y3 Pipeline (§6.9)
-python core/phase_b/phase_a_step1_gama_inspect.py
-python core/phase_b/phase_a_step2_lens_sample.py
-python core/phase_b/phase_a_step34_esd.py
-python core/phase_b/phase_b_step1_gbar_fix.py
-python core/phase_b/phase_b_step2_errors.py
-python core/phase_b/phase_b_step3_three_fields.py  # gc=2.73 a0, slope +0.166
-
-# 3. 本セッション追加 (v4.7.6)
-python phase_b_output/f2h_empirical_slope_v2.py    # Delta_slope = +0.034
-python theory/plasticity_direct_gc.py              # beta = -0.33 (Yd 部分導出)
-
-# 4. arXiv ビルド
-cd ../../../../膜宇宙論再考察AB効果有り/arxiv/
-python arxiv_v476_patch.py
-python membrane_arxiv_v476_submission.py
+```
+Public/
+├── README.md                      ← 本ファイル
+├── LICENSE                        ← MIT License
+├── CHANGELOG.md                   ← version 履歴
+│
+├── papers/                        ← 論文 PDF 群 (6 files)
+│   ├── membrane_arxiv_v478.pdf              — v4.7.8 本体 LaTeX 修正版 (18p, English) ⭐
+│   ├── membrane_arxiv_v478_original.pdf     — v4.7.8 ReportLab original (13p, archive)
+│   ├── membrane_v48_companion.pdf           — v4.8 companion LuaLaTeX (14p, 日本語) ⭐
+│   ├── membrane_v48_body_reportlab.pdf      — v4.8 ReportLab オリジナル (13p, v3 patched)
+│   ├── foundation_integrated.pdf            — foundation layer catalog (15p)
+│   └── cross_reference_audit_v3.pdf         — QA record (5p)
+│
+├── latex_v478/                    ← v4.7.8 本体 LaTeX source (pdfLaTeX)
+├── latex_v48/                     ← v4.8 companion LaTeX source (LuaLaTeX)
+├── arxiv/                         ← arXiv upload-ready tarballs (2 本)
+├── reportlab_source/              ← ReportLab PDF build scripts (3 files)
+└── docs/                          ← WordPress HTML, layout spec, arXiv guide
 ```
 
-## 環境
+---
 
-- **Python 3.12** + numpy 2.x (`np.trapz` → `np.trapezoid` 必須)
-- **Windows cp932**: `PYTHONIOENCODING=utf-8` 設定必要
-- **依存**: scipy, matplotlib, astropy, reportlab, pypdf, scikit-learn
-- **オプション**: colossus (2-halo 計算用)
+## 📚 論文
 
-## データファイル (外部)
+### v4.7.8 本体 (main body)
+**Title**: *Galactic Rotation Without Dark Matter from Elastic Membrane Cosmology: The Geometric Mean Law and Observational Tests*
+**Language**: English, 18 pages, 38 references
+**arXiv**: `arXiv:XXXX.XXXXX [astro-ph.CO]` (forthcoming) <!-- 採番後に記入 -->
+**PDF**: [`papers/membrane_arxiv_v478.pdf`](papers/membrane_arxiv_v478.pdf)
 
-- `TA3_gc_independent.csv` — SPARC gc/a0 測定結果 (175 銀河)
-- `SPARC_Lelli2016c.mrt` — SPARC Table 1 (列は whitespace-split 必須)
-- `Rotmod_LTG/*.dat` — 回転曲線 (V(r), tanh フィット元)
-- `phase1/` — Phase 1 中間ファイル
-- `phase_b_output/` — Phase B 最終出力 (ESD, jackknife cov)
-- GAMA DR4 FITS: 別ディレクトリ
-- HSC Y3 shape catalog: 別ディレクトリ
+### v4.8 companion paper
+**Title**: 膜宇宙論 foundation layer: FIRAS μ 歪み上限と universal density coupling の閉形式導出 (v4.7.8 companion paper, v4.8)
+**Language**: 日本語, 14 pages, 15 references
+**arXiv**: `arXiv:YYYY.YYYYY [astro-ph.CO + hep-th]` (forthcoming) <!-- 採番後に記入 -->
+**PDF**: [`papers/membrane_v48_companion.pdf`](papers/membrane_v48_companion.pdf)
 
-## データ解析の注意点
+---
 
-- GAMA 列: `RAcen`, `Deccen` (大文字 `RA/DEC` ではない)
-- StellarMasses: `StellarMassesGKV_v24.fits` (v02/v06 ではない)
-- MRT parsing: **whitespace split** を使用 (固定幅 byte position は誤り)
-  - `parts[9]` = Reff, `parts[11]` = Rdisk (NOT Rflat), `parts[15]` = Vflat
-- HSC `.gz.1` は実 plaintext (magic number 判定)
+## 🚀 Release 一覧
 
-## 撤回・無効化記録
+| Release | Date | 内容 | Download |
+|---|---|---|---|
+| **v4.8** ⭐ latest | 2026-04-21 | v4.7.8 affiliation rev. + v4.8 companion paper | [v48_release.zip](https://github.com/sguccibnr32-creator/Public/releases/download/v4.8/v48_release.zip) |
+| v4.7.8 | 2026-04 | observational establishment 完成版、19 結論 | [Releases page](https://github.com/sguccibnr32-creator/Public/releases) |
+| v4.7.6 | 2026-04 | self-consistent equation η₀ origin, T_m confirmation | [Releases page](https://github.com/sguccibnr32-creator/Public/releases) |
 
-### v4.7.5 (2026-04-15 撤回)
-- 原因: `model_b_slope_contribution.py` で r_s = Rdisk/2 を使用 (本来は rs_tanh)
-- 影響: Model B slope contribution が +0.089 と過大評価 (真値 +0.017)
-- 対応: v4.7.4 に復帰 → v4.7.6 で正しい rs_tanh で再評価
-- 詳細: `archive/retracted/model_b_slope_contribution.py` (元版保存)
+全 release: [Releases tab](https://github.com/sguccibnr32-creator/Public/releases)
 
-### Dead / broken files
-- `broken_names/` (4 files): 名前破損 (python プレフィックス, コロン, 日本語名)
-- 0-byte files: `get_G223_G228_G231_nfw.py`, `check_catalog.py`, `psz2_step4_refit_v2.py`
+---
 
-## 参照
+## 🔬 再現手順
 
-- 引き継ぎメモ: `../../膜宇宙論再考察AB効果有り/handoff_memo_*.txt`
-- プロジェクトメモリ: `~/.claude/projects/C--Users-sgucc/memory/project_membrane_cosmology.md`
-- arXiv PDF: `../../膜宇宙論再考察AB効果有り/arxiv/membrane_arxiv_v476_rebuild.pdf`
+### LaTeX ビルド
+
+v4.7.8 本体 (pdfLaTeX):
+```bash
+cd latex_v478/
+make
+```
+
+v4.8 companion (LuaLaTeX + luatexja):
+```bash
+cd latex_v48/
+make
+```
+
+詳細: 各 `latex_*/README*.md` 参照。
+
+### ReportLab PDF 再生成
+```bash
+cd reportlab_source/
+uv run --with reportlab --with pypdf python build_membrane_v48_body.py
+uv run --with reportlab --with pypdf python build_foundation_integrated.py
+uv run --with reportlab --with pypdf python build_cross_reference_audit.py
+```
+
+必要: Python 3.10+、reportlab、pypdf、IPAGothic / IPAPGothic フォント (Linux: `fonts-ipafont`、Windows: `C:\Windows\Fonts\msgothic.ttc`)
+
+---
+
+## 📖 理論の骨子
+
+### Lagrangian
+```
+U(ε; c) = -ε - ε²/2 - c·ln(1 - ε),   0 < ε < 1
+```
+equilibrium: ε₀ = √(1-c)、w(c)² = 2ε₀/(1-ε₀)
+
+### Effective acceleration
+```
+g_obs = (g_N + √(g_N² + 4 g_c g_N)) / 2
+```
+MOND の simple interpolation を first-principles から導出。
+
+### Geometric mean law
+```
+g_c = η·√(a₀·G·Σ₀)
+```
+SPARC 175 galaxies で α=0.5 を dAIC=-130 vs MOND で確立。
+
+### C15 final form
+```
+g_c = 0.584 · Υ_d⁻⁰·³⁶¹ · √(a₀·v_flat²/h_R)
+```
+η₀=0.584 は ⟨1-f_p⟩_SPARC (自己整合方程式から解釈)。
+
+### Bernoulli relation (dSph extension)
+```
+G_Strigari = s₀·(1-s₀)·a₀ = 0.228·a₀,
+s₀ = 1/(1 + exp(3/(2T_m))),  T_m = √6
+```
+dSph 31 銀河 (0.240 a₀, 5%) と SPARC bridge 外側 (0.219 a₀, 4%) で独立検証。
+
+---
+
+## 🎓 引用方法
+
+```bibtex
+@misc{Sakaguchi2026a,
+  author = {Sakaguchi, Shinobu},
+  title  = {Galactic Rotation Without Dark Matter from Elastic Membrane Cosmology:
+            The Geometric Mean Law and Observational Tests},
+  year   = {2026},
+  eprint = {XXXX.XXXXX},
+  archivePrefix = {arXiv},
+  primaryClass = {astro-ph.CO},
+  note   = {v4.7.8 (2026-04-21 affiliation rev.)}
+}
+
+@misc{Sakaguchi2026b,
+  author = {Sakaguchi, Shinobu (坂口 忍)},
+  title  = {膜宇宙論 foundation layer: FIRAS μ 歪み上限と universal density coupling の閉形式導出 --- v4.7.8 companion paper (v4.8)},
+  year   = {2026},
+  eprint = {YYYY.YYYYY},
+  archivePrefix = {arXiv},
+  primaryClass = {astro-ph.CO},
+  note   = {Companion to arXiv:XXXX.XXXXX}
+}
+```
+
+---
+
+## 🤝 Contribution
+
+本 repo は坂口 忍による個人研究 archive です。issue / discussion で質問・コメントを歓迎します。
+Pull request による本文修正は基本的に受け付けませんが、typo や BibTeX metadata の修正は歓迎します。
+
+---
+
+## 📞 連絡先
+
+- **Web**: https://sakaguchi-physics.com
+- **所在**: 坂口製麺所、兵庫県宍粟市 (Shisō City, Hyogo, Japan)
+- **GitHub Issues**: [Issues tab](https://github.com/sguccibnr32-creator/Public/issues)
+
+---
+
+## ⚖ License
+
+[MIT License](LICENSE) — 自由に複製・改変・再配布可。
+
+Copyright (c) 2026 Shinobu Sakaguchi / Sakaguchi Seimensho
