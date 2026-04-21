@@ -70,8 +70,8 @@ Announcement date: ____________
                    The Geometric Mean Law and Observational Tests (v4.7.8)}},
   howpublished = {arXiv preprint},
   year         = {2026},
-  note         = {arXiv:2604.XXXXX [astro-ph.CO]},    ← Step 1-5 の ID を記入
-  eprint       = {2604.XXXXX},                         ← Step 1-5 の ID を記入
+  note         = {arXiv:XXXX.XXXXX [astro-ph.CO]},    ← Step 1-5 の ID を記入
+  eprint       = {XXXX.XXXXX},                         ← Step 1-5 の ID を記入
   archivePrefix = {arXiv}
 }
 ```
@@ -95,7 +95,7 @@ https://arxiv.org/submit で "Start New Submission"
 | **Author(s)** | `Shinobu Sakaguchi` |
 | **Affiliation** | `Sakaguchi Seimensho (Independent Research), Shisō, Hyogo, Japan` |
 | **Abstract** | 論文 Abstract 全文 (コピー&ペースト)、または arXiv が tex から自動抽出 |
-| **Comments** | `v4.7.8 companion paper (English version). 13 pages, 11 references. Companion to arXiv:2604.XXXXX (v4.7.8 main body).` |
+| **Comments** | `v4.7.8 companion paper (English version). 13 pages, 11 references. Companion to arXiv:XXXX.XXXXX (v4.7.8 main body).` |
 | **Primary category** | `astro-ph.CO` |
 | **Cross-list** | **`hep-th`** を追加 |
 
@@ -126,8 +126,8 @@ Announcement date: ____________
                    The Geometric Mean Law and Observational Tests (v4.7.8)}},
   howpublished = {arXiv preprint},
   year         = {2026},
-  note         = {arXiv:2604.XXXXX [astro-ph.CO]},
-  eprint       = {2604.XXXXX},
+  note         = {arXiv:XXXX.XXXXX [astro-ph.CO]},
+  eprint       = {XXXX.XXXXX},
   archivePrefix = {arXiv}
 }
 ```
@@ -190,7 +190,7 @@ https://github.com/sguccibnr32-creator/Public
 ```markdown
 ## v4.8 Release (2026-04-21)
 
-**arXiv 投稿 READY (v4.7.8 本体 + v4.8 companion の 2 論文併行投稿体制)**
+**arXiv 投稿 READY (v4.7.8 本体 + v4.8 companion 英語 primary + 日本語 optional の 3 論文併行投稿体制)**
 
 ### 主要な変更 (v4.7.8 affiliation 修正)
 - v4.7.8 本体の affiliation を **Kobe → Shisō, Hyogo** に修正
@@ -198,7 +198,8 @@ https://github.com/sguccibnr32-creator/Public
 
 ### arXiv 投稿
 - v4.7.8 本体: arXiv:XXXX.XXXXX (astro-ph.CO)  ← Step 1-5 で採番された ID
-- v4.8 companion: arXiv:XXXX.XXXXX (astro-ph.CO + hep-th cross)  ← Step 2-6 で採番された ID
+- v4.8 companion 英語 (primary): arXiv:YYYY.YYYYY (astro-ph.CO + hep-th cross)  ← Step 2a-5 で採番された ID
+- v4.8 companion 日本語 (optional): arXiv:ZZZZ.ZZZZZ (astro-ph.CO + hep-th cross)  ← Step 2b-6 で採番された ID (Step 2b 実施時のみ)
 
 ### 含まれるファイル
 - v4.7.8 本体: LaTeX source + 18頁 PDF + 元 13頁 PDF archive
@@ -211,7 +212,7 @@ https://github.com/sguccibnr32-creator/Public
 ```
 
 ### 3-4. Asset アップロード
-- **attach**: `v48_release.zip` (1.6 MB)
+- **attach**: `v48_release.zip` (2.5 MB、42 files)
 
 ### 3-5. Publish release
 - "Publish release" クリック
@@ -236,9 +237,10 @@ https://sakaguchi-physics.com/wp-admin/
 - **重要**: `pages.update` は MCP 経由で truncation リスクがあるため、**必ず admin UI から手動 paste**
 
 ### 4-4. arXiv ID 反映
-HTML 内の以下の文字列を置換:
+WordPress HTML および 関連 text 内の以下の placeholder を、採番された実 ID に置換:
 - `XXXX.XXXXX` (v4.7.8) → Step 1-5 で採番された ID
-- `XXXX.XXXXX` (v4.8) → Step 2-6 で採番された ID
+- `YYYY.YYYYY` (v4.8 英語 primary) → Step 2a-5 で採番された ID
+- `ZZZZ.ZZZZZ` (v4.8 日本語 optional) → Step 2b-6 で採番された ID (Step 2b 実施時のみ)
 
 ### 4-5. GitHub release ダウンロード URL 反映
 HTML 内のダウンロードリンクを Step 3-5 の URL に更新:
@@ -282,18 +284,35 @@ Anyone who wants to cite:
 }
 ```
 
-**v4.8 companion:**
+**v4.8 companion (English, primary):**
 ```bibtex
-@misc{Sakaguchi2026b,
+@misc{Sakaguchi2026b_en,
+  author = {Sakaguchi, Shinobu},
+  title  = {Membrane Cosmology Foundation Layer: Closed-form Derivation of FIRAS
+            μ-distortion Upper Bound and Universal Density Coupling
+            (v4.7.8 companion paper, v4.8)},
+  year   = {2026},
+  eprint = {YYYY.YYYYY},
+  archivePrefix = {arXiv},
+  primaryClass = {astro-ph.CO},
+  note   = {English version, companion to arXiv:XXXX.XXXXX}
+}
+```
+
+**v4.8 companion (Japanese, optional):**
+```bibtex
+@misc{Sakaguchi2026b_ja,
   author = {Sakaguchi, Shinobu (坂口 忍)},
   title  = {膜宇宙論 foundation layer: FIRAS μ 歪み上限と universal density coupling の閉形式導出 --- v4.7.8 companion paper (v4.8)},
   year   = {2026},
-  eprint = {XXXX.XXXXX},
+  eprint = {ZZZZ.ZZZZZ},
   archivePrefix = {arXiv},
   primaryClass = {astro-ph.CO},
-  note   = {Companion to arXiv:YYYY.YYYYY}
+  note   = {Japanese version, companion to arXiv:XXXX.XXXXX; English version: arXiv:YYYY.YYYYY}
 }
 ```
+
+**推奨引用**: 国際誌には `Sakaguchi2026a` + `Sakaguchi2026b_en`、日本語文献には `Sakaguchi2026a` + `Sakaguchi2026b_ja` を使用。
 
 ---
 
