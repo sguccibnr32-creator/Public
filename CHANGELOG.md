@@ -1,4 +1,59 @@
-# v48 release bilingual v3 (2026-04-23)
+# v4.8 erratum v3 (2026-04-23) — deg-4 f_opt cascade + universal Λ_UV retract
+
+## Changed
+- **f_opt(0.83)**: 1.9163 (v4.8 v1 2-pt f_opt-linear artifact) → **1.9425** (deg-4 V''-fit)
+  - Method: Lagrange interpolation on Table 18-2 V''(x=0.5, c) at 5 points
+    (c = 0.30, 0.42, 0.618, 0.80, 1.00); V''(x=0.5, 0.83) = 10.4626
+  - F1 canonical form: f_opt = 2π/√V''
+- **Cascade** (c₀ = 0.83, V_FLAT_TYP = 2.00×10⁵ m/s, a₀ = 1.2×10⁻¹⁰ m/s²):
+  - c_mem: 3.833×10⁵ → **3.885×10⁵** m/s (+1.37%)
+  - χ_F:   4.198 → **4.256** m^(3/2)/s² (+1.37%)
+  - V_ξ:   7.683×10⁶³ → **8.335×10⁶³** m³ (+8.49%, c_mem⁶ scaling)
+
+## Retracted
+- **Universal Λ_UV(c)**: 9.549×10⁻⁴⁹ J [†] → **COMPLETELY RETRACTED**
+  - Rationale (F2 structural): m_σ(c, galaxy) = √V''(x=0.5, c) / τ_dyn(galaxy)
+    is galaxy-specific through τ_dyn, so universal m_σ(c) and hence universal
+    Λ_UV(c) do not exist structurally in v3.7 sources.
+  - Per-galaxy Λ_UV remain as sole anchors:
+    IC 2574=1.955×10⁻⁴⁹ J, NGC 3198=2.307×10⁻⁴⁹ J (M1), NGC 2841=9.019×10⁻⁴⁹ J
+
+## Unchanged (v2 per-galaxy primary, carried over)
+- α_PT_upper(NGC 3198, V_ξ) = 1.76×10⁻⁵¹ (M1 anchor)
+- 3-galaxy range: [1.6×10⁻⁵³, 1.8×10⁻⁵⁰] (~3 orders of magnitude)
+- M3 symbolic identity: ratio = 1.0000 exact (MRT-invariant)
+- B_FIRAS_combo, I_μ^S1, S2/S1, τ_m_lower (c_mem-independent)
+- Factor 59 weakening narrative (v2 vs v4.8 v1)
+
+## Patched (5 layers, synchronized)
+- arXiv LaTeX JA: `latex_v48/membrane_v48.tex` (5 locations: §3.1, §3.3, §4.2, §7.3, §A)
+- arXiv LaTeX EN: `latex_v48_en/membrane_v48_en.tex` (5 locations)
+- `foundation_gamma_actual.py` × 4 copies (sha256 synchronized, outside public repo)
+- `step_iv_d_firas_mu_bound.py` (np.polyfit runtime, universal Λ_UV block removed; outside public repo)
+- reportlab build scripts × 3: `build_foundation_integrated.py`,
+  `build_membrane_v48_body.py`, `build_cross_reference_audit.py`
+
+## Verified
+- Python smoke tests: Route A=8.091 invariant, Route B Hubble=4.180e-18 (+1.38% cascade),
+  Route C=5.827e-18 (+1.37%)
+- Symbolic identity: k_mem · N_mode = (2/9π) c_mem² Λ²/(a₀^(5/2) ℏ³), ratio = 1.0000 exact
+- All assertions PASS including v37 2.32% legacy (retained with [not physical,
+  internal rounding residual] annotation)
+
+## Pending (follow-up commit)
+- `papers/membrane_v48_companion.pdf` and `papers/membrane_v48_en_companion.pdf`
+  require LaTeX recompile (local LaTeX env not installed); will be committed in
+  a follow-up commit after user's local LaTeX setup.
+- `arxiv_v48_erratum_v3.md` / `.pdf` (Japanese) and EN counterpart — claude.ai side
+  generation pending (Option 3).
+
+## New SSoT (single source of truth, outside public repo)
+- `v37_chap18_table18_2_vpp_full.csv` (30 points; 5 used for deg-4 fit input)
+- `v2_per_galaxy_firas_table.csv` (per-galaxy primary, unchanged from v2)
+
+---
+
+# v48 release bilingual v3 (2026-04-23) — v1.1 anchor fix + PDF rebuild [commit b86cf24]
 
 ## papers/ PDF rebuilt to v1.1 erratum state
 - papers/membrane_v48_companion.pdf: rebuilt via lualatex + bibtex + lualatex x2 (15 pages, 871 KB)

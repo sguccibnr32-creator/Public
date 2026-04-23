@@ -143,7 +143,7 @@ three anchor galaxies (IC 2574 / NGC 3198 / NGC 2841), with the representative v
 $\aPT^{\mathrm{upper}}(\mathrm{NGC\,3198}, \Vxi) = 1.76 \times 10^{-51}$ (MRT-unified anchor).
 The value $2.96 \times 10^{-53}$ in v4.8 v1 was a two-point extrapolation artifact from the v37
 convention; it is factor 59 tighter and is superseded in this v2 erratum (see \S 7.3).
-The 3-galaxy range spans $[1.6 \times 10^{-53},\, 1.8 \times 10^{-50}]$ ($\approx\,3$ orders of magnitude).
+The 3-galaxy range spans $[1.6 \times 10^{-53},\, 1.8 \times 10^{-50}]$ (≈3 orders of magnitude).
 (M2) Through $\aPT^{\mathrm{upper}}$ we set a FIRAS-only bound
 $\taum \in [1.9 \times 10^{10},\; 1.4 \times 10^{53}]$ s on the membrane memory time,
 narrowed to a 5-decade span (38 orders tightened) by the causality constraint from the Local Void
@@ -348,14 +348,18 @@ NGC 2841 & 0.80 & 1.845 & $2.848 \times 10^{5}$ & $5.254 \times 10^{5}$ & 5.754 
 \end{tabular}
 \end{center}
 
-The three quantities adopted in v4.8 v1---$\fopt(0.83) = 1.9163$,
-$\vflat^{\mathrm{universal}} = 2.00 \times 10^{5}$ m/s, and $\cmem(0.83) = 3.833 \times 10^{5}$
-m/s---are two-point linear extrapolation artifacts depending on NGC 3198 ($c=0.42$) and
-NGC 2841 ($c=0.80$), and do not exist as independent definitions in v3.7 Chap.~18. This
-v2 erratum withdraws the ``universal'' expression and returns to per-galaxy description
-(patch spec v2 \S 6.3 / non-retractable item \#41). Values at $c_0 = 0.83$ are referenced only
-as auxiliary two-point extrapolations in Appendix~A. Extrapolation accuracy is discussed in
-the caveat of \S 7.3.
+The value $\fopt(0.83) = 1.9163$ adopted in v4.8 v1 was a two-point $\fopt$-linear extrapolation
+artifact from NGC 3198 ($c=0.42, \fopt=1.01$) and NGC 2841 ($c=0.80, \fopt=1.85$)
+(patch spec v2 \S 6.3 / non-retractable \#41). This v3 erratum applies a deg-4 exact-pass
+Lagrange fit to $V''(x=0.5, c)$ over the five points
+$c \in \{0.30, 0.42, 0.618, 0.80, 1.00\}$ from v3.7 Chap.~18 Table~18-2, yielding
+$V''(x=0.5, 0.83) = 10.463$ and, through the closed form $\fopt = 2\pi/\sqrt{V''(x=0.5,c)}$,
+the confirmed value $\fopt(0.83) = 1.9425$ ($+1.37\%$ from v1). The cascade gives
+$\cmem(0.83) = 3.885 \times 10^{5}$ m/s ($+1.36\%$),
+$\chi_F(0.83) = 4.256\;\mathrm{m}^{3/2}/\mathrm{s}^2$ ($+1.38\%$),
+$\Vxi(0.83) = 8.335 \times 10^{63}\;\mathrm{m}^3$ ($+8.49\%$). These deg-4-confirmed
+universal values are tabulated in Appendix~A. Methodology details and comparison with v1 (2-pt
+$\fopt$-linear) are in \S 7.3.
 
 \subsection{Step 2-B: SI canonical $\Nmode$ (M3)}
 The membrane mode density $\nmode\;[\mathrm{m}^{-3}]$ and the mode number per unit energy
@@ -401,12 +405,17 @@ NGC 2841 & 0.80 & $5.63 \times 10^{-30}$ & $9.019 \times 10^{-49}$ \\
 \end{tabular}
 \end{center}
 
-The value $\Lambdauv(c_0 = 0.83) = 9.549 \times 10^{-49}$ J adopted in v4.8 v1 is an auxiliary
-two-point $\msigma$ linear extrapolation from NGC 3198 and NGC 2841, and does not exist as an
-independent entry in v3.7 Chap.~18 Table~18-4. This v2 erratum withdraws the ``universal
-$\Lambdauv(0.83)$'' expression (patch spec v2 \S 6.3, non-retractable \#41). The value at
-$c_0 = 0.83$ is referenced only as a two-point extrapolation auxiliary in Appendix~A
-(see caveat in \S 7.3).
+The $\msigma$ decomposition F2 from v3.7: $\msigma = \sqrt{V''(x=0.5, c)}/\tau_{\mathrm{dyn}}(\mathrm{galaxy})$
+shows that $\tau_{\mathrm{dyn}}$ is galaxy-specific, so $\Lambdauv = \msigma \cdot \clt^2$ inherently
+contains a galaxy-dependent factor. Therefore ``universal $\Lambdauv(c)$'' does not exist in
+v3.7 and cannot be presented as a c-only universal quantity consistent with F2.
+
+v4.8 v1 presented $\Lambdauv(0.83) = 9.549 \times 10^{-49}$ J as a two-point $\msigma$ linear
+extrapolation universal value. This v3 erratum \textbf{completely retracts universal $\Lambdauv$}
+(patch spec v2 \S 6.3, non-retractable \#41, v3 structural finding \S 4.2). Hereafter the only
+legitimate $\Lambdauv$ numerical anchors are the three per-galaxy values in the table above.
+The universal $\Lambdauv(0.83)$ row has also been removed from Appendix~A. Retract rationale
+details are in \S 7.3.
 
 \medskip\noindent
 \textbf{132-order discrepancy.}
@@ -494,12 +503,13 @@ NGC 2841 & 0.80 & $5.10 \times 10^{64}$ & $1.63 \times 10^{-53}$ \\
 Table~18-4; $c_{\mathrm{mem}} = \fopt(c)\cdot\vflat$; $V_\xi = (4\pi/3)(c_{\mathrm{mem}}^2/a_0)^3$;
 $\alpha_{\mathrm{PT}}^{\mathrm{upper}} = \BFIRAS/(k_{\mathrm{mem}}\cdot N_{\mathrm{mode}})$.
 The v4.8 v1 values $V_\xi(0.83) = 7.683\times10^{63}\;\mathrm{m}^3$ and
-$\aPT^{\mathrm{upper}} = 2.96\times10^{-53}$ were two-point extrapolation artifacts from
+$\aPT^{\mathrm{upper}} = 2.96\times10^{-53}$ were two-point $\fopt$-linear extrapolation artifacts from
 NGC 3198 ($c=0.42$) + NGC 2841 ($c=0.80$) with v37-convention $\vflat=119$ km/s for NGC 3198.
-Under the MRT unification of this v2 erratum, $c_{\mathrm{mem}}(\mathrm{NGC~3198}) = 1.516\times10^5$ m/s
-and $\aPT^{\mathrm{upper}}(\mathrm{NGC~3198}, V_\xi) = 1.76\times10^{-51}$---factor 59 weaker
-than v4.8 v1. The 3-galaxy range is $[1.6\times10^{-53},\, 1.8\times10^{-50}]$
-($\approx$3 orders of magnitude).)
+v2 erratum established the MRT-unified per-galaxy anchor
+$\aPT^{\mathrm{upper}}(\mathrm{NGC~3198}, V_\xi) = 1.76\times10^{-51}$---factor 59 weaker
+than v4.8 v1. v3 erratum (this version) updates universal $\Vxi(0.83)$ to the deg-4 5-pt fit value
+$8.335\times10^{63}\;\mathrm{m}^3$ (Appendix~A). The 3-galaxy range remains
+$[1.6\times10^{-53},\, 1.8\times10^{-50}]$ ($\approx$3 orders of magnitude).)
 \normalsize
 
 \medskip\noindent
@@ -849,49 +859,90 @@ phase through completion of C3-3 ($\taum$ physical estimate) and \S 7.8 (C3-4 P1
 ratios). These two tasks (the absolute value of $\Gammaact$ and the 11\%/5.5\% unification) are
 treated as the same pending item.
 
-\subsection{Extrapolation accuracy of $\Lambdauv$ and $\cmem$ --- self-identified artifact}
-The four quantities adopted in v4.8 v1---$\cmem(0.83) = 3.833 \times 10^{5}$ m/s,
-$\Lambdauv(0.83) = 9.549 \times 10^{-49}$ J, $\Vxi(0.83) = 7.683 \times 10^{63}$ m$^3$, and
-$\aPT^{\mathrm{upper}}(V_\xi) = 2.96 \times 10^{-53}$---are auxiliary values depending on
-two-point linear extrapolation from NGC 3198 ($c=0.42$) and NGC 2841 ($c=0.80$) in
-v3.7 Chap.~18 Table~18-3 / 18-4, and do not exist as independent definitions in
-v3.7 Chap.~18. Labeling them as ``universal'' is inappropriate in light of patch spec v2 \S 6.3
-(non-retractable item \#41).
+\subsection{v3 erratum: deg-4 $\fopt$ confirmation + universal $\Lambdauv$ complete retraction}
+This v3 erratum is a structural cleanup second pass relative to v2, leaving the per-galaxy
+primary framework (M1, M2, M3 all confirmed in v2) entirely unchanged. It is an additive update.
 
-In this v2 erratum, \S 3.1 / \S 3.3 / \S 4.2 and Appendix~A have been revised to per-galaxy
-expressions (IC 2574 / NGC 3198 / NGC 2841). Values at $c_0 = 0.83$ are explicitly indicated
-as extrapolation-derived in Appendix~A.
+\subsubsection*{(a) $\fopt(0.83)$ deg-4 5-point fit confirmation}
 
-Additional items:
+v4.8 v1 adopted $\fopt(0.83) = 1.9163$ via a two-point $\fopt$-linear extrapolation from
+NGC 3198 ($c=0.42, \fopt=1.01$) and NGC 2841 ($c=0.80, \fopt=1.85$), identified as an artifact.
+The v3.7 Chap.~18-3 closed form $\fopt(c) = 2\pi/\sqrt{V''(x=0.5, c)}$ applied to the 5-point
+Table~18-2 $V''(x=0.5, c)$ data:
+
+\begin{center}\small
+\begin{tabular}{@{}rrrr@{}}
+\toprule
+$c$ & $V''(x=0.5)$ & $\fopt(c)$ & note \\
+\midrule
+0.30  & 62.1 & 0.7973 & Im (IC 2574) \\
+0.42  & 38.7 & 1.0100 & Sc (NGC 3198) \\
+0.618 & 20.2 & 1.3980 & reference \\
+0.80  & 11.6 & 1.8448 & Sb (NGC 2841) \\
+1.00  &  6.0 & 2.5651 & --- \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Applying a deg-4 exact-pass Lagrange polynomial fit to $V''(x=0.5, c)$ and evaluating at
+$c=0.83$ yields $V''(x=0.5, 0.83) = 10.463$ and $\fopt(0.83) = 2\pi/\sqrt{10.463} = 1.9425$.
+The 5-point exact-pass yields a Lagrange residual at machine precision ($\sim 10^{-13}$),
+establishing this as the v3.7-consistent confirmed value of $\fopt(0.83)$.
+
+\subsubsection*{(b) cascade update ($\cmem$, $\chi_F$, $\Vxi$)}
+
+The cascade from $\fopt(0.83) = 1.9163 \to 1.9425$ ($+1.37\%$) updates the following universal
+quantities:
+
+\begin{center}\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+Quantity & v4.8 v1 & v3 (deg-4 confirmed) & drift \\
+\midrule
+$\cmem(0.83)$ & $3.833 \times 10^{5}$ m/s & $\mathbf{3.885 \times 10^{5}}$ m/s & $+1.36\%$ \\
+$\chi_F(0.83)$ & $4.198\;\mathrm{m}^{3/2}/\mathrm{s}^2$ & $\mathbf{4.256}\;\mathrm{m}^{3/2}/\mathrm{s}^2$ & $+1.38\%$ \\
+$\Vxi(0.83)$ & $7.683 \times 10^{63}\;\mathrm{m}^3$ & $\mathbf{8.335 \times 10^{63}}\;\mathrm{m}^3$ & $+8.49\%$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Since $\Vxi \propto \cmem^6$, the $\Vxi$ drift is about 6 times the $\cmem$ drift. The three
+quantities marked with ${\dagger}$ (2-pt artifact) in v2 are promoted to deg-4-confirmed values
+in v3, and the ${\dagger}$ markers are removed.
+
+\subsubsection*{(c) Universal $\Lambdauv(c)$ complete retraction (F2 galaxy-specificity)}
+
+The v3.7 decomposition F2: $\msigma(c, \mathrm{galaxy}) = \sqrt{V''(x=0.5, c)}/\tau_{\mathrm{dyn}}(\mathrm{galaxy})$
+has $\tau_{\mathrm{dyn}}$ galaxy-specific, so $\Lambdauv = \msigma \cdot \clt^2$ inherently
+contains a galaxy-dependent factor and is not well-defined as a c-only universal function.
+
+v4.8 v1 presented $\Lambdauv(0.83) = 9.549 \times 10^{-49}$ J as a two-point $\msigma$ linear
+extrapolation universal value, which v2 marked as a ${\dagger}$ artifact.
+\textbf{v3 completely retracts universal $\Lambdauv$}:
+
 \begin{itemize}
-\item The v4.8 v1 bound $\aPT^{\mathrm{upper}} = 2.96 \times 10^{-53}$ ($V_\xi$ primary)
-      was derived using v37-convention $\cmem(\mathrm{NGC~3198}) = 1.194 \times 10^5$ m/s
-      (from $\vflat = 119$ km/s, v3.7 Chap.~18 Table~18-3). The MRT unification adopted in this
-      v2 erratum ($\vflat = 150.1$ km/s per Lelli 2016) gives
-      $\cmem(\mathrm{NGC~3198}) = 1.516 \times 10^5$ m/s and
-      $\aPT^{\mathrm{upper}}(\mathrm{NGC~3198}, V_\xi) = 1.76 \times 10^{-51}$---factor 59
-      weaker. The 3-galaxy range is $[1.6 \times 10^{-53},\, 1.8 \times 10^{-50}]$
-      ($\approx$3 orders of magnitude).
-\item The ``NGC 3198 2.32\% PASS'' claim for M3 is an internal rounding check between the
-      numerical product $\kmem\cdot\Nmode$ and a hand-derived target, both computed from v37
-      anchor values. Symbolic analysis yields the closed-form identity
-      \[
-      \kmem \cdot \Nmode\bigr|_{V_\xi}
-      = \frac{2}{9\pi}\,\frac{\cmem^{2}\, \Lambdauv^{2}}{a_0^{5/2}\,\hbar^{3}},
-      \]
-      which is identical to the numerical product to machine precision (ratio $= 1.0000$).
-      The 2.32\% residual measures rounding of the hand-computed target rather than a physical
-      prediction precision. In this v2 the claim is reframed as a closed-form identity
-      verification, not a PASS/FAIL physical test.
-\item A numerical drift is anticipated upon adoption of the deg-4 5-point fit of $\fopt(c)$
-      (v3.7 Table~18-3, $c \in \{0.30, 0.42, 0.618, 0.80, 1.00\}$ five points):
-      $\fopt(0.83) = 1.9163 \to 1.9425$ (+1.37\%). A cascade will drift $\cmem(0.83)$,
-      $\Vxi(0.83)$, and $\aPT^{\mathrm{upper}}$ similarly. This update will be reflected in a v3
-      erratum or the v4.9 cycle.
-\item Additional galaxy samples for $\cmem(c)$ and independent measurements of $\Lambdauv(c)$
-      (precision CMB spectral distortion measurements, PIXIE~\citep{Kogut2011}) provide the
-      fundamental solution for extrapolation accuracy.
+\item The $\Lambdauv(0.83)$ row is removed from Appendix~A.
+\item The universal $\Lambdauv(0.83)$ description in \S 3.3 is retracted (per-galaxy table only).
+\item The only legitimate $\Lambdauv$ numerical anchors are the three per-galaxy values in
+      \S 3.3 (IC 2574 / NGC 3198 / NGC 2841).
 \end{itemize}
+
+This retraction is a structural decision directly following from F2.
+
+\subsubsection*{(d) Invariants (unchanged in v3)}
+
+The per-galaxy M1 anchor $\aPT^{\mathrm{upper}}(\mathrm{NGC~3198}, \Vxi) = 1.76 \times 10^{-51}$
+is unchanged from v2. The 3-galaxy range $[1.6\times10^{-53}, 1.8\times10^{-50}]$ is unchanged.
+$\BFIRAS$, $\Imu^{S1}$, S2/S1 ratio, and $\taum^{\mathrm{lower}}$ are all unchanged since they
+are $\cmem$-independent. The M3 closed-form identity
+$\kmem \cdot \Nmode|_{\Vxi} = (2/9\pi) \cmem^2 \Lambdauv^2/(a_0^{5/2}\hbar^3)$ holds exactly
+per-galaxy (ratio $= 1.0000$, MRT-invariant).
+
+\subsubsection*{(e) Future update candidates}
+
+Additional galaxy samples for $\cmem(c)$ and independent measurements of $\Lambdauv(c)$
+(precision CMB spectral distortion measurements, PIXIE~\citep{Kogut2011}) provide the
+fundamental path to improving per-galaxy primary framework precision.
 
 \subsection{Void sample literature consistency}
 The $\Rvoid$ values for the five voids used in the M2 narrowing (Local / Bootes / Cetus /
@@ -1000,11 +1051,13 @@ $c_0$ (SPARC+dSph vol avg) & $0.83$ & v4.7.8 \S 6 \\
 $\epso(0.83) = \sqrt{1 - c}$ & $0.412311$ & Form B \\
 $w(0.83)^2$ & $1.4032$ & Form B \\
 $\Tm$ (dimensionless) & $\sqrt{6} = 2.449$ & Lemma 5~\citep{v476internal} \\
-$\cmem(0.83)^{\dagger}$ & $3.833 \times 10^{5}$ m/s & 2-pt artifact (NGC3198+NGC2841 extrap., v37 conv.) \\
-$\chi_F(0.83)^{\dagger}$ & $4.198\;\mathrm{m}^{3/2}/\mathrm{s}^2$ & 2-pt artifact (Eq.~2A-II derivative) \\
+$\cmem(0.83)$ & $3.885 \times 10^{5}$ m/s & deg-4 fit (v3 erratum, 5-pt V'' Lagrange) \\
+$\chi_F(0.83)$ & $4.256\;\mathrm{m}^{3/2}/\mathrm{s}^2$ & Eq.~2A-II, deg-4 cascade \\
 $V''(\phi_0, x=0)$ & $2.31$ & Chap.~18 Q1-$\alpha$ \\
-$\Lambdauv(0.83)^{\dagger}$ & $9.549 \times 10^{-49}$ J & 2-pt artifact (Table 18-4 extrap.) \\
-$\Vxi(0.83)^{\dagger}$ & $7.683 \times 10^{63}\;\mathrm{m}^3$ & 2-pt artifact (cascade) \\
+$V''(x=0.5, 0.83)$ & $10.463$ & deg-4 Lagrange fit (v3 erratum) \\
+$\fopt(0.83)$ & $1.9425$ & $2\pi/\sqrt{V''(x=0.5,0.83)}$ (v3 deg-4) \\
+$\Vxi(0.83)$ & $8.335 \times 10^{63}\;\mathrm{m}^3$ & $(4\pi/3)(\cmem^2/a_0)^3$, deg-4 cascade \\
+% $\Lambdauv(0.83)$ universal row REMOVED in v3 erratum (F2 galaxy-dep, per-galaxy only; see \S 3.3) \\
 $\BFIRAS$ & $1.516 \times 10^{-12}\;[\mathrm{J}^{-1}\mathrm{m}^{-1/2}]$ & Eq.~iv-d-III \\
 $\Imu^{S1}(0.83)$ & $7.2275 \times 10^{19}$ s (0.45\% PASS) & Eq.~iv-d-I \\
 $\mathrm{S2/S1}$ ($c_0$ independent) & $0.8747$ ($\mathrm{std} = 2 \times 10^{-16}$) & Eq.~iv-d-II v2 \\
@@ -1027,10 +1080,12 @@ $f$ (Pantheon+) & $0.379 \pm 0.029$ & M5, $\mu$-kernel non-contributing \\
 \end{center}
 
 \footnotesize\noindent
-$^{\dagger}$ 2-pt artifact: auxiliary value from two-point linear extrapolation of NGC 3198
-($c=0.42$) + NGC 2841 ($c=0.80$). Does not exist as an independent definition in v3.7 Chap.~18
-Table~18-3/18-4. See \S 7.3 and companion document
-\texttt{c3\_contamination\_dependency\_map\_v1} for details.
+v3 erratum (this version) establishes the universal layer as deg-4 5-point Lagrange fit values
+of $V''(x=0.5, c)$ combined with the closed form $\fopt(c) = 2\pi/\sqrt{V''(x=0.5, c)}$. Universal
+$\Lambdauv(c)$ has been fully retracted due to F2 structural galaxy-specificity ($\msigma$ depends
+on galaxy-specific $\tau_{\mathrm{dyn}}$; see \S 3.3 and \S 7.3). Per-galaxy anchor values are
+in \S 3.3 table and M1 / M2 / M3 claims (established in v2 erratum). Details in companion documents
+\texttt{c3\_contamination\_dependency\_map\_v1} and \texttt{arxiv\_v48\_en\_erratum\_v3}.
 \normalsize
 
 \section{Cross-reference of non-retractable items \#1--31}

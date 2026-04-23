@@ -220,9 +220,10 @@ def sec_numerics(story):
             ['eps_0(0.83)', '0.412311', 'Form B sqrt(1 - c)'],
             ['w(c)^2 at 0.83', '1.4032', 'Form B'],
             ['T_m', 'sqrt(6) ~= 2.449 (無次元)', '補題 5'],
-            ['chi_F(0.83) [dagger]', '4.198 m^(3/2)/s^2', '2-pt artifact (Eq. 2A-II cascade)'],
-            ['Lambda_UV(0.83) [dagger]', '9.549 &#183; 10^(-49) J', '2-pt artifact (Chap 18-4 外挿)'],
-            ['V_xi(0.83) [dagger]', '7.683 &#183; 10^63 m^3', '2-pt artifact (cascade)'],
+            ['f_opt(0.83)', '1.9425', 'v3 deg-4 Lagrange fit (5-pt V\'\'(x=0.5,c))'],
+            ['chi_F(0.83)', '4.256 m^(3/2)/s^2', 'v3 deg-4 cascade (v1 was 4.198)'],
+            ['Lambda_UV(0.83) universal', 'RETRACTED', 'v3 erratum (F2 galaxy-specificity)'],
+            ['V_xi(0.83)', '8.335 &#183; 10^63 m^3', 'v3 deg-4 cascade (v1 was 7.683e63)'],
             ['c_mem(NGC 3198, MRT)', '1.516 &#183; 10^5 m/s', 'v2 erratum per-galaxy'],
             ['Lambda_UV(NGC 3198)', '2.307 &#183; 10^(-49) J', 'v3.7 Table 18-4 per-galaxy'],
             ['V_xi(NGC 3198, MRT)', '2.94 &#183; 10^61 m^3', 'v2 erratum per-galaxy'],
@@ -259,7 +260,7 @@ def sec_numerics(story):
     story.append(tbl(
         ['量', 'foundation 表記', 'v4.8 表記', '判定'],
         [
-            ['c_mem(0.83) [dagger]', '3.833e+05 m/s', '3.833 &#183; 10^5 m/s', '整合 (2-pt artifact; v2 erratum で per-galaxy 置換)'],
+            ['c_mem(0.83)', '3.885e+05 m/s', '3.885 &#183; 10^5 m/s', '整合 (v3 deg-4 cascade, v1 3.833e5 artifact retract)'],
             ['alpha_PT_upper (V_cosmo)', '2.15e-68', '2.15 &#183; 10^(-68)', '整合'],
             ['tau_m_lower (causal)', '1.906e+10 s', '1.906 &#183; 10^10 s', '整合'],
             ['tau_m_upper (Local Void)', '2.26e+15 s', '2.26 &#183; 10^15 s', '整合'],

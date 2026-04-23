@@ -381,14 +381,19 @@ def sec3_methods(story):
     ))
     story.append(B(
         'c_mem の数値評価は v3.7 Chap 18 Table 18-3 の per-galaxy f_opt(c) &#183; V_flat '
-        'mapping を採用。<b>per-galaxy anchor (v2 erratum, MRT-unified v_flat, Lelli 2016):</b> '
+        'mapping を採用。<b>per-galaxy anchor (v2 erratum, MRT-unified v_flat, Lelli 2016; '
+        'v3 で不変):</b> '
         'IC 2574 (c=0.30, f_opt=0.797): c_mem = 5.29e+04 m/s; '
-        'NGC 3198 (c=0.42, f_opt=1.010): c_mem = 1.516e+05 m/s; '
+        'NGC 3198 (c=0.42, f_opt=1.010): c_mem = 1.516e+05 m/s (M1 anchor); '
         'NGC 2841 (c=0.80, f_opt=1.845): c_mem = 5.254e+05 m/s. '
-        '<i>v4.8 v1 artifact (retract)</i>: c_mem(0.83) = 3.833e+05 m/s '
-        '(f_opt(0.83) = 1.9163, V_flat_universal = 2.00e+05 m/s の 2-pt 外挿 artifact、'
-        'v3.7 Chap 18 に独立定義なし; patch spec v2 Sec.6.3 / retract 不可 #41)。'
-        '外挿 caveat は Sec.7.3 参照。'
+        '<br/><br/><b>c_0 = 0.83 universal (v3 erratum: deg-4 Lagrange confirmed):</b> '
+        'v3.7 Chap 18-2 の 5 点 V\'\'(x=0.5, c) (c in {0.30, 0.42, 0.618, 0.80, 1.00}) から '
+        'deg-4 exact-pass Lagrange fit を適用し V\'\'(x=0.5, 0.83) = 10.463, 閉形式 '
+        'f_opt = 2π/sqrt(V\'\') から f_opt(0.83) = 1.9425 を得る。cascade で '
+        'c_mem(0.83) = 3.885e+05 m/s, chi_F(0.83) = 4.256 m^(3/2)/s^2, '
+        'V_xi(0.83) = 8.335e+63 m^3 (+8.5%)。'
+        '<i>v4.8 v1 artifact (retract)</i>: f_opt(0.83) = 1.9163 (2-pt f_opt-linear), drift +1.37%. '
+        'patch spec v2 Sec.6.3 / retract 不可 #41. 方法論詳細は Sec.7.3.'
     ))
 
     story.append(H2('3.2 Step 2-B: SI canonical な N_mode (M3)'))
@@ -423,12 +428,15 @@ def sec3_methods(story):
     story.append(M_(
         '<b>Eq. 2C-0</b>: Lambda_UV = 2 c_lt^2 &#183; w(c) &#183; sqrt(eps_0(c)) '
         '&#183; c_mem^(-1/2) &#183; a_0^(-1/4)<br/>&nbsp;&nbsp;(symbolic、数値代入不可)<br/><br/>'
-        '<b>per-galaxy (v2 erratum, v3.7 Chap 18 Table 18-4):</b><br/>'
+        '<b>per-galaxy のみ正当 (v3 erratum で universal Lambda_UV 完全撤回):</b><br/>'
         '&nbsp;&nbsp;IC 2574 (c=0.30): m_sigma = 1.22e-30 eV, Lambda_UV = 1.955e-49 J<br/>'
         '&nbsp;&nbsp;NGC 3198 (c=0.42): m_sigma = 1.44e-30 eV, Lambda_UV = 2.307e-49 J<br/>'
         '&nbsp;&nbsp;NGC 2841 (c=0.80): m_sigma = 5.63e-30 eV, Lambda_UV = 9.019e-49 J<br/><br/>'
-        '<i>v4.8 v1 artifact (retract)</i>: c_0 = 0.83: Lambda_UV = 9.549e-49 J '
-        '(NGC 3198 + NGC 2841 の 2 点 m_sigma 線形外挿 artifact、v3.7 Table 18-4 に独立項目なし)'
+        '<i>v4.8 v1 artifact (RETRACTED in v3)</i>: c_0 = 0.83 で Lambda_UV = 9.549e-49 J は '
+        'universal 量として提示されていたが、F2 構造 (m_sigma = sqrt(V\'\')/tau_dyn で tau_dyn は '
+        'galaxy-specific) により Lambda_UV = m_sigma &#183; c^2 は原理的に galaxy-dep を含み、'
+        'c のみ universal 関数として well-defined ではない。v3 erratum で完全撤回 '
+        '(membrane_v48 Sec.3.3 / Sec.7.3, retract 不可 #41)'
     ))
     story.append(W(
         '<b>132 桁乖離</b>: Eq. 2C-II に c_0 = 0.83 の SI 数値を直接代入すると、'
@@ -986,11 +994,13 @@ def references_and_appendix(story):
             ['eps_0(0.83) = sqrt(1 - c)', '0.412311', 'Form B'],
             ['w(0.83)^2', '1.4032', 'Form B'],
             ['T_m (無次元保持)', 'sqrt(6) = 2.449', '補題 5 [v4.7.6]'],
-            ['c_mem(0.83) [dagger]', '3.833 &#183; 10^5 m/s', '2-pt artifact (NGC3198+NGC2841 外挿, v37 conv)'],
-            ['chi_F(0.83) [dagger]', '4.198 m^(3/2)/s^2', '2-pt artifact (Eq. 2A-II cascade)'],
+            ['f_opt(0.83)', '1.9425', 'v3 deg-4 Lagrange fit (5-pt V\'\'(x=0.5,c))'],
+            ['V\'\'(x=0.5, 0.83)', '10.463', 'v3 deg-4 Lagrange fit'],
+            ['c_mem(0.83)', '3.885 &#183; 10^5 m/s', 'v3 deg-4 cascade (v1 was 3.833e5)'],
+            ['chi_F(0.83)', '4.256 m^(3/2)/s^2', 'v3 deg-4 cascade (v1 was 4.198)'],
             ['V\'\'(phi_0, x=0)', '2.31', 'Chap 18 Q1-alpha'],
-            ['Lambda_UV(0.83) [dagger]', '9.549 &#183; 10^(-49) J', '2-pt artifact (Table 18-4 外挿)'],
-            ['V_xi(0.83) [dagger]', '7.683 &#183; 10^63 m^3', '2-pt artifact (cascade)'],
+            ['Lambda_UV(0.83) universal', 'RETRACTED', 'v3 erratum (F2 galaxy-specificity)'],
+            ['V_xi(0.83)', '8.335 &#183; 10^63 m^3', 'v3 deg-4 cascade (v1 was 7.683e63)'],
             ['c_mem(NGC 3198, MRT)', '1.516 &#183; 10^5 m/s', 'v2 erratum per-galaxy'],
             ['V_xi(NGC 3198, MRT)', '2.94 &#183; 10^61 m^3', 'v2 erratum per-galaxy'],
             ['Lambda_UV(NGC 3198)', '2.307 &#183; 10^(-49) J', 'v3.7 Table 18-4 per-galaxy'],
