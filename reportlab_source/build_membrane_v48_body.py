@@ -192,8 +192,9 @@ def title_page(story):
     story.append(AB(
         '核心的成果は 5 点: '
         '(M1) FIRAS mu 歪み [Fixsen+1996] を Chluba 2016 W_mu kernel で展開し、'
-        'V_xi primary 採用で <b>alpha_PT_upper = 2.96e-53</b> (phase transition '
-        'coupling 上限) を導出。'
+        'V_xi primary 採用で <b>alpha_PT_upper(NGC 3198, V_xi) = 1.76e-51</b> '
+        '(per-galaxy anchor, MRT-unified; v2 erratum; 3-galaxy range [1.6e-53, 1.8e-50]; '
+        'v4.8 v1 の universal 2.96e-53 は v37 2-pt 外挿 artifact で撤回) を導出。'
         '(M2) alpha_PT_upper を通じて membrane memory time tau_m に '
         '[1.9e+10, 1.4e+53] s の FIRAS-only bound を与え、Local Void (R=22 Mpc) '
         'の因果律制約で <b>5 桁幅に narrow</b> 化 (38 桁 tighten)。'
@@ -289,7 +290,7 @@ def sec1_introduction(story):
     story.append(tbl(
         ['#', 'Claim', '節', '核心数値'],
         [
-            ['M1', 'alpha_PT_upper = 2.96e-53 (V_xi primary)', 'Sec.4', 'FIRAS mu &lt; 9e-5'],
+            ['M1', 'alpha_PT_upper(NGC 3198, V_xi) = 1.76e-51 (v2 MRT anchor, range [1.6e-53, 1.8e-50])', 'Sec.4', 'FIRAS mu &lt; 9e-5'],
             ['M2', 'tau_m bound [1.9e+10, 1.4e+53] s -&gt; 5 桁幅', 'Sec.4, 5', 'Local Void R=22 Mpc'],
             ['M3', 'Eq. 2B-II SI canonical', 'Sec.3', 'NGC 3198 2.32% PASS'],
             ['M4', 'chi_E, chi_F 独立 (universal conversion 不存在)', 'Sec.3, 7', '[s^2] vs [m^(3/2)/s^2]'],
@@ -379,10 +380,15 @@ def sec3_methods(story):
         '<b>Eq. 2A-II</b>: chi_F = c_mem &#183; sqrt(a_0) &nbsp;&nbsp;[m^(3/2)/s^2]'
     ))
     story.append(B(
-        'c_mem(c_0=0.83) の数値評価は v3.7 Chap 18 Table 18-3 の f_opt(c) &#183; V_flat '
-        'mapping を採用。f_opt(0.83) = 1.9163 (Sb 型近傍外挿) と V_flat_universal = '
-        '2.00e+05 m/s から c_mem = 3.833e+05 m/s、chi_F = 4.198 m^(3/2)/s^2、'
-        'k_mem = 2.861e-08 m^(-1)。外挿が 2 点から行われるため精度は保留事項 (Sec.7)。'
+        'c_mem の数値評価は v3.7 Chap 18 Table 18-3 の per-galaxy f_opt(c) &#183; V_flat '
+        'mapping を採用。<b>per-galaxy anchor (v2 erratum, MRT-unified v_flat, Lelli 2016):</b> '
+        'IC 2574 (c=0.30, f_opt=0.797): c_mem = 5.29e+04 m/s; '
+        'NGC 3198 (c=0.42, f_opt=1.010): c_mem = 1.516e+05 m/s; '
+        'NGC 2841 (c=0.80, f_opt=1.845): c_mem = 5.254e+05 m/s. '
+        '<i>v4.8 v1 artifact (retract)</i>: c_mem(0.83) = 3.833e+05 m/s '
+        '(f_opt(0.83) = 1.9163, V_flat_universal = 2.00e+05 m/s の 2-pt 外挿 artifact、'
+        'v3.7 Chap 18 に独立定義なし; patch spec v2 Sec.6.3 / retract 不可 #41)。'
+        '外挿 caveat は Sec.7.3 参照。'
     ))
 
     story.append(H2('3.2 Step 2-B: SI canonical な N_mode (M3)'))
@@ -398,11 +404,14 @@ def sec3_methods(story):
         '&nbsp;[J^(-1)] &nbsp;<b>&lt;- SI canonical</b>'
     ))
     story.append(B(
-        '観測との最も厳しい cross-check は NGC 3198 で実現する。C15 から決まる '
-        'k_mem &#183; N_mode product の観測値は 2.93e+38、本 foundation の Eq. 2B-II '
-        '予測値は 2.998e+38、<b>relative diff = 2.32%</b> で PASS (A 級、Session +8)。'
-        '本 cross-check は Eq. 2B-II の SI canonical 性の最強の支持であり、主張 M3 の '
-        '実証内容となる。'
+        '観測との最も厳しい cross-check は NGC 3198 で実現する。<b>Symbolic analysis</b> で '
+        'k_mem &#183; N_mode|_{V_xi} = (2/9pi) &#183; c_mem^2 &#183; Lambda_UV^2 / '
+        '(a_0^(5/2) &#183; hbar^3) という <b>closed-form identity</b> が成立し、numerical product と '
+        'machine precision で一致 (ratio = 1.0000)。v4.8 v1 版で主張した "foundation 予測値 '
+        '2.998e+38 vs 観測値 2.93e+38、2.32% PASS" は v37 anchor hand-computed target の '
+        'rounding check であり、physical prediction precision ではない。本 v2 erratum では '
+        'closed-form identity verification として reframe (Sec.7.3 および patch spec v2 Sec.6.3, '
+        'retract 不可 #41)。Eq. 2B-II の SI canonical 性の verification anchor としては有効。'
     ))
 
     story.append(H2('3.3 Step 2-C: Lambda_UV の symbolic 閉形式'))
@@ -414,7 +423,12 @@ def sec3_methods(story):
     story.append(M_(
         '<b>Eq. 2C-0</b>: Lambda_UV = 2 c_lt^2 &#183; w(c) &#183; sqrt(eps_0(c)) '
         '&#183; c_mem^(-1/2) &#183; a_0^(-1/4)<br/>&nbsp;&nbsp;(symbolic、数値代入不可)<br/><br/>'
-        'c_0 = 0.83: Lambda_UV = 9.549e-49 J (v3.7 Table 18-4 線形外挿、2 点外挿で要検証)'
+        '<b>per-galaxy (v2 erratum, v3.7 Chap 18 Table 18-4):</b><br/>'
+        '&nbsp;&nbsp;IC 2574 (c=0.30): m_sigma = 1.22e-30 eV, Lambda_UV = 1.955e-49 J<br/>'
+        '&nbsp;&nbsp;NGC 3198 (c=0.42): m_sigma = 1.44e-30 eV, Lambda_UV = 2.307e-49 J<br/>'
+        '&nbsp;&nbsp;NGC 2841 (c=0.80): m_sigma = 5.63e-30 eV, Lambda_UV = 9.019e-49 J<br/><br/>'
+        '<i>v4.8 v1 artifact (retract)</i>: c_0 = 0.83: Lambda_UV = 9.549e-49 J '
+        '(NGC 3198 + NGC 2841 の 2 点 m_sigma 線形外挿 artifact、v3.7 Table 18-4 に独立項目なし)'
     ))
     story.append(W(
         '<b>132 桁乖離</b>: Eq. 2C-II に c_0 = 0.83 の SI 数値を直接代入すると、'
@@ -476,19 +490,25 @@ def sec4_firas(story):
         '縮約形となる (V_xi 採用後)。V (mode volume) 選択の感度を以下に示す:'
     ))
     story.append(tbl(
-        ['V 選択', 'V [m^3]', 'alpha_PT_upper', '解釈'],
+        ['Galaxy', 'V_xi [m^3]', 'alpha_PT_upper(V_xi)', 'note'],
         [
-            ['V_xi (膜 coherence)', '7.683 &#183; 10^63', '<b>2.96 &#183; 10^(-53)</b>', 'primary (a_0 独立性と整合)'],
-            ['V_cosmo (geometric)', '1.060 &#183; 10^79', '2.15 &#183; 10^(-68)', 'conservative upper'],
-            ['比 V_cosmo / V_xi', '~1.38 &#183; 10^15', '~1.38 &#183; 10^15', 'V に線形 scaling'],
+            ['IC 2574 (c=0.30)', '5.33 &#183; 10^58', '1.83 &#183; 10^(-50)', 'weakest (late-type)'],
+            ['NGC 3198 (c=0.42)', '2.94 &#183; 10^61', '<b>1.76 &#183; 10^(-51)</b>', 'anchor (v2 M1)'],
+            ['NGC 2841 (c=0.80)', '5.10 &#183; 10^64', '1.63 &#183; 10^(-53)', 'tightest (early-type)'],
+            ['v1 artifact', '7.683 &#183; 10^63', '2.96 &#183; 10^(-53)', '2-pt extrap (RETRACT)'],
         ],
         [35*mm, 35*mm, 35*mm, 50*mm]
     ))
     story.append(B(
-        'V_xi primary 採用は foundation_alpha2 の "a_0 独立性" structural finding と '
-        '整合する唯一の選択である。V_cosmo は銀河団スケール以上の geometric volume を '
-        '含むため physical coherence を過大評価する。<b>M1 の主張</b>: '
-        'alpha_PT_upper = 2.96 &#183; 10^(-53) (V_xi primary、c_0 = 0.83)。'
+        '全 3 行は MRT 統一 v_flat (Lelli 2016) と v3.7 Chap 18 Table 18-4 per-galaxy m_sigma を使用。'
+        'c_mem = f_opt(c) &#183; v_flat; V_xi = (4pi/3)(c_mem^2/a_0)^3; '
+        'alpha_PT_upper = B_FIRAS / (k_mem &#183; N_mode)。V_xi primary 採用は foundation_alpha2 の '
+        '"a_0 独立性" structural finding と整合する唯一の選択である。V_cosmo は銀河団スケール以上の '
+        'geometric volume を含むため physical coherence を過大評価する。<b>M1 の主張 (v2 修正版)</b>: '
+        'alpha_PT_upper(NGC 3198, V_xi) = 1.76 &#183; 10^(-51) を MRT-unified anchor として得る。'
+        '3 銀河 range は [1.6 &#183; 10^(-53), 1.8 &#183; 10^(-50)]。'
+        '<i>v4.8 v1 の universal 2.96e-53 は v37 convention v_flat(NGC 3198) = 119 km/s の 2-pt 外挿 '
+        'artifact で、MRT 統一 (v_flat = 150.1 km/s) 下では factor 59 弱い上限となる</i>。'
     ))
 
     story.append(H2('4.3 tau_m bound と Local Void narrow 化 (M2)'))
@@ -788,13 +808,29 @@ def sec7_limitations(story):
         '判断されるが、絶対値主張は保留する。'
     ))
 
-    story.append(H2('7.3 Lambda_UV および c_mem 外挿精度'))
+    story.append(H2('7.3 Lambda_UV および c_mem 外挿精度 --- artifact 自認'))
     story.append(B(
-        'c_mem(0.83) = 3.833 &#183; 10^5 m/s は v3.7 Chap 18 Table 18-3 の 2 点 '
-        '(c in [0.3, 0.8] 範囲) からの Sb 型近傍外挿で、範囲外 (0.83) の物理的検証 '
-        'が未完。同様に Lambda_UV(0.83) = 9.549 &#183; 10^(-49) J も Table 18-4 '
-        '線形外挿。両外挿精度の向上には c_mem(c) 追加サンプルと Lambda_UV(c) の '
-        '独立測定 (CMB spectral distortion 精密化、[Kogut+2011 PIXIE]) が必要。'
+        'v4.8 v1 版で採用した c_mem(0.83) = 3.833e+05 m/s, Lambda_UV(0.83) = 9.549e-49 J, '
+        'V_xi(0.83) = 7.683e+63 m^3, alpha_PT_upper(V_xi) = 2.96e-53 は、v3.7 Chap 18 Table '
+        '18-3 / 18-4 の NGC 3198 (c=0.42) + NGC 2841 (c=0.80) の 2 点線形外挿に依存する補助値であり、'
+        'v3.7 Chap 18 の独立定義として存在するものではない。これらを "universal" と呼ぶことは、'
+        'patch spec v2 Sec.6.3 (retract 不可 #41) に照らし不適切である。'
+        '<br/><br/>'
+        '本 v2 erratum では、Sec.3.1 / Sec.3.3 / Sec.4.2 および Appendix で per-galaxy '
+        '(IC 2574 / NGC 3198 / NGC 2841) 表現に修正した。'
+        '<br/><br/>'
+        '<b>追加課題</b>: (i) v4.8 v1 の alpha_PT_upper = 2.96e-53 は v37 convention '
+        'c_mem(NGC 3198) = 1.194e+05 m/s (v_flat = 119 km/s) から導出されたもの。MRT 統一 '
+        '(v_flat = 150.1 km/s, Lelli 2016 準拠) では c_mem(NGC 3198) = 1.516e+05 m/s, '
+        'alpha_PT_upper(NGC 3198, V_xi) = 1.76e-51 (factor 59 弱い上限)。3 銀河 range は '
+        '[1.6e-53, 1.8e-50] (~3 桁幅)。'
+        '(ii) M3 "NGC 3198 2.32% PASS" は symbolic identity '
+        'k_mem N_mode|_{V_xi} = (2/9pi) c_mem^2 Lambda^2 / (a_0^(5/2) hbar^3) の '
+        'closed-form verification に reframe (ratio = 1.0000, machine precision)。'
+        '(iii) f_opt(c) の deg-4 5 点 fit 採用時、f_opt(0.83) = 1.9163 -> 1.9425 (+1.37%) の '
+        'numerical drift 予想 (v3 erratum または v4.9 cycle)。'
+        '(iv) c_mem(c) 追加銀河サンプルと Lambda_UV(c) 独立測定 (CMB spectral distortion 精密化、'
+        '[Kogut+2011 PIXIE]) が外挿精度向上の根本解決。'
     ))
 
     story.append(H2('7.4 void サンプル文献整合'))
@@ -950,19 +986,26 @@ def references_and_appendix(story):
             ['eps_0(0.83) = sqrt(1 - c)', '0.412311', 'Form B'],
             ['w(0.83)^2', '1.4032', 'Form B'],
             ['T_m (無次元保持)', 'sqrt(6) = 2.449', '補題 5 [v4.7.6]'],
-            ['c_mem(0.83)', '3.833 &#183; 10^5 m/s', 'v3.7 Table 18-3 外挿'],
-            ['chi_F(0.83)', '4.198 m^(3/2)/s^2', 'Eq. 2A-II'],
+            ['c_mem(0.83) [dagger]', '3.833 &#183; 10^5 m/s', '2-pt artifact (NGC3198+NGC2841 外挿, v37 conv)'],
+            ['chi_F(0.83) [dagger]', '4.198 m^(3/2)/s^2', '2-pt artifact (Eq. 2A-II cascade)'],
             ['V\'\'(phi_0, x=0)', '2.31', 'Chap 18 Q1-alpha'],
-            ['Lambda_UV(0.83)', '9.549 &#183; 10^(-49) J', 'Table 18-4 外挿'],
-            ['V_xi(0.83)', '7.683 &#183; 10^63 m^3', 'coherence volume'],
+            ['Lambda_UV(0.83) [dagger]', '9.549 &#183; 10^(-49) J', '2-pt artifact (Table 18-4 外挿)'],
+            ['V_xi(0.83) [dagger]', '7.683 &#183; 10^63 m^3', '2-pt artifact (cascade)'],
+            ['c_mem(NGC 3198, MRT)', '1.516 &#183; 10^5 m/s', 'v2 erratum per-galaxy'],
+            ['V_xi(NGC 3198, MRT)', '2.94 &#183; 10^61 m^3', 'v2 erratum per-galaxy'],
+            ['Lambda_UV(NGC 3198)', '2.307 &#183; 10^(-49) J', 'v3.7 Table 18-4 per-galaxy'],
             ['B_FIRAS_combo', '1.516 &#183; 10^(-12)', 'Eq. iv-d-III'],
             ['I_mu_S1(0.83)', '7.2275 &#183; 10^19 s', 'Eq. iv-d-I (0.45% PASS)'],
             ['S2/S1 (c_0 非依存)', '0.8747 (std=2e-16)', 'Eq. iv-d-II v2'],
-            ['alpha_PT_upper (V_xi)', '<b>2.96 &#183; 10^(-53)</b>', '<b>M1</b>'],
+            ['alpha_PT_upper(NGC 3198, V_xi)', '<b>1.76 &#183; 10^(-51)</b>', '<b>M1</b> (v2 MRT anchor)'],
+            ['alpha_PT_upper(IC 2574, V_xi)', '1.83 &#183; 10^(-50)', '(weakest, late-type)'],
+            ['alpha_PT_upper(NGC 2841, V_xi)', '1.63 &#183; 10^(-53)', '(tightest, early-type)'],
+            ['alpha_PT_upper range', '[1.6e-53, 1.8e-50]', '3-galaxy, ~3 桁'],
+            ['alpha_PT_upper (v1 artifact)', '2.96 &#183; 10^(-53)', 'RETRACT (v37 2-pt 外挿)'],
             ['tau_m_upper (FIRAS)', '1.418 &#183; 10^53 s', 'V_xi primary'],
             ['tau_m_upper (Local Void)', '~2.26 &#183; 10^15 s', '<b>M2 narrow 5 桁幅</b>'],
             ['tau_m_lower (causal z=5e4)', '1.906 &#183; 10^10 s (605 yr)', '因果律'],
-            ['NGC 3198 k N_mode', '<b>2.32% PASS</b>', '<b>M3</b> Eq. 2B-II 検証'],
+            ['NGC 3198 k N_mode', 'symbolic identity (2/9pi) c_mem^2 Lambda^2 /(a_0^(5/2) hbar^3)', '<b>M3</b> closed-form verification'],
             ['b_alpha (universal)', '+0.11 +/- 0.005', '<b>3.92 dex across</b>'],
             ['Gamma_A (dimensionless)', '8.091', 'Route A (b_alpha)'],
             ['f (Pantheon+)', '0.379 +/- 0.029', '<b>M5</b> mu kernel 非寄与'],

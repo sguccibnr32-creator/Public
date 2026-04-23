@@ -1,3 +1,15 @@
+# v48 release bilingual v3 (2026-04-23)
+
+## papers/ PDF rebuilt to v1.1 erratum state
+- papers/membrane_v48_companion.pdf: rebuilt via lualatex + bibtex + lualatex x2 (15 pages, 871 KB)
+- papers/membrane_v48_en_companion.pdf: rebuilt via pdflatex + bibtex + pdflatex x2 (15 pages, 483 KB)
+- Both PDFs now reflect v1.1 erratum anchors: 1.76e-51 primary (NGC 3198 MRT), factor 59 weakening, per-galaxy 3-row table, M3 closed-form reframe
+
+## Source fix
+- latex_v48_en/membrane_v48_en.tex L146: Unicode U+2248 replaced with $\approx$ (pdflatex T1 compatibility)
+
+---
+
 # Changelog
 
 本 release (`v48_release`) は膜宇宙論 v4.7.8 本体(affiliation 修正版) + v4.8 companion paper の統合成果物パッケージ。

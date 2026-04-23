@@ -216,8 +216,11 @@ def ch01_introduction(story):
         '2C-0, 2C-I/II/III / iv-d-I, iv-d-II v2, iv-d-II-a, iv-d-III, iv-d-IV / iv-e-I)、'
         'retract 不可事項 #1-31 (#1-17 v4.7.8 継承、#18-21 internal memo C3 v3、'
         '#22-25 alpha-3、#26-28 P2 void、#29-31 Gamma_actual)、数値 anchor '
-        '(c_0 = 0.83 canonical、NGC 3198 cross-check 2.32% PASS、alpha_PT_upper (V_xi) '
-        '= 2.96e-53、tau_m in range [1.9e+10, 1.4e+53] s (FIRAS-only)) を確立済。'
+        '(c_0 = 0.83 canonical、NGC 3198 cross-check: closed-form identity (k_mem &#183; N_mode = '
+        '(2/9pi) c_mem^2 Lambda^2 / (a_0^(5/2) hbar^3))、'
+        'alpha_PT_upper(NGC 3198, V_xi) = 1.76e-51 [v2 erratum, MRT anchor; v4.8 v1: 2.96e-53, '
+        'v37 2-pt artifact, factor 59 緩い上限]、3-gal range [1.6e-53, 1.8e-50]、'
+        'tau_m in range [1.9e+10, 1.4e+53] s (FIRAS-only)) を確立済。'
     ))
     story.append(K(
         '<b>本書の意図</b>: 全 foundation を単一文書で検証可能にし、v4.8 本体執筆 '
@@ -399,17 +402,22 @@ def ch03_foundation_alpha2(story):
     story.append(M_(
         '<b>Eq. 2A-I</b>: k_mem^2 = a_0 / c_mem^2<br/>'
         '<b>Eq. 2A-II</b>: chi_F = c_mem &#183; sqrt(a_0) &nbsp;&nbsp;[m^(3/2)/s^2]<br/><br/>'
-        'c_0 = 0.83 数値:<br/>'
-        '&nbsp;&nbsp;c_mem = 3.833e+05 m/s (f_opt 1.9163 x V_flat 2.00e5 Sb 型外挿)<br/>'
-        '&nbsp;&nbsp;chi_F = 4.198 m^(3/2)/s^2<br/>'
-        '&nbsp;&nbsp;k_mem = sqrt(a_0)/c_mem = 2.861e-08 [1/m]'
+        '<b>per-galaxy 評価 (v2 erratum, MRT-unified v_flat, Lelli 2016):</b><br/>'
+        '&nbsp;&nbsp;IC 2574  (c=0.30): c_mem = 5.29e+04 m/s, chi_F = 0.579 [m^(3/2)/s^2]<br/>'
+        '&nbsp;&nbsp;NGC 3198 (c=0.42): c_mem = 1.516e+05 m/s, chi_F = 1.661 [m^(3/2)/s^2] (anchor)<br/>'
+        '&nbsp;&nbsp;NGC 2841 (c=0.80): c_mem = 5.254e+05 m/s, chi_F = 5.754 [m^(3/2)/s^2]<br/><br/>'
+        '<i>v4.8 v1 artifact (retract)</i>:<br/>'
+        '&nbsp;&nbsp;c_mem(0.83) = 3.833e+05 m/s, chi_F = 4.198 [m^(3/2)/s^2], k_mem = 2.861e-08 [1/m]<br/>'
+        '&nbsp;&nbsp;(f_opt 1.9163 x V_flat 2.00e5 の 2-pt 外挿 artifact, NGC 3198+NGC 2841 由来)'
     ))
-    story.append(H3('3.1.1 c_mem の Chap 18-3 外挿手順'))
+    story.append(H3('3.1.1 c_mem の per-galaxy 評価 (v2 erratum) と v4.8 v1 2-pt artifact 経緯'))
     story.append(B(
-        'v3.7 Chap 18 Table 18-3 は f_opt(c) を c in [0.3, 0.8] 範囲で 2 点以上確保。'
-        'c_0 = 0.83 は範囲外 (0.8 を超える) の Sb 型近傍外挿で、f_opt(0.83) = 1.9163 を '
-        '得る。これに V_flat universal = 2.00e5 m/s を乗じて c_mem = 3.833e+05 m/s。'
-        '本外挿は保留事項 (Session +10 指摘、長期課題、Chap 18 Table 2 点外挿の物理検証)。'
+        'v3.7 Chap 18 Table 18-3 は f_opt(c) を c in [0.3, 0.8] 範囲で per-galaxy 値 (IC 2574 0.797, '
+        'NGC 3198 1.010, NGC 2841 1.845) として与える。v4.8 v1 版では c_0 = 0.83 での 2 点線形外挿 '
+        'f_opt(0.83) = 1.9163 と V_flat universal = 2.00e5 m/s (v4.x convention, v3.7 非由来) から '
+        'c_mem(0.83) = 3.833e+05 m/s を universal 値として使用した。本 v2 erratum (patch spec v2 '
+        'Section 6.3 / retract 不可 #41) では、この universal 表現を撤回し per-galaxy 記述に戻す。'
+        'c_0 = 0.83 値は 2-pt 外挿 artifact として Appendix A でのみ参照する (Section 7.3 caveat 参照)。'
     ))
     story.append(N(
         '<b>V\'\'(phi_0) の Chap 18 Table lookup (Q1-alpha)</b>: x = 0 での値を採用し、'
@@ -428,12 +436,15 @@ def ch03_foundation_alpha2(story):
         '<b>Eq. 2B-II</b>: N_mode = V &#183; Lambda_UV^2 / (6 pi^2 &#183; hbar^3 &#183; c_mem^3) '
         '&nbsp;[J^(-1)] &nbsp;<b>&lt;-- SI canonical</b>'
     ))
-    story.append(H3('3.2.1 NGC 3198 cross-check 数値'))
+    story.append(H3('3.2.1 NGC 3198 cross-check: closed-form identity (v2 erratum reframe)'))
     story.append(B(
-        'C15 で観測的に establish された NGC 3198 anchor に対し、foundation の '
-        'k_mem &#183; N_mode product を比較。foundation 予測値 2.998e+38 vs 観測値 '
-        '2.93e+38、relative diff = <b>2.32%</b> で PASS (Session +8 A 級結果)。'
-        'Eq. 2B-II の SI canonical 性の強い支持。'
+        'Symbolic analysis で k_mem &#183; N_mode|_{V_xi} = (2/9pi) c_mem^2 Lambda_UV^2 / '
+        '(a_0^(5/2) hbar^3) という closed-form identity が成立し、numerical product と '
+        'machine precision で一致 (ratio = 1.0000)。v4.8 v1 版で主張した "foundation 予測値 '
+        '2.998e+38 vs 観測値 2.93e+38, 2.32% PASS" は v37 anchor hand-computed target の '
+        'rounding check であり physical prediction precision ではない。本 v2 erratum では '
+        'closed-form identity verification として reframe (patch spec v2 Section 6.3, '
+        'retract 不可 #41)。Eq. 2B-II の SI canonical 性の verification anchor としては有効。'
     ))
 
     story.append(H2('3.3 Step 2-C -- Lambda_UV symbolic (Eq. 2C-0/I/II/III)'))
@@ -445,7 +456,12 @@ def ch03_foundation_alpha2(story):
         '<b>Eq. 2C-0</b>: Lambda_UV = 2 &#183; c_lt^2 &#183; w(c) &#183; sqrt(eps_0(c)) '
         '&#183; c_mem^(-1/2) &#183; a_0^(-1/4) &nbsp;(symbolic)<br/>'
         '<b>Eq. 2C-I/II/III</b>: 構造的派生形 (symbolic 閉形式のみ、数値代入不可)<br/><br/>'
-        'c_0 = 0.83 で Lambda_UV = 9.549e-49 J (v3.7 Chap 18 Table 18-4 線形外挿、2 点外挿で要物理検証)'
+        '<b>per-galaxy 評価 (v2 erratum, v3.7 Chap 18 Table 18-4):</b><br/>'
+        '&nbsp;&nbsp;IC 2574  (c=0.30): m_sigma = 1.22e-30 eV, Lambda_UV = 1.955e-49 J<br/>'
+        '&nbsp;&nbsp;NGC 3198 (c=0.42): m_sigma = 1.44e-30 eV, Lambda_UV = 2.307e-49 J<br/>'
+        '&nbsp;&nbsp;NGC 2841 (c=0.80): m_sigma = 5.63e-30 eV, Lambda_UV = 9.019e-49 J<br/><br/>'
+        '<i>v4.8 v1 artifact (retract)</i>: c_0 = 0.83 で Lambda_UV = 9.549e-49 J '
+        '(NGC 3198 + NGC 2841 の 2 点 m_sigma 線形外挿 artifact、v3.7 Table 18-4 に独立項目なし)'
     ))
     story.append(H3('3.3.1 132 桁乖離の具体例 (混用の罠)'))
     story.append(B(
@@ -499,17 +515,19 @@ def ch04_foundation_beta_delta(story):
         '(mu_FIRAS &#183; A_0 &#183; rho_gamma,0) / (4 &#183; T_m &#183; Gamma_ref &#183; '
         'rho_mem,0^2 &#183; I_mu(c_0))<br/>'
         '&nbsp;&nbsp;c_0 = 0.83: B_FIRAS_combo = 1.516e-12 [J^(-1) m^(-1/2)]<br/><br/>'
-        '<b>Eq. iv-d-IV</b>: alpha_PT_upper(c_0) = c_mem linear 縮約形 (V_xi 採用後)<br/>'
-        '&nbsp;&nbsp;c_0 = 0.83, V_xi: <b>alpha_PT_upper = 2.96e-53</b><br/>'
-        '&nbsp;&nbsp;(conservative V_cosmo 採用: 2.15e-68)'
+        '<b>Eq. iv-d-IV</b>: alpha_PT_upper = B_FIRAS / (k_mem &#183; N_mode) (V_xi primary, per-galaxy)<br/>'
+        '&nbsp;&nbsp;<b>alpha_PT_upper(NGC 3198, V_xi) = 1.76e-51 (v2 erratum, MRT anchor)</b><br/>'
+        '&nbsp;&nbsp;3-galaxy range: [1.6e-53, 1.8e-50] (IC 2574 &gt; NGC 3198 &gt; NGC 2841, ~3 orders)<br/>'
+        '&nbsp;&nbsp;<i>v4.8 v1 artifact: 2.96e-53 (v37 2-pt 外挿, factor 59 tighter)</i>'
     ))
-    story.append(H3('4.2.1 V_xi vs V_cosmo の選択と alpha_PT_upper 感度'))
+    story.append(H3('4.2.1 per-galaxy alpha_PT_upper (v2 erratum, MRT-unified)'))
     story.append(tbl(
-        ['V 選択', '体積 [m^3]', 'alpha_PT_upper', '解釈'],
+        ['Galaxy', 'V_xi [m^3]', 'alpha_PT_upper', 'note'],
         [
-            ['V_xi (膜 coherence)', '7.683e+63', '2.96e-53', 'primary (a_0 独立性整合)'],
-            ['V_cosmo (geometric)', '1.060e+79', '2.15e-68', 'conservative upper'],
-            ['比', '~1.38e+15', '~1.38e+15', 'V に線形 scaling'],
+            ['IC 2574 (c=0.30)', '5.33e+58', '1.83e-50', 'weakest (late-type)'],
+            ['NGC 3198 (c=0.42)', '2.94e+61', '1.76e-51', 'anchor (v2 M1)'],
+            ['NGC 2841 (c=0.80)', '5.10e+64', '1.63e-53', 'tightest (early-type)'],
+            ['v1 artifact', '7.683e+63', '2.96e-53', '2-pt extrap (RETRACT)'],
         ],
         [40*mm, 35*mm, 30*mm, 45*mm]
     ))
@@ -855,7 +873,7 @@ def ch08_companion_paper(story):
     story.append(tbl(
         ['#', '主張', '核心数値/論点'],
         [
-            ['M1', 'alpha_PT_upper ~ 2.96e-53 (V_xi primary)', 'FIRAS mu_FIRAS &lt; 9e-5 + Stage 2'],
+            ['M1', 'alpha_PT_upper(NGC 3198, V_xi) = 1.76e-51 (v2 MRT anchor, 3-gal range [1.6e-53, 1.8e-50])', 'FIRAS mu_FIRAS &lt; 9e-5 + Stage 2'],
             ['M2', 'tau_m in [1.9e+10, 1.4e+53] s (FIRAS-only)', 'Local Void で 5 桁幅に narrow'],
             ['M3', 'Eq. 2B-II が SI canonical', 'N_mode 数値代入の唯一正路'],
             ['M4', 'chi_E [s^2] と chi_F [m^(3/2)/s^2] 独立', 'universal conversion 不存在'],
@@ -939,20 +957,27 @@ def appendix_a_implementation(story):
             ['eps_0(0.83)', '0.412311', 'Form B: sqrt(1 - c)'],
             ['w(0.83)^2', '1.4032', 'Form B: 2 eps_0/(1-eps_0)'],
             ['T_m', 'sqrt(6) ~= 2.449', '補題 5 Z_2 SSB'],
-            ['c_mem(0.83)', '3.833e+05 m/s', 'v3.7 Chap 18-3 Sb 外挿'],
-            ['chi_F(0.83)', '4.198 m^(3/2)/s^2', 'Eq. 2A-II'],
+            ['c_mem(0.83) [dagger]', '3.833e+05 m/s', '2-pt artifact (NGC3198+NGC2841 外挿, v37 conv)'],
+            ['chi_F(0.83) [dagger]', '4.198 m^(3/2)/s^2', '2-pt artifact (Eq. 2A-II cascade)'],
             ['V\'\'(phi_0, x=0)', '2.31', 'Chap 18 Table Q1-alpha'],
-            ['Lambda_UV(0.83)', '9.549e-49 J', 'Chap 18-4 線形外挿'],
-            ['V_xi(0.83)', '7.683e+63 m^3', 'coherence volume'],
+            ['Lambda_UV(0.83) [dagger]', '9.549e-49 J', '2-pt artifact (Table 18-4 外挿)'],
+            ['V_xi(0.83) [dagger]', '7.683e+63 m^3', '2-pt artifact (cascade)'],
+            ['c_mem (NGC 3198, MRT)', '1.516e+05 m/s', 'v2 erratum per-galaxy anchor'],
+            ['V_xi (NGC 3198, MRT)', '2.94e+61 m^3', 'v2 erratum per-galaxy'],
+            ['Lambda_UV (NGC 3198)', '2.307e-49 J', 'v3.7 Chap 18-4 per-galaxy'],
             ['B_FIRAS_combo', '1.516e-12 J^(-1) m^(-1/2)', 'Eq. iv-d-III'],
             ['I_mu_Stage1(0.83)', '7.2275e+19 s (0.45% PASS)', 'Eq. iv-d-I'],
             ['I_mu_Stage2(0.83)', '6.3220e+19 s', 'Eq. iv-d-II v2'],
             ['S2/S1', '0.8747 (std=2e-16)', 'c_0 非依存'],
-            ['alpha_PT_upper (V_xi)', '2.96e-53', 'Eq. iv-d-IV'],
+            ['alpha_PT_upper(NGC 3198, V_xi)', '1.76e-51', 'v2 erratum MRT anchor (M1)'],
+            ['alpha_PT_upper(IC 2574, V_xi)', '1.83e-50', 'weakest (late-type)'],
+            ['alpha_PT_upper(NGC 2841, V_xi)', '1.63e-53', 'tightest (early-type)'],
+            ['alpha_PT_upper 3-gal range', '[1.6e-53, 1.8e-50]', '~3 orders'],
+            ['alpha_PT_upper (v1 artifact)', '2.96e-53', '2-pt artifact, RETRACT'],
             ['tau_m_upper (FIRAS-only)', '1.418e+53 s', 'V_xi primary'],
             ['tau_m_lower (causal z=5e+04)', '1.906e+10 s (~605 yr)', '因果律'],
             ['tau_m_upper (Local Void)', '~2.26e+15 s', 'Eq. iv-e-I (38 桁 tighten)'],
-            ['NGC 3198 k_mem N_mode', '2.998e+38 / 2.93e+38 = 2.32% PASS', 'Eq. 2B-II 検証'],
+            ['NGC 3198 k_mem N_mode', 'symbolic identity = (2/9pi) c_mem^2 Lambda^2 / (a_0^(5/2) hbar^3)', 'M3 closed-form verification'],
             ['b_alpha (universal)', '+0.11 +/- 0.005 (3.92 dex)', 'C3 memo v3'],
             ['Gamma_A (dimensionless)', '8.091', 'Route A (b_alpha 経由)'],
             ['Gamma_B (FDT, 4 候補)', '4.12e-18 ~ 9.58e-11 m^(3/2)/s', 'Route B'],
