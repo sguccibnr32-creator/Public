@@ -13,3 +13,5 @@ core/phase_b/phase_b_step3_three_fields.py -text
 forensic_anchors/full_recompute/** -text
 # 5.2.M v2 CMB precision upgrade (B-2 v4 sensitivity 8 variants + delta_chi2_query)
 phase5/step5_2_M_v2/** -text
+# 5.2.M v4 strict 100% recompute forensic anchor (519 executable scripts)
+forensic_anchors/full_recompute_strict/** -text

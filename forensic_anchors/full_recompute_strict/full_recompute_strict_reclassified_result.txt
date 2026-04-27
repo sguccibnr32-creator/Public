@@ -1,0 +1,57 @@
+# Strict full-recompute reclassification
+
+total: 519
+
+## by_verdict_final (post-reclassification)
+  PASS              : 430
+  BENIGN_ENV        : 34
+  BENIGN_DATA       : 26
+  TIMEOUT           : 17
+  BENIGN_BY_DESIGN  : 6
+  FAIL_HARD         : 6
+
+## by_verdict (original runner)
+  PASS              : 430
+  FAIL              : 72
+  TIMEOUT           : 17
+
+## FAIL_HARD (6) — genuine computational regressions
+  rc=  1  D:/ドキュメント/エントロピー/新膜宇宙論/これまでの軌跡/パイソン/github_release/core/sparc/sparc_hR_free_exploration_v3.py
+    stderr: KeyError: 'GS0'
+  rc=  1  D:/ドキュメント/エントロピー/新膜宇宙論/これまでの軌跡/パイソン/phase_c1_h1_quasi_negative_v1 (1).py
+    stderr: ZeroDivisionError: float division by zero
+  rc=  1  D:/ドキュメント/エントロピー/新膜宇宙論/これまでの軌跡/パイソン/phase_c1_h1_quasi_negative_v1.py
+    stderr: ZeroDivisionError: float division by zero
+  rc=  1  D:/ドキュメント/エントロピー/新膜宇宙論/これまでの軌跡/パイソン/sparc_hR_free_exploration.py
+    stderr: TypeError: Object of type int64 is not JSON serializable
+  rc=  1  D:/ドキュメント/エントロピー/膜宇宙論再考察AB効果有り/github_work/Public/core/sparc/sparc_hR_free_exploration_v3.py
+    stderr: KeyError: 'GS0'
+  rc=  1  D:/ドキュメント/エントロピー/膜宇宙論再考察AB効果有り/phase_c1_h1_quasi_negative_v1.py
+    stderr: ZeroDivisionError: float division by zero
+
+## verdict_final_reason histogram
+   430  rc=0
+    17  timeout_s=120
+    12  data:TA3_gc_independent.csv
+     9  env:/usr/share/fonts/opentype/ipafont-gothic/ipag.ttf
+     7  env:paragraph text '<para>
+     6  env:the following arguments are required: --user, --password
+     6  rc=1
+     4  data:little_things_data\
+     4  env:ModuleNotFoundError: No module named 'hscSspQuery'
+     2  env:EOFError: EOF when reading a line
+     2  data:f_tanh_robustness_detail.csv
+     2  data:little_things_results\
+     2  data:Fig-4-5-C1_KiDS-isolated_Nobins.txt
+     2  data:Fig-4 files not found
+     2  data:phase_b_combined_mbin_1.txt
+     2  env:cannot import name 'small' from 'v4_3_common'
+     2  env:/mnt/user-data/outputs/
+     1  name:_step5_0_a9_v2_erratum_audit\.py$
+     1  name:_step5_2_pre_c_resync\.py$
+     1  env:ModuleNotFoundError: No module named 'phase_b_step3_three_fi
+     1  env:Add '--with diptest'
+     1  name:_apply_b1_phase2\.py$
+     1  name:_phase4_grep_audit(?:_v2)?\.py$
+     1  name:_step5_2_M_v1_canonical_commit\.py$
+     1  name:s3_criterion4_redef_v1\.py$

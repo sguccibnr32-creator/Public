@@ -1,0 +1,24 @@
+# Pass 2 (TIMEOUT re-run @ 1800s timeout)
+
+total: 17
+wall : 11533.2s
+by_verdict: {'PASS': 16, 'TIMEOUT': 1}
+
+  PASS      rc=   0  t= 975.892s  D:/ドキュメント/エントロピー/新膜宇宙論/これまでの軌跡/パイソン/core/phase_b/phase_a_step34_esd.py
+  PASS      rc=   0  t=1077.578s  D:/ドキュメント/エントロピー/新膜宇宙論/これまでの軌跡/パイソン/core/phase_b/phase_a_step5_rar_v2.py
+  PASS      rc=   0  t= 436.351s  D:/ドキュメント/エントロピー/新膜宇宙論/これまでの軌跡/パイソン/github_release/core/dwarfs/probes_vbar_v2.py
+  PASS      rc=   0  t= 964.442s  D:/ドキュメント/エントロピー/新膜宇宙論/これまでの軌跡/パイソン/github_release/core/phase_b/phase_a_step34_esd.py
+  PASS      rc=   0  t=1089.716s  D:/ドキュメント/エントロピー/新膜宇宙論/これまでの軌跡/パイソン/github_release/core/phase_b/phase_a_step5_rar_v2.py
+  PASS      rc=   0  t=  217.97s  D:/ドキュメント/エントロピー/新膜宇宙論/これまでの軌跡/パイソン/github_release/core/sparc/sparc_kappa_nonlinear.py
+  PASS      rc=   0  t= 128.584s  D:/ドキュメント/エントロピー/新膜宇宙論/これまでの軌跡/パイソン/probes_vbar_pipeline.py
+  PASS      rc=   0  t=1104.895s  D:/ドキュメント/エントロピー/新膜宇宙論/これまでの軌跡/パイソン/probes_vbar_v2.py
+  PASS      rc=   0  t= 159.991s  D:/ドキュメント/エントロピー/新膜宇宙論/これまでの軌跡/パイソン/probes_verification.py
+  PASS      rc=   0  t= 224.515s  D:/ドキュメント/エントロピー/新膜宇宙論/これまでの軌跡/パイソン/sparc_kappa_nonlinear.py
+  PASS      rc=   0  t=  737.09s  D:/ドキュメント/エントロピー/膜宇宙論再考察AB効果有り/C3 拡張版仮説関連2/_phase4_grep_audit_v2.py
+  PASS      rc=   0  t=  53.403s  D:/ドキュメント/エントロピー/膜宇宙論再考察AB効果有り/github_work/Public/core/dwarfs/probes_vbar_v2.py
+  PASS      rc=   0  t= 267.735s  D:/ドキュメント/エントロピー/膜宇宙論再考察AB効果有り/github_work/Public/core/dwarfs/probes_verification.py
+  PASS      rc=   0  t=1019.836s  D:/ドキュメント/エントロピー/膜宇宙論再考察AB効果有り/github_work/Public/core/phase_b/phase_a_step34_esd.py
+  PASS      rc=   0  t= 1052.11s  D:/ドキュメント/エントロピー/膜宇宙論再考察AB効果有り/github_work/Public/core/phase_b/phase_a_step5_rar_v2.py
+  PASS      rc=   0  t= 222.991s  D:/ドキュメント/エントロピー/膜宇宙論再考察AB効果有り/github_work/Public/core/sparc/sparc_kappa_nonlinear.py
+  TIMEOUT   rc=  -1  t=1800.144s  D:/ドキュメント/エントロピー/新膜宇宙論/これまでの軌跡/パイソン/github_release/core/dwarfs/probes_verification.py
+    stderr: [TIMEOUT after 1800s]
