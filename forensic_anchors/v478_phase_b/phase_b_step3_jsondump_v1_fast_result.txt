@@ -1,0 +1,35 @@
+======================================================================
+Phase B Step 3 — Three-Field Forensic JSON Anchor (v1 fast)
+======================================================================
+Execution UTC : 2026-04-27T02:28:41.009473+00:00
+Wrapper SHA256: 52a6a67a37b9e3da2238cf41c1148183a4eb988290d38c10fb880375d733cd6f
+Canonical SHA : 979d6f7978c6f29e0bf88b99871ec590b86e73de2740e8538d87adcbf162a34e
+
+=== Combined 3-field (Bin5 excluded) ===
+  N lenses        : 157338
+  N pairs         : 502,867,432 = 502.87M
+  chi2_MOND       : 539.32 (dof 15)
+  chi2_C15        : 65.04 (dof 14)
+  Δχ² (MOND-C15)  : +474.28
+  ΔAIC (MOND-C15) : +472.28
+  C15 gc          : 2.718 ± 0.113 a₀
+  C15 vs MOND σ   : 21.78
+  Cov mode        : full_JK_15x15
+
+=== Paper claim cross-check ===
+  n_lenses_match: True
+  n_pairs_M_paper_round: True
+  gc_a0_within_paper_err: True
+  gc_a0_diff_from_paper: -0.011512368203824508
+  dAIC_within_5pct_of_paper: True
+  dAIC_diff_from_paper: 0.27678315808617526
+  sigma_within_1_of_paper: True
+  sigma_diff_from_paper: -0.22210333484690636
+
+=== Forensic invariants ===
+  Canonical script (phase_b_step3_three_fields.py): 979d6f7978c6f29e0bf88b99871ec590b86e73de2740e8538d87adcbf162a34e
+  Combined RAR : 2bbaf8a90852fe30be74cba182e4cede83e80b1aab2157c1494a7d40324ed9c1
+  JK covariance: a0e5bc01086306d4d77a42953bddb8f7c3f17444aaf7f25173dd4af15c478e85
+  G09 RAR      : 2bc60c1589558d3b7c82d2f670f3bddf8b12a78723c7598175d28740cfa07209
+  G12 RAR      : 3865ccb9c2160b68137909ce5dd4803177cea022bea480d0c2705c5d36a1ba20
+  G15 RAR      : b7a59e9f23d4d5bcba322793d66c47ee9e8a0302858da63fc6896a7787cd4756

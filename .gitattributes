@@ -5,3 +5,7 @@
 phase5/step5_2_M_v1/** -text
 latex_v48/membrane_v48.tex -text
 latex_v48/membrane_v48.tex.bak.pre_phase5_2_inject -text
+# v4.7.8 phase B (HSC weak lensing) forensic anchor (5.2.M v2-class)
+forensic_anchors/v478_phase_b/** -text
+phase_b_output/** -text
+core/phase_b/phase_b_step3_three_fields.py -text

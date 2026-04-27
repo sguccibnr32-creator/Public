@@ -39,7 +39,9 @@ data/phase1/
 *.pdf
 !latex_v48/membrane_v48.pdf
 *.png
-phase_b_output/
+# phase_b_output: ignore by default but allow .txt forensic anchors
+phase_b_output/*
+!phase_b_output/*.txt
 phase_a_output/
 
 # Broken name files
