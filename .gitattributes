@@ -9,3 +9,5 @@ latex_v48/membrane_v48.tex.bak.pre_phase5_2_inject -text
 forensic_anchors/v478_phase_b/** -text
 phase_b_output/** -text
 core/phase_b/phase_b_step3_three_fields.py -text
+# Full recompute forensic anchor (5.2.M v3-class)
+forensic_anchors/full_recompute/** -text

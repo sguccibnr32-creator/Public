@@ -1,0 +1,531 @@
+{
+  "schema_version": "full_recompute_tier2_runner_v1.0",
+  "purpose": "Tier-2 auxiliary claim-producing script re-run forensic anchor",
+  "execution_timestamp_utc": "2026-04-27T02:52:47.662935+00:00",
+  "host": "MSI-Z790ACEMAX",
+  "python_executable": "C:\\Users\\sgucc\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "python_version": "3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]",
+  "base_dir": "D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン",
+  "n_scripts_tier2": 14,
+  "summary": {
+    "PASS": 14,
+    "FAIL": 0,
+    "TIMEOUT": 0,
+    "ERROR": 0,
+    "SKIP": 0
+  },
+  "results": [
+    {
+      "status": "PASS",
+      "script_path": "sparc_cond15_alpha_transition.py",
+      "script_sha256": "a943638e44936ee49ccbf2e5d0d57c7003314eddd989af7fea361b4226a7e63f",
+      "return_code": 0,
+      "elapsed_sec": 1.94,
+      "stdout_total_lines": 69,
+      "stderr_total_lines": 0,
+      "stdout_tail_200": "======================================================================\nC15 alpha(gc) transition test\n======================================================================\nN=175\nBaseline (a=0.5): bias=+0.000, scatter=0.286\n\n============================================================\nT1: Sliding window alpha(gc)\n============================================================\n  17 windows, alpha range [-0.047, 0.349]\n  Tanh: al=0.271, ah=0.025, x0=-10.231, w=0.103\n  Diagnostic: bias=-7.840, scatter=1.840 (-544.6%)\n\n============================================================\nT2: Iterative convergence\n============================================================\n  Converged in 3 iter, alpha [0.025,0.025]\n  bias=-9.467, scatter=0.410\n\n============================================================\nT3: Non-circular proxy alpha\n============================================================\n  log_vflat : r=-0.056, scatter=0.285, bias_slope=+0.399\n  log_Sd    : r=-0.069, scatter=0.285, bias_slope=+0.388\n  log_Yd    : r=+0.006, scatter=0.286, bias_slope=+0.421\n\n============================================================\nT4: Parameter optimization\n============================================================\n  Optimal const alpha=0.5333, scatter=0.2849\n  Optimized tanh: al=0.382, ah=0.646, x0=-9.001, w=0.361\n  scatter=0.2772, delta vs const=-0.0077\n\n============================================================\nT5: LOO cross-validation\n============================================================\n  a=0.5:    0.2855\n  a_opt:    0.2941\n  a(gc):    0.2772\n\n============================================================\nT6: AIC comparison\n============================================================\n  model          k       sc      AIC     dAIC\n  a=0.5          1   0.2855   -436.7     +0.0\n  a_opt          2   0.2849   -435.5     +1.2\n  a(gc)          5   0.2772   -439.1     -2.4\n\n============================================================\nT7: Binned bias\n============================================================\n  bin    a=0.5    a_opt    a(gc)\n    1   -0.229   +0.463   +2.685\n    2   -0.164   +0.501   +2.739\n    3   -0.053   +0.604   +2.821\n    4   +0.123   +0.780   +2.997\n    5   +0.324   +0.975   +3.173\n\n  Bias slope: a=0.5=+0.422, a_opt=+0.390, a(gc)=+0.376 (11% reduction)\n\n======================================================================\nSUMMARY\n======================================================================\n  a=0.5: scatter=0.2855, LOO=0.2855\n  a_opt=0.533: scatter=0.2849, LOO=0.2941\n  a(gc) tanh: scatter=0.2772, LOO=0.2772\nFigure saved.\n\nDone.",
+      "stderr_tail_50": "",
+      "extracted_patterns": {
+        "alpha": [
+          "C15 alpha(gc) transition test",
+          "T1: Sliding window alpha(gc)",
+          "17 windows, alpha range [-0.047, 0.349]",
+          "Converged in 3 iter, alpha [0.025,0.025]",
+          "T3: Non-circular proxy alpha",
+          "Optimal const alpha=0.5333, scatter=0.2849"
+        ],
+        "transition": [
+          "C15 alpha(gc) transition test"
+        ],
+        "C15": [
+          "C15 alpha(gc) transition test"
+        ],
+        "AIC": [
+          "T6: AIC comparison",
+          "model          k       sc      AIC     dAIC"
+        ],
+        "175": [
+          "N=175"
+        ]
+      },
+      "paper_anchor_hint": "SPARC C15 alpha transition (175 galaxies, R^2=0.607)"
+    },
+    {
+      "status": "PASS",
+      "script_path": "sparc_cond15_residual_structure.py",
+      "script_sha256": "67df5a4057dc0665b7c6d94b9a1e81b3af3d79f8da2f24981571f81947774186",
+      "return_code": 0,
+      "elapsed_sec": 1.91,
+      "stdout_total_lines": 85,
+      "stderr_total_lines": 0,
+      "stdout_tail_200": "======================================================================\nC15 residual structure analysis\n======================================================================\nN=175\nValid: 175\n\n============================================================\nT1: Residual statistics\n============================================================\n  mean=+0.0001, std=0.2855, median=+0.0006\n  Shapiro: W=0.9795, p=0.5302\n\n  gc quintile bias:\n    Q1: bias=-0.2295 N=35\n    Q2: bias=-0.1641 N=35\n    Q3: bias=-0.0526 N=35\n    Q4: bias=+0.1231 N=35\n    Q5: bias=+0.3235 N=35\n\n============================================================\nT2: Delta vs I0 (central SB)\n============================================================\n  N=175, slope=-0.0712+/-0.0313, R2=0.029, p=2.41e-02\n  scatter: 0.2855 -> 0.2813\n\n============================================================\nT3: Delta vs f_gas\n============================================================\n  N=175, slope=0.1652+/-0.0757, R2=0.027, p=3.04e-02\n\n============================================================\nT4: Delta vs Ttype\n============================================================\n  slope=0.0171+/-0.0074, R2=0.031, p=2.08e-02\n    T<=3: N=28, mean=-0.1920\n    T=4-7: N=66, mean=+0.0565\n    T>=8: N=81, mean=+0.0205\n  KW: H=16.119, p=0.0003\n\n============================================================\nT5: Delta vs D, Inc, Q, eVf\n============================================================\n  log D   : N=175, slope=-0.0274, R2=0.002, p=5.73e-01 \n  Inc     : N=175, slope=-0.0012, R2=0.006, p=3.11e-01 \n  Q       : N=175, slope=-0.0834, R2=0.033, p=1.61e-02 *\n  eVf     : N=175, slope=+0.0051, R2=0.005, p=3.73e-01 \n\n============================================================\nT6: Multivariate regression\n============================================================\n  N=175, R2=0.1179, scatter: 0.2855 -> 0.2682\n    T         : +0.0238\n    f_gas     : -0.0654\n    log_I0    : -0.0769\n    log_D     : +0.0159\n    Inc       : -0.0010\n    Q         : -0.0932\n    log_Sd    : +0.1022\n\n============================================================\nT7: Stepwise selection\n============================================================\n  Step 0: scatter=0.2855\n  Step 1: +Q          scatter=0.2808 (+1.7%)\n  Step 2: +T          scatter=0.2720 (+3.1%)\n  Step 3: +log_Sd     scatter=0.2704 (+0.6%)\n  Step 4: +log_I0     scatter=0.2691 (+0.5%)\n  Step 5: +Inc        scatter=0.2685 (+0.2%)\n  Selected: ['Q', 'T', 'log_Sd', 'log_I0', 'Inc']\n\n============================================================\nT8: LOO cross-validation\n============================================================\n  baseline=0.2855, full=0.2685 (+6.0%), LOO=0.2806 (+1.7%)\n  LOO degradation: +4.5% -> OK\n\n======================================================================\nSUMMARY\n======================================================================\n  scatter = 0.2855 dex\n  Best stepwise: ['Q', 'T', 'log_Sd', 'log_I0', 'Inc'] -> scatter 0.2685\n  Stepwise reduction: 6.0%\nFigure saved.\n\nDone.",
+      "stderr_tail_50": "",
+      "extracted_patterns": {
+        "residual": [
+          "C15 residual structure analysis",
+          "T1: Residual statistics"
+        ],
+        "R": [
+          "C15 residual structure analysis",
+          "T1: Residual statistics",
+          "Shapiro: W=0.9795, p=0.5302",
+          "T2: Delta vs I0 (central SB)",
+          "N=175, slope=-0.0712+/-0.0313, R2=0.029, p=2.41e-02",
+          "scatter: 0.2855 -> 0.2813"
+        ],
+        "175": [
+          "N=175",
+          "Valid: 175",
+          "N=175, slope=-0.0712+/-0.0313, R2=0.029, p=2.41e-02",
+          "N=175, slope=0.1652+/-0.0757, R2=0.027, p=3.04e-02",
+          "log D   : N=175, slope=-0.0274, R2=0.002, p=5.73e-01",
+          "Inc     : N=175, slope=-0.0012, R2=0.006, p=3.11e-01"
+        ],
+        "C15": [
+          "C15 residual structure analysis"
+        ]
+      },
+      "paper_anchor_hint": "SPARC C15 residual structure"
+    },
+    {
+      "status": "PASS",
+      "script_path": "sparc_cond15_sgal_model.py",
+      "script_sha256": "76ee32a58fff8aeec8d7d929e2caf62fab2385e4ba4e1fb57f7d5acdf45b1cdb",
+      "return_code": 0,
+      "elapsed_sec": 1.53,
+      "stdout_total_lines": 93,
+      "stderr_total_lines": 0,
+      "stdout_tail_200": "======================================================================\nC15 + S_gal Model Test\n======================================================================\n\n--- Loading data ---\n  MRT: 175 galaxies from D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\SPARC_Lelli2016c.mrt\n  TA3: 175 galaxies from D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\TA3_gc_independent.csv\n  phase1: 175 galaxies from D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\phase1\\sparc_results.csv\n\n--- Merging ---\n  Merged: 175 galaxies\n\n--- Computing S_gal ---\n  S_gal computed: 175/175\n\n======================================================================\nC15 + S_gal model comparison\n======================================================================\n\n  M0: C15 baseline (alpha=0.5 fixed + Yd)\n  N = 175\n  beta = -0.478\n  scatter = 0.3163 dex (alpha=0.5 fixed)\n  Full scatter = 0.3162 dex\n  R2 = 0.5154\n  alpha_fit = 0.513 (should be ~0.5)\n  LOO scatter = 0.3204 dex\n\n  M1: C15 + S_gal\n  N = 175\n  beta = -0.526, gamma_S = 0.441\n  scatter = 0.3138 dex, LOO = 0.3197\n  dAIC vs M0 = -0.79\n  scatter improvement: +0.8% (LOO: +0.2%)\n  gamma_S: t = 1.66, p = 0.0980\n\n  M2: C15 + f_gas\n  N = 175\n  beta = -0.388, g_fgas = 0.242\n  scatter = 0.3099 dex, LOO = 0.3157\n  dAIC vs M0 = -5.22\n  improvement: +2.0% (LOO: +1.5%)\n\n  M3: C15 + f_gas + Ttype\n  N = 175\n  beta=-0.416, g_fgas=0.180, g_T=0.0070\n  scatter = 0.3096 dex, LOO = 0.3172\n  dAIC vs M0 = -3.50\n  improvement: +2.1% (LOO: +1.0%)\n\n  M4: Free alpha + S_gal\n  N = 175\n  beta=-0.517, gamma_S=0.463, alpha=0.525\n  scatter = 0.3135 dex, LOO = 0.3211\n  dAIC vs M0 = 0.92\n\n  M5: Free alpha + Yd + f_gas + T + S_gal (maximal)\n  N = 175\n  beta=-0.249, g_fgas=0.237, g_T=0.0401, gamma_S=-0.859, alpha=0.672\n  scatter = 0.3031 dex, LOO = 0.3150\n  dAIC vs M0 = -6.99\n\n======================================================================\nSummary\n======================================================================\n\n  Model                                k    N  scatter      LOO     dAIC   improv\n  --------------------------------------------------------------------------------\n  M0: C15 (Yd, alpha=0.5)              2  175   0.3163   0.3204        0       --\n  M1: C15 + S_gal                      3  175   0.3138   0.3197     -0.8    +0.2%\n  M2: C15 + f_gas                      3  175   0.3099   0.3157     -5.2    +1.5%\n  M3: C15 + f_gas + T                  4  175   0.3096   0.3172     -3.5    +1.0%\n  M4: free alpha + S_gal               4  175   0.3135   0.3211     +0.9    -0.2%\n  M5: maximal (all vars)               6  175   0.3031   0.3150     -7.0    +1.7%\n\n  Judgment criteria:\n    LOO improvement > 5%  -> adopt\n    dAIC < -10            -> strong support\n    dAIC < -5             -> moderate support\n    dAIC > -2             -> no support\n\n  C15 scatter baseline: 0.3163 dex\n  M1 (S_gal)     LOO improv = +0.2%, dAIC = -0.8 -> REJECT\n  M2 (f_gas)     LOO improv = +1.5%, dAIC = -5.2 -> REJECT\n  M3 (f+T)       LOO improv = +1.0%, dAIC = -3.5 -> REJECT\n  M4 (alpha+S)   LOO improv = -0.2%, dAIC = +0.9 -> REJECT\n  M5 (max)       LOO improv = +1.7%, dAIC = -7.0 -> REJECT\n\n  Figure saved: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\cond15_sgal_model.png\n\n======================================================================\nDone\n======================================================================",
+      "stderr_tail_50": "",
+      "extracted_patterns": {
+        "sgal": [
+          "Figure saved: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\cond15_sgal_model.png"
+        ],
+        "C15": [
+          "C15 + S_gal Model Test",
+          "C15 + S_gal model comparison",
+          "M0: C15 baseline (alpha=0.5 fixed + Yd)",
+          "M1: C15 + S_gal",
+          "M2: C15 + f_gas",
+          "M3: C15 + f_gas + Ttype"
+        ],
+        "TA3": [
+          "TA3: 175 galaxies from D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\TA3_gc_independent.csv"
+        ]
+      },
+      "paper_anchor_hint": "SPARC C15 sgal model (gc = 0.584 * Y_d^-0.36 * ...)"
+    },
+    {
+      "status": "PASS",
+      "script_path": "sparc_cond15_bias_cond14_correction.py",
+      "script_sha256": "9c4547b3a75b0459be1586218652ee98cfb118415c09532c3f8d0317b0cec4d1",
+      "return_code": 0,
+      "elapsed_sec": 1.52,
+      "stdout_total_lines": 90,
+      "stderr_total_lines": 0,
+      "stdout_tail_200": "======================================================================\nC15 bias + C14 correction test\n======================================================================\nN=175\n\n============================================================\nT1: C15 bias\n============================================================\n  Overall: bias=+0.000, scatter=0.286\n  bin    N     bias  scatter\n    1   35   -0.229    0.287\n    2   35   -0.164    0.177\n    3   35   -0.053    0.160\n    4   35   +0.123    0.194\n    5   35   +0.324    0.169\n\n============================================================\nT2: C14 at representative radii\n============================================================\n   r/hR    f14     bias  scatter\n      1  0.532   +0.274    0.286\n      2  0.453   +0.344    0.286\n      3  0.389   +0.410    0.286\n      4  0.338   +0.471    0.286\n      5  0.296   +0.529    0.286\n      6  0.262   +0.581    0.286\n  Best: r/hR=1\n\n============================================================\nT3: Standard radii\n============================================================\n  2.2hR   : bias=+0.357, scatter=0.286\n  3.0hR   : bias=+0.410, scatter=0.286\n  4.0hR   : bias=+0.471, scatter=0.286\n\n============================================================\nT4: Bias gc-dependence before/after\n============================================================\n  C15: slope=+0.422 (r=0.672)\n  C14+15: slope=+0.422 (r=0.672)\n  Reduction: 0.0%\n\n  bin      C15   C14+15  improved\n    1   -0.229   +0.044       Yes\n    2   -0.164   +0.110       Yes\n    3   -0.053   +0.221        No\n    4   +0.123   +0.397        No\n    5   +0.324   +0.597        No\n  Improved: 2/5\n\n============================================================\nT5: Optimal r_eff per galaxy\n============================================================\n  Valid: 40/175\n  r_eff/hR: median=1.92, mean=2.23, std=1.86\n    r(r_eff/hR, gc    ) = -0.369 (p=1.912e-02)\n    r(r_eff/hR, vflat ) = +0.035 (p=8.285e-01)\n    r(r_eff/hR, hR    ) = +0.204 (p=2.071e-01)\n    r(r_eff/hR, Yd    ) = -0.215 (p=1.826e-01)\n\n============================================================\nT6: Rotmod validation\n============================================================\n  C15            : bias=+0.000, scatter=0.286 (N=175)\n  C14+15         : bias=+0.476, scatter=0.292 (N=175)\n  Rotmod local   : bias=-0.001, scatter=0.244 (N=175)\n\n============================================================\nT7: By galaxy type\n============================================================\n  Sa-Sb T<=3: N=28\n    C15: bias=-0.192 sc=0.277  C14+15: bias=+0.082 sc=0.277\n  Sbc-Sd 4-7: N=66\n    C15: bias=+0.056 sc=0.236  C14+15: bias=+0.330 sc=0.236\n  Sdm-Im T>=8: N=81\n    C15: bias=+0.021 sc=0.297  C14+15: bias=+0.294 sc=0.297\n\n======================================================================\nSUMMARY\n======================================================================\n\n  C15: bias=+0.000, scatter=0.286, slope=+0.422\n  C14+15 (r/1hR): bias=+0.274, scatter=0.286, slope=+0.422\n  Slope reduction: 0.0%\n  Bins improved: 2/5\n  r_eff/hR median: 1.92\n\nFigure saved.\n\nDone.",
+      "stderr_tail_50": "",
+      "extracted_patterns": {
+        "C14": [
+          "C15 bias + C14 correction test",
+          "T2: C14 at representative radii",
+          "C14+15: slope=+0.422 (r=0.672)",
+          "bin      C15   C14+15  improved",
+          "C14+15         : bias=+0.476, scatter=0.292 (N=175)",
+          "C15: bias=-0.192 sc=0.277  C14+15: bias=+0.082 sc=0.277"
+        ],
+        "C15": [
+          "C15 bias + C14 correction test",
+          "T1: C15 bias",
+          "C15: slope=+0.422 (r=0.672)",
+          "bin      C15   C14+15  improved",
+          "C15            : bias=+0.000, scatter=0.286 (N=175)",
+          "C15: bias=-0.192 sc=0.277  C14+15: bias=+0.082 sc=0.277"
+        ],
+        "bias": [
+          "C15 bias + C14 correction test",
+          "T1: C15 bias",
+          "Overall: bias=+0.000, scatter=0.286",
+          "bin    N     bias  scatter",
+          "r/hR    f14     bias  scatter",
+          "2.2hR   : bias=+0.357, scatter=0.286"
+        ],
+        "correction": [
+          "C15 bias + C14 correction test"
+        ]
+      },
+      "paper_anchor_hint": "SPARC C14/C15 bias correction"
+    },
+    {
+      "status": "PASS",
+      "script_path": "dsph_jeans_c15_v1.py",
+      "script_sha256": "bed096062a95528ad5cc0fab092586ae9d6859f44d466bb2bad08c1d70424713",
+      "return_code": 0,
+      "elapsed_sec": 1.83,
+      "stdout_total_lines": 154,
+      "stderr_total_lines": 0,
+      "stdout_tail_200": "======================================================================\nJ0-J3 Jeans枠組み dSph C15拡張テスト\n======================================================================\n\n入力: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\dsph_hysteresis_v2.csv (31 rows)\n列名: ['Name', 'host', 'morph_str', 'd_host_kpc', 'sigma_final', 'sigma_source', 'e_sigma', 'rh_pc', 'VMag', 'D', 'gc_obs_a0', 'gc_c15_a0', 'gc_host_a0', 'log_gc_obs', 'log_gc_c15', 'log_gc_host', 'resid_c15', 'resid_host']\n有効データ: 31 銀河\n\n======================================================================\nTest A: 統一公式 gc_J = A * s(Q_J, T_m) * Q_J * Yd^beta\n======================================================================\n\n--- Test C: gc抽出方法比較 (deep MOND vs 膜補間正確解) ---\n  gc_exact / gc_deepMOND: mean=0.8997, std=0.1607\n  -> deep MOND 抽出は 10.0% 過大評価 (-0.046 dex)\n  -> 膜補間関数の正確解を以後使用\n\n--- Q_J vs Q_naive 比較 ---\n  Q_J / Q_naive: mean=1.0000\n  -> 同一\n\n==============================================================================================================\nName               host   Q_J   Q_n s(QJ)  gc_obs    C15n    SCEn  SCE_QJ  C15_QJ D_C15n D_SCEn   D_QJ\n--------------------------------------------------------------------------------------------------------------\nSagittarius dSph    MW  0.20  0.20 0.413    0.40   0.092   0.084    0.08    0.09  +0.64  +0.68  +0.68\nUrsa Major II       MW  0.56  0.56 0.455  460.25   0.255   0.256    0.26    0.25  +3.26  +3.25  +3.25\nWillman 1           MW  0.76  0.76 0.470  182.93   0.347   0.360    0.36    0.35  +2.72  +2.71  +2.71\nComa Berenices      MW  0.47  0.47 0.447   67.55   0.215   0.212    0.21    0.21  +2.50  +2.50  +2.50\nDraco               MW  0.55  0.55 0.454   13.38   0.250   0.251    0.25    0.25  +1.73  +1.73  +1.73\nUrsa Minor          MW  0.64  0.64 0.461   15.85   0.289   0.294    0.29    0.29  +1.74  +1.73  +1.73\nSculptor            MW  0.49  0.49 0.449    1.48   0.224   0.222    0.22    0.22  +0.82  +0.82  +0.82\nSextans (I)         MW  0.27  0.27 0.423    4.83   0.123   0.115    0.11    0.12  +1.60  +1.62  +1.62\nUrsa Major (I)     Unknown  0.39  0.39 0.438  146.76   0.177   0.171    0.17    0.18  +2.92  +2.93  +2.93\nCarina              MW  0.38  0.38 0.437    2.73   0.171   0.165    0.16    0.17  +1.20  +1.22  +1.22\nFornax              MW  0.40  0.40 0.439    0.39   0.180   0.174    0.17    0.18  +0.33  +0.35  +0.35\nLeo IV              MW  0.58  0.58 0.456  226.23   0.262   0.264    0.26    0.26  +2.94  +2.93  +2.93\nCanes Venatici II   MW  0.79  0.79 0.471  241.08   0.360   0.375    0.38    0.36  +2.83  +2.81  +2.81\nCanes Venatici (I) Unknown  0.29  0.29 0.426    7.97   0.131   0.123    0.12    0.13  +1.78  +1.81  +1.81\nLeo II              MW  0.62  0.62 0.460    5.30   0.284   0.288    0.29    0.28  +1.27  +1.27  +1.27\nLeo I               MW  0.52  0.52 0.452    0.49   0.238   0.237    0.24    0.24  +0.31  +0.31  +0.31\nAndromeda IX       M31  0.40  0.40 0.440   47.84   0.184   0.179    0.18    0.18  +2.42  +2.43  +2.43\nNGC 205            M31  1.30  1.30 0.492    0.90   0.590   0.641    0.64    0.59  +0.18  +0.15  +0.15\nAndromeda I        M31  0.37  0.37 0.436    1.61   0.167   0.161    0.16    0.17  +0.98  +1.00  +1.00\nAndromeda III      M31  0.44  0.44 0.443    8.15   0.198   0.194    0.19    0.20  +1.61  +1.62  +1.62\nAndromeda V        M31  0.58  0.58 0.457   26.13   0.265   0.268    0.27    0.27  +1.99  +1.99  +1.99\nNGC 147            M31  0.58  0.58 0.456    0.31   0.262   0.264    0.26    0.26  +0.07  +0.07  +0.07\nAndromeda II       M31  0.28  0.28 0.424    0.84   0.127   0.119    0.12    0.13  +0.82  +0.85  +0.85\nNGC 185            M31  1.01  1.01 0.482    1.65   0.459   0.489    0.49    0.46  +0.56  +0.53  +0.53\nAndromeda VII      M31  0.37  0.37 0.436    0.92   0.169   0.163    0.16    0.17  +0.73  +0.75  +0.75\nLGS 3 (Local Group Suspect 3) M31  0.33  0.33 0.431    2.23   0.149   0.142    0.14    0.15  +1.18  +1.20  +1.20\nAndromeda VI       M31  0.45  0.45 0.445    3.29   0.206   0.202    0.20    0.21  +1.20  +1.21  +1.21\nPhoenix            Isolated  0.39  0.39 0.439    5.27   0.179   0.173    0.17    0.18  +1.47  +1.48  +1.48\nCetus              Isolated  0.58  0.58 0.456   17.94   0.262   0.264    0.26    0.26  +1.83  +1.83  +1.83\nLeo T               MW  0.62  0.62 0.459   12.81   0.280   0.284    0.28    0.28  +1.66  +1.65  +1.65\nTucana             Isolated  0.84  0.84 0.474   64.55   0.384   0.402    0.40    0.38  +2.23  +2.21  +2.21\n\n======================================================================\nモデル比較統計\n======================================================================\n\nModel                       N     bias  scatter      MAD |bias|+scat\n----------------------------------------------------------------------\nC15_naive (Qn, Tinf)       31   +1.533    0.887    1.148       2.420\nSCE_naive (Qn, Tm)         31   +1.537    0.886    1.148       2.423\nSCE_QJ   (QJ, Tm)          31   +1.537    0.886    1.148       2.423\nC15_QJ   (QJ, Tinf)        31   +1.533    0.887    1.148       2.420\n\n======================================================================\nTest B: Yd 感度 (SCE_QJ: Q_J + 自己無撞着方程式)\n======================================================================\n\n   Yd   N     bias  scatter      MAD note\n-------------------------------------------------------\n  0.3  31   +2.137    0.813    1.110 \n  0.5  31   +1.984    0.818    1.115 <- 3.6um相当\n  0.8  31   +1.840    0.827    1.122 \n  1.0  31   +1.769    0.833    1.126 \n  1.5  31   +1.637    0.850    1.137 \n  2.0  31   +1.537    0.871    1.148 <- V帯デフォルト\n  3.0  30   +1.436    0.887    1.060 \n  5.0  29   +1.279    0.941    0.998 \n\n======================================================================\nJ3 判定: M_J,mem vs M_J,std\n======================================================================\n\nName                   g_obs     g_bar g_obs/gbar J3 regime\n------------------------------------------------------------\nSagittarius dSph    4.87e-12  4.45e-13       11.0 M_J,mem << M_J,std\nUrsa Major II       3.77e-11  2.57e-14     1466.0 M_J,mem << M_J,std\nWillman 1           6.99e-11  2.22e-13      315.2 M_J,mem << M_J,std\nComa Berenices      2.68e-11  8.82e-14      303.6 M_J,mem << M_J,std\nDraco               3.64e-11  8.08e-13       45.1 M_J,mem << M_J,std\nUrsa Minor          4.84e-11  1.20e-12       40.3 M_J,mem << M_J,std\nSculptor            2.91e-11  4.11e-12        7.1 M_J,mem << M_J,std\nSextans (I)         8.72e-12  1.29e-13       67.5 M_J,mem << M_J,std\nUrsa Major (I)      1.81e-11  1.86e-14      974.0 M_J,mem << M_J,std\nCarina              1.69e-11  8.29e-13       20.4 M_J,mem << M_J,std\nFornax              1.87e-11  5.42e-12        3.5 M_J,mem << M_J,std\nLeo IV              3.99e-11  5.86e-14      680.9 M_J,mem << M_J,std\nCanes Venatici II   7.54e-11  1.96e-13      384.7 M_J,mem << M_J,std\nCanes Venatici (I)  9.98e-12  1.03e-13       96.8 M_J,mem << M_J,std\nLeo II              4.67e-11  3.19e-12       14.6 M_J,mem << M_J,std\nLeo I               3.28e-11  1.19e-11        2.7 intermediate\nAndromeda IX        1.96e-11  6.67e-14      293.8 M_J,mem << M_J,std\nNGC 205             2.02e-10  1.36e-10        1.5 M_J,std\nAndromeda I         1.63e-11  1.26e-12       12.9 M_J,mem << M_J,std\nAndromeda III       2.28e-11  5.20e-13       43.9 M_J,mem << M_J,std\nAndromeda V         4.08e-11  5.25e-13       77.8 M_J,mem << M_J,std\nNGC 147             3.99e-11  2.12e-11        1.9 intermediate\nAndromeda II        9.29e-12  7.86e-13       11.8 M_J,mem << M_J,std\nNGC 185             1.22e-10  4.73e-11        2.6 intermediate\nAndromeda VII       1.66e-11  2.17e-12        7.6 M_J,mem << M_J,std\nLGS 3 (Local Group Suspect 3)  1.29e-11  5.92e-13       21.8 M_J,mem << M_J,std\nAndromeda VI        2.45e-11  1.44e-12       17.1 M_J,mem << M_J,std\nPhoenix             1.85e-11  5.28e-13       35.1 M_J,mem << M_J,std\nCetus               4.00e-11  7.29e-13       54.9 M_J,mem << M_J,std\nLeo T               4.55e-11  1.31e-12       34.8 M_J,mem << M_J,std\nTucana              8.55e-11  9.34e-13       91.6 M_J,mem << M_J,std\n\n======================================================================\n診断: Q_J ベースの残差の物理的起源\n======================================================================\n\n  gc_obs ~ Q_J^1.572 (r2=0.089, p=0.1039)\n  C15/SCE 予測: gc ~ Q^1 (s が定数なら)\n  -> 勾配差: 0.572\n  -> gc_obs は Q_J の 1.6 乗に依存 -- C15 の Q^1 より急峻\n    deep MOND 抽出 gc = g_obs^2/g_bar ~ sigma^4/M_bar ~ Yd_dyn に由来\n    Yd_dyn が銀河ごとに大きく変動 -> scatter の主因\n\n  gc_obs vs g_bar/a0: slope=-0.758, r2=0.540\n\n出力: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\dsph_jeans_c15_v1.csv (31 rows)\n\n======================================================================\n総合判定\n======================================================================\n\n  C15 直接 (Q_naive, Tm->inf):\n      bias = +1.533 dex, scatter = 0.887 dex\n\n  SCE + Q_J (Q_J, Tm=sqrt(6)):\n      bias = +1.537 dex, scatter = 0.886 dex\n\n  J0-J3 枠組みの評価:\n    1. Q_J = sqrt(g_obs/a0) は Q_naive と本質的に同一 (r_h単位の差のみ)\n    2. 自己無撞着方程式 (Tm=sqrt(6)) は s(Q) で微小な補正のみ\n    3. J3 判定: 全 dSph で M_J,mem << M_J,std (膜 Jeans 質量が支配)\n    4. bias は Yd で吸収不可 -> 構造的問題\n\n======================================================================\n完了\n======================================================================",
+      "stderr_tail_50": "",
+      "extracted_patterns": {
+        "dSph": [
+          "J0-J3 Jeans枠組み dSph C15拡張テスト",
+          "入力: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\dsph_hysteresis_v2.csv (31 rows)",
+          "Sagittarius dSph    MW  0.20  0.20 0.413    0.40   0.092   0.084    0.08    0.09  +0.64  +0.68  +0.68",
+          "Sagittarius dSph    4.87e-12  4.45e-13       11.0 M_J,mem << M_J,std",
+          "出力: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\dsph_jeans_c15_v1.csv (31 rows)",
+          "3. J3 判定: 全 dSph で M_J,mem << M_J,std (膜 Jeans 質量が支配)"
+        ],
+        "Jeans": [
+          "J0-J3 Jeans枠組み dSph C15拡張テスト",
+          "出力: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\dsph_jeans_c15_v1.csv (31 rows)",
+          "3. J3 判定: 全 dSph で M_J,mem << M_J,std (膜 Jeans 質量が支配)"
+        ],
+        "C15": [
+          "J0-J3 Jeans枠組み dSph C15拡張テスト",
+          "列名: ['Name', 'host', 'morph_str', 'd_host_kpc', 'sigma_final', 'sigma_source', 'e_sigma', 'rh_pc', 'VMag', 'D', 'gc_obs_a0', 'gc_c15_a0', 'gc_host_a0', 'log_gc_obs', 'log_gc_c15', 'log_gc_host', 'resid_c15', 'resid_host']",
+          "Name               host   Q_J   Q_n s(QJ)  gc_obs    C15n    SCEn  SCE_QJ  C15_QJ D_C15n D_SCEn   D_QJ",
+          "C15_naive (Qn, Tinf)       31   +1.533    0.887    1.148       2.420",
+          "C15_QJ   (QJ, Tinf)        31   +1.533    0.887    1.148       2.420",
+          "C15/SCE 予測: gc ~ Q^1 (s が定数なら)"
+        ],
+        "31": [
+          "入力: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\dsph_hysteresis_v2.csv (31 rows)",
+          "有効データ: 31 銀河",
+          "Canes Venatici (I) Unknown  0.29  0.29 0.426    7.97   0.131   0.123    0.12    0.13  +1.78  +1.81  +1.81",
+          "Leo I               MW  0.52  0.52 0.452    0.49   0.238   0.237    0.24    0.24  +0.31  +0.31  +0.31",
+          "Andromeda IX       M31  0.40  0.40 0.440   47.84   0.184   0.179    0.18    0.18  +2.42  +2.43  +2.43",
+          "NGC 205            M31  1.30  1.30 0.492    0.90   0.590   0.641    0.64    0.59  +0.18  +0.15  +0.15"
+        ]
+      },
+      "paper_anchor_hint": "dSph 31 galaxies G_Strigari = 0.240 a_0 (paper M2)"
+    },
+    {
+      "status": "PASS",
+      "script_path": "cluster_stack_v3.py",
+      "script_sha256": "eb9ea397c0b195cc627c03fd6cd2267ee785ab029db016c676f0e8e74be638a2",
+      "return_code": 0,
+      "elapsed_sec": 15.43,
+      "stdout_total_lines": 73,
+      "stderr_total_lines": 2,
+      "stdout_tail_200": "============================================================\nCluster Stack Weak Lensing v3\nBCG identification + NFW+2halo model\n============================================================\n============================================================\nStep 1: BCG Identification\n============================================================\n\n  cl1: (RA=140.45, Dec=-0.25, z=0.313)\n    BCG: RA=140.3975, Dec=-0.2154, r=12.46\n    Offset: 3.78 arcmin\n\n  cl3: (RA=139.8, Dec=-0.1, z=0.318)\n    BCG: RA=139.7356, Dec=-0.0573, r=10.97\n    Offset: 4.64 arcmin\n\n  cl4: (RA=140.9, Dec=-0.5, z=0.315)\n    BCG: RA=140.8669, Dec=-0.5191, r=15.32\n    Offset: 2.29 arcmin\n\n  cl27: (RA=141.2, Dec=0.1, z=0.322)\n    BCG: RA=141.1183, Dec=0.1756, r=8.85\n    Offset: 6.68 arcmin\n\n--- BCG Summary ---\n  cl1: offset=3.78 arcmin, r_mag=12.45676\n  cl3: offset=4.64 arcmin, r_mag=10.97353\n  cl4: offset=2.29 arcmin, r_mag=15.31607\n  cl27: offset=6.68 arcmin, r_mag=8.850941\n\n============================================================\nStep 3: HSC Shear Data\n============================================================\n\n  cl1 (center: BCG at 140.3975, -0.2154):\n  HSC SQL query saved to: cluster_stack_v3_output\\hsc_query_cl1.sql\n\n  cl3 (center: BCG at 139.7356, -0.0573):\n  HSC SQL query saved to: cluster_stack_v3_output\\hsc_query_cl3.sql\n\n  cl4 (center: BCG at 140.8669, -0.5191):\n  HSC SQL query saved to: cluster_stack_v3_output\\hsc_query_cl4.sql\n\n  cl27 (center: BCG at 141.1183, 0.1756):\n  HSC SQL query saved to: cluster_stack_v3_output\\hsc_query_cl27.sql\n  Found existing: cl1_sources_photoz.csv\n  Found existing: cl3_sources_photoz.csv\n  Found existing: cl4_sources_photoz.csv\n  Found existing: cl27_sources_photoz.csv\n\n--- Processing existing shear data ---\n\n  cl1:\n  107302 background galaxies\n    S/N = 0.0\n    |gamma_x| = 0.0000\n\n  cl3:\n  106047 background galaxies\n    S/N = 0.0\n    |gamma_x| = 0.0000\n\n  cl4:\n  106206 background galaxies\n    S/N = 0.0\n    |gamma_x| = 0.0000\n\n  cl27:\n  105443 background galaxies\n    S/N = 0.0\n    |gamma_x| = 0.0000\n\nResults: cluster_stack_v3_output",
+      "stderr_tail_50": "D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\cluster_stack_v3.py:307: RuntimeWarning: divide by zero encountered in divide\n  e_gamma = np.where(n_count > 1, 1.0 / np.sqrt(n_count * w_sum / np.maximum(w_sum, 1)), 1e10)",
+      "extracted_patterns": {
+        "cluster": [
+          "Cluster Stack Weak Lensing v3",
+          "HSC SQL query saved to: cluster_stack_v3_output\\hsc_query_cl1.sql",
+          "HSC SQL query saved to: cluster_stack_v3_output\\hsc_query_cl3.sql",
+          "HSC SQL query saved to: cluster_stack_v3_output\\hsc_query_cl4.sql",
+          "HSC SQL query saved to: cluster_stack_v3_output\\hsc_query_cl27.sql",
+          "Results: cluster_stack_v3_output"
+        ],
+        "stack": [
+          "Cluster Stack Weak Lensing v3",
+          "HSC SQL query saved to: cluster_stack_v3_output\\hsc_query_cl1.sql",
+          "HSC SQL query saved to: cluster_stack_v3_output\\hsc_query_cl3.sql",
+          "HSC SQL query saved to: cluster_stack_v3_output\\hsc_query_cl4.sql",
+          "HSC SQL query saved to: cluster_stack_v3_output\\hsc_query_cl27.sql",
+          "Results: cluster_stack_v3_output"
+        ],
+        "shear": [
+          "Step 3: HSC Shear Data",
+          "--- Processing existing shear data ---"
+        ],
+        "Z=": [
+          "cl1: (RA=140.45, Dec=-0.25, z=0.313)",
+          "cl3: (RA=139.8, Dec=-0.1, z=0.318)",
+          "cl4: (RA=140.9, Dec=-0.5, z=0.315)",
+          "cl27: (RA=141.2, Dec=0.1, z=0.322)"
+        ],
+        "z=": [
+          "cl1: (RA=140.45, Dec=-0.25, z=0.313)",
+          "cl3: (RA=139.8, Dec=-0.1, z=0.318)",
+          "cl4: (RA=140.9, Dec=-0.5, z=0.315)",
+          "cl27: (RA=141.2, Dec=0.1, z=0.322)"
+        ]
+      },
+      "paper_anchor_hint": "Cluster stack v3 (16 clusters)"
+    },
+    {
+      "status": "PASS",
+      "script_path": "joint_analysis.py",
+      "script_sha256": "8e1ac471495887d7433a1d054c6e0ac332609ed15ab7c4719f4f67b2dbc10943",
+      "return_code": 0,
+      "elapsed_sec": 2.26,
+      "stdout_total_lines": 81,
+      "stderr_total_lines": 0,
+      "stdout_tail_200": "======================================================================\nSPARC + LITTLE THINGS 合同解析\n======================================================================\n\n--- SPARC ---\n  sparc_results: 175, gc_independent: 175\n  有効銀河: 160\n  h_R: median=2.06, mean=2.56, range=[0.19, 8.88] kpc\n\n--- LITTLE THINGS ---\n  22 銀河\n\n--- 結合 ---\n  SPARC: 160, LT新規: 19, 重複: 3\n  重複名: DDO_154, DDO_168, NGC_2366\n  合計: 179\n\n======================================================================\nSPARC 単独\n======================================================================\n  N=160, α=0.5452±0.0412\n  95%CI: [0.464, 0.627]\n  p(α=0.5)=0.2733, σ_res=0.3117 dex\n  p(α=0)=2.04e-27, p(α=1)=2.18e-21\n  ΔAIC(幾何平均)=-130.4, ΔAIC(α自由)=-129.6\n\n======================================================================\n合同 (SPARC + LT)\n======================================================================\n  N=178 (SPARC:160, LT:18)\n  α=0.5764±0.0474\n  95%CI: [0.483, 0.670]\n  p(α=0.5)=0.1085, σ_res=0.3734 dex\n  p(α=0)=4.06e-25, p(α=1)=5.06e-16\n  ρ=0.641 (p=6.09e-22)\n  ΔAIC(幾何平均)=-122.3, ΔAIC(α自由)=-123.0\n\n--- LT追加の影響 ---\n                            SPARC         合同          Δ\n  ----------------------------------------------------\n  α                        0.5452     0.5764    +0.0311\n  σ_α                      0.0412     0.0474    +0.0062\n  σ_res                    0.3117     0.3734    +0.0617\n  p(α=0.5)                 0.2733     0.1085\n  ΔAIC                     -130.4     -122.3\n\n--- ジャックナイフ (LT銀河除外) ---\n  銀河                   Δα\n  ------------------------\n  NGC_3738       -0.02053\n  DDO_50         -0.00893\n  IC_10          +0.00658\n  NGC_1569       -0.00610\n  CVnIdwA        -0.00482\n  IC_1613        -0.00430\n  DDO_52         +0.00393\n  DDO_133        +0.00338\n  最大影響: ±0.02053 (要注意)\n\n--- ブートストラップ (合同, 10000回) ---\n  α=0.5795±0.0450\n  95%CI: [0.499, 0.675]\n  0.5 in CI: YES ✓\n\nプロット: joint_analysis_results\\joint_analysis.png\n結果: joint_analysis_results\\joint_results.json\n\n======================================================================\n最終判定\n======================================================================\n  ✓ α=0.5: p=0.1085 (合同N=178)\n  △ LT追加影響: Δα=+0.0311\n  ✓ MOND棄却: p=4.06e-25\n  ✓ ΔAIC=-122.3\n  ✓ Boot CI に 0.5\n\n  4/5 通過\n\n======================================================================\n完了\n======================================================================",
+      "stderr_tail_50": "",
+      "extracted_patterns": {
+        "joint": [
+          "プロット: joint_analysis_results\\joint_analysis.png",
+          "結果: joint_analysis_results\\joint_results.json"
+        ],
+        "AIC": [
+          "ΔAIC(幾何平均)=-130.4, ΔAIC(α自由)=-129.6",
+          "ΔAIC(幾何平均)=-122.3, ΔAIC(α自由)=-123.0",
+          "ΔAIC                     -130.4     -122.3",
+          "✓ ΔAIC=-122.3"
+        ],
+        "SPARC": [
+          "SPARC + LITTLE THINGS 合同解析",
+          "--- SPARC ---",
+          "sparc_results: 175, gc_independent: 175",
+          "SPARC: 160, LT新規: 19, 重複: 3",
+          "SPARC 単独",
+          "合同 (SPARC + LT)"
+        ]
+      },
+      "paper_anchor_hint": "Joint SPARC + lensing analysis"
+    },
+    {
+      "status": "PASS",
+      "script_path": "manga_v2.py",
+      "script_sha256": "e18016bf6d0b3453153bec8a2bb5b803a224247bcfbd5dd2785a3afe80a1042f",
+      "return_code": 0,
+      "elapsed_sec": 2.08,
+      "stdout_total_lines": 61,
+      "stderr_total_lines": 0,
+      "stdout_tail_200": "======================================================================\nMaNGA v2: rotation-dominated subsample (Lambda_Re > 0.5)\n======================================================================\n  10296 galaxies\n  base cols: ['plate', 'ifudsgn', 'plateifu', 'mangaid', 'obj_ra', 'obj_dec', 'ebvgal', 'target', 'DA', 'rmax_arcsec', 'Re_arcsec_MGE', 'Rmaj_arcsec_MGE', 'Lum_tot_MGE', 'Lambda_Re', 'Sigma_Re', 'Eps_MGE', 'PA_phot', 'PA_kin', 'PA_kin_flag', 'nsa_iauname', 'z', 'nsa_field', 'nsa_run', 'nsa_camcol', 'nsa_version', 'nsa_id', 'nsa_nsaid_v1b', 'nsa_sersic_absmag', 'nsa_elpetro_absmag', 'nsa_sersic_mass', 'nsa_elpetro_mass', 'nsa_sersic_ba', 'nsa_sersic_n', 'nsa_sersic_phi', 'nsa_sersic_th50', 'nsa_sersic_flux', 'Qual', 'drp3qual']\n  computing distances...\n\n--- sample statistics ---\n  valid base: 10088\n  Lambda_Re: median=0.552, [0.025, 0.989]\n  Lambda_Re > 0.5: 5652\n  Lambda_Re > 0.3: 7572\n\n--- all (N=9847) ---\n  alpha=1.110±0.011, 95%CI=[1.088,1.132]\n  p(0.5)=0.0000 ✗\n  p(0)=0.00e+00, σ_res=0.404, ρ=0.716\n  dAIC(geom)=-9160.3\n\n--- fast_rot (>0.5) (N=5567) ---\n  alpha=1.033±0.015, 95%CI=[1.005,1.062]\n  p(0.5)=0.0000 ✗\n  p(0)=0.00e+00, σ_res=0.371, ρ=0.665\n  dAIC(geom)=-4772.2\n\n--- slow_rot (<0.3) (N=2434) ---\n  alpha=1.216±0.023, 95%CI=[1.170,1.262]\n  p(0.5)=0.0000 ✗\n  p(0)=0.00e+00, σ_res=0.373, ρ=0.726\n  dAIC(geom)=-3348.0\n\n  SPARC comparison (fast_rot): z=11.22 (✗)\n\n--- mass bin analysis (fast rotators) ---\n  dwarf: N=1104, α=1.038±0.055, p(0.5)=0.0000\n  mid: N=3347, α=1.107±0.017, p(0.5)=0.0000\n  massive: N=1124, α=1.406±0.026, p(0.5)=0.0000\n\n======================================================================\ncomparison\n======================================================================\n  dataset                     N       α    σ_α     p(0.5)  σ_res\n  ------------------------------------------------------------\n  SPARC                     175   0.545  0.041      0.273  0.312\n  LT+SPARC joint            178   0.576  0.047      0.109  0.373\n  MaNGA all                9847   1.110  0.011     0.0000  0.404\n  MaNGA fast_rot (>0.5)    5567   1.033  0.015     0.0000  0.371\n  MaNGA slow_rot (<0.3)    2434   1.216  0.023     0.0000  0.373\n\nplot: manga_results\\manga_v2_rotators.png\nresults: manga_results\\manga_v2_results.json\n\n======================================================================\nverdict\n======================================================================\n  α=0.5 REJECTED in fast rotators (p=0.0000) ✗\n  α=1.033, closer to 0.5 than all-sample (0.922)\n\n======================================================================\ndone\n======================================================================",
+      "stderr_tail_50": "",
+      "extracted_patterns": {
+        "MaNGA": [
+          "MaNGA v2: rotation-dominated subsample (Lambda_Re > 0.5)",
+          "base cols: ['plate', 'ifudsgn', 'plateifu', 'mangaid', 'obj_ra', 'obj_dec', 'ebvgal', 'target', 'DA', 'rmax_arcsec', 'Re_arcsec_MGE', 'Rmaj_arcsec_MGE', 'Lum_tot_MGE', 'Lambda_Re', 'Sigma_Re', 'Eps_MGE', 'PA_phot', 'PA_kin', 'PA_kin_flag', 'nsa_iauname', 'z', 'nsa_field', 'nsa_run', 'nsa_camcol', 'nsa_version', 'nsa_id', 'nsa_nsaid_v1b', 'nsa_sersic_absmag', 'nsa_elpetro_absmag', 'nsa_sersic_mass', 'nsa_elpetro_mass', 'nsa_sersic_ba', 'nsa_sersic_n', 'nsa_sersic_phi', 'nsa_sersic_th50', 'nsa_sersic_flux', 'Qual', 'drp3qual']",
+          "MaNGA all                9847   1.110  0.011     0.0000  0.404",
+          "MaNGA fast_rot (>0.5)    5567   1.033  0.015     0.0000  0.371",
+          "MaNGA slow_rot (<0.3)    2434   1.216  0.023     0.0000  0.373",
+          "plot: manga_results\\manga_v2_rotators.png"
+        ],
+        "manga": [
+          "MaNGA v2: rotation-dominated subsample (Lambda_Re > 0.5)",
+          "base cols: ['plate', 'ifudsgn', 'plateifu', 'mangaid', 'obj_ra', 'obj_dec', 'ebvgal', 'target', 'DA', 'rmax_arcsec', 'Re_arcsec_MGE', 'Rmaj_arcsec_MGE', 'Lum_tot_MGE', 'Lambda_Re', 'Sigma_Re', 'Eps_MGE', 'PA_phot', 'PA_kin', 'PA_kin_flag', 'nsa_iauname', 'z', 'nsa_field', 'nsa_run', 'nsa_camcol', 'nsa_version', 'nsa_id', 'nsa_nsaid_v1b', 'nsa_sersic_absmag', 'nsa_elpetro_absmag', 'nsa_sersic_mass', 'nsa_elpetro_mass', 'nsa_sersic_ba', 'nsa_sersic_n', 'nsa_sersic_phi', 'nsa_sersic_th50', 'nsa_sersic_flux', 'Qual', 'drp3qual']",
+          "MaNGA all                9847   1.110  0.011     0.0000  0.404",
+          "MaNGA fast_rot (>0.5)    5567   1.033  0.015     0.0000  0.371",
+          "MaNGA slow_rot (<0.3)    2434   1.216  0.023     0.0000  0.373",
+          "plot: manga_results\\manga_v2_rotators.png"
+        ],
+        "AIC": [
+          "dAIC(geom)=-9160.3",
+          "dAIC(geom)=-4772.2",
+          "dAIC(geom)=-3348.0"
+        ],
+        "v2": [
+          "MaNGA v2: rotation-dominated subsample (Lambda_Re > 0.5)",
+          "plot: manga_results\\manga_v2_rotators.png",
+          "results: manga_results\\manga_v2_results.json"
+        ]
+      },
+      "paper_anchor_hint": "MaNGA v2 IFU rotation curves"
+    },
+    {
+      "status": "PASS",
+      "script_path": "little_things_step2.py",
+      "script_sha256": "0fe240cc63a03392297dc5a249e6d7ad81d28dce1dbf5b9f66e15c97a9f75fb6",
+      "return_code": 0,
+      "elapsed_sec": 2.23,
+      "stdout_total_lines": 100,
+      "stderr_total_lines": 2,
+      "stdout_tail_200": "======================================================================\nLITTLE THINGS Step 2: g_c測定 → α=0.5 検定\n======================================================================\n\nデータ読み込み...\n  rotdmbar.dat: 26 銀河\n  rotdm.dat:    22 銀河\n  table2.dat:   26 銀河\n  共通銀河 (Data有): 22\n\n銀河           N log(gc/a0) V_flat   h_R  log(GΣ₀)  χ²/dof\n------------------------------------------------------------\nCVnIdwA     14     -1.003   23.8  1.14   -10.791    6.41\nDDO_101      7      1.291   62.3  0.53    -9.620   23.68\nDDO_126     29     -0.405   37.6  1.44   -10.497    0.68\nDDO_133     19      0.064   45.8  1.74   -10.408    2.00\nDDO_154     55     -0.041   47.3  1.29   -10.253    0.82\nDDO_168     33     -0.144   53.8  1.57   -10.223    7.14\nDDO_210      7     -0.483   10.4  0.15   -10.647    0.21\nDDO_216     11     -0.719   15.3  0.24   -10.502    0.60\nDDO_43       9     -0.405   37.8  2.10   -10.655    1.90\nDDO_50      77     -1.781   33.0  0.83   -10.375    3.11\nDDO_52      16      0.246   60.6  2.71   -10.358    0.77\nDDO_53      12     -0.661   31.9  0.31    -9.974    0.97\nDDO_70      14     -0.287   41.5  0.28    -9.692    1.21\nDDO_87      31      0.016   53.3  2.06   -10.352    0.40\nHARO_36      9     -0.300   41.4  1.58   -10.453    0.35\nIC_10       20     -0.646   33.2  0.10    -9.448    0.07\nIC_1613     97     -1.743   19.7  0.18   -10.154    1.03\nNGC_1569    23     -1.431   45.0  1.41   -10.332    0.03\nNGC_2366    70     -0.311   58.2  1.38   -10.097    1.47\nNGC_3738    11      1.702  128.7  0.55    -9.011    1.34\nUGC_8508    24      0.561   40.9  0.23    -9.629    4.70\nWLM        132     -0.422   35.0  0.80   -10.304    4.48\n\n======================================================================\nα 検定  (N = 22 銀河)\n======================================================================\n\n  log(g_c) = 0.427 + 1.048 × log(G·Σ₀)\n  α = 1.048 ± 0.348\n  切片 = 0.427 ± 3.544\n  残差σ = 0.672 dex\n\n--- 仮説検定 ---\n  α=0.5 (幾何平均): t=+1.575, p=0.1310  棄却不可 ✓\n  α=0   (MOND):     t=+3.011, p=6.90e-03  棄却 ✗\n  α=1   (純Σ₀):    t=+0.139, p=8.91e-01  棄却不可\n  95% CI: [0.322, 1.774]\n  α=0.5 in CI: YES ✓\n  Spearman ρ = 0.372 (p = 8.81e-02)\n\n======================================================================\nSPARC との比較\n======================================================================\n                              SPARC(175)       LT(22)\n  -------------------------------------------------\n  α                                0.545        1.048\n  σ_α                              0.041        0.348\n  残差σ [dex]                        0.313        0.672\n  p(α=0.5)                          0.27       0.1310\n\n  α差: |1.048 - 0.545| = 0.503\n  合成σ = 0.350,  z = 1.44  (整合 ✓)\n\n======================================================================\nモデル比較 (AIC)\n======================================================================\n  モデル                             k   σ[dex]     ΔAIC\n  ------------------------------------------------\n  MOND (gc=a0)                    0    0.869        0\n  幾何平均(α=0.5)                     1    0.713     -6.7\n  幾何平均(α自由)                       2    0.672     -7.3\n  η(α=0.5) = 10^-0.188 = 0.648\n\n======================================================================\nブートストラップ (10000回)\n======================================================================\n  α(boot) = 0.984 ± 0.403\n  95% CI: [0.047, 1.631]\n  α ∈ [0.4, 0.6] の割合: 6.7%\n\n結果保存: little_things_results\\step2_results.json\nプロット保存: little_things_results\\step2_alpha_test.png\nRARプロット保存: little_things_results\\step2_RAR.png\n\n======================================================================\n最終判定\n======================================================================\n  ✓ α=0.5 棄却不可 (p=0.131)\n  ✓ SPARC α=0.545 と整合 (z=1.44)\n  ✓ 幾何平均 > MOND (ΔAIC=-6.7)\n  ✗ gc-GΣ₀ 相関非有意 (ρ=0.372, p=0.088)\n\n  総合: 3/4 通過\n  → 幾何平均法則は独立データセットで概ね支持\n\n======================================================================\nStep 2 完了\n======================================================================",
+      "stderr_tail_50": "D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\little_things_step2.py:170: RuntimeWarning: invalid value encountered in sqrt\n  v_bar = np.where(v_bar_sq > 0, np.sqrt(v_bar_sq), 0.0)",
+      "extracted_patterns": {
+        "LITTLE": [
+          "LITTLE THINGS Step 2: g_c測定 → α=0.5 検定",
+          "結果保存: little_things_results\\step2_results.json",
+          "プロット保存: little_things_results\\step2_alpha_test.png",
+          "RARプロット保存: little_things_results\\step2_RAR.png"
+        ],
+        "step2": [
+          "結果保存: little_things_results\\step2_results.json",
+          "プロット保存: little_things_results\\step2_alpha_test.png",
+          "RARプロット保存: little_things_results\\step2_RAR.png"
+        ],
+        "RAR": [
+          "RARプロット保存: little_things_results\\step2_RAR.png"
+        ]
+      },
+      "paper_anchor_hint": "Little Things irregular dwarf RAR"
+    },
+    {
+      "status": "PASS",
+      "script_path": "phase_c3_step1_verification.py",
+      "script_sha256": "d90fe29a89cf19bf1b19bd9928df1d4ee9b840a903c7fc2e2712111035bc45d8",
+      "return_code": 0,
+      "elapsed_sec": 1.26,
+      "stdout_total_lines": 56,
+      "stderr_total_lines": 306,
+      "stdout_tail_200": "============================================================\nPhase C3 Step 1 verification - 開始\n  実行場所: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\n============================================================\n\n[1] U'(ε_0) = 0 の確認\n    c=0.10: ε_0=0.948683, U'(ε_0)=-1.110e-15\n    c=0.30: ε_0=0.836660, U'(ε_0)=0.000e+00\n    c=0.50: ε_0=0.707107, U'(ε_0)=4.441e-16\n    c=0.70: ε_0=0.547723, U'(ε_0)=0.000e+00\n    c=0.90: ε_0=0.316228, U'(ε_0)=-2.220e-16\n    [OK] 全 c で U'(ε_0)=0 確認\n\n[2] U''(ε_0) = 2ε_0/(1-ε_0) の analytical 簡約\n    c=0.10: 直接=36.973666, 簡約=36.973666, 差=2.84e-14\n    c=0.30: 直接=10.244400, 簡約=10.244400, 差=0.00e+00\n    c=0.50: 直接=4.828427, 簡約=4.828427, 差=0.00e+00\n    c=0.70: 直接=2.422064, 簡約=2.422064, 差=0.00e+00\n    c=0.90: 直接=0.924951, 簡約=0.924951, 差=0.00e+00\n    [OK] 簡約式確認\n\n[3] 臨界指数 τ_m ~ (T_c - T)^(-n) の確認\n    log-log 回帰 slope = -0.5087 (期待値: -0.5 mean-field)\n    offset = -0.7963\n    [OK] 臨界指数 zν = 1/2 確認\n\n[4] 現在期 (c → 0) での memory 消滅確認\n    c=1.0e-04: τ_m · Γ = 2.5002e-05\n    c=1.0e-03: τ_m · Γ = 2.5019e-04\n    c=1.0e-02: τ_m · Γ = 2.5189e-03\n    c=1.0e-01: τ_m · Γ = 2.7046e-02\n    [OK] c → 0 で τ_m → 0 (memory 消滅)\n\n[5] ρ_th 内部決定値 (λ=1)\n    c=0.10: ε_*=0.6838, ε_0=0.9487, ρ_th=1.3675\n    c=0.30: ε_*=0.4523, ε_0=0.8367, ρ_th=0.9046\n    c=0.50: ε_*=0.2929, ε_0=0.7071, ρ_th=0.5858\n    c=0.70: ε_*=0.1633, ε_0=0.5477, ρ_th=0.3267\n    c=0.90: ε_*=0.0513, ε_0=0.3162, ρ_th=0.1026\n    [備考] ρ_th は c に対して単調、新パラメータを追加せず\n\n[6] u_mem ∝ F² scaling 確認 (路線 A)\n    c_demo=0.5, ε_0=0.7071, U''=4.8284, τ_m·Γ=0.2071\n    F=0.10: δε_ss=0.0207, u_mem=0.0010, u/F²=0.1036\n    F=0.20: δε_ss=0.0414, u_mem=0.0041, u/F²=0.1036\n    F=0.50: δε_ss=0.1036, u_mem=0.0259, u/F²=0.1036\n    F=1.00: δε_ss=0.2071, u_mem=0.1036, u/F²=0.1036\n    [OK] u_mem/F² が F に非依存 (定数) → 二次 scaling 確認\n\n[PLOT] 4 panel figure 保存: phase_c3_step1_verification.png\n\n[QA] log 保存: phase_c3_step1_qa.txt\n\n============================================================\nPhase C3 Step 1 verification - 完了\n============================================================",
+      "stderr_tail_50": "findfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.\nfindfont: Font family 'IPAGothic' not found.",
+      "extracted_patterns": {
+        "C3": [
+          "Phase C3 Step 1 verification - 開始",
+          "[PLOT] 4 panel figure 保存: phase_c3_step1_verification.png",
+          "[QA] log 保存: phase_c3_step1_qa.txt",
+          "Phase C3 Step 1 verification - 完了"
+        ],
+        "step1": [
+          "[PLOT] 4 panel figure 保存: phase_c3_step1_verification.png",
+          "[QA] log 保存: phase_c3_step1_qa.txt"
+        ],
+        "verification": [
+          "Phase C3 Step 1 verification - 開始",
+          "[PLOT] 4 panel figure 保存: phase_c3_step1_verification.png",
+          "Phase C3 Step 1 verification - 完了"
+        ],
+        "OK": [
+          "[OK] 全 c で U'(ε_0)=0 確認",
+          "[OK] 簡約式確認",
+          "[OK] 臨界指数 zν = 1/2 確認",
+          "[OK] c → 0 で τ_m → 0 (memory 消滅)",
+          "[OK] u_mem/F² が F に非依存 (定数) → 二次 scaling 確認"
+        ]
+      },
+      "paper_anchor_hint": "Phase C3 step 1 verification"
+    },
+    {
+      "status": "PASS",
+      "script_path": "phase_c3_step2_sparc_gamma_vs_alpha.py",
+      "script_sha256": "43841f80b53325b7d6229a7e508f10785a29028343ad34c5793566abda4e4a08",
+      "return_code": 0,
+      "elapsed_sec": 1.96,
+      "stdout_total_lines": 81,
+      "stderr_total_lines": 0,
+      "stdout_tail_200": "======================================================================\nPhase C3 Step 2: gamma vs alpha model discrimination\nSample: v3 Primary (Phase C2 protocol, bridge excluded)\n======================================================================\nGrid: [0.1, 10000.0], N = 500\n\n[1] Loading SPARC (v3 Primary cut)...\n    Raw: 175\n    Q < 3: 163\n    Bridge present: ['NGC3741', 'NGC2915']\n    FINAL N = 124 (matches v3 Primary if N=124)\n    rho_0 = 3.259e+07\n\n[2] Alpha model (linear F = lambda * rho_gal)...\n    Direct:  slope b = +0.0528, NLL = -30.767, AIC = -57.53, BIC = -51.89\n    Partial: slope b = +0.1084, coef c = +0.3751, NLL = -50.790, AIC = -95.58, BIC = -87.12\n\n[3] Gamma model (threshold F = lambda * rho_gal - 2*eps_star)...\n    Direct:  lambda_best = 20.636, NLL = -31.142\n             5sig CI = [4.50, 10000.00]  saturated: True\n             AIC = -56.28, BIC = -47.82\n    Partial: lambda_best = 10000.000, NLL = -50.789\n             5sig CI = [6.51, 10000.00]  saturated: True\n             AIC = -93.58, BIC = -82.30\n\n======================================================================\n[4] Model comparison (direct / partial)\n======================================================================\n\n  -- DIRECT OLS --\n  alpha:  k=2  NLL=-30.767  AIC=-57.53  BIC=-51.89  dAIC vs null = +8.75\n  gamma:  k=3  NLL=-31.142  AIC=-56.28  BIC=-47.82  dAIC vs null = +7.50\n  alpha - gamma:\n    delta AIC = -1.251  (>0 favors gamma, <0 favors alpha)\n    delta BIC = -4.071  (>0 favors gamma, <0 favors alpha)\n    LRT (2*dNLL) = 0.749  p (boundary-adjusted) = 1.9342e-01\n    Verdict: Tied (alpha preferred by parsimony)\n\n  -- PARTIAL OLS --\n  alpha:  k=3  NLL=-50.790  AIC=-95.58  BIC=-87.12  dAIC vs null = +46.80\n  gamma:  k=4  NLL=-50.789  AIC=-93.58  BIC=-82.30  dAIC vs null = +44.80\n  alpha - gamma:\n    delta AIC = -2.002  (>0 favors gamma, <0 favors alpha)\n    delta BIC = -4.822  (>0 favors gamma, <0 favors alpha)\n    LRT (2*dNLL) = -0.002  p (boundary-adjusted) = 1.0000e+00\n    Verdict: ALPHA preferred (substantial)\n\n[5] Partial Spearman comparison (conditioning on log r_h)\n    alpha: simple rho = +0.3249  residualize rho = +0.5496  sigma = 6.80\n    gamma: simple rho = +0.3249  residualize rho = +0.5496  sigma = 6.80  (at lam=10000.0)\n\n[6] Residual pattern check (systematic deviation from rho_gal?)\n    alpha direct  resid vs log rho_gal: rho = +0.0517  p = 5.685e-01\n    alpha partial resid vs log rho_gal: rho = +0.0194  p = 8.304e-01\n    gamma direct  resid vs log rho_gal: rho = +0.0308  p = 7.362e-01\n    gamma partial resid vs log rho_gal: rho = +0.0192  p = 8.326e-01\n    (|rho| > 0.2 or p < 0.01 -> systematic pattern not captured by model)\n\n======================================================================\n[7] FINAL VERDICT\n======================================================================\nSample: N = 124 (v3 Primary)\n\nPARTIAL (primary metric, conditioning on log r_h):\n  alpha:  rho_res = +0.5496  sigma = 6.80  AIC = -95.58  BIC = -87.12\n  gamma:  rho_res = +0.5496  sigma = 6.80  AIC = -93.58  BIC = -82.30  (at lam = 10000.0, saturated: True)\n  delta AIC (alpha - gamma): -2.002\n  delta BIC (alpha - gamma): -4.822\n  Verdict: ALPHA preferred (substantial)\n\nFINAL: ALPHA preferred (threshold rejected)\n  delta AIC = -2.00 in favor of alpha\n\n[8] Writing 6-panel figure...\n    Saved: phase_c3_step2_sparc_gamma_vs_alpha.png\n    Saved: phase_c3_step2_sparc_gamma_vs_alpha_qa.txt\n    Saved: phase_c3_step2_sparc_gamma_vs_alpha_models.csv\n\nFINAL VERDICT: ALPHA preferred (threshold rejected)\n  delta AIC = -2.00 in favor of alpha\nDone.",
+      "stderr_tail_50": "",
+      "extracted_patterns": {
+        "gamma": [
+          "Phase C3 Step 2: gamma vs alpha model discrimination",
+          "[3] Gamma model (threshold F = lambda * rho_gal - 2*eps_star)...",
+          "gamma:  k=3  NLL=-31.142  AIC=-56.28  BIC=-47.82  dAIC vs null = +7.50",
+          "alpha - gamma:",
+          "delta AIC = -1.251  (>0 favors gamma, <0 favors alpha)",
+          "delta BIC = -4.071  (>0 favors gamma, <0 favors alpha)"
+        ],
+        "alpha": [
+          "Phase C3 Step 2: gamma vs alpha model discrimination",
+          "[2] Alpha model (linear F = lambda * rho_gal)...",
+          "alpha:  k=2  NLL=-30.767  AIC=-57.53  BIC=-51.89  dAIC vs null = +8.75",
+          "alpha - gamma:",
+          "delta AIC = -1.251  (>0 favors gamma, <0 favors alpha)",
+          "delta BIC = -4.071  (>0 favors gamma, <0 favors alpha)"
+        ],
+        "SPARC": [
+          "[1] Loading SPARC (v3 Primary cut)...",
+          "Saved: phase_c3_step2_sparc_gamma_vs_alpha.png",
+          "Saved: phase_c3_step2_sparc_gamma_vs_alpha_qa.txt",
+          "Saved: phase_c3_step2_sparc_gamma_vs_alpha_models.csv"
+        ]
+      },
+      "paper_anchor_hint": "Phase C3 step 2 SPARC gamma vs alpha"
+    },
+    {
+      "status": "PASS",
+      "script_path": "phase_c3_step3_dsph_gamma_vs_alpha.py",
+      "script_sha256": "c51c72f07d1b66636d695cc4cf69d8b4d0163a5fa3cc48836263a06666a295fb",
+      "return_code": 0,
+      "elapsed_sec": 2.43,
+      "stdout_total_lines": 142,
+      "stderr_total_lines": 0,
+      "stdout_tail_200": "======================================================================\nPhase C3 Step 3: dSph + SPARC integrated gamma vs alpha discrimination\n======================================================================\nGrid: lambda in [1.00e-11, 1.00e-02] kpc^3/M_sun\nG_Strigari = 0.228 * a0 = 2.736e-11 m/s^2\nThreshold constant 2*eps_star = 1.998000\n\n[1] Loading dSph sample (dsph_jeans_c15_v1.csv)...\n    Raw: 31\n    Sgr excluded: removed 1 -> N = 30\n    FINAL dSph N = 30\n    log10(rho_gal) range: [5.00, 8.60]\n    delta_primary range:  [-0.496, +0.868]\n\n    Phase C2 strict 15 subset: 15 galaxies matched (expected 15 if names align)\n\n[2] Loading SPARC (v3 Primary cut)...\n    SPARC Primary: N = 124\n    log10(rho_gal) range: [5.88, 8.92]\n\n======================================================================\n[3] (A) dSph alone, PRIMARY delta (g_obs / G_Strigari)\n======================================================================\n\n    === dSph 30, primary delta  (N = 30) ===\n    alpha direct:   NLL=0.219  AIC=4.44  dAIC vs null = +14.18  b_alpha=+0.1201\n    alpha partial:  NLL=-3.804  AIC=-1.61  dAIC vs null = +20.22  b_alpha=+0.1127\n    gamma direct:   NLL=-2.134  AIC=1.73  lam=1.052e-07  5sig CI=[6.66e-08,1.00e-02]  sat=True\n    gamma partial:  NLL=-3.803  AIC=0.39  lam=1.000e-02  5sig CI=[6.66e-08,1.00e-02]  sat=True\n    -- Comparison --\n    dAIC (a-g) direct:   +2.707   GAMMA preferred (substantial)\n    dAIC (a-g) partial:  -2.002   ALPHA preferred (substantial)\n    dBIC (a-g) partial:  -3.403\n    LRT partial: 2*dNLL = -0.002  p_boundary = 1.0000e+00\n    Partial Spearman (alpha): rho_res=+0.5573  sigma=3.27\n    Partial Spearman (gamma): rho_res=+0.5573  sigma=3.27\n    Above threshold at lam_p: 30/30\n\n======================================================================\n[4] (B) dSph alone, SENSITIVITY delta_SCE (g_obs / G_eff(Q))\n======================================================================\n    N with finite delta_SCE: 30\n\n    === dSph 30, SCE delta  (N = 30) ===\n    alpha direct:   NLL=-0.039  AIC=3.92  dAIC vs null = +14.19  b_alpha=+0.1191\n    alpha partial:  NLL=-4.044  AIC=-2.09  dAIC vs null = +20.20  b_alpha=+0.1118\n    gamma direct:   NLL=-2.167  AIC=1.67  lam=1.052e-07  5sig CI=[6.66e-08,1.00e-02]  sat=True\n    gamma partial:  NLL=-4.043  AIC=-0.09  lam=1.000e-02  5sig CI=[6.66e-08,1.00e-02]  sat=True\n    -- Comparison --\n    dAIC (a-g) direct:   +2.256   GAMMA preferred (substantial)\n    dAIC (a-g) partial:  -2.002   ALPHA preferred (substantial)\n    dBIC (a-g) partial:  -3.403\n    LRT partial: 2*dNLL = -0.002  p_boundary = 1.0000e+00\n    Partial Spearman (alpha): rho_res=+0.5573  sigma=3.27\n    Partial Spearman (gamma): rho_res=+0.5573  sigma=3.27\n    Above threshold at lam_p: 30/30\n\n======================================================================\n[5] (C) SPARC alone, absolute-unit rho_gal (should reproduce Step 2)\n======================================================================\n\n    === SPARC 124, absolute units  (N = 124) ===\n    alpha direct:   NLL=-30.767  AIC=-57.53  dAIC vs null = +8.75  b_alpha=+0.0528\n    alpha partial:  NLL=-50.790  AIC=-95.58  dAIC vs null = +46.80  b_alpha=+0.1084\n    gamma direct:   NLL=-31.187  AIC=-56.37  lam=6.275e-07  5sig CI=[1.41e-07,1.00e-02]  sat=True\n    gamma partial:  NLL=-50.790  AIC=-93.58  lam=1.000e-02  5sig CI=[2.04e-07,1.00e-02]  sat=True\n    -- Comparison --\n    dAIC (a-g) direct:   -1.160   Tied (alpha by parsimony)\n    dAIC (a-g) partial:  -2.000   ALPHA preferred (substantial)\n    dBIC (a-g) partial:  -4.820\n    LRT partial: 2*dNLL = -0.000  p_boundary = 1.0000e+00\n    Partial Spearman (alpha): rho_res=+0.5496  sigma=6.80\n    Partial Spearman (gamma): rho_res=+0.5496  sigma=6.80\n    Above threshold at lam_p: 124/124\n\n======================================================================\n[6] (D) SPARC + dSph INTEGRATED  (separate intercept/slope, common lambda)\n======================================================================\n    Combined N = 154  (SPARC 124 + dSph 30)\n    log10(rho_gal) range: [5.00, 8.92]  span 3.92 dex\n    alpha direct (combo):   NLL=-28.808  AIC=-49.62\n    alpha partial (combo):  NLL=-52.441  AIC=-92.88\n    gamma direct (combo):   NLL=-31.055  AIC=-52.11\n                 lam = 3.444e-06  5sig CI [1.29e-07,1.00e-02]  sat=True\n    gamma partial (combo):  NLL=-52.561  AIC=-91.12\n                 lam = 4.066e-06  5sig CI [2.04e-07,1.00e-02]  sat=True\n    dAIC (a-g) direct:   +2.494   GAMMA preferred (substantial)\n    dAIC (a-g) partial:  -1.761   Tied (alpha by parsimony)\n    dBIC (a-g) partial:  -4.798\n    LRT partial: 2*dNLL = 0.239  p_boundary = 3.1244e-01\n    Alpha slope b_SPARC (combo partial): +0.1084\n    Alpha slope b_dSph  (combo partial): +0.1127\n    Difference |b_SPARC - b_dSph|: 0.0042\n    (if universal coupling, these should match)\n\n======================================================================\n[7] (E) Universal coupling check: standalone slopes\n======================================================================\n    SPARC standalone b_alpha (partial): +0.1084\n    dSph  standalone b_alpha (partial): +0.1127\n    |diff|: 0.0042\n\n======================================================================\n[8] (F) Phase C2 strict 15 dSph subset (robustness)\n======================================================================\n\n    === dSph strict 15  (N = 15) ===\n    alpha direct:   NLL=-0.415  AIC=3.17  dAIC vs null = +1.88  b_alpha=+0.0743\n    alpha partial:  NLL=-8.030  AIC=-10.06  dAIC vs null = +15.10  b_alpha=+0.0462\n    gamma direct:   NLL=-2.502  AIC=1.00  lam=3.508e-07  5sig CI=[1.53e-07,1.00e-02]  sat=True\n    gamma partial:  NLL=-9.112  AIC=-10.22  lam=3.229e-07  5sig CI=[1.53e-07,1.00e-02]  sat=True\n    -- Comparison --\n    dAIC (a-g) direct:   +2.174   GAMMA preferred (substantial)\n    dAIC (a-g) partial:  +0.165   GAMMA slightly preferred\n    dBIC (a-g) partial:  -0.543\n    LRT partial: 2*dNLL = 2.165  p_boundary = 7.0575e-02\n    Partial Spearman (alpha): rho_res=+0.4179  sigma=1.54\n    Partial Spearman (gamma): rho_res=+nan  sigma=nan\n    Above threshold at lam_p: 7/15\n\n======================================================================\n[9] FINAL VERDICT\n======================================================================\n  dSph alone (primary):      dAIC = -2.00  ALPHA preferred (substantial)\n                             gamma lam = 1.00e-02  sat = True\n  SPARC alone (abs units):   dAIC = -2.00  ALPHA preferred (substantial)\n  SPARC + dSph integrated:   dAIC = -1.76  Tied (alpha by parsimony)\n                             gamma lam = 4.07e-06  sat = True\n\n  *** Tied / inconclusive integrated test ***\n      Threshold neither supported nor rejected\n\n[10] Writing 6-panel figure...\n    Saved: phase_c3_step3_dsph_gamma_vs_alpha.png\n    Saved: phase_c3_step3_dsph_gamma_vs_alpha_models.csv\n    Saved: phase_c3_step3_dsph_gamma_vs_alpha_qa.txt\n\n[11] Writing per-galaxy (delta, log10(rho_gal)) CSVs...\n    Saved: phase_c3_step3_sparc_delta_vs_logrho.csv  (N=124)\n    Saved: phase_c3_step3_dsph_delta_vs_logrho.csv  (N=30)\n\nDone.",
+      "stderr_tail_50": "",
+      "extracted_patterns": {
+        "dSph": [
+          "Phase C3 Step 3: dSph + SPARC integrated gamma vs alpha discrimination",
+          "[1] Loading dSph sample (dsph_jeans_c15_v1.csv)...",
+          "FINAL dSph N = 30",
+          "[3] (A) dSph alone, PRIMARY delta (g_obs / G_Strigari)",
+          "=== dSph 30, primary delta  (N = 30) ===",
+          "[4] (B) dSph alone, SENSITIVITY delta_SCE (g_obs / G_eff(Q))"
+        ],
+        "gamma": [
+          "Phase C3 Step 3: dSph + SPARC integrated gamma vs alpha discrimination",
+          "gamma direct:   NLL=-2.134  AIC=1.73  lam=1.052e-07  5sig CI=[6.66e-08,1.00e-02]  sat=True",
+          "gamma partial:  NLL=-3.803  AIC=0.39  lam=1.000e-02  5sig CI=[6.66e-08,1.00e-02]  sat=True",
+          "dAIC (a-g) direct:   +2.707   GAMMA preferred (substantial)",
+          "Partial Spearman (gamma): rho_res=+0.5573  sigma=3.27",
+          "gamma direct:   NLL=-2.167  AIC=1.67  lam=1.052e-07  5sig CI=[6.66e-08,1.00e-02]  sat=True"
+        ],
+        "alpha": [
+          "Phase C3 Step 3: dSph + SPARC integrated gamma vs alpha discrimination",
+          "alpha direct:   NLL=0.219  AIC=4.44  dAIC vs null = +14.18  b_alpha=+0.1201",
+          "alpha partial:  NLL=-3.804  AIC=-1.61  dAIC vs null = +20.22  b_alpha=+0.1127",
+          "dAIC (a-g) partial:  -2.002   ALPHA preferred (substantial)",
+          "Partial Spearman (alpha): rho_res=+0.5573  sigma=3.27",
+          "alpha direct:   NLL=-0.039  AIC=3.92  dAIC vs null = +14.19  b_alpha=+0.1191"
+        ]
+      },
+      "paper_anchor_hint": "Phase C3 step 3 dSph gamma vs alpha"
+    },
+    {
+      "status": "PASS",
+      "script_path": "phase5_3_step1_ngc3198_extract.py",
+      "script_sha256": "906f56a8bdc89b763896356de7568f9ad7fb4e2b55f64d46c16096b51c05c16d",
+      "return_code": 0,
+      "elapsed_sec": 1.03,
+      "stdout_total_lines": 65,
+      "stderr_total_lines": 2,
+      "stdout_tail_200": "\n==============================================================================\n  phase5_3_step1_ngc3198_extract  (S4-5_phase5_3_step1_v1.0)\n==============================================================================\n[11:53:24] timestamp: 2026-04-27T11:53:24.558799\n[11:53:24] WORKING_DIR: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\n[11:53:24] a_0 = 1.2e-10 m/s^2\n[11:53:24] master table discovered: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\SPARC_Lelli2016c.mrt\n[11:53:24] rotmod discovered: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\Rotmod_LTG\\NGC3198_rotmod.dat\n\n==============================================================================\n  Phase 1: master catalog extraction\n==============================================================================\n[11:53:24] master sha256 head: 5aa0501f6b0d881f\n[11:53:24] reading master table: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\SPARC_Lelli2016c.mrt (suffix=.mrt)\n[11:53:24]   parser: pd.read_csv sep=\\s+ skiprows=98 (canonical MRT)\n[11:53:24]   rows: 175, columns: ['Galaxy', 'T', 'D', 'e_D', 'f_D', 'Inc', 'e_Inc', 'L36', 'e_L36', 'Reff', 'SBeff', 'Rdisk', 'SBdisk0', 'MHI', 'RHI', 'Vflat', 'e_Vflat', 'Q', 'Ref']\n[11:53:24] galaxy name column: Galaxy\n[11:53:24]   NGC 3198 row found via variation 'NGC3198', match count = 1\n[11:53:24] Υ_d: galaxy-specific column not found, using default 0.5 (SPARC canonical)\n[11:53:24] v_flat = 150.1 ± 3.9 km/s (col=Vflat)\n[11:53:24] h_R   = 3.14 kpc (col=Rdisk)\n[11:53:24] Υ_d   = 0.5 (SPARC default 3.6μm canonical (Lelli+2016c))\n[11:53:24] L_3.6 = 38.279, D = 13.8 Mpc, inc = 73.0 deg, Q = 1\n\n==============================================================================\n  Phase 2: rotation curve extraction\n==============================================================================\n[11:53:24] rc path: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\Rotmod_LTG\\NGC3198_rotmod.dat\n[11:53:24] rc sha256 head: 17b774ad11e7dd74\n[11:53:24] N_points = 43\n[11:53:24] r range: [0.320, 44.080] kpc\n[11:53:24] v_obs range: [24.40, 157.00] km/s\n[11:53:24] sanity assertions: PASS (monotonic r, v>0, err>=0, N>=5)\n\n==============================================================================\n  Phase 3: gc independent (tanh fit, r_s ∝ v_flat^0.795 route)\n==============================================================================\n[11:53:24] initial guess: v_inf = 1.501e+05 m/s, r_s = 1.543e+20 m\n[11:53:24] v_inf_tanh = 151.210 ± 0.462 km/s\n[11:53:24] r_s_tanh   = 3.773 ± 0.071 kpc\n[11:53:24] gc_independent = 1.9639e-10 ± 3.9030e-12 m/s^2\n[11:53:24] gc_independent / a_0 = 1.6366 ± 0.0325\n[11:53:24] note: Phase 4b retract trail: sparc_gc.csv gc_ratio column 不採用 (tautological)\n[11:53:24] note: r_s(tanh fit) ∝ v_flat^0.795 route 採用 (genuine finding)\n[11:53:24] [OK] rotation curve written: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\ngc3198_rotation_curve.csv\n[11:53:24] [OK] json written: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\ngc3198_sparc_values.json\n\n==============================================================================\n  Verification gates (G1-G7)\n==============================================================================\n[11:53:24]   G1_master_sha256_logged: PASS\n[11:53:24]   G2_ngc3198_match_count_1: PASS\n[11:53:24]   G3_v_flat_h_R_Y_d_non_null: PASS\n[11:53:24]   G4_rc_sanity: PASS\n[11:53:24]   G5_tanh_fit_converged: PASS\n[11:53:24]   G6_gc_a0_in_envelope: PASS\n[11:53:24]   G7_outputs_generated: PASS\n\n==============================================================================\n  VERDICT: STEP 1 COMPLETE\n==============================================================================\n[11:53:24] -> Step 2 (C15 prediction) 着手可\n\n[OK] log written: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\ngc3198_extract_log.txt",
+      "stderr_tail_50": "D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\phase5_3_step1_ngc3198_extract.py:16: SyntaxWarning: invalid escape sequence '\\C'\n  spec 指定 path `\\新膜宇宙論\\これまでの軌跡\\パイソン\\C3 拡張版仮説関連2\\` は不在のため、",
+      "extracted_patterns": {
+        "NGC": [
+          "phase5_3_step1_ngc3198_extract  (S4-5_phase5_3_step1_v1.0)",
+          "[11:53:24] rotmod discovered: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\Rotmod_LTG\\NGC3198_rotmod.dat",
+          "[11:53:24]   NGC 3198 row found via variation 'NGC3198', match count = 1",
+          "[11:53:24] rc path: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\Rotmod_LTG\\NGC3198_rotmod.dat",
+          "[11:53:24] [OK] rotation curve written: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\ngc3198_rotation_curve.csv",
+          "[11:53:24] [OK] json written: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\ngc3198_sparc_values.json"
+        ],
+        "3198": [
+          "phase5_3_step1_ngc3198_extract  (S4-5_phase5_3_step1_v1.0)",
+          "[11:53:24] rotmod discovered: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\Rotmod_LTG\\NGC3198_rotmod.dat",
+          "[11:53:24]   NGC 3198 row found via variation 'NGC3198', match count = 1",
+          "[11:53:24] rc path: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\Rotmod_LTG\\NGC3198_rotmod.dat",
+          "[11:53:24] [OK] rotation curve written: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\ngc3198_rotation_curve.csv",
+          "[11:53:24] [OK] json written: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\ngc3198_sparc_values.json"
+        ],
+        "v_flat": [
+          "[11:53:24] v_flat = 150.1 ± 3.9 km/s (col=Vflat)",
+          "Phase 3: gc independent (tanh fit, r_s ∝ v_flat^0.795 route)",
+          "[11:53:24] note: r_s(tanh fit) ∝ v_flat^0.795 route 採用 (genuine finding)",
+          "[11:53:24]   G3_v_flat_h_R_Y_d_non_null: PASS"
+        ],
+        "h_R": [
+          "[11:53:24] h_R   = 3.14 kpc (col=Rdisk)",
+          "[11:53:24]   G3_v_flat_h_R_Y_d_non_null: PASS"
+        ],
+        "extract": [
+          "phase5_3_step1_ngc3198_extract  (S4-5_phase5_3_step1_v1.0)",
+          "Phase 1: master catalog extraction",
+          "Phase 2: rotation curve extraction",
+          "[OK] log written: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\ngc3198_extract_log.txt"
+        ]
+      },
+      "paper_anchor_hint": "Phase 5-3 step 1 NGC 3198 SPARC extract"
+    },
+    {
+      "status": "PASS",
+      "script_path": "phase5_3_step3_nu_candidate_select.py",
+      "script_sha256": "151f5d86ec18249aef45dec7534d01a6e75d67a818f3b6e45c2f799ec5eeaaec",
+      "return_code": 0,
+      "elapsed_sec": 0.5,
+      "stdout_total_lines": 28,
+      "stderr_total_lines": 0,
+      "stdout_tail_200": "[phase5_3_step3 v1.0  (S4-5 chain)]\n[base] D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\n[load] ngc3198_rotation_curve.csv\n        rows = 43,  cols (raw) = ['r_kpc', 'v_obs_kms', 'v_obs_err_kms', 'v_gas_kms', 'v_disk_kms', 'v_bul_kms', 'SB_disk', 'SB_bul']\n        cols (normalized) = ['r_kpc', 'v_obs_kms', 'e_v_obs_kms', 'V_gas_kms', 'V_disk_kms', 'V_bul_kms', 'SB_disk', 'SB_bul']\n[load] ngc3198_sparc_values.json\n[load] ngc3198_c15_prediction.json\n        v_flat = 150.1 km/s,  h_R = 3.14 kpc,  Upsilon_d = 0.5\n        gc_indep = 1.6366038237613973 +/- 0.03252536523247026 a0\n        gc_C15  = 1.043354853095878 a0  (n_sigma = 1.0740546928706705, MARGINAL)\n\n[evaluate]\n  nu1_milgrom             chi2/dof =   14.182  AIC =    609.83  (n = 43)\n  nu2_mcgaugh             chi2/dof =   13.409  AIC =    576.59  (n = 43)\n  nu3a_membrane_HSC       chi2/dof =  293.673  AIC =  12627.96  (n = 43)\n  nu3b_membrane_KiDS      chi2/dof =  684.598  AIC =  29437.73  (n = 43)\n\n[selection]  best = nu2_mcgaugh  (chi2/dof = 13.409,  AIC = 576.59)\n[delta-AIC table]\n   * nu2_mcgaugh             dAIC =    +0.00\n     nu1_milgrom             dAIC =   +33.24\n     nu3a_membrane_HSC       dAIC = +12051.37\n     nu3b_membrane_KiDS      dAIC = +28861.14\n\n[write] ngc3198_nu_selection_verdict.txt  (3864 bytes)\n[write] phase5_3_to_5_2_handoff.json  (3587 bytes)\n\n[done]  Phase 5-3 Step 3 complete.  ->  Phase 5-2 epsilon_scale triangulation.",
+      "stderr_tail_50": "",
+      "extracted_patterns": {
+        "nu": [
+          "nu1_milgrom             chi2/dof =   14.182  AIC =    609.83  (n = 43)",
+          "nu2_mcgaugh             chi2/dof =   13.409  AIC =    576.59  (n = 43)",
+          "nu3a_membrane_HSC       chi2/dof =  293.673  AIC =  12627.96  (n = 43)",
+          "nu3b_membrane_KiDS      chi2/dof =  684.598  AIC =  29437.73  (n = 43)",
+          "[selection]  best = nu2_mcgaugh  (chi2/dof = 13.409,  AIC = 576.59)",
+          "* nu2_mcgaugh             dAIC =    +0.00"
+        ],
+        "select": [
+          "[selection]  best = nu2_mcgaugh  (chi2/dof = 13.409,  AIC = 576.59)",
+          "[write] ngc3198_nu_selection_verdict.txt  (3864 bytes)"
+        ]
+      },
+      "paper_anchor_hint": "Phase 5-3 step 3 nu candidate selection"
+    }
+  ]
+}

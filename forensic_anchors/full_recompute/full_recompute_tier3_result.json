@@ -1,0 +1,288 @@
+{
+  "schema_version": "full_recompute_tier3_runner_v1.0",
+  "purpose": "Tier-3 variant + mirror site re-run forensic anchor",
+  "execution_timestamp_utc": "2026-04-27T02:55:13.905261+00:00",
+  "host": "MSI-Z790ACEMAX",
+  "python_version": "3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]",
+  "n_scripts_tier3": 9,
+  "summary": {
+    "PASS": 8,
+    "FAIL": 1,
+    "TIMEOUT": 0,
+    "ERROR": 0,
+    "SKIP": 0
+  },
+  "results": [
+    {
+      "status": "PASS",
+      "script_path": "cluster_stack_v3_fix.py",
+      "script_sha256": "3bd9cab24223a6ab9a99a79c00efe3bc3dc8d6c0aa768fcf01af772231db280e",
+      "cwd": "D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン",
+      "return_code": 0,
+      "elapsed_sec": 5.52,
+      "stdout_total_lines": 124,
+      "stderr_total_lines": 0,
+      "stdout_tail_200": "============================================================\nCluster Stack v3 Fix\n============================================================\n============================================================\nBCG Identification (z_spec required, M_r < -21)\n============================================================\n\n  cl1: z=0.313, D_L=1550 Mpc, dist_mod=41.0, r_limit=20.0\n    BCG: RA=140.39772 Dec=-0.24158\n    r=18.35, M_r=-22.60, z_spec=0.3126\n    Offset: 3.18 arcmin = 1.091 Mpc\n    Candidates: 10\n      #1: r=18.35, z=0.3126, offset=3.18'\n      #2: r=18.39, z=0.3130, offset=5.00'\n      #3: r=18.55, z=0.3113, offset=1.16'\n      #4: r=18.84, z=0.3139, offset=6.73'\n      #5: r=19.09, z=0.3132, offset=3.99'\n\n  cl3: z=0.318, D_L=1578 Mpc, dist_mod=41.0, r_limit=20.0\n    BCG: RA=139.74994 Dec=-0.03449\n    r=19.06, M_r=-21.93, z_spec=0.3225\n    Offset: 4.95 arcmin = 1.723 Mpc\n    Candidates: 2\n      #1: r=19.06, z=0.3225, offset=4.95'\n      #2: r=19.18, z=0.3077, offset=6.42'\n\n  cl4: z=0.315, D_L=1562 Mpc, dist_mod=41.0, r_limit=20.0\n    No spectroscopic members found\n    -> Using original center as fallback\n\n  cl27: z=0.322, D_L=1601 Mpc, dist_mod=41.0, r_limit=20.0\n    No spectroscopic members found\n    -> Using original center as fallback\n\n============================================================\nShear File Search\n============================================================\n  Found 35 candidate files:\n    act_j1258_shear.csv\n    cl1_individual_shear.csv\n    cl1_sources.csv\n    cl1_sources_photoz.csv\n    cl27_sources.csv\n    cl27_sources_photoz.csv\n    cl3_sources.csv\n    cl3_sources_photoz.csv\n    cl4_sources.csv\n    cl4_sources_photoz.csv\n    cl5_sources.csv\n    hsc_photoz_cl1.csv\n    hsc_photoz_cl2.csv\n    hsc_photoz_cl3.csv\n    hsc_photoz_cl4.csv\n    hsc_photoz_cl5.csv\n    hsc_photoz_cl6.csv\n    hsc_photoz_cl7.csv\n    hsc_photoz_cl8.csv\n    hsc_photoz_job932353.csv\n    hsc_photoz_job932360.csv\n    hsc_photoz_job932367.csv\n    hsc_photoz_job932372.csv\n    hsc_photoz_job932380.csv\n    hsc_y3_cluster_shear_summary.csv\n    hsc_y3_stacked_shear.csv\n    mcxc_j1204_shear.csv\n    mcxc_j1231_shear.csv\n    mcxc_j2235_shear.csv\n    specz_cl1_sdss.csv\n    sss2_001_shear.csv\n    sss2_002_shear.csv\n    sss2_002_shear_v2.csv\n    sss2_008_shear.csv\n    sss2_photoz_purity.csv\n\n  Inspecting: act_j1258_shear.csv\n    Size: 18,259,542 bytes\n    Columns (15): ['# object_id', 'i_ra', 'i_dec', 'i_hsmshaperegauss_e1', 'i_hsmshaperegauss_e2', 'i_hsmshaperegauss_derived_sigma_e', 'i_hsmshaperegauss_derived_rms_e', 'i_hsmshaperegauss_derived_weight', 'i_hsmshaperegauss_derived_shear_bias_m', 'i_hsmshaperegauss_derived_shear_bias_c1', 'i_hsmshaperegauss_derived_shear_bias_c2', 'i_hsmshaperegauss_resolution', 'i_apertureflux_10_mag', 'hsc_y3_zbin', 'b_mode_mask']\n    Row 0: ['40083830261941824', '194.12344333588496', '-1.5383477977269109', '0.7125212', '0.40969303', '0.25917239862940167', '0.38162399659540935', '4.699088974241218', '-0.2978872618077771', '-0.001197600774283326']\n    Row 1: ['40083830261941857', '194.11856130079525', '-1.5374548557332268', '-0.3658221', '-0.25071228', '0.10644710884780016', '0.4126372701217128', '5.506592656739475', '-0.12345808222787356', '-0.00020497196033086396']\n    Row 2: ['40083830261941910', '194.12568787390282', '-1.5361524891884708', '0.8214012', '-0.3519181', '0.3541197711167268', '0.3697378867751296', '3.815236967548221', '-0.21411493658131164', '0.0003227109143347014']\n\n  Inspecting: cl1_individual_shear.csv\n    Size: 1,314 bytes\n    Columns (6): ['r_arcmin', 'r_kpc', 'gamma_t', 'gamma_t_err', 'gamma_x', 'n_sources']\n    Row 0: ['0.3607076636205458', '99.2527416066282', '0.11834974615469712', '0.13679842006551313', '-0.08914827939044119', '11']\n    Row 1: ['0.5214631202320151', '143.48640062225243', '-0.00478932912147937', '0.11845049823043877', '-0.10030323985662097', '13']\n    Row 2: ['0.7538619585531323', '207.43353614480517', '-0.03858303293830653', '0.06641910182987525', '-0.08333703746999593', '28']\n\n  Inspecting: cl1_sources.csv\n    Size: 8,400,884 bytes\n    Columns (11): ['i_ra', 'i_dec', 'i_hsmshaperegauss_e1', 'i_hsmshaperegauss_e2', 'i_hsmshaperegauss_derived_weight', 'i_hsmshaperegauss_derived_shear_bias_m', 'i_hsmshaperegauss_derived_shear_bias_c1', 'i_hsmshaperegauss_derived_shear_bias_c2', 'b_mode_mask', '_dist_deg', '_phi']\n    Row 0: ['139.99874049769733', '-0.0783398129094456', '0.7499327', '0.13346688', '4.408598445268015', '-0.2357276439348198', '-1.4250378637259512e-05', '0.0004376340910137', '1', '0.48315915664147613']\n    Row 1: ['140.88646913573814', '-0.4509141601861937', '-0.25344566', '0.093223065', '4.8649103249024845', '-0.213617791968383', '0.0006142054131507', '0.0014686813171371', '1', '0.4800701218494194']\n    Row 2: ['140.8756503889414', '-0.3280153300913354', '0.68336034', '0.07335594', '5.460481726032612', '-0.1109274588651113', '0.0002007118077703', '3.923181346397545e-05', '1', '0.43255766976072463']\n\n  Inspecting: cl1_sources_photoz.csv\n    Size: 20,568,197 bytes\n    Columns (13): ['# object_id', 'i_ra', 'i_dec', 'i_hsmshaperegauss_e1', 'i_hsmshaperegauss_e2', 'i_hsmshaperegauss_derived_weight', 'i_hsmshaperegauss_derived_shear_bias_m', 'i_hsmshaperegauss_derived_shear_bias_c1', 'i_hsmshaperegauss_derived_shear_bias_c2', 'b_mode_mask', 'photoz_best', 'photoz_err68_min', 'photoz_err68_max']\n    Row 0: ['40989797778462513', '139.99462457661352', '-1.2478923620539635', '0.25408748', '-0.06064462', '5.428739392309582', '-0.11263125700062172', '-8.643647039887435e-06', '0.00010233456520221945', '1']\n    Row 1: ['40989797778462661', '139.9930193111887', '-1.2440439211898977', '0.464728', '-0.36064646', '4.391701220975666', '-0.10054831022584637', '1.584834924382886e-05', '-0.00016648725087620847', '1']\n    Row 2: ['40989797778463529', '139.97331869615684', '-1.2228692701218817', '-0.13765576', '0.18205564', '6.097263355540688', '-0.06871926937956944', '-0.0001103530421252148', '-0.0003217214476080526', '1']\n\n  Inspecting: cl27_sources.csv\n    Size: 39,733,957 bytes\n    Columns (10): ['# object_id', 'i_ra', 'i_dec', 'i_hsmshaperegauss_e1', 'i_hsmshaperegauss_e2', 'i_hsmshaperegauss_derived_weight', 'i_hsmshaperegauss_derived_shear_bias_m', 'i_hsmshaperegauss_derived_shear_bias_c1', 'i_hsmshaperegauss_derived_shear_bias_c2', 'b_mode_mask']\n    Row 0: ['40989793483494422', '139.96519186526385', '-1.4501950310539866', '0.08151802', '0.11539142', '7.9287712211624495', '0.011801634209238625', '-0.00038219460141602135', '0.0007604093003216886', '1']\n    Row 1: ['40989793483494450', '139.961424603983', '-1.4493733310447148', '-0.38824323', '-0.52469015', '5.294997810774835', '0.001030280873685542', '-0.00039283029055336104', '0.0007702843159575331', '1']\n    Row 2: ['40989793483494462', '139.9638172167746', '-1.4490892537170872', '0.40690807', '-0.49626574', '4.5923208735205705', '-0.3023924352480578', '0.00027121817367160655', '-0.0005266502788343635', '1']\n\n============================================================\ncl1 Shear Profile: Original Center (140.45, -0.25)\n============================================================\n    CSV columns: ['r_arcmin', 'r_kpc', 'gamma_t', 'gamma_t_err', 'gamma_x', 'n_sources']\n    Matched columns: {}\n    ERROR: Missing required columns: ['ra', 'dec', 'e1', 'e2']\n    Available: ['r_arcmin', 'r_kpc', 'gamma_t', 'gamma_t_err', 'gamma_x', 'n_sources']\n\n============================================================\ncl1 Shear Profile: BCG Center (140.39772, -0.24158)\n============================================================\n    CSV columns: ['r_arcmin', 'r_kpc', 'gamma_t', 'gamma_t_err', 'gamma_x', 'n_sources']\n    Matched columns: {}\n    ERROR: Missing required columns: ['ra', 'dec', 'e1', 'e2']\n    Available: ['r_arcmin', 'r_kpc', 'gamma_t', 'gamma_t_err', 'gamma_x', 'n_sources']",
+      "stderr_tail_50": "",
+      "extracted_patterns": {
+        "fix": [
+          "Cluster Stack v3 Fix"
+        ],
+        "cluster": [
+          "Cluster Stack v3 Fix",
+          "hsc_y3_cluster_shear_summary.csv"
+        ]
+      },
+      "paper_anchor_hint": "Cluster stack v3 fix variant"
+    },
+    {
+      "status": "PASS",
+      "script_path": "cluster_stack_v3_fix2.py",
+      "script_sha256": "e5c9ef88c344b026d6bdf0e00df23d37018c3928b32947c8aa0356003b1d410b",
+      "cwd": "D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン",
+      "return_code": 0,
+      "elapsed_sec": 3.02,
+      "stdout_total_lines": 90,
+      "stderr_total_lines": 0,
+      "stdout_tail_200": "============================================================\ncl1 Shear Profile: Multi-Center Comparison\n============================================================\nSource file candidates:\n  cl1_sources_photoz.csv: 20.6 MB\n  ..\\パイソン\\cl1_sources_photoz.csv: 20.6 MB\n  cl1_sources.csv: 8.4 MB\n  ..\\パイソン\\cl1_sources.csv: 8.4 MB\n  ..\\パイソン\\cl4_sources.csv: 40.3 MB\n\nLoading: cl1_sources_photoz.csv\n  Size: 20.6 MB\n  Raw headers (13): ['object_id', 'i_ra', 'i_dec', 'i_hsmshaperegauss_e1', 'i_hsmshaperegauss_e2', 'i_hsmshaperegauss_derived_weight', 'i_hsmshaperegauss_derived_shear_bias_m', 'i_hsmshaperegauss_derived_shear_bias_c1', 'i_hsmshaperegauss_derived_shear_bias_c2', 'b_mode_mask']...\n  Column map: {'ra': 'i_ra', 'dec': 'i_dec', 'e1': 'i_hsmshaperegauss_e1', 'e2': 'i_hsmshaperegauss_e2', 'w': 'i_hsmshaperegauss_derived_weight', 'zph': 'photoz_best'}\n  Column indices: {'ra': 1, 'dec': 2, 'e1': 3, 'e2': 4, 'w': 5, 'zph': 10}\n  Total rows: 107302, Valid bg: 107302, Bad: 0\n\nSDSS BCG candidates for cl1:\n  #1: RA=140.53957 Dec=-0.17041 r=18.20 z=0.3105 offset=7.19\n  #2: RA=140.39772 Dec=-0.24158 r=18.35 z=0.3126 offset=3.18\n  #3: RA=140.42128 Dec=-0.17182 r=18.39 z=0.3130 offset=5.00\n  #4: RA=140.43066 Dec=-0.25077 r=18.55 z=0.3113 offset=1.16\n  #5: RA=140.31573 Dec=-0.21499 r=18.66 z=0.3244 offset=8.33\n\n============================================================\nCenter: Original (140.45, -0.25)\n  RA=140.45000, Dec=-0.25000\n============================================================\n\n  Profile [Original (140.45, -0.25)]:\n    R[Mpc]       N    gamma_t    gamma_x     S/N\n     0.071       0   0.000000   0.000000    0.00\n     0.141       2  -0.068760   0.558908   -0.37\n     0.245       8   0.040268  -0.242136    0.44\n     0.387      23   0.145777   0.104949    2.69\n     0.592      64   0.069982   0.013667    2.15\n     0.837     126   0.024761   0.002659    1.07\n     1.225     363   0.022517   0.000089    1.65\n     1.732     478   0.003164  -0.001234    0.27\n     2.449    1350   0.017846  -0.014248    2.52\n     3.873    4214   0.025627   0.003906    6.40\n  Total S/N = 8.0, |gamma_x| median = 0.013667\n\n============================================================\nCenter: BCG #1 (from SDSS)\n  RA=140.53957, Dec=-0.17041\n============================================================\n\n  Profile [BCG #1 (from SDSS)]:\n    R[Mpc]       N    gamma_t    gamma_x     S/N\n     0.071       4   0.382720  -0.119595    2.94\n     0.141       5  -0.089938  -0.299232   -0.77\n     0.245      25   0.026924   0.018648    0.52\n     0.387      64   0.061068   0.037004    1.88\n     0.592      97   0.009941   0.006238    0.38\n     0.837     266  -0.016382   0.042298   -1.03\n     1.225     546   0.042553  -0.028665    3.82\n     1.732     622   0.008503  -0.014107    0.82\n     2.449    1606   0.002192   0.009685    0.34\n     3.873    4165   0.018339  -0.017577    4.55\n  Total S/N = 7.1, |gamma_x| median = 0.023656\n\n============================================================\nCenter: BCG #3 (140.4213, -0.1718)\n  RA=140.42128, Dec=-0.17182\n============================================================\n\n  Profile [BCG #3 (140.4213, -0.1718)]:\n    R[Mpc]       N    gamma_t    gamma_x     S/N\n     0.071       4   0.240948   0.122876    1.85\n     0.141      12  -0.214958  -0.176670   -2.86\n     0.245      24  -0.064849  -0.102977   -1.22\n     0.387      90  -0.004666   0.074767   -0.17\n     0.592      86   0.030095  -0.040228    1.07\n     0.837     193   0.040883   0.027793    2.18\n     1.225     454   0.001650   0.009967    0.14\n     1.732     495   0.005831  -0.000060    0.50\n     2.449    1453   0.025876  -0.011444    3.79\n     3.873    3814   0.019720  -0.010084    4.68\n  Total S/N = 7.5, |gamma_x| median = 0.034011\n\n============================================================\nSummary: S/N and |gamma_x| by center\n============================================================\nCenter                                            S/N       |gx|  Best?\nOriginal (140.45, -0.25)                          8.0   0.013667    YES\nBCG #1 (from SDSS)                                7.1   0.023656       \nBCG #3 (140.4213, -0.1718)                        7.5   0.034011       \n\nFigure: cluster_stack_v3_output\\cl1_center_comparison.png",
+      "stderr_tail_50": "",
+      "extracted_patterns": {
+        "cluster": [
+          "Figure: cluster_stack_v3_output\\cl1_center_comparison.png"
+        ]
+      },
+      "paper_anchor_hint": "Cluster stack v3 fix2 variant"
+    },
+    {
+      "status": "PASS",
+      "script_path": "little_things_external_v1.py",
+      "script_sha256": "c99e1993ab077bf68d6cf30de1b23829ba05d4bfe7b7dc3723d29490298c3066",
+      "cwd": "D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン",
+      "return_code": 0,
+      "elapsed_sec": 0.81,
+      "stdout_total_lines": 55,
+      "stderr_total_lines": 0,
+      "stdout_tail_200": "========================================================================\nExternal C15 validation: non-SPARC LITTLE THINGS galaxies\n========================================================================\nLITTLE THINGS sample: 26\nIn SPARC 175: 3 -> ['DDO154', 'DDO168', 'NGC2366']\nNon-SPARC: 23 -> ['CVnIdwA', 'DDO101', 'DDO126', 'DDO133', 'DDO210', 'DDO216', 'DDO43', 'DDO46', 'DDO47', 'DDO50', 'DDO52', 'DDO53', 'DDO70', 'DDO87', 'F564-V3', 'HARO29', 'HARO36', 'IC10', 'IC1613', 'NGC1569', 'NGC3738', 'UGC8508', 'WLM']\n\n------------------------------------------------------------------------\nname        vflat    hR    Yd   gc_obs/a0   gc_C15/a0   resid   N  note\n------------------------------------------------------------------------\nCVnIdwA      23.5  0.57  0.50       0.099       0.384  -0.587  14  Yd=0.5fallback\nDDO101       64.5  0.94  0.50      19.558       0.820  +1.378   7  Yd=0.5fallback\nDDO126       37.2  0.87  0.50       0.393       0.492  -0.097  29  Yd=0.5fallback\nDDO133       46.1  1.24  0.50       1.159       0.510  +0.356  19  Yd=0.5fallback\nDDO210       12.0  0.17  0.50       0.315       0.359  -0.056   7  Yd=0.5fallback\nDDO216       18.9  0.54  0.50       0.191       0.317  -0.220  11  Yd=0.5fallback\nDDO43        33.2  0.41  0.50       0.394       0.639  -0.210   9  Yd=0.5fallback\nDDO50        35.7  1.10  0.50       0.017       0.420  -1.404  77  Yd=0.5fallback\nDDO52        60.2  1.30  0.50       1.761       0.651  +0.432  16  Yd=0.5fallback\nDDO53        28.6  0.72  0.50       0.218       0.415  -0.280  12  Yd=0.5fallback\nDDO70        43.9  0.48  0.50       0.517       0.781  -0.179  14  Yd=0.5fallback\nDDO87        56.6  1.31  0.50       1.037       0.610  +0.231  31  Yd=0.5fallback\nHARO36       58.2   nan  0.50       0.501         nan    +nan   9  no_hR;Yd=0.5fallback\nIC10         36.5  0.40  0.50       0.226       0.711  -0.498  20  Yd=0.5fallback\nIC1613       16.9  0.58  0.50       0.018       0.274  -1.180  97  Yd=0.5fallback\nNGC1569      29.1  0.38  0.50       0.037       0.582  -1.196  23  Yd=0.5fallback\nNGC3738     125.5  0.78  0.50      50.407       1.751  +1.459  11  Yd=0.5fallback\nUGC8508      46.0  0.27  0.50       3.636       1.091  +0.523  24  Yd=0.5fallback\nWLM          37.3  0.57  0.50       0.378       0.609  -0.207 132  Yd=0.5fallback\n------------------------------------------------------------------------\nNon-SPARC galaxies total:       23\nWith gc_obs measured:           19\nWith both gc_obs and gc_C15:    18\n\nResidual = log10(gc_obs/gc_C15):\n  mean (bias):      -0.096 dex\n  median:           -0.193 dex\n  std  (scatter):   0.772 dex\n  range:            [-1.404, +1.459]\n\n========================================================================\nCROSS-CHECK: SPARC-overlap LITTLE THINGS (8 galaxies)\n========================================================================\nname        vflat    hR   gc_obs/a0   gc_C15/a0   resid   N\nDDO154       47.8  0.59       0.910       0.767  +0.074  55\nDDO168       60.3  0.82       0.717       0.821  -0.059  33\nNGC2366      58.2  1.36       0.488       0.615  -0.100  70\n\n  SPARC-overlap: N=3  mean=-0.028  std=0.091 dex\n\n  KS test (non-SPARC vs SPARC-overlap residuals):\n    statistic = 0.556\n    p-value   = 0.338\n\nResults written to: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\little_things_external_results.txt",
+      "stderr_tail_50": "",
+      "extracted_patterns": {
+        "LITTLE": [
+          "External C15 validation: non-SPARC LITTLE THINGS galaxies",
+          "LITTLE THINGS sample: 26",
+          "CROSS-CHECK: SPARC-overlap LITTLE THINGS (8 galaxies)",
+          "Results written to: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\little_things_external_results.txt"
+        ],
+        "external": [
+          "External C15 validation: non-SPARC LITTLE THINGS galaxies",
+          "Results written to: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\little_things_external_results.txt"
+        ]
+      },
+      "paper_anchor_hint": "Little Things external v1"
+    },
+    {
+      "status": "PASS",
+      "script_path": "little_things_external_v2.py",
+      "script_sha256": "c73ebf338504ded005574f57bf181d3d4799f404e121a382810bbda4fb24d530",
+      "cwd": "D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン",
+      "return_code": 0,
+      "elapsed_sec": 0.79,
+      "stdout_total_lines": 57,
+      "stderr_total_lines": 0,
+      "stdout_tail_200": "==============================================================================\nLITTLE THINGS external C15 validation v2 (per-galaxy Yd)\n==============================================================================\nLT total: 26  SPARC overlap: 3 -> ['DDO154', 'DDO168', 'NGC2366']\nNon-SPARC: 23\n\n------------------------------------------------------------------------------------------------------------------------\nname        vflat    hR   MVmag    Yd  gc_obs/a0  gc_C15/a0   resid   N  notes\n------------------------------------------------------------------------------------------------------------------------\nCVnIdwA      23.5  0.25  -12.37  0.65      0.099      0.528  -0.725  14  hR_H21;Yd_SED\nDDO101       64.5  0.97  -15.01  0.76     19.558      0.695  +1.450   7  hR_H21;Yd_SED\nDDO126       37.2  0.84  -14.85  0.22      0.393      0.676  -0.235  29  hR_H21;Yd_SED\nDDO133       46.1  1.22  -14.75  0.45      1.159      0.535  +0.336  19  hR_H21;Yd_SED\nDDO210       12.0  0.16  -10.88  0.31      0.315      0.438  -0.144   7  hR_H21;Yd_SED\nDDO216       18.9  0.52  -13.72  0.57      0.191      0.307  -0.206  11  hR_H21;Yd_SED\nDDO43        33.2  0.87  -15.06  0.50      0.394      0.439  -0.047   9  hR_H21;Yd_fb0.5\nDDO50        35.7  1.48  -16.61  0.28      0.017      0.445  -1.429  77  hR_H21;Yd_SED\nDDO52        60.2  1.26  -15.45  0.41      1.761      0.710  +0.395  16  hR_H21;Yd_SED\nDDO53        28.6  0.47  -13.84  0.33      0.218      0.597  -0.437  12  hR_H21;Yd_SED\nDDO70        43.9  0.44  -14.10  0.53      0.517      0.801  -0.190  14  hR_H21;Yd_SED\nDDO87        56.6  1.21  -14.98  0.39      1.037      0.694  +0.174  31  hR_H21;Yd_SED\nHARO36       58.2   nan  -15.90  0.30      0.501        nan    +nan   9  MV_Oh;Yd_kin\nIC10         36.5  0.39  -16.34  0.40      0.226      0.779  -0.538  20  hR_H21;Yd_kin\nIC1613       16.9  0.53  -14.60  0.49      0.018      0.289  -1.203  97  hR_H21;Yd_SED\nNGC1569      29.1  0.46  -18.24  0.21      0.037      0.718  -1.287  23  hR_H21;Yd_SED\nNGC3738     125.5  0.77  -17.12  0.77     50.407      1.506  +1.525  11  hR_H21;Yd_SED\nUGC8508      46.0  0.23  -13.59  0.33      3.636      1.374  +0.423  24  hR_H21;Yd_SED\nWLM          37.3  1.18  -14.39  0.33      0.378      0.490  -0.113 132  hR_H21;Yd_SED\n------------------------------------------------------------------------------------------------------------------------\n(SPARC overlap for cross-check below)\n------------------------------------------------------------------------------------------------------------------------\nDDO154       47.8  0.48  -14.19  0.20      0.910      1.174  -0.110  55  hR_H21;Yd_SED\nDDO168       60.3  0.83  -15.72  0.35      0.717      0.926  -0.111  33  hR_H21;Yd_SED\nNGC2366      58.2  1.91  -16.79  0.16      0.488      0.790  -0.209  70  hR_H21;Yd_SED\n\n==============================================================================\nSTATISTICS\n==============================================================================\n\nAll galaxies:\n  Non-SPARC     : N=18  mean=-0.125  median=-0.167  std=0.802 dex  range=[-1.43, +1.52]\n  SPARC-overlap : N=3  mean=-0.143  median=-0.111  std=0.057 dex  range=[-0.21, -0.11]\n\nAfter |resid| <= 1.0 cut:\n  Non-SPARC     : N=13  mean=-0.101  median=-0.144  std=0.356 dex  range=[-0.73, +0.42]\n  SPARC-overlap : N=3  mean=-0.143  median=-0.111  std=0.057 dex  range=[-0.21, -0.11]\n\nAfter |resid| <= 0.5 cut (high-quality):\n  Non-SPARC     : N=11  mean=-0.004  median=-0.113  std=0.289 dex  range=[-0.44, +0.42]\n\nKS 2-sample test (full, finite residuals):\n  stat=0.389  p=0.742\n\nKS 2-sample test (|resid|<=1 cut):\n  stat=0.385  p=0.732\n\nWritten: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\little_things_external_results_v2.txt",
+      "stderr_tail_50": "",
+      "extracted_patterns": {
+        "LITTLE": [
+          "LITTLE THINGS external C15 validation v2 (per-galaxy Yd)",
+          "Written: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\little_things_external_results_v2.txt"
+        ],
+        "external": [
+          "LITTLE THINGS external C15 validation v2 (per-galaxy Yd)",
+          "Written: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\little_things_external_results_v2.txt"
+        ],
+        "v2": [
+          "LITTLE THINGS external C15 validation v2 (per-galaxy Yd)",
+          "Written: D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\little_things_external_results_v2.txt"
+        ]
+      },
+      "paper_anchor_hint": "Little Things external v2"
+    },
+    {
+      "status": "PASS",
+      "script_path": "little_things_fetch.py",
+      "script_sha256": "598c7e54a7991deb56ee9d86db9c54696860ac264ed36e7bcc08c23c8ab3e6a0",
+      "cwd": "D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン",
+      "return_code": 0,
+      "elapsed_sec": 17.28,
+      "stdout_total_lines": 227,
+      "stderr_total_lines": 0,
+      "stdout_tail_200": "  LeoA           12  0.29  -10.793   0.366     NO\n  NGC1569        50  0.35   -9.636   1.389     NO\n  NGC2366        50  1.22  -10.178   0.744    YES\n  NGC3738        60  0.40   -9.535   1.559     NO\n  NGC4163        20  0.34  -10.419   0.564     NO\n  WLM            35  0.69  -10.240   0.692     NO\n\n  SPARC外（独立検証用）: 23 銀河\n  -> little_things_properties.json\n\n======================================================================\n[回転曲線データ取得]\n======================================================================\n  取得: https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/AJ/149/180/table3&-out.m...\n    失敗 (721 bytes)\n  取得: https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/AJ/149/180/table4&-out.m...\n    失敗 (721 bytes)\n  取得: https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/AJ/149/180/table5&-out.m...\n    失敗 (721 bytes)\n  取得: https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/AJ/149/180/table6&-out.m...\n    失敗 (721 bytes)\n  取得: https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/AJ/149/180/table7&-out.m...\n    失敗 (721 bytes)\n  取得: https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/AJ/149/180/rotcur&-out.m...\n    失敗 (721 bytes)\n  取得: https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/AJ/149/180/rc&-out.max=1...\n    失敗 (713 bytes)\n\n  VizieR失敗。CDS FTPを試行...\n  取得: https://cdsarc.cds.unistra.fr/ftp/J/AJ/149/180/table3.dat\n    失敗: HTTP 404\n  取得: https://cdsarc.cds.unistra.fr/ftp/J/AJ/149/180/table4.dat\n    失敗: HTTP 404\n  取得: https://cdsarc.cds.unistra.fr/ftp/J/AJ/149/180/table5.dat\n    失敗: HTTP 404\n  取得: https://cdsarc.cds.unistra.fr/ftp/J/AJ/149/180/ReadMe\n    成功: 20246 bytes -> ReadMe\n\n  ReadMe取得...\n  取得: https://cdsarc.cds.unistra.fr/ftp/J/AJ/149/180/ReadMe\n    成功: 20246 bytes -> ReadMe.txt\n    Byte-by-byte Description of file: table1.dat\n    --------------------------------------------------------------------------------\n       Bytes Format Units          Label        Explanations\n    --------------------------------------------------------------------------------\n      1-   8 A8     ---            Name         Main name of the source\n     10-  11 I2     h              RAh          Hour of right ascension (J2000) (1)\n     13-  14 I2     min            RAm          Minute of right ascension (J2000)\n                                                 (1)\n     16-  19 F4.1   s              RAs          Second of right ascension (J2000)\n                                                 (1)\n          21 A1     ---            DE-          Sign of declination (J2000) (1)\n     22-  23 I2     deg            DEd          Degree of declination (J2000) (1)\n     25-  26 I2     arcmin         DEm          Arcminute of declination (J2000) (1)\n     28-  31 F4.1   arcsec         DEs          Arcsecond of declination (J2000) (1)\n     33-  36 F4.1   Mpc            Dist         [0.7/10.3] Distance as given in\n                                                 Hunter+2012 (J/AJ/144/134)\n     38-  43 F6.1   km/s           Vsys         [-348/589.4] Systemic velocity (1)\n     45-  47 F3.1   km/s         e_Vsys         [0.7/5.6] Vsys uncertainty (1)\n     49-  53 F5.1   deg            PA           [8.2/359.6] Average value of the\n                                                 kinematic position angle (2)\n     55-  58 F4.1   deg          e_PA           [0/13.9] PA uncertainty (2)\n     60-  63 F4.1   deg            i            [22.6/82.5] Average value of the\n                                                 kinematic inclination (1)\n     65-  68 F4.1   deg          e_i            [0/15.6] i uncertainty (1)\n     70-  74 F5.1   mag            VMag         [-18.2/-10.9] Absolute V magnitude\n                                                 as given in Hunter+2012\n                                                 (J/AJ/144/134)\n     76-  78 F3.1   [-]            Ab(O/H)      [7.2/8.7] 12+log(O/H) ; Oxygen\n                                                 abundance taken from the literature\n                                                 as compiled in Hunter+2012\n                                                 (J/AJ/144/134)\n     80-  83 F4.2   [-]          e_Ab(O/H)      [0.01/0.2]? Ab(O/H) uncertainty\n     85-  89 F5.2   Msun/yr/kpc2   log(SFR)Ha   [-4.1/0.19]? H{alpha} star\n                                                 formation rates normalized to the\n                                                 area ({pi}R^2^ where R is the disk\n                                                 scale length) as given in\n                                                 Hunter+2004 (J/AJ/128/2170)\n     91-  94 F4.2   Msun/yr/kpc2 e_log(SFR)Ha   [0.01/0.07]? log(SFR)Ha uncertainty\n     96- 100 F5.2   Msun/yr/kpc2   log(SFR)FUV  [-3.21/-0.01]? GALEX FUV star\n                                                 formation rates normalized to the\n                                                 area ({pi}R^2^ where R is the disk\n                                                 scale length) as given in\n                                                 Hunter+2010 (2010AJ....139..447H)\n    102- 105 F4.2   Msun/yr/kpc2 e_log(SFR)FUV  [0/0.06]? log(SFR)FUV uncertainty\n    --------------------------------------------------------------------------------\n    Note (1): Derived from the tilted-ring analysis described in Section 3.1.1.\n    Note (2): Derived from the tilted-ring analysis described in Section 3.1.1.\n       PA is the angle measured counter-clockwise from the north direction in the\n       sky to the major axis of the receding half of the galaxy.\n    --------------------------------------------------------------------------------\n    \n    Byte-by-byte Description of file:table2.dat\n    --------------------------------------------------------------------------------\n       Bytes Format Units   Label     Explanations\n    --------------------------------------------------------------------------------\n      1-   8 A8     ---            Name        Main name of the source\n     10-  13 F4.2   kpc            Rmax        [0.31/9.81] Radius where the\n                                                outermost part of the rotation curve\n                                                is measured\n     15-  18 F4.2   kpc            R0.3        [0.2/5.43] Radius where the\n                                                logarithmic slope of the total\n                                                rotation curve dlog(V)/dlog(R)=0.3\n     20-  24 F5.1   km/s           V(Rmax)     [12/125.5] Rotation velocity\n                                                (asymmetric drift corrected) at Rmax\n     26-  30 F5.1   km/s           Viso(Rmax)  [11.3/130.2] Rotation velocity of\n                                                the best fitted pseudo-isothermal\n                                                halo model at Rmax\n     32-  36 F5.1   ---            Rmax/HI     [6/103.8] Ratio of Rmax to H_I_ beam\n                                                size\n     38-  41 F4.2   kpc            z0          [0.07/0.48]? Vertical scale height\n                                                of the stellar disk\n     43-  46 F4.1   ---            c           [-0.4/25] Concentration parameter\n     48-  53 F6.1   ---          e_c           [0.2/1503.4]? c uncertainty (1)\n     55-  58 F4.1   ---            cM07        [8.1/18.6] Concentration parameter\n                                                derived using an empirical\n                                                relationship between c and V200 as\n                                                given by McGaugh+2007\n                                                (2007ApJ...659..149M)\n     60-  65 F6.1   km/s           V200        [5.4/2290.8] Rotation velocity for a\n                                                NFW model (2)\n     67-  73 F7.1   km/s         e_V200        [0.9/48442.1]? V200 uncertainty (1)\n     75-  79 F5.1   km/s           V200M07     [12.4/598.2]? V200 values fitted\n                                                after fixing c to cM07 assuming a\n                                                \"minimum disk\" (2)\n     81-  84 F4.1   km/s         e_V200M07     [0.2/30.4]? V200M07 uncertainty\n     86-  89 F4.2   kpc            Rc          [0.15/8.4] Core radius of\n                                                pseudo-isothermal model\n                                                (Begeman+1991, 1991MNRAS.249..523B)\n     91-  95 F5.2   kpc          e_Rc          [0.01/12.2] Rc uncertainty\n     97- 103 F7.2   10-3Msun/pc3   rho0        [8.19/2132.4] Core density of\n                                                pseudo-isothermal model\n                                                (Begeman+1991, 1991MNRAS.249..523B)\n    105- 110 F6.2   10-3Msun/pc3 e_rho0        [0.77/381.14] rho0 uncertainty\n    112- 116 F5.2   ---            alphamin    [-1.25/1.16] Logarithmic inner slope\n                                                of the total matter (DM\n                                                halo+baryons) density profiles (3)\n    118- 122 F5.2   ---          e_alphamin    [0.01/1.22] alphamin uncertainty\n         124 A1     ---          f_alphamin    The dynamical contribution by the\n                                                stellar component is included in the\n                                                DM density profile as no Spitzer\n                                                3.6mum image is available for this\n                                                galaxy\n    126- 130 F5.2   ---            alpha3.6    [-1.25/0.97] Logarithmic inner slope\n                                                of the DM density profiles (3)\n    132- 136 F5.2   ---          e_alpha3.6    [0.01/0.92] alpha3.6 uncertainty\n         138 A1     ---          f_alpha3.6    The dynamical contribution by the\n                                                stellar component is included in the\n                                                DM density profile as no Spitzer\n                                                3.6mum image is available for this\n                                                galaxy\n    140- 145 F6.2   10+7Msun       Mgas        [0.14/132.52] Gas mass (4)\n    147- 151 F5.2   10+7Msun       MstarK      [0.04/20.7]? Stellar mass derived\n                                                from the kinematic analysis (5)\n    153- 157 F5.2   10+7Msun       MstarSED    [0.06/46.7]? Stellar mass derived\n                                                using a spectral energy distribution\n                                                fitting technique in Zhang+2012\n                                                (2012AJ....143...47Z)\n    159- 163 F5.3   [Msun]         log(Mdyn)   [6.9/9.93] Log of dynamical mass\n                                                measured using Viso(Rmax) and Rmax\n    165- 171 F7.3   [Msun]         log(M200)   [8.7/510.2] CDM halo mass estimated\n                                                from V200M07 (6)\n    --------------------------------------------------------------------------------\n    Note (1): A null value means that the error is unphysically large.\n    Note (2): NFW model from Navarro+1995 (1995MNRAS.275...56N) &\n       Navarro+1996b (1996ApJ...462..563N). See Section 3.4.\n    Note (3): Measured in Section 4.2.\n    Note (4): Derived in Section 3.2.\n    Note (5): Derived in Section 3.3.\n    Note (6): Using Equation 3 from Oh+2011a (2011AJ....142...24O). See Section 3.4.\n    --------------------------------------------------------------------------------\n    \n\n======================================================================\n[結果]\n======================================================================\n\n  LITTLE THINGS 物性データ:\n    全銀河: 26\n    SPARC外: 23\n\n  log(G*Sigma0) 範囲: [-10.79, -9.54]\n  gc_pred/a0 範囲: [0.366, 1.559]\n  gc_pred/a0 中央値: 0.575\n\n  SPARC外のみ:\n    gc_pred/a0 中央値: 0.554\n    範囲: [0.366, 1.559]\n\n  幾何平均法則の予測:\n    矮小銀河 (低Sigma0) -> gc < a0\n    中央値 0.554 < 1.0 (MOND)\n    -> 回転曲線フィットで確認が必要\n\n  回転曲線データ: 取得失敗（手動DL必要）\n\n  手動ダウンロード先:\n    https://vizier.cds.unistra.fr/viz-bin/VizieR?-source=J/AJ/149/180\n    または: https://cdsarc.cds.unistra.fr/ftp/J/AJ/149/180/\n完了。",
+      "stderr_tail_50": "",
+      "extracted_patterns": {
+        "Hunter": [
+          "Hunter+2012 (J/AJ/144/134)",
+          "as given in Hunter+2012",
+          "as compiled in Hunter+2012",
+          "Hunter+2004 (J/AJ/128/2170)",
+          "Hunter+2010 (2010AJ....139..447H)"
+        ],
+        "LITTLE": [
+          "LITTLE THINGS データ取得・前処理",
+          "-> little_things_properties.json",
+          "LITTLE THINGS 物性データ:"
+        ]
+      },
+      "paper_anchor_hint": "Little Things data fetch"
+    },
+    {
+      "status": "PASS",
+      "script_path": "phase_c3_step2_sparc_lambda.py",
+      "script_sha256": "d6ab24be90ff65815e3f9416f363a6b011b4f627f23d442eaf72c2b8b4c45947",
+      "cwd": "D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン",
+      "return_code": 0,
+      "elapsed_sec": 11.32,
+      "stdout_total_lines": 61,
+      "stderr_total_lines": 0,
+      "stdout_tail_200": "======================================================================\nPhase C3 Step 2: SPARC 175 galaxies quantitative evaluation\nC3-2 gamma (threshold-type F) lambda_eff determination\n======================================================================\nC_NOW = 1.00e-06, eps_star_now = 0.999000\nrho_th * lambda (current) = 1.998000\nA0 = 1.200e-10 m/s^2 = 3.7032e+03 (km/s)^2/kpc\n\n[1] Loading SPARC data...\n    [debug] TA3 rows: 175  phase1 rows: 175  MRT rows: 175\n    Loaded 175 galaxies (raw)\n    After Q < 3 cut: 163 galaxies\n    After NaN/positivity cut: 129 galaxies\n    rho_0 (median) = 3.243e+07 Msun/kpc^3\n    log10(rho_gal) range: [5.88, 9.20]\n    log10(rho_norm) range: [-1.63, 1.69]\n\n[2] Scanning lambda_eff over grid (direct OLS)...\n    Best lambda_eff (direct OLS):  18.8965  (NLL = -86.842)\n    Best lambda_eff (partial OLS): 37.8346  (NLL = -131.591)\n    Direct  1sigma: [17.629, 100.000]\n    Direct  3sigma: [8.214, 100.000]\n    Direct  5sigma: [6.223, 100.000]\n    Partial 1sigma: [34.093, 37.835]\n    Partial 3sigma: [19.564, 100.000]\n    Partial 5sigma: [9.438, 100.000]\n    AIC (null):          -93.319\n    AIC (direct):        -169.684  -> Delta AIC = +76.365\n    AIC (partial+r_h):   -257.183  -> Delta AIC = +163.864\n\n[3] Spearman correlations at best lambda_eff...\n    Galaxies above threshold: 124 / 129\n    Simple Spearman:   rho = +0.7058  p = 5.514e-20  95% CI = [+0.606, +0.781]\n    Partial Spearman (| log r_h): rho = +0.8518  95% CI = [+0.778, +0.895]\n    Simple sigma:  9.67\n    Partial sigma: 13.89\n    Residualize rho:   +0.8694  p = 3.633e-39  (should align with partial)\n\n[4] Leave-one-out sensitivity on lambda_eff...\n    LOO median lambda_eff: 18.8965\n    LOO range:             [9.116, 100.000]\n    LOO 68% (16-84%):      [18.252, 18.897]\n    LOO log10 spread:      1.040 dex\n\n======================================================================\n[5] Phase C3 Step 2 Grade Judgment\n======================================================================\n  Delta AIC (partial): +163.864\n  Sigma (partial):     13.89\n  Partial rho CI:      [+0.778, +0.895]  clear: True\n  LOO spread:          1.040 dex\n  -----\n  GRADE: A\n======================================================================\n\n[6] Writing plots and QA log...\n    Saved: phase_c3_step2_sparc_lambda.png\n    Saved: phase_c3_step2_sparc_lambda_qa.txt\n\nDone. Phase C3 Step 2 SPARC lambda_eff evaluation complete.\nGRADE: A",
+      "stderr_tail_50": "",
+      "extracted_patterns": {
+        "lambda": [
+          "C3-2 gamma (threshold-type F) lambda_eff determination",
+          "rho_th * lambda (current) = 1.998000",
+          "[2] Scanning lambda_eff over grid (direct OLS)...",
+          "Best lambda_eff (direct OLS):  18.8965  (NLL = -86.842)",
+          "Best lambda_eff (partial OLS): 37.8346  (NLL = -131.591)",
+          "[3] Spearman correlations at best lambda_eff..."
+        ],
+        "C3": [
+          "Phase C3 Step 2: SPARC 175 galaxies quantitative evaluation",
+          "C3-2 gamma (threshold-type F) lambda_eff determination",
+          "[5] Phase C3 Step 2 Grade Judgment",
+          "Saved: phase_c3_step2_sparc_lambda.png",
+          "Saved: phase_c3_step2_sparc_lambda_qa.txt",
+          "Done. Phase C3 Step 2 SPARC lambda_eff evaluation complete."
+        ],
+        "step2": [
+          "Saved: phase_c3_step2_sparc_lambda.png",
+          "Saved: phase_c3_step2_sparc_lambda_qa.txt"
+        ]
+      },
+      "paper_anchor_hint": "Phase C3 step 2 SPARC lambda"
+    },
+    {
+      "status": "PASS",
+      "script_path": "phase_c3_step2_sparc_lambda_v2.py",
+      "script_sha256": "6abb98f8bd4dd057fbc8adb1e1d10622246115c0cc4e5343672a38d2880282e2",
+      "cwd": "D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン",
+      "return_code": 0,
+      "elapsed_sec": 29.27,
+      "stdout_total_lines": 92,
+      "stderr_total_lines": 0,
+      "stdout_tail_200": "======================================================================\nPhase C3 Step 2 v2: SPARC lambda_eff with robustness checks\n  (A) grid expansion: lambda_eff in [0.1, 10000]\n  (B) g_obs definition sensitivity (3 variants)\n  (C) LOO outlier identification\n======================================================================\nA0 = 1.200e-10 m/s^2 = 3.7032e+03 (km/s)^2/kpc\nGrid: [0.1, 10000.0], N = 500\n\n[1] Loading SPARC base data...\n    [debug] TA3 rows: 175  phase1 rows: 175  MRT rows: 175\n    Raw: 175 galaxies\n    After Q < 3: 163\n[2] Computing g_obs variants from Rotmod_LTG files...\n    Rotmod files available: 155 / 163\n    Final sample: 163 galaxies\n    rho_0 = 2.878e+07\n\n======================================================================\n[3] Analysis with g_obs = v_flat^2 / RHI (v1)\n======================================================================\n    N = 127\n    lambda_eff (direct):  17.158  (15.29, 17.16) 1sig\n    lambda_eff (partial): 15.645  (15.29, 17.16) 1sig\n    5sig (partial):       [3.11, 10000.00]  saturated: True\n    Delta AIC: direct +12.78, partial +27.16\n    Simple Spearman:  rho = -0.0188  sigma = 0.20\n    Partial Spearman: rho = +0.1353  sigma = 1.49  CI [-0.044,+0.305]\n    Residualize:      rho = +0.1727  (should match partial)\n    Above threshold:  122 / 127\n    GRADE: Null\n\n======================================================================\n[3] Analysis with g_obs = <v^2/R> R>2hR (Phase C2)\n======================================================================\n    N = 155\n    lambda_eff (direct):  17.968  (15.29, 10000.00) 1sig\n    lambda_eff (partial): 17.968  (17.97, 10000.00) 1sig\n    5sig (partial):       [5.05, 10000.00]  saturated: True\n    Delta AIC: direct +nan, partial +nan\n    Simple Spearman:  rho = +0.2741  sigma = 3.45\n    Partial Spearman: rho = +0.4855  sigma = 6.49  CI [+0.330,+0.613]\n    Residualize:      rho = +nan  (should match partial)\n    Above threshold:  153 / 155\n    GRADE: Null\n\n======================================================================\n[3] Analysis with g_obs = v^2(R_last)/R_last\n======================================================================\n    N = 163\n    lambda_eff (direct):  17.158  (15.29, 17.16) 1sig\n    lambda_eff (partial): 17.158  (15.29, 17.16) 1sig\n    5sig (partial):       [0.46, 10000.00]  saturated: True\n    Delta AIC: direct +nan, partial +nan\n    Simple Spearman:  rho = -0.1168  sigma = 1.46\n    Partial Spearman: rho = -0.0645  sigma = 0.80  CI [-0.237,+0.111]\n    Residualize:      rho = +nan  (should match partial)\n    Above threshold:  157 / 163\n    GRADE: Null\n\n======================================================================\n[4] LOO outlier identification (primary: v2)\n======================================================================\n    LOO median lambda:   17.968\n    LOO full range:      [17.968, 10000.000]\n    LOO 16-84%:          [17.968, 17.968]\n    LOO log10 spread:    2.745 dex\n    Top-10 LOO-sensitive galaxies (|log shift| order):\n       1. NGC3741          lam_LOO = 10000.00  shift = +2.745 dex\n       2. UGC00128         lam_LOO =  293.04  shift = +1.212 dex\n       3. KK98-251         lam_LOO =   18.39  shift = +0.010 dex\n       4. UGC02487         lam_LOO =   17.97  shift = +0.000 dex\n       5. ESO563-G021      lam_LOO =   17.97  shift = +0.000 dex\n       6. NGC6674          lam_LOO =   17.97  shift = +0.000 dex\n       7. NGC5985          lam_LOO =   17.97  shift = +0.000 dex\n       8. UGC06787         lam_LOO =   17.97  shift = +0.000 dex\n       9. UGC02885         lam_LOO =   17.97  shift = +0.000 dex\n      10. NGC2841          lam_LOO =   17.97  shift = +0.000 dex\n\n[5] Recomputing lambda with top-3 outliers removed...\n    After dropping ['KK98-251', 'NGC3741', 'UGC00128']:\n    lambda_eff (direct):  261.116\n    lambda_eff (partial): 10000.000\n    5sig CI (partial):    [6.08, 10000.00]\n    Grid saturated:       True\n\n[6] Writing 6-panel figure...\n    Saved: phase_c3_step2_sparc_lambda_v2.png\n    Saved: phase_c3_step2_sparc_lambda_v2_qa.txt\n    Saved: phase_c3_step2_sparc_lambda_v2_outliers.csv\n\nDone.",
+      "stderr_tail_50": "",
+      "extracted_patterns": {
+        "lambda": [
+          "Phase C3 Step 2 v2: SPARC lambda_eff with robustness checks",
+          "(A) grid expansion: lambda_eff in [0.1, 10000]",
+          "lambda_eff (direct):  17.158  (15.29, 17.16) 1sig",
+          "lambda_eff (partial): 15.645  (15.29, 17.16) 1sig",
+          "lambda_eff (direct):  17.968  (15.29, 10000.00) 1sig",
+          "lambda_eff (partial): 17.968  (17.97, 10000.00) 1sig"
+        ],
+        "v2": [
+          "Phase C3 Step 2 v2: SPARC lambda_eff with robustness checks",
+          "[4] LOO outlier identification (primary: v2)",
+          "Saved: phase_c3_step2_sparc_lambda_v2.png",
+          "Saved: phase_c3_step2_sparc_lambda_v2_qa.txt",
+          "Saved: phase_c3_step2_sparc_lambda_v2_outliers.csv"
+        ],
+        "C3": [
+          "Phase C3 Step 2 v2: SPARC lambda_eff with robustness checks",
+          "1. NGC3741          lam_LOO = 10000.00  shift = +2.745 dex",
+          "After dropping ['KK98-251', 'NGC3741', 'UGC00128']:",
+          "Saved: phase_c3_step2_sparc_lambda_v2.png",
+          "Saved: phase_c3_step2_sparc_lambda_v2_qa.txt",
+          "Saved: phase_c3_step2_sparc_lambda_v2_outliers.csv"
+        ]
+      },
+      "paper_anchor_hint": "Phase C3 step 2 SPARC lambda v2"
+    },
+    {
+      "status": "PASS",
+      "script_path": "phase_c3_step2_sparc_lambda_v3.py",
+      "script_sha256": "8a3cbf7effcef5b74dc17e12bfd4407ede2610bc66d3661d6e365f47ec8bec2d",
+      "cwd": "D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン",
+      "return_code": 0,
+      "elapsed_sec": 20.46,
+      "stdout_total_lines": 102,
+      "stderr_total_lines": 0,
+      "stdout_tail_200": "======================================================================\nPhase C3 Step 2 v3: Phase C2 protocol compliance\n  (D) Pre-filter: v_flat > 0, gc_C15 > 0, isfinite(delta)\n  (E) Bridge galaxies hard-excluded: ['ESO444-G084', 'NGC1705', 'NGC2915', 'NGC3741']\n  (F) Two-stage grade: primary / secondary (LOO-unstable removed)\n======================================================================\nGrid: [0.1, 10000.0], N = 500\nA0_KPC = 3.7032e+03 (km/s)^2/kpc\n\n[1] Loading SPARC base data...\n    Raw: 175 galaxies\n    After Q < 3: 163\n\n[2] Pre-filter (Phase C2 protocol step D):\n    v_flat > 0:          163 -> 129\n    gc_C15 > 0, finite:  129 -> 129\n    Positivity cleanup:  -> 129\n\n[3] Bridge galaxy exclusion (Phase C2 protocol step E):\n    Bridge galaxies present in sample: ['NGC3741', 'NGC2915']\n    After bridge exclude: 129 -> 127\n\n[4] Computing g_obs (Phase C2 definition: <v^2/R> for R > 2*hR)...\n    Rotmod available: 124 / 127\n    After delta finite: 124\n    rho_0 = 3.259e+07\n\n    FINAL sample for Primary stage: N = 124\n\n======================================================================\n[5] PRIMARY stage (Phase C2 protocol: bridge excluded)\n======================================================================\n\n    [Analyzing: Primary (bridge excluded), N = 124]\n    lambda_eff (direct):  20.636\n    lambda_eff (partial): 10000.000  5sig CI [6.51, 10000.00]  sat: True\n    Delta AIC:  direct +9.50,  partial +46.80\n    Simple Spearman:  rho = +0.3249  sigma = 3.71  CI [+0.150,+0.481]\n    Partial Spearman: rho = +0.5220  sigma = 6.37  CI [+0.369,+0.645]\n    Residualize:      rho = +0.5496  (align check)\n    Above threshold:  124 / 124\n    GRADE (primary):  A (grid-saturated)\n\n[6] LOO on primary sample, identify unstable galaxies...\n    LOO median: 10000.000\n    LOO range:  [20.636, 10000.000]  (2.69 dex)\n    LOO-unstable (|shift| > 1.0 dex): 3 galaxies\n    Top-10 LOO-sensitive galaxies:\n       1. NGC6195          lam =    20.64  shift = -2.685 dex [UNSTABLE]\n       2. NGC0055          lam =    20.64  shift = -2.685 dex [UNSTABLE]\n       3. UGC07524         lam =    20.64  shift = -2.685 dex [UNSTABLE]\n       4. UGC02885         lam = 10000.00  shift = +0.000 dex\n       5. ESO563-G021      lam = 10000.00  shift = +0.000 dex\n       6. NGC6674          lam = 10000.00  shift = +0.000 dex\n       7. NGC5985          lam = 10000.00  shift = +0.000 dex\n       8. UGC06787         lam = 10000.00  shift = +0.000 dex\n       9. UGC02953         lam = 10000.00  shift = +0.000 dex\n      10. NGC7331          lam = 10000.00  shift = +0.000 dex\n\n======================================================================\n[7] SECONDARY stage (LOO-unstable galaxies removed, N -> 121)\n======================================================================\n\n    [Analyzing: Secondary (LOO-unstable removed), N = 121]\n    Removed galaxies: ['UGC07524', 'NGC0055', 'NGC6195']\n    lambda_eff (direct):  20.636\n    lambda_eff (partial): 20.636  5sig CI [5.94, 10000.00]  sat: True\n    Delta AIC:  direct +11.14,  partial +48.15\n    Simple Spearman:  rho = +0.3232  sigma = 3.64\n    Partial Spearman: rho = +0.5083  sigma = 6.09  CI [+0.350,+0.637]\n    Residualize:      rho = +0.5430\n    Above threshold:  121 / 121\n    GRADE (secondary): A (grid-saturated)\n\n======================================================================\n[8] FINAL VERDICT\n======================================================================\n  Sample cut summary:\n    Raw SPARC:                    175\n    Q < 3:                        163\n    v_flat > 0 + gc_C15 finite:   129\n    Bridge-excluded:              127\n    After Rotmod + delta finite:  124\n    LOO-unstable removed:         121\n\n  Primary grade:   A (grid-saturated)\n  Secondary grade: A (grid-saturated)\n\n  Primary vs Secondary:\n    lambda_p shift:  2.685 dex\n    rho_partial shift: 0.014\n    [WARN] large shift -> signal heavily depends on specific galaxies\n\n[9] Writing 6-panel figure...\n    Saved: phase_c3_step2_sparc_lambda_v3.png\n    Saved: phase_c3_step2_sparc_lambda_v3_qa.txt\n    Saved: phase_c3_step2_sparc_lambda_v3_outliers.csv\n    Saved: phase_c3_step2_sparc_lambda_v3_excluded.csv\n\nPRIMARY grade:   A (grid-saturated)\nSECONDARY grade: A (grid-saturated)\nDone.",
+      "stderr_tail_50": "",
+      "extracted_patterns": {
+        "lambda": [
+          "lambda_eff (direct):  20.636",
+          "lambda_eff (partial): 10000.000  5sig CI [6.51, 10000.00]  sat: True",
+          "lambda_eff (direct):  20.636",
+          "lambda_eff (partial): 20.636  5sig CI [5.94, 10000.00]  sat: True",
+          "lambda_p shift:  2.685 dex",
+          "Saved: phase_c3_step2_sparc_lambda_v3.png"
+        ],
+        "v3": [
+          "Phase C3 Step 2 v3: Phase C2 protocol compliance",
+          "Saved: phase_c3_step2_sparc_lambda_v3.png",
+          "Saved: phase_c3_step2_sparc_lambda_v3_qa.txt",
+          "Saved: phase_c3_step2_sparc_lambda_v3_outliers.csv",
+          "Saved: phase_c3_step2_sparc_lambda_v3_excluded.csv"
+        ],
+        "C3": [
+          "Phase C3 Step 2 v3: Phase C2 protocol compliance",
+          "(E) Bridge galaxies hard-excluded: ['ESO444-G084', 'NGC1705', 'NGC2915', 'NGC3741']",
+          "Bridge galaxies present in sample: ['NGC3741', 'NGC2915']",
+          "Saved: phase_c3_step2_sparc_lambda_v3.png",
+          "Saved: phase_c3_step2_sparc_lambda_v3_qa.txt",
+          "Saved: phase_c3_step2_sparc_lambda_v3_outliers.csv"
+        ]
+      },
+      "paper_anchor_hint": "Phase C3 step 2 SPARC lambda v3"
+    },
+    {
+      "status": "FAIL",
+      "script_path": "_step5_2_b2_plik_env_verify.py",
+      "script_sha256": "5e65ac2447d5dc2cba042d2069a709c46dc5be30fc71d6160176a60a24e2e650",
+      "cwd": "D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン",
+      "return_code": 1,
+      "elapsed_sec": 0.06,
+      "stdout_total_lines": 15,
+      "stderr_total_lines": 0,
+      "stdout_tail_200": "==============================================================================\nPhase 5 Step 5.2.B-2 prerequisite: Plik env verify\n==============================================================================\nPlik data root : C:\\Users\\sgucc\\plik_data\\plc_3.0\n\nG1 clik importable          : FAIL\nG2 Plik data files          : FAIL\nG3 CAMB compatible          : FAIL\nG4 Plik instantiation       : FAIL\nG5 LCDM benchmark            : FAIL\n[OK] TXT written  : D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\phase5_step5_2_b2_plik_env_verify_summary.txt\n[OK] JSON written : D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\phase5_step5_2_b2_plik_env_verify_struct.json\nG6 output files             : PASS\n\nOVERALL : FAIL  -> environment incomplete",
+      "stderr_tail_50": "",
+      "extracted_patterns": {
+        "Plik": [
+          "Phase 5 Step 5.2.B-2 prerequisite: Plik env verify",
+          "Plik data root : C:\\Users\\sgucc\\plik_data\\plc_3.0",
+          "G2 Plik data files          : FAIL",
+          "G4 Plik instantiation       : FAIL",
+          "[OK] TXT written  : D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\phase5_step5_2_b2_plik_env_verify_summary.txt",
+          "[OK] JSON written : D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\phase5_step5_2_b2_plik_env_verify_struct.json"
+        ],
+        "env": [
+          "Phase 5 Step 5.2.B-2 prerequisite: Plik env verify",
+          "[OK] TXT written  : D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\phase5_step5_2_b2_plik_env_verify_summary.txt",
+          "[OK] JSON written : D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\phase5_step5_2_b2_plik_env_verify_struct.json",
+          "OVERALL : FAIL  -> environment incomplete"
+        ],
+        "verify": [
+          "Phase 5 Step 5.2.B-2 prerequisite: Plik env verify",
+          "[OK] TXT written  : D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\phase5_step5_2_b2_plik_env_verify_summary.txt",
+          "[OK] JSON written : D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\phase5_step5_2_b2_plik_env_verify_struct.json"
+        ],
+        "OK": [
+          "[OK] TXT written  : D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\phase5_step5_2_b2_plik_env_verify_summary.txt",
+          "[OK] JSON written : D:\\ドキュメント\\エントロピー\\新膜宇宙論\\これまでの軌跡\\パイソン\\phase5_step5_2_b2_plik_env_verify_struct.json"
+        ],
+        "PASS": [
+          "G6 output files             : PASS"
+        ]
+      },
+      "paper_anchor_hint": "Plik env verify (5.2.B-2 prerequisite)"
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+======================================================================
+Full Recompute — Tier 1 Canonical Script Re-run Forensic Anchor
+======================================================================
+Execution UTC : 2026-04-27T02:42:14.302409+00:00
+Python        : 3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]
+Total Tier 1  : 12
+Summary       : {'PASS': 11, 'FAIL': 1, 'TIMEOUT': 0, 'ERROR': 0, 'SKIP': 0}
+
+======================================================================
+Per-script verdict
+======================================================================
+
+[PASS] _step5_2_M_multi_route_min.py
+  SHA256: 09d91d309098fab84df16281ffcc7052f193ae5d19b14a7a9e160ac0510f381f
+  Anchor: Phase 5-2 5.2.M v1: G1-G7 PASS, canonical 33
+  Elapsed: 0.14s
+  RC: 0
+  Key extracts:
+    [OVERALL]
+      OVERALL VERDICT: PASS
+    [PASS]
+      Verdict: PASS
+      5.2.A     : PASS  (phase5_step5_2_a_path_a_struct.json)
+      5.2.B-1   : PASS  (phase5_step5_2_b1_firas_posterior_struct.json)
+      5.2.B-2   : PASS  (phase5_step5_2_b2_cmb_tt_posterior_struct.json)
+      5.2.B-3   : PASS  (phase5_step5_2_b3_21cm_posterior_struct.json)
+      5.2.B-4   : PASS  (phase5_step5_2_b4_joint_posterior_struct.json)
+    [G1]
+      [G1] struct loadable + schema valid
+    [G2]
+      [G2] Path A central + band reproducibility
+    [G3]
+      [G3] Path B variants count (loaded from G3 output file)
+    [G4]
+      [G4] Path C bit-exact (cascade SSoT)
+    [G5]
+      [G5] chain numerical (log_diff bit-exact extension)
+    [G6]
+      [G6] Method 2 status (Case_3_passing, deferred to v4.9)
+    [G7]
+      [G7] output canonical bibliography files
+    [canonical]
+      Phase 5-2 chain :: 5.2.M v1 canonical commit (Strategy α)
+      Local canonical match      : True (b0cb36d7bd4d...)
+      [G7] output canonical bibliography files
+      Files written : ['5_2_M_canonical_bibliography.md', '5_2_M_canonical_bibliography.txt']
+      Struct written : phase5_step5_2_M_v1_canonical_commit_struct.json
+      Summary written: phase5_step5_2_M_v1_canonical_commit_summary.txt
+    [central]
+      [G2] Path A central + band reproducibility
+      central observed: 1.0025822368421053
+
+[PASS] _step5_2_a_path_a_uncertainty_propagation.py
+  SHA256: 8e0e94a7683d2fbfd45f7b1c89aef4638614e2f6fb413a295b6a5653e1cc0b1f
+  Anchor: Path A 1.0025822368421053
+  Elapsed: 0.05s
+  RC: 0
+  Key extracts:
+    [central]
+      epsilon_scale_A central : 1.0026
+    [band]
+      epsilon_scale_A band    : [1.0026, 1.1128]
+      G2 4-way band transfer      : PASS
+    [sigma]
+      sigma(log10)            : 0.0227 dex
+      G3 sigma preservation       : PASS
+
+[PASS] _step5_2_b1_firas_posterior.py
+  SHA256: 6e615a117a7456118423832be137a3ec829f0349dd43c17c4ff8ed9fcaf8df68
+  Anchor: FIRAS B-1 prior-dominated
+  Elapsed: 0.81s
+  RC: 0
+  Key extracts:
+    [FIRAS]
+      Phase 5 Step 5.2.B-1 : FIRAS mu-distortion Bayesian posterior
+    [OVERALL]
+      OVERALL Step 5.2.B-1 : PASS
+
+[PASS] _step5_2_b3_21cm_posterior.py
+  SHA256: c1c9e021e8d8a7684ab37aa936218bb3a0edc7372ad3b02d34477960218c9eef
+  Anchor: 21cm SARAS3 dominant
+  Elapsed: 1.61s
+  RC: 0
+  Key extracts:
+    [21cm]
+      Phase 5 Step 5.2.B-3: 21cm cosmic dawn Bayesian posterior
+      [OK] JSON written : D:\ドキュメント\エントロピー\新膜宇宙論\これまでの軌跡\パイソン\phase5_step5_2_b3_21cm_posterior_struct.json
+      [OK] TXT written : D:\ドキュメント\エントロピー\新膜宇宙論\これまでの軌跡\パイソン\phase5_step5_2_b3_21cm_posterior_summary.txt
+    [SARAS]
+      Posterior summary (median, main scenario S_SARAS3):
+    [OVERALL]
+      OVERALL Step 5.2.B-3: PASS
+    [median]
+      Posterior summary (median, main scenario S_SARAS3):
+      prior log_normal     : median=0.9985, 1sigma=[0.9482, 1.0516]
+      prior flat_band      : median=1.0549, 1sigma=[1.0185, 1.0933]
+      prior uninformative  : median=0.4705, 1sigma=[0.1199, 1.2240]
+
+[PASS] _step5_2_b4_joint_posterior.py
+  SHA256: d0798847a3770f06d1493f21dc4eb8e9655e80d498e4a3d758721badb9152322
+  Anchor: B-4 joint, 6 reproductions log_diff = 0
+  Elapsed: 2.5s
+  RC: 0
+  Key extracts:
+    [joint]
+      Posterior summary (median, B14_main joint):
+      [OK] NPZ written : D:\ドキュメント\エントロピー\新膜宇宙論\これまでの軌跡\パイソン\phase5_step5_2_b4_joint_grid.npz
+      [OK] JSON written : D:\ドキュメント\エントロピー\新膜宇宙論\これまでの軌跡\パイソン\phase5_step5_2_b4_joint_posterior_struct.json
+      [OK] TXT written : D:\ドキュメント\エントロピー\新膜宇宙論\これまでの軌跡\パイソン\phase5_step5_2_b4_joint_posterior_summary.txt
+    [OVERALL]
+      OVERALL Step 5.2.B-4: PASS
+    [PASS]
+      G1: PASS
+      G2: PASS
+      G3: PASS
+      G4: PASS
+      G5: PASS
+      G6: PASS
+    [median]
+      Posterior summary (median, B14_main joint):
+      prior log_normal     : median=0.9985, 1σ=[0.9482, 1.0516]
+      prior flat_band      : median=1.0549, 1σ=[1.0185, 1.0933]
+      prior uninformative  : median=0.4705, 1σ=[0.1199, 1.2240]
+
+[PASS] _step5_2_c_cascade_ssot_consistency.py
+  SHA256: 02d5730d1b32c13ddeec7a34274206a8a70ab9d8bb0eb05a72ebc131cb7427b4
+  Anchor: C cascade SSoT 8 gates PASS
+  Elapsed: 0.14s
+  RC: 0
+  Key extracts:
+    [cascade]
+      Phase 5 Step 5.2.C: cascade SSoT consistency gate
+      [OK] TXT written : D:\ドキュメント\エントロピー\新膜宇宙論\これまでの軌跡\パイソン\phase5_step5_2_c_cascade_ssot_consistency_summary.txt
+      [OK] JSON written : D:\ドキュメント\エントロピー\新膜宇宙論\これまでの軌跡\パイソン\phase5_step5_2_c_cascade_ssot_consistency_struct.json
+    [SSoT]
+      Phase 5 Step 5.2.C: cascade SSoT consistency gate
+    [OVERALL]
+      OVERALL Step 5.2.C: PASS
+    [PASS]
+      G1: PASS
+      G2: PASS
+      G3: PASS
+      G4: PASS
+      G5: PASS
+      G6: PASS
+
+[PASS] _step5_2_m_g3_variant_accounting.py
+  SHA256: 841926fcf51e86cbf01560bb7a6622199d43257773d3b560f7eab2b66ff82a3e
+  Anchor: G3 PASS canonical 33
+  Elapsed: 0.06s
+  RC: 0
+  Key extracts:
+    [TIER]
+      Phase 5 Step 5.2.M G3 gate: TIER variant accounting
+      TIER 1 total: 39
+    [canonical]
+      canonical:    33 (criterion [30, 45])
+      G3 OVERALL : PASS  (canonical 33 in [30, 45])
+    [OVERALL]
+      G3 OVERALL : PASS  (canonical 33 in [30, 45])
+    [PASS]
+      G3 OVERALL : PASS  (canonical 33 in [30, 45])
+    [33]
+      canonical:    33 (criterion [30, 45])
+      G3 OVERALL : PASS  (canonical 33 in [30, 45])
+
+[PASS] _step5_2_method2_a1_epsilon_scale_grep.py
+  SHA256: 71c3298be3a569404d2f9bde2eaa7a2b8cd9933e06f6424f2ade46083c0718f5
+  Anchor: Method 2 Track A 1.0026
+  Elapsed: 5.83s
+  RC: 0
+  Key extracts:
+    [Method 2]
+      Phase 5 Step 5.2 Method 2 A-1 : eps_scale formal definition grep
+      Prose / informal definition found (6 TIER_2 hit(s)), no explicit equation. → ε_scale prose-defined; consider whether TIER_2 hits suffice for Method 2 closure or A-2 still needed.
+
+[FAIL] _step5_2_pre_c_resync.py
+  SHA256: 2f67615f4eaaa95ab98fcfdb0723cd26fe9cb9a58589d2a23f89cad0791b9557
+  Anchor: pre-C resync
+  Elapsed: 0.06s
+  RC: 4
+  Key extracts:
+    [resync]
+      [FATAL] backup already exists: D:\ドキュメント\エントロピー\膜宇宙論再考察AB効果有り\C3 拡張版仮説関連\foundation_gamma_actual.py.pre_resync.bak
+
+[PASS] phase5_3_step2_c15_predict.py
+  SHA256: c03555aaa23c547f6f71ca11a1ac74be150f926f0dc8c92f2707a76525c324dc
+  Anchor: Phase 5-3 step 2 NGC 3198 C15 1.07 sigma MARGINAL
+  Elapsed: 0.16s
+  RC: 0
+  Key extracts:
+    [NGC]
+      [WARN] NGC 3198 anchor has marginal C15 agreement (1-2 sigma)
+      [WARN] retract-trail note: C15 coeff or NGC 3198 systematics 検討要
+    [3198]
+      [OK] Loaded: D:\ドキュメント\エントロピー\新膜宇宙論\これまでの軌跡\パイソン\ngc3198_sparc_values.json
+      [WARN] NGC 3198 anchor has marginal C15 agreement (1-2 sigma)
+      [WARN] retract-trail note: C15 coeff or NGC 3198 systematics 検討要
+      [OK] Generated: D:\ドキュメント\エントロピー\新膜宇宙論\これまでの軌跡\パイソン\ngc3198_c15_prediction.json
+      [OK] Generated: D:\ドキュメント\エントロピー\新膜宇宙論\これまでの軌跡\パイソン\ngc3198_c15_prediction.txt
+    [gc_predicted]
+      gc_predicted = 1.2520e-10 m/s^2 = 1.0434 a0
+      gc_predicted = 1.0434 a0
+    [MARGINAL]
+      VERDICT: MARGINAL
+      Quick verdict: MARGINAL (significance = 1.074)
+
+[PASS] foundation_gamma_actual.py
+  SHA256: b0cb36d7bd4de7e235559d91842eff03faa839d5d43994ad1009d17393ebee3c
+  Anchor: Cascade SSoT canonical b0cb36d7...
+  Elapsed: 1.63s
+  RC: 0
+
+[PASS] step_iv_d_firas_mu_bound.py
+  SHA256: ad45465138d9d7af51feacb76b1a370db583a7cb34d5a703ec363bcdaa850bd2
+  Anchor: FIRAS mu bound, alpha_PT 1.76e-51
+  Elapsed: 1.46s
+  RC: 0
+  Key extracts:
+    [alpha_PT_upper]
+      [alpha_PT_upper (both V_mode), c_0=0.83, C_MEM=3.885e+05]
+    [1.76e-51]
+      v3 valid anchor: α_PT_upper(NGC 3198, V_xi) = 1.76e-51 (per-galaxy M1)
+    [FIRAS]
+      Step iv-d: FIRAS μ-distortion bound (Stage 1 vs Stage 2)
+      FIRAS |mu|<    = 9.0e-05
+      B_FIRAS_combo (stage1) = 1.326e-12  [J^-1 · m^-1/2]
+      B_FIRAS_combo (stage2) = 1.516e-12  [J^-1 · m^-1/2]
+      [anchor band c_0 = 0.83 +/- 0.03 での B_FIRAS_combo]
+      B_FIRAS_combo(c=0.42) = 8.208e-13
+    [mu]
+      FIRAS |mu|<    = 9.0e-05
+      I_mu_stage1(0.83) = 7.2275e+19 s
+      I_mu_stage2(0.83) = 6.3220e+19 s
+      I_mu_stage1    = 7.2275e+19 s
+      I_mu_stage2    = 6.3220e+19 s
+      I_mu_stage1    = [3.92e+19, 1.71e+20]
