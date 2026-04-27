@@ -1,0 +1,79 @@
+==============================================================================
+Phase 5 Step 5.2.B-2 : Plik CMB TT Bayesian posterior
+==============================================================================
+Execution mode        : FULL (clik+CAMB)
+5.2.A module imported : False
+
+--- Inputs (Path-impl-1 official Plik) ---
+  Plik TT lmin/lmax           = 30 / 2508
+  Plik native test ref chi2   = -1172.47
+  membrane alpha              = 0.05
+  membrane kernel center      = ell = 220
+  membrane kernel width       = 100
+  proxy sigma_eps             = 0.1
+  proxy chi2_min anchor       = -1172.47
+
+--- Path A integration (5.2.A) ---
+  EPSILON_SCALE_A_CENTRAL     = 1.002582
+  EPSILON_SCALE_A_BAND        = [1.002582, 1.112838]
+  SIGMA_LOG10_SYSTEMATIC      = 0.022656 dex
+
+--- Phase 5-2 chain references (G7) ---
+  B-1 log_normal one_sided median (ref) = 1.0552
+  B-3 B14 main median (ref)              = 0.4705
+
+--- Posterior summary (3 priors x 2 modes = 6 variants) ---
+  prior: log_normal
+    mode: plik_tt_proxy            | central=0.9971, median=0.9981, 1sigma=[0.9514, 1.0468]
+    mode: plik_tt_proxy_widened    | central=1.0011, median=1.0021, 1sigma=[0.9569, 1.0490]
+
+  prior: flat_band
+    mode: plik_tt_proxy            | central=1.0031, median=1.0496, 1sigma=[1.0166, 1.0890]
+    mode: plik_tt_proxy_widened    | central=1.0031, median=1.0495, 1sigma=[1.0168, 1.0885]
+
+  prior: uninformative
+    mode: plik_tt_proxy            | central=0.9751, median=0.9751, 1sigma=[0.8515, 1.0988]
+    mode: plik_tt_proxy_widened    | central=1.0031, median=1.0026, 1sigma=[0.9031, 1.1020]
+
+--- Proxy chi^2 diagnostic ---
+  chi2 at eps = 1.0           = -1172.4693
+  chi2 at Path A (1.0026)     = -1172.4700
+  chi2 min (proxy)            = -1172.4694
+  half-likelihood transition  = eps = 0.8844
+
+--- Verification Gates ---
+  G1                             : PASS
+  G2                             : PASS
+  G3                             : PASS
+  G4_log_normal_proxy            : PASS
+  G5                             : PASS
+  G6                             : PASS
+  G7                             : PASS
+
+--- Phase 5-2 chain extension (G7 detail) ---
+  B-2 log_normal proxy median            = 0.9981305706805443
+  drift vs Path A central (chain invar)  = -0.0019 dex
+  drift vs B-1 median (cross-physics)    = -0.0241 dex
+  tolerance                              = 0.5 dex
+
+--- Method 2 trigger window (still open) ---
+  (a) memory L29: Gamma 無次元化 foundation scale primary
+  (b) Phase 4b 1-R playbook sec.6-4: epsilon_scale identification
+  (c) foundation_gamma_actual_qa.txt: Gamma_norm 4.207e+35
+       [m^(3/2)/s], factor 1.84 vs foundation_scale 2.283e+35
+  (d) 5.2.0-alpha: epsilon_scale_A = 1.0026 ~= 1.0 trivial
+       closure (Method 1 inverse calibration)
+  (e) 5.2.B-2 confirms: Plik TT consistent with Path A central
+       (proxy mode); FULL mode is the next level of rigor
+  Closure deadline: pre-publication (v4.9 patch round)
+
+--- retract not-able invariants compliance ---
+  #22 (vi)  cascade SSoT untouched (foundation_gamma_actual read-only)
+  #26       multi-route min: B-2 adds CMB TT to Path B chain
+  #29       foundation scale primary: Method 2 trigger open
+  #30       no single-value commit: 6 variants (3 priors x 2 modes)
+  #32       v_flat layer separation: c=0.42 strict
+
+==============================================================================
+OVERALL Step 5.2.B-2 : PASS
+==============================================================================

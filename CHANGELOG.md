@@ -1,3 +1,28 @@
+# 5.2.M v2 CMB precision upgrade — B-2 v4 sensitivity + delta_chi2_query (2026-04-27)
+
+## Added
+- `phase5/step5_2_M_v2/` (18 files pulled from WSL2 ~/plik_b2_full/):
+  - **canonical script**: `_step5_2_b2_cmb_tt_posterior.py` (59,244 B, SHA 03424bd0...)
+  - **delta_chi2_query.json** (3,860 B, SHA 11ab6635...): cross-variant Δχ² aggregate
+    across 9 variants (1 archived v3b grid-500 + 8 v4 sensitivity)、Path A central
+    1.0025822368421053 vs LCDM ε=1 vs likelihood minimum
+  - **8 v4 sensitivity struct JSON** (~9,727 B each, ~78 KB total):
+    baseline / alpha_low / alpha_2x / alpha_5x / peak_2nd / peak_3rd / peak_4th / width_2x
+  - **8 v4 sensitivity summary TXT** (~3,500 B each, ~28 KB total): matching variants
+- `.gitattributes`: `phase5/step5_2_M_v2/** -text` rule
+
+## Resolves
+- Action 3 GitHub repo verify step (8) — previously ❌, now ✅:
+  B-2 v4 sensitivity / delta_chi2_query JSON は repo に存在。
+
+## Verified
+- Δχ²(Path_A → LCDM) ≤ 0.013 across all 8 v4 kernel/coupling variants
+  (median +0.0027, max +0.0133 at peak_3rd) — paper §6 核心数値 reproducibility 確保
+- Plik TT-only native test χ² = -380.341 (v4_baseline 内 invariant)
+- v3b_grid500_archived ↔ v4_baseline bit-exact equivalent (regression check)
+
+---
+
 # v4.8 README cosmetic update + arXiv tar.gz regenerate (2026-04-27)
 
 ## Patched

@@ -1,0 +1,363 @@
+{
+  "phase": "5.2.B-2",
+  "name": "plik_cmb_tt_posterior",
+  "execution_mode": "FULL",
+  "data_anchor": {
+    "plik_native_test_chi2_ref": -1172.47,
+    "plik_tt_lmin": 30,
+    "plik_tt_lmax": 2508,
+    "ref": "Planck 2018 results VI, Plik R3.00",
+    "env_verify_forensic": "smica check got -1172.47, expected -1172.47 (diff -4.34e-07)"
+  },
+  "evaluation": {
+    "c_layer": "galaxy_specific_NGC_3198",
+    "evaluation_c": 0.42,
+    "cascade_canonical_c_separate": 0.83
+  },
+  "physics_constants": {
+    "alpha_membrane": 0.01,
+    "kernel_l_peak": 810.0,
+    "kernel_l_width": 100,
+    "sigma_eps_proxy": 0.1,
+    "chi2_proxy_min": -1172.47,
+    "eps_proxy_min": 1.0025822368421053
+  },
+  "lcdm_bestfit_planck2018": {
+    "ombh2": 0.02237,
+    "omch2": 0.12,
+    "tau": 0.0544,
+    "ns": 0.9649,
+    "logA": 3.044,
+    "H0": 67.36
+  },
+  "path_a_input": {
+    "epsilon_scale_a_central": 1.0025822368421053,
+    "epsilon_scale_a_band": [
+      1.0025822368421053,
+      1.1128377192982457
+    ],
+    "sigma_log10_systematic": 0.0226559158703769,
+    "imported_from_module": false
+  },
+  "phase_5_2_chain_references": {
+    "b1_log_normal_one_sided_median": 1.0552,
+    "b3_b14_main_median": 0.4705,
+    "chain_log_diff_invariant": "0.0000 dex (B-1/B-3/B-4 bit-exact)",
+    "b2_chain_extension_tol_dex": 0.5
+  },
+  "posteriors": {
+    "log_normal": {
+      "plik_tt_proxy": {
+        "central": 0.9930992198439689,
+        "median": 0.9956714982136987,
+        "1sigma_band": [
+          0.9460444593216972,
+          1.047826090048801
+        ],
+        "2sigma_band": [
+          0.9001724629122007,
+          1.100982001211247
+        ]
+      },
+      "plik_tt_proxy_widened": {
+        "central": 1.0011000200040008,
+        "median": 1.0021229465903012,
+        "1sigma_band": [
+          0.9568796012159603,
+          1.0490246903013112
+        ],
+        "2sigma_band": [
+          0.9145177051440267,
+          1.096180224736046
+        ]
+      }
+    },
+    "flat_band": {
+      "plik_tt_proxy": {
+        "central": 1.003100220044009,
+        "median": 1.0524903490154354,
+        "1sigma_band": [
+          1.017470442913382,
+          1.091711400199747
+        ],
+        "2sigma_band": [
+          1.004463103136437,
+          1.1088277160700284
+        ]
+      },
+      "plik_tt_proxy_widened": {
+        "central": 1.003100220044009,
+        "median": 1.0495491270080297,
+        "1sigma_band": [
+          1.016796684813956,
+          1.0885039604154954
+        ],
+        "2sigma_band": [
+          1.0043891006333647,
+          1.108043259798617
+        ]
+      }
+    },
+    "uninformative": {
+      "plik_tt_proxy": {
+        "central": 0.7190718143628727,
+        "median": 0.826267964756665,
+        "1sigma_band": [
+          0.6122462036119474,
+          1.1088060268539597
+        ],
+        "2sigma_band": [
+          0.5189632973848319,
+          1.4076017832878562
+        ]
+      },
+      "plik_tt_proxy_widened": {
+        "central": 1.003100220044009,
+        "median": 1.0025822245046463,
+        "1sigma_band": [
+          0.9031327192492467,
+          1.1020362868652442
+        ],
+        "2sigma_band": [
+          0.8065719043402233,
+          1.1985928123848297
+        ]
+      }
+    }
+  },
+  "diagnostic": {
+    "chi2_at_eps_1": -1172.469333205289,
+    "chi2_at_path_a": -1172.47,
+    "chi2_min_proxy": -1172.4694032294378,
+    "transition_eps_half_L": 0.8844221105527639,
+    "interpretation": "Plik TT (proxy) is constraint-strong around eps=1; posterior concentrates at Path A central, preserving chain invariant"
+  },
+  "verification": {
+    "G1": "PASS",
+    "G2": "PASS",
+    "G3": "PASS",
+    "G4_log_normal_proxy": "PASS",
+    "G5": "PASS",
+    "G6": "PASS",
+    "G7": "PASS",
+    "G8": "PASS"
+  },
+  "method2_status": "trigger_window_open",
+  "method2_hint": [
+    "memory_L29_gamma_normalization_foundation_scale_primary",
+    "phase4b_1r_playbook_section6_4_epsilon_scale_identification",
+    "foundation_gamma_actual_qa_gamma_norm_4207e35_factor_184",
+    "5_2_0_alpha_method1_trivial_closure_eps_a_1_0026",
+    "5_2_b2_plik_tt_consistent_with_path_a_central"
+  ],
+  "method2_closure_deadline": "before_v4_9_patch_round",
+  "method2_final_inject_point": "v4_8_section6_final_draft",
+  "retract_invariants_compliance": [
+    "#22(vi)",
+    "#26",
+    "#29",
+    "#30",
+    "#32"
+  ],
+  "full_mode": {
+    "plik_data_root": "/home/sgucc/plik_data/plc_3.0",
+    "plik_lmax_tt": 2508,
+    "nuisance_param_count": 20,
+    "nuisance_param_names": [
+      "A_cib_217",
+      "cib_index",
+      "xi_sz_cib",
+      "A_sz",
+      "ps_A_100_100",
+      "ps_A_143_143",
+      "ps_A_143_217",
+      "ps_A_217_217",
+      "ksz_norm",
+      "gal545_A_100",
+      "gal545_A_143",
+      "gal545_A_143_217",
+      "gal545_A_217",
+      "A_sbpx_100_100_TT",
+      "A_sbpx_143_143_TT",
+      "A_sbpx_143_217_TT",
+      "A_sbpx_217_217_TT",
+      "calib_100T",
+      "calib_217T",
+      "A_planck"
+    ],
+    "nuisance_missing_defaults": [],
+    "eps_grid_coarse_lo": 0.5,
+    "eps_grid_coarse_hi": 2.0,
+    "eps_grid_coarse_n": 200,
+    "chi2_min": 799.6723957947797,
+    "chi2_at_eps_1": 800.3928720674032,
+    "chi2_at_path_a": 800.4061847306974,
+    "eps_at_chi2_min": 0.7185929648241206,
+    "plik_load_time_s": 0.03239035606384277,
+    "camb_compute_time_s": 0.3688170909881592,
+    "clik_sweep_time_s": 0.7611193656921387,
+    "posterior_summaries_full": {
+      "log_normal": {
+        "plik_tt_full": {
+          "central": 0.9930992198439689,
+          "median": 0.9956714982136987,
+          "1sigma_band": [
+            0.9460444593216972,
+            1.047826090048801
+          ],
+          "2sigma_band": [
+            0.9001724629122007,
+            1.100982001211247
+          ]
+        },
+        "plik_tt_proxy_xref": {
+          "central": 1.0011000200040008,
+          "median": 1.0021229465903012,
+          "1sigma_band": [
+            0.9568796012159603,
+            1.0490246903013112
+          ],
+          "2sigma_band": [
+            0.9145177051440267,
+            1.096180224736046
+          ]
+        }
+      },
+      "flat_band": {
+        "plik_tt_full": {
+          "central": 1.003100220044009,
+          "median": 1.0524903490154354,
+          "1sigma_band": [
+            1.017470442913382,
+            1.091711400199747
+          ],
+          "2sigma_band": [
+            1.004463103136437,
+            1.1088277160700284
+          ]
+        },
+        "plik_tt_proxy_xref": {
+          "central": 1.003100220044009,
+          "median": 1.0495491270080297,
+          "1sigma_band": [
+            1.016796684813956,
+            1.0885039604154954
+          ],
+          "2sigma_band": [
+            1.0043891006333647,
+            1.108043259798617
+          ]
+        }
+      },
+      "uninformative": {
+        "plik_tt_full": {
+          "central": 0.7190718143628727,
+          "median": 0.826267964756665,
+          "1sigma_band": [
+            0.6122462036119474,
+            1.1088060268539597
+          ],
+          "2sigma_band": [
+            0.5189632973848319,
+            1.4076017832878562
+          ]
+        },
+        "plik_tt_proxy_xref": {
+          "central": 1.003100220044009,
+          "median": 1.0025822245046463,
+          "1sigma_band": [
+            0.9031327192492467,
+            1.1020362868652442
+          ],
+          "2sigma_band": [
+            0.8065719043402233,
+            1.1985928123848297
+          ]
+        }
+      }
+    }
+  },
+  "proxy_mode_supplementary": {
+    "posterior_summaries_proxy": {
+      "log_normal": {
+        "plik_tt_proxy": {
+          "central": 1.0011000200040008,
+          "median": 1.0021229465903012,
+          "1sigma_band": [
+            0.9568796012159603,
+            1.0490246903013112
+          ],
+          "2sigma_band": [
+            0.9145177051440267,
+            1.096180224736046
+          ]
+        },
+        "plik_tt_proxy_widened": {
+          "central": 0.9990998199639929,
+          "median": 1.0024192324276309,
+          "1sigma_band": [
+            0.9532695582086989,
+            1.0539367439193152
+          ],
+          "2sigma_band": [
+            0.9077144451863236,
+            1.1062992108061112
+          ]
+        }
+      },
+      "flat_band": {
+        "plik_tt_proxy": {
+          "central": 1.003100220044009,
+          "median": 1.0495491270080297,
+          "1sigma_band": [
+            1.016796684813956,
+            1.0885039604154954
+          ],
+          "2sigma_band": [
+            1.0043891006333647,
+            1.108043259798617
+          ]
+        },
+        "plik_tt_proxy_widened": {
+          "central": 1.003100220044009,
+          "median": 1.0550845286330401,
+          "1sigma_band": [
+            1.0188822408653029,
+            1.0931096767302853
+          ],
+          "2sigma_band": [
+            1.004719547029909,
+            1.1090819031431758
+          ]
+        }
+      },
+      "uninformative": {
+        "plik_tt_proxy": {
+          "central": 1.003100220044009,
+          "median": 1.0025822245046463,
+          "1sigma_band": [
+            0.9031327192492467,
+            1.1020362868652442
+          ],
+          "2sigma_band": [
+            0.8065719043402233,
+            1.1985928123848297
+          ]
+        },
+        "plik_tt_proxy_widened": {
+          "central": 1.003100220044009,
+          "median": 1.0025823027358272,
+          "1sigma_band": [
+            0.8036870902649815,
+            1.2014769657057658
+          ],
+          "2sigma_band": [
+            0.6105835373438175,
+            1.3945822724253063
+          ]
+        }
+      }
+    },
+    "note": "PROXY mode posteriors retained as cross-reference. In FULL mode, the canonical 'posteriors' field above contains the actual clik+CAMB results."
+  }
+}
