@@ -1,0 +1,142 @@
+{
+  "phase5_step": "5.2.M_v1_canonical_commit",
+  "strategy": "alpha (Option beta single canonical commit)",
+  "verdict": "PASS",
+  "timestamp": "2026-04-26T16:32:13Z",
+  "gates": {
+    "G1": {
+      "verdict": "PASS",
+      "details": {
+        "5.2.A": {
+          "status": "PASS",
+          "filename": "phase5_step5_2_a_path_a_struct.json",
+          "upstream_verdict": null
+        },
+        "5.2.B-1": {
+          "status": "PASS",
+          "filename": "phase5_step5_2_b1_firas_posterior_struct.json",
+          "upstream_verdict": null
+        },
+        "5.2.B-2": {
+          "status": "PASS",
+          "filename": "phase5_step5_2_b2_cmb_tt_posterior_struct.json",
+          "upstream_verdict": null
+        },
+        "5.2.B-3": {
+          "status": "PASS",
+          "filename": "phase5_step5_2_b3_21cm_posterior_struct.json",
+          "upstream_verdict": null
+        },
+        "5.2.B-4": {
+          "status": "PASS",
+          "filename": "phase5_step5_2_b4_joint_posterior_struct.json",
+          "upstream_verdict": null
+        },
+        "5.2.C": {
+          "status": "PASS",
+          "filename": "phase5_step5_2_c_cascade_ssot_consistency_struct.json",
+          "upstream_verdict": null
+        }
+      },
+      "b2_filename_resolved": "phase5_step5_2_b2_cmb_tt_posterior_struct.json"
+    },
+    "G2": {
+      "verdict": "PASS",
+      "central_observed": 1.0025822368421053,
+      "central_expected": 1.0025822368421053,
+      "band_observed": [
+        1.0025822368421053,
+        1.1128377192982457
+      ],
+      "band_expected": [
+        1.0025822368421053,
+        1.1128377192982457
+      ],
+      "sigma_observed": 0.022655915870376915,
+      "sigma_expected": 0.0226559158703769,
+      "checks": {
+        "central_match": true,
+        "band_lower_match": true,
+        "band_upper_match": true,
+        "sigma_match": true
+      }
+    },
+    "G3": {
+      "verdict": "PASS",
+      "tier1_total": 39,
+      "overlap_count": 6,
+      "canonical_count": 33,
+      "breakdown": {
+        "B-1": 6,
+        "B-2_FULL": 6,
+        "B-3": 9,
+        "B-4": 18
+      },
+      "reproductions_log_diff_max_dex": 0.0,
+      "source": "phase5_step5_2_m_g3_variant_accounting.json"
+    },
+    "G4": {
+      "verdict": "PASS",
+      "local_canonical_hash": "b0cb36d7bd4de7e235559d91842eff03faa839d5d43994ad1009d17393ebee3c",
+      "local_canonical_match": true,
+      "local_archive_hash": "42181ce85a7663e5a9b6942a54e5e5327df61c2473d3c583d435050170a490df",
+      "local_archive_match": true,
+      "expected_prefix": {
+        "canonical": "b0cb36d7",
+        "archive": "42181ce8"
+      },
+      "upstream_5_2_c_verdict": "PASS",
+      "upstream_5_2_c_three_copy": "PASS",
+      "note": "Full 3-copy verification (canonical + C3 + foundation\\) delegated to 5.2.C; this gate verifies local copies + cross-references upstream verdict."
+    },
+    "G5": {
+      "verdict": "PASS",
+      "max_log_diff_dex": 0.0,
+      "log_diff_tolerance_dex": 0.0001,
+      "log_diff_count": 0,
+      "bit_exact_pass": true,
+      "canonical_drifts_dex": {
+        "5.2.B-1": null,
+        "5.2.B-2": null,
+        "5.2.B-3": null,
+        "5.2.B-4": null
+      },
+      "canonical_drift_max_dex": 0.0,
+      "v4_drift_max_dex": null,
+      "v4_drift_count": 0,
+      "drift_tolerance_dex": 0.5,
+      "drift_pass": true
+    },
+    "G6": {
+      "verdict": "PASS",
+      "track_a_status": "Case_3_passing",
+      "deferred_to": "v4.9_patch_round",
+      "case3_match": true,
+      "deferred_match": true,
+      "narrative_inject_text": "ε_scale is operationally defined via Method 1 inverse calibration (ε_scale_A = 1.0026, Path A inverse closure). Formal physical interpretation, including potential connection to foundation_scale (χ_F · V''(φ_0) · T_m / ℏ ≈ 2.283e+35) and resolution of the (a)/(b) 96 dex coexistence flagged in Phase 4b 1-R retract-impossible #22-25 alpha-3, deferred to v4.9 patch round future work.",
+      "note": "ε_scale formal definition absent in theory note (project-wide grep: 153 TIER_4 passing mentions only); deferred to v4.9 patch round."
+    },
+    "G7": {
+      "verdict": "PASS",
+      "files_written": [
+        "5_2_M_canonical_bibliography.md",
+        "5_2_M_canonical_bibliography.txt"
+      ],
+      "reason": null
+    },
+    "OVERALL": "PASS"
+  },
+  "retract_impossible_invariants": {
+    "#22(vi)": "cascade SSoT 3 active bit-exact + 1 archived",
+    "#26": "multi-route min: A + B-1/B-2/B-3/B-4 + C verified",
+    "#29": "foundation scale numerical OK, Method 2 deferred",
+    "#30": "no single-value commit (33 canonical + 1 Path A + 8 v4 audit)",
+    "#32": "v_flat layer separation c=0.42 strict galaxy-specific"
+  },
+  "canonical_count": 33,
+  "tier1_total": 39,
+  "method2_status": {
+    "track_a": "Case_3_passing",
+    "deferred_to": "v4.9_patch_round"
+  }
+}

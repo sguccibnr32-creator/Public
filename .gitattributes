@@ -1,0 +1,7 @@
+# Forensic byte-preservation for Phase 5-2 chain canonical commit
+# (paper §A1 forensic anchor block claims specific SHA256 fingerprints —
+#  preserving raw bytes prevents autocrlf line-ending conversion drift
+#  across cross-platform clones).
+phase5/step5_2_M_v1/** -text
+latex_v48/membrane_v48.tex -text
+latex_v48/membrane_v48.tex.bak.pre_phase5_2_inject -text

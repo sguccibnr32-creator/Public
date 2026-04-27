@@ -1,3 +1,71 @@
+# v4.8 publication final pass FULL CLOSURE (2026-04-27) — Phase 5-2 chain inject
+
+## Added
+- **Phase 5-2 chain inject** into `latex_v48/membrane_v48.tex` (8 deliverables,
+  +362 lines: 1019 → 1382 lines):
+  - §3.2 footnote, §5.5 (main + 3 subsubsections: nuisance / kernel sweep / TIER),
+    §6.6 canonical bibliography, §6.7 Plik TT consistency, §6.8 ε_scale operational
+    + Method 2 deferral, §7.5 patch, §A1 Phase 5-2 chain anchor + forensic anchor
+    block, §A2 patch (#1--32 + 3 row update + #32 row 新設)
+- **5.2.M v1 canonical commit deliverables** at `phase5/step5_2_M_v1/`:
+  - `_step5_2_M_multi_route_min.py` (SHA256 09d91d30...0f381f)
+  - `5_2_M_canonical_bibliography.md` (SHA256 f63696d7...036056)
+  - `5_2_M_canonical_bibliography.txt` (SHA256 248548a6...082a48)
+  - `phase5_step5_2_M_v1_canonical_commit_struct.json` (SHA256 c2837e2c...55e2e)
+  - `phase5_step5_2_M_v1_canonical_commit_summary.txt` (= bibliography.txt と二重)
+- **Forensic baseline backup**: `latex_v48/membrane_v48.tex.bak.pre_phase5_2_inject`
+  (SHA256 368a1b3d...4af06, 1019 lines, base v4.8 pre-inject 状態保存)
+- **`.gitattributes`**: `phase5/step5_2_M_v1/**` および `latex_v48/membrane_v48.tex*`
+  に対し `-text` 指定 (autocrlf による cross-platform clone での line ending
+  conversion drift 防止 → paper §A1 forensic anchor SHA256 claim integrity 保護)
+- **`.gitignore`**: `!latex_v48/membrane_v48.pdf` exception 追加 (publication
+  final PDF を tracked 化)
+
+## Patched
+- 5 件 corrections / mitigations to `latex_v48/membrane_v48.tex`:
+  1. §6.8 P3 (ii) attribution fix (finding_1_correction.md ベース、(a)/(b) を
+     §7.1 (a) σ rest energy / (b) membrane coherence と alignment)
+  2. §6.8 内 `\paragraph{}` × 2 → `\medskip\noindent\textbf{}` (titlesec error mitigation)
+  3. §7.5 v4.9 roadmap (tabular → tabularx + X column wrap)
+  4. §1.4 M1-M5 claims table (col 2 `l` → `p{75mm}` raggedright + col 4 → `p{45mm}`)
+  5. §A1 longtable (`{@{}lll@{}}` → `{@{}p{43mm}p{53mm}p{60mm}@{}}` raggedright)
+- arXiv submission package regenerated: `arxiv/membrane_v48_arxiv.tar.gz`
+  (33,819 bytes; tex + bbl + bib + README, PDF excluded per arXiv recompile policy)
+
+## Verified
+- compile: lualatex × 3 + bibtex (TeX Live 2026, LuaHBTeX 1.24.0)
+- compile errors: 0, overfull \hbox: 0, underfull boxes: 0, harmful warnings: 0
+- final PDF: `latex_v48/membrane_v48.pdf` (21 pages, 1,013,247 bytes,
+  SHA256 5d9467ff...41e88)
+- final tex: `latex_v48/membrane_v48.tex` (1382 lines, 77,531 bytes,
+  SHA256 394f2571...c7e91053)
+
+## Phase 5-2 chain immutable claims (publication 確定数値)
+- canonical posterior derivations: 33 (TIER-1 39 − reproductions 6)
+- B-4 reproductions log_diff = 0.000000 dex (bit-exact, 6/6 within 1e-4 dex)
+- Δχ²(Path_A → LCDM) ≤ 0.013 across all 8 kernel/coupling variants
+  (median +0.0027, max +0.0133 peak_3rd)
+- chain extension drift_max = 0.0 dex
+- Plik TT-only native test χ² = −380.341 (FULL mode anchor)
+- Plik TTTEEE native test χ² = −1172.47 (PROXY mode anchor)
+- Path A central 1.0025822368421053 (unchanged from v4.7.8)
+
+## Pending (carry-over)
+- **MEDIUM-OPTIONAL**: B-2 v4 sensitivity + delta_chi2_query JSON pull back from
+  WSL2 → 5.2.M v2 canonical commit (precision upgrade、forensic chain 後付け強化、
+  数値は同値)
+- **LOW**: kernel choice motivation 別検討 (theory work, v4.9 patch round)
+- **LOW**: cleanup (~/plik_b2_full/sensitivity_v4/ archive 等)
+
+## Retract 不可 invariants (全 step 遵守済)
+- #22(vi) cascade SSoT 3 active bit-exact + 1 archived
+- #26 multi-route min: A + B-1/B-2/B-3/B-4 + C
+- #29 foundation_scale primary (Method 2 formal closure deferred to v4.9)
+- #30 no single-value commit (33 canonical + 1 Path A + 8 v4 audit)
+- #32 v_flat layer separation (c=0.42 galaxy-specific NGC_3198 / c=0.83 cascade canonical 完全分離)
+
+---
+
 # v4.8 erratum v3 (2026-04-23) — deg-4 f_opt cascade + universal Λ_UV retract
 
 ## Changed

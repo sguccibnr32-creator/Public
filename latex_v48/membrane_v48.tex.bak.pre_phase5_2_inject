@@ -226,7 +226,7 @@ iv-d-I/II/III/IV $\to$ iv-e-I)
 
 \subsection{Main claims (M1--M5) の予告}
 \begin{center}\small
-\begin{tabular}{@{}c>{\raggedright\arraybackslash}p{75mm}l>{\raggedright\arraybackslash}p{45mm}@{}}
+\begin{tabular}{@{}cllp{52mm}@{}}
 \toprule
 \# & Claim & 節 & 核心数値 \\
 \midrule
@@ -326,12 +326,7 @@ NGC 2841 & 0.80 & 1.845 & $2.848 \times 10^{5}$ & $5.254 \times 10^{5}$ & 5.754 
 
 v4.8 v1 版で採用した $\fopt(0.83) = 1.9163$ は NGC 3198 ($c=0.42$, $\fopt=1.01$) と NGC 2841
 ($c=0.80$, $\fopt=1.85$) の 2 点 $\fopt$-linear 外挿 artifact であった (patch spec v2 \S 6.3 /
-retract 不可 \#41)\footnote{$\epsilon_{\mathrm{scale}}$ パラメータの CMB-side operational
-coupling (Plik TT likelihood に対する linear $(\epsilon_{\mathrm{scale}}-1)$
-modification ansatz) は \S 5.5 Eq. 5.5-I + Eq. 5.5-II で Phase 5-2 chain
-B-2 用に導入される。本 \S 3 の foundation\_$\alpha$2 では数値較正対象外
-(operational ansatz の formal grounding は v4.9 patch round deferred、
-\S 6.8)。}. 本 v3 erratum では v3.7 Chap 18-2 の 5 点
+retract 不可 \#41). 本 v3 erratum では v3.7 Chap 18-2 の 5 点
 $c \in \{0.30, 0.42, 0.618, 0.80, 1.00\}$ から deg-4 exact-pass Lagrange fit を $V''(x=0.5, c)$ に
 適用し, $V''(x=0.5, 0.83) = 10.463$ から閉形式 $\fopt = 2\pi/\sqrt{V''(x=0.5,c)}$ により
 $\fopt(0.83) = 1.9425$ を得る (v1 から $+1.37$\%). cascade で
@@ -704,173 +699,6 @@ P1--P4 分岐比 (C3-4、\S 7.8 energy branching ratio section) を経て v4.9 p
 
 
 % =============================================================================
-% [Phase 5-2 chain inject patch — §5.5 cluster]
-% Source: 5_2_M_canonical_bibliography.md SHA256 f63696d7...
-% Generated: 2026-04-27
-% =============================================================================
-
-\subsection{Phase 5-2 chain B-2 kernel sensitivity audit}
-
-本節は v4.8 foundation 層 (\S 2--\S 4) を変えない additive layer
-として、Plik CMB TT likelihood [Planck 2020 V] による
-$\epsilon_{\mathrm{scale}}$ posterior 評価 (Phase 5-2 chain B-2) と
-その kernel/coupling sensitivity audit (TIER-2) を提示する。
-\S 4.3 末尾で予告した「次版 (21cm + CMB TT) cross-check」の CMB TT 側に
-対応する operational result を、Path A inverse calibration (\S 6.8) と
-合わせて報告する。
-
-\subsubsection*{Operational ansatz}
-
-$\epsilon_{\mathrm{scale}}$ は \S 6.8 で詳述する Method 1 inverse
-calibration により operational に定義される無次元 deviation parameter
-で、$\epsilon_{\mathrm{scale}} = 1$ が pure $\Lambda$CDM、Path A central
-$\epsilon_{\mathrm{scale,A}} = 1.0026$ が membrane framework での
-$\Lambda$CDM-equivalent operational reference 点である。
-CMB TT $C_\ell$ への modification ansatz は
-linear $(\epsilon_{\mathrm{scale}} - 1)$ coupling $\times$ multipole-localized
-Gaussian kernel として定義する:
-
-\begin{keybox}
-\textbf{Eq. 5.5-I (operational, Phase 5-2 chain B-2):}
-\[
-C_\ell^{\mathrm{mod}}(\epsilon_{\mathrm{scale}};\, \alpha, \ell_{\mathrm{peak}}, \ell_{\mathrm{width}})
-= C_\ell^{\Lambda\mathrm{CDM}} \cdot
-\bigl[1 + \alpha \cdot (\epsilon_{\mathrm{scale}} - 1) \cdot K(\ell;\, \ell_{\mathrm{peak}}, \ell_{\mathrm{width}})\bigr]
-\]
-\textbf{Eq. 5.5-II (kernel functional form, peak-normalized):}
-\[
-K(\ell;\, \ell_{\mathrm{peak}}, \ell_{\mathrm{width}}) =
-\exp\!\left[-\frac{(\ell - \ell_{\mathrm{peak}})^2}{2\,\ell_{\mathrm{width}}^2}\right],
-\quad K(\ell_{\mathrm{peak}}) = 1
-\]
-\end{keybox}
-
-\noindent
-$\alpha$ は無次元 coupling 強度 (baseline $\alpha = 0.01$、すなわち
-$\epsilon_{\mathrm{scale}} = 2$ で $\ell = \ell_{\mathrm{peak}}$ における
-$\delta C_\ell / C_\ell^{\Lambda\mathrm{CDM}} = 1\%$、Path A actual
-$\epsilon_{\mathrm{scale,A}} = 1.0026$ では $2.6 \times 10^{-5}$)、
-$\ell_{\mathrm{peak}}$ は kernel 中心 multipole (baseline $220$ = first
-acoustic peak)、$\ell_{\mathrm{width}}$ は multipole-space 幅 (baseline
-$100$)。本 ansatz の first-principles derivation
-($\chi_F$ small-perturbation regime との接続を含む) は v4.9 patch round
-に deferred (\S 6.8 + \S 7.2)。
-
-\noindent
-本 ansatz の linearity ($(\epsilon_{\mathrm{scale}} - 1)$ 比例) は \S 5.5.2 における
-$\epsilon@\chi^2_{\mathrm{min}}$ の $\alpha$-scaling 強依存性
-($0.749 \to 0.975$ across $\alpha$ scan) の数学的源であり、
-physical signal ではなく artefact として扱う根拠となる\footnote{Phase 5-2 chain B-2 は
-two-tier execution structure を採る: PROXY mode は Plik TTTEEE native test value
-$\chi^2 = -1172.47$ を anchor とする closed-form quadratic proxy で sensitivity
-calibration 用 (\texttt{CHI2\_PROXY\_MIN} $= -1172.47$, \texttt{SIGMA\_EPS\_PROXY} $= 0.1$)、
-FULL mode は actual clik+CAMB sweep with Plik TT-only likelihood で
-native test value $\chi^2 = -380.341$ を anchor とする。本論文 \S 5.5.2 以降の数値結果は
-全て FULL mode (TT-only) 由来であり、PROXY mode (TTTEEE) anchor とは別量である。
-forensic chain は 5.2.M v1 commit script SHA256
-\texttt{09d91d309098fab8\ldots} (full 64-hex は \S A1 末尾参照)。}.
-
-
-\subsubsection{Nuisance parameter introspection lesson}
-
-% [INJECT §5 Methodology block 2 — verbatim from 5_2_M_canonical_bibliography.md line 50-56]
-\begin{quote}
-A separate methodological note: B-2 v1 results with 5 missing nuisance
-defaults (CIB index and sub-pixel correction amplitude unset) produced a
-spurious $+1$ dex shift in the uninformative posterior, fully eliminated
-in v2 with all 20 nuisance parameters set to Planck 2018 best-fit values.
-This demonstrates the necessity of complete nuisance parameter
-introspection before claiming any data-driven posterior shift as a
-physical signal.
-\end{quote}
-
-
-\subsubsection{Kernel/coupling sensitivity sweep (TIER-2 audit)}
-
-本節の数値結果は全て FULL mode (TT-only Plik likelihood with CAMB sweep)
-由来である。PROXY mode (closed-form quadratic with TTTEEE anchor) は
-sensitivity calibration 専用で本節の scope 外。
-
-% [INJECT §5 Methodology block 1 — verbatim from 5_2_M_canonical_bibliography.md line 36-48]
-\begin{quote}
-The companion analysis includes a kernel/coupling sensitivity sweep
-(8 variants spanning $\alpha$: $0.005$--$0.05$, $\ell_{\mathrm{peak}}$:
-1st--4th acoustic peaks, $\ell_{\mathrm{width}}$: $100$--$200$) treated
-as TIER-2 audit material. Across this sweep, informed-prior posterior
-medians (\texttt{log\_normal}, \texttt{flat\_band}) remain stable at
-$\pm 0.003$ of the Path A central value, while the uninformative-prior
-posterior exhibits $\pm 0.34$ dex spread, indicating that
-prior-independent data-only conclusions are kernel-fragile. The location
-of the $\chi^2$ minimum
-($\epsilon@\chi^2_{\mathrm{min}} \in [0.749, 0.975]$ across $\alpha$ scan)
-is a mathematical consequence of the linear $(\epsilon - 1)$ ansatz
-scaling and is not reported as a physical signal. Kernel functional form
-impacts data sensitivity by $\geq 100\times$ (\texttt{width\_2x}
-$\Delta\chi^2(\epsilon = 1) = 0.006$ vs \texttt{peak\_3rd}
-$\Delta\chi^2(\epsilon = 1) = 0.72$), with the third-acoustic-peak-localized
-kernel approaching but not reaching the $1\sigma$ threshold, motivating
-dedicated peak-resolved analyses in future work.
-\end{quote}
-
-\noindent
-表 T2 に 8 variants の sweep 結果を集約する (baseline $= (\alpha, \ell_{\mathrm{peak}}, \ell_{\mathrm{width}}) = (0.01, 220, 100)$、
-median 表記 $\tilde{\epsilon}_{\mathrm{prior}}$ は posterior median を意味する):
-
-\begin{center}\footnotesize
-\begin{tabular}{@{}lcrrrrr@{}}
-\toprule
-variant & ($\alpha$, $\ell_{\mathrm{peak}}$, $\ell_{\mathrm{width}}$)
-        & $\chi^2_{\mathrm{min}}$ & $\epsilon@\chi^2_{\mathrm{min}}$
-        & $\tilde{\epsilon}_{\mathrm{logn}}$ & $\tilde{\epsilon}_{\mathrm{flat}}$ & $\tilde{\epsilon}_{\mathrm{uninf}}$ \\
-\midrule
-baseline       & $(0.01,\, 220,\, 100)$  & $800.3527$ & $0.8769$ & $1.0017$ & $1.0564$ & $1.0636$ \\
-$\alpha$\_low  & $(0.005,\, 220,\, 100)$ & $800.3527$ & $0.7487$ & $1.0021$ & $1.0568$ & $1.1678$ \\
-$\alpha$\_2x   & $(0.02,\, 220,\, 100)$  & $800.3527$ & $0.9372$ & $1.0007$ & $1.0553$ & $0.9687$ \\
-$\alpha$\_5x   & $(0.05,\, 220,\, 100)$  & $800.3527$ & $0.9749$ & $0.9981$ & $1.0496$ & $0.9751$ \\
-peak\_2nd      & $(0.01,\, 540,\, 100)$  & $800.3490$ & $0.9146$ & $1.0011$ & $1.0558$ & $0.9903$ \\
-peak\_3rd      & $(0.01,\, 810,\, 100)$  & $799.6724$ & $0.7186$ & $0.9957$ & $1.0525$ & $0.8263$ \\
-peak\_4th      & $(0.01,\, 1140,\, 100)$ & $800.1661$ & $0.8543$ & $0.9983$ & $1.0538$ & $0.9016$ \\
-width\_2x      & $(0.01,\, 220,\, 200)$  & $800.3873$ & $0.9673$ & $1.0021$ & $1.0564$ & $1.0410$ \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-
-\subsubsection{TIER accounting and canonical count derivation (5.2.M G3 gate)}
-
-Phase 5-2 chain の 4 chain step (B-1 FIRAS $\mu$-distortion / B-2 Plik CMB TT /
-B-3 21cm cosmic dawn / B-4 FIRAS $\times$ 21cm joint) における posterior
-derivation を TIER 別に accounting する。B-4 内 6 derivations
-(3 priors $\times$ 2 single-likelihood combinations:
-\texttt{B14\_FIRAS\_only} $\leftrightarrow$ B-1 \texttt{one\_sided} と
-\texttt{B14\_21cm\_only} $\leftrightarrow$ B-3 \texttt{S\_SARAS3}) は
-upstream references を bit-exactly reproduce する
-($1 \times 10^{-4}$ dex tolerance 内、verified \texttt{log\_diff} $= 0.000000$
-dex in all 6 cases、5.2.M v1 G5 gate PASS)。これらは TIER-1 total には
-含まれるが canonical unique derivation には数えず、
-canonical count $=$ TIER-1 total $-$ overlap $= 39 - 6 = 33$ となる。
-
-\begin{center}\small
-\begin{tabular}{@{}llr@{}}
-\toprule
-TIER & Content & Count \\
-\midrule
-TIER-1 canonical     & unique posterior derivations             & 33 \\
-TIER-1 reproductions & B-4 $\leftrightarrow$ B-1/B-3 bit-exact (\texttt{log\_diff} $= 0$) & 6 \\
-TIER-1 total         & all chain step derivations               & 39 \\
-TIER-2 audit         & B-2 v4 kernel sensitivity sweep (\S 5.5.2) & 8 \\
-Path A               & central + band edges                     & 2 \\
-Path C               & cascade SSoT verification (gate, not posteriors) & 0 \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\noindent
-本 derivation chain (canonical 33 の積算根拠) は \S 6.6 main result の
-前提であり、\S 6.6 では結果 statement のみを再掲する。
-
-
-% =============================================================================
 \section{Discussion: M4, M5 と全体整合性}
 % =============================================================================
 
@@ -935,158 +763,6 @@ arXiv cat & astro-ph.CO & astro-ph.CO + hep-th cross \\
 
 本 companion は v4.7.8 の結論を変更しない。純粋な追加 layer として、v4.7.8 の observational
 establishment に theoretical foundation を提供する。
-
-
-% =============================================================================
-% [Phase 5-2 chain inject patch — §6.6 / §6.7 / §6.8 cluster]
-% Source: 5_2_M_canonical_bibliography.md SHA256 f63696d7...
-% Generated: 2026-04-27
-% =============================================================================
-
-\subsection{Phase 5-2 chain main result --- canonical bibliography}
-
-本節は \S 6.5 で確立した v4.7.8 non-interference 原則 (foundation 層
-\S 2--\S 4 と additive layer の独立性) の延長として、Phase 5-2 chain
-が独立 layer で生成した posterior derivation の canonical count を
-正式 statement する。TIER counting derivation の visual anchor
-(TIER-1 39 / overlap 6 / canonical 33 / TIER-2 audit 8 / Path A 2 /
-Path C 0) は \S 5.5.3 表参照。
-
-% [INJECT §6 Main result block 1 — verbatim from 5_2_M_canonical_bibliography.md line 11-21]
-\begin{quote}
-The Phase 5-2 chain comprises 39 TIER-1 posterior derivations across
-4 chain steps (B-1 FIRAS $\mu$-distortion: 6;
-B-2 Plik CMB TT: 6;
-B-3 21cm cosmic dawn: 9;
-B-4 FIRAS $\times$ 21cm joint: 18).
-Of these, 6 derivations in B-4 (3 priors $\times$ 2 single-likelihood
-combinations) bit-exactly reproduce upstream references in B-1
-(\texttt{B14\_FIRAS\_only} $\leftrightarrow$ B-1 \texttt{one\_sided}) and
-B-3 (\texttt{B14\_21cm\_only} $\leftrightarrow$ B-3 \texttt{S\_SARAS3})
-within $1 \times 10^{-4}$ dex tolerance, with verified
-\texttt{log\_diff} $= 0.000000$ dex in all 6 cases. The canonical count
-of unique posterior derivations is therefore \textbf{33}.
-\end{quote}
-
-\noindent
-この canonical 33 は本論文の Phase 5-2 chain main result の primary
-quantitative claim であり、続く \S 6.7 では同 chain の Path A vs
-$\Lambda$CDM consistency を、\S 6.8 では $\epsilon_{\mathrm{scale}}$ の
-operational definition と Method 2 formal closure deferral を順に
-展開する。
-
-
-\subsection{Phase 5-2 chain main result --- Plik TT consistency at the linear ansatz limit}
-
-\S 5.5 で導入した operational ansatz (Eq. 5.5-I + Eq. 5.5-II) と
-\S 5.5.2 の TIER-2 kernel sensitivity sweep を踏まえ、本節は Path A central
-value $\epsilon_{\mathrm{scale,A}} = 1.0026$ と pure $\Lambda$CDM
-($\epsilon_{\mathrm{scale}} = 1.0$) との Plik TT likelihood difference を
-全 8 variants 横断で評価する。
-
-% [INJECT §6 Main result block 2 — verbatim from 5_2_M_canonical_bibliography.md line 23-30]
-\begin{quote}
-Across all 8 kernel/coupling variants of the membrane modification
-ansatz, the Plik TT likelihood difference between the Path A central
-value ($\epsilon_{\mathrm{scale}} = 1.0026$) and pure $\Lambda$CDM
-($\epsilon_{\mathrm{scale}} = 1.0$) is bounded by
-$\boldsymbol{\Delta\chi^2 \leq 0.013}$, with a median of
-$\boldsymbol{\Delta\chi^2 = 0.003}$.
-This is more than two orders of magnitude below the canonical $1\sigma$
-threshold ($\Delta\chi^2 = 1$) and confirms that Plik TT data, restricted
-to the linear membrane modification ansatz examined here, does not
-distinguish Path A from standard $\Lambda$CDM at any statistical
-significance.
-\end{quote}
-
-\noindent
-表 T3 に 8 variants 横断の $\Delta\chi^2$ 値を集約する。$\Delta\chi^2(\epsilon=1)$
-は $\epsilon$ scan minimum との差、$\Delta\chi^2(\mathrm{Path\;A})$ は
-Path A central での $\chi^2$ と minimum との差、$\Delta\chi^2(1 \to \mathrm{Path\;A})$
-は両者の差 (positive で Path A が $\epsilon=1$ より $\chi^2$ 増加):
-
-\begin{center}\small
-\begin{tabular}{@{}lcrrr@{}}
-\toprule
-variant & ($\alpha$, $\ell_{\mathrm{peak}}$, $\ell_{\mathrm{width}}$)
-        & $\Delta\chi^2(\epsilon = 1)$ & $\Delta\chi^2(\mathrm{Path\;A})$
-        & $\Delta\chi^2(1 \to \mathrm{Path\;A})$ \\
-\midrule
-baseline       & $(0.01,\, 220,\, 100)$  & $0.040$ & $0.042$ & $+0.0017$ \\
-$\alpha$\_low  & $(0.005,\, 220,\, 100)$ & $0.040$ & $0.041$ & $+0.0008$ \\
-$\alpha$\_2x   & $(0.02,\, 220,\, 100)$  & $0.040$ & $0.044$ & $+0.0034$ \\
-$\alpha$\_5x   & $(0.05,\, 220,\, 100)$  & $0.041$ & $0.050$ & $+0.0087$ \\
-peak\_2nd      & $(0.01,\, 540,\, 100)$  & $0.044$ & $0.047$ & $+0.0027$ \\
-peak\_3rd      & $(0.01,\, 810,\, 100)$  & $0.721$ & $0.734$ & $+0.0133$ \\
-peak\_4th      & $(0.01,\, 1140,\, 100)$ & $0.227$ & $0.235$ & $+0.0082$ \\
-width\_2x      & $(0.01,\, 220,\, 200)$  & $0.006$ & $0.007$ & $+0.0009$ \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\noindent
-\texttt{peak\_3rd} variant ($\ell_{\mathrm{peak}} = 810$、third acoustic
-peak localization) は $\Delta\chi^2(\epsilon = 1) = 0.721$ で $1\sigma$
-threshold ($\Delta\chi^2 = 1$) に最も接近するが越えず、kernel functional
-form sensitivity の outer envelope を画定する。本 variant に対する
-full Plik TTTEEE+lowE+lensing 適用 dedicated analysis は v4.9 patch round
-の peak-resolved analysis として deferred (\S 7.5 priority 6)。
-
-
-\subsection{Phase 5-2 chain main result --- $\epsilon_{\mathrm{scale}}$ operational definition and Method 2 deferral}
-
-本節は \S 5.4.2 で確立した operational/formal 二段構え framing
-($\Gamma_A$ / $\Gamma_{A'}$ の「同一現象の別表現、数値矛盾ではない」
-pattern) を Phase 5-2 chain の $\epsilon_{\mathrm{scale}}$ parameter に
-適用し、Method 1 inverse calibration による operational definition
-(本論文での adopted definition) と Method 2 formal physical
-interpretation (v4.9 patch round deferred) を並列展開する。
-
-\medskip\noindent\textbf{Method 1 (operational, adopted in this paper).}\quad
-$\epsilon_{\mathrm{scale}}$ は Path A inverse closure として operational
-に定義される:
-$\Lambda$CDM-equivalent reference 点で Path A central value
-$\epsilon_{\mathrm{scale,A}} = 1.0026$、operational interim band
-$[1.0025822368421053,\, 1.1128377192982457]$ 上限は systematic
-$\sigma_{\log_{10}} = 0.0226559158703769$ dex の $1\sigma$ band edge
-として定義される (full precision は \S A1 末尾参照)。本論文の Phase 5-2
-chain 全 derivation はこの operational definition の下で展開され、
-\S 5.5--\S 6.7 の数値結果と integrate される。
-
-\medskip\noindent\textbf{Method 2 (formal, deferred to v4.9).}
-
-% [INJECT §6 Method 2 narrative — verbatim from 5_2_M_canonical_bibliography.md line 62]
-\begin{quote}
-$\epsilon_{\mathrm{scale}}$ is operationally defined via Method 1
-inverse calibration ($\epsilon_{\mathrm{scale,A}} = 1.0026$, Path A
-inverse closure). Formal physical interpretation, including potential
-connection to \texttt{foundation\_scale}
-($\chi_F \cdot V''(\phi_0) \cdot T_m / \hbar \approx 2.283 \times 10^{35}$)
-and resolution of the (a)/(b) 96 dex coexistence flagged in Phase 4b 1-R
-retract-impossible \#22-25 $\alpha$-3, deferred to v4.9 patch round
-future work.
-\end{quote}
-
-\noindent
-Method 2 closure 達成のためには (i) \texttt{foundation\_scale} と
-$\epsilon_{\mathrm{scale}}$ の formal dimensional bridge、
-(ii) Phase 4b 1-R retract-impossible \#22--25 $\alpha$-3 で flag された
-(a)/(b) 96 dex coexistence (\S 7.1 で $\Tm$ SI 絶対較正 gap として独立
-deferred、(a) $\sigma$ rest energy route / (b) membrane coherence route)
-の formal resolution、
-(iii) ansatz linearity の first-principles derivation
-($\chi_F$ small-perturbation regime との接続)
-の 3 sub-track が必要である。これらは v4.9 patch round の Method 2
-formal closure track として、\S 7.1 (T\_m 96 桁 SI gap) / \S 7.2
-($\Gamma_{\mathrm{actual}}$ + 11\%/5.5\% 統一) / \S 7.5 priority 2 row
-expand と並走 deferred とする。
-
-\noindent
-本 operational/formal 二段構えは \S 5.4.2 $\Gamma_A$/$\Gamma_{A'}$ pattern
-の paper 内 2 例目に当たり、operational quantitative result の publication
-と formal grounding deferral を分離する v4.7.8 / v4.8 既定 methodology
-(\S 6.5 v4.7.8 non-interference 原則) と整合する。
-
 
 % =============================================================================
 \section{Limitations and Future Work}
@@ -1202,25 +878,18 @@ Phase C2 strict 15 subset で 7/15 below-threshold、$\AIC = +0.17$ の marginal
 1--2 dex 低密度の領域で threshold 実在性を判定できる可能性がある。
 
 \subsection{v4.9 次版 roadmap}
-
-本 v4.9 roadmap において、Phase 5-2 chain 由来の 2 項目 (priority 2 の
-Method 2 formal closure 相当 sub-track と priority 6 の peak-resolved
-analysis) はそれぞれ \S 6.8 と \S 6.7 で動機付けされる。priority 1, 3, 4,
-5 は v4.7.8 既定 roadmap 通り維持。
-
 \begin{center}\small
-\begin{tabularx}{\linewidth}{@{}c >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X@{}}
+\begin{tabular}{@{}clll@{}}
 \toprule
 priority & 課題 & 外部 input & 期待 \\
 \midrule
 1 & $\Tm$ SI 絶対較正 (96 桁 gap 解消) & FIRAS + CMB TT + 21cm & route (a)/(b) 決着 \\
-2 & $\Gammaact$ 絶対値 + 11\%/5.5\% 統一 (+ Method 2 formal closure) & C3-4 energy branching 解析 & Route A/B 整合 \\
+2 & $\Gammaact$ 絶対値 + 11\%/5.5\% 統一 & C3-4 energy branching 解析 & Route A/B 整合 \\
 3 & void 文献整合 (M2 narrow 確定) & \citet{Kreckel2011, Pan2012} & 5 桁幅の正式版 \\
 4 & $\cmem, \Lambdauv$ 外挿精度 & $c \in (0.8, 1)$ 精密 Chap 18 Table & 要物理検証 \\
 5 & UFD extension (C3-2 弁別) & Segue I/II, Ret II, Boö II & threshold 実在性 \\
-6 & peak\_3rd dedicated analysis & Plik TTTEEE+lowE+lensing & ansatz 由来確定 + 1$\sigma$ 評価 \\
 \bottomrule
-\end{tabularx}
+\end{tabular}
 \end{center}
 
 % =============================================================================
@@ -1284,7 +953,7 @@ v4.9 次版で同時に対処する。
 % =============================================================================
 
 \begin{center}\small
-\begin{longtable}{@{}>{\raggedright\arraybackslash}p{43mm}>{\raggedright\arraybackslash}p{53mm}>{\raggedright\arraybackslash}p{60mm}@{}}
+\begin{longtable}{@{}lll@{}}
 \toprule
 量 & 値 & 出所 \\
 \midrule\endfirsthead
@@ -1319,14 +988,6 @@ $\GammaAp$ (power, dimensionless) & $17.18$ & Route A' (5.5\% 版) \\
 $\GammaB$ (FDT 4 候補) & $4.12 \times 10^{-18}\sim 9.58 \times 10^{-11}\;\mathrm{m}^{3/2}/\mathrm{s}$ & Route B \\
 $\GammaC$ upper & $< 5.75 \times 10^{-18}\;\mathrm{m}^{3/2}/\mathrm{s}$ & Route C (SPARC memory) \\
 $f$ (Pantheon+) & $0.379 \pm 0.029$ & M5 $\mu$ kernel 非寄与 \\
-% --- Phase 5-2 chain anchor block (7 rows, 2026-04-27 inject) ---
-canonical\_count (Phase 5-2 chain) & $33$ unique posterior derivations & \S 6.6, 5.2.M v1 G3 \\
-$\Delta\chi^2(\text{Path A} \to \Lambda\text{CDM})_{\max}$ & $\leq 0.013$ (8 v4 variants) & \S 6.7, 5.2.M v1 v4 audit \\
-$\Delta\chi^2(\text{Path A} \to \Lambda\text{CDM})_{\text{median}}$ & $0.003$ & \S 6.7, 5.2.M v1 v4 audit \\
-Kernel sensitivity ratio & $\geq 100\times$ (\texttt{peak\_3rd} / \texttt{width\_2x}) & \S 5.5.2 \\
-$\epsilon_{\text{scale,A}}$ (interim band lower) & $1.0025822368421053$ & \S 6.8 Method 1 \\
-$\epsilon_{\text{scale,A}}$ (interim band upper) & $1.1128377192982457$ & \S 6.8 Method 1 \\
-$\sigma_{\log_{10}}$ (systematic, $1\sigma$ band edge anchor) & $0.0226559158703769$ dex & \S 6.8 Method 1 \\
 \bottomrule
 \end{longtable}
 \end{center}
@@ -1339,30 +1000,7 @@ $\fopt(c) = 2\pi/\sqrt{V''(x=0.5, c)}$ に基づく確定値となった. univer
 \texttt{c3\_contamination\_dependency\_map\_v1} および \texttt{arxiv\_v48\_erratum\_v3} 参照.
 \normalsize
 
-% --- §A1 末尾 forensic anchor block (Phase 5-2 chain inject, 2026-04-27) ---
-\footnotesize\noindent
-\textbf{Phase 5-2 chain forensic anchor (5.2.M v1 canonical commit, 2026-04-27).}
-本論文 \S 5.5--\S 6.8 の Phase 5-2 chain inject material は 5.2.M v1 commit
-deliverables に基づく。unique content 4 件の SHA256 fingerprint を以下に示す
-(\texttt{phase5\_step5\_2\_M\_v1\_canonical\_commit\_summary.txt} は
-\texttt{5\_2\_M\_canonical\_bibliography.txt} と bit-exact identical な
-二重 deliverable で、5.2.M v1 commit script \texttt{build\_paper\_txt()}
-の仕様による; 将来 separation 予定):
-\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=2pt]
-  \item \texttt{\_step5\_2\_M\_multi\_route\_min.py}: \\
-        \texttt{\scriptsize 09d91d309098fab84df16281ffcc7052f193ae5d19b14a7a9e160ac0510f381f}
-  \item \texttt{5\_2\_M\_canonical\_bibliography.md}: \\
-        \texttt{\scriptsize f63696d7bad989c0fcdd6022e6a34b4d949322e94bb50c0d10755d6b4d036056}
-  \item \texttt{5\_2\_M\_canonical\_bibliography.txt}
-        ($\equiv$ \texttt{phase5\_step5\_2\_M\_v1\_canonical\_commit\_summary.txt}): \\
-        \texttt{\scriptsize 248548a6baf6e47302ae29d7db971efc9fc38e887ed4d108f01f716346082a48}
-  \item \texttt{phase5\_step5\_2\_M\_v1\_canonical\_commit\_struct.json}: \\
-        \texttt{\scriptsize c2837e2c5695f60ee2f2549b821c87a42ab273ff0232aa3a6493c15963e55e2e}
-  \item Repo: \url{https://github.com/sguccibnr32-creator/Public}
-\end{itemize}
-\normalsize
-
-\section{Retract 不可事項 \#1--32 cross-reference}
+\section{Retract 不可事項 \#1--31 cross-reference}
 
 \begin{center}\small
 \begin{tabularx}{\linewidth}{@{}l l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X@{}}
@@ -1371,10 +1009,9 @@ deliverables に基づく。unique content 4 件の SHA256 fingerprint を以下
 \midrule
 \#1--17 & v4.7.8 継承 & $\kappa = 0$, $\Tm = \sqrt{6}$, Form B, Q-core 3, Eq. I--IV, 11\%/5.5\% 処理 & \S 2, \S 5.4.2 \\
 \#18--21 & C3 memo v3 & universal $\bal = 0.11$, 教訓 91--93 & \S 5.2--5.3a, Abstract \\
-\#22--25 & Session +11 & $\chi$ dual, 2B-II/2C-II, $\Tm$ 無次元, eps\_scale (a)(b) & \S 6.1, \S 3.2--3.3, \S 6.6, \S 6.8, \S 7.1 \\
-\#26--28 & Session +13 & Eq. iv-e-I 2 route, $\Vxivoid$, min 構造 & \S 4.3, \S 5.5, \S 6.7 \\
-\#29--31 & Session +14 & foundation scale 無次元化, 3 route, $\bal$ 直結 & \S 5.4, \S 5.5.3, \S 6.8 \\
-\#32 & Phase 5-2 chain & $v_{\mathrm{flat}}$ layer separation ($c = 0.42$ strict galaxy / $c = 0.83$ cascade canonical), bit-exact maintenance & \S 5.2--5.4, \S 5.5, \S 6.6, \S 6.8 \\
+\#22--25 & Session +11 & $\chi$ dual, 2B-II/2C-II, $\Tm$ 無次元, eps\_scale (a)(b) & \S 6.1, \S 3.2--3.3, \S 7.1 \\
+\#26--28 & Session +13 & Eq. iv-e-I 2 route, $\Vxivoid$, min 構造 & \S 4.3 \\
+\#29--31 & Session +14 & foundation scale 無次元化, 3 route, $\bal$ 直結 & \S 5.4 \\
 \bottomrule
 \end{tabularx}
 \end{center}

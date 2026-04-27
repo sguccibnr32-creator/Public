@@ -37,6 +37,7 @@ data/phase1/
 
 # Generated outputs
 *.pdf
+!latex_v48/membrane_v48.pdf
 *.png
 phase_b_output/
 phase_a_output/

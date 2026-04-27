@@ -1,0 +1,24 @@
+Phase 5-2 chain canonical bibliography (5.2.M v1 commit)
+======================================================================
+Timestamp: 2026-04-26T16:32:13Z
+OVERALL: PASS
+
+Gate verdicts:
+  G1: PASS
+  G2: PASS
+  G3: PASS
+  G4: PASS
+  G5: PASS
+  G6: PASS
+  G7: PASS
+
+Canonical posterior derivations: 33
+  TIER-1 total:    39
+  Reproductions:   6
+
+Retract-impossible invariants compliance:
+  #22(vi): cascade SSoT 3 active bit-exact + 1 archived
+  #26: multi-route min: A + B-1/B-2/B-3/B-4 + C verified
+  #29: foundation scale numerical OK, Method 2 deferred
+  #30: no single-value commit (33 canonical + 1 Path A + 8 v4 audit)
+  #32: v_flat layer separation c=0.42 strict galaxy-specific
