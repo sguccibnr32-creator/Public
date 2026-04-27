@@ -1,3 +1,25 @@
+# v4.8 README cosmetic update + arXiv tar.gz regenerate (2026-04-27)
+
+## Patched
+- `latex_v48/README_tex.md` (SHA256: 7f7680f4... → cc5278f1...):
+  - 14 pages → 21 pages (publication final, post-Phase 5-2 chain inject)
+  - Known issues: page 8 overfull \hbox 1 件 → "overfull / underfull / errors all 0"
+  - 変更履歴 entry 追加: "v4.8 publication final 2026-04-27"
+  - 概要・対比表 (v4.7.8 vs v4.8 companion) 反映
+- `arxiv/membrane_v48_arxiv.tar.gz` regenerated (33,819 → 34,015 bytes):
+  - tex / bbl / bib bit-exact unchanged (publication final immutable)
+  - README.md updated (= latex_v48/README_tex.md SHA cc5278f1...)
+  - tar.gz SHA256: e40c87b57b4b59dcb296e5c21dddafbe2e96e9cdc7de72fea41b91b9d2e15cf4
+
+## Rationale
+- Bundled README claimed "14 pages" but publication final is 21 pages
+  (post-Phase 5-2 chain inject). arXiv reviewer / Zenodo archivist が
+  tar.gz 解凍時に paper 本体と矛盾を見ることを防止。
+- Forensic chain (paper §A1 anchor block) は README SHA256 を参照しないため、
+  immutable invariants には影響なし。
+
+---
+
 # v4.8 publication final pass FULL CLOSURE (2026-04-27) — Phase 5-2 chain inject
 
 ## Added
