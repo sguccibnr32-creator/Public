@@ -334,3 +334,15 @@
 - v4.6 以前 — internal archive
 
 詳細は `papers/membrane_arxiv_v478.pdf` Section 8 (Conclusions) の 19 項目および Retracted/revised セクションを参照。
+
+
+## companion-v0.1-2026-05-03 (2026-05-03)
+
+Full rebuild release. Supersedes companion-v0.1-2026-04-30 (2026-04-30 18:34).
+
+- companion/: 19 anchor MD (1, 3-20) regenerated from master + J_system_synthesis_report_v2.pdf
+- parent/v48_release/: regenerated bit-exact from master (canonical SHA verified, 19/19)
+- auxiliary/: forensic_manifest.md + pipeline_diagnostic.md (build-time generated)
+- All SHA-256 freshly recomputed in SHA256SUMS.txt
+- License: CC-BY 4.0
+- Predecessor release retained as historical (forensic chain immutability)
