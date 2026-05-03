@@ -77,6 +77,8 @@ Public/
 | Release | Date | 内容 | Download |
 |---|---|---|---|
 | **v4.8** ⭐ latest | 2026-04-21 | affiliation rev. + v4.8 companion paper (bilingual ja+en) | [v48_release.zip](https://github.com/sguccibnr32-creator/Public/releases/download/v4.8/v48_release.zip) |
+| companion-v0.1-2026-05-03 🆕 | 2026-05-03 | J-system companion paper v0.1 full rebuild (19 anchor MD + synthesis PDF + parent v4.8 snapshot, CC-BY 4.0) | [companion-v0.1-2026-05-03.zip](https://github.com/sguccibnr32-creator/Public/releases/download/companion-v0.1-2026-05-03/companion-v0.1-2026-05-03.zip) |
+| companion-v0.1-2026-04-30 | 2026-04-30 | J-system companion paper v0.1 milestone declaration (superseded by 2026-05-03, retained as historical) | [Releases page](https://github.com/sguccibnr32-creator/Public/releases) |
 | v4.7.8 | 2026-04 | observational establishment 完成版、19 結論 | [Releases page](https://github.com/sguccibnr32-creator/Public/releases) |
 | v4.7.6 | 2026-04 | self-consistent equation η₀ origin, T_m confirmation | [Releases page](https://github.com/sguccibnr32-creator/Public/releases) |
 
