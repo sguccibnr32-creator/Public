@@ -17,3 +17,6 @@ phase5/step5_2_M_v2/** -text
 forensic_anchors/full_recompute_strict/** -text
 # §2.5 v0.2 round skeleton + §2 chapter-level closure (anchor 21 v0.1.1 + run v1.0.2 + EXECUTION_PLAN + OUTPUT_SCHEMA + audit PDF)
 forensic_anchors/section2_5_v0_2_skeleton/** -text
+# section 2.5 v0.2 step 4 reproducibility addendum + release artifacts
+forensic_anchors/section2_5_v0_3_step4_reproducibility/** -text
+artifacts/** -text

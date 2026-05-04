@@ -1,0 +1,15 @@
+# SHA256 SUMS - sguccibnr32-creator/Public
+
+# === companion-v0.2-round-closure-2026-05-04 (this release) ===
+7cb540b11650ece360c780061923196ba532638ac58574a652befb8a25037652  forensic_anchors/section2_5_v0_3_step4_reproducibility/run_section2_5_v0_2.py
+2ec2e258c8f0f2b4eeda28d8e86434ef1d951e665ef41ab4257c101995423591  artifacts/run_section2_5_v0_2_v1_0_3.py
+31153f5f928318e95e9f5135af3e507e70229935efeee3c24fcc9b822436492a  artifacts/section2_5_v0_2_round_closure_2026-05-04.pdf
+fdd92346e380c4d1a9958020311b569f3ebce70b5bb4c8405ff83270c516d882  artifacts/P12_FILL_PROCEDURE_v2_0.md
+38fd13b146b1805241e11b9dd653f77055712a67856cf29792ac81e441fd7e6d  artifacts/build_session_summary_pdf.py
+
+# === backup chain in this release (v1.0.x dev history, IMMUTABLE) ===
+6c912e0adee46ca483a18c30dcd3860ce1038280c6b9b756e1a29ce4d4f4fc9e  forensic_anchors/section2_5_v0_3_step4_reproducibility/_v1_0_2_b_alpha_wip.bak.py
+34a749703f35e1b72b329b51fc86bf90decff34d138aae3bb922c03731ed04af  forensic_anchors/section2_5_v0_3_step4_reproducibility/_v1_0_1.bak.py
+
+# === historical entries (retained, IMMUTABLE, prior commits) ===
+dd762fd25193748f2aae0f5958b4c2170f1c2a0a1fb9345208808b1cf8bf57e6  forensic_anchors/section2_5_v0_2_skeleton/run_section2_5_v0_2.py    # v1.0.2 (commit 8e8ed51)
