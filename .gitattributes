@@ -15,3 +15,5 @@ forensic_anchors/full_recompute/** -text
 phase5/step5_2_M_v2/** -text
 # 5.2.M v4 strict 100% recompute forensic anchor (519 executable scripts)
 forensic_anchors/full_recompute_strict/** -text
+# §2.5 v0.2 round skeleton + §2 chapter-level closure (anchor 21 v0.1.1 + run v1.0.2 + EXECUTION_PLAN + OUTPUT_SCHEMA + audit PDF)
+forensic_anchors/section2_5_v0_2_skeleton/** -text
