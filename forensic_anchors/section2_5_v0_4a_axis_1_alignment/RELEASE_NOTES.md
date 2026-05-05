@@ -197,3 +197,20 @@ anchor 21 v0.1.3 (section 2.5 v0.4a axis_1 mechanical alignment)
 | 1a-validation | statistical + universal coupling on frozen 1a output | next | 21 v0.1.4 |
 | 1b | `f_opt(x != 0.5)` operational + chi_coh integration | post-1a-validation | 22 |
 | 2 | full operational closure | post-1b | 21 v0.2 |
+
+---
+
+## POST-HOC CROSS-REFERENCE (added 2026-05-05)
+
+Phase 1a-validation has been completed at anchor 21 v0.1.4 (commit `5783bef`, tag `companion-v0.4a-validation-2026-05-05`) with 12/12 PASS. The forensic narrative initiated in this anchor (v0.1.3) is now closed:
+
+- **Diagnosis** (this anchor): step trace at L1978 → "NO CUT" observed → load_MRT L587 return missing Q column identified
+- **Patch** (this anchor): 1-line / 5-byte amendment to L587 return statement
+- **Statistical reproducibility** (v0.1.4 G layer): G1-G6 6/6 PASS — baseline 0.1084 / 0.1127 / 0.0042 reproduced
+- **Robustness** (v0.1.4 J layer): J1-J4 6/6 PASS (post (γ) split)
+- **Causal direct demonstration** (v0.1.4 J3 filter 1): dropping Q column from sparc_for_audit reproduces v1.0.3.1 state bit-exact (n=129, b_α=0.112356, drift +3.61% matching documented 3.6%). Re-applying Q yields baseline (n=124, b_α=0.108443). The 1-line patch is therefore established as the **necessary and sufficient** causal mechanism.
+- **Multi-route minimum** (v0.1.4 J4): canonical and phase_c3_step3 reference impl yield axis_1_SPARC = 0.108442979149252 bit-exact (Δ = 0.000e+00); reproducibility independent of pipeline detail.
+
+The diagnosis recorded here is **retroactively validated** by Phase 1a-validation J3 filter 1 with falsifiable bit-exact reproduction. No alternative causal explanation survives.
+
+See `forensic_anchors/section2_5_v0_4a_validation/RELEASE_NOTES.md` for full Phase 1a-validation closure documentation.
