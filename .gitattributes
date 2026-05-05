@@ -24,3 +24,5 @@ artifacts/** -text
 forensic_anchors/section2_5_v0_4a_axis_1_alignment/** -text
 # section 2.5 v0.4a-validation (Phase 1a-validation closure, anchor 21 v0.1.4)
 forensic_anchors/section2_5_v0_4a_validation/** -text
+# axis_1 full operational closure (anchor 21 v0.2)
+forensic_anchors/section2_axis_1_operational_closure/** -text
