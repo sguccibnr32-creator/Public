@@ -1,0 +1,345 @@
+{
+  "schema_version": "1.0",
+  "schema_description": "Machine-readable aggregate for axis_1 full operational closure. Designed for programmatic consume by post-v0.2 rounds (Phase 1b etc.). Pairs with OPERATIONAL_CLOSURE.md (human-readable canonical declaration) and RELEASE_NOTES.md (round narrative).",
+
+  "meta": {
+    "anchor": "21",
+    "version": "v0.2",
+    "round_label": "axis_1 full operational closure",
+    "round_date": "2026-05-05",
+    "tag": "companion-v4.9-axis-1-closure-2026-05-05",
+    "parent_anchor": "21 v0.1.4",
+    "parent_commit": "5783bef",
+    "parent_tag": "companion-v0.4a-validation-2026-05-05",
+    "this_round_commit_C1": "[C1-SHA-here]",
+    "this_round_commit_C2": "[C2-SHA-here]",
+    "status": "CLOSED",
+    "scope_layer": "operational"
+  },
+
+  "frozen_input": {
+    "anchor": "21 v0.1.4",
+    "commit": "5783bef",
+    "tag": "companion-v0.4a-validation-2026-05-05",
+    "canonical_aggregate_file": "forensic_anchors/section2_5_v0_4a_validation/validation_results.json",
+    "canonical_aggregate_sha256_prefix": "b6012483",
+    "frozen_canonical_script": "forensic_anchors/section2_5_v0_4a_axis_1_alignment/run_section2_5_v0_2.py",
+    "frozen_canonical_sha256_prefix": "cdca6afd",
+    "gates_passed": "12/12",
+    "rule_26_established_via": "J4 (multi-route minimum, delta = 0.000e+00)"
+  },
+
+  "canonical_values": {
+    "_description": "All values inherited bit-exact from anchor 21 v0.1.4 unless noted. IMMUTABLE for v0.2 and downstream.",
+
+    "g_layer_statistical_reproducibility": {
+      "G1_axis_1_SPARC_b_alpha": 0.108442979149252,
+      "G2_axis_2_dSph_b_alpha": 0.11266236254145712,
+      "G3_axis_3_universal_slope": 0.11055267084535411,
+      "G4_lesson_93_per_dex_pct": 0.974,
+      "G4_driving_interpretation": "secondary_per_dex",
+      "G5_abs_diff_axis12": 0.004219383392205123,
+      "G5_threshold": 0.005,
+      "G6_R_squared": 0.634003,
+      "G6_residual_rms": 0.172134,
+      "G6_AIC": -529.9199,
+      "G6_n": 154,
+      "G6_k": 6
+    },
+
+    "j_layer_robustness": {
+      "J1a_std_loo": 0.001389,
+      "J1a_threshold": 0.005,
+      "J1b_OLS_SE": 0.0153,
+      "J1b_SE_over_b_alpha": 0.1414,
+      "J1b_SE_threshold": 0.20,
+      "J1b_t_statistic": 7.07,
+      "J1c_n_outliers_z3": 0,
+      "J2_bootstrap_mean": 0.108914,
+      "J2_bootstrap_std": 0.015349,
+      "J2_bootstrap_CI_95_lower": 0.079019,
+      "J2_bootstrap_CI_95_upper": 0.138768,
+      "J2_n_resamples": 10000,
+      "J3_filter_1_n_sample": 129,
+      "J3_filter_1_b_alpha": 0.112356,
+      "J3_filter_1_drift_pct": 3.61,
+      "J3_filter_1_reproduces": "v1.0.3.1 pre-Q-patch state, bit-exact",
+      "J4_canonical_vs_phase_c3_step3_delta": 0.0,
+      "J4_tolerance": 1e-12,
+      "J4_status": "bit-exact (rule #26 multi-route minimum established)"
+    },
+
+    "universal_coupling_significance": {
+      "abs_diff_b_alpha": 0.004219,
+      "SE_axis_1": 0.0153,
+      "SE_axis_2": 0.0363,
+      "SE_combined": 0.0394,
+      "SE_combined_formula": "sqrt(SE_axis_1^2 + SE_axis_2^2)",
+      "noise_floor_significance_sigma": 0.107,
+      "interpretation": "statistically indistinguishable at noise floor"
+    },
+
+    "v0_2_cross_method_extension": {
+      "_description": "refinement 3 (Lesson 94 multi-method evidence). 5 scenarios via per_filter_sensitivity_extension.py v2 (3-feature partial OLS, sparc_171 ordering).",
+      "ols_structure": {
+        "type": "3-feature partial OLS",
+        "target": "delta_primary = log10(g_obs) - log10(g_C15)",
+        "features": ["1", "2*log10(rho_gal)", "log10(r_h)"],
+        "b_alpha_extraction": "beta[1]",
+        "interpretation": "rho_gal^2 scaling exponent (universal coupling slope)"
+      },
+      "scenarios": {
+        "A0_baseline": {
+          "n_sample": 124,
+          "n_imputed": 0,
+          "b_alpha": 0.108443,
+          "SE_b_alpha": 0.0158,
+          "delta_vs_baseline_abs": 0.0,
+          "delta_vs_baseline_rel_pct": 0.0,
+          "method": "canonical mean(V^2/r), NaN g_obs filter exclusion"
+        },
+        "A1_median_V2r": {
+          "n_sample": 124,
+          "n_imputed": 0,
+          "b_alpha": 0.070903,
+          "SE_b_alpha": 0.0174,
+          "delta_vs_baseline_abs": -0.037540,
+          "delta_vs_baseline_rel_pct": -34.62,
+          "method": "median(V^2/r) aggregation alternative to mean"
+        },
+        "A2_min_fill": {
+          "n_sample": 127,
+          "n_imputed": 3,
+          "b_alpha": 0.128639,
+          "SE_b_alpha": 0.0219,
+          "delta_vs_baseline_abs": 0.020196,
+          "delta_vs_baseline_rel_pct": 18.62,
+          "method": "NaN g_obs (sparc_171) -> min(valid g_obs), log-finite, no extrapolation"
+        },
+        "A3_mean_fill": {
+          "n_sample": 127,
+          "n_imputed": 3,
+          "b_alpha": 0.094526,
+          "SE_b_alpha": 0.0167,
+          "delta_vs_baseline_abs": -0.013917,
+          "delta_vs_baseline_rel_pct": -12.83,
+          "method": "NaN g_obs (sparc_171) -> mean(valid g_obs)"
+        },
+        "A4_knn_impute": {
+          "n_sample": 127,
+          "n_imputed": 3,
+          "b_alpha": 0.101052,
+          "SE_b_alpha": 0.0161,
+          "delta_vs_baseline_abs": -0.007391,
+          "delta_vs_baseline_rel_pct": -6.82,
+          "method": "k=5 KDTree imputation on [log_Mstar, log_Mgas, log_hR, log_SBdisk0]"
+        }
+      },
+      "dominance_ordering": {
+        "primary_systematic_source": "aggregation choice (A1 median, -34.62%)",
+        "secondary_systematic_source": "imputation choice (A2/A3/A4, +/- 20% range)",
+        "interpretation": "aggregation choice >> imputation choice in magnitude"
+      },
+      "sample_composition_note": {
+        "pool_level_NaN_count_v2_run": 7,
+        "pool_level_NaN_count_J3_filter_3_narrative": 11,
+        "discrepancy_origin": "different mark_fit_pool_171 mask basis (counting convention)",
+        "in_OLS_sample_match": "bit-exact with v0.1.4 J4 (n=124, b_alpha=0.108442979149252)"
+      }
+    }
+  },
+
+  "forensic_provenance": {
+    "_description": "SHA-pinned references for all v0.2 round artifacts and inherited v0.1.4 evidence. Tag companion-v4.9-axis-1-closure-2026-05-05 CDN-pins all entries.",
+
+    "operational_evidence_v0_1_4": [
+      {"file": "forensic_anchors/section2_5_v0_4a_validation/validation_results.json",
+       "sha256_prefix": "b6012483", "role": "12/12 gate aggregate"},
+      {"file": "forensic_anchors/section2_5_v0_4a_validation/per_filter_sensitivity.csv",
+       "sha256_prefix": "6cb3ee15", "role": "J3 5-filter sensitivity raw"},
+      {"file": "forensic_anchors/section2_5_v0_4a_validation/jackknife_axis_1_results.csv",
+       "sha256_prefix": "28886a65", "role": "J1 124 LOO raw"},
+      {"file": "forensic_anchors/section2_5_v0_4a_validation/bootstrap_axis_1_results.csv",
+       "sha256_prefix": "55683215", "role": "J2 10000 resamples raw"},
+      {"file": "forensic_anchors/section2_5_v0_4a_validation/phase_c3_step3_reference.json",
+       "sha256_prefix": "6c898438", "role": "J4 reference impl output"},
+      {"file": "forensic_anchors/section2_5_v0_4a_validation/cross_check_phase_c3_step3.json",
+       "sha256_prefix": "a3046692", "role": "J4 cross-check delta"},
+      {"file": "forensic_anchors/section2_5_v0_4a_validation/RELEASE_NOTES.md",
+       "sha256_prefix": "a65cc011", "role": "round narrative (v0.1.4)"}
+    ],
+
+    "frozen_canonical": [
+      {"file": "forensic_anchors/section2_5_v0_4a_axis_1_alignment/run_section2_5_v0_2.py",
+       "sha256_prefix": "cdca6afd", "role": "frozen canonical (Q-patched)"},
+      {"reference": "parent commit", "sha": "52ffc09", "role": "Phase 1a A1"}
+    ],
+
+    "v0_2_round_artifacts": [
+      {"file": "forensic_anchors/section2_axis_1_operational_closure/OPERATIONAL_CLOSURE.md",
+       "sha256_prefix": "1191953b4720a6376170dc61a86a228860fada60eee3cccdd0d85c54a9c1a46e",
+       "role": "formal declaration (canonical SHA in SHA256SUMS, tag-pinned)"},
+      {"file": "forensic_anchors/section2_axis_1_operational_closure/RELEASE_NOTES.md",
+       "sha256_prefix": "b2b6d4886c8c13c88d46741e3bfbd40660dd0739ccc7f776d9675cb976d1bb8d", "role": "round narrative"},
+      {"file": "forensic_anchors/section2_axis_1_operational_closure/axis_1_closure_summary.json",
+       "sha256_prefix": "(self; SHA in SHA256SUMS, tag-pinned via companion-v4.9-axis-1-closure-2026-05-05)",
+       "role": "this file; canonical SHA in SHA256SUMS, tag-pinned"},
+      {"file": "forensic_anchors/section2_axis_1_operational_closure/per_filter_sensitivity_extension.py",
+       "sha256_prefix": "3a55c001", "role": "cross-method script v2"},
+      {"file": "forensic_anchors/section2_axis_1_operational_closure/per_filter_sensitivity_extension.csv",
+       "sha256_prefix": "af3809ff", "role": "cross-method results"},
+      {"file": "forensic_anchors/section2_axis_1_operational_closure/v1_precondition_fail_diagnostic.log",
+       "sha256_prefix": "c3087d72", "role": "v1 -> v2 redesign forensic trace"}
+    ],
+
+    "commits": {
+      "C1": "[C1-SHA-here]",
+      "C2": "[C2-SHA-here]",
+      "C3_plus": "TBD (arXiv v4.9 paper edit, deferred to round-internal continuation)"
+    },
+
+    "tag": {
+      "name": "companion-v4.9-axis-1-closure-2026-05-05",
+      "type": "annotated",
+      "points_to": "C1 commit",
+      "cdn_pin_role": "canonical retrieval path for all entries above"
+    }
+  },
+
+  "lessons": {
+    "_description": "Lesson 91-94 retrospective. 91-93 inherited from C3-A5 round (memo v3 §5.3); 94 formally established in this round (v0.2).",
+
+    "Lesson_91": {
+      "shorthand": "bridge / extreme-regime pre-cut",
+      "scope": "sample-construction protocol for SPARC + dSph joint analysis",
+      "principle": "bridge galaxies (proximity-flagged) and extreme-regime samples (Q < 3) must be pre-cut before universal coupling assessment to avoid confounding the slope agreement test",
+      "established_round": "C3-A5 §5.3 (memo v3)"
+    },
+
+    "Lesson_92": {
+      "shorthand": "parsimony first",
+      "scope": "model selection epistemic principle",
+      "principle": "AIC / BIC ranking precedes correlation strength (Spearman) in model selection; parsimony beats marginal R^2 gain",
+      "established_round": "C3-A5 §5.3 (memo v3)"
+    },
+
+    "Lesson_93": {
+      "shorthand": "universal coupling = slope agreement across density range",
+      "scope": "universal coupling assessment metric",
+      "principle": "universal coupling claim requires |b_alpha_axis_1 - b_alpha_axis_2| / mean normalized by density range (per-dex, anchor 19 sec 1.5 framing) to remain below threshold",
+      "scales": {
+        "absolute": "G5 |abs_diff| < 0.005",
+        "per_dex": "G4 |diff| / (mean * range) < 1%",
+        "noise_floor": "J1b aux |delta| / SE_combined < 1 sigma"
+      },
+      "established_round": "C3-A5 §5.3 (memo v3)"
+    },
+
+    "Lesson_94": {
+      "shorthand": "g_obs aggregation sensitivity",
+      "full_title": "g_obs aggregation strategy as systematic source",
+      "scope": "SPARC rotation curve g_obs aggregation method choice",
+      "evidence": {
+        "primary": {
+          "source": "J3 filter 3 (anchor 21 v0.1.4)",
+          "finding": "NaN g_obs galaxy 11 件 median imputation で b_alpha drift -9.53%",
+          "provenance_files": [
+            "per_filter_sensitivity.csv (SHA 6cb3ee15...) row filter_3_disable_g_obs_NaN",
+            "validation_results.json (SHA b6012483...) gates[J3].scenarios[3]"
+          ]
+        },
+        "cross_method": {
+          "source": "per_filter_sensitivity_extension.csv (anchor 21 v0.2, this round)",
+          "method_count": 4,
+          "comparison_type": "aggregation + imputation",
+          "rule_26_compliance": true,
+          "results_summary": "see canonical_values.v0_2_cross_method_extension.scenarios"
+        }
+      },
+      "principle": "g_obs aggregation strategy (mean V^2/r vs median V^2/r vs imputation method) は b_alpha point estimate に substantial 影響 (drift magnitude up to -34.62% for aggregation choice, +/- 20% for imputation choice)。explicit NaN-handling protocol が methodology document に必要。NaN g_obs galaxy は b_alpha に対して random ではなく、systematic bias を持つ。",
+      "scope_LIMIT": [
+        "SPARC g_obs aggregation のみを対象",
+        "dSph J3 filter 3 equivalent には extrapolate しない",
+        "一般 statistical aggregation には extrapolate しない",
+        "extrapolation 試行は separate round で個別 verify 推奨"
+      ],
+      "falsification_path": {
+        "method": "alternative aggregation (median V^2/r, k-NN imputation, ML imputation) で b_alpha drift magnitude が baseline と statistical 区別不可 (within OLS SE) となれば lesson 94 false 化",
+        "retract_protocol": "OPERATIONAL_CLOSURE.md errata section + post-hoc cross-reference annotation in this anchor's RELEASE_NOTES.md"
+      },
+      "established_round": "anchor 21 v0.2 (this round)"
+    }
+  },
+
+  "rule_compliance": {
+    "rule_1_anchor_IMMUTABLE": "PASS (v0.1.4 untouched, C2 post-hoc additive only)",
+    "rule_2_R1_LOCK_kB_zero": "PASS (k_B not modified)",
+    "rule_3_R2_LOCK_AlgoB_self_consistency": "PASS (Algorithm B not modified)",
+    "rule_4_QC1_LOCK_kE_two": "PASS (k_E not modified)",
+    "rule_5_cascade_SSoT": {
+      "status": "PASS",
+      "vpp_x05_at_0_83": 10.462625,
+      "f_opt_at_0_83": 1.942493,
+      "preservation": "values unchanged across v0.2 round"
+    },
+    "rule_6_L1_forward_ref_zero": "PASS (parent v4.8 NULL impact maintained)",
+    "rule_7_additive_supersession": "PASS (v0.2 elevates v0.1.4 without revision)",
+    "rule_26_multi_route_minimum": {
+      "status": "PASS",
+      "v0_1_4_basis": "J4 (canonical vs phase_c3_step3_reference, delta = 0.0)",
+      "v0_2_extension": "Lesson 94 cross-method (4-method comparison via per_filter_sensitivity_extension)"
+    },
+    "rule_92_parsimony_first": "PASS (Lesson 94 + §7.7 + cross-method integrated in single round)"
+  },
+
+  "file_inventory": {
+    "anchor_21_v0_2_files": [
+      "RELEASE_NOTES.md",
+      "OPERATIONAL_CLOSURE.md",
+      "axis_1_closure_summary.json",
+      "per_filter_sensitivity_extension.py",
+      "per_filter_sensitivity_extension.csv",
+      "v1_precondition_fail_diagnostic.log"
+    ],
+    "anchor_21_v0_2_file_count": 6,
+    "root_modifications": [
+      "ANCHOR_REFERENCES.md (anchor 21 v0.2 entry 追加)",
+      "SHA256SUMS (6 file entries 追加)"
+    ],
+    "C1_total_changes": "6 new + 2 modified",
+    "C2_total_changes": "1 modified (v0.1.4 RELEASE_NOTES post-hoc cross-reference)"
+  },
+
+  "forward_declaration": {
+    "_description": "Tasks declared but NOT executed within v0.2 round itself.",
+    "C3_plus_arxiv_v4_9_paper_edit": {
+      "scope": "v0.2 round 内 C3+ commit",
+      "sections_to_update": ["§7.6 (universal coupling)", "§7.7 (methodology principles)", "Appendix A (reproducibility)"],
+      "figures": "deferred to v4.9 figure sub-round (jackknife / bootstrap / 5-filter sensitivity plots)"
+    },
+    "wordpress_sync": {
+      "scope": "別 round (post v0.2 + arXiv v4.9 確定後)",
+      "site": "sakaguchi-physics.com",
+      "blog_id": 253652152,
+      "candidate_pages": [
+        "axis_1 universal coupling page (要 page id 確定)",
+        "methodology principles / lessons page",
+        "SPARC analysis pipeline overview page"
+      ],
+      "workflow": "MCP pages.get with {id: integer} fetch + manual paste update"
+    },
+    "phase_1b_anchor_22": {
+      "scope": "post-v0.2 別 round",
+      "label": "f_opt(x != 0.5) operational + chi_coh integration",
+      "anchor": "22 (新規立ち上げ)",
+      "deferred": true
+    }
+  },
+
+  "closure_declaration": {
+    "claim": "axis_1 universal coupling claim is operationally closed at the operational layer as of anchor 21 v0.2",
+    "remaining_axis_1_work": ["arXiv v4.9 §7 paper edit (C3+, this round)", "WordPress sync (separate round)"],
+    "operational_hardening_complete": true,
+    "next_operational_target": "Phase 1b (anchor 22)"
+  }
+}

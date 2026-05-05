@@ -118,3 +118,81 @@ RELEASE_NOTES.md for full forensic trace.
 - status: 12/12 PASS (G1-G6 + J1a/J1b/J1c + J2 + J3 + J4)
 - key findings: J3 filter 1 = Q-patch causal proof (bit-exact reproduction of v1.0.3.1 state); J4 multi-route minimum (delta=0.000e+00); |sparc-dsph|/SE_combined=0.107 sigma
 - promotion path: v0.1.4 -> v0.2 (full operational closure, deferred to separate chat)
+
+---
+
+## anchor 21 v0.2 (axis_1 full operational closure, 2026-05-05)
+
+- canonical declaration: forensic_anchors/section2_axis_1_operational_closure/OPERATIONAL_CLOSURE.md
+- canonical aggregate (JSON): forensic_anchors/section2_axis_1_operational_closure/axis_1_closure_summary.json
+- SHA256 (declaration): 1c6d19ad77da2a3c7a489da62a541d0c5a538217dbb4e8f7f6fca4a99d1e65b6
+- SHA256 (aggregate JSON): 55603a4d1db9c62203db68d2794ce01264715686890856df6a95f82e2b6eacce
+- size (declaration): ~13,000 B (post stub-fill final)
+- size (aggregate JSON): ~16,000 B (post stub-fill final)
+- parent: anchor 21 v0.1.4 (commit 5783bef, tag companion-v0.4a-validation-2026-05-05)
+- commit C1 (feat + tag): [C1-SHA-here]
+- commit C2 (post-hoc xref): [C2-SHA-here]
+- tag: companion-v4.9-axis-1-closure-2026-05-05 (annotated)
+- status: CLOSED (operational layer, 6 file deliverable + 2 root modifications)
+- inherited canonical values: axis_1_SPARC b_α = 0.108442979149252 (G1/J4 bit-exact); OLS SE = 0.0153 (J1b); universal coupling noise-floor 0.107σ
+- key findings: Lesson 94 formal establishment (g_obs aggregation sensitivity, dominant effect aggregation choice -34.62% >> imputation choice ±20%); rule #26 multi-route minimum extended via 4-method cross-method comparison; v1 -> v2 redesign forensic record retained
+- promotion path: arXiv v4.9 §7 paper edit (C3+, this round) + WordPress sync (separate round); next operational target: Phase 1b (anchor 22, f_opt(x≠0.5) operational + chi_coh integration)
+
+### Lesson 94 establishment (g_obs aggregation sensitivity)
+
+| property | value |
+|---|---|
+| shorthand | g_obs aggregation sensitivity |
+| scope | SPARC rotation curve g_obs aggregation method choice |
+| evidence (primary) | J3 filter 3, anchor 21 v0.1.4 (NaN imputation drift -9.53%) |
+| evidence (cross-method) | per_filter_sensitivity_extension.csv (this round, 4-method) |
+| principle | aggregation strategy substantially affects b_α point estimate; explicit NaN-handling protocol required; NaN g_obs not random, systematic bias direction |
+| scope LIMIT | SPARC g_obs aggregation only (no extrapolation to dSph J3 / generic stat aggregation) |
+| falsification path | alternative aggregation (median V²/r, k-NN, ML imputation) → drift indistinguishable within OLS SE |
+| established | this round (anchor 21 v0.2) |
+
+### Cross-method extension (Lesson 94 evidence base)
+
+| scenario | n | n_imputed | b_α | SE | Δ vs baseline |
+|---|---|---|---|---|---|
+| A0_baseline | 124 | 0 | 0.108443 | 0.0158 | 0.0% |
+| A1_median_V2r | 124 | 0 | 0.070903 | 0.0174 | -34.62% |
+| A2_min_fill | 127 | 3 | 0.128639 | 0.0219 | +18.62% |
+| A3_mean_fill | 127 | 3 | 0.094526 | 0.0167 | -12.83% |
+| A4_knn_impute | 127 | 3 | 0.101052 | 0.0161 | -6.82% |
+
+OLS structure: 3-feature partial OLS, target = log10(g_obs) - log10(g_C15),
+features = [1, 2·log10(rho_gal), log10(r_h)], b_α = beta[1].
+Precondition Q5 β PASS: A0 b_α delta = 4.16e-17 (machine epsilon), SE delta = 5.47e-4 (within tol 1e-3).
+
+### Closure scope statement
+
+**What is closed (operational layer):**
+(a) point estimate bit-exact reproducible from frozen canonical (cdca6afd) via independent code paths (J4, rule #26)
+(b) statistical reproducibility verified at 12/12 acceptance gates (v0.1.4)
+(c) Q-patch (load_MRT L587 single-line) is unique sufficient causal mechanism for v1.0.3.1 → v1.0.4a +3.6% deviation (J3 filter 1 bit-exact)
+(d) universal coupling vs axis_2_dSph holds at noise-floor scale (0.107σ)
+(e) methodology principles formalized as Lesson 91-94
+
+**What is NOT closed by this declaration:**
+- axis_2 (dSph) operational hardening — separate round
+- axis_3 (universal cross-axis) operational hardening — separate round
+- Phase 1b (f_opt(x ≠ 0.5) operational + chi_coh integration) — anchor 22
+- arXiv v4.9 §7 paper edit reflection — v0.2 round 内 C3+ commits
+- WordPress site sync (sakaguchi-physics.com) — separate round
+
+### Forensic chain rule compliance (9/9 PASS)
+
+| rule | status | note |
+|---|---|---|
+| 1 (anchor IMMUTABLE) | ✅ | v0.1.4 untouched, C2 post-hoc additive |
+| 2 (R-1 LOCK k_B=0) | ✅ | not modified |
+| 3 (R-2 LOCK Algo B) | ✅ | not modified |
+| 4 (Q-C1 LOCK k_E=2) | ✅ | not modified |
+| 5 (cascade SSoT) | ✅ | vpp_x05(0.83)=10.462625, f_opt(0.83)=1.942493 preserved |
+| 6 (L-1 forward-ref 0) | ✅ | parent v4.8 NULL impact maintained |
+| 7 (additive supersession) | ✅ | v0.2 elevates v0.1.4 without revision |
+| #26 (multi-route minimum) | ✅ | J4 inherited + Lesson 94 cross-method extension |
+| 92 (parsimony first) | ✅ | Lesson 94 + §7.7 + cross-method in single round |
+
+---

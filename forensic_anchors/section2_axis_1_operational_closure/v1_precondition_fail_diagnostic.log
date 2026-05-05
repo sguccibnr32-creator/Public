@@ -1,0 +1,96 @@
+================================================================
+v1 per_filter_sensitivity_extension.py precondition fail diagnostic
+================================================================
+Recorded: 2026-05-05 (Windows side, anchor 21 v0.2 round seq-3 v1 attempt)
+
+Forensic value: documents the structural mismatch between v1 (2-feature
+simple OLS, post-filter g_obs aggregation) and v0.1.4 J4 canonical
+(3-feature partial OLS, sparc_171-level g_obs aggregation). Used as
+input for v2 redesign rationale.
+
+----------------------------------------------------------------
+v1 stdout (precondition fail at A0 baseline)
+----------------------------------------------------------------
+
+Phase 1: load three-table + rotation curves ...
+  TA3 n=175, phase1 n=175, MRT n=175
+  merged 3-way n=175
+
+Phase 2: galaxy-level filters (1, 2, 4) ...
+  filter log: {
+  "input_n": 175,
+  "filter_1_Q_cut_n_excluded": 12,
+  "filter_2_bridge_n_excluded": 3,
+  "filter_4_vflat_n_excluded": 33,
+  "output_n": 127
+}
+
+Phase 3: load rotation curves + aggregate g_obs (mean + median) ...
+
+Phase 4: compute g_C15 ...
+  NaN g_obs (mean aggregation):   3
+  NaN g_obs (median aggregation): 3
+  expected NaN count (per v0.1.4 J3 filter 3): 11
+
+Phase 5: method runs (5 scenarios) ...
+  A0 done: b=1.216047633736576, SE=0.090041, n=124
+
+========================================================================
+A0 baseline two-axis precondition check (refinement Q5 beta)
+========================================================================
+  axis (a) b_alpha bit-exact:
+    measured  = 1.21604763373657554
+    expected  = 0.108442979149251995  (J4 / G1, anchor 21 v0.1.4)
+    delta     = 1.107605e+00  (tol = 1e-10)
+    status    = FAIL
+  axis (b) OLS SE match:
+    measured  = 0.090041
+    expected  = 0.015300  (J1b, anchor 21 v0.1.4)
+    delta     = 7.474067e-02  (tol = 1e-03)
+    status    = FAIL
+  overall    = FAIL
+========================================================================
+
+ABORT: precondition FAIL -- A1-A4 results would not be interpretable
+       as pure method-change effects.
+
+----------------------------------------------------------------
+v1 mismatch analysis (informing v2 redesign)
+----------------------------------------------------------------
+
+Mismatch 1 (PRIMARY, b_alpha 11x off):
+  v1 OLS: y = b*x + a, x=log10(g_C15), y=log10(g_obs)  [2-feature simple]
+       -> b ~= 1.216 (RAR slope, NOT universal coupling slope)
+  v0.1.4 canonical OLS:
+       target   = log10(g_obs) - log10(g_C15) = delta_primary
+       features = [1, 2*log10(rho_gal), log10(r_h)]
+       b_alpha  = beta[1]  (rho_gal^2 scaling exponent, partial slope)
+       -> b_alpha = 0.108442979149252
+
+Mismatch 2 (SECONDARY, NaN count 3 vs 11):
+  v1 ordering: filter (Q<3 + bridge + vflat>0) -> 127 rows -> aggregate g_obs
+       -> 3 NaN (small count because most NaN-source galaxies were
+                 already filtered out by Q or vflat first)
+  v0.1.4 canonical ordering:
+       bridge filter -> sparc_171 (171 rows) -> aggregate g_obs
+       -> 11 NaN (all NaN-source galaxies surface)
+       -> filter 1 (Q<3) + filter 4 (vflat>0) + filter 5 (finite delta)
+       -> 124 final OLS sample
+  -> v0.1.4 J3 filter 3 evidence (11 NaN imputation -> -9.53% drift)
+     cannot be reproduced under v1 ordering.
+
+----------------------------------------------------------------
+v2 redesign (delivered seq-3 v2)
+----------------------------------------------------------------
+
+v2 corrections:
+  (1) compute_OLS_with_SE (2-feature simple) REMOVED
+  (2) compute_partial_OLS NEW (3-feature partial, canonical structure)
+  (3) derive_partial_OLS_features NEW (r_h = 1.68*Rdisk, rho_gal sphere)
+  (4) Pipeline reordered: bridge -> sparc_171 -> aggregate g_obs ->
+                          impute -> Q<3 + vflat>0 + finite delta
+  (5) precondition fail message extended with 6 candidate review items
+
+----------------------------------------------------------------
+END OF v1 DIAGNOSTIC LOG (forensic record)
+----------------------------------------------------------------
