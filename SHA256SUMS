@@ -13,3 +13,10 @@ fdd92346e380c4d1a9958020311b569f3ebce70b5bb4c8405ff83270c516d882  artifacts/P12_
 
 # === historical entries (retained, IMMUTABLE, prior commits) ===
 dd762fd25193748f2aae0f5958b4c2170f1c2a0a1fb9345208808b1cf8bf57e6  forensic_anchors/section2_5_v0_2_skeleton/run_section2_5_v0_2.py    # v1.0.2 (commit 8e8ed51)
+
+# === companion-v0.4a-axis-1-alignment-2026-05-04 (Phase 1a mechanical) ===
+cdca6afd634a3f730bc4b4002ab3082e187dc64b4ad9e87fd8147a6d81b04521  forensic_anchors/section2_5_v0_4a_axis_1_alignment/run_section2_5_v0_2.py
+7cb540b11650ece360c780061923196ba532638ac58574a652befb8a25037652  forensic_anchors/section2_5_v0_4a_axis_1_alignment/run_section2_5_v0_2_v1_0_3_1.bak.py    # paranoid retain
+4612150d03016c32517343d7efabeef10193b1783ca63c86212a895cbcfb1532  forensic_anchors/section2_5_v0_4a_axis_1_alignment/gate_phase_1a_mechanical.py
+35f9c60d911ad8b7ad5287c1ad152726f5e7089b92a42e81f8ab4a790be0b712  forensic_anchors/section2_5_v0_4a_axis_1_alignment/gate_phase_1a_results.json
+053f902b03f89dc1b51eea0018af24216ba4999b2ecd39bb66cb1a81da03537b  forensic_anchors/section2_5_v0_4a_axis_1_alignment/RELEASE_NOTES.md

@@ -1,0 +1,88 @@
+{
+  "phase": "1a",
+  "scope": "mechanical alignment only",
+  "design_principle": "circularity-free (no b_alpha reference)",
+  "patch": {
+    "file": "run_section2_5_v0_2.py",
+    "line": 587,
+    "diff": "return df[[..., \"Vflat\"]].copy() -> return df[[..., \"Vflat\", \"Q\"]].copy()",
+    "bytes_added": 5,
+    "lines_changed": 1,
+    "size_before": 137856,
+    "size_after": 137861,
+    "sha_before": "7cb540b11650ece360c780061923196ba532638ac58574a652befb8a25037652",
+    "sha_after":  "cdca6afd634a3f730bc4b4002ab3082e187dc64b4ad9e87fd8147a6d81b04521"
+  },
+  "gates": [
+    {
+      "id": "gate_1_Q_in_load_MRT",
+      "criterion": "Q column present in load_MRT return statement",
+      "result": "PASS",
+      "evidence": "return df[[\"galaxy\", \"T\", \"Rdisk\", \"SBdisk0\", \"L36\", \"MHI\", \"Vflat\", \"Q\"]].copy()"
+    },
+    {
+      "id": "gate_2_Q_lt_3_active",
+      "criterion": "Q<3 cut active in _prepare_sparc_phase_c3_sample (per-galaxy verification)",
+      "result": "PASS",
+      "evidence": "MRT Q present + sparc_171 Q present + per-galaxy Q < 3 holds (min=1, max=2)"
+    },
+    {
+      "id": "gate_3_sample_n_axis_1",
+      "criterion": "sample_n_axis_1 == 124 (binary count match, no b_alpha reference)",
+      "result": "PASS",
+      "observed": 124,
+      "expected": 124
+    },
+    {
+      "id": "gate_4_galaxy_identity",
+      "criterion": "galaxy identity match against phase_c3_step3 reference impl",
+      "result": "PASS",
+      "canonical_set_size": 124,
+      "reference_set_size": 124,
+      "symmetric_difference": 0,
+      "note": "independent code path verification: phase_c3_step3 with Q-intact loader produces identical galaxy set"
+    },
+    {
+      "id": "gate_5_sample_n_axis_3",
+      "criterion": "sample_n_axis_3 == 154 (= 124 + 30)",
+      "result": "PASS",
+      "sample_n_axis_2_dsph": 30,
+      "sample_n_axis_3_combined": 154,
+      "expected": 154
+    }
+  ],
+  "summary": {
+    "all_pass": true,
+    "n_pass": 5,
+    "n_total": 5
+  },
+  "forbidden_in_this_phase": [
+    "b_alpha 値の計算 / 比較 / assertion",
+    "Lesson 93 universal coupling check",
+    "AC4 / AC5 gate evaluation",
+    "jackknife / bootstrap"
+  ],
+  "deferred_to_phase_1a_validation": [
+    "axis_1_SPARC vs anchor 19 sec 1.5 baseline 0.1084 (within 1e-3)",
+    "axis_2_dSph vs 0.1127 (re-confirm post-Q-patch)",
+    "axis_3_universal_slope vs 0.11 +/- 0.005",
+    "Lesson 93 slope agreement < 1%",
+    "AC4 abs_diff < 0.005",
+    "AC5 universal coupling 立証",
+    "jackknife 124-leave-1-out",
+    "phase_c3_step3 reference impl direct cross-check on patched canonical"
+  ],
+  "lesson_compliance": {
+    "Lesson_91_pre_cut_protocol": "RESTORED (Q<3 cut now functional)",
+    "Lesson_92_parsimony_first": "STRICT (1 line, 1 column, 5 byte fix)",
+    "forensic_chain_rule_1_anchor_IMMUTABLE": "PRESERVED (v1.0.3.1 paranoid retain at .bak.py)",
+    "forensic_chain_rule_7_companion_additive_supersession": "DECLARED (parent 46ea829 IMMUTABLE)"
+  },
+  "anchor_metadata": {
+    "anchor_21_v0_1_3": "this commit (mechanical alignment)",
+    "anchor_21_v0_1_4_pending": "Phase 1a-validation (separate round)",
+    "anchor_21_v0_2_pending": "full operational closure (post-validation)",
+    "parent_anchor": "anchor 21 v0.1.2 (44df9afb...)",
+    "parent_commit": "46ea829b6e8ab4ca6f3136af4f4a2abc56e9585e"
+  }
+}
