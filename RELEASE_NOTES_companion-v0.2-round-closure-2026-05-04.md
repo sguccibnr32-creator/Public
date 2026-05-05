@@ -62,6 +62,34 @@ modifies the universal coupling computation kernel.
 Hardening は **v1.0.4 in (C) arXiv v4.9 patch round** で実施予定。
 universal coupling claim (axis_3 / Lesson 93) は影響を受けない。
 
+> **POST-HOC CORRECTION (added 2026-05-04 forensic verify)**
+>
+> 上記 5 候補は全て **non-causal** であることが forensic verify で確認された:
+>
+> - bridge 4 件 は `sparc_171` 構築段階 (L607-608, `mark_fit_pool_171`) で
+>   既に正しく除外、`_prepare_sparc_phase_c3_sample` L1993 の bridge
+>   re-exclusion は **NO-OP**
+> - `gc_C15` finite filter は `defensive_filter` (L2002-2007) の
+>   `delta_primary` finite check で間接的に catch されており同等
+> - `v_flat > 0` filter / NaN `g_obs` validity / Q<3 cut strict ordering
+>   も同様に `defensive_filter` で indirectly covered
+>
+> **Actual root cause** は更に parsimonious な **1 line / 1 column / 5 byte
+> bug**: `load_MRT` (L587) の return statement で Q 列が drop されていた。
+> 結果 `_prepare_sparc_phase_c3_sample` L1978 の `if "Q" in df.columns` が
+> False となり、Q<3 cut が **silently skipped**。`129 = 124 + 5` の
+> "5 galaxy excess" は Q≥3 で `v_flat>0` かつ `g_obs valid` な
+> non-bridge 5 galaxy という structural coincidence (4 bridges + 1 finite
+> ではない)。
+>
+> v1.0.4a Phase 1 で 1-line patch (`return df[[..., "Vflat", "Q"]].copy()`)
+> 適用、anchor 21 v0.1.3 (forensic_anchors/section2_5_v0_4a_axis_1_alignment/)
+> にて mechanical alignment closure。詳細は同 directory 内 `RELEASE_NOTES.md`
+> 参照。
+>
+> Lesson 92 (parsimony first) compliance: 5 候補 → 1 line bug への root cause
+> collapse。
+
 ## Forensic chain rule 7 compliance
 
 | rule | description                              | status                         |
