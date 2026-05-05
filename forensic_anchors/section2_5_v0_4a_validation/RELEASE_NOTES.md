@@ -203,3 +203,99 @@ anchor 21 v0.1.4 (Phase 1a-validation closure, statistical + universal coupling 
 | **1a-validation (this commit)** | **statistical + universal coupling + robustness** | **done** | **21 v0.1.4** |
 | 1b | `f_opt(x != 0.5)` operational + chi_coh integration | deferred | 22 |
 | 2 | full operational closure | post-1b, separate chat | 21 v0.2 |
+
+---
+
+## POST-HOC CROSS-REFERENCE 2 (anchor 21 v0.2 supersession annotation)
+
+Added in commit C2 (anchor 21 v0.2 round, 2026-05-05) post-hoc to record
+forward continuity to anchor 21 v0.2 axis_1 full operational closure.
+forensic chain rule 1 (anchor IMMUTABLE): all content above this section
+is unchanged; this annotation is additive only.
+
+This is the second POST-HOC CROSS-REFERENCE in this anchor's RELEASE_NOTES.md
+(the first was added in commit 3817b41 cross-referencing anchor 21 v0.1.3).
+The two annotations form a chronological forward-continuity chain:
+  v0.1.3 (cdca6afd, mechanical alignment)
+    -> v0.1.4 (this anchor, statistical + universal coupling + robustness)
+    -> v0.2 (axis_1 full operational closure, this annotation)
+
+### Elevation to axis_1 full operational closure
+
+The 12/12 gate PASS findings recorded in this anchor (v0.1.4) have been
+elevated to **axis_1 full operational closure** status as anchor 21 v0.2:
+
+  - declaration: `forensic_anchors/section2_axis_1_operational_closure/OPERATIONAL_CLOSURE.md`
+  - round narrative: `forensic_anchors/section2_axis_1_operational_closure/RELEASE_NOTES.md`
+  - machine-readable aggregate: `forensic_anchors/section2_axis_1_operational_closure/axis_1_closure_summary.json`
+  - cross-method evidence: `forensic_anchors/section2_axis_1_operational_closure/per_filter_sensitivity_extension.{py, csv}`
+  - v1 -> v2 redesign forensic record: `forensic_anchors/section2_axis_1_operational_closure/v1_precondition_fail_diagnostic.log`
+  - tag: `companion-v4.9-axis-1-closure-2026-05-05` (annotated)
+  - parent commit (C1, feat+tag): 8071c71
+  - this commit (C2, post-hoc docs): [C2-SHA-here]
+
+### Canonical references (post-v0.2)
+
+The following canonical IMMUTABLE values from this anchor (v0.1.4) are
+inherited by v0.2 and become the canonical reference set for arXiv v4.9
+§7.6 / §7.7 / Appendix A:
+
+  axis_1_SPARC b_α       = 0.108442979149252  (G1, J4 bit-exact)
+  axis_2_dSph  b_α       = 0.11266236254145712 (G2)
+  axis_3 universal slope = 0.11055267084535411 (G3)
+  abs_diff (universal)   = 0.004219            (G5)
+  R² / residual / AIC    = 0.634 / 0.172 / -529.92  (G6)
+  OLS SE                 = 0.0153              (J1b)
+  bootstrap 95% CI       = [0.0790, 0.1388]    (J2)
+  J3 filter 1 reproduces v1.0.3.1 bit-exact (Q-patch causal proof)
+  J4 multi-route Δ       = 0.000e+00           (rule #26)
+  SE_combined            = 0.0394
+  noise-floor sig        = 0.107σ              (J1b auxiliary)
+
+### Lesson 94 formal establishment
+
+J3 filter 3 finding (g_obs aggregation NaN imputation drift -9.53%) was
+recorded in this anchor as "Lesson 94 candidate". v0.2 round で full
+establishment 達成:
+
+  - shorthand: "g_obs aggregation sensitivity"
+  - 5-property structure (scope / evidence / principle / scope LIMIT /
+    falsification path) recorded in OPERATIONAL_CLOSURE.md §4.4
+  - cross-method confirmation: 4-method aggregation/imputation comparison
+    via per_filter_sensitivity_extension.csv (anchor 21 v0.2)
+      A1 median(V²/r) aggregation : b_α = 0.070903 (-34.62%)
+      A2 min-fill imputation       : b_α = 0.128639 (+18.62%)
+      A3 mean-fill imputation      : b_α = 0.094526 (-12.83%)
+      A4 k=5 KDTree impute         : b_α = 0.101052 ( -6.82%)
+    vs A0 baseline 0.108443
+  - dominance ordering: aggregation choice (-34.62%) >> imputation choice
+    (±20% range)
+  - rule #26 multi-route minimum compliance: extended via cross-method
+    (1-instance evidence base from this anchor's J3 filter 3 -> 5-method
+     evidence base in v0.2)
+
+### v1 -> v2 redesign forensic record (educational)
+
+The seq-3 cross-method script (per_filter_sensitivity_extension.py) underwent
+a v1 -> v2 redesign during v0.2 round development. Two structural mismatches
+in v1 were detected by the precondition Q5 β two-axis check (b_α bit-exact
++ OLS SE):
+
+  Mismatch 1 (PRIMARY): 2-feature simple OLS produced RAR-like slope ~1.2
+                        instead of canonical 3-feature partial OLS rho_gal²
+                        scaling exponent ~0.108
+  Mismatch 2 (SECONDARY): post-filter g_obs aggregation exposed only 3 NaN
+                          vs canonical sparc_171 ordering 11 NaN
+
+v2 corrected to 3-feature partial OLS + sparc_171 ordering, achieving
+precondition PASS at delta = 4.16e-17 (machine epsilon). The v1 diagnostic
+log is retained at section2_axis_1_operational_closure/v1_precondition_fail_diagnostic.log
+as educational forensic record (1-shot redesign, not 0-shot).
+
+### forensic chain rule compliance (post-v0.2 annotation)
+
+  rule 1 (anchor IMMUTABLE)        : ✅ above content untouched
+                                       (only this annotation appended)
+  rule 7 (additive supersession)   : ✅ v0.2 elevates without revision
+  rule #26 (multi-route minimum)   : ✅ retained from v0.1.4 J4
+                                       + extended via Lesson 94 cross-method
