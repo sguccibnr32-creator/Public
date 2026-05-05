@@ -22,3 +22,5 @@ forensic_anchors/section2_5_v0_3_step4_reproducibility/** -text
 artifacts/** -text
 # section 2.5 v0.4a axis_1 mechanical alignment (Phase 1a, anchor 21 v0.1.3)
 forensic_anchors/section2_5_v0_4a_axis_1_alignment/** -text
+# section 2.5 v0.4a-validation (Phase 1a-validation closure, anchor 21 v0.1.4)
+forensic_anchors/section2_5_v0_4a_validation/** -text

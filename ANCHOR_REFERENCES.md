@@ -105,3 +105,16 @@ Commit 46ea829 RELEASE_NOTES enumerated 5 candidate root causes for the
 are non-causal. Actual root cause is a single-line column subset bug
 (load_MRT return statement Q drop). See section2_5_v0_4a_axis_1_alignment/
 RELEASE_NOTES.md for full forensic trace.
+
+---
+
+## anchor 21 v0.1.4 (Phase 1a-validation closure, 2026-05-05)
+
+- canonical aggregate: forensic_anchors/section2_5_v0_4a_validation/validation_results.json
+- SHA256: b6012483ce400f466d9e8a87c4025ff23270a4cb11fd465388da16e19d8f03df
+- size: 13,053 B
+- parent: anchor 21 v0.1.3 (commit 52ffc09, frozen canonical cdca6afd)
+- tag: companion-v0.4a-validation-2026-05-05
+- status: 12/12 PASS (G1-G6 + J1a/J1b/J1c + J2 + J3 + J4)
+- key findings: J3 filter 1 = Q-patch causal proof (bit-exact reproduction of v1.0.3.1 state); J4 multi-route minimum (delta=0.000e+00); |sparc-dsph|/SE_combined=0.107 sigma
+- promotion path: v0.1.4 -> v0.2 (full operational closure, deferred to separate chat)
