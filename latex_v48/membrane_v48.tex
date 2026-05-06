@@ -20,6 +20,7 @@
 \usepackage{tabularx}
 \usepackage{longtable}
 \usepackage{graphicx}
+\graphicspath{{figures/}}
 \usepackage{xcolor}
 \usepackage{titlesec}
 \usepackage{enumitem}
@@ -612,6 +613,37 @@ $b_\alpha$ 算出を 3 ルート (canonical script、closed-form OLS、per-galax
 達することを確認した。これにより SPARC point estimate は rule \#26 (multi-route minimum
 compliance) 下で、単一 implementation の偶然性を排した三経路同時収束として確立される。
 
+%--- F1: jackknife LOO distribution (axis_1 SPARC) ---
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.9\textwidth]{fig_axis1_jackknife}
+  \caption{axis\_1 SPARC b\_alpha jackknife (LOO) distribution.
+    N=124 leave-one-out replicates with $3\sigma$ outliers~$=$~0
+    (J1c PASS).
+    Vertical dashed line: baseline b\_alpha~$=$~0.108443.
+    The narrow distribution (std$_{\mathrm{LOO}}\approx0.0014$) confirms the
+    insensitivity of the universal coupling to single-galaxy removal.
+    Source: \texttt{jackknife\_axis\_1\_results.csv}
+    (SHA-256 prefix: \texttt{28886a65}\ldots).}
+  \label{fig:axis1_jackknife}
+\end{figure}
+
+%--- F2: bootstrap distribution with 95% CI band (axis_1 SPARC) ---
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.9\textwidth]{fig_axis1_bootstrap}
+  \caption{axis\_1 SPARC b\_alpha bootstrap distribution.
+    N$=$10{,}000 resamples with replacement.
+    Green band: 95\% CI $[0.0790,\,0.1388]$ (J2 immutable).
+    Vertical dashed line: baseline b\_alpha~$=$~0.108443.
+    The CI excludes zero by $> 5\sigma$, providing independent
+    confirmation of the OLS standard error estimate
+    (SE$_{\mathrm{OLS}}=0.0153$).
+    Source: \texttt{bootstrap\_axis\_1\_results.csv}
+    (SHA-256 prefix: \texttt{55683215}\ldots).}
+  \label{fig:axis1_bootstrap}
+\end{figure}
+
 % ============ END §5.2 加筆 ============
 
 \subsection{dSph 拡張と 3.92 dex universal coupling}
@@ -960,6 +992,23 @@ $M_{\text{bar}} = \Upsilon_d L_{3.6} + 1.33\,M_{\text{HI}}$。precondition Q5 be
 two-axis check ($b_\alpha$ bit-exact + OLS SE) で baseline (A0) との結合性を
 machine epsilon level ($\Delta = 4.16 \times 10^{-17}$) で確認した。
 
+%--- F3: J3 5-filter sensitivity bar chart (axis_1 SPARC) ---
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.9\textwidth]{fig_axis1_filter5}
+  \caption{axis\_1 SPARC J3 5-filter sensitivity.
+    drift\_rel\_pct (\%) per filter scenario relative to canonical
+    124-row baseline.
+    Filter~1 (Q$<$3 disable, $n_{\mathrm{after}}=129$) shows $+3.61\%$
+    drift, providing direct forensic evidence that the Phase 1a Q-column
+    patch is the causal mechanism for the v1.0.3.1 deviation fix.
+    Other filter toggles confirm independence of canonical structural
+    cuts from the central b\_alpha estimate.
+    Source: \texttt{per\_filter\_sensitivity.csv}
+    (SHA-256 prefix: \texttt{6cb3ee15}\ldots).}
+  \label{fig:axis1_filter5}
+\end{figure}
+
 \begin{table}[h]
 \centering
 \small
@@ -979,6 +1028,25 @@ A4\_knn\_impute & $k$-NN imputation ($k=5$, KDTree) & 127 & 0.101052 & 0.0161 & 
 \hline
 \end{tabular}
 \end{table}
+
+%--- F4: 5-scenario cross-method comparison (Lesson 94) ---
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.9\textwidth]{fig_axis1_xmethod4}
+  \caption{axis\_1 SPARC 5-scenario cross-method comparison
+    (visual companion to Table~\ref{tab:cross-method-balpha},
+    Lesson~94).
+    A0 baseline (mean$(V^2/r)$ aggregation) versus
+    A1 (median$(V^2/r)$, $-34.62\%$ aggregation effect) versus
+    A2/A3/A4 ($\pm$20\% imputation effects, with 3 filled values each).
+    Aggregation choice dominates over imputation choice
+    (dominance ordering:
+    $\bigl|-34.62\%\bigr| \gg \bigl|\pm 20\%\bigr|$).
+    Error bars: SE$_{b_\alpha}$ from 3-feature partial OLS.
+    Source: \texttt{per\_filter\_sensitivity\_extension.csv}
+    (SHA-256 prefix: \texttt{af3809ff}\ldots).}
+  \label{fig:axis1_xmethod4}
+\end{figure}
 
 A2--A4 は filter 後に検出される 3 件の NaN $g_{\text{obs}}$ に対する imputation choice の
 比較で、$n = 127$ (3 件 imputed in OLS)。A1 は imputation を行わず baseline 同様

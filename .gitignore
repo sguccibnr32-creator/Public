@@ -38,6 +38,7 @@ data/phase1/
 # Generated outputs
 *.pdf
 !latex_v48/membrane_v48.pdf
+!latex_v48/figures/*.pdf
 !forensic_anchors/section2_5_v0_2_skeleton/session_verification_report.pdf
 !artifacts/section2_5_v0_2_round_closure_2026-05-04.pdf
 *.png
