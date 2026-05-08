@@ -1,0 +1,356 @@
+{
+  "schema_version": "1.0",
+  "schema_description": "Machine-readable aggregate for axis_4 hardening declaration (cross-version floor catalogued). Designed for programmatic consume by post-v0.1 rounds (anchor 22 v0.2 type-alpha promotion, arXiv v4.9 paragraph 5.7 / paragraph 6 reflection, etc.). Pairs with OPERATIONAL_CLOSURE.md (human-readable canonical declaration) and RELEASE_NOTES.md (round narrative, separate file).",
+
+  "meta": {
+    "anchor": "22",
+    "version": "v0.1",
+    "round_label": "axis_4 hardening declaration (cross-version floor catalogued)",
+    "round_date": "2026-05-08",
+    "tag": "companion-v4.9-axis-4-hardening-2026-05-08",
+    "parent_anchor": "21 v0.2",
+    "parent_commit": "3b9c714",
+    "parent_tag": "companion-v4.9-axis-1-closure-2026-05-05",
+    "this_round_commit_C1": "[C1-SHA-here]",
+    "this_round_commit_C2": "[C2-SHA-here]",
+    "status": "CLOSED at axis_4 hardening level",
+    "scope_layer": "operational + forensic dual closure (axis_4 type-alpha reserved for v0.2)",
+    "axis": "axis_4 (route ii HSC weak lensing)",
+    "phase_q_baseline_state": "4-axis complete (axis_1 + axis_2 + axis_3 + axis_4 all satisfied; rule 26 3-axis minimum exceeded)"
+  },
+
+  "frozen_input": {
+    "_description": "All Layer source SHAs IMMUTABLE preserved (rule 1). Layer C v1.1 is the axis_4 hardening verification target.",
+    "layer_a": {
+      "file": "Q-2_immutable_values.json",
+      "sha256_prefix": "3a3e08dc",
+      "role": "axis_2/3 anchor (rule 1 root)"
+    },
+    "layer_b": {
+      "file": "Q-3_immutable_brouwer_values.json",
+      "sha256_prefix": "(axis_3 type-alpha)",
+      "role": "axis_3 KiDS Brouwer"
+    },
+    "layer_c_v1_1": {
+      "file": "Q-3_immutable_hsc_values.draft.json",
+      "sha256_prefix": "5d9beb04",
+      "role": "axis_4 hardening verification target (this round)",
+      "type": "beta (canonical wrapper JSON dump, scipy-version-pinned to generation environment)"
+    },
+    "canonical_wrapper": {
+      "file": "phase_b_step3_jsondump_v1_fast.py",
+      "sha256_prefix": "52a6a67a",
+      "role": "Layer C v1.1 generator (Stage 1-6 pipeline)"
+    },
+    "canonical_core": {
+      "file": "phase_b_step3_three_fields.py",
+      "sha256_prefix": "979d6f79",
+      "role": "core algorithm reference"
+    }
+  },
+
+  "canonical_values": {
+    "_description": "All values inherited bit-exact from Layer C v1.1 (SHA 5d9beb04). IMMUTABLE for v0.1 and downstream. Mirror v0.3 reproduces all paper-claim values at 1e-12 atol.",
+
+    "combined_aggregate": {
+      "combined_gc_a0": 2.7184876317961755,
+      "combined_gc_a0_err": 0.11279929425240623,
+      "combined_delta_AIC": 472.2767831580862,
+      "combined_dAIC_sigma": 21.777896665153094,
+      "combined_n_lens": 157338,
+      "combined_n_pairs": 502867432,
+      "combined_n_pairs_paper_rounded_M": 503,
+      "_unit_gc": "a_0 = 1.20e-10 m/s^2 (Milgrom 1983)",
+      "_paper_claim_status": "1e-12 PASS (mirror v0.3 vs Layer C v1.1, all 4 numerical values within 1e-12 atol; combined_gc_a0 / combined_delta_AIC / combined_dAIC_sigma are true bit-exact delta=0; combined_gc_a0_err carries 1.74e-14 sub-tol delta — well below cross-version floor)",
+      "_meta_status": "EXACT (n_lens=157338, n_pairs=502867432 Layer C IMMUTABLE actual; paper-rounded n_pairs_M=503)"
+    },
+
+    "field_consistency": {
+      "weighted_mean_gc_a0": 2.732647,
+      "weighted_mean_gc_err_a0": 0.107229,
+      "verdict": "CONSISTENT",
+      "verdict_threshold": "p > 0.05 (chi2 of cross-field gc residuals)",
+      "_paper_claim_status": "1e-12 PASS (weighted_mean_gc_a0 delta=8.17e-13; weighted_mean_gc_err_a0 delta=3.33e-16; both well within atol)",
+      "_categorical_status": "EXACT (verdict string)",
+      "_displayed_precision_note": "displayed values are rounded for readability; full precision in Layer C v1.1"
+    },
+
+    "per_field_results": {
+      "G09": {
+        "gc_a0": 2.909,
+        "n_lens": 49272,
+        "n_pairs": 175735166,
+        "tolerance_status": "PASS at 1e-12 atol"
+      },
+      "G12": {
+        "gc_a0": 2.644,
+        "tolerance_status": "PASS at 1e-12 atol"
+      },
+      "G15": {
+        "gc_a0": 2.640,
+        "tolerance_status": "noise-floor delta=3.78e-12 (L-Q3-8 catalog, primary)"
+      }
+    },
+
+    "per_mbin_gc": {
+      "_mstar_edges_cut": [8.5, 10.3, 10.6, 10.8, 11.0],
+      "_mstar_edges_unit": "log10(M_star/M_sun)",
+      "_n_bins": 4,
+      "bin_0": {"gc_a0": 2.003, "tolerance_status": "PASS at 1e-12 atol"},
+      "bin_1": {"gc_a0": 2.243, "tolerance_status": "noise-floor delta=3.75e-12 (L-Q3-8 catalog, primary)"},
+      "bin_2": {"gc_a0": 2.757, "tolerance_status": "PASS at 1e-12 atol"},
+      "bin_3": {"gc_a0": 3.407, "tolerance_status": "noise-floor delta=3.04e-12 (L-Q3-8 catalog, primary)"}
+    },
+
+    "gc_M_star_slope": {
+      "slope_log10_gc_per_logM": 0.166,
+      "slope_err": 0.041,
+      "_paper_claim_status": "1e-12 PASS (slope_log10_gc_per_logM delta=3.91e-13; slope_err delta=6.38e-15; both well within atol)"
+    },
+
+    "_floor_breakdown": {
+      "_label_note": "Counts use 'PASS at 1e-12 atol' rather than 'EXACT' since some PASS fields have non-zero sub-tol delta. True bit-exact (delta=0) subset noted separately.",
+      "pass_1e_12_numerical": 91,
+      "pass_categorical": 2,
+      "pass_total": 93,
+      "true_bit_exact_delta_zero_subset": 3,
+      "true_bit_exact_paths": [
+        "combined.gc_a0 (paper-claim)",
+        "combined.delta_AIC (paper-claim)",
+        "combined.dAIC_sigma / combined.c15_vs_mond_sigma (paper-claim)"
+      ],
+      "noise_floor_3e_12_to_1_3e_11": 6,
+      "failure_above_floor": 0,
+      "total_fields": 99,
+      "effective_cross_version_floor": "~1e-11 (L-Q3-8 empirical bound)",
+      "noise_floor_paths": [
+        {"path": "per_field_results.G15.gc_a0", "delta": 3.780e-12, "actual": 2.6403570961654097, "expected": 2.64035709616919, "class": "primary"},
+        {"path": "per_mbin_gc[1].gc_a0", "delta": 3.752e-12, "actual": 2.2426894035611413, "expected": 2.2426894035648934, "class": "primary"},
+        {"path": "per_mbin_gc[3].gc_a0", "delta": 3.038e-12, "actual": 3.4066196305733745, "expected": 3.406619630570337, "class": "primary"},
+        {"path": "field_consistency.chi2", "delta": 1.312e-11, "actual": 1.3719762443788996, "expected": 1.3719762443657768, "class": "propagated", "source": "per_field_results.G15.gc_a0"},
+        {"path": "gc_M_star_slope.vs_C15_predicted_0p075.t_statistic", "delta": 9.756e-12, "actual": 2.190289447750481, "expected": 2.190289447740725, "class": "propagated", "source": "per_mbin_gc[1].gc_a0 + per_mbin_gc[3].gc_a0"},
+        {"path": "gc_M_star_slope.vs_MOND_predicted_0p000.t_statistic", "delta": 1.003e-11, "actual": 3.9984810679572025, "expected": 3.998481067947168, "class": "propagated", "source": "per_mbin_gc[1].gc_a0 + per_mbin_gc[3].gc_a0"}
+      ]
+    }
+  },
+
+  "closure_gate_5_conditions": {
+    "_description": "5/5 SATISFIED. Gate (d) is dual-structured (physics + forensic) per Refinement B.",
+
+    "a_bit_exact_independent_paths": {
+      "status": "SATISFIED",
+      "anchor_21_rhyme": "(a) bit-exact reproducible from frozen canonical (cdca6afd) via independent code paths (J4)",
+      "evidence": "mirror v0.3 (phase_b_three_field_mirror.py SHA-16 71dfdc56) reproduces Layer C v1.1 paper-claim aggregates at 1e-12 atol via canonical wrapper L583-644 1:1 binding (rule 26 multi-route minimum)"
+    },
+
+    "b_statistical_reproducibility": {
+      "status": "SATISFIED",
+      "anchor_21_rhyme": "(b) statistical reproducibility 12/12 PASS",
+      "evidence": "91/97 numerical + 2/2 categorical = 93/99 strict 1e-12 PASS, 6 noise-floor catalogued; rule 26 4-axis Phase Q baseline (axis_1 + axis_2 + axis_3 + axis_4) all satisfied"
+    },
+
+    "c_unique_sufficient_causal_mechanism": {
+      "status": "SATISFIED",
+      "anchor_21_rhyme": "(c) Q-patch L587 single-line uniqueness for v1.0.3.1 to v1.0.4a +3.6% drift",
+      "evidence": "M-15 + M-17 (combined block dual-fit pattern) identified: canonical wrapper L621 binding requires diag-sigma fit_gc + full-cov chi2, 2-step pattern; v0.2 collapsed into single full-cov fit yielding 0.014 a_0 delta; v0.3 fix restores 1e-12 EXACT (J4-equivalent uniqueness for axis_4)"
+    },
+
+    "d_dual_closure": {
+      "status": "SATISFIED",
+      "anchor_21_rhyme": "(d) universal coupling vs axis_2_dSph holds at noise-floor 0.107 sigma (physics)",
+
+      "d_physics": {
+        "evidence": "5/5 paper-claim aggregates at 1e-12 EXACT: combined.gc_a0, combined.delta_AIC, combined.dAIC_sigma, field_consistency.weighted_mean_gc_a0, gc_M_star_slope",
+        "rhyme": "anchor 21 (d) noise-floor 0.107 sigma universal coupling -> axis_4 paper-claim full closure"
+      },
+
+      "d_forensic": {
+        "evidence": "6 supporting-field paths in [3.0e-12, 1.3e-11] catalogued under L-Q3-8 cross-scipy-version reproducibility floor; same-scipy re-run path reserved for anchor 22 v0.2 (forward declaration paragraph 6.2)"
+      }
+    },
+
+    "e_lesson_codified": {
+      "status": "SATISFIED",
+      "anchor_21_rhyme": "(e) Lesson 91-94 codified",
+      "evidence": "L-Q3-8 codify complete (lessons_codified.md L146, size 11,986 B, +4,518 B delta from 7,468, occurrences=4); L-Q3-4..L-Q3-7 provisional pending v0.2 integration"
+    },
+
+    "verdict": "5/5 SATISFIED -- axis_4 hardening declaration valid"
+  },
+
+  "forensic_provenance": {
+    "_description": "SHA-pinned references for all v0.1 round artifacts and inherited Layer C/B/A evidence. Tag companion-v4.9-axis-4-hardening-2026-05-08 CDN-pins all entries.",
+
+    "mirror_v0_3_reproduction_evidence": [
+      {"file": "route_ii_mirror_result.json", "sha256_prefix": "97c73bda", "role": "91/97 PASS + 6 noise-floor aggregate"},
+      {"file": "PASS_DECLARATION_axis_4_v0.3.md", "sha256_prefix": "c55c836d", "role": "formal axis_4 PASS + paragraph 2.2.1 verification"},
+      {"file": "phase_b_three_field_mirror.py", "sha256_prefix": "71dfdc56", "role": "mirror script (canonical L583-644 1:1)"},
+      {"file": "run_route_ii_mirror.sh", "sha256_prefix": "8b223a85", "role": "wrapper (axis1_q2 fallback + pin resolver)"},
+      {"file": "structural_delta_v0_1_to_v0_2.md", "sha256_prefix": "3e956c6a", "role": "M-1..M-12 schema corrections forensic"},
+      {"file": "structural_delta_v0_2_to_v0_3.md", "sha256_prefix": "29f455eb", "role": "M-13..M-24 algorithm corrections forensic"},
+      {"file": "input_files_pin_resolved.json", "sha256_prefix": "af986257", "role": "rule 7 additive (path-resolved pin)"},
+      {"file": "run_route_ii_mirror.log", "sha256_prefix": "a4daa1c6", "role": "latest run log"},
+      {"file": "phase_q3_verification_report.pdf", "sha256_prefix": "17593f2b", "role": "26-page verification PDF (claude.ai outputs)"},
+      {"file": "build_verification_pdf.py", "sha256_prefix": "46d4cb6b", "role": "PDF re-generation builder"}
+    ],
+
+    "frozen_canonical": [
+      {"file": "Q-3_immutable_hsc_values.draft.json", "sha256_prefix": "5d9beb04", "role": "Layer C v1.1 (axis_4 hardening verify target)"},
+      {"file": "phase_b_step3_jsondump_v1_fast.py", "sha256_prefix": "52a6a67a", "role": "canonical wrapper"},
+      {"file": "phase_b_step3_three_fields.py", "sha256_prefix": "979d6f79", "role": "canonical core (Stage 1-6 pipeline)"},
+      {"file": "Q-2_immutable_values.json", "sha256_prefix": "3a3e08dc", "role": "Layer A (rule 1 root)"},
+      {"file": "axis_1_closure_summary.json (anchor 21 v0.2)", "sha256_prefix": "55603a4d", "role": "parent anchor (axis_1 type-alpha reference)"}
+    ],
+
+    "v0_1_round_artifacts": [
+      {"file": "forensic_anchors/section5_axis_4_hardening/OPERATIONAL_CLOSURE.md",
+       "sha256_prefix": "(SHA in SHA256SUMS, tag-pinned via companion-v4.9-axis-4-hardening-2026-05-08)",
+       "role": "formal declaration"},
+      {"file": "forensic_anchors/section5_axis_4_hardening/axis_4_closure_summary.json",
+       "sha256_prefix": "(self; SHA in SHA256SUMS, tag-pinned)",
+       "role": "this file; canonical SHA in SHA256SUMS"},
+      {"file": "forensic_anchors/section5_axis_4_hardening/RELEASE_NOTES.md",
+       "sha256_prefix": "(SHA in SHA256SUMS, tag-pinned via companion-v4.9-axis-4-hardening-2026-05-08)",
+       "role": "round narrative (separate file)"},
+      {"file": "forensic_anchors/section5_axis_4_hardening/empirical_precheck_canonical_rerun.json",
+       "sha256_prefix": "52a2bcec",
+       "role": "L-Q3-8 same-scipy validation (variant A confirmed; canonical re-run 062f73aa...)"}
+    ],
+
+    "commits": {
+      "C1": "[C1-SHA-here]",
+      "C2": "[C2-SHA-here]",
+      "C3_plus": "TBD (arXiv v4.9 paragraph 5.7 / paragraph 6 paper edit, deferred to round-internal continuation or forward path (c) chat)"
+    },
+
+    "tag": {
+      "name": "companion-v4.9-axis-4-hardening-2026-05-08",
+      "type": "annotated",
+      "points_to": "C1 commit",
+      "cdn_pin_role": "canonical retrieval path for all entries above"
+    }
+  },
+
+  "lessons": {
+    "established_this_round": {
+      "L-Q3-8": {
+        "label": "cross-scipy-version reproducibility floor",
+        "statement": "1e-12 atol is achievable only under same-scipy-version pinning; cross-version drift establishes ~1e-11 effective empirical floor.",
+        "codified_at": "lessons_codified.md L146",
+        "size_delta_bytes": 4518,
+        "size_after_bytes": 11986,
+        "size_before_bytes": 7468,
+        "heading_occurrences": 4,
+        "empirical_validation": {
+          "status": "validated 2026-05-08, variant A CONFIRMED",
+          "method": "same-scipy (1.17.1) canonical wrapper re-run vs mirror v0.3",
+          "result": "12/12 delta=0 EXACT (12 orders below 1e-12 atol)",
+          "evidence_artifact": "empirical_precheck_canonical_rerun.json (SHA-16 52a2bcec)",
+          "canonical_rerun_artifact_sha": "062f73aac7133fb8de44f41b83616f20f700177b1bd53b4308af1748000b26b5",
+          "implication": "cross-version floor confirmed scipy-version-induced not algorithm-induced; same-scipy reproducibility floor is delta=0 (true bit-exact float), not 1e-12 atol gate",
+          "additional_finding": "5 fields with sub-tol delta>0 in cross-scipy comparison (combined.gc_a0_err 1.74e-14, weighted_mean_gc_a0 8.17e-13, etc.) also collapse to delta=0 under same-scipy pinning"
+        },
+        "provisional_status": "empirical lesson, now strongly validated (delta=0 across all 12 sampled paths under scipy version pinning)",
+        "root_cause_status_post_validation": "scipy-version-induced confirmed at aggregate level; bit-trace level identification of which scipy.optimize / scipy.stats internal differs is still pending but no longer prerequisite to anchor 22 v0.2 promotion"
+      }
+    },
+    "inherited_phase_q_3": {
+      "L-Q3-1": "tolerance schema layer match",
+      "L-Q3-2": "layer source typology alpha/beta/gamma (Layer C v1.1 = type-beta)",
+      "L-Q3-3": "Discovery layer 2 mandate x tolerance schema 両輪"
+    },
+    "provisional_pending_integration_v0_2": {
+      "L-Q3-4": "mirror起草前 Layer C JSON keys 確認 (jq dump, dotted-paths blind 依存禁止)",
+      "L-Q3-5": "canonical wrapper JSON dump full-source quote",
+      "L-Q3-6": "canonical wrapper L<行範囲> 1:1 mirror 化",
+      "L-Q3-7": "tolerance schema location pre-flight inspection (tolerance_per_field nested under source.*)"
+    },
+    "_integration_note": "L-Q3-4..L-Q3-7 numbering 整理 + Discovery lessons_codified.md への正式 append は anchor 22 v0.2 round で実施 (本 v0.1 では proposal の存在のみ pin)"
+  },
+
+  "rule_compliance": {
+    "_description": "9/9 ALL PASS using repo registry actual 9 rules (parallel to anchor 21 v0.2 §5). PASS_DECLARATION_axis_4_v0.3 §4 で既 verify; 本 declaration で再確認.",
+    "rule_1_anchor_immutable": {"status": "PASS", "evidence": "Layer C v1.1 SHA 5d9beb04 unchanged (verified §12 [1])"},
+    "rule_2_R1_LOCK_kB_zero": {"status": "PASS", "evidence": "本 round で k_B 触らず"},
+    "rule_3_R2_LOCK_AlgoB_self_cons": {"status": "PASS", "evidence": "本 round で Algo B 触らず"},
+    "rule_4_QC1_LOCK_kE_two": {"status": "PASS", "evidence": "本 round で k_E 触らず"},
+    "rule_5_cascade_SSoT": {"status": "PASS", "evidence": "vpp_x05(0.83)=10.462625 / f_opt(0.83)=1.942493 不変"},
+    "rule_6_L1_forward_ref_zero": {"status": "PASS", "evidence": "parent v4.8 NULL impact 維持 (companion paper text 影響 0; repo HEAD a89befa unchanged)"},
+    "rule_7_additive_supersession": {"status": "PASS", "evidence": "v0.1 elevates Phase Q-3 5th-step deliverables without revision"},
+    "rule_26_multi_route_minimum": {"status": "PASS_EXCEEDED", "evidence": "axis_1 + axis_2 + axis_3 + axis_4 全 PASS (4-axis、3-axis minimum 超過)"},
+    "rule_92_parsimony_first": {"status": "PASS", "evidence": "Option 2 staged promotion (single-round 統合 + v0.2 forward declaration で scope 分離)"},
+    "_draft_origin_note": "Earlier draft used non-existent rules 30/38/65/74 (tolerance schema declaration / layer SHA pin / independent code path / noise-floor catalog). These verifications are preserved in §1.1 (a)-(e), §3, §4, §2.6 of OPERATIONAL_CLOSURE.md. Rule numbering aligned with repo registry per anchor 21 v0.2 §5."
+  },
+
+  "file_inventory": {
+    "_description": "Files written this round (v0.1) into forensic_anchors/section5_axis_4_hardening/ and externally referenced artifacts.",
+    "this_round_files_in_anchor_dir": [
+      "OPERATIONAL_CLOSURE.md (current snapshot SHA-16 6ee834ab524fea89; iterate at commit)",
+      "axis_4_closure_summary.json (current snapshot SHA-16 64b9cfacb48e83fa; iterate at commit)",
+      "RELEASE_NOTES.md (current snapshot SHA-16 ddb2447173da4e68)",
+      "empirical_precheck_canonical_rerun.json (variant A confirmed 2026-05-08, SHA-16 52a2bcec4f78ff95)"
+    ],
+    "this_round_files_referenced_externally": [
+      "E:\\Q-3_route_ii_mirror_2026-05-07\\route_ii_mirror_result.json (97c73bda...)",
+      "E:\\Q-3_route_ii_mirror_2026-05-07\\PASS_DECLARATION_axis_4_v0.3.md (c55c836d...)",
+      "E:\\Q-3_route_ii_mirror_2026-05-07\\phase_b_three_field_mirror.py (71dfdc56...)"
+    ]
+  },
+
+  "forward_declaration": {
+    "_description": "Tasks declared but NOT executed within v0.1 round itself.",
+
+    "anchor_22_v0_2_axis_4_type_alpha_promotion": {
+      "scope": "post-v0.1 別 round, variant A confirmed により forensic formality に縮退",
+      "label": "axis_4 type-alpha reproduction promotion",
+      "anchor": "22 v0.2",
+      "approach": "Layer C v1.2 freeze: canonical re-run JSON (062f73aa...) を Q-3_immutable_hsc_values.draft.v1.2.json として rename + frozen copy, tolerance_per_field block reuse from v1.1, mirror v0.3 vs Layer C v1.2 full 99/99 EXACT verify (12/99 already empirically demonstrated)",
+      "predicted_outcome": "axis_4 type-alpha true reproduction promotion (forensic formality, no compute-heavy investigation needed)",
+      "predicted_outcome_basis": "empirical pre-check 2026-05-08 (variant A confirmed, 12/12 delta=0 EXACT in same-scipy 1.17.1)",
+      "preservation": "anchor 22 v0.1 (this) preserved as 'cross-scipy floor empirically catalogued' staged member; v0.2 is 'same-scipy true bit-exact promoted'",
+      "scope_reduction_note": "pre-check variant A 確認前は v0.2 が compute re-run + 99 field full diff + scipy bit-trace investigation の可能性を含む scope。確認後は (i) v1.2 rename+freeze, (ii) tolerance block reuse, (iii) v1.1 parallel preservation, (iv) full 99-field mechanical verify の 4 steps のみ",
+      "deferred": true
+    },
+
+    "C3_plus_arxiv_v4_9_paper_edit": {
+      "scope": "v0.1 round 内 C3+ commit OR forward path (c) separate chat",
+      "sections_to_update": ["paragraph 5.7 (or new paragraph 6) for 4-axis Phase Q baseline 正式記録"],
+      "content_targets": [
+        "axis_4 satisfied at paper-claim 1e-12 bit-exact 記述",
+        "L-Q3-8 cross-scipy ~1e-11 floor catalog 反映",
+        "5/5 closure gate verdict 引用",
+        "mirror v0.3 (independent code path) と canonical wrapper の relation 明記"
+      ],
+      "figures": "optional, PDF verification report (17593f2b...) からの rhyme 移植可"
+    },
+
+    "wordpress_sync": {
+      "scope": "別 round (post v0.2 + arXiv v4.9 確定後)",
+      "site": "sakaguchi-physics.com",
+      "candidate_pages": "Phase Q baseline 4-axis page 新設 or 既存 axis_1/2/3 cross-link",
+      "workflow": "MCP pages.get + manual paste (rule per existing convention)"
+    },
+
+    "phase_1b_anchor_23_plus": {
+      "scope": "post-v0.2 別 round",
+      "label": "f_opt(x != 0.5) operational + chi_coh integration",
+      "anchor": "23+ (新規立ち上げ; anchor 22 series は axis_4 hardening v0.1/v0.2 chain 専用)",
+      "deferred": true
+    },
+
+    "route_vi_vii_GAMA": {
+      "scope": "future work",
+      "label": "GAMA cross-z / M_star function (axis_5+ 候補)",
+      "prerequisite": "GAMA 5 DMU acquisition pending",
+      "deferred": true
+    }
+  },
+
+  "closure_declaration": {
+    "_description": "Final declarative statement, parallel to OPERATIONAL_CLOSURE.md paragraph 7.",
+    "statement": "axis_4 universal RAR coupling claim (route ii HSC weak lensing, Layer C v1.1) is hereby declared operationally closed at axis_4 hardening level (cross-version reproducibility floor catalogued) as of 2026-05-08. Closure rests on 5/5 conditions SATISFIED, 9/9 rule compliance, Phase Q baseline 4-axis requirement satisfied, forensic chain integrity from anchor 21 v0.2 via Layer A/B/C v1.1 to this anchor 22 v0.1, all SHA-pinned via tag companion-v4.9-axis-4-hardening-2026-05-08, and L-Q3-8 empirically validated 2026-05-08 (variant A confirmed, 12/12 delta=0 EXACT in same-scipy 1.17.1). Path to axis_4 type-alpha true reproduction promotion (anchor 22 v0.2) reduced to forensic formality (§6.2). This declaration is IMMUTABLE under v0.1 SHA pin.",
+    "as_of": "2026-05-08",
+    "status": "CLOSED at axis_4 hardening level",
+    "next_milestone": "anchor 22 v0.2 axis_4 type-alpha reproduction promotion (forensic formality, deferred to separate round)"
+  }
+}

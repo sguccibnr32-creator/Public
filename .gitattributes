@@ -26,3 +26,5 @@ forensic_anchors/section2_5_v0_4a_axis_1_alignment/** -text
 forensic_anchors/section2_5_v0_4a_validation/** -text
 # axis_1 full operational closure (anchor 21 v0.2)
 forensic_anchors/section2_axis_1_operational_closure/** -text
+# axis_4 hardening declaration / cross-version floor catalogued (anchor 22 v0.1)
+forensic_anchors/section5_axis_4_hardening/** -text
