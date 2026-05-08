@@ -52,3 +52,11 @@ broken_names/
 
 # Local config
 .env
+
+# LaTeX build artifacts (auto-regenerated, not committed)
+latex_v48/*.aux
+latex_v48/*.log
+latex_v48/*.blg
+latex_v48/*.out
+latex_v48/*.bak.*
+latex_v48/build_*.log

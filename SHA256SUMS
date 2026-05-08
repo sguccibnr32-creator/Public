@@ -1,28 +1,30 @@
 # SHA256 SUMS - sguccibnr32-creator/Public
-
+#
 # === companion-v0.2-round-closure-2026-05-04 (this release) ===
 7cb540b11650ece360c780061923196ba532638ac58574a652befb8a25037652  forensic_anchors/section2_5_v0_3_step4_reproducibility/run_section2_5_v0_2.py
 2ec2e258c8f0f2b4eeda28d8e86434ef1d951e665ef41ab4257c101995423591  artifacts/run_section2_5_v0_2_v1_0_3.py
 31153f5f928318e95e9f5135af3e507e70229935efeee3c24fcc9b822436492a  artifacts/section2_5_v0_2_round_closure_2026-05-04.pdf
 fdd92346e380c4d1a9958020311b569f3ebce70b5bb4c8405ff83270c516d882  artifacts/P12_FILL_PROCEDURE_v2_0.md
 38fd13b146b1805241e11b9dd653f77055712a67856cf29792ac81e441fd7e6d  artifacts/build_session_summary_pdf.py
-
+#
 # === backup chain in this release (v1.0.x dev history, IMMUTABLE) ===
 6c912e0adee46ca483a18c30dcd3860ce1038280c6b9b756e1a29ce4d4f4fc9e  forensic_anchors/section2_5_v0_3_step4_reproducibility/_v1_0_2_b_alpha_wip.bak.py
 34a749703f35e1b72b329b51fc86bf90decff34d138aae3bb922c03731ed04af  forensic_anchors/section2_5_v0_3_step4_reproducibility/_v1_0_1.bak.py
-
+#
 # === historical entries (retained, IMMUTABLE, prior commits) ===
-dd762fd25193748f2aae0f5958b4c2170f1c2a0a1fb9345208808b1cf8bf57e6  forensic_anchors/section2_5_v0_2_skeleton/run_section2_5_v0_2.py    # v1.0.2 (commit 8e8ed51)
-
+# v1.0.2 (commit 8e8ed51)
+dd762fd25193748f2aae0f5958b4c2170f1c2a0a1fb9345208808b1cf8bf57e6  forensic_anchors/section2_5_v0_2_skeleton/run_section2_5_v0_2.py
+#
 # === companion-v0.4a-axis-1-alignment-2026-05-04 (Phase 1a mechanical) ===
 cdca6afd634a3f730bc4b4002ab3082e187dc64b4ad9e87fd8147a6d81b04521  forensic_anchors/section2_5_v0_4a_axis_1_alignment/run_section2_5_v0_2.py
-7cb540b11650ece360c780061923196ba532638ac58574a652befb8a25037652  forensic_anchors/section2_5_v0_4a_axis_1_alignment/run_section2_5_v0_2_v1_0_3_1.bak.py    # paranoid retain
+# paranoid retain
+7cb540b11650ece360c780061923196ba532638ac58574a652befb8a25037652  forensic_anchors/section2_5_v0_4a_axis_1_alignment/run_section2_5_v0_2_v1_0_3_1.bak.py
 4612150d03016c32517343d7efabeef10193b1783ca63c86212a895cbcfb1532  forensic_anchors/section2_5_v0_4a_axis_1_alignment/gate_phase_1a_mechanical.py
 35f9c60d911ad8b7ad5287c1ad152726f5e7089b92a42e81f8ab4a790be0b712  forensic_anchors/section2_5_v0_4a_axis_1_alignment/gate_phase_1a_results.json
-053f902b03f89dc1b51eea0018af24216ba4999b2ecd39bb66cb1a81da03537b  forensic_anchors/section2_5_v0_4a_axis_1_alignment/RELEASE_NOTES.md
-
+ef7367e0141f7b5dfe6983eee3cf9dab376daf3e5dd6c26b01eec4c7c1139bcf  forensic_anchors/section2_5_v0_4a_axis_1_alignment/RELEASE_NOTES.md
+#
 # === companion-v0.4a-validation-2026-05-05 (anchor 21 v0.1.4, Phase 1a-validation) ===
-a65cc0113fcb60288f5611627207d811f47474e309f3a39ed10b195a8a0418fd  forensic_anchors/section2_5_v0_4a_validation/RELEASE_NOTES.md
+f8bef808f9b9c3f53dd8e3cbcfb7d1127238b0c6093737b04a7ca214d69afb8c  forensic_anchors/section2_5_v0_4a_validation/RELEASE_NOTES.md
 8c7828a4944637cd8cc8206a33bfd598dc2ac69e5262f6847f4fdff635e5782f  forensic_anchors/section2_5_v0_4a_validation/run_validation_bench.py
 f4d2e52e83444cd37cb0a6dbe19ce6bda23288e0e82dcb61db0a7fbcf469a0ae  forensic_anchors/section2_5_v0_4a_validation/run_validation_bench_g4_g6.py
 e2e9115b0ac38007c733dee19cf9f502a168067c3186a37ce5b81e650c66ad8d  forensic_anchors/section2_5_v0_4a_validation/run_validation_bench_j_layer.py
@@ -33,7 +35,7 @@ b6012483ce400f466d9e8a87c4025ff23270a4cb11fd465388da16e19d8f03df  forensic_ancho
 6cb3ee1524658782c76fd0a525fe0925cb67fe134922fcc15121b92f6bb9ddfe  forensic_anchors/section2_5_v0_4a_validation/per_filter_sensitivity.csv
 6c8984d380ad8a5e86f532010945303bd63683b1ffc264d07e15b6d69337995e  forensic_anchors/section2_5_v0_4a_validation/phase_c3_step3_reference.json
 a30466929ef183c83229630ee90e99bb3b28d0f5b0e4ec98cb62b2e2bcce12b8  forensic_anchors/section2_5_v0_4a_validation/cross_check_phase_c3_step3.json
-
+#
 # === companion-v4.9-axis-1-closure (anchor 21 v0.2, axis_1 operational closure; tag-pinned via companion-v4.9-axis-1-closure-YYYY-MM-DD) ===
 1c6d19ad77da2a3c7a489da62a541d0c5a538217dbb4e8f7f6fca4a99d1e65b6  forensic_anchors/section2_axis_1_operational_closure/OPERATIONAL_CLOSURE.md
 b2b6d4886c8c13c88d46741e3bfbd40660dd0739ccc7f776d9675cb976d1bb8d  forensic_anchors/section2_axis_1_operational_closure/RELEASE_NOTES.md
@@ -41,7 +43,7 @@ b2b6d4886c8c13c88d46741e3bfbd40660dd0739ccc7f776d9675cb976d1bb8d  forensic_ancho
 3a55c00167094cd61c4e4a2035753129bac82eb00165369e34251f848bb18aa4  forensic_anchors/section2_axis_1_operational_closure/per_filter_sensitivity_extension.py
 af3809ffddde732511a8ce4aeb2e435ec61faf735815686ba7d3b0fbcd8a577e  forensic_anchors/section2_axis_1_operational_closure/per_filter_sensitivity_extension.csv
 c3087d7282a1dc2e01069f289f9f0a1508654a8653b1160e2edd5c09f9101d62  forensic_anchors/section2_axis_1_operational_closure/v1_precondition_fail_diagnostic.log
-
+#
 # === companion-v4.9-axis-4-hardening-2026-05-08 (anchor 22 v0.1, axis_4 hardening declaration) ===
 d9e3e12c3ac6b6ea5e6e08a24a6a04ddd1bd2341ed09dcd52d70c40567b57a6c  forensic_anchors/section5_axis_4_hardening/OPERATIONAL_CLOSURE.md
 16ed724c16e69f4a6ef257894d9162121a7781a7c92a46753b932f6e06af2f1f  forensic_anchors/section5_axis_4_hardening/axis_4_closure_summary.json
