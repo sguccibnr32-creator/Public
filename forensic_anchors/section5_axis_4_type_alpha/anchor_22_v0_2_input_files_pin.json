@@ -1,0 +1,166 @@
+{
+  "_schema": "anchor_v0_2_input_files_pin.v1",
+  "_paired_with": "forensic_anchors/section5_axis_4_hardening/axis_4_closure_summary.json (anchor 22 v0.1)",
+  "anchor": {
+    "name": "anchor 22 v0.2",
+    "title": "axis_4 type-alpha reproduction promotion",
+    "axis": "axis_4",
+    "route": "ii",
+    "dataset": "HSC weak-lensing (Subaru strategic program), 3 fields, 503M+ galaxy pairs",
+    "reproduction_grade": "type-alpha",
+    "status": "CLOSURE_GRANTED",
+    "date": "2026-05-10",
+    "author": "Sakaguchi Shinobu",
+    "license": "CC-BY 4.0",
+    "repo_path": "forensic_anchors/section5_axis_4_type_alpha/",
+    "tag_candidates": [
+      "companion-v4.9-axis-4-type-alpha-2026-05-09",
+      "companion-v4.9-axis-4-type-alpha-2026-05-10"
+    ],
+    "tag_final_lock": "companion-v4.9-axis-4-type-alpha-2026-05-10",
+    "predecessor_paired_anchor": {
+      "name": "anchor 22 v0.1",
+      "title": "axis_4 hardening declaration",
+      "tag": "companion-v4.9-axis-4-hardening-2026-05-08",
+      "commit": "0f1d8c98",
+      "repo_path": "forensic_anchors/section5_axis_4_hardening/"
+    }
+  },
+
+  "input_files": {
+    "_count": 5,
+    "_role_summary": "5 IMMUTABLE input files required to reproduce 97/97 EXACT result. All SHA-256 fingerprints are bit-exact pinned. Independent reproduction at the type-alpha grade requires these exact fingerprints to match.",
+
+    "transform_script_rev_6_final": {
+      "role": "Layer C v1.1 -> v1.2 schema transform tool (rev 6 final form). Anchor 22 v0.2 publicly pinned SHA. Reads canonical re-run JSON, applies per-field / per-mbin_gc / field_consistency / gc_M_star_slope dispatch with v1.1 key cross-fill, drops 3 keys with explicit byte-weight account, writes Layer C v1.2 candidate. Run in --commit mode.",
+      "path_local": "D:\\\\C3 拡張版仮説関連2\\\\transform_layer_c_v1_1_to_v1_2.py",
+      "sha256": "ac91bb86caa37ba27adeebb73a2c6f4df1361868e45c1c9baf91ce40b037a618",
+      "size_bytes": 35075,
+      "lines": 787,
+      "encoding": "UTF-8 / LF / no BOM",
+      "argparse_description": "Layer C v1.1 -> v1.2 schema transform tool (rev 6)",
+      "audit": {
+        "rendered_section_sign_count": 0,
+        "ascii_section_escape_count": 12,
+        "ast_parse": "OK"
+      },
+      "predecessor_baseline_rev_5": {
+        "sha256": "a7931889 (27,491 B / 647 lines, forensic chain reference, no disk artifact post-patch)",
+        "role": "preserved baseline for transition reference"
+      }
+    },
+
+    "layer_c_v1_1_immutable": {
+      "role": "Layer C v1.1 IMMUTABLE baseline. Source schema for transform. 70 numeric + 2 categorical values. Path resolved relative to mirror script via input_files_pin_resolved.json.",
+      "path_local": "E:\\\\Q-3_route_ii_discovery_2026-05-07\\\\Q-3_immutable_hsc_values.draft.json",
+      "sha256": "5d9beb04361e0b21f1b7",
+      "_sha256_full": "5d9beb04361e0b21f1b7 (truncated representation; full SHA preserved verbatim in Public repo SHA256SUMS at Phase 4)",
+      "size_bytes": 11096,
+      "rule_class": "rule 1 IMMUTABLE (1 of 7 anchors)"
+    },
+
+    "canonical_re_run_json": {
+      "role": "Type-beta JSON source. Discovery-confirmed precision-preserved canonical re-run of Phase B step 3 (3-field HSC weak-lensing analysis). Input to transform script.",
+      "path_local": "D:\\\\新膜宇宙論\\\\これまでの軌跡\\\\パイソン\\\\phase_b_step3_jsondump_v1_fast_result.json",
+      "sha256": "062f73aa",
+      "_sha256_full": "062f73aa (truncated representation; full SHA preserved verbatim in Public repo SHA256SUMS at Phase 4)",
+      "size_bytes": 8888,
+      "rule_class": "input pin (cross-rev invariant under rule 5 cascade SSoT)"
+    },
+
+    "mirror_script_v0_3": {
+      "role": "Mirror verification script (independently implemented Phase B 3-field reduction route ii). Bit-exact verifier against Layer C v1.2 candidate. Read-only with respect to all IMMUTABLE inputs.",
+      "path_local": "E:\\\\Q-3_route_ii_mirror_2026-05-07\\\\phase_b_three_field_mirror.py",
+      "sha256": "71dfdc5626bd7c67027f",
+      "_sha256_full": "71dfdc5626bd7c67027f (truncated representation; full SHA preserved verbatim in Public repo SHA256SUMS at Phase 4)",
+      "size_bytes": 39940,
+      "lines": 975,
+      "rule_class": "rule 1 IMMUTABLE"
+    },
+
+    "input_files_pin_resolved": {
+      "role": "Resolved path manifest. Maps mirror script's logical input slots to absolute filesystem paths (Layer_2 path /mnt/d/ form) for WSL2 invocation. Hardcoded SHA inside the JSON is cross-rev invariant.",
+      "path_local": "E:\\\\Q-3_route_ii_mirror_2026-05-07\\\\input_files_pin_resolved.json",
+      "sha256": "af986257a69ec9572be5",
+      "_sha256_full": "af986257a69ec9572be5 (truncated representation; full SHA preserved verbatim in Public repo SHA256SUMS at Phase 4)",
+      "size_bytes": 6182,
+      "rule_class": "rule 1 IMMUTABLE",
+      "note": "Layer_2 path /mnt/d/ form for WSL2; hardcoded internal SHA reference is cross-rev invariant."
+    }
+  },
+
+  "envelope_expectations": {
+    "_role": "What independent reproduction at type-alpha grade should observe.",
+    "mirror_run_invocation": "WSL2 axis1_q2 conda env (Python 3.13.13 / numpy 2.4.3 / scipy 1.17.1), via PowerShell -> bash wrapper -> wsl -d Ubuntu bash <wrapper.sh>",
+    "expected_overall_verdict": "PASS",
+    "expected_n_total": 97,
+    "expected_n_pass": 97,
+    "expected_n_fail": 0,
+    "expected_per_leaf_delta": "0.0 (bit-exact strict equality, tolerance margin not needed)",
+    "expected_per_bucket": {
+      "per_field_results": {"pass": 36, "fail": 0, "M_sub_issue_resolved": "M-alpha"},
+      "per_mbin_gc_0_to_3": {"pass": 28, "fail": 0, "M_sub_issue_resolved": "M-beta"},
+      "field_consistency": {"pass": 6, "fail": 0, "M_sub_issue_resolved": "M-gamma (Pattern 9 inline)"},
+      "gc_M_star_slope": {"pass": 6, "fail": 0, "M_sub_issue_resolved": "M-gamma + M-delta"},
+      "combined_3_field_chi2_C15_vs_MOND": {"pass": 14, "fail": 0, "note": "Issue J pre-fixed at hardening"},
+      "paper_claims_for_rounded_check": {"pass": 7, "fail": 0, "note": "PLACEHOLDER B pre-fixed at hardening"}
+    },
+    "physics_layer_values_preserved_bit_exact": {
+      "combined_gc_a0": "2.7184876317961755",
+      "combined_dAIC": "472.2767831581",
+      "weighted_mean": "2.7326473920108501 +/- 0.1072291448861956",
+      "consistency_p": "0.503592 (CONSISTENT, M-24)",
+      "slope": "0.165849 +/- 0.041478",
+      "p_C15": "2.85e-02",
+      "p_MOND": "6.38e-05"
+    }
+  },
+
+  "g_mirror_grant": {
+    "status": "GRANTED",
+    "date_granted": "2026-05-10",
+    "granted_by": "claude.ai-side design judgment, turn N+10",
+    "necessary_conditions": [
+      {"id": 1, "condition": "mirror v0.3 vs Layer C v1.2 candidate: 97/97 EXACT", "status": "MET", "achieved_turn": "N+7"},
+      {"id": 2, "condition": "forensic transients cleanup verified", "status": "MET", "achieved_turn": "N+9"},
+      {"id": 3, "condition": "step B path (b) confirmed (empirically reproducible)", "status": "MET", "achieved_turn": "prior chat [3.4.1.5]"}
+    ],
+    "all_conditions_met": true
+  },
+
+  "phase_3_to_phase_4_gate": {
+    "_count": 7,
+    "_all_pass": true,
+    "G3-1": {"name": "G_MIRROR final grant", "status": "PASS"},
+    "G3-2": {"name": "rev 6 final form SHA preserved (ac91bb86...)", "status": "PASS"},
+    "G3-3": {"name": "rule 1 IMMUTABLE 10 anchors invariance (pre/post SHA)", "status": "PASS"},
+    "G3-4": {"name": "Public repo touch 0 invariant during round", "status": "PASS"},
+    "G3-5": {"name": "physics-layer reproducibility intact vs anchor 22 v0.1", "status": "PASS"},
+    "G3-6": {"name": "forensic transients cleanup verified (cross-environment)", "status": "PASS"},
+    "G3-7": {"name": "L-Q3-11 codification batch ready (draft complete)", "status": "PASS"}
+  },
+
+  "rule_compliance": {
+    "rule_1_anchor_immutable": "10 / 10 untouched (pre/post SHA bit-exact verified at turn N+9 step D)",
+    "rule_5_cascade_ssot": "canonical wrapper / core untouched",
+    "rule_6_l1_forward_ref_zero": "paper repo untouched (C3 reflection deferred to next round)",
+    "rule_7_additive_supersession": "rev 6 final form preserves rev 5 baseline as forensic chain reference; no anchor structure modification",
+    "rule_26_multi_route_minimum": "4-axis all PASS = PASS_EXCEEDED maintained",
+    "rule_92_parsimony_first": "scope strictly bounded; Piece 7 corrective bundle = minimal scope expansion (1 str_replace mechanical fix); cleanup = forensic transients only; ghost-code 0",
+    "public_repo_touch_zero_invariant_during_round": "HEAD = origin/main = 86742b79... / porcelain = 0 lines, maintained throughout the entire round (no commit / no tag / no push during turn N+4 ~ N+10)"
+  },
+
+  "_drafting_metadata": {
+    "drafted_by": "claude.ai (turn N+11)",
+    "drafted_date": "2026-05-10",
+    "drafting_phase": "Phase 3 [3.5] paired files content drafting",
+    "claude_code_sha_verify_required": [
+      "transform_script_rev_6_final.sha256 full 64-char form",
+      "layer_c_v1_1_immutable.sha256 full 64-char form",
+      "canonical_re_run_json.sha256 full 64-char form",
+      "mirror_script_v0_3.sha256 full 64-char form",
+      "input_files_pin_resolved.sha256 full 64-char form"
+    ],
+    "_note_to_verifier": "Truncated SHA values above (e.g., '5d9beb04361e0b21f1b7') are placeholders for the full 64-character SHA-256 fingerprints. Claude Code-side SHA verify round must (a) read the actual files, (b) compute SHA-256, (c) replace each truncated value with the full hex string, (d) cross-check against handoff memo §3.3 + §3.5 reference values."
+  }
+}

@@ -28,6 +28,8 @@ forensic_anchors/section2_5_v0_4a_validation/** -text
 forensic_anchors/section2_axis_1_operational_closure/** -text
 # axis_4 hardening declaration / cross-version floor catalogued (anchor 22 v0.1)
 forensic_anchors/section5_axis_4_hardening/** -text
+# axis_4 type-alpha reproduction promotion (anchor 22 v0.2)
+forensic_anchors/section5_axis_4_type_alpha/** -text
 
 # Forensic record cross-platform LF preservation
 SHA256SUMS -text

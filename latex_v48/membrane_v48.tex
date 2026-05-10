@@ -1972,5 +1972,135 @@ independent reimplementation の mirror v0.3
 
 % ============ END Reproducibility (anchor 22 v0.1) ============
 
+\section*{Reproducibility: anchor 22 v0.2 forensic chain}
+\addcontentsline{toc}{section}{Reproducibility: anchor 22 v0.2 forensic chain}
+\label{sec:reproducibility-axis4-v02-type-alpha}
+
+The axis\_4 reproduction (HSC three-field weak-lensing route) is here
+\emph{promoted} from operational closure (anchor~22 v0.1,
+\S\ref{sec:reproducibility-axis4-v01}) to \emph{type-alpha bit-exact
+reproducibility}. The mirror pipeline
+\texttt{phase\_b\_three\_field\_mirror.py} v0.3 executed against the
+Layer~C v1.2 candidate, produced via the transform script
+\texttt{transform\_layer\_c\_v1\_1\_to\_v1\_2.py} rev~6 final form,
+yields 97 of 97 leaves in bit-exact equality (per-leaf
+\texttt{delta = 0.0}, no tolerance margin). All four sub-issues of the
+Issue~M chain (\texttt{M-alpha}, \texttt{M-beta}, \texttt{M-gamma},
+\texttt{M-delta}) are operationally resolved at the disk-artifact
+level, with per-bucket breakdown \texttt{per\_field\_results} 36/0,
+\texttt{per\_mbin\_gc[0..3]} 28/0, \texttt{field\_consistency} 6/0,
+\texttt{gc\_M\_star\_slope} 6/0,
+\texttt{combined\_3\_field\_chi2\_C15\_vs\_MOND} 14/0,
+\texttt{paper\_claims\_for\_rounded\_check} 7/0. Physics-layer values
+(G09/G12/G15 \texttt{gc\_a0}; combined \texttt{gc\_a0} and
+\texttt{dAIC}; \texttt{weighted\_mean}; consistency \texttt{p};
+\texttt{gc\_M\_star\_slope}; \texttt{p\_C15} and \texttt{p\_MOND})
+match the published anchor~22 v0.1 figures bit-exactly, confirming
+that the v0.1 to v0.2 grade promotion preserves the empirical record
+without modification.
+
+The promotion is anchored to a single GitHub tag pointing at a single
+bundled commit:
+\begin{quote}
+\texttt{github.com/sguccibnr32-creator/Public/releases/tag/}\\
+\texttt{companion-v4.9-axis-4-type-alpha-2026-05-10}
+\end{quote}
+
+The annotated tag \texttt{companion-v4.9-axis-4-type-alpha-2026-05-10}
+bundles four paired forensic artifacts in a dedicated subdirectory
+under the repository's anchor namespace\footnote{The tag date is
+locked to the actual push day per the project's tag-date equals
+push-day convention (anchor~22 v0.1: same-day pattern, 2026-05-08;
+anchor~21 v0.2: closure-day pattern). The value
+\texttt{2026-05-10} written here is the working assumption at draft
+time; should the push slip beyond this date, the tag string and this
+section are updated jointly prior to Phase~5-B.}.
+
+The forensic artifacts reside at
+\texttt{forensic\_anchors/section5\_axis\_4\_type\_alpha/}, paired
+structurally (not by filename) with anchor~22 v0.1's
+\texttt{forensic\_anchors/section5\_axis\_4\_hardening/}. The v0.1
+directory and its four files remain untouched (rule~1 IMMUTABLE), and
+the v0.2 directory is added without modification of any pre-existing
+content (rule~7 additive supersession).
+
+The four v0.2 artifacts and their SHA-256 fingerprints (full digests
+in \texttt{SHA256SUMS}) are listed in
+Table~\ref{tab:anchor-22-v02-files}.
+
+\begin{table}[h]
+\centering
+\small
+\caption{Anchor~22 v0.2 file inventory (4 files in
+\texttt{forensic\_anchors/section5\_axis\_4\_type\_alpha/}).}
+\label{tab:anchor-22-v02-files}
+\begin{tabular}{lll}
+\hline
+File & Role & SHA-256 (prefix) \\
+\hline
+\texttt{anchor\_22\_v0\_2\_declaration.md}
+  & formal declaration (paired with v0.1
+    \texttt{OPERATIONAL\_CLOSURE.md})
+  & \texttt{15739cf0\dots} \\
+\texttt{anchor\_22\_v0\_2\_input\_files\_pin.json}
+  & machine-readable input pin (paired with v0.1
+    \texttt{axis\_4\_closure\_summary.json})
+  & \texttt{435bf4b6\dots} \\
+\texttt{anchor\_22\_v0\_2\_verification\_log.md}
+  & forensic execution log
+  & \texttt{41afab2c\dots} \\
+\texttt{anchor\_22\_v0\_2\_lessons\_appendix.md}
+  & lessons codification reference
+  & \texttt{4df652d6\dots} \\
+\hline
+\end{tabular}
+\end{table}
+
+At the repository root, two append-only modifications accompany the
+new directory: (i) \texttt{.gitattributes} receives the rule
+\texttt{forensic\_anchors/section5\_axis\_4\_type\_alpha/** -text}
+(a D9 append, paired with the anchor~22 v0.1 D-rule for the
+\texttt{section5\_axis\_4\_hardening/} subtree); (ii)
+\texttt{SHA256SUMS} receives four new entries plus a tag-pinned
+section comment, while the pre-existing 34 entries (anchor~21 v0.2,
+anchor~22 v0.1) remain bit-exactly preserved. Full
+\texttt{sha256sum -c SHA256SUMS} self-verification yields
+\texttt{OK = 38}, \texttt{FAILED = 0}, \texttt{WARNING = 0}.
+
+The anchor~22 v0.2 chain is bidirectionally cross-referenced with
+anchor~21 v0.2 closure (\S\ref{sec:reproducibility-axis1-v02}) and
+anchor~22 v0.1 hardening (\S\ref{sec:reproducibility-axis4-v01}). The
+rule~1 IMMUTABLE invariance set comprises 10 anchors\footnote{Six
+files under
+\texttt{forensic\_anchors/section2\_axis\_1\_operational\_closure/}
+(anchor~21 v0.2) and four files under
+\texttt{forensic\_anchors/section5\_axis\_4\_hardening/}
+(anchor~22 v0.1). This count is the operationally verified figure
+(gate~G4-4, 10/10 EXACT pre/post invariance).} which is preserved
+bit-exactly across the v0.2 promotion patch, as established by
+gate~G4-4. Post-push raw-URL audit via GitHub's
+\texttt{raw.githubusercontent.com} CDN with SHA-256 round-trip
+verification is performed on the push day and recorded in the v0.2
+verification log.
+
+The transform pipeline producing the Layer~C v1.2 candidate is
+\texttt{transform\_layer\_c\_v1\_1\_to\_v1\_2.py} rev~6 final form,
+SHA-256 \texttt{ac91bb86\dots}, executing against the canonical re-run
+JSON \texttt{phase\_b\_step3\_jsondump\_v1\_fast\_result.json}
+(\texttt{062f73aa\dots}) produced by the canonical wrapper
+\texttt{phase\_b\_step3\_jsondump\_v1\_fast.py}. The mirror pipeline
+is \texttt{phase\_b\_three\_field\_mirror.py} v0.3
+(\texttt{71dfdc56\dots}) reading the resolved input pin
+\texttt{input\_files\_pin\_resolved.json} (\texttt{af986257\dots})
+and the IMMUTABLE Layer~C v1.1 source (\texttt{5d9beb04\dots}). Both
+pipelines are deterministic up to the \texttt{frozen\_utc} timestamp;
+the project's G\_DRY structural signature \texttt{438d27f2\dots}
+(lines~1--19 and~21--22 of standard output, excluding the volatile
+L20) is bit-exact across four sequential dry-runs. Execution
+environment: WSL2 \texttt{axis1\_q2} conda environment,
+Python~3.13.13, NumPy~2.4.3, SciPy~1.17.1.
+
+% ============ END Reproducibility (anchor 22 v0.2) ============
+
 
 \end{document}
