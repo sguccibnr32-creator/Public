@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "anchor_id": "anchor 24 v0.1",
+  "round_name": "Q3 codify round v0.2",
+  "phase": "5-D",
+  "round_nature": "mixed (11 doc-only + 1 structural fix)",
+  "created_at": "2026-05-XX (step 5 commit 日に確定)",
+  "created_by": "claude.ai turn N+17.x + Claude Code (Windows) paired sync",
+  "license": "CC-BY 4.0",
+
+  "baseline": {
+    "commit_sha": "3aef5142167f993f2ba8a6f67d9b925c1252cc4b",
+    "commit_subject": "feat: anchor 23 v0.1 Q3 codify round + Pattern 21 superseding + .gitattributes hardening [C7]",
+    "tag_name": "companion-v4.9-q3-codify-round-2026-05-11",
+    "tag_obj_sha": "e6444a3870e2a9ee1c119d2aad5240e6fc3e11c1",
+    "anchor_id_prev": "anchor 23 v0.1",
+    "note": "anchor 23 v0.1 closure commit、本 round の HEAD~1 として preserve (rule 1 IMMUTABLE)"
+  },
+
+  "parent_lineage": {
+    "anchor_22_v0_2": {
+      "commit_sha": "491ff34cce22040e052f226e64adddc1669ea1b4",
+      "tag_name": "companion-v4.9-axis-4-type-alpha-2026-05-10",
+      "role": "anchor 23 v0.1 baseline、本 round HEAD~2 として preserve"
+    }
+  },
+
+  "immutable_rules": {
+    "rule_1_X1": {
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+      "sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "size": 9561,
+      "preserve_through": "all steps (step 1-7)",
+      "note": "anchor 22 v0.2 input pin、本 round で参照される original Pattern 24-31 + 24a/24b 起源"
+    },
+    "rule_6_X2": {
+      "path": "latex_v48/membrane_v48.tex",
+      "sha256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+      "size": 118226,
+      "preserve_through": "all steps (step 1-7)",
+      "note": "membrane v4.8 paper TeX source、本 round では未触"
+    }
+  },
+
+  "lessons_source_records": {
+    "anchor_22_v0_2_origin": {
+      "for_lessons": ["L-Q3-18", "L-Q3-19", "L-Q3-20", "L-Q3-21", "L-Q3-22", "L-Q3-23", "L-Q3-24", "L-Q3-25", "L-Q3-26", "L-Q3-27"],
+      "pin_target": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+      "pin_sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "note": "10 entries の原典 Pattern mitigation 記録は anchor 22 v0.2 input pin に格納。本 round で codify body を起草・正式化"
+    },
+    "anchor_23_v0_1_origin": {
+      "for_lessons": ["L-Q3-28", "L-Q3-29"],
+      "pin_targets": [
+        {
+          "path": "forensic_anchors/section6_lessons_codified_q3_v0_1/anchor_23_v0_1_lessons_appendix.md",
+          "sha256": "34bec0a53887087289b661e1bb3728614b5406275a60eab0c6b20c07b85cea25",
+          "size": 27342,
+          "note": "anchor 23 v0.1 lessons appendix。L-Q3-11 〜 L-Q3-17 (7 entries) codify 済、Pattern 32/33 は本 file 内で初期 mention"
+        },
+        {
+          "path": "forensic_anchors/section6_lessons_codified_q3_v0_1/anchor_23_v0_1_verification_log.md",
+          "sha256": "7e7e1a3fb14eed9cda23c27177c2db2f690b5ff29ae8112ffd2ec897e376b1b7",
+          "size": 25223,
+          "note": "anchor 23 v0.1 step 6/7 verification record、Pattern 32/33 evidence の原典"
+        }
+      ]
+    }
+  },
+
+  "d5_case_a_record": {
+    "diagnosis_target": "SHA256SUMS",
+    "ss_baseline_sha": "5a8854adafa65eecb4b1a337e79cc73ad822f8986abc592a06c3c9ee90e94ddc",
+    "ss_baseline_size": 6811,
+    "recorded_sha_for_gitattributes": "3ed45e2720492a812987163b34331d211e722a2e9c43e60ed1eca5c679821602",
+    "expected_wt_sha": "3ed45e2720492a812987163b34331d211e722a2e9c43e60ed1eca5c679821602",
+    "expected_blob_sha": "6eca2b40ac823b3062b2b0050007e9c6d01ba05da685c8a6fda913b0c0b79221",
+    "case": "A",
+    "interpretation": "WT-based reference (SHA256SUMS は Windows 開発環境固有 wt SHA を canonical encode)",
+    "implication": "structural fix 後の .gitattributes 新 unified SHA は SHA256SUMS の同 entry に cascade update が必要 (step 4 Phase 3 で実施)",
+    "post_fix_outcome": "SHA256SUMS が protocol-agnostic reference 化 (Protocol 1 = Protocol 2 = SHA256SUMS canonical 一致)"
+  },
+
+  "pattern_33_before_fix_state": {
+    "gitattributes_wt_sha": "3ed45e2720492a812987163b34331d211e722a2e9c43e60ed1eca5c679821602",
+    "gitattributes_wt_size": 1999,
+    "gitattributes_wt_encoding": "UTF-8 CRLF",
+    "gitattributes_blob_sha": "6eca2b40ac823b3062b2b0050007e9c6d01ba05da685c8a6fda913b0c0b79221",
+    "gitattributes_blob_size": 1967,
+    "gitattributes_blob_encoding": "UTF-8 LF (autocrlf 正規化結果)",
+    "divergence": true,
+    "size_diff": 32,
+    "size_diff_explanation": "CRLF expansion 32 行分 (wt が CRLF、blob が LF)",
+    "root_cause": ".gitattributes 内に '.gitattributes -text' 行 不存在 (self-coverage gap)",
+    "root_cause_evidence": "anchor 23 v0.1 step 7 P15.1.4 G.2 trap + 4 段階診断 D.1-D.4",
+    "structural_fix_operation": ".gitattributes 末尾に '.gitattributes -text' 行 append (LF 終端)",
+    "post_fix_state_predicted": {
+      "wt_sha": "undetermined (step 4 Phase 1 G.9 で確定)",
+      "wt_size_predicted": "~1986 bytes (1999 - 32 CRLF + 19 new line LF)",
+      "blob_sha": "wt SHA と同値 (二重性解消)",
+      "divergence": false,
+      "note": "実際の値は step 4 G.9 で recompute、L-Q3-29 inline evidence + verification_log.md に記録"
+    }
+  },
+
+  "deferred_queue_origin": {
+    "total_entries": 12,
+    "from_anchor_22_v0_2": 10,
+    "from_anchor_23_v0_1": 2,
+    "documentation_only": 11,
+    "structural_fix": 1,
+    "structural_fix_target": "L-Q3-29 (Pattern 33 .gitattributes self-coverage gap)",
+    "codify_target_section": "forensic_anchors/section7_lessons_codified_q3_v0_2/anchor_24_v0_1_lessons_appendix.md"
+  },
+
+  "round_envelope": {
+    "expected_files": [
+      ".gitattributes",
+      "SHA256SUMS",
+      "forensic_anchors/section7_lessons_codified_q3_v0_2/anchor_24_v0_1_declaration.md",
+      "forensic_anchors/section7_lessons_codified_q3_v0_2/anchor_24_v0_1_input_files_pin.json",
+      "forensic_anchors/section7_lessons_codified_q3_v0_2/anchor_24_v0_1_lessons_appendix.md",
+      "forensic_anchors/section7_lessons_codified_q3_v0_2/anchor_24_v0_1_verification_log.md"
+    ],
+    "expected_file_count": 6,
+    "commit_strategy": "single envelope commit (D4 option A、forensic chain linearity 保持)",
+    "expected_commit_subject": "feat: anchor 24 v0.1 Q3 codify round v0.2 + Pattern 33 structural fix + .gitattributes self-cover [C8]",
+    "expected_tag_name": "companion-v4.9-q3-codify-round-v0-2-YYYY-MM-DD"
+  },
+
+  "pattern_mitigation_continuance": {
+    "applied_to_all_packets": [
+      "Pattern 22 (harness sandbox FP -> base64 encoding / BCL API)",
+      "Pattern 23 (Split-Path quirk -> [System.IO.Path]::* BCL 使用)",
+      "Pattern 24 (PS parser narrative parse error -> # line-comment prefix 統一)",
+      "Pattern 24a (narrative continuation # prefix 漏れ -> packet 起草時全行検査)",
+      "Pattern 24b (PS string interpolation $VAR: PSDrive collision -> ${VAR}: 厳守)",
+      "Pattern 25 (PS block comment 非 nestable -> <# #> 一切不使用)",
+      "Pattern 26 (PSObject.Properties.Count quirk -> @() 包み Count)",
+      "Pattern 27 (git status porcelain default aggregation -> --untracked-files=all)",
+      "Pattern 28 (git diff untracked exclusion -> --cached --shortstat)",
+      "Pattern 29 (PS vs .NET CWD divergence -> 5 rules、絶対 path 固定変数 + git -C)",
+      "Pattern 30 (PS 5.1 .ps1 default cp932 misread -> UTF-8 BOM prefix)",
+      "Pattern 31 (autocrlf + -text directive missing CRLF warning -> .gitattributes 先行 git add)",
+      "Pattern 32 (PS 5.1 git push stderr NativeCommandError wrap -> $LASTEXITCODE primary check + pattern match 2 階層 bypass)",
+      "Pattern 33 (.gitattributes self-coverage gap -> step 4 で structural fix execute、step 7 で wt_eq_blob mode で 解消 verify)"
+    ]
+  },
+
+  "closure_criteria": [
+    "step 1-7 全 packet で全 gate PASS (累積 ~107 gates 想定)",
+    "envelope 6 files single commit + annotated tag が remote (origin/main) に publish 済",
+    "2-protocol external reproducibility 確立 (Protocol 1 = git wire、Protocol 2 = HTTPS raw URL)",
+    "Pattern 33 解消 verify (step 7 G.8 で 6/6 全 file が wt_eq_blob mode で PASS)",
+    "closure record (claude.ai 側 turn N+17.x 末で生成) で本 round 全体を traceable に記録",
+    "baseline anchor 23 v0.1 closure commit 3aef5142 が本 round 全 step で preserve (rule 1 IMMUTABLE 違反なし)"
+  ]
+}
