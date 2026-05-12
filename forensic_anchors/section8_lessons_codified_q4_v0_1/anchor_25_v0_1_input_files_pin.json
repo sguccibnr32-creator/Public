@@ -1,0 +1,126 @@
+{
+  "anchor_id": "anchor 25 v0.1",
+  "round_name": "Q4 codify round v0.1",
+  "baseline_commit": "cbc270041c7627b95e90399dc8a9eaee4f3cc8e1",
+  "baseline_tag": "companion-v4.9-q3-codify-round-v0-2-2026-05-11",
+  "baseline_tag_obj": "4a11c71e7535d11f5d8a2d09e55362d3783ec15f",
+  "creation_date_jst": "2026-05-12",
+  "format_spec": "UTF-8 LF-only, no BOM (per Pattern 30 refinement / L-Q3-32 scope: data files are no-BOM, .ps1 only requires BOM)",
+  "_self_pinning_note": "本 file 自体の SHA は self-reference paradox を避けるため inline で固定せず、closure 時 SHA256SUMS に entry として記録される",
+
+  "immutable_preserve": {
+    "rule_1_X1": {
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+      "sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "size_bytes": 9561,
+      "rule": "rule 1 IMMUTABLE"
+    },
+    "rule_6_X2": {
+      "path": "latex_v48/membrane_v48.tex",
+      "sha256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+      "size_bytes": 118226,
+      "rule": "rule 6 IMMUTABLE"
+    },
+    "pattern_33_resolved_state_baseline": {
+      "path": ".gitattributes",
+      "sha256_at_baseline": "39a3f9bab4363c12e2558a3e1f6aea4325c66feba38dbd9d48217dbf242d7758",
+      "size_bytes_at_baseline": 2048,
+      "note": "本 round step 4 で section8 directive 追加で modified、step 7 で post-state SHA を記録"
+    },
+    "sha256sums_protocol_agnostic_baseline": {
+      "path": "SHA256SUMS",
+      "sha256_at_baseline": "98af5fa112aeec5e0b9b303829b225fd02b68b7b59cfabc6eb510c422d9e217b",
+      "size_bytes_at_baseline": 7415,
+      "non_empty_entries_at_baseline": 66,
+      "note": "本 round step 4 で section8 4 entries + cascade で modified、step 7 で post-state SHA を記録"
+    }
+  },
+
+  "lq3_8_canonical_references": {
+    "_comment": "L-Q3-10 disposition note Interpretation B canonical files. Pattern 36 self-apply gate (step 1 G.10) で full SHA verified、本 file に carry-forward。",
+    "primary_empirical_evidence": {
+      "path": "forensic_anchors/section5_axis_4_hardening/empirical_precheck_canonical_rerun.json",
+      "sha256": "52a2bcec4f78ff95a47222d278ce736a31955fe2b1b329513cc84631e9d9c3b2",
+      "size_bytes": 7477,
+      "role": "L-Q3-8 cross-scipy-version reproducibility floor empirical evidence (variant A CONFIRMED, 12/12 delta=0 EXACT)"
+    },
+    "closure_record_cross_ref": {
+      "path": "forensic_anchors/section5_axis_4_hardening/axis_4_closure_summary.json",
+      "sha256": "16ed724c16e69f4a6ef257894d9162121a7781a7c92a46753b932f6e06af2f1f",
+      "size_bytes": 22019,
+      "role": "L-Q3-8 closure record (10 L-Q3-8 occurrences; L175 phantom path reference は documentation drift 2nd instance source)"
+    },
+    "operational_declaration": {
+      "path": "forensic_anchors/section5_axis_4_hardening/OPERATIONAL_CLOSURE.md",
+      "sha256": "d9e3e12c3ac6b6ea5e6e08a24a6a04ddd1bd2341ed09dcd52d70c40567b57a6c",
+      "size_bytes": 25051,
+      "role": "L-Q3-8 operational declaration (cross-version floor catalogued, IMMUTABLE under v0.1 SHA pin)"
+    }
+  },
+
+  "envelope_files_generated_in_round": {
+    "_comment": "本 round で新規 generate する 4 file。SHA は generation step 完了後の verification_log に記録、closure 時 SHA256SUMS に entry として永続化。",
+    "anchor_25_v0_1_declaration_md": {
+      "path": "forensic_anchors/section8_lessons_codified_q4_v0_1/anchor_25_v0_1_declaration.md",
+      "generated_at_step": "2a",
+      "sha256_at_closure": "TBD"
+    },
+    "anchor_25_v0_1_input_files_pin_json": {
+      "path": "forensic_anchors/section8_lessons_codified_q4_v0_1/anchor_25_v0_1_input_files_pin.json",
+      "generated_at_step": "2a",
+      "sha256_at_closure": "TBD",
+      "note": "本 file"
+    },
+    "anchor_25_v0_1_lessons_appendix_md": {
+      "path": "forensic_anchors/section8_lessons_codified_q4_v0_1/anchor_25_v0_1_lessons_appendix.md",
+      "generated_at_step": "2b",
+      "sha256_at_closure": "TBD"
+    },
+    "anchor_25_v0_1_verification_log_md": {
+      "path": "forensic_anchors/section8_lessons_codified_q4_v0_1/anchor_25_v0_1_verification_log.md",
+      "generated_at_step": "2a (skeleton), finalized at closure",
+      "sha256_at_closure": "TBD"
+    }
+  },
+
+  "claude_ai_side_design_contracts": {
+    "_comment": "public repo 外、claude.ai container 内 reference (Pattern 36 mitigation: public repo に publish されないため canonical reference の status を明示、phantom path 化を防止)",
+    "planning_prep_original": {
+      "filename": "anchor_25_v0_1_planning_prep.md",
+      "sha256": "54da57ccd8aa082fbc664cb53b453c824acee0502eaa10a9e5c072f09f7b8f43",
+      "size_bytes": 20632,
+      "status": "claude.ai container 内 preserved, NOT publish to public repo (Pattern 36 awareness)"
+    },
+    "planning_prep_amendment_01": {
+      "filename": "anchor_25_v0_1_planning_prep_amendment_01.md",
+      "sha256": "dc19a9df9f4e59d54001d569e5633c3e0f9f91daf50dc5d6250446819ada0bab",
+      "size_bytes": 13499,
+      "status": "claude.ai container 内 preserved, NOT publish to public repo (overlay supersede §2/§4/§5/§6/§9 of original)"
+    }
+  },
+
+  "pattern_36_self_apply_directive": {
+    "_comment": "L-Q3-34 codify body §mitigation 第 1 項目の本 round self-apply。forensic record 内の全 file path 実存性を verify する。",
+    "scope_public_repo_paths": [
+      "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+      "latex_v48/membrane_v48.tex",
+      ".gitattributes",
+      "SHA256SUMS",
+      "forensic_anchors/section5_axis_4_hardening/empirical_precheck_canonical_rerun.json",
+      "forensic_anchors/section5_axis_4_hardening/axis_4_closure_summary.json",
+      "forensic_anchors/section5_axis_4_hardening/OPERATIONAL_CLOSURE.md"
+    ],
+    "verify_gates": [
+      "step 1 G.7 (X1+X2), G.10 (L-Q3-8 canonical 3 files), G.11 (phantom path absence)",
+      "step 5 pre-push verify で final SHA confirm"
+    ],
+    "phantom_protection": "claude_ai_side_design_contracts 配下 (planning_prep + amendment 01) は public repo 外 reference として明示マーキング、phantom path 化を防止"
+  },
+
+  "pattern_29_refinement_self_apply_directive": {
+    "_comment": "L-Q3-35 codify body §mitigation の本 round self-apply。step 2-7 全 packet G.0 で Tier 1/2 を実装。",
+    "tier_1_hard_gate": "PS CWD == git toplevel (path normalization 後比較)",
+    "tier_2_informational": "PS CWD == .NET CWD divergence (wrapper-context-induced benign の可能性あり、closure 判定 non-blocking)",
+    "applied_to_steps": ["2a", "2b", "3", "4", "5", "6", "7"]
+  }
+}
