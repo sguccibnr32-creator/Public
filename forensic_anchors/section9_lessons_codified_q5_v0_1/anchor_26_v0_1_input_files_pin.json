@@ -1,0 +1,101 @@
+{
+  "round": "anchor 26 v0.1 Q5 codify round",
+  "baseline_commit": "d3920ca4458ed788af90f542aabaf248077ce707",
+  "baseline_tag": "companion-v4.9-q4-codify-round-2026-05-12",
+  "baseline_date": "2026-05-12 (JST)",
+  "planning_prep_version": "v0.4",
+  "generator": "claude.ai chat, paired sync with Claude Code (Windows)",
+  "generation_date": "2026-05-12 (JST)",
+  "rule_1_6_IMMUTABLE": {
+    "X1": {
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+      "sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "preservation_status": "verified at step 1 G.4"
+    },
+    "X2": {
+      "path": "latex_v48/membrane_v48.tex",
+      "sha256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+      "preservation_status": "verified at step 1 G.4"
+    }
+  },
+  "input_files_referenced": {
+    "anchor_24_v0_1_lessons_appendix": {
+      "path": "forensic_anchors/section7_lessons_codified_q3_v0_2/anchor_24_v0_1_lessons_appendix.md",
+      "sha256": "c960a06114b27f4483f27e82cf4c28c6085d9e3aacb4c0251889d20371ada87e",
+      "size": 20184,
+      "purpose": "anchor 24 deferred queue 12 entries review source",
+      "amendment_02_canonical_path_correction": true,
+      "amendment_03_disposition": "all 12 entries withdrawn (deferral resolved)"
+    },
+    "anchor_25_v0_1_declaration": {
+      "path": "forensic_anchors/section8_lessons_codified_q4_v0_1/anchor_25_v0_1_declaration.md",
+      "sha256": "1d29e63bda629839d18c135d4745d2db897f345c501e0329f49005cec2c77d32",
+      "size": 5245,
+      "purpose": "anchor 25 closure baseline reference"
+    },
+    "anchor_25_v0_1_input_files_pin": {
+      "path": "forensic_anchors/section8_lessons_codified_q4_v0_1/anchor_25_v0_1_input_files_pin.json",
+      "sha256": "45be32e6c7d306e676310d4074119b5b1a080d0f09f43b706cdd5c24597193a4",
+      "size": 6710,
+      "purpose": "anchor 25 closure baseline reference"
+    },
+    "anchor_25_v0_1_lessons_appendix": {
+      "path": "forensic_anchors/section8_lessons_codified_q4_v0_1/anchor_25_v0_1_lessons_appendix.md",
+      "sha256": "5132a8ff111be90cc641385a2d73072475d8224edebf69226cccb32dd92779b8",
+      "size": 45803,
+      "purpose": "anchor 25 closure baseline reference + step 6 Pattern 42 reference prep (L-Q3-41 codify)"
+    },
+    "anchor_25_v0_1_verification_log": {
+      "path": "forensic_anchors/section8_lessons_codified_q4_v0_1/anchor_25_v0_1_verification_log.md",
+      "sha256": "b9981de04fef2638595ea3c4ef1be5f8ac8f31bc67afa62672a2d9495fff0e6e",
+      "size": 4289,
+      "purpose": "anchor 25 closure baseline reference"
+    }
+  },
+  "files_to_modify": {
+    "gitattributes": {
+      "path": ".gitattributes",
+      "current_sha256": "403ad08dcf4fcfed605afcc6d035f58ff1c9ce36e0ab73ca819b9743be48d8cf",
+      "current_size": 2108,
+      "planned_modification": "add section9_lessons_codified_q5_v0_1 -text directive",
+      "expected_size_delta": "+60 to +70 B (per anchor 25 section8 precedent)"
+    },
+    "SHA256SUMS": {
+      "path": "SHA256SUMS",
+      "current_sha256": "f9d3fff09a34a1f0f6f358ea4822b06e46621688fadeecd119f103b4b89f15e9",
+      "current_size": 8019,
+      "current_entries": 70,
+      "planned_modification": "add 4 section9 entries + update .gitattributes entry",
+      "expected_entry_count_post": 74
+    }
+  },
+  "files_to_create": {
+    "section9_path": "forensic_anchors/section9_lessons_codified_q5_v0_1/",
+    "files": [
+      "anchor_26_v0_1_declaration.md",
+      "anchor_26_v0_1_input_files_pin.json",
+      "anchor_26_v0_1_lessons_appendix.md",
+      "anchor_26_v0_1_verification_log.md"
+    ]
+  },
+  "active_mitigations": [
+    "Pattern 24c",
+    "Pattern 29-refinement (Tier 1 + Tier 2)",
+    "Pattern 30-refinement",
+    "Pattern 31",
+    "Pattern 34",
+    "Pattern 35",
+    "Pattern 36",
+    "Pattern 39",
+    "Pattern 40",
+    "Pattern 41"
+  ],
+  "active_mitigations_count": 10,
+  "round_scope_summary": {
+    "new_codifies": 4,
+    "deferred_queue_dispositions": 12,
+    "amendment_drafts": 1,
+    "carry_forward_codifies": 0,
+    "l_q3_10_disposition": "continue defer to anchor 27"
+  }
+}
