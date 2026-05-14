@@ -1,0 +1,123 @@
+{
+  "round": "anchor 27 v0.1 [A'] round",
+  "baseline_commit": "d0e5d2e1940fbd516fdcb0a1ffb06be736c66d29",
+  "baseline_tag": "companion-v4.9-q5-codify-round-2026-05-12",
+  "baseline_date": "2026-05-12 (JST)",
+  "planning_prep_version": "v0.7",
+  "planning_prep_status": "conceptual pin; pending materialization; am 08 patch + am 09 LOCKED in chat-side",
+  "generator": "claude.ai chat, paired sync with Claude Code (Windows)",
+  "generation_date": "2026-05-14 (JST)",
+  "rule_1_6_IMMUTABLE": {
+    "X1": {
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+      "sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "preservation_status": "verified at step 1 G.4"
+    },
+    "X2": {
+      "path": "latex_v48/membrane_v48.tex",
+      "sha256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+      "preservation_status": "verified at step 1 G.4"
+    }
+  },
+  "input_files_referenced": {
+    "anchor_26_v0_1_declaration": {
+      "path": "forensic_anchors/section9_lessons_codified_q5_v0_1/anchor_26_v0_1_declaration.md",
+      "sha256": "accd63ab636ef08fd1be68295fd7990fb37ac6b9cf7effc0ac78ad1eb40cb18a",
+      "size": 3171,
+      "r1_form": "standard",
+      "purpose": "anchor 26 closure baseline reference"
+    },
+    "anchor_26_v0_1_input_files_pin": {
+      "path": "forensic_anchors/section9_lessons_codified_q5_v0_1/anchor_26_v0_1_input_files_pin.json",
+      "sha256": "f9429f7cfb1899fd72d350550b75e70764b3ceb02c8e003e7401afcb9fbe4d04",
+      "size": 4126,
+      "r1_form": "standard",
+      "purpose": "anchor 26 closure baseline reference + schema precedent for 本 file"
+    },
+    "anchor_26_v0_1_lessons_appendix": {
+      "path": "forensic_anchors/section9_lessons_codified_q5_v0_1/anchor_26_v0_1_lessons_appendix.md",
+      "sha256": "35388ef74060ec4d69f9c14a5b5390a0f73507b4bd7e0f701bd0506862861eaf",
+      "size": 24065,
+      "r1_form": "standard",
+      "purpose": "anchor 26 closure baseline reference + L-Q3-43 entry precedent for L-Q3-44/L-Q3-45 codify alignment"
+    },
+    "anchor_26_v0_1_verification_log": {
+      "path": "forensic_anchors/section9_lessons_codified_q5_v0_1/anchor_26_v0_1_verification_log.md",
+      "sha256": "f8ddfa91549472e1bc48f804610b33ac55350ad9ecc0d4c46ac72088f4804420",
+      "size": 3438,
+      "r1_form": "standard",
+      "purpose": "anchor 26 closure baseline reference"
+    },
+    "amendment_08_patch": {
+      "path": "(untracked, chat-side artifact): planning_prep_amendment_08_closure_annotation.txt",
+      "sha256": "a0ed5660284616414e7dfe1ccd70eff147ed10be0e1d353faf4f87e6c470c673",
+      "blob_oid": "fca617dcf1b146538d0d88f09a800c55970687ed",
+      "size": 15412,
+      "r1_form": "adapted",
+      "purpose": "amendment 09 §A.09.0.5 input_artifacts expansion + §A.09.1 placeholder 1 redirect target (§A.08.5 (5.1) range L112-L115)"
+    },
+    "amendment_05_patch_e9": {
+      "path": "(untracked, chat-side artifact): anchor_25_v0_1_planning_prep_amendment_05.md",
+      "sha256": "bcbd31b0ac0994ae70788df17b0a9246cf6e391c9b1cf3e8db6268c61b1b510b",
+      "blob_oid": "67a31156df24db69dede618ea5da710916174537",
+      "size": 9313,
+      "r1_form": "adapted",
+      "purpose": "amendment 09 §A.09.3 Counter convention codify foundational reference (§E9 L133-L146 derivation)"
+    },
+    "in_round_delta_record": {
+      "path": "(untracked, chat-side artifact): anchor_27_v0_1_in_round_delta_record.txt",
+      "sha256": "e04a2e051691fbd0d29290a2ca624a81660dd1540054286524007e5bab7ece95",
+      "blob_oid": "1f31b48c4949a87c8f88ebf354152f9f3de5e4dc",
+      "size": 35181,
+      "r1_form": "adapted",
+      "purpose": "amendment 09 全 sub-section delta content source for L-Q3-44 + L-Q3-45 fold-in into lessons_appendix.md"
+    }
+  },
+  "files_to_modify": {
+    "gitattributes": {
+      "path": ".gitattributes",
+      "current_sha256": "af592cab8b93e8767a54d10f0db3e2646ab02300b54e7c8ceb79366440ef3579",
+      "current_size": 2168,
+      "planned_modification": "add section10_lessons_codified_q6_v0_1 -text directive",
+      "expected_size_delta": "+60 to +70 B (per anchor 26 section9 precedent)"
+    },
+    "SHA256SUMS": {
+      "path": "SHA256SUMS",
+      "current_sha256": "7aa07bc04c5db950f28163fdb16a98fa1e4941434b09064ea03e8626d7142017",
+      "current_size": 8623,
+      "current_entries": 74,
+      "planned_modification": "add 4 section10 entries + update .gitattributes entry",
+      "expected_entry_count_post": 78
+    }
+  },
+  "files_to_create": {
+    "section10_path": "forensic_anchors/section10_lessons_codified_q6_v0_1/",
+    "files": [
+      "anchor_27_v0_1_declaration.md",
+      "anchor_27_v0_1_input_files_pin.json",
+      "anchor_27_v0_1_lessons_appendix.md",
+      "anchor_27_v0_1_verification_log.md"
+    ]
+  },
+  "active_mitigations": [
+    "Pattern 24c",
+    "Pattern 29-refinement (Tier 1 + Tier 2)",
+    "Pattern 30-refinement",
+    "Pattern 31",
+    "Pattern 34",
+    "Pattern 35",
+    "Pattern 36",
+    "Pattern 39",
+    "Pattern 40",
+    "Pattern 41",
+    "Pattern 44"
+  ],
+  "active_mitigations_count": 11,
+  "round_scope_summary": {
+    "new_codifies": 2,
+    "deferred_queue_dispositions": 0,
+    "amendment_drafts": 1,
+    "carry_forward_codifies": 0,
+    "l_q3_10_disposition": "resolved via Pattern 45 R1 standard form dogfooding instance #1 (旧 chat 2026-05-13 14:47, re-executed at packet 4.5-prep 2026-05-13 17:38:58)"
+  }
+}
