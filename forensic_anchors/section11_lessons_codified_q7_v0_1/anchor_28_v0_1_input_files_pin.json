@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0",
+  "round_id": "anchor_28_v0_1_q7_codify_round",
+  "section_path": "forensic_anchors/section11_lessons_codified_q7_v0_1",
+
+  "_section_inputs": "predecessor anchor 27 v0.1 inherited pins (cross-commit forensic chain inheritance)",
+  "input_files": [
+    {
+      "path": "forensic_anchors/section10_lessons_codified_q6_v0_1/anchor_27_v0_1_declaration.md",
+      "sha256": "508d3e65ee238d568f7f03df25b931855bb341356344d8c0ce355356c58593a8",
+      "size": 3095,
+      "lf": 62,
+      "_note": "anchor 27 v0.1 declaration、predecessor reference"
+    },
+    {
+      "path": "forensic_anchors/section10_lessons_codified_q6_v0_1/anchor_27_v0_1_input_files_pin.json",
+      "sha256": "57232ef5fd6697f94fe60aa2b76168e574ac0f39b28897b1d9caf636d5595ebc",
+      "size": 5432,
+      "lf": 123,
+      "_note": "anchor 27 v0.1 input_files_pin、predecessor schema reference"
+    },
+    {
+      "path": "forensic_anchors/section10_lessons_codified_q6_v0_1/anchor_27_v0_1_lessons_appendix.md",
+      "sha256": "da77500b7226a2f980c9fa384d56a5e2d6b9ecb31851f83478c0e5f3818dfbe6",
+      "size": 23206,
+      "lf": 323,
+      "_note": "anchor 27 v0.1 lessons_appendix、L-Q3-33 through L-Q3-46 codification source"
+    },
+    {
+      "path": "forensic_anchors/section10_lessons_codified_q6_v0_1/anchor_27_v0_1_verification_log.md",
+      "sha256": "e03313146030fc6cb657b596c9468dbf660176b411a38564177348f58bdabcb3",
+      "size": 9513,
+      "lf": 136,
+      "_note": "anchor 27 v0.1 verification_log、predecessor execution record"
+    }
+  ],
+
+  "_section_verification": "anchor 28 v0.1 closure verification baseline (D5 option (b) schema extension applied)",
+  "verification_baseline": {
+    "schema_version": "1.0",
+    "purpose": "anchor 28 v0.1 closure state baseline for canonical sync verify script v2 re-verification at anchor 28.1+ dispatch",
+
+    "script_reference": {
+      "path": "D:\\ドキュメント\\エントロピー\\膜宇宙論再考察AB効果有り\\C3 拡張版仮説関連2\\anchor_28_v0_1_canonical_sync_verify.ps1",
+      "sha256": "593ed671bf8c614b2da85415543ef90cb43d1c3a0b15ef335a68f31fde844711",
+      "size": 19045,
+      "lf": 449,
+      "_note": "eta PART 2 artifact、D10.edit option A applied、Windows local FS persisted (forensic chain 外 tooling)"
+    },
+
+    "git_state": {
+      "head": {
+        "sha": null,
+        "type": "commit",
+        "_note": "Phase G commit 後 verification_log.md にて事後 inscribe (chicken-and-egg avoidance)"
+      },
+      "parent": {
+        "sha": "0fe208e0937764617932727e88967b7ac083e1da",
+        "type": "commit",
+        "_note": "anchor 27 v0.1 HEAD、確定値"
+      },
+      "tag": {
+        "name": "companion-v4.9-q7-codify-round-2026-05-15",
+        "obj_sha": null,
+        "type": "tag",
+        "peeled_sha": null,
+        "_note": "Phase G annotated tag 作成後 verification_log.md にて事後 inscribe (peeled_sha == post-commit HEAD)"
+      },
+      "remote": {
+        "origin_main_match": null,
+        "_note": "rule 92 strict push 後 attest"
+      }
+    },
+
+    "rule_1_immutables": {
+      "X1": {
+        "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+        "sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+        "size": 9561,
+        "lf": 166,
+        "_note": "cross-commit IMMUTABLE preserved (anchor 22 v0.2 -> 28 v0.1、7-anchor depth post-commit)"
+      },
+      "X2": {
+        "path": "latex_v48/membrane_v48.tex",
+        "sha256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+        "_note": "cross-commit IMMUTABLE preserved"
+      }
+    },
+
+    "envelope": {
+      ".gitattributes": {
+        "sha256": null,
+        "size": null,
+        "lf": null,
+        "_note": "Phase G step G.3 にて section11 new entry append 後 inscribe (12 -> 13 directives)"
+      },
+      "SHA256SUMS": {
+        "sha256": null,
+        "size": null,
+        "lf": null,
+        "metrics_canonical": {
+          "total_lf":   null,
+          "directives": null,
+          "entries":    null,
+          "blank":      0
+        },
+        "_note": "Phase G step G.3 にて regenerate (4 new section artifacts + .gitattributes 更新 + 既 forensic chain entries inheritance)"
+      }
+    },
+
+    "section_artifacts": [
+      {
+        "path": "forensic_anchors/section11_lessons_codified_q7_v0_1/anchor_28_v0_1_declaration.md",
+        "sha256": null,
+        "size": null,
+        "lf": null,
+        "_note": "本 round closure declaration、claude.ai-side bit-exact attest 後 finalize"
+      },
+      {
+        "path": "forensic_anchors/section11_lessons_codified_q7_v0_1/anchor_28_v0_1_input_files_pin.json",
+        "sha256": "SELF_REFERENCE_AVOIDED",
+        "_note": "本 file 自身、chicken-and-egg avoidance per D5 schema design"
+      },
+      {
+        "path": "forensic_anchors/section11_lessons_codified_q7_v0_1/anchor_28_v0_1_lessons_appendix.md",
+        "sha256": null,
+        "size": null,
+        "lf": null,
+        "_note": "§5.7 (b+c) + §X rule 1 triad + §Y Pattern 46 + §Y' L-Q3-47 + §Y'' Pattern 38 5-section codify、claude.ai-side bit-exact attest 後 finalize"
+      },
+      {
+        "path": "forensic_anchors/section11_lessons_codified_q7_v0_1/anchor_28_v0_1_verification_log.md",
+        "sha256": null,
+        "size": null,
+        "lf": null,
+        "_note": "eta PART 3 deliverable、cumulative counter consolidation + Phase event timeline、claude.ai-side bit-exact attest 後 finalize"
+      }
+    ]
+  }
+}
