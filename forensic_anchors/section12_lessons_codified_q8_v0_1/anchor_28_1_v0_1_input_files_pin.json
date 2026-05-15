@@ -1,0 +1,273 @@
+{
+  "schema": "anchor_input_files_pin_v1",
+  "anchor_id": "anchor_28_1_v0_1",
+  "q_counter": "q8",
+  "section": "section12_lessons_codified_q8_v0_1",
+  "date": "2026-05-15",
+  "parent_anchor": {
+    "id": "anchor_28_v0_1",
+    "head_sha": "cf834ea49ea5cc5657ea8601c05f44f4464ba740",
+    "tag_obj_sha": "0fc3df9eb2d42c81e04e84a79d1b3e0f79773986",
+    "annotated_tag": "companion-v4.9-q7-codify-round-2026-05-15"
+  },
+  "forensic_chain_depth_pre_inscribe": 7,
+  "forensic_chain_depth_post_inscribe": 8,
+  "round_class": "substantive_codify_round_deferred_queue_formal_codification",
+  "numbering_class": "sub_decimal_anchor_section_q_counter_advancement_split_numbering_canonical_case",
+  "counter_transition": {
+    "pre_anchor_28_v0_1": {"active": 12, "deferred": 0, "total": 12},
+    "post_anchor_28_v0_1_closure": {"active": 15, "deferred": 7, "total": 22},
+    "post_anchor_28_1_v0_1_closure": {"active": 22, "deferred": 0, "total": 22}
+  },
+  "rule_1_immutable_preservation": {
+    "x1": {
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+      "sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "size_bytes": 9561,
+      "lf_count": 166
+    },
+    "x2": {
+      "path": "latex_v48/membrane_v48.tex",
+      "sha256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd"
+    }
+  },
+  "inherited_baselines_re_attest_pending": {
+    "layer_c_v1_1": {
+      "sha256_prefix": "5d9beb04",
+      "status": "not_located_post_anchor_28_1_step_2_re_attest",
+      "re_attest_dispatch_locus": "verification_log.md_section_4",
+      "re_attest_method": "option_a_extension_list_11_entries",
+      "extension_list": [".json", ".csv", ".tsv", ".txt", ".yaml", ".yml", ".dat", ".pkl", ".npy", ".npz", ""],
+      "search_scope": ["public_repo_working_tree", "windows_staging_dir"],
+      "hits": {"repo_candidates": 0, "staging_candidates": 0, "total": 0},
+      "verdict": "not_located",
+      "disposition": "f_28_4_recovery_class_finding_inscribed_recovery_deferred_to_anchor_28_2_or_anchor_29",
+      "promote_design": "located_case_migration_to_rule_1_immutable_preservation_layer_c_v1_1_with_full_sha_size_canonical_attest"
+    }
+  },
+  "section11_lessons_codified_q7_v0_1_preserve_state": {
+    "anchor_28_v0_1_declaration_md": {
+      "path": "forensic_anchors/section11_lessons_codified_q7_v0_1/anchor_28_v0_1_declaration.md",
+      "sha256": "dfce16a5344f0e28517b22b7089d6d96fc930205e136c9cd8fbe9dad18846a50",
+      "size_bytes": 5932,
+      "lf_count": 99,
+      "status": "rule_1_immutable_preserve_read_only_in_anchor_28_1_round"
+    },
+    "anchor_28_v0_1_input_files_pin_json": {
+      "path": "forensic_anchors/section11_lessons_codified_q7_v0_1/anchor_28_v0_1_input_files_pin.json",
+      "sha256": "efead5ca1a4130dc6a963b5ecec4dc311e3480501ec8b0d6b769bc9045f0b67a",
+      "size_bytes": 5564,
+      "lf_count": 140,
+      "status": "rule_1_immutable_preserve_read_only_in_anchor_28_1_round"
+    },
+    "anchor_28_v0_1_lessons_appendix_md": {
+      "path": "forensic_anchors/section11_lessons_codified_q7_v0_1/anchor_28_v0_1_lessons_appendix.md",
+      "sha256": "2b587c773b0024098bac5a61343b393d8934713264c6ccf23d4c663a1970a1ae",
+      "size_bytes": 38985,
+      "lf_count": 729,
+      "status": "rule_1_immutable_preserve_read_only_in_anchor_28_1_round"
+    },
+    "anchor_28_v0_1_verification_log_md": {
+      "path": "forensic_anchors/section11_lessons_codified_q7_v0_1/anchor_28_v0_1_verification_log.md",
+      "sha256": "b8de0589adf486ee5b7fe655621ceb23c29a8c372a18a78aba44580fccbef429",
+      "size_bytes": 15207,
+      "lf_count": 268,
+      "status": "rule_1_immutable_preserve_read_only_in_anchor_28_1_round"
+    }
+  },
+  "envelope_preservation_state": {
+    "gitattributes": {
+      "path": ".gitattributes",
+      "sha256": "836dbe759f0de1e49d92b8717099fce7b78af6314baab0ad5d9159bddd02431c",
+      "size_bytes": 2290,
+      "lf_count": 42,
+      "status": "preserved_unchanged_in_anchor_28_1_round"
+    },
+    "sha256sums": {
+      "path": "SHA256SUMS",
+      "sha256_pre_anchor_28_1_inscribe": "ccf77db51c6c1089038974e28e64afbd72d04d77aeed8493f9ae2d7d51d60c43",
+      "size_bytes_pre_inscribe": 9839,
+      "lf_count_pre_inscribe": 82,
+      "status": "to_be_updated_with_4_new_entries_in_anchor_28_1_inscribe"
+    }
+  },
+  "anchor_28_1_v0_1_self_inscribe_artifacts": {
+    "declaration_md": {
+      "path": "forensic_anchors/section12_lessons_codified_q8_v0_1/anchor_28_1_v0_1_declaration.md",
+      "sha256": "4763746ddb491a1aee55eeeb970c860cd05e356066e1fa34b82dc85e937a9348",
+      "size_bytes": 13416,
+      "lf_count": 148,
+      "canonical_form": "no_bom_no_cr_lf_term_pattern_46_a_through_c",
+      "character_integrity_4_axis_attest": "arrow_u2192_23_dagger_u2020_2_ascii_fallback_arrow_0_ascii_fallback_dagger_0",
+      "inscription_method": "path_a_overwrite_from_claude_ai_supplied_authoritative_final_text",
+      "inscription_ts": "2026-05-15T17:14:42+09:00"
+    },
+    "input_files_pin_json": {
+      "path": "forensic_anchors/section12_lessons_codified_q8_v0_1/anchor_28_1_v0_1_input_files_pin.json",
+      "sha256": "<self_reference_not_inscribable_chicken_egg_avoidance>",
+      "note": "self_sha_omitted_per_design_inherited_from_anchor_28_v0_1_input_files_pin_json_efead5ca_pattern"
+    },
+    "lessons_appendix_md": {
+      "path": "forensic_anchors/section12_lessons_codified_q8_v0_1/anchor_28_1_v0_1_lessons_appendix.md",
+      "sha256": "d6eff4d74c74a914c8db63b0f65f007d1d136b9c9d42ad6db1d1843b1b0894c4",
+      "size_bytes": "28932",
+      "lf_count": "457",
+      "canonical_form": "no_bom_no_cr_lf_term_pattern_46_a_through_c",
+      "character_integrity_attest": "arrow_u2192_10_dagger_u2020_0_minus_u2212_1_default_mitigation_6_ascii_fallback_arrow_0_ascii_fallback_dagger_0",
+      "inscription_method": "path_a_single_atomic_write_from_claude_ai_supplied_two_part_concat_authoritative_final_text",
+      "inscription_ts": "2026-05-15T19:29:05+09:00"
+    },
+    "verification_log_md": {
+      "path": "forensic_anchors/section12_lessons_codified_q8_v0_1/anchor_28_1_v0_1_verification_log.md",
+      "sha256": "7181e3ef0de542f44c70cb4cc8aecab2da58439a49ff20d4431279143dea4997",
+      "size_bytes": "26274",
+      "lf_count": "421",
+      "canonical_form": "no_bom_no_cr_lf_term_pattern_46_a_through_c",
+      "character_integrity_attest": "arrow_u2192_30_dagger_u2020_1_minus_u2212_0_ascii_fallback_arrow_0_ascii_fallback_dagger_1_l_q3_55_self_reference_preserved_11_axis_revised_pass",
+      "inscription_method": "path_a_write_from_claude_ai_supplied_authoritative_final_text",
+      "inscription_ts": "2026-05-15T18:04:48+09:00"
+    }
+  },
+  "active_mitigation_patterns_post_anchor_28_1": [
+    {"id": "Pattern_24c", "class": "discipline", "provenance": "inherited"},
+    {"id": "Pattern_29_ref", "class": "discipline", "provenance": "inherited"},
+    {"id": "Pattern_30_ref", "class": "discipline", "provenance": "inherited"},
+    {"id": "Pattern_31", "class": "discipline_self_cover", "provenance": "inherited"},
+    {"id": "Pattern_34", "class": "defensive_try_catch_nested", "provenance": "inherited"},
+    {"id": "Pattern_35", "class": "prophylactic_invariantculture", "provenance": "inherited"},
+    {"id": "Pattern_36", "class": "workaround", "provenance": "inherited"},
+    {"id": "Pattern_38", "class": "workaround_scriptblock_create_utf8_no_bom", "provenance": "anchor_28_v0_1_codified"},
+    {"id": "Pattern_39", "class": "prophylactic_ps_dotnet_cwd_sync_base", "provenance": "inherited"},
+    {"id": "Pattern_40", "class": "discipline", "provenance": "inherited"},
+    {"id": "Pattern_41", "class": "defensive", "provenance": "inherited"},
+    {"id": "Pattern_44", "class": "defensive", "provenance": "inherited"},
+    {"id": "Pattern_45", "class": "discipline_canonical_citation", "provenance": "inherited"},
+    {"id": "Pattern_46", "class": "forensic_byte_level_canonical_6_axis_metric", "provenance": "anchor_28_v0_1_codified"},
+    {"id": "L_Q3_47", "class": "prophylactic_pattern_39_canonical_invocation_form", "provenance": "anchor_28_v0_1_codified"},
+    {"id": "L_Q3_48", "class": "prophylactic_untracked_files_all", "provenance": "anchor_28_1_v0_1_codified_this_round"},
+    {"id": "L_Q3_49", "class": "discipline_sha256sums_line_type_accounting", "provenance": "anchor_28_1_v0_1_codified_this_round"},
+    {"id": "L_Q3_50", "class": "discipline_dispatch_mandatory_param_coverage", "provenance": "anchor_28_1_v0_1_codified_this_round"},
+    {"id": "L_Q3_51", "class": "discipline_phase_context_fit_assertion", "provenance": "anchor_28_1_v0_1_codified_this_round"},
+    {"id": "L_Q3_52", "class": "discipline_ps_var_delimit", "provenance": "anchor_28_1_v0_1_codified_this_round"},
+    {"id": "L_Q3_53", "class": "discipline_git_ls_remote_wildcard_refspec", "provenance": "anchor_28_1_v0_1_codified_this_round"},
+    {"id": "L_Q3_54", "class": "discipline_dotnet_api_spec_equals_method", "provenance": "anchor_28_1_v0_1_codified_this_round", "default_mitigation": "iii_equals_method_CultureInfo_InvariantCulture_Equals_dollar_ci"}
+  ],
+  "prophylactic_class_octet_post_anchor_28_1": ["Pattern_35", "Pattern_39", "Pattern_46", "L_Q3_47", "L_Q3_48", "L_Q3_52", "L_Q3_53", "L_Q3_54"],
+  "f_28_triad_disposition": {
+    "F_28_1": {
+      "manifest_locus": "anchor_28_v0_1_G_4_cell_12",
+      "symptom": "sha256sums_line_type_accounting_false_negative_porcelain_heuristic_gap",
+      "primary_root_cause_lesson": "L_Q3_48",
+      "preemptive_codify_lesson": "L_Q3_49",
+      "disposition": "option_a_instrument_side_accept"
+    },
+    "F_28_2": {
+      "manifest_locus": "anchor_28_v0_1_G_5",
+      "symptom": "worktree_clean_gate_script_design_vs_phase_context_mismatch",
+      "root_cause_lesson": "L_Q3_51",
+      "disposition": "option_a_instrument_side_accept"
+    },
+    "F_28_3": {
+      "manifest_locus": "anchor_28_v0_1_prior_chat_packet_2_paired_sync_S_1",
+      "symptom": "invariantculture_name_empty_string_mnemonic_literal_false_negative",
+      "root_cause_lesson": "L_Q3_54",
+      "default_mitigation": "iii_equals_method_CultureInfo_InvariantCulture_Equals_dollar_ci",
+      "disposition": "option_a_instrument_side_accept_default_mitigation_iii_equals_method"
+    }
+  },
+  "f_28_4_recovery_class_finding": {
+    "manifest_locus": "anchor_28_1_v0_1_round_opening_step_2_layer_c_v1_1_baseline_re_attest",
+    "symptom": "layer_c_v1_1_baseline_sha_5d9beb04_inherited_metadata_pin_not_located",
+    "dispatch_coverage": "option_a_extension_list_11_entries",
+    "extension_list_applied": [".json", ".csv", ".tsv", ".txt", ".yaml", ".yml", ".dat", ".pkl", ".npy", ".npz", ""],
+    "search_scope_applied": ["public_repo_working_tree", "windows_staging_dir"],
+    "verdict": "not_located_genuine_state",
+    "root_cause": "inherited_metadata_locus_pin_explicit_inscription_missing_in_anchor_22_v0_2_to_anchor_28_v0_1_chain",
+    "root_cause_lesson": "none_recovery_is_resolution_lesson_codify_at_recovery_completed_anchor",
+    "recovery_options": [
+      "anchor_22_v0_2_input_files_pin_json_x1_inherited_metadata_detail_inspection",
+      "external_archive_explicit_search_outside_repo_and_staging",
+      "v4_9_q_phase_multi_route_verification_re_generation_reproducibility_design_confirm"
+    ],
+    "disposition": "recovery_deferred_to_anchor_28_2_sub_round_or_anchor_29",
+    "proposal_b_compliance": "recovery_completion_inscription_in_subsequent_round_artifact_anchor_28_1_artifacts_immutable_preserve"
+  },
+  "l_q3_55_candidate_manifest_record": {
+    "scope": "cross_locus_reconstruction_class_error_authoritative_source_single_specification_required_both_side_history_based_reconstruction_divergence_drift_prevention",
+    "class": "discipline_cross_locus_workflow_integrity",
+    "manifest_locus": "anchor_28_1_v0_1_round_inscription_stage_1_1_initial_inscribe_character_drift_and_1_1_rev_before_strings_divergence",
+    "manifest_evidence": {
+      "claude_code_side_drift": "initial_1_1_inscribe_character_substitution_arrow_to_ascii_fallback_dagger_to_ascii_fallback_post_process_correction_applied",
+      "claude_ai_side_drift": "1_1_rev_patch_before_strings_reconstruction_assumed_initial_draft_state_actual_inscribed_state_4a_4b_corrections_pre_emptive_embedded",
+      "path_a_validation": "closed_loop_verify_10_of_10_pass_workflow_validation_6_of_6_axes_pass_character_integrity_4_axis_attest_arrow_dagger_ascii_fallback_zero_hit"
+    },
+    "primary_mitigation": "authoritative_source_single_specification_claude_ai_side_complete_final_text_supply_option_2_workflow_primary_claude_code_side_reconstruction_structurally_bypassed",
+    "secondary_mitigation": "character_integrity_4_axis_attest_primary_unicode_char_count_arrow_dagger_plus_ascii_fallback_negative_count_drift_detection_direct_evidence",
+    "affected_operations": "claude_ai_to_claude_code_inscription_dispatch_general_especially_large_scale_forensic_critical_immutable_artifacts",
+    "three_axis_timestamp_pin": {
+      "first_observed": "2026-05-15_anchor_28_1_v0_1_round_inscription_stage_1_1_initial_inscribe_and_1_1_rev_before_strings_divergence_co_occurrence",
+      "first_inscribed": "2026-05-15_anchor_28_1_v0_1_round_input_files_pin_json_l_q3_55_candidate_manifest_record_field_plus_verification_log_md_section_6_5_closure_class_finding_entry",
+      "first_codified": "scheduled_to_anchor_28_2_sub_round_per_sakaguchi_san_decision_option_b_l_q3_55_anchor_28_2_codify_plus_option_ii_anchor_28_1_section_6_5_manifest_entry"
+    },
+    "one_round_delay_pattern_observation": {
+      "pattern_description": "reveal_or_manifest_in_anchor_n_resolution_or_codify_in_anchor_n_plus_1_or_subsequent_round_natural_disposition_class",
+      "instances_accumulated_3": [
+        "L_Q3_48_to_54_revealed_anchor_28_v0_1_codified_anchor_28_1_v0_1_delay_1_round",
+        "L_Q3_55_revealed_anchor_28_1_v0_1_codify_scheduled_anchor_28_2_v0_1_delay_1_round_per_option_b",
+        "F_28_4_manifested_anchor_28_1_v0_1_recovery_deferred_anchor_28_2_or_anchor_29_delay_1_plus_round"
+      ],
+      "meta_codify_candidate_status": "pattern_itself_codify_candidate_layer_above_individual_lessons_pattern_31_self_cover_discipline_meta_extension_anchor_28_1_internal_codify_not_adopted_anchor_28_2_re_evaluation_with_cumulative_evidence_3_instances_threshold_consideration_anchor_29_4_plus_instances_sufficient_maturity_case"
+    },
+    "codify_disposition_decision": "option_b_anchor_28_2_sub_round_formal_codification_plus_option_ii_anchor_28_1_section_6_5_manifest_entry_provenance_preservation_both_side_recommend_full_align_sakaguchi_san_authorized_2026_05_15",
+    "proposal_b_compliance": "anchor_28_1_artifacts_immutable_preserve_l_q3_55_formal_codification_inscription_in_anchor_28_2_subsequent_round_artifact"
+  },
+  "phase_h_h2_handoff_package_inheritance": {
+    "phase_h_1_pdf": {
+      "filename": "anchor_28_v0_1_closure_attest_report.pdf",
+      "sha256": "78c621426cb1bf879079fcf01147e2da87f48430ce5825b7a2316c790789bbe3",
+      "size_bytes": 108378,
+      "pages": 7,
+      "windows_local_path": "D:\\ドキュメント\\エントロピー\\膜宇宙論再考察AB効果有り\\C3 拡張版仮説関連2\\anchor_28_v0_1_closure_attest_report (1).pdf",
+      "windows_filename_note": "parenthesized_suffix_due_to_download_manager_rename_content_identity_via_sha"
+    },
+    "phase_h_2_handoff_package": {
+      "filename": "anchor_28_v0_1_phase_h_2_handoff_package_for_anchor_28_1.txt",
+      "sha256": "b3bbe95d4fff6de590c46632171546a63a50f45e264fbacaf085055f9a192355",
+      "size_bytes": 40476,
+      "lf_count": 671,
+      "windows_local_path": "D:\\ドキュメント\\エントロピー\\膜宇宙論再考察AB効果有り\\C3 拡張版仮説関連2\\anchor_28_v0_1_phase_h_2_handoff_package_for_anchor_28_1.txt",
+      "components": 6,
+      "proposals_acceptance": ["A_l_q3_54_default_iii_equals_method", "B_retroactive_amendment_explicit_prohibition", "C_as_6_operational_protocol_parallel_axis"]
+    },
+    "s_5_cross_locus_bit_exact_attest_ts": "2026-05-15T15:29:03+09:00",
+    "s_5_verdict": "phase_h_1_h_2_cross_locus_integrity_confirmed_10_of_10_cell_pass"
+  },
+  "options_inherited_from_anchor_28_v0_1_round_closure": {
+    "option_gamma_in_pdf_amendment_inscription_acceptance": true,
+    "option_a_g4_instrument_side_accept": true,
+    "option_a_g5_instrument_side_accept": true,
+    "option_a_packet_2_s1_instrument_side_accept": true,
+    "option_ii_baseline_json_staging_only": true,
+    "proposal_a_l_q3_54_default_iii_equals_method": true,
+    "proposal_b_retroactive_amendment_explicit_prohibition": true,
+    "proposal_c_as_6_parallel_axis": true
+  },
+  "remote_sync_state_pre_anchor_28_1_inscribe": {
+    "repo": "sguccibnr32-creator/Public",
+    "origin_main_sha": "cf834ea49ea5cc5657ea8601c05f44f4464ba740",
+    "remote_tag_obj_sha": "0fc3df9eb2d42c81e04e84a79d1b3e0f79773986",
+    "remote_tag_peeled_sha": "cf834ea49ea5cc5657ea8601c05f44f4464ba740"
+  },
+  "anchor_28_1_v0_1_target_tag": {
+    "annotated_tag_name": "companion-v4.9-q8-codify-round-2026-05-15",
+    "expected_state": "to_be_inscribed_post_commit_with_rule_92_strict_no_force_no_all_no_tags_no_mirror"
+  },
+  "rule_compliance_attest": {
+    "rule_1_immutable_preservation": "strict",
+    "rule_6_forensic_chain_protect": "strict_depth_7_to_8",
+    "rule_92_strict_no_destructive_flag": "to_be_attested_at_inscribe",
+    "proposal_b_retroactive_amendment_prohibition": "strict_no_section11_modification"
+  },
+  "author": "Sakaguchi Shinobu (sole author / 坂口製麺所 / 思想士)",
+  "license": "CC-BY 4.0"
+}
