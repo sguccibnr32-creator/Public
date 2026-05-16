@@ -1,0 +1,438 @@
+{
+  "schema": "anchor_input_files_pin_v1",
+  "anchor_id": "anchor_28_2_v0_1",
+  "q_counter": "q9",
+  "section": "section13_lessons_codified_q9_v0_1",
+  "date": "2026-05-16",
+  "parent_anchor": {
+    "id": "anchor_28_1_v0_1",
+    "head_sha": "cc35c0983e8b8baaafa5d83689d69a31f880e38f",
+    "tag_obj_sha": "a873e8785c55d17fafa56d06320a4daea27ffb28",
+    "annotated_tag": "companion-v4.9-q8-codify-round-2026-05-15"
+  },
+  "forensic_chain_depth_pre_inscribe": 8,
+  "forensic_chain_depth_post_inscribe": 9,
+  "round_class": "substantive_codify_round_l_q3_55_56_parallel_codify_tier_1_plus_f_28_4_phase_1_search_plus_l_q3_57_candidate_manifest",
+  "numbering_class": "sub_decimal_anchor_section_q_counter_advancement_split_numbering_canonical_case",
+  "counter_transition": {
+    "pre_anchor_28_v0_1": {"active": 12, "deferred": 0, "total": 12},
+    "post_anchor_28_v0_1_closure": {"active": 15, "deferred": 7, "total": 22},
+    "post_anchor_28_1_v0_1_closure": {"active": 22, "deferred": 0, "total": 22},
+    "post_anchor_28_2_v0_1_closure": {"active": 24, "deferred": 0, "total": 24}
+  },
+  "rule_1_immutable_preservation": {
+    "x1": {
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+      "sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "size_bytes": 9561,
+      "lf_count": 166
+    },
+    "x2": {
+      "path": "latex_v48/membrane_v48.tex",
+      "sha256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd"
+    }
+  },
+  "inherited_baselines_re_attest_pending": {
+    "layer_c_v1_1": {
+      "sha256_prefix": "5d9beb04",
+      "status": "not_located_at_anchor_28_1_step_2_re_attest_recovery_pending_anchor_28_2_phase_1_search_per_gate_c",
+      "anchor_28_1_re_attest_dispatch_locus": "anchor_28_1_v0_1_verification_log_md_section_4",
+      "anchor_28_1_re_attest_method": "option_a_extension_list_11_entries",
+      "anchor_28_1_extension_list": [".json", ".csv", ".tsv", ".txt", ".yaml", ".yml", ".dat", ".pkl", ".npy", ".npz", ""],
+      "anchor_28_1_search_scope": ["public_repo_working_tree", "windows_staging_dir"],
+      "anchor_28_1_hits": {"repo_candidates": 0, "staging_candidates": 0, "total": 0},
+      "anchor_28_1_verdict": "not_located",
+      "disposition": "f_28_4_recovery_class_finding_phase_1_search_scheduled_post_tier_1_codify_in_anchor_28_2_v0_1",
+      "promote_design": "located_case_migration_to_rule_1_immutable_preservation_layer_c_v1_1_with_full_sha_size_canonical_attest"
+    }
+  },
+  "section12_lessons_codified_q8_v0_1_preserve_state": {
+    "anchor_28_1_v0_1_declaration_md": {
+      "path": "forensic_anchors/section12_lessons_codified_q8_v0_1/anchor_28_1_v0_1_declaration.md",
+      "sha256": "4763746ddb491a1aee55eeeb970c860cd05e356066e1fa34b82dc85e937a9348",
+      "size_bytes": 13416,
+      "lf_count": 148,
+      "status": "rule_1_immutable_preserve_read_only_in_anchor_28_2_round_proposal_b_strict"
+    },
+    "anchor_28_1_v0_1_input_files_pin_json": {
+      "path": "forensic_anchors/section12_lessons_codified_q8_v0_1/anchor_28_1_v0_1_input_files_pin.json",
+      "sha256": "c09d8c7b4c52282fc7ead79c44c3f5eae0239e5f69327e5b150ae7bee01c4d65",
+      "size_bytes": 17565,
+      "lf_count": 273,
+      "status": "rule_1_immutable_preserve_read_only_in_anchor_28_2_round_proposal_b_strict"
+    },
+    "anchor_28_1_v0_1_lessons_appendix_md": {
+      "path": "forensic_anchors/section12_lessons_codified_q8_v0_1/anchor_28_1_v0_1_lessons_appendix.md",
+      "sha256": "d6eff4d74c74a914c8db63b0f65f007d1d136b9c9d42ad6db1d1843b1b0894c4",
+      "size_bytes": 28932,
+      "lf_count": 457,
+      "status": "rule_1_immutable_preserve_read_only_in_anchor_28_2_round_proposal_b_strict"
+    },
+    "anchor_28_1_v0_1_verification_log_md": {
+      "path": "forensic_anchors/section12_lessons_codified_q8_v0_1/anchor_28_1_v0_1_verification_log.md",
+      "sha256": "7181e3ef0de542f44c70cb4cc8aecab2da58439a49ff20d4431279143dea4997",
+      "size_bytes": 26274,
+      "lf_count": 421,
+      "status": "rule_1_immutable_preserve_read_only_in_anchor_28_2_round_proposal_b_strict"
+    }
+  },
+  "envelope_preservation_state": {
+    "gitattributes": {
+      "path": ".gitattributes",
+      "sha256_pre_anchor_28_2_inscribe": "13c02de5958b2be88b681822dde86e7237ad935c6a9a15c13141b3f891ee1d2b",
+      "size_bytes_pre_inscribe": 2351,
+      "lf_count_pre_inscribe": 43,
+      "status": "to_be_updated_with_section13_directive_in_anchor_28_2_inscribe"
+    },
+    "sha256sums": {
+      "path": "SHA256SUMS",
+      "sha256_pre_anchor_28_2_inscribe": "8939343231fdaaf88ef4e929b2abd2ad25210536ccdd2eab9863bdaa809776d8",
+      "size_bytes_pre_inscribe": 10455,
+      "lf_count_pre_inscribe": 86,
+      "status": "to_be_updated_with_4_new_entries_plus_optional_recovery_artifact_entry_in_anchor_28_2_inscribe"
+    }
+  },
+  "anchor_28_2_v0_1_self_inscribe_artifacts": {
+    "declaration_md": {
+      "path": "forensic_anchors/section13_lessons_codified_q9_v0_1/anchor_28_2_v0_1_declaration.md",
+      "sha256": "23691fab95240034f096050aff07a139dfba37d6ac6d5dc6689a206c8bfa97a0",
+      "size_bytes": 10181,
+      "lf_count": 164,
+      "canonical_form": "no_bom_no_cr_lf_term_pattern_46_a_through_c",
+      "inscription_method": "path_a_overwrite_from_claude_ai_supplied_authoritative_final_text",
+      "inscription_phase": "phase_alpha",
+      "phase_alpha_verify_ts": "2026-05-16T15:49:48+09:00",
+      "phase_alpha_verdict": "pass_destination_canonical_5_axis"
+    },
+    "input_files_pin_json": {
+      "path": "forensic_anchors/section13_lessons_codified_q9_v0_1/anchor_28_2_v0_1_input_files_pin.json",
+      "sha256": "<self_reference_not_inscribable_chicken_egg_avoidance>",
+      "note": "self_sha_omitted_per_design_inherited_from_anchor_28_1_v0_1_input_files_pin_json_pattern_c09d8c7b"
+    },
+    "lessons_appendix_md": {
+      "path": "forensic_anchors/section13_lessons_codified_q9_v0_1/anchor_28_2_v0_1_lessons_appendix.md",
+      "sha256_provisional_phase_beta_initial": "3e4a13a9ee1cfc5f6ecfb8f55c244c7298bb178942831d28e4b8fe68021c6d35",
+      "size_bytes_provisional_phase_beta_initial": 17357,
+      "lf_count_provisional_phase_beta_initial": 315,
+      "canonical_form": "no_bom_no_cr_lf_term_pattern_46_a_through_c",
+      "inscription_method": "path_a_overwrite_from_claude_ai_supplied_authoritative_final_text",
+      "phase_beta_initial_verify_ts": "2026-05-16T15:57:30+09:00",
+      "phase_beta_initial_verdict": "pass_destination_canonical_5_axis",
+      "phase_beta_revise_status": "scheduled_axis_b_3_anchor_28_1_lessons_appendix_alignment_per_l_q3_55_manifest_evidence_detail_plus_3_axis_timestamp_pin_plus_bidirectional_cross_reference_inline_format",
+      "phase_beta_final_sha_pending": true
+    },
+    "verification_log_md": {
+      "path": "forensic_anchors/section13_lessons_codified_q9_v0_1/anchor_28_2_v0_1_verification_log.md",
+      "sha256_pending": "<TBD - phase γ.2 dispatch 後 inscribe>",
+      "size_bytes_pending": null,
+      "lf_count_pending": null,
+      "canonical_form": "no_bom_no_cr_lf_term_pattern_46_a_through_c",
+      "inscription_method": "path_a_overwrite_from_claude_ai_supplied_authoritative_final_text",
+      "phase_gamma_2_status": "pending_post_phase_gamma_1_dispatch"
+    }
+  },
+  "active_mitigation_patterns_post_anchor_28_2": [
+    {"id": "Pattern_24c", "class": "discipline", "provenance": "inherited"},
+    {"id": "Pattern_29_ref", "class": "discipline", "provenance": "inherited"},
+    {"id": "Pattern_30_ref", "class": "discipline", "provenance": "inherited"},
+    {"id": "Pattern_31", "class": "discipline_self_cover", "provenance": "inherited"},
+    {"id": "Pattern_34", "class": "defensive_try_catch_nested", "provenance": "inherited"},
+    {"id": "Pattern_35", "class": "prophylactic_invariantculture", "provenance": "inherited"},
+    {"id": "Pattern_36", "class": "workaround", "provenance": "inherited"},
+    {"id": "Pattern_38", "class": "workaround_scriptblock_create_utf8_no_bom", "provenance": "anchor_28_v0_1_codified"},
+    {"id": "Pattern_39", "class": "prophylactic_ps_dotnet_cwd_sync_base", "provenance": "inherited"},
+    {"id": "Pattern_40", "class": "discipline", "provenance": "inherited"},
+    {"id": "Pattern_41", "class": "defensive", "provenance": "inherited"},
+    {"id": "Pattern_44", "class": "defensive", "provenance": "inherited"},
+    {"id": "Pattern_45", "class": "discipline_canonical_citation", "provenance": "inherited"},
+    {"id": "Pattern_46", "class": "forensic_byte_level_canonical_6_axis_metric", "provenance": "anchor_28_v0_1_codified"},
+    {"id": "L_Q3_47", "class": "prophylactic_pattern_39_canonical_invocation_form", "provenance": "anchor_28_v0_1_codified"},
+    {"id": "L_Q3_48", "class": "prophylactic_untracked_files_all", "provenance": "anchor_28_1_v0_1_codified"},
+    {"id": "L_Q3_49", "class": "discipline_sha256sums_line_type_accounting", "provenance": "anchor_28_1_v0_1_codified"},
+    {"id": "L_Q3_50", "class": "discipline_dispatch_mandatory_param_coverage", "provenance": "anchor_28_1_v0_1_codified"},
+    {"id": "L_Q3_51", "class": "discipline_phase_context_fit_assertion", "provenance": "anchor_28_1_v0_1_codified"},
+    {"id": "L_Q3_52", "class": "discipline_ps_var_delimit", "provenance": "anchor_28_1_v0_1_codified"},
+    {"id": "L_Q3_53", "class": "discipline_git_ls_remote_wildcard_refspec", "provenance": "anchor_28_1_v0_1_codified"},
+    {"id": "L_Q3_54", "class": "discipline_dotnet_api_spec_equals_method", "provenance": "anchor_28_1_v0_1_codified", "default_mitigation": "iii_equals_method_CultureInfo_InvariantCulture_Equals_dollar_ci"},
+    {"id": "L_Q3_55", "class": "discipline_cross_locus_workflow_integrity", "provenance": "anchor_28_2_v0_1_codified_this_round"},
+    {"id": "L_Q3_56", "class": "discipline_claude_ai_side_projection_framing_measurement_precision", "provenance": "anchor_28_2_v0_1_codified_this_round"}
+  ],
+  "prophylactic_class_octet_post_anchor_28_2": ["Pattern_35", "Pattern_39", "Pattern_46", "L_Q3_47", "L_Q3_48", "L_Q3_52", "L_Q3_53", "L_Q3_54"],
+  "prophylactic_class_octet_continuity_note": "octet_size_preserved_post_l_q3_55_56_codify_per_class_discipline_not_prophylactic_l_q3_55_cross_locus_workflow_integrity_l_q3_56_claude_ai_side_precision_both_discipline_class_no_octet_extension",
+  "f_28_triad_disposition_inherited": {
+    "F_28_1": {
+      "manifest_locus": "anchor_28_v0_1_G_4_cell_12",
+      "primary_root_cause_lesson": "L_Q3_48",
+      "preemptive_codify_lesson": "L_Q3_49",
+      "disposition": "option_a_instrument_side_accept",
+      "closure_round": "anchor_28_1_v0_1",
+      "anchor_28_2_status": "closed_inherited"
+    },
+    "F_28_2": {
+      "manifest_locus": "anchor_28_v0_1_G_5",
+      "root_cause_lesson": "L_Q3_51",
+      "disposition": "option_a_instrument_side_accept",
+      "closure_round": "anchor_28_1_v0_1",
+      "anchor_28_2_status": "closed_inherited"
+    },
+    "F_28_3": {
+      "manifest_locus": "anchor_28_v0_1_prior_chat_packet_2_paired_sync_S_1",
+      "root_cause_lesson": "L_Q3_54",
+      "default_mitigation": "iii_equals_method_CultureInfo_InvariantCulture_Equals_dollar_ci",
+      "disposition": "option_a_instrument_side_accept_default_mitigation_iii_equals_method",
+      "closure_round": "anchor_28_1_v0_1",
+      "anchor_28_2_status": "closed_inherited"
+    }
+  },
+  "f_28_4_recovery_class_finding": {
+    "manifest_locus": "anchor_28_1_v0_1_round_opening_step_2_layer_c_v1_1_baseline_re_attest",
+    "anchor_28_1_inscribed_in": "anchor_28_1_v0_1_verification_log_md_section_6_5_plus_input_files_pin_json_f_28_4_recovery_class_finding_field",
+    "symptom": "layer_c_v1_1_baseline_sha_5d9beb04_inherited_metadata_pin_not_located",
+    "anchor_28_1_dispatch_coverage": "option_a_extension_list_11_entries",
+    "anchor_28_1_extension_list_applied": [".json", ".csv", ".tsv", ".txt", ".yaml", ".yml", ".dat", ".pkl", ".npy", ".npz", ""],
+    "anchor_28_1_search_scope_applied": ["public_repo_working_tree", "windows_staging_dir"],
+    "anchor_28_1_verdict": "not_located_genuine_state",
+    "root_cause": "inherited_metadata_locus_pin_explicit_inscription_missing_in_anchor_22_v0_2_to_anchor_28_v0_1_chain",
+    "root_cause_lesson": "none_recovery_is_resolution_lesson_codify_at_recovery_completed_anchor",
+    "recovery_options": [
+      "anchor_22_v0_2_input_files_pin_json_x1_inherited_metadata_detail_inspection",
+      "external_archive_explicit_search_outside_repo_and_staging",
+      "v4_9_q_phase_multi_route_verification_re_generation_reproducibility_design_confirm"
+    ],
+    "anchor_28_2_phase_1_search_plan": {
+      "scheduled_timing": "post_tier_1_codify_in_anchor_28_2_v0_1",
+      "method": "both_parallel_a_b_per_gate_c_b_recommendation",
+      "scope_a": {
+        "locus": "claude_code_side_windows_local_fs_extended_scan",
+        "directories": [
+          "D:\\ドキュメント\\エントロピー\\膜宇宙論再考察AB効果有り\\C3 拡張版仮説関連2\\",
+          "D:\\ドキュメント\\エントロピー\\膜宇宙論再考察AB効果有り\\",
+          "D:\\膜理論PDF\\",
+          "E:\\GitHub repo\\github_workspace\\Public\\",
+          "E:\\Q-1_discovery_2026-05-06\\"
+        ],
+        "extension_list_per_anchor_28_1_precedent": [".json", ".csv", ".tsv", ".txt", ".yaml", ".yml", ".dat", ".pkl", ".npy", ".npz", ""],
+        "verification_method": "get_file_hash_sha256_5d9beb04_prefix_match"
+      },
+      "scope_b": {
+        "locus": "claude_ai_side_conversation_search_tool_past_chats",
+        "search_queries": ["Layer C v1.1", "5d9beb04", "transform_layer_c_v1_1", "Phase Q route mirror anchor 22", "IMMUTABLE JSON 70 numeric 2 categorical"],
+        "search_range": "anchor_22_v0_1_v0_2_round_chat_session_phase_q_route_mirror_design_chat_session",
+        "verification_method": "embedded_text_reconstruction_post_hoc_sha_verify"
+      },
+      "priority": "a_located_priority_over_b_located_artifact_authority_5_axis_rationale",
+      "5_axis_rationale": "1_sha_verifiable_canonical_2_transcription_artifact_risk_mitigation_3_recovery_scope_completeness_4_execution_efficiency_5_proposal_b_compliance_strict",
+      "fallback_phase_1b": "wordpress_sakaguchi_physics_com_publish_artifact_search_blog_id_253652152",
+      "fallback_phase_1c": "anchor_29_defer_recovery_class_permanent_state_preserve",
+      "single_commit_assumption": "f_28_4_recovery_located_case_inclusion_in_anchor_28_2_v0_1_single_commit_chain_depth_9_maintained_no_exceed_to_10"
+    },
+    "disposition_at_anchor_28_2_inscribe": "<phase_1_search_result_dependent_inscribed_at_phase_gamma_2_verification_log>",
+    "proposal_b_compliance": "recovery_completion_inscription_in_subsequent_round_artifact_anchor_28_1_artifacts_immutable_preserve"
+  },
+  "l_q3_55_codify_record": {
+    "scope": "cross_locus_reconstruction_class_error_authoritative_source_single_specification_required_both_side_history_based_reconstruction_divergence_drift_prevention",
+    "class": "discipline_cross_locus_workflow_integrity",
+    "manifest_inheritance_source": "anchor_28_1_v0_1_input_files_pin_l_q3_55_candidate_manifest_record_field_plus_verification_log_md_section_6_6",
+    "manifest_evidence_inheritance": "see_anchor_28_1_v0_1_input_files_pin_l_q3_55_candidate_manifest_record_manifest_evidence_field_for_full_detail",
+    "primary_mitigation": "authoritative_source_single_specification_claude_ai_side_complete_final_text_supply_option_2_workflow_primary_claude_code_side_reconstruction_structurally_bypassed",
+    "secondary_mitigation": "character_integrity_4_axis_attest_primary_unicode_char_count_arrow_dagger_plus_ascii_fallback_negative_count_drift_detection_direct_evidence",
+    "affected_operations": "claude_ai_to_claude_code_inscription_dispatch_general_especially_large_scale_forensic_critical_immutable_artifacts",
+    "three_axis_timestamp_pin": {
+      "first_observed": "2026-05-15_anchor_28_1_v0_1_round_inscription_stage_1_1_initial_inscribe_and_1_1_rev_before_strings_divergence_co_occurrence",
+      "first_inscribed_as_candidate": "2026-05-15_anchor_28_1_v0_1_round_input_files_pin_json_l_q3_55_candidate_manifest_record_field_plus_verification_log_md_section_6_6",
+      "first_codified": "2026-05-16_anchor_28_2_v0_1_codify_round_this_round_formal_codification_per_option_b_decision"
+    },
+    "codify_disposition_decision_inheritance": "option_b_anchor_28_2_sub_round_formal_codification_plus_option_ii_anchor_28_1_section_6_5_manifest_entry_provenance_preservation_both_side_recommend_full_align_sakaguchi_san_authorized_2026_05_15",
+    "delay_metric_canonical": "transition_based_chain_depth_difference_1_round_strict_fit_anchor_28_1_chain_depth_8_to_anchor_28_2_chain_depth_9",
+    "active_patterns_transition": "22_to_23",
+    "bidirectional_cross_reference": {
+      "anchor_28_1_v0_1_input_files_pin_l_q3_55_candidate_manifest_record": "candidate_origin",
+      "anchor_28_1_v0_1_verification_log_section_6_6": "candidate_manifest_entry",
+      "anchor_28_2_v0_1_declaration_section_3_1": "round_scope_declaration",
+      "anchor_28_2_v0_1_lessons_appendix_section_2": "formal_codify_section_phase_beta_revise_per_axis_b_3"
+    },
+    "proposal_b_compliance": "anchor_28_1_artifacts_immutable_preserve_l_q3_55_formal_codification_inscription_in_anchor_28_2_section13_artifacts"
+  },
+  "l_q3_56_codify_record": {
+    "scope": "claude_ai_side_projection_framing_measurement_precision_discipline_same_locus_precision_class_distinct_axis_from_l_q3_55_cross_locus_reconstruction_class",
+    "class": "discipline_claude_ai_side_projection_framing_measurement_precision",
+    "manifest_inheritance_source": "anchor_28_1_v0_1_round_6_inscribed_instances_dispatch_packet_review_wave_accumulation",
+    "sub_class_taxonomy": [
+      {"id": "i", "name": "projection_precision_point_form_count_undercount"},
+      {"id": "ii", "name": "framing_semantic_precision_gap"},
+      {"id": "iii", "name": "measurement_form_specification_gap"},
+      {"id": "iv", "name": "internal_consistency_precision_gap"}
+    ],
+    "instance_set_size": 8,
+    "instance_set_breakdown": {
+      "anchor_28_1_inscribed_count": 6,
+      "anchor_28_2_dispatch_emergent_count": 2,
+      "instances_detail": [
+        {"id": "1", "sub_class": "i", "locus": "anchor_28_1_lessons_appendix_md", "description": "arrow_u2192_point_form_count_projected_8_actual_10", "origin": "anchor_28_1_inscribed"},
+        {"id": "2", "sub_class": "i", "locus": "anchor_28_1_lessons_appendix_md", "description": "default_mitigation_point_form_count_projected_4_actual_6", "origin": "anchor_28_1_inscribed"},
+        {"id": "3", "sub_class": "iii", "locus": "anchor_28_1_packet_5_input_files_pin", "description": "ascii_fallback_dagger_regex_form_substring_vs_word_boundary", "origin": "anchor_28_1_inscribed"},
+        {"id": "4", "sub_class": "ii", "locus": "anchor_28_1_sub_packet_6a", "description": "gitattributes_preservation_framing_narrow_no_change_vs_broad_pattern_propagation", "origin": "anchor_28_1_inscribed"},
+        {"id": "5", "sub_class": "iii", "locus": "anchor_28_1_sub_packet_6c_v0_2", "description": "l_q3_54_form_substantive_set_工程欠落_plus_verdict_計算非参与_form_採択_detection_only_form", "origin": "anchor_28_1_inscribed"},
+        {"id": "6", "sub_class": "iv", "locus": "anchor_28_1_sub_packet_6d_v0_1", "description": "section_5_final_remote_main_form_section_1_2_既存_pattern_不整合", "origin": "anchor_28_1_inscribed"},
+        {"id": "7", "sub_class": "iv", "locus": "anchor_28_2_packet_3_revised_v3_section_4", "description": "transition_based_examples_4_line_chain_depth_propagation_consistency_漏れ_line_1_pre_correction_line_2_recompute_redundant_lines_3_4_post_correction_mixed_state", "origin": "anchor_28_2_dispatch_emergent"},
+        {"id": "8", "sub_class": "i", "locus": "anchor_28_2_packet_3_revised_v3_section_8_narrative", "description": "critical_1_plus_medium_3_plus_minor_8_equals_12_point_form_count_undercount_medium_v2_undercount_actual_medium_total_4_cumulative_total_13", "origin": "anchor_28_2_dispatch_emergent"}
+      ]
+    },
+    "sub_class_distribution": {
+      "i": 3,
+      "ii": 1,
+      "iii": 2,
+      "iv": 2,
+      "total": 8,
+      "class_boundary_state": "all_4_sub_class_populated_no_empty_sub_class"
+    },
+    "preventive_principle_4_配下": {
+      "a_for_sub_class_i": "point_form_count_post_projection_verification_必須",
+      "b_for_sub_class_ii": "framing_broad_pattern_propagation_視点_narrow_broad_both_scope_evaluation",
+      "c_for_sub_class_iii": "measurement_form_substantive_verdict_計算組み込み_set_工程_plus_functional_verify_一体化",
+      "d_for_sub_class_iv": "same_section_既存_pattern_alignment_必須_multi_line_propagation_strict"
+    },
+    "meta_recursive_observation": {
+      "formal_capture": "live_operational_verification_record",
+      "dual_structural_significance": [
+        "live_verification_pattern_active_observation_in_dispatch_generation_phase",
+        "instance_set_robustness_reinforcement_6_to_8_extension_class_characterization_robustness",
+        "review_wave_self_improvement_loop_v1_v2_v3_v4_15_items_reflected_forensic_value_capture"
+      ]
+    },
+    "partitioning": "c_1_separate_logical_partitioning_lessons_appendix_md_l_q3_55_l_q3_56_distinct_sections_each_lesson_individual_anchor",
+    "enumeration_form": "alpha_instance_based_individual_1_through_8",
+    "post_dispatch_observed_instances_section": {
+      "section_label": "section_3_7_tbd_post_dispatch_observed_instances_subsequent_round_reference",
+      "candidates": [
+        {"id": "candidate_1", "sub_class": "iv", "locus": "anchor_28_2_packet_3_revised_v3_section_4_line_2", "description": "inclusive_endpoints_除外_wording_minor_ambiguity_intended_metric_半開区間_natural_interpretation_開区間"},
+        {"id": "candidate_2", "sub_class": "i", "locus": "anchor_28_2_sub_packet_1_powershell_protocol_initial_draft_section_4", "description": "git_status_porcelain_form_untracked_files_all_flag_inline_embed_loss_l_q3_48_discipline_undercount"},
+        {"id": "candidate_3", "sub_class": "forensic_note", "locus": "anchor_28_2_phase_alpha_sakaguchi_san_transfer_flow", "description": "transfer_intermediate_locus_d_drive_documents_correlation_with_f_28_4_phase_1_search_scope_a_observation"}
+      ],
+      "preservation_rationale": "packet_3_revised_v4_stopping_condition_per_baseline_不含_subsequent_round_reference_candidate"
+    },
+    "three_axis_timestamp_pin": {
+      "first_observed": "2026-05-15_anchor_28_1_v0_1_round_6_instances_emergence_per_review_wave_dispatch_packet_accumulation",
+      "first_inscribed_as_candidate": "2026-05-15_anchor_28_1_v0_1_round_via_review_wave_accumulation",
+      "first_codified": "2026-05-16_anchor_28_2_v0_1_codify_round_this_round_formal_codification_8_instances_baseline_4_sub_class_taxonomy_meta_recursive_observation"
+    },
+    "delay_metric_canonical": "transition_based_chain_depth_difference_1_round_strict_fit_anchor_28_1_chain_depth_8_to_anchor_28_2_chain_depth_9",
+    "active_patterns_transition": "23_to_24",
+    "bidirectional_cross_reference": {
+      "anchor_28_1_v0_1_review_wave_accumulation": "6_inscribed_instances_origin",
+      "anchor_28_2_v0_1_packet_3_revised_v4_review_wave_accumulation": "instance_7_8_emergent_origin",
+      "anchor_28_2_v0_1_declaration_section_3_2": "round_scope_declaration",
+      "anchor_28_2_v0_1_lessons_appendix_section_3": "formal_codify_section_phase_beta"
+    },
+    "proposal_b_compliance": "anchor_28_1_artifacts_immutable_preserve_l_q3_56_formal_codification_inscription_in_anchor_28_2_section13_artifacts"
+  },
+  "l_q3_57_candidate_manifest_record": {
+    "scope": "1_round_delay_pattern_itself_meta_codification_pattern_31_self_cover_discipline_meta_layer_extension",
+    "class": "meta_codify_pattern_layer_above_individual_lessons",
+    "manifest_locus": "anchor_28_2_v0_1_packet_3_revised_v4_tier_3_evaluation_framework",
+    "effective_reveal_redefine": {
+      "pre_revision_definition": "l_q3_57_reveal_anchor_28_1_l_q3_55_56_candidate_appearance",
+      "post_revision_definition": "l_q3_57_effective_reveal_anchor_28_2_closure_state_9_instance_count_integrity_plus_evaluation_framework_完成_post_l_q3_55_56_codify",
+      "rationale": "definitional_整合_via_reveal_redefine_l_q3_57_codify_anchor_28_2_to_anchor_29_1_round_delay_strict_fit_definition_consistent"
+    },
+    "instance_set_size": 9,
+    "instance_set_breakdown": {
+      "verified_codify_delay_count": 7,
+      "projected_to_verified_at_anchor_28_2_closure_count": 2,
+      "instances_detail": [
+        {"id": "L_Q3_48", "reveal_round": "anchor_28_v0_1", "codify_round": "anchor_28_1_v0_1", "delay_transition_rounds": 1, "status": "verified", "class": "codify_delay"},
+        {"id": "L_Q3_49", "reveal_round": "anchor_28_v0_1", "codify_round": "anchor_28_1_v0_1", "delay_transition_rounds": 1, "status": "verified", "class": "codify_delay"},
+        {"id": "L_Q3_50", "reveal_round": "anchor_28_v0_1", "codify_round": "anchor_28_1_v0_1", "delay_transition_rounds": 1, "status": "verified", "class": "codify_delay"},
+        {"id": "L_Q3_51", "reveal_round": "anchor_28_v0_1", "codify_round": "anchor_28_1_v0_1", "delay_transition_rounds": 1, "status": "verified", "class": "codify_delay"},
+        {"id": "L_Q3_52", "reveal_round": "anchor_28_v0_1", "codify_round": "anchor_28_1_v0_1", "delay_transition_rounds": 1, "status": "verified", "class": "codify_delay"},
+        {"id": "L_Q3_53", "reveal_round": "anchor_28_v0_1", "codify_round": "anchor_28_1_v0_1", "delay_transition_rounds": 1, "status": "verified", "class": "codify_delay"},
+        {"id": "L_Q3_54", "reveal_round": "anchor_28_v0_1", "codify_round": "anchor_28_1_v0_1", "delay_transition_rounds": 1, "status": "verified", "class": "codify_delay"},
+        {"id": "L_Q3_55", "reveal_round": "anchor_28_1_v0_1", "codify_round": "anchor_28_2_v0_1", "delay_transition_rounds": 1, "status": "projected_to_verified_at_anchor_28_2_closure", "class": "codify_delay"},
+        {"id": "L_Q3_56", "reveal_round": "anchor_28_1_v0_1", "codify_round": "anchor_28_2_v0_1", "delay_transition_rounds": 1, "status": "projected_to_verified_at_anchor_28_2_closure", "class": "codify_delay"}
+      ]
+    },
+    "hard_cap_specification": {
+      "cap_value": 2,
+      "cap_form": "inclusive_less_than_or_equal_2_rounds",
+      "boundary_case_treatment": "delay_equals_2_acceptable_but_flagged_for_review",
+      "strict_fit_case_treatment": "delay_equals_1_canonical_no_flag"
+    },
+    "delay_metric_canonical": "transition_based_chain_depth_difference_forensic_chain_commits_between_reveal_anchor_and_codify_anchor",
+    "codify_disposition_decision": "anchor_29_defer_per_option_b_effective_reveal_redefine_l_q3_57_codify_anchor_28_2_to_anchor_29_1_round_delay_strict_fit_delay_1_less_than_cap_2_strict_inequality",
+    "dual_role": {
+      "data_point_role": "l_q3_57_codify_event_pattern_10_th_position_recursive_self_application_instance_anchor_28_2_to_29_1_round_delay_strict_fit_instance_added_to_instance_series",
+      "meta_codifier_role": "l_q3_57_1_round_delay_pattern_itself_codification_instances_1_to_9_data_points_subject_化_pattern_itself_formal_object_codify"
+    },
+    "recovery_delay_axis_separate": "f_28_4_codify_recovery_class_separate_axis_anchor_29_post_recovery_completion_codify_candidate_codify_delay_axis_distinct",
+    "review_wave_convergence_inheritance": "v1_v2_v3_v4_15_items_reflected_critical_1_medium_4_minor_10",
+    "post_dispatch_reference_candidate": {
+      "count": 1,
+      "candidate": "packet_3_revised_v4_section_4_line_2_inclusive_endpoints_除外_wording_minor_ambiguity",
+      "inscription_target": "l_q3_56_codify_artifact_section_3_7_tbd_post_dispatch_observed_instances",
+      "baseline_inclusion": false,
+      "stopping_condition_rationale": "packet_dispatch_lifecycle_finite_bound_endless_polish_loop_prevention_self_referential_application_finite_bound"
+    },
+    "three_axis_timestamp_pin": {
+      "first_observed": "2026-05-15_anchor_28_1_v0_1_round_1_round_delay_pattern_3_instances_accumulated_observation",
+      "first_inscribed_as_candidate_anchor_28_1": "anchor_28_1_v0_1_l_q3_55_candidate_manifest_record_one_round_delay_pattern_observation_field",
+      "first_inscribed_as_candidate_anchor_28_2": "anchor_28_2_v0_1_packet_3_revised_v4_tier_3_evaluation_framework_plus_input_files_pin_l_q3_57_candidate_manifest_record_field_this_section",
+      "first_codified_scheduled": "anchor_29_per_option_b_effective_reveal_redefine_anchor_28_2_to_anchor_29_1_round_delay_strict_fit"
+    },
+    "proposal_b_compliance": "anchor_28_2_artifacts_immutable_preserve_l_q3_57_formal_codification_inscription_in_anchor_29_subsequent_round_artifact"
+  },
+  "phase_progression_status_at_input_files_pin_inscribe": {
+    "phase_alpha_declaration": {"status": "verified_pass", "verify_ts": "2026-05-16T15:49:48+09:00"},
+    "phase_beta_lessons_appendix_initial": {"status": "verified_pass_initial_draft", "verify_ts": "2026-05-16T15:57:30+09:00"},
+    "phase_beta_lessons_appendix_revise": {"status": "scheduled_axis_b_3_anchor_28_1_lessons_appendix_alignment_pending_supply"},
+    "phase_gamma_1_input_files_pin": {"status": "in_progress_this_artifact_parallel_execution_during_lessons_appendix_supply_wait"},
+    "phase_gamma_2_verification_log": {"status": "pending_post_phase_gamma_1"},
+    "phase_delta_envelope": {"status": "pending_post_phase_gamma_2"},
+    "phase_epsilon_commit": {"status": "pending_post_phase_delta_all_in_one_single_commit_per_anchor_28_1_precedent"}
+  },
+  "options_inherited_from_anchor_28_1_v0_1_round_closure": {
+    "option_a_l_q3_54_default_iii_equals_method": true,
+    "option_b_l_q3_55_anchor_28_2_codify_plus_option_ii_anchor_28_1_section_6_5_manifest_entry": true,
+    "proposal_a_l_q3_54_default_iii_equals_method": true,
+    "proposal_b_retroactive_amendment_explicit_prohibition": true,
+    "proposal_c_as_6_parallel_axis": true,
+    "anchor_28_1_inherited_option_gamma_in_pdf_amendment_inscription_acceptance": true
+  },
+  "options_decided_in_anchor_28_2_v0_1_round": {
+    "tier_1_parallel_codify_l_q3_55_plus_l_q3_56_single_commit_atomic": true,
+    "path_a_scope_beta_4_artifacts_3_path_a_overwrite_plus_1_edit_tool_8_directive_surgical": true,
+    "c_1_separate_logical_partitioning_lessons_appendix": true,
+    "alpha_instance_based_enumeration_8_instances_individual": true,
+    "single_commit_assumption_per_anchor_28_1_precedent": true,
+    "gate_c_a_phase_1_search_post_tier_1_codify": true,
+    "gate_c_b_both_parallel_a_b_a_priority": true,
+    "l_q3_57_codify_timing_option_b_anchor_29_defer_effective_reveal_redefine": true,
+    "recovery_delay_axis_separate_evaluation": true,
+    "dispatch_path_a_claude_ai_container_byte_canonical_generation_present_files_binary_download_windows_transfer_claude_code_verify": true,
+    "review_wave_v4_converged_15_items_reflected": true
+  },
+  "bilateral_channel_workflow_state": {
+    "claude_ai_side_role": "dispatch_packet_authoring_byte_canonical_artifact_generation_path_a_canonical_execution",
+    "claude_code_side_role": "windows_local_fs_destination_canonical_verify_paired_sync_verify_relay_protocol_execute",
+    "review_wave_history": "v1_v2_v3_v4_4_waves_15_items_total_critical_1_medium_4_minor_10",
+    "convergence_state": "v4_converged_final_candidate_locked_post_dispatch_reference_candidate_1_section_4_line_2_wording",
+    "phase_progression_per_path_a": "alpha_declaration_beta_lessons_gamma_input_files_pin_verification_log_delta_envelope_epsilon_commit"
+  },
+  "remote_sync_state_pre_anchor_28_2_inscribe": {
+    "repo": "sguccibnr32-creator/Public",
+    "origin_main_sha": "cc35c0983e8b8baaafa5d83689d69a31f880e38f",
+    "remote_tag_obj_sha": "a873e8785c55d17fafa56d06320a4daea27ffb28",
+    "remote_tag_peeled_sha": "cc35c0983e8b8baaafa5d83689d69a31f880e38f"
+  },
+  "anchor_28_2_v0_1_target_tag": {
+    "annotated_tag_name": "companion-v4.9-q9-codify-round-2026-05-16",
+    "expected_state": "to_be_inscribed_post_commit_with_rule_92_strict_no_force_no_all_no_tags_no_mirror"
+  },
+  "rule_compliance_attest": {
+    "rule_1_immutable_preservation": "strict",
+    "rule_6_forensic_chain_protect": "strict_depth_8_to_9",
+    "rule_92_strict_no_destructive_flag": "to_be_attested_at_inscribe",
+    "proposal_b_retroactive_amendment_prohibition": "strict_no_section11_section12_modification"
+  },
+  "author": "Sakaguchi Shinobu (sole author / 坂口製麺所 / 思想士)",
+  "license": "CC-BY 4.0"
+}
