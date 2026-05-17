@@ -1,0 +1,318 @@
+{
+  "metadata": {
+    "round": "anchor 28.4 v0.1",
+    "codify_date": "2026-05-17",
+    "author": "Sakaguchi Shinobu (saka_seimensho / 思想士) / 坂口製麺所",
+    "license": "CC-BY 4.0",
+    "sibling_artifacts": [
+      "anchor_28_4_v0_1_declaration.md",
+      "anchor_28_4_v0_1_lessons_appendix.md",
+      "anchor_28_4_v0_1_verification_log.md"
+    ],
+    "inscribe_target": "forensic_anchors/section15_lessons_codified_q11_v0_1/anchor_28_4_v0_1_input_files_pin.json",
+    "pattern_46_compliance": {
+      "no_bom": true,
+      "no_cr": true,
+      "lf_term": true,
+      "m4_strict_mode": true
+    }
+  },
+
+  "rule_1_immutable_preservation": {
+    "description": "rule 1 IMMUTABLE preservation cross-commit re-attest、anchor 28.4 v0.1 round で再 attest 済、anchor 28.x sub-version 系列全体で preserved",
+    "X1": {
+      "target": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+      "sha_256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "size_bytes": 9561,
+      "lf_count": 166,
+      "preservation_round_chain": [
+        "anchor 22 v0.2 (original inscribe)",
+        "anchor 23 v0.1 ~ anchor 28.4 v0.1 (cross-commit preserved)"
+      ]
+    },
+    "X2": {
+      "target": "latex_v48/membrane_v48.tex",
+      "sha_256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+      "preservation_round_chain": [
+        "anchor 22 v0.2 ~ anchor 28.4 v0.1 (cross-commit preserved)"
+      ]
+    }
+  },
+
+  "forensic_chain_pre_anchor_28_4": {
+    "description": "anchor 28.3 v0.1 round closure 時点での 10-deep IMMUTABLE LOCK-IN forensic chain、anchor 28.4 v0.1 round opening baseline、本 round commit 完遂時 chain depth は 11 に increment (anchor 28.4 v0.1 HEAD prepended)",
+    "depth_at_anchor_28_3": 10,
+    "chain": [
+      {
+        "position": 0,
+        "round": "anchor 28.3 v0.1",
+        "sha_256": "2de39308978befeb223c7356a691ab37fc83d559",
+        "tag": "companion-v4.9-q10-codify-round-2026-05-17",
+        "tag_obj_sha": "dd91c8861c14ef5c2436cf3e0c73a36c1ac666a1",
+        "section_dir": "forensic_anchors/section14_lessons_codified_q10_v0_1/"
+      },
+      {
+        "position": 1,
+        "round": "anchor 28.2 v0.1",
+        "sha_256": "4ab9d0d515a29cc2451bd7014c1d6551206db2aa",
+        "section_dir": "forensic_anchors/section13_lessons_codified_q9_v0_1/"
+      },
+      {
+        "position": 2,
+        "round": "anchor 28.1 v0.1",
+        "sha_256": "cc35c0983e8b8baaafa5d83689d69a31f880e38f",
+        "section_dir": "forensic_anchors/section12_lessons_codified_q8_v0_1/"
+      },
+      {
+        "position": 3,
+        "round": "anchor 28 v0.1",
+        "sha_256": "cf834ea49ea5cc5657ea8601c05f44f4464ba740",
+        "section_dir": "forensic_anchors/section11_lessons_codified_q7_v0_1/"
+      },
+      {
+        "position": 4,
+        "round": "anchor 27 v0.1",
+        "sha_256": "0fe208e0937764617932727e88967b7ac083e1da",
+        "section_dir": "forensic_anchors/section10_lessons_codified_q6_v0_1/"
+      },
+      {
+        "position": 5,
+        "round": "anchor 26 v0.1",
+        "sha_256": "d0e5d2e1940fbd516fdcb0a1ffb06be736c66d29"
+      },
+      {
+        "position": 6,
+        "round": "anchor 25 v0.1",
+        "sha_256": "d3920ca4458ed788af90f542aabaf248077ce707"
+      },
+      {
+        "position": 7,
+        "round": "anchor 24 v0.1",
+        "sha_256": "cbc270041c7627b95e90399dc8a9eaee4f3cc8e1"
+      },
+      {
+        "position": 8,
+        "round": "anchor 23 v0.1",
+        "sha_256": "3aef5142167f993f2ba8a6f67d9b925c1252cc4b"
+      },
+      {
+        "position": 9,
+        "round": "anchor 22 v0.2 (root)",
+        "sha_256": "491ff34cce22040e052f226e64adddc1669ea1b4",
+        "note": "forensic chain root、X1 rule 1 IMMUTABLE inscribe round"
+      }
+    ]
+  },
+
+  "anchor_28_3_v0_1_section14_inscribed_artifacts": {
+    "description": "anchor 28.3 v0.1 round inscribed 4 artifacts、本 round (28.4) で IMMUTABLE preservation re-attest、特に lessons_appendix は trio 2nd instance (L-Q3-57) 内包",
+    "section_dir": "forensic_anchors/section14_lessons_codified_q10_v0_1/",
+    "artifacts": {
+      "declaration_md": {
+        "filename": "anchor_28_3_v0_1_declaration.md",
+        "sha_256": "d91f4bc51dd831423171a3f05aa139c53cd6dc44d34dffe44e228cefc37b9e6a",
+        "size_bytes": 17928,
+        "lf_count": 316
+      },
+      "lessons_appendix_md": {
+        "filename": "anchor_28_3_v0_1_lessons_appendix.md",
+        "sha_256": "8bf703023604322becab2d3610f6a3998da0056cbabf64cf3e7744cfde4376fb",
+        "size_bytes": 31735,
+        "lf_count": 560,
+        "trio_2nd_instance_locus": "§9 L-Q3-57 entry (lines 378-520、144 lines / 9756 UTF-8 bytes)",
+        "verified_at": "anchor 28.4 v0.1 packet 17 L-Q3-57 extract dispatch (SHA + size + Pattern 46 (a)(b)(c) all True)"
+      },
+      "input_files_pin_json": {
+        "filename": "anchor_28_3_v0_1_input_files_pin.json",
+        "sha_256": "b93d6bb15f6e541227deede5a1397acf0e167d0c8ccb680a1ff6ec5b2f4b3431",
+        "size_bytes": 49715,
+        "lf_count": 623,
+        "inherited_pattern_source": "本 file 内 self-entry が anchor 28.4 v0.1 input_files_pin.json self-entry の inherited pattern reference (anchor 28.2 v0.1 経由)"
+      },
+      "verification_log_md": {
+        "filename": "anchor_28_3_v0_1_verification_log.md",
+        "sha_256": "abbb3c45a0650446fafbd1daea153eee604da9c1f0ca8784814bff59d75f6875",
+        "size_bytes": 37482,
+        "lf_count": 689
+      }
+    }
+  },
+
+  "anchor_28_4_v0_1_section15_inscribed_artifacts": {
+    "description": "anchor 28.4 v0.1 round で本 round 新規 inscribe される 4 artifacts、M4 strict mode bilateral verify protocol per canonical SHA lock-in、byte-write は packet 31+ で実施。self-entry (input_files_pin_json) は anchor 28.2/28.3 v0.1 inherited pattern adopt (chicken-egg avoidance discipline)",
+    "section_dir": "forensic_anchors/section15_lessons_codified_q11_v0_1/",
+    "artifacts": {
+      "declaration_md": {
+        "filename": "anchor_28_4_v0_1_declaration.md",
+        "canonical_sha_256": "eff2908fb5043affa89d16f0b7f34e02be3dfb56c9ef5e425b22d3d223a330b0",
+        "size_bytes": 16213,
+        "lf_count": 207,
+        "m4_cycle": "cycle 1 (packet 18 PASS lock-in)",
+        "extracted_file_locus": "C:\\Users\\sgucc\\anchor_28_4_v0_1_declaration_draft_v2_extracted.md"
+      },
+      "lessons_appendix_md": {
+        "filename": "anchor_28_4_v0_1_lessons_appendix.md",
+        "canonical_sha_256": "7e1fd7f9809e754930e990456ca89da6d63e2b22972d15c2c65e1a8a59e59d4b",
+        "size_bytes": 25456,
+        "lf_count": 276,
+        "m4_cycle": "cycle 2 (packet 21 PASS lock-in)",
+        "extracted_file_locus": "C:\\Users\\sgucc\\anchor_28_4_v0_1_lessons_appendix_draft_v1_extracted.md",
+        "trio_3rd_instance_locus": "§3 L-Q3-58 entry (trio formal inscription primary inscribe locus)"
+      },
+      "input_files_pin_json": {
+        "filename": "anchor_28_4_v0_1_input_files_pin.json",
+        "path": "forensic_anchors/section15_lessons_codified_q11_v0_1/anchor_28_4_v0_1_input_files_pin.json",
+        "sha256": "<self_reference_not_inscribable_chicken_egg_avoidance>",
+        "note": "self_sha_omitted_per_design_inherited_from_anchor_28_2_v0_1_input_files_pin_json_pattern",
+        "m4_cycle": "cycle 3-v3 (packet 27 expected lock-in)"
+      },
+      "verification_log_md": {
+        "filename": "anchor_28_4_v0_1_verification_log.md",
+        "canonical_sha_256": "<TBD_AT_M4_CYCLE_4_COMPLETION>",
+        "size_bytes": "<TBD>",
+        "lf_count": "<TBD>",
+        "m4_cycle": "cycle 4 (packet 29 expected lock-in)"
+      }
+    }
+  },
+
+  "trio_member_sha_pin": {
+    "description": "meta-recursive structure trio 3 instance の actual file SHA pin、lessons_appendix.md §3-4-2 trio member-by-member table の SHA backing、M2 self-audit checklist re-reference 時の SHA-based audit material、全 3 instance Pattern 46 (a)(b)(c) compliant",
+    "1st_instance": {
+      "lesson_id": "L-Q3-56",
+      "round": "anchor 28.2 v0.1",
+      "locus": "forensic_anchors/section13_lessons_codified_q9_v0_1/anchor_28_2_v0_1_verification_log.md §5.2",
+      "file_sha_256": "7eb462ae05731d680b44a47c9999f30a829832549214274e64674c45c2a0c17d",
+      "file_size_bytes": 30815,
+      "lf_count": 461,
+      "pattern_46_compliance": true,
+      "extract_origin": "anchor 28.4 v0.1 packet 23 Part B dispatch (SHA + size + Pattern 46 (a)(b)(c) all True、size 30815 B match expected)"
+    },
+    "2nd_instance": {
+      "lesson_id": "L-Q3-57",
+      "round": "anchor 28.3 v0.1",
+      "locus": "forensic_anchors/section14_lessons_codified_q10_v0_1/anchor_28_3_v0_1_lessons_appendix.md §9",
+      "file_sha_256": "8bf703023604322becab2d3610f6a3998da0056cbabf64cf3e7744cfde4376fb",
+      "file_size_bytes": 31735,
+      "entry_locus_in_file": "lines 378-520 (144 lines / 9756 UTF-8 bytes)",
+      "pattern_46_compliance": true,
+      "extract_origin": "anchor 28.4 v0.1 packet 17 L-Q3-57 extract dispatch (SHA + size + Pattern 46 + entry content all verified)"
+    },
+    "3rd_instance": {
+      "lesson_id": "L-Q3-58",
+      "round": "anchor 28.4 v0.1 (本 round で codify)",
+      "locus": "forensic_anchors/section15_lessons_codified_q11_v0_1/anchor_28_4_v0_1_lessons_appendix.md §3",
+      "file_sha_256": "7e1fd7f9809e754930e990456ca89da6d63e2b22972d15c2c65e1a8a59e59d4b",
+      "file_size_bytes": 25456,
+      "lf_count": 276,
+      "pattern_46_compliance": true,
+      "primary_inscribe_locus": true,
+      "note": "trio formal inscription primary inscribe locus、本 round で新規 inscribe、L-Q3-58 entry sub-section §3-4 内包、M4 cycle 2 (packet 21) canonical SHA lock-in"
+    }
+  },
+
+  "canonical_paths_sub_section": {
+    "description": "cluster D-P3 preventive measure per、主要 artifacts canonical path を SHA 並行 pin、後 round path-based reference lookup base、L-Q3-59 instance (ii) class residue (path mental-model 由来 mechanical inference) 防止",
+    "section_directory_canonical_inventory": {
+      "format": "section<N>_lessons_codified_q<N-4>_v0_<sub>",
+      "monotonicity_rule": "section(N) ↔ q(N-4) ↔ anchor(28.(N-11)) for anchor 28.x sub-version series",
+      "entries": [
+        {
+          "section": "section10_lessons_codified_q6_v0_1",
+          "q_tag": "q6",
+          "anchor_round": "anchor 27 v0.1",
+          "canonical_path": "forensic_anchors/section10_lessons_codified_q6_v0_1/"
+        },
+        {
+          "section": "section11_lessons_codified_q7_v0_1",
+          "q_tag": "q7",
+          "anchor_round": "anchor 28 v0.1",
+          "canonical_path": "forensic_anchors/section11_lessons_codified_q7_v0_1/"
+        },
+        {
+          "section": "section12_lessons_codified_q8_v0_1",
+          "q_tag": "q8",
+          "anchor_round": "anchor 28.1 v0.1",
+          "canonical_path": "forensic_anchors/section12_lessons_codified_q8_v0_1/"
+        },
+        {
+          "section": "section13_lessons_codified_q9_v0_1",
+          "q_tag": "q9",
+          "anchor_round": "anchor 28.2 v0.1",
+          "canonical_path": "forensic_anchors/section13_lessons_codified_q9_v0_1/"
+        },
+        {
+          "section": "section14_lessons_codified_q10_v0_1",
+          "q_tag": "q10",
+          "anchor_round": "anchor 28.3 v0.1",
+          "canonical_path": "forensic_anchors/section14_lessons_codified_q10_v0_1/"
+        },
+        {
+          "section": "section15_lessons_codified_q11_v0_1",
+          "q_tag": "q11",
+          "anchor_round": "anchor 28.4 v0.1 (本 round)",
+          "canonical_path": "forensic_anchors/section15_lessons_codified_q11_v0_1/",
+          "round_new": true
+        }
+      ]
+    },
+    "rule_1_immutable_paths": {
+      "X1": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+      "X2": "latex_v48/membrane_v48.tex"
+    },
+    "canonical_index_locus_anchor_28_4_v0_1": {
+      "description": "modify-3 option Y per、新 file 化せず declaration §3-4 内集約、本 round で canonical_index entries +3 (trio + naming convention + monotonicity rule)",
+      "physical_locus": "forensic_anchors/section15_lessons_codified_q11_v0_1/anchor_28_4_v0_1_declaration.md §3-4",
+      "entries_added_this_round": [
+        "§3-4-1 meta-recursive structure trio",
+        "§3-4-2 section directory naming convention",
+        "§3-4-3 section/q-tag/anchor monotonicity rule"
+      ]
+    },
+    "f_28_4_recovery_target": {
+      "description": "F-28.4-C out-of-repo IMMUTABLE pin sub-class 初 instance (anchor 28.3 v0.1 round 確定、本 round で preservation 維持)",
+      "path": "E:\\Q-3_route_ii_discovery_2026-05-07\\Q-3_immutable_hsc_values.draft.json",
+      "sha_256": "5d9beb04361e0b21f1b703e68ba90f8cbf28efbfa0ff56c84c9d4abffb048ef3",
+      "size_bytes": 11096,
+      "lf_count": 300,
+      "cr_count": 300,
+      "lf_term": false,
+      "bom": false,
+      "pattern_46_compliance": false,
+      "intentional_preserve": true,
+      "envelope_tracking": false
+    }
+  },
+
+  "envelope_post_update_slot": {
+    "description": "phase δ envelope updates 完遂後 final inscribe、本 draft では slot のみ、packet 41-42 で actual SHA inscribe",
+    "gitattributes": {
+      "sha_256": "<TBD_AT_PHASE_DELTA>",
+      "size_bytes": "<TBD>"
+    },
+    "sha256sums": {
+      "sha_256": "<TBD_AT_PHASE_DELTA>",
+      "size_bytes": "<TBD>"
+    }
+  },
+
+  "anchor_28_4_v0_1_round_specific": {
+    "description": "anchor 28.4 v0.1 round commit + tag + push 完遂後の round-specific metadata、本 draft では parent + target tag name のみ inscribe、actual HEAD + tag obj は phase ε 完遂後 (packet 43-44 想定) で final inscribe",
+    "parent_head": "2de39308978befeb223c7356a691ab37fc83d559",
+    "parent_round": "anchor 28.3 v0.1",
+    "target_tag_name": "companion-v4.9-q11-codify-round-2026-05-17",
+    "target_tag_day_cross_fallback": "companion-v4.9-q11-codify-round-2026-05-18",
+    "forensic_chain_target_depth": 11,
+    "head_slot": "<TBD_AT_PHASE_EPSILON>",
+    "tag_obj_sha_slot": "<TBD_AT_PHASE_EPSILON>",
+    "push_protocol": "rule 92 strict (no --force / no --all / no --tags / no --mirror)",
+    "review_protocol": "paranoid level (M1-M4 全 adopt)"
+  },
+
+  "closure_metadata": {
+    "draft_generation": "claude.ai-side packet 23-26 (2026-05-17、draft v1 → v2 → v3 progression)",
+    "bilateral_verify_protocol": "M4 strict mode (pre-write Pattern 46 再計算 + post-write SHA + Pattern 46 再 attest、byte-write 1 件ごと完全 isolation serialization)",
+    "m4_cycle_3_v3_dispatch": "packet 26 §6 PowerShell script、paste source location D:\\ドキュメント\\... (user workflow per default)",
+    "self_sha_handling": "inherited self_sha_omitted pattern (anchor 28.2/28.3 v0.1 input_files_pin.json precedent per)、self-entry (anchor_28_4_v0_1_section15_inscribed_artifacts.artifacts.input_files_pin_json) の sha256 field に placeholder + note inscribe、external SHA256SUMS で actual SHA track"
+  }
+}
