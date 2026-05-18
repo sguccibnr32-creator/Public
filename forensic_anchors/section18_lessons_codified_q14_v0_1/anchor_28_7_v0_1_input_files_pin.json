@@ -1,0 +1,196 @@
+{
+  "schema_version": "1.0",
+  "artifact_class": "input_files_pin",
+  "anchor": "28.7",
+  "version": "v0.2",
+  "phase": "Stage 2 cascade update (claude.ai-side emit, post path-1-recovery canonical establishment)",
+  "generation_ts": "2026-05-19T06:00:00+09:00",
+  "author": "Sakaguchi Shinobu (坂口忍) / 坂口製麺所",
+  "license": "CC-BY 4.0",
+
+  "parent": {
+    "anchor": "28.6 v0.1",
+    "HEAD": "2ca2c6d4eaf6d7ec3ad2c4b772e0dd9105dee6ed",
+    "tag_name": "companion-v4.9-q13-codify-round-2026-05-18",
+    "tag_obj": "11840914d33a78b47128cb3c60cfdcc87c463ae7",
+    "forensic_chain_depth_pre_commit": 13,
+    "forensic_chain_root": "491ff34c",
+    "forensic_chain_true_repo_init": "daf4fc6081958d169fcb8fdd16d6b982b4ab1565 (pre-linear-era, anchor 22 v0.2 起点 491ff34c の祖先, anchor 28.7 round paired sync 内 U.2 logic forensic で confirm; design intent root は 491ff34c で 不変)"
+  },
+
+  "design_state_lock": "Phase 1-4 finalized + locked (no further design change without Stage 1 re-open)",
+
+  "primary_task": [
+    "OL-14 nominal codify (agent-agnostic baseline reference miss class)",
+    "Pattern 47 inline codify (SHA/cryptographic hex equality ordinal discipline, 5A Decision)",
+    "4-layer audit structure formal codify (D-1/D-2/D-3/D-4 with P3 hybrid)",
+    "Phase 3 mitigation patterns M1-M5 codify"
+  ],
+
+  "stage_1_artifact": {
+    "name": "declaration.md v0.3",
+    "sha256": "1c26a9c1224fea373b986daa16f9560255a837c18600f1ec2e4b61d5621e6948",
+    "size_bytes": 16389,
+    "lf": 284,
+    "p46": "3/3",
+    "ascii_purity": "0 default-ignorable codepoints (Pattern 48 forward-gate verified)",
+    "status": "Stage 1 v0.3 canonical established (path 1 recovery, abandoned a0d3e3c9..)",
+    "provenance": "claude.ai-side reconstruction inline emit + Code-side Get-CanonicalAttest extended (Pattern 48 forward-applied)",
+    "abandoned_narrative_sha": "a0d3e3c98cd04cd6a6fec728cc5b0f93eb4c70829605e61a71ad073ff5c7d942 (handoff memo (6).txt §1.1 revoked, instance #10 forensic ground, Code-side filesystem NEVER materialized)",
+    "footnote_freeze": "applied per §B Option C boundary discipline (exception (a) trigger 後も recursion bounding logic preserve, Stage 1 reopen 不要 forward principle precedent 確立)"
+  },
+
+  "evidence_pins": {
+    "anchor_28_6_v0_1_verification_log_md": {
+      "sha256": "a95ec188e61809ca044889764cc8d8e2d56a720cd4cc4af3f4c4cb8bff547967",
+      "size_bytes": 14928,
+      "lf": 216,
+      "p46": "3/3",
+      "path": "forensic_anchors/section17_lessons_codified_q13_v0_1/anchor_28_6_v0_1_verification_log.md"
+    },
+    "anchor_28_5_v0_1_lessons_appendix_md": {
+      "sha256": "d573df177cdbc56a09ab6ed869e706ac6a6740c292f0b1a32f16f96129596549",
+      "size_bytes": 10649,
+      "lf": 180,
+      "p46": "3/3",
+      "path": "forensic_anchors/section16_lessons_codified_q12_v0_1/anchor_28_5_v0_1_lessons_appendix.md",
+      "note": "Pattern 47 critical canonical 64-hex pure ASCII (instance #3 U+00AD detect 後 Pattern 47 emergence source)"
+    },
+    "anchor_28_5_v0_1_verification_log_md": {
+      "sha256": "cdd8cce6c2959ce74e49f022c4de91454c27ec307ae3786844797956165938d9",
+      "size_bytes": 44733,
+      "lf": 534,
+      "p46": "3/3",
+      "path": "forensic_anchors/section16_lessons_codified_q12_v0_1/anchor_28_5_v0_1_verification_log.md",
+      "v0_2_backfill_note": "size_bytes + lf back-fill (Stage 3 v0.1 emit 時 minor 観察 ack 受領分, Option C freeze timing 内 absorb)"
+    },
+    "anchor_28_1_v0_1_verification_log_md": {
+      "sha256": "7181e3ef0de542f44c70cb4cc8aecab2da58439a49ff20d4431279143dea4997",
+      "size_bytes": 26274,
+      "lf": 421,
+      "p46": "3/3",
+      "path": "forensic_anchors/section12_lessons_codified_q8_v0_1/anchor_28_1_v0_1_verification_log.md"
+    }
+  },
+
+  "code_side_task_output_pins": {
+    "scope": "chat record digest (Stage 5 dispatch script v0.2 execution log + paired sync 11-gate extended verify paste-back integration)",
+    "paired_sync_verify_state": {
+      "overall": "10/11 PASS (state divergence 0, script encoding 2)",
+      "verify_ts": "2026-05-19T05:39:57+09:00 (InvariantCulture, Pattern 35)",
+      "u11_decl_v03_attest": "PASS (SHA 1c26a9c1.., size 16389, LF 284, P46 3/3, ASCII purity 0)",
+      "u2_gate": "FAIL semantic-only (script returns true-init daf4fc60 vs design intent 491ff34c reachable; state divergence 0)",
+      "working_tree": "WARN porcelain-default (untracked dir collapse; --untracked-files=all で expected file fully expand; state divergence 0)",
+      "cross_attest_outcome": "OVERALL PASS for state semantics; proceed permission granted for Stage 2 emit"
+    },
+    "script_anomalies_deferred_28_8": [
+      "U.2 gate logic: $commits[-1] computes true repo init (daf4fc60) instead of linear-era start (491ff34c); semantic-only mismatch, state divergence 0; recommended fix: distance(491ff34c, HEAD) == expected_codify_depth verify form",
+      "working_tree porcelain default: git status --porcelain (default --untracked-files=normal) summarizes single-file untracked dirs as dir-only; recommended fix: --untracked-files=all flag for fully expanded enumeration"
+    ],
+    "fix_target": "dispatch / verify script v0.3 (anchor 28.8 round, queue MEDIUM)"
+  },
+
+  "schema_compliance": {
+    "pattern_31": "UTF-8 no BOM / LF only / trailing LF mandatory (file-ize時 Save-CanonicalArtifact 経由)",
+    "pattern_35": "InvariantCulture binding for timestamp emission",
+    "pattern_39": "cwd_sync self-check + Tier 2 .NET BCL CWD sync (SetCurrentDirectory NEW applied 本 round)",
+    "pattern_46": "LF terminator + CR=0 + no BOM 3-counter (Get-CanonicalAttest built-in)",
+    "pattern_47": "SHA equality ordinal discipline ([String]::Equals Ordinal MANDATORY, PowerShell -eq PROHIBITED for hex/SHA)",
+    "pattern_48_candidate": "attestation provenance discipline forward-applied (ASCII purity = 0 required, narrative-only attestation prohibited; anchor 28.8 codify queue HIGH)"
+  },
+
+  "immutable_pins_carry": {
+    "X1": {
+      "sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "size_bytes": 9561,
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+      "scope": "SPECIAL pre-linear-era naming (F-27.4: section_N = anchor_N - 17 linear mapping は anchor 23+ 適用)",
+      "wrong_path_resolved": "forensic_anchors/section3_lessons_codified_q1_v0_2 (naming-inference fallback error class, memory entry 20 replace で永続 root-resolve 済)"
+    },
+    "X1_sibling": {
+      "sha256": "4df652d6daebc0d06a7fe4a8b5e6771ae8fe6bf049d3a421d440e759fecc0a7a",
+      "size_bytes": 9379,
+      "lf": 207,
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_lessons_appendix.md",
+      "blob_oid": "2c64f094994295b0eda5609161c1e7a180a97a98"
+    },
+    "X2": {
+      "sha256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+      "size_bytes": 118226,
+      "path": "latex_v48/membrane_v48.tex"
+    },
+    "F-28.4-C": {
+      "sha256": "5d9beb04361e0b21f1b703e68ba90f8cbf28efbfa0ff56c84c9d4abffb048ef3",
+      "size_bytes": 11096,
+      "path": "E:\\Q-3_route_ii_discovery_2026-05-07\\Q-3_immutable_hsc_values.draft.json",
+      "scope": "out-of-repo (HSC values draft, Phase Q verification baseline)"
+    }
+  },
+
+  "round_internal_instances_state": {
+    "total": 10,
+    "delta_from_v0_1": "+3 instances (#8 dispatch script v0.1 D-T axis B 10-site violation / #9 declaration v0.3 source availability gap / #10 narrative-only Stage 1 closure attestation, impact non-zero)",
+    "recursion_bounded_at": 5,
+    "bounding_logic": "C1 (#5 baseline reference miss resolved) / C2 (rectification = M3 execution, framework-internal, no new miss) / C3 (subsequent action references codified baseline cleanly); #6-#10 are independent observations outside recursion chain (no chain extension, recursion bounding logic preserved)",
+    "axis_distribution": {
+      "A": { "A-1": 9, "A-2": 1 },
+      "B": { "B-(i)": 1, "B-(ii)": 5, "B-(iii)": 2, "B-(iv)": 3, "note": "total 11 due to dual count for #7 (B-(i)/B-(ii)) and #10 (B-(iv))" },
+      "D": { "D-1b": 1, "D-2": 8, "D-4": 1 }
+    },
+    "d_2_dominance": "8/10 (80%) - L-Q3-60 dual-channel discipline operational central value 一層強化 (v0.1 5/7=71.4% から step-up)",
+    "option_c_exception_a_triggered": true,
+    "option_c_exception_a_resolution": "instance count > 8 strict TRIGGERED (count = 10); recursion bounding logic preserved (#5 で bounded、#6-#10 independent); Stage 1 reopen 不要、path 1 recovery で declaration v0.3 new canonical 確立 + Stage 2/4 v0.2 cascade update permit; forward principle precedent 確立 (anchor 28.7 round 初 operational scenario verified)"
+  },
+
+  "deferred_queue_state": {
+    "HIGH": [
+      "Pattern 48 candidate (attestation provenance discipline, NEW from 本 round instance #10 forensic ground; anchor 28.8 codify queue HIGH priority; rule: SHA/canonical attestation inscribe 時 actual Code-side execution paste-back forensic pointer 必須、grounding 無し narrative-only inscribe 禁止; relation: OL-14 instance #10 orthogonal Pattern 48)",
+      "paired sync U.9 broader transcription audit (Pattern 47 emergence cascade scope, past-round MEMORY.md / handoff memo SHA pin audit)"
+    ],
+    "MEDIUM_HIGH": [
+      "M3 short-cycle (<1-turn) refinement (3-tier discipline: long-context periodic + just-codified immediate + same-action iterative verify; evidence: instance #5 + #7 triangulation)",
+      "OL-16 candidate cluster formal codify (claude.ai-side measurement/estimation discipline class; members: F-α LF counting / size projection gap / length estimation gap / non-ASCII char injection)"
+    ],
+    "MEDIUM": [
+      "OL-15 candidate formal codify (anchor 28.6 §6.7 single-instance)",
+      "D-W / D-V / D-U (anchor 28.5 carry)",
+      "Non-ASCII char injection canonical hex pattern (OL-16 / F-α adjacent)",
+      "dispatch/verify script v0.3 (anchor 28.8): U.2 logic semantic fix (491ff34c reachable + distance verify form) + working_tree --untracked-files=all flag (script-encoding fixes, state divergence 0, captured from anchor 28.7 paired sync 11-gate verify paste-back)"
+    ],
+    "LOW": [
+      "D-Y (vlog dual-clause single-clause refactoring, 28.5 carry)",
+      "per-OL → L-Q3-59 sub-class fact-finding (28.6 §2.3 deferral)",
+      "2-instance paste-back-without-instruction pattern (D-4 adjacent)",
+      "Pattern axis canonical accumulator file (forensic_anchors/pattern_axis_state.json)",
+      "broader MEMORY.md / handoff X1 path audit (28.8 round opening 時履行)"
+    ],
+    "resolved_in_28_7": [
+      "Code-side §B Option C boundary discipline codify (本 round §3.6 forward principle 化, exception (a) trigger operational scenario で initially verified; Stage 1 freeze + Stage 4 emit freeze + 3-condition exception trigger spec inscribe)"
+    ]
+  },
+
+  "cascade_update_record_v0_2": {
+    "base_version": "v0.1",
+    "base_generation_ts": "2026-05-18T22:55:00+09:00",
+    "update_scope": [
+      "stage_1_artifact: 5 fields canonical update (a0d3e3c9.. -> 1c26a9c1..) + 3 NEW fields (status / provenance / abandoned_narrative_sha)",
+      "evidence_pins: anchor_28_5_v0_1_verification_log_md size_bytes + lf back-fill (44733 B / 534 LF) per Stage 3 emit minor 観察 ack",
+      "evidence_pins: anchor_28_5_v0_1_lessons_appendix_md note inline (Pattern 47 emergence source)",
+      "code_side_task_output_pins: TBD placeholder -> chat record digest + paired sync verify state + script anomaly defer record",
+      "round_internal_instances_state: total 7 -> 10, axis distribution update (A/B/D), Option C exception (a) trigger record, delta_from_v0_1 inscribe",
+      "deferred_queue_state: HIGH に Pattern 48 candidate add (NEW), MEDIUM に dispatch/verify script v0.3 fix add (NEW), resolved_in_28_7 に Option C boundary discipline move",
+      "schema_compliance: pattern_48_candidate forward-applied note inline + pattern_39 Tier 2 BCL CWD sync note",
+      "parent: forensic_chain_true_repo_init (daf4fc60) note add (U.2 logic forensic, design intent root 491ff34c は 不変)"
+    ],
+    "preserve_scope": [
+      "schema_version / artifact_class / anchor / author / license byte-exact",
+      "parent block (HEAD / tag_name / tag_obj / depth / root) byte-exact (true_repo_init は additive note)",
+      "design_state_lock unchanged",
+      "primary_task array unchanged byte-exact",
+      "immutable_pins_carry byte-exact (X1 / X1_sibling / X2 / F-28.4-C)",
+      "Phase 1-4 design lock content unchanged"
+    ],
+    "path_1_recovery_completion": "declaration v0.3 1c26a9c1.. established + Code-side actual Get-CanonicalAttest extended grounded + Pattern 48 forward-gate ASCII purity = 0 verified + memo (6).txt §1.1 a0d3e3c9.. revocation complete; Pattern 48 candidate emergence + Option C exception (a) operational scenario verified の dual-yield",
+    "pattern_48_forward_application": "本 v0.2 emit 自体が Pattern 48 forward-applied artifact: ASCII purity 0 design (file-ize 後 Code-side verify 必須), narrative-only inscribe 排除 (全 SHA claim は actual Code-side paste-back grounded), abandoned_narrative_sha 明示 inscribe で provenance separation"
+  }
+}
