@@ -1,0 +1,101 @@
+{
+  "anchor": "28.6 v0.1",
+  "round": "Q13 codify",
+  "phase_state": "alpha-1.2 FULL CLOSURE (D-T + D-Z paired inscribe + atomic commit + Q13 tag + rule 92 strict push)",
+  "emit_date": "2026-05-18",
+  "author": "Sakaguchi Shinobu / 坂口製麺所 / 宍粟市",
+  "license": "CC-BY 4.0",
+
+  "input_files": {
+    "D-T": [
+      {
+        "name": "anchor_28_5_v0_1_verification_log.md",
+        "path": "forensic_anchors/section16_lessons_codified_q12_v0_1/anchor_28_5_v0_1_verification_log.md",
+        "sha256": "cdd8cce6c2959ce74e49f022c4de91454c27ec307ae3786844797956165938d9",
+        "size": 44733,
+        "lf_count": 534,
+        "p46": "3/3 (strict, LF-terminated UTF-8 no BOM)",
+        "scope": "section 6.7 forensic ground truth (bug 1/2/3 case studies source); section 5.2.2 L-Q3-59 sub-class taxonomy refinement codified entry (D-Z HARD-GATE G3 reference + cross-tab canonical source)"
+      }
+    ],
+    "D-X_absorbed_in_DT": {
+      "scope": "Pattern 35/39 amendment textual codification absorbed into D-T section 1.4",
+      "queue_marking": "D-X absorbed-in-D-T section 1.4 (cross-reference, not nominal close)",
+      "traceability": "queue history preserved for anchor 28.7+ reference"
+    },
+    "D-Z": [
+      {
+        "name": "anchor_28_5_v0_1_verification_log.md (section 5.2.2 cumulative-view canonical source)",
+        "path": "forensic_anchors/section16_lessons_codified_q12_v0_1/anchor_28_5_v0_1_verification_log.md",
+        "sha256": "cdd8cce6c2959ce74e49f022c4de91454c27ec307ae3786844797956165938d9",
+        "scope": "L-Q3-59 sub-class taxonomy refinement (cumulative as-of-28.5-close, IMMUTABLE) — HARD-GATE G3 baseline + cross-tab cell aggregate canonical"
+      },
+      {
+        "name": "section17 alpha-1.1 inscribed 4 artifacts (post-R1 strict P46)",
+        "scope": "HARD-GATE G2 verification target — D-T inscribed content carry-forward to alpha-1.2 atomic commit",
+        "artifacts": {
+          "declaration.md_alpha_1_1"      : "9a43738d027005755ab2eba1c06f19d7c2033a22d5c3bcccc5758cf92a50e139",
+          "lessons_appendix.md_alpha_1_1" : "48bf894691d28f7f69c91e495ac9170317a216e44301014c3fa1abad248516c1",
+          "input_files_pin.json_alpha_1_1": "39830719ed8bf39fbf208403a80486de6bf2e6fdebd2c00029eec7be01bd7c20",
+          "verification_log.md_alpha_1_1" : "d27dc5a23a34e877f62c5faa30aa9c4dc0a1e40d2496352b686b787de87637b1"
+        },
+        "note": "alpha-1.1 inscribed SHAs are pre-alpha-1.2-rewrite; alpha-1.2 final SHAs are post-atomic-commit (see verification_log section 3 + section 4.3)"
+      }
+    ]
+  },
+
+  "merge_arithmetic": {
+    "L-Q3-59_axis": {
+      "expected_cumul_28_5_close_total": 10,
+      "delta_28_6_round": 0,
+      "expected_cumul_28_6_close_total": 10,
+      "rationale": "section 6.4-6.7 self-correction observations are NOT promoted to L-Q3-59 sub-class instances (accuracy-guarantee posture: agent-process meta-recursive observations vs descriptive mental-model fill class are distinct semantic axes; formal authority for promotion deferred to anchor 28.7+ round)"
+    },
+    "OL_nominal_axis": {
+      "expected_cumul_28_5_close_total": 12,
+      "delta_28_6_round": 1,
+      "expected_cumul_28_6_close_total": 13,
+      "rationale": "OL-13 D-T alpha-1.1 promotion (candidate -> nominal); axis taxonomy framework definition itself, classified framework-external in L-Q3-59 cross-tab"
+    },
+    "candidate_carry_to_28_7": {
+      "OL-14": "agent-agnostic baseline reference miss class (instances: sections 6.1, 6.2, 6.4, 6.5, 6.6)",
+      "OL-15": "cross-artifact inscribed inconsistency class (instance: section 6.7)"
+    }
+  },
+
+  "immutable_pins_carry": {
+    "X1": {
+      "sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "path": "forensic_anchors/section3_lessons_codified_q1_v0_2/anchor_22_v0_2_input_files_pin.json",
+      "scope": "anchor 22 v0.2 input_files_pin (root)"
+    },
+    "X2": {
+      "sha256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+      "path": "latex_v48/membrane_v48.tex",
+      "scope": "membrane cosmology v48 manuscript"
+    },
+    "F-28.4-C": {
+      "sha256": "5d9beb04361e0b21f1b703e68ba90f8cbf28efbfa0ff56c84c9d4abffb048ef3",
+      "size": 11096,
+      "path": "E:\\Q-3_route_ii_discovery_2026-05-07\\Q-3_immutable_hsc_values.draft.json",
+      "scope": "out-of-repo IMMUTABLE pin"
+    }
+  },
+
+  "parent_baseline": {
+    "anchor": "28.5 v0.1",
+    "HEAD": "203ac68016bc4979ed11103918c153fa298f3166",
+    "Q12_tag_obj": "7980799f82bf1ab024e7d403318d42bed0676bc8",
+    "forensic_chain_depth_inherited": 12,
+    "chain_root": "491ff34c"
+  },
+
+  "scope_lock_inherited_and_augmented": [
+    "section16 4 paired + 2 envelope artifacts canonical SHA: LOCKED preserve (28.5 inheritance)",
+    "OL-1 through OL-13 (OL-13 nominal post-D-T alpha-1.1): D-Z alpha-1.2 cross-tab population reference, per-cell aggregate only, specific OL -> cell mapping is anchor 28.7+ formal fact-finding scope",
+    "input_files_pin TBD 11 entries + verification_log section 5 self-row TBD 3 entries: in-repo immutable (28.5 inheritance)",
+    "rule 92 strict push: applied at alpha-1.2 (no --force / --all / --tags / --mirror)",
+    "L-Q3-59 sub-class taxonomy (28.5 vlog 5.2.2 canonical): preserve identical, delta this round = 0 (accuracy-guarantee posture)",
+    "section 6.4-6.7 self-correction observations: inscribed as audit observations only, NOT promoted to L-Q3-59 sub-class instance"
+  ]
+}
