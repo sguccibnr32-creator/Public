@@ -1,0 +1,282 @@
+{
+  "schema_version": "v0.1",
+  "anchor_round": "28.9",
+  "q_codify_round": "Q16",
+  "round_phase": "Stage 2 - input_files_pin v0.1",
+  "generation_ts": "2026-05-19T11:35:45+09:00",
+  "ts_culture": "InvariantCulture",
+  "author": "Sakaguchi Shinobu / Sakaguchi-Seimensho / Shiso City, Hyogo",
+  "license": "CC-BY 4.0",
+  "project": "forensic anchor chain (Public repo sguccibnr32-creator/Public)",
+
+  "parent_anchor": {
+    "round": "28.8",
+    "version": "v0.1",
+    "head_sha": "117d9eef798f9ba46ebf7462d7b4e9726a08688e",
+    "parent_head_sha": "838492bba87acf71f50a4d0ab6d39d45de2d2409",
+    "q_tag_name": "companion-v4.9-q15-codify-round-2026-05-19",
+    "q_tag_obj": "030ee786524922a42d261fb24c26f3058f01d57e",
+    "q_tag_peel": "117d9eef798f9ba46ebf7462d7b4e9726a08688e",
+    "q_tag_type": "tag (annotated)",
+    "closure_ts": "2026-05-19T09:58:27+09:00",
+    "framework_state_inherited": [
+      "Pattern 48 (attestation provenance discipline) v0.1 canonical",
+      "Pattern 49 (post-state-mutation actual-state verify discipline) v0.1 canonical",
+      "Pattern 48+49 sibling pair (attestation grounding pair) integrated",
+      "dispatch/verify script v0.3 5-item fix scope operational verified",
+      "4-instance operational template dataset A-D",
+      "framework self-validation precedent 28.7 inherited + 28.8 extended"
+    ]
+  },
+
+  "section19_28_8_artifacts": {
+    "directory": "forensic_anchors/section19_lessons_codified_q15_v0_1/",
+    "immutable": true,
+    "retroactive_modification": "PROHIBITED",
+    "files": [
+      {
+        "name": "anchor_28_8_v0_1_declaration.md",
+        "sha256": "a007273dfb0547da73eef607f8c8bb30f260976949ec91a8a0160a24795eeca4",
+        "size_bytes": 15335,
+        "lf": 263,
+        "p46": "3/3",
+        "ascii_purity": 0
+      },
+      {
+        "name": "anchor_28_8_v0_1_input_files_pin.json",
+        "sha256": "32e4714b5796ea085890a0151185ef0b764443fefacbf8ebd1c6a06b0b8c93e6",
+        "size_bytes": 12593,
+        "lf": 274,
+        "p46": "3/3",
+        "ascii_purity": 0
+      },
+      {
+        "name": "anchor_28_8_v0_1_lessons_appendix.md",
+        "sha256": "d675915acea6b12f43a0aee8709ffc6e0772e4d64c6e150d97cf37cd3635a5f3",
+        "size_bytes": 31401,
+        "lf": 597,
+        "p46": "3/3",
+        "ascii_purity": 0
+      },
+      {
+        "name": "anchor_28_8_v0_1_verification_log.md",
+        "sha256": "9d51d43a53b7317339a8c222c08c419656dff745c84b1c59f509fa9d7c8cff7e",
+        "size_bytes": 26727,
+        "lf": 522,
+        "p46": "3/3",
+        "ascii_purity": 0
+      }
+    ]
+  },
+
+  "envelope_post_28_8_closure": {
+    "gitattributes": {
+      "sha256": "f17b7b7a9da01e60296e7128d0780015157fdc65bd65b606b8a583a3525c668e",
+      "size_bytes": 2722,
+      "note": "section19 -text directive added in 28.8 Stage 5"
+    },
+    "sha256sums": {
+      "sha256": "d2788f640061934da3d5558a82a2a1595867b5fbddd6a80d0a5fcabceed19cc3",
+      "size_bytes": 14791,
+      "entries": 114,
+      "note": "documented baseline drift +19 (28.7-28.8 carry-over, 28.9 §4.1 Tier 3 + OL-16 cluster member 5 cross-cluster audit candidate)"
+    }
+  },
+
+  "immutable_pins": {
+    "rule_1_carry": true,
+    "byte_exact_preserved": true,
+    "pins": [
+      {
+        "id": "X1",
+        "sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+        "size_bytes": 9561,
+        "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+        "note": "SPECIAL pre-linear-era naming (F-27.4: section_N = anchor_N - 17 linear mapping は anchor 23+ 適用)"
+      },
+      {
+        "id": "X1_sib",
+        "sha256": "4df652d6daebc0d06a7fe4a8b5e6771ae8fe6bf049d3a421d440e759fecc0a7a",
+        "size_bytes": 9379,
+        "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_lessons_appendix.md"
+      },
+      {
+        "id": "X2",
+        "sha256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+        "size_bytes": 118226,
+        "path": "latex_v48/membrane_v48.tex"
+      },
+      {
+        "id": "F-28.4-C",
+        "sha256": "5d9beb04361e0b21f1b703e68ba90f8cbf28efbfa0ff56c84c9d4abffb048ef3",
+        "size_bytes": 11096,
+        "path": "E:\\Q-3_route_ii_discovery_2026-05-07\\Q-3_immutable_hsc_values.draft.json",
+        "scope": "out-of-repo (HSC values draft, Phase Q verification baseline)"
+      }
+    ]
+  },
+
+  "abandoned_narrative_sha": {
+    "sha256": "a0d3e3c98cd04cd6a6fec728cc5b0f93eb4c70829605e61a71ad073ff5c7d942",
+    "status": "NEVER materialize",
+    "reason": "memo (6).txt §1.1 narrative-only Stage 1 closure claim revoked, Pattern 48 emergence primary evidence",
+    "verification": "Code-side filesystem 5-root exhaustive search 0-match + past chat retrieval double-witness (anchor 28.7 + 28.8 で確定)",
+    "retroactive_modification": "PROHIBITED",
+    "inscribe_locations_28_9": [
+      "anchor_28_9_v0_1_declaration.md §4.4 + §9",
+      "anchor_28_9_v0_1_input_files_pin.json (本 entry)",
+      "anchor_28_9_v0_1_lessons_appendix.md (planned cross-reference)",
+      "anchor_28_9_v0_1_verification_log.md (planned cross-reference)"
+    ]
+  },
+
+  "stage_1_declaration_v0_1_canonical": {
+    "path": "forensic_anchors/section20_lessons_codified_q16_v0_1/anchor_28_9_v0_1_declaration.md",
+    "sha256": "a231c1bd825de7dd7ee80beec8b731d5cf60540791fc0d0b80583e9586444c8f",
+    "size_bytes": 16872,
+    "lf": 212,
+    "p46": "3/3",
+    "ascii_purity": 0,
+    "pattern_48_gate": "PASS",
+    "byte_pass_through_invariant": true,
+    "freeze_ts": "2026-05-19T11:27:02+09:00",
+    "ts_culture": "InvariantCulture",
+    "ol_16_discipline_application": "instance 1 (claude.ai-side pre-emission estimation 排除, Code-side actual probe paste-back grounded form, framework self-validation 28.9 round application instance 1 候補)"
+  },
+
+  "round_internal_instances_state": {
+    "current_count": 0,
+    "option_c_trigger_a_threshold": 8,
+    "option_c_trigger_a_status": "0/8 (clean, monitoring active for case-A configuration)",
+    "case_a_fallback_path": "round-internal >8 接近時 Option C exception (b) trigger 発動準備, case-B fallback (OL-15 28.10+ defer, OL-16 only codify) 確保",
+    "carry_from_28_7": [
+      "instance #10 (memo §1.1 narrative-only Stage 1 closure claim, Pattern 48 emergence primary evidence)",
+      "instance #11 (Stage 5 dispatch v0.2 commit failure + premature CLOSURE narrative, Pattern 49 emergence ground)"
+    ],
+    "carry_from_28_8": [
+      "framework self-validation 28.8 round-internal instance 1 (refined regex Stage 3 self-validate)",
+      "framework self-validation 28.8 round-internal instance 1.5 (verification_log recursive self-validate)",
+      "framework self-validation 28.8 round-internal instance 2 (Stage 5 P49 forward-gate operational verify)"
+    ]
+  },
+
+  "axis_arithmetic_pre_declare_case_a": {
+    "user_judgment_received": "2026-05-19 (case-A: OL-15 + OL-16 並行 codify, §B all-accept, v0.4 28.10+ defer, option-1)",
+    "ol_nominal": {
+      "parent": 14,
+      "target": 16,
+      "delta": "+2",
+      "rationale": "OL-15 (single-instance, 28.6 §6.7 carry) + OL-16 (cluster 5-member) 並行 codify"
+    },
+    "pattern_axis": {
+      "parent": 49,
+      "target": 49,
+      "delta": 0,
+      "rationale": "Pattern 48+49 28.8 codify済, 本 28.9 round Pattern 新規 codify 不在"
+    },
+    "l_q3_59": {
+      "parent": 10,
+      "target": "TBD (+N)",
+      "delta": "+N",
+      "rationale": "U.9 audit + OL-16 cluster + OL-15 codify から emerge する sub-class lesson 蓄積予定, Stage 3 lessons_appendix emit 時 final count fix"
+    },
+    "audit_layer": {
+      "parent": 4,
+      "target": 4,
+      "delta": 0,
+      "rationale": "preserve (D-1..D-4, 28.7 codify, D-W/D-V/D-U 28.5 carry は LOW defer)"
+    },
+    "m_axis": {
+      "parent": 5,
+      "target": 5,
+      "delta": 0,
+      "rationale": "preserve (M1..M5, M3 short-cycle refinement は MEDIUM_HIGH, instance triangulation cluster formation 候補)"
+    },
+    "forensic_chain": {
+      "parent": 15,
+      "target": 16,
+      "delta": "+1",
+      "rationale": "atomic commit + Q16 annotated tag + push (rule 92 strict), linear-era root 491ff34c.. preserved"
+    }
+  },
+
+  "deferred_queue_inheritance": {
+    "from_28_8_handoff_§6": {
+      "HIGH": [
+        "U.9 broader transcription audit (本 28.9 round primary task §4.1, 3-tier audit-trail forensic)",
+        "OL-16 candidate cluster formal codify (本 28.9 round primary task §4.2, case-A 並行 codify confirmed)"
+      ],
+      "MEDIUM_HIGH": [
+        "M3 short-cycle refinement (3-tier discipline, instance #5+#7+#11 triangulation, 本 round instance emergence 監視)",
+        "OL-15 candidate formal codify (本 28.9 round case-A 並行 codify confirmed, §4.3)"
+      ],
+      "MEDIUM": [
+        "dispatch/verify script v0.4 candidate refinement (28.10+ defer 確定, 本 declaration §7)",
+        "SHA256SUMS entry count baseline audit + metadata re-pin (本 §4.1 Tier 3 + §4.2 OL-16 member 5 cross-cluster 統合 audit scope)",
+        "D-W / D-V / D-U (28.5 carry, 本 round LOW defer)",
+        "Non-ASCII char injection canonical hex pattern (本 §4.2 OL-16 member 4 で codify scope に統合)"
+      ],
+      "LOW": [
+        "D-Y (vlog dual-clause refactoring)",
+        "per-OL → L-Q3-59 sub-class fact-finding (本 round で emerge した sub-class lesson 蓄積予定)",
+        "2-instance paste-back-without-instruction pattern (D-4 adjacent)",
+        "Pattern axis canonical accumulator file",
+        "broader MEMORY.md / handoff X1 path audit (本 §4.1 Tier 1 と adjacent scope)"
+      ],
+      "user_authorization_pending": [
+        "repository MEMORY.md anchor 28.8 closure entry inscribe direction (本 28.9 round 内で再 surface 予定, user direction received 後 specific inscribe direction provide)"
+      ]
+    }
+  },
+
+  "discipline_active": {
+    "pattern_31": "UTF-8 no BOM / LF only / trailing LF mandatory",
+    "pattern_32": "push wrap with $ErrorActionPreference='Continue' try/finally + 2>&1",
+    "pattern_35": "InvariantCulture binding for timestamp emission",
+    "pattern_39": "cwd_sync self-check (Tier 1 Set-Location + Tier 2 .NET BCL SetCurrentDirectory)",
+    "pattern_46": "LF terminator + CR=0 + no BOM 3-counter",
+    "pattern_47": "SHA equality discipline - [String]::Equals Ordinal MANDATORY",
+    "pattern_48": "attestation provenance discipline (28.8 FORMAL CODIFY)",
+    "pattern_49": "post-state-mutation actual-state verify discipline (28.8 FORMAL CODIFY)",
+    "rule_92": "strict push (forbidden flags: --force / --all / --tags / --mirror)",
+    "option_c_boundary": "declaration: Stage 1 freeze / input_files_pin+lessons_appendix+verification_log: Stage 4 v0.1 emit freeze",
+    "ol_16_pre_codify_application": "本 28.9 round Stage 1 から application (claude.ai-side pre-emission estimation 排除, Code-side actual probe paste-back grounded)"
+  },
+
+  "framework_self_validation_precedent_28_9_application_candidates": {
+    "instance_1_candidate": {
+      "origin": "Stage 1 file-ize sequence",
+      "codify_content": "OL-16 cluster member 1-3 (LF count / size projection / SHA pre-emission) discipline rule",
+      "self_validation_event": "本 declaration 自身が emit 時に SHA / size / LF の pre-emission estimate を意図的省略, Code-side paste-back を inscribe-time grounding source として使用",
+      "operational_scenario": "Stage 1 cross-attest §A.1 で OL-16 discipline 適用 3 field が Code-side probe grounded inscribe される form",
+      "verdict": "PASS (OL-16 codify 内容が同 round Stage 1 内 file-ize sequence で操作的 self-validate)",
+      "significance": "28.7 → 28.8 → 28.9 framework self-validation precedent continuous pattern 第 3 round 拡張, inscribe-time grounding sub-category の最初の self-validation instance"
+    },
+    "future_instance_candidates": [
+      "Stage 5 P49 forward-gate operational re-verify (per-round counter instance 1 with Stage 5 origin, 28.8 instance 2 inheritance demonstrate)",
+      "U.9 audit operational verify (Tier 1 drift detection scenario で codify content 自己適用)",
+      "OL-16 cluster member full inscribe content の同 round 内 operational verify (Stage 3 lessons_appendix 自己適用)"
+    ]
+  },
+
+  "cross_reference_block": {
+    "stage_1_declaration_v0_1": {
+      "path": "forensic_anchors/section20_lessons_codified_q16_v0_1/anchor_28_9_v0_1_declaration.md",
+      "sha256_short": "a231c1bd..",
+      "size_bytes": 16872,
+      "lf": 212
+    },
+    "parent_head_short": "117d9eef..",
+    "q15_tag_obj_short": "030ee786..",
+    "x1_sha_short": "435bf4b6..",
+    "abandoned_sha_short": "a0d3e3c9..",
+    "linear_era_root_short": "491ff34c..",
+    "f_28_4_c_sha_short": "5d9beb04..",
+    "gitattributes_sha_short": "f17b7b7a..",
+    "sha256sums_sha_short": "d2788f64..",
+    "byte_exact_consistent_with": [
+      "anchor_28_9_v0_1_declaration.md §2 + §3 + §4.4",
+      "previous round handoff memo §3 (本 round opening paired sync 10/10 PASS で attest)"
+    ]
+  }
+}
