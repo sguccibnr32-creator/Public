@@ -1,0 +1,274 @@
+{
+  "anchor": "28.8",
+  "version": "v0.1",
+  "codify_Q": "Q15",
+  "round_opening_TS": "2026-05-19T<post-28.7-closure-paired-sync-10/10-PASS>+09:00",
+  "author": "Sakaguchi Shinobu (坂口忍) / 坂口製麺所 / 宍粟市 (Shisō City, Hyogo)",
+  "license": "CC-BY 4.0",
+  "file": "forensic_anchors/section19_lessons_codified_q15_v0_1/anchor_28_8_v0_1_input_files_pin.json",
+
+  "parent_anchor": {
+    "anchor": "28.7",
+    "version": "v0.1",
+    "Q": "Q14",
+    "status": "FULL CLOSURE (post-recovery, Pattern 48 + 49 forward-discipline operationally verified)",
+    "HEAD": "838492bba87acf71f50a4d0ab6d39d45de2d2409",
+    "grandparent_HEAD": "2ca2c6d4eaf6d7ec3ad2c4b772e0dd9105dee6ed",
+    "Q14_tag_obj": "b82490ccc39e008e52a2e07da1073d9abf41fbbf",
+    "Q14_tag_name": "companion-v4.9-q14-codify-round-2026-05-19",
+    "Q14_tag_type": "tag (annotated)",
+    "Q14_tag_peel": "838492bba87acf71f50a4d0ab6d39d45de2d2409",
+    "Q14_tag_peel_equals_HEAD": true,
+    "forensic_root": "491ff34cce22040e052f226e64adddc1669ea1b4",
+    "forensic_chain_depth": 14,
+    "forensic_chain_era": "linear-era"
+  },
+
+  "section18_artifacts": {
+    "directory": "forensic_anchors/section18_lessons_codified_q14_v0_1",
+    "scope": "anchor 28.7 v0.1 4 paired artifacts (immutable post-28.7-closure)",
+    "artifacts": [
+      {
+        "name": "anchor_28_7_v0_1_declaration.md",
+        "version": "v0.3",
+        "sha256": "1c26a9c1224fea373b986daa16f9560255a837c18600f1ec2e4b61d5621e6948",
+        "size_B": 16389,
+        "LF": 284,
+        "P46": "3/3",
+        "ascii_purity_total": 0,
+        "pattern_48_gate": "PASS"
+      },
+      {
+        "name": "anchor_28_7_v0_1_input_files_pin.json",
+        "version": "v0.2",
+        "sha256": "7731638621a669bee5524b939ef5cdf36471792da75af03b481b55673779e8af",
+        "size_B": 13224,
+        "LF": 196,
+        "P46": "3/3",
+        "ascii_purity_total": 0,
+        "pattern_48_gate": "PASS"
+      },
+      {
+        "name": "anchor_28_7_v0_1_lessons_appendix.md",
+        "version": "v0.1",
+        "sha256": "ed95b68c9e79c9a502618f090462d00a7e32a9b50320cf517d521e2fb03d0033",
+        "size_B": 26487,
+        "LF": 572,
+        "P46": "3/3",
+        "ascii_purity_total": 0,
+        "pattern_48_gate": "PASS"
+      },
+      {
+        "name": "anchor_28_7_v0_1_verification_log.md",
+        "version": "v0.2",
+        "sha256": "edae2b3b15614c69b62804738f15b80347ebbec6c6beeb15f103dbbf88215cb9",
+        "size_B": 48122,
+        "LF": 840,
+        "P46": "3/3",
+        "ascii_purity_total": 0,
+        "pattern_48_gate": "PASS"
+      }
+    ]
+  },
+
+  "envelope_parent_state": {
+    "scope": "post-28.7-closure state",
+    ".gitattributes": {
+      "sha256": "01934b6f3ea8444bebe5610a3f322f7f4f6c936de9f9cdf2760313a3ec436e2d",
+      "note": "section18 -text directive added in 28.7 Stage 5"
+    },
+    "SHA256SUMS": {
+      "sha256": "529ff14003fd21f9ef4e7d82613dfc0d502ee3fd459051b78a60eab9a81e828f",
+      "entries": 110,
+      "drift_note": "documented baseline drift +19 vs prior 87 claim, 28.8 audit candidate (§9 deferred_queue MEDIUM)"
+    }
+  },
+
+  "immutable_pins": {
+    "rule": "rule 1 carry, byte-exact preserved across all rounds",
+    "X1": {
+      "sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "size_B": 9561,
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+      "note": "SPECIAL pre-linear-era naming (F-27.4: section_N = anchor_N - 17 linear mapping for anchor 23+)"
+    },
+    "X1_sib": {
+      "sha256": "4df652d6daebc0d06a7fe4a8b5e6771ae8fe6bf049d3a421d440e759fecc0a7a",
+      "size_B": 9379,
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_lessons_appendix.md"
+    },
+    "X2": {
+      "sha256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+      "size_B": 118226,
+      "path": "latex_v48/membrane_v48.tex"
+    },
+    "F-28.4-C": {
+      "sha256": "5d9beb04361e0b21f1b703e68ba90f8cbf28efbfa0ff56c84c9d4abffb048ef3",
+      "size_B": 11096,
+      "path": "E:\\Q-3_route_ii_discovery_2026-05-07\\Q-3_immutable_hsc_values.draft.json",
+      "scope": "out-of-repo (HSC values draft, Phase Q verification baseline)"
+    }
+  },
+
+  "abandoned_narrative_sha": {
+    "sha256": "a0d3e3c98cd04cd6a6fec728cc5b0f93eb4c70829605e61a71ad073ff5c7d942",
+    "reason": "memo (6).txt §1.1 narrative-only Stage 1 closure claim revoked",
+    "materialization_status": "NEVER",
+    "detection_method": "Code-side filesystem 5-root exhaustive search 0-match + past chat retrieval double-witness",
+    "forensic_role": "instance #10 primary evidence, Pattern 48 emergence ground",
+    "inscribe_locations": [
+      "28.7 vlog §10.4.4 (parent inscribed)",
+      "28.8 declaration §4.4 + §9 (cross-reference)",
+      "28.8 lessons_appendix §4 (full forensic record, planned)",
+      "28.8 vlog §6.X11 (instance #10 full record, planned)"
+    ]
+  },
+
+  "stage_1_declaration_v0_1_canonical": {
+    "path": "forensic_anchors/section19_lessons_codified_q15_v0_1/anchor_28_8_v0_1_declaration.md",
+    "sha256": "a007273dfb0547da73eef607f8c8bb30f260976949ec91a8a0160a24795eeca4",
+    "size_B": 15335,
+    "LF": 263,
+    "CR": 0,
+    "BOM": false,
+    "LF_terminator": true,
+    "P46": "3/3",
+    "ascii_purity_total": 0,
+    "pattern_48_gate": "PASS",
+    "provenance": {
+      "emit_source": "claude.ai chat (anchor 28.8 round opening, Stage 1 draft emit)",
+      "file_ize_environment": "Claude Code (Windows) / Write tool",
+      "file_ize_grounding": "Code-side actual probe paste-back (extended canonical attest 11-field)",
+      "stage_1_closure_TS": "2026-05-19 (post-paired-sync-10/10-PASS)",
+      "freeze_status": "freeze@Stage1 per Option C boundary discipline §8",
+      "operational_note": "Write tool dual-channel verification: P31 compliant generation + PowerShell post-write byte pass-through, SHA invariant pre==post (a007273d..), normalization required=False. Pattern 48 inscribe-time discipline operational template."
+    }
+  },
+
+  "round_internal_instances_state": {
+    "carry_over_from_28_7": {
+      "total_instances_28_7": 11,
+      "axis_distribution_28_7_final": "A-1: 6, A-2: 2, B-(ii): 4, B-(iv): 1, C-1: 3, C-4: 1, D-2: 9, D-4: 1",
+      "key_instances_inscribed_28_8": [
+        {
+          "id": "instance #10",
+          "round_origin": "28.7",
+          "axis": "A-1 / B-(iv) / C-1 / D-2",
+          "manifestation": "Stage 1 v0.2 narrative-only closure attestation (memo (6).txt §1.1)",
+          "abandoned_SHA": "a0d3e3c98cd04cd6a6fec728cc5b0f93eb4c70829605e61a71ad073ff5c7d942",
+          "recovery": "path 1 (re-emit + new canonical 1c26a9c1..)",
+          "pattern_emergence": "Pattern 48 primary evidence"
+        },
+        {
+          "id": "instance #11",
+          "round_origin": "28.7",
+          "axis": "A-1/A-2 dual / B-(ii) / C-4 / D-2",
+          "manifestation": "Stage 5 dispatch v0.2 git commit -m + here-string PowerShell native arg split commit ABORT + Q14 tag misplaced + premature CLOSURE narrative",
+          "misplaced_tag_obj": "1612f854.. (initial, revoked)",
+          "recovery": "step A-F (DESTRUCTIVE remote tag delete authorized + git commit -F + Pattern 49 forward-gate)",
+          "post_recovery_tag_obj": "b82490ccc39e008e52a2e07da1073d9abf41fbbf",
+          "pattern_emergence": "Pattern 49 primary evidence + Pattern 48 secondary evidence"
+        }
+      ]
+    },
+    "round_28_8_instances": {
+      "count": 0,
+      "axis_distribution": "(initial state, will accumulate)"
+    }
+  },
+
+  "axis_arithmetic_for_stage_5_G3": {
+    "OL_nominal": {"from": 14, "to": 14, "delta": 0, "note": "preserve, OL-15 candidate codify は 28.9+ defer"},
+    "Pattern_axis": {"from": 47, "to": 49, "delta": 2, "note": "Pattern 48 + Pattern 49 dual codify"},
+    "L_Q3_59": {"from": 10, "to": 10, "delta": 0, "note": "preserve identical"},
+    "audit_layer": {"value": 4, "note": "preserve, D-1/D-2/D-3/D-4 with P3 hybrid"},
+    "M_axis": {"value": 5, "note": "preserve, M1-M5"},
+    "forensic_chain": {"from": 14, "to": 15, "delta": 1, "note": "Stage 5 atomic commit 時, linear-era root 491ff34c.. preserved"}
+  },
+
+  "deferred_queue_inheritance": {
+    "HIGH": [
+      "Pattern 48 codify (本 round primary task)",
+      "Pattern 49 candidate codify (本 round primary task)",
+      "U.9 broader transcription audit (28.7 carry)"
+    ],
+    "MEDIUM_HIGH": [
+      "OL-16 candidate cluster formal codify (measurement/estimation discipline)",
+      "M3 short-cycle refinement (3-tier discipline, instance #5+#7+#11 triangulation)"
+    ],
+    "MEDIUM": [
+      "OL-15 candidate formal codify (28.6 §6.7 single-instance, 28.9+ defer recommended)",
+      "D-W / D-V / D-U (28.5 carry)",
+      "Non-ASCII char injection canonical hex pattern (OL-16 / F-α adjacent)",
+      "dispatch/verify script v0.3 fix scope 5 items 履行",
+      "SHA256SUMS entry count baseline audit + metadata re-pin (+19 drift)"
+    ],
+    "LOW": [
+      "D-Y (vlog dual-clause refactoring)",
+      "per-OL -> L-Q3-59 sub-class fact-finding",
+      "2-instance paste-back-without-instruction pattern (D-4 adjacent)",
+      "Pattern axis canonical accumulator file",
+      "broader MEMORY.md / handoff X1 path audit"
+    ],
+    "user_authorization_pending": [
+      "repository MEMORY.md anchor 28.7 closure entry inscribe direction"
+    ]
+  },
+
+  "dispatch_verify_script_v0_3_fix_scope": [
+    "(1) U.2 logic semantic: distance(491ff34c.., HEAD) verify form (28.7 v0.2 $commits[-1] semantic 廃止)",
+    "(2) working_tree porcelain: --untracked-files=all flag MANDATORY",
+    "(3) section header regex: refined ^§\\d+\\.\\s (over-greedy ^§\\d+\\. 廃止)",
+    "(4) git commit -F <temp_file> with Pattern 31 byte-discipline (git commit -m + here-string PROHIBIT, PowerShell 5.1 native arg split 回避)",
+    "(5) post-commit Pattern 49 forward-gate ($new_head != $parent MANDATORY, 不成立時即時 HALT + diagnose forensic)"
+  ],
+
+  "option_C_boundary_discipline": {
+    "inherited_from": "anchor 28.7 v0.1 forward principle",
+    "freeze_scope": {
+      "declaration": "Stage 1 closure 時 freeze",
+      "vlog_input_files_pin_lessons_appendix": "Stage 4 v0.1 emit 時 freeze"
+    },
+    "exception_trigger_OR": [
+      "(a) round-internal instance count > 8",
+      "(b) Pattern 47 級 new operational discipline emergence",
+      "(c) Phase 1-4 design state lock 解除相当 change"
+    ]
+  },
+
+  "framework_self_validation_precedent": {
+    "inherited_from": "anchor 28.7 round",
+    "description": "anchor 28.7 round 内で codify した framework (OL-14 / Pattern 47 / 4-layer audit / Pattern 48 candidate / Pattern 49 candidate) が同 round Stage 5 自身の operational instance #11 detect + recovery で実機 self-validate された framework integrity strengthening precedent",
+    "permanent_record_scope": "anchor 28.8 round 以降 inherited (forensic chain integrity preserve)"
+  },
+
+  "discipline_active": {
+    "Pattern_31": "UTF-8 no BOM / LF only / trailing LF mandatory",
+    "Pattern_32": "push wrap with $ErrorActionPreference='Continue' try/finally + 2>&1",
+    "Pattern_35": "InvariantCulture binding for timestamp emission",
+    "Pattern_39": "cwd_sync (Tier 1 Set-Location + Tier 2 .NET BCL SetCurrentDirectory)",
+    "Pattern_46": "LF terminator + CR=0 + no BOM 3-counter",
+    "Pattern_47": "SHA equality discipline - [String]::Equals Ordinal MANDATORY, PowerShell -eq PROHIBITED for hex/SHA",
+    "Pattern_48": "attestation provenance discipline (28.7 candidate -> 28.8 codify HIGH, 本 round primary task)",
+    "Pattern_49": "post-state-mutation actual-state verify discipline (28.7 candidate -> 28.8 codify HIGH, 本 round primary task)",
+    "rule_92": "strict push (forbidden flags: --force / --all / --tags / --mirror)"
+  },
+
+  "cross_reference_block": {
+    "purpose": "context drift detection baseline (3-file source-of-truth byte-exact consistency)",
+    "consistency_with": [
+      "claude_ai_handoff_memo (8).txt §3 (parent baseline SHA pins)",
+      "claude_code_sync_memo (4).txt §2 (canonical pins)",
+      "anchor_28_7_v0_1_verification_scripts_report.pdf Chapter 6 (4 paired artifacts SHA + envelope SHA table)"
+    ],
+    "byte_exact_pins": [
+      "HEAD 838492bba87acf71f50a4d0ab6d39d45de2d2409",
+      "Q14 tag obj b82490ccc39e008e52a2e07da1073d9abf41fbbf",
+      "section18 4 SHAs (1c26a9c1.. / 77316386.. / ed95b68c.. / edae2b3b..)",
+      "envelope .gitattributes 01934b6f.. + SHA256SUMS 529ff140..",
+      "X1 435bf4b6.. / 9561 B",
+      "F-28.4-C 5d9beb04.. / 11096 B",
+      "abandoned a0d3e3c9.. (NEVER materialize)"
+    ]
+  }
+}
