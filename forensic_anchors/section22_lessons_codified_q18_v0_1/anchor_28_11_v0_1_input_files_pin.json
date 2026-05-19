@@ -1,0 +1,444 @@
+{
+  "schema_version": "0.1",
+  "artifact_identity": {
+    "anchor_id": "28.11",
+    "version": "v0.1",
+    "round_type": "codify_round_Q18",
+    "artifact_class": "input_files_pin",
+    "schema_form_basis": "28.10_J_input_files_pin_v0.1_13_key_strict_template_inheritance",
+    "section_directory": "forensic_anchors/section22_lessons_codified_q18_v0_1/",
+    "section_mapping_formula": "section_N = anchor 28.(N-11), inverse N = sub_round + 11, 28.11 -> section 22",
+    "Q_tag_pattern_28_series_verified": "Q_n = sub_round + 7 (Q18 -> 28.11)",
+    "target_tag_name": "companion-v4.9-q18-codify-round-2026-05-19",
+    "target_tag_date_assumption": "single-day_completion_2026-05-19_hardcoded_per_28.10_precedent",
+    "author": "Sakaguchi_Shinobu_坂口忍_坂口製麺所",
+    "location": "宍粟市_Shiso_City_Hyogo",
+    "license": "CC-BY_4.0",
+    "repository": "https://github.com/sguccibnr32-creator/Public",
+    "emit_ts_invariant_culture": "TBD_post_Stage_2_file_ize_attest"
+  },
+  "parent_baseline": {
+    "parent_anchor": "28.10_v0.1",
+    "parent_head": "6337aed7bb05455297dc4609194ee49d6ca64dbf",
+    "parent_q_tag_name": "companion-v4.9-q17-codify-round-2026-05-19",
+    "parent_q_tag_obj": "e5a283b72e83f0ce905c2d60d258d48fa0f49bfb",
+    "parent_q_tag_peel": "6337aed7bb05455297dc4609194ee49d6ca64dbf",
+    "parent_q_tag_type": "tag (annotated)",
+    "grand_parent_head": "924aa3fd92f198868ff086ec83552168825f6d9d",
+    "grand_parent_anchor": "28.9_v0.1",
+    "forensic_chain_linear_era_root": "491ff34cce22040e052f226e64adddc1669ea1b4",
+    "forensic_chain_current_depth": 17,
+    "forensic_chain_target_depth": 18,
+    "parent_chain_5_SHA_paste_back_grounded": [
+      {"position": "HEAD~0", "sha": "6337aed7bb05455297dc4609194ee49d6ca64dbf", "anchor": "28.10", "q_tag": "Q17"},
+      {"position": "HEAD~1", "sha": "924aa3fd92f198868ff086ec83552168825f6d9d", "anchor": "28.9",  "q_tag": "Q16"},
+      {"position": "HEAD~2", "sha": "117d9eef798f9ba46ebf7462d7b4e9726a08688e", "anchor": "28.8",  "q_tag": "Q15"},
+      {"position": "HEAD~3", "sha": "838492bba87acf71f50a4d0ab6d39d45de2d2409", "anchor": "28.7",  "q_tag": "Q14"},
+      {"position": "HEAD~4", "sha": "2ca2c6d4eaf6d7ec3ad2c4b772e0dd9105dee6ed", "anchor": "28.6",  "q_tag": "Q13"}
+    ],
+    "verification_ground": "Code_side_git_log_paste_back_grounded_declaration_§B.2_Pattern_48_forward_applied"
+  },
+  "immutable_pins_rule_1_carry": {
+    "X1": {
+      "sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "size_bytes": 9561,
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+      "note": "SPECIAL_pre_linear_era_naming_F_27_4_section_N_anchor_N_minus_17_linear_mapping_anchor_23_plus_applied_28_series_sub_round_extension_section_N_anchor_28_N_minus_11"
+    },
+    "X1_sib": {
+      "sha256": "4df652d6daebc0d06a7fe4a8b5e6771ae8fe6bf049d3a421d440e759fecc0a7a",
+      "size_bytes": 9379,
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_lessons_appendix.md"
+    },
+    "X2": {
+      "sha256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+      "size_bytes": 118226,
+      "path": "latex_v48/membrane_v48.tex"
+    },
+    "F_28_4_C": {
+      "sha256": "5d9beb04361e0b21f1b703e68ba90f8cbf28efbfa0ff56c84c9d4abffb048ef3",
+      "size_bytes": 11096,
+      "path": "E:\\Q-3_route_ii_discovery_2026-05-07\\Q-3_immutable_hsc_values.draft.json",
+      "scope": "out_of_repo_Phase_Q_verification_baseline_HSC_values_draft"
+    }
+  },
+  "abandoned_narrative_sha": {
+    "sha256": "a0d3e3c98cd04cd6a6fec728cc5b0f93eb4c70829605e61a71ad073ff5c7d942",
+    "reason": "memo_6_txt_§1.1_narrative_only_Stage_1_closure_claim_revoked",
+    "status": "NEVER_materialize",
+    "forensic_role": "Pattern_48_emergence_primary_evidence",
+    "carry_rounds": ["28.7", "28.8", "28.9", "28.10", "28.11"],
+    "discipline": "retroactive_modification_PROHIBITED",
+    "inscribe_locations_cumulative": [
+      "anchor_28.7_verification_log_§10.4.4_parent_inscribed",
+      "anchor_28.8_declaration_§4.4_+_§9",
+      "anchor_28.8_input_files_pin_abandoned_narrative_sha_entry",
+      "anchor_28.8_lessons_appendix_§1.6_+_§4.1_+_§4.4",
+      "anchor_28.8_verification_log_§5.1_+_§5.3",
+      "anchor_28.9_declaration_§4.4_+_§9",
+      "anchor_28.9_input_files_pin_abandoned_narrative_sha_entry",
+      "anchor_28.9_lessons_appendix_§5.1",
+      "anchor_28.9_verification_log_§6.1",
+      "anchor_28.10_declaration_§5.1",
+      "anchor_28.10_input_files_pin_abandoned_narrative_sha_entry",
+      "anchor_28.10_lessons_appendix_§5.1",
+      "anchor_28.10_verification_log_§9.1",
+      "anchor_28.11_declaration_§5.1",
+      "anchor_28.11_input_files_pin_abandoned_narrative_sha_entry_THIS_LOCATION"
+    ],
+    "permanent_inscribe_rationale": "forensic_chain_integrity_preserve"
+  },
+  "parent_section21_artifacts_28_10_immutable": {
+    "declaration_md": {
+      "path": "forensic_anchors/section21_lessons_codified_q17_v0_1/anchor_28_10_v0_1_declaration.md",
+      "sha256": "b106e0e78b02672f839198f23d91e65eb8c8c4c75fce52e7500c0b9177d9fed6",
+      "size_bytes": 14972,
+      "lf_count": 188,
+      "per_file_p46": "3/3",
+      "ascii_purity_total": 0,
+      "source_channel": "here-string",
+      "instance_label": "I_9th_dataset_member"
+    },
+    "input_files_pin_json": {
+      "path": "forensic_anchors/section21_lessons_codified_q17_v0_1/anchor_28_10_v0_1_input_files_pin.json",
+      "sha256": "bcde2c06087e21a799b7833955e781a1f6c709e7003ed130941453ec46546fd1",
+      "size_bytes": 12106,
+      "lf_count": 222,
+      "per_file_p46": "3/3",
+      "ascii_purity_total": 0,
+      "source_channel": "here-string",
+      "instance_label": "J_10th_dataset_member"
+    },
+    "lessons_appendix_md": {
+      "path": "forensic_anchors/section21_lessons_codified_q17_v0_1/anchor_28_10_v0_1_lessons_appendix.md",
+      "sha256": "a9dfa85c526cf19e731a346875a024052299dfe94f5bf7695305ea4beb5881da",
+      "size_bytes": 26985,
+      "lf_count": 335,
+      "per_file_p46": "3/3",
+      "ascii_purity_total": 0,
+      "source_channel": "here-string",
+      "instance_label": "K_11th_dataset_member_PRIMARY_CODIFY",
+      "primary_codify_scope": "M3_§1_+_OL_16_§1.7_main_rule_scope_昇格_§2_+_SHA256SUMS_metadata_reconcile_§3_+_framework_self_validation_28.10_application_§4_+_28.7_28.9_carry_forensic_§5_+_dispatch_v0.3_carry_+_v0.4_28.11_defer_§6_+_closing_§7"
+    },
+    "verification_log_md": {
+      "path": "forensic_anchors/section21_lessons_codified_q17_v0_1/anchor_28_10_v0_1_verification_log.md",
+      "sha256": "9254b1f9734b747aec051660140aa8bbbdf43d502ee348723895dbe2b7d7263e",
+      "size_bytes": 21219,
+      "lf_count": 305,
+      "per_file_p46": "3/3",
+      "ascii_purity_total": 0,
+      "source_channel": "here-string",
+      "instance_label": "L_12th_dataset_member_12_instance_dataset_完成"
+    },
+    "aggregate": {
+      "artifacts_pass": "4/4",
+      "per_file_p46_consistent": "3/3",
+      "ascii_purity_consistent": 0,
+      "source_channel_breakdown": "here_string_4_of_4",
+      "round_status": "FULL_CLOSURE_anchor_28.10_v0.1"
+    }
+  },
+  "envelope_post_28_10_closure": {
+    "gitattributes": {
+      "sha256_prefix": "49e8bef6",
+      "sha256_full": "FULL_SHA_TBD_Stage_2_§B_actual_measure",
+      "size_bytes": 2846,
+      "pre_28_10_S5_sha256": "49fc91d1edcdb1ca75d8d9244fab0b43222963672f07b3b0b2b79d65bbf9634c",
+      "pre_28_10_S5_size_bytes": 2784,
+      "delta_bytes": 62,
+      "delta_note": "section21_minus_text_directive_added_in_28.10_Stage_5"
+    },
+    "sha256sums": {
+      "sha256_prefix": "bfa0d8de",
+      "sha256_full": "FULL_SHA_TBD_Stage_2_§B_actual_measure",
+      "size_bytes": 16035,
+      "entries_total_non_empty_lines": 122,
+      "entries_sha_pin_lines": 103,
+      "entries_comment_header_lines": 19,
+      "arithmetic_verify": "103_plus_19_equals_122",
+      "arithmetic_status": "PASS_4_method_probe_grounded",
+      "pre_28_10_S5": {
+        "sha256": "941e1d16dcfa3134de4ad97bd212cfc8556db64c9b4fb868fe9c9f927bdcb55c",
+        "size_bytes": 15411,
+        "entries_total_non_empty_lines": 118,
+        "entries_sha_pin_lines": 99,
+        "entries_comment_header_lines": 19
+      },
+      "delta": "plus_4_entries_plus_624_bytes",
+      "ol_16_member_5_status": "operational_ground_continuation_28.10_SECONDARY_thematic_closure_preserved"
+    }
+  },
+  "stage_1_canonical_28_11": {
+    "sha256": "9d6873b84b57f1fdec381ca474c0aabf1265c6daed9699f48bb8481be20015f0",
+    "size_bytes": 20251,
+    "lf": 309,
+    "cr": 0,
+    "bom": false,
+    "lf_term": true,
+    "p46": "3/3",
+    "ascii_purity_total": 0,
+    "p48_gate": "PASS",
+    "emit_ts_invariant_culture": "2026-05-19T17:55:15+09:00",
+    "source_channel": "here_string_FINAL_write_System_IO_File_WriteAllBytes_Write_tool_intermediate_path",
+    "instance_label": "M_13th_dataset_member_28.11_round_1st",
+    "framework_self_validation_28_11_instance_1_PRIMARY_LOCKED": {
+      "axis": "observation",
+      "grade": "PRIMARY",
+      "cluster_member": "2_size_projection",
+      "ground_form": "3_channel_triple_ground",
+      "triple_ground_layer": {
+        "channel_1_claude_ai_estimation_pre_emit": {
+          "band_kb_min": 13.5,
+          "band_kb_max": 15.0,
+          "source": "28.10_instance_I_14972_B_precedent_grounded"
+        },
+        "channel_2_code_side_projection_pre_emit": {
+          "band_kb_min": 14.0,
+          "band_kb_max": 17.0,
+          "source": "table_density_+_SHA_64_char_x_16_occurrence_+_cross_ref_tables"
+        },
+        "channel_3_post_file_ize_attest": {
+          "actual_size_bytes": 20251,
+          "actual_size_kb": 20.251,
+          "third_ground_status": "grounded_post_attest_Pattern_48_forward_applied"
+        }
+      },
+      "delta_observation": {
+        "claude_ai_delta_vs_upper": "+5251_B_+35.0_percent",
+        "claude_ai_delta_vs_midpoint": "+5826_B_+40.9_percent",
+        "code_side_delta_vs_upper": "+3251_B_+19.1_percent",
+        "code_side_delta_vs_midpoint": "+4751_B_+30.6_percent",
+        "status": "BOTH_CHANNELS_UNDER_PROJECTED"
+      },
+      "projection_miss_factors_5_identified": [
+        "§B_section_4_subsection_expansion_28.10_precedent_§B.1_single_to_28.11_§B.1_to_§B.4_quad",
+        "§2.4_forensic_chain_parent_chain_5_SHA_enumerate_28.10_I_未展開",
+        "§1_Q_tag_pattern_note_+_single_day_completion_assumption_note_追加",
+        "§4.4_dispatch_v0.3_vs_verify_v0.3_explicit_context_annotation_M2_adoption",
+        "§3_axis_arithmetic_cross_ref_baseline_1_line_add_m3_adoption"
+      ],
+      "permanent_inscribe": "pre_emit_projection_forensic_preservation_form_retroactive_amendment_非適用_28.10_precedent_inheritance",
+      "L_Q3_60_candidate_seed": "size_projection_methodology_calibration_artifact_class_differential_adjustment_factors_Stage_3_lessons_appendix_codify_scope"
+    },
+    "enametoolong_headroom_actual": {
+      "threshold_kb": 30,
+      "actual_headroom_bytes": 9749,
+      "actual_headroom_percent": 32.5,
+      "source_channel_decision_rule_band": "(a)_under_27_KB_here_string_approach_band_preserved"
+    }
+  },
+  "round_internal_instance_state_28_11": {
+    "framework_self_validation_continuous_pattern_28_7_to_28_11": {
+      "28_7": "1_instance_#11_emergence_ground_dispatch_script_execute_Pattern_49_emergence",
+      "28_8": "3_instances_1_+_1.5_+_2_structural_verify_+_dispatch_script_execute",
+      "28_9": "3_instances_1_+_2_+_3_OL_16_cross_stage_+_SHA256SUMS_+_dispatch_v0.3",
+      "28_10": "4_instances_obs_axis_3_+_op_verify_axis_1_epistemic_category_differential_確立",
+      "28_11_target": "5_instances_obs_axis_3_carry_+_op_verify_axis_2nd_emergence",
+      "cumulative_target_across_5_rounds": 16
+    },
+    "framework_self_validation_28_10_LOCKED_carry": {
+      "observation_axis_3_LOCKED": [
+        {
+          "instance": 1,
+          "grade": "PRIMARY",
+          "cluster_member": "2_size_projection",
+          "ground": "double_ground_Stage_1_§B"
+        },
+        {
+          "instance": 2,
+          "grade": "SECONDARY",
+          "cluster_member": "5_SHA256SUMS_entries",
+          "ground": "single_ground_Stage_2_§B_4_method_probe_99_plus_19_equals_118"
+        },
+        {
+          "instance": 3,
+          "grade": "TERTIARY",
+          "cluster_member": "6_source_channel_projection",
+          "ground": "triple_ground_Stage_3_§B_main_rule_scope_昇格"
+        }
+      ],
+      "operational_verify_axis_1_LOCKED": [
+        {
+          "instance": 4,
+          "grade": "OPERATIONAL_VERIFY",
+          "scope": "dispatch_v0.3_quadruple_operational_+_Pattern_49_forward_gate_3_gate_suite_ALL_PASS_+_envelope_arithmetic_99_plus_19_equals_118_to_103_plus_19_equals_122_+_ASCII_purity_P30_0_violations"
+        }
+      ]
+    },
+    "framework_self_validation_28_11_emerged_+_candidates": {
+      "instance_1_PRIMARY_LOCKED": {
+        "axis": "observation",
+        "grade": "PRIMARY",
+        "cluster_member": "2_size_projection",
+        "stage": "Stage_1_declaration_§B",
+        "ground_form": "3_channel_triple_ground_post_attest_LOCKED",
+        "reference": "stage_1_canonical_28_11.framework_self_validation_28_11_instance_1_PRIMARY_LOCKED"
+      },
+      "instance_2_candidate_pending_Stage_2_attest": {
+        "axis": "observation",
+        "grade_candidate": "SECONDARY_or_PRIMARY",
+        "cluster_member": "2_size_projection_28.11_round_2nd_instance",
+        "stage": "Stage_2_input_files_pin_§B",
+        "ground_form_candidate": "3_channel_triple_ground_extend_to_4_channel_quadruple_ground_post_attest",
+        "channels": {
+          "channel_1_claude_ai_estimation_L_Q3_60_base_factor_1.10_to_1.20": "13.5_to_15.5_KB",
+          "channel_2_code_side_projection_draft_as_is_12_keys": "14_to_16_KB",
+          "channel_3_code_side_projection_M_fix_incorporated_13_keys_+_structural_restoration": "17_to_19_KB",
+          "channel_4_post_file_ize_attest_actual_size_TBD": "TBD"
+        },
+        "L_Q3_60_evidence_accumulation": "cluster_member_2_size_projection_instance_2_of_3_28.11_round_2nd_accumulation_2_round_cross_cluster_evidence_with_28.10_instance_1_PRIMARY",
+        "operational_refinement_finding": "L_Q3_60_candidate_factor_class_base_extrapolation_only_ではなく_round_specific_complexity_M_fix_scope_structural_reconciliation_needed_scale_にも_依存"
+      },
+      "operational_verify_axis_2nd_emergence_candidate": {
+        "scope": "U.9_Tier_1_per_SHA_pin_Pattern_47_Ordinal_compare_across_103_sha_pin_entries",
+        "method": "documented_SHA_vs_Get_FileHash_actual_SHA_via_String_Equals_StringComparison_Ordinal_MANDATORY",
+        "ground_form_candidate": "real_execution_paste_back_grounded",
+        "framework_role": "epistemic_category_differential_op_verify_side_1_to_2_instance_拡張",
+        "stage": "primary_task_scope_2_execution"
+      },
+      "epistemic_category_differential_strength": {
+        "28_10": "3_obs_to_1_op_verify_equals_3_to_1",
+        "28_11_target": "3_obs_carry_+_2_obs_28.11_emerged_to_2_op_verify_equals_5_to_2_or_3_to_2"
+      }
+    },
+    "primary_task_scope_option_B_case_B_preserve_heavy": {
+      "scope_1_cluster_member_axis_broader_iteration": {
+        "priority": "MEDIUM_HIGH",
+        "28_10_progress_carry": "3_of_6_member_2_size_+_member_5_SHA256SUMS_entries_+_member_6_source_channel",
+        "28_11_progression_target_band": "4_of_6_to_6_of_6_auxiliary_含む_5_of_5_+_member_axis_6_of_6_possible",
+        "remaining_candidate_members": [
+          "member_1_F_alpha_LF_counting",
+          "member_3_length_estimation",
+          "member_4_non_ASCII_char_injection",
+          "auxiliary_trailing_LF_append_count"
+        ],
+        "triangulation_threshold": "each_member_3_plus_instance_evidence_step_up",
+        "OL_16_basis": "§1.7_main_rule_scope_昇格_form_28.10_codified_operational_continuation"
+      },
+      "scope_2_U_9_Tier_1_actual_audit_execution": {
+        "priority": "MEDIUM",
+        "scope": "per_SHA_pin_Pattern_47_Ordinal_compare_across_103_sha_pin_entries",
+        "arithmetic_inscribe": "SHA256SUMS_122_equals_103_sha_pin_+_19_comment_header_grounded",
+        "framework_role": "operational_verify_axis_2nd_instance_emergence_候補",
+        "28_11_target": "5_instance_framework_establishment_from_28.10_4_instance_baseline"
+      }
+    }
+  },
+  "axis_arithmetic_case_b": {
+    "form_classification": "case_B_preserve_heavy_28.10_precedent_inheritance",
+    "deltas": {
+      "ol_nominal": {
+        "parent": 16,
+        "target": 16,
+        "delta": "preserve",
+        "rationale": "OL_16_§1.7_main_rule_scope_昇格_form_28.10_codified_operational_continuation_no_new_OL_class_introduction_28.11_round"
+      },
+      "m_axis": {
+        "parent": 5,
+        "target": 5,
+        "delta": "preserve",
+        "rationale": "M3_short_cycle_refinement_3_tier_discipline_28.10_codified_no_new_M_class_introduction_28.11_round"
+      },
+      "pattern_axis": {
+        "parent": 49,
+        "target": 49,
+        "delta": "preserve",
+        "rationale": "Pattern_30_to_49_全_active_preserve_no_new_Pattern_class_codify_28.11_round_dispatch_v0.4_candidate_refinement_28.12_plus_defer"
+      },
+      "forensic_chain": {
+        "parent": 17,
+        "target": 18,
+        "delta": "plus_1",
+        "rationale": "anchor_28.11_v0.1_atomic_commit_+_Q18_annotated_tag_+_main_push_+_tag_push_Pattern_49_forward_gate_3_gate_suite"
+      },
+      "audit_layer": {
+        "parent": 4,
+        "target": 4,
+        "delta": "preserve",
+        "rationale": "audit_layer_4_Stage_1_attest_+_Stage_2_attest_+_Stage_3_attest_+_Stage_4_attest_+_Stage_5_dispatch_post_S5_全_layer_preserve"
+      },
+      "l_q3_59_cumulative": {
+        "parent": "deferred",
+        "target": "deferred_+_L_Q3_60_candidate_inscribe_Stage_3",
+        "delta": "deferred_preserve_+_new_candidate_L_Q3_60",
+        "rationale": "L_Q3_59_28.11_round_履行_非対象_carry_+_L_Q3_60_size_projection_methodology_calibration_28.11_Stage_3_lessons_appendix_codify_候補"
+      }
+    },
+    "stage_5_g3_hard_gate_target": "6_of_6_PASS_28.10_precedent_inheritance"
+  },
+  "deferred_queue_28_11_carry": {
+    "MEDIUM_HIGH_active_28_11_primary_scope_1": [
+      "cluster_member_axis_broader_iteration_継続_member_1_F_alpha_LF_+_member_3_length_+_member_4_non_ASCII_+_auxiliary_trailing_LF_append_progression_candidate"
+    ],
+    "MEDIUM_active_28_11_primary_scope_2_+_op_verify_axis_2nd_emergence": [
+      "U.9_Tier_1_actual_audit_execution_per_SHA_pin_Pattern_47_Ordinal_compare_103_sha_pin_entries"
+    ],
+    "deferred_to_28_12_plus_timing_non_critical": [
+      "dispatch_v0.4_candidate_refinement_12_instance_evidence_continuous_valid_dedicated_round_baseline_shift_isolate",
+      "case_D_3_scope_form_inaugural_検証_light_context_round_先行_prototype",
+      "cumulative_cross_round_counter_formal_codify_per_round_counter_restart_代替_axis_cumulative_16_instances_across_5_rounds_target",
+      "SHA256SUMS_metadata_baseline_value_cascade_verify_discipline_28.10_122_103_19_grounded_form_確立"
+    ],
+    "L_Q3_60_candidate_new_28_11_round_seed": {
+      "title": "size_projection_methodology_calibration",
+      "finding": "28.10_precedent_base_declaration_class_under_predicts_25_to_35_percent_for_§B_expansion_cross_ref_enrichment_rounds",
+      "evidence_basis_28_11_Stage_1": "actual_20251_B_vs_claude_ai_estimation_13.5_to_15_KB_+35.0_percent_+_code_side_projection_14_to_17_KB_+19.1_percent",
+      "evidence_basis_28_11_Stage_2_candidate": "Stage_2_§B_4_channel_quadruple_ground_post_attest_L_Q3_60_factor_calibration_evidence",
+      "recommendation": "artifact_class_differential_adjustment_factors_+_round_specific_complexity_dependency_declaration_class_×_1.30_to_1.40_input_files_pin_class_×_1.10_to_1.55_round_specific_lessons_appendix_class_×_1.05_to_1.15_verification_log_class_×_1.05_to_1.15",
+      "codify_timing": "Stage_3_lessons_appendix_28.11_v0.1_secondary_codify_scope_候補",
+      "main_rule_scope_promotion_condition": "3_plus_instance_evidence_accumulation_28.11_+_28.12_rounds"
+    }
+  },
+  "discipline_active": {
+    "Pattern_30": "ASCII_purity_commit_tag_msg_28.10_Stage_5_operational_confirm_28.11_baseline_継続",
+    "Pattern_31": "UTF_8_no_BOM_+_LF_only_+_trailing_LF_mandatory_全_inscribe_artifact_baked_in",
+    "Pattern_32": "push_wrap_ErrorActionPreference_Continue_try_finally_2_to_1_Stage_5_push_fallback_ready",
+    "Pattern_35": "InvariantCulture_binding_timestamp_emission_全_TS_emit_baked_in",
+    "Pattern_39": "cwd_sync_self_check_Tier_1_PS_Set_Location_+_Tier_2_NET_BCL_SetCurrentDirectory_paired_sync_+_Stage_5_baseline_確立",
+    "Pattern_46": "per_file_LF_terminator_+_CR_0_+_no_BOM_3_counter_per_file_3_of_3_form_canonical",
+    "Pattern_47": "SHA_equality_String_Equals_StringComparison_Ordinal_MANDATORY_U.9_Tier_1_per_SHA_pin_main_application",
+    "Pattern_48": "attestation_provenance_narrative_only_attestation_排除_全_SHA_claim_Code_side_paste_back_grounded",
+    "Pattern_49": "post_state_mutation_3_gate_suite_post_commit_+_post_tag_+_post_push_Stage_5_適用",
+    "OL_15": "28.6_§6.7_single_instance_formal_codify_carry_維持",
+    "OL_16": "claude_ai_side_measurement_estimation_discipline_cluster_6_main_+_1_aux_§1.7_main_rule_scope_28.10_codified_operational_continuation",
+    "M3": "short_cycle_refinement_3_tier_discipline_28.10_codified_全_inscribe_stage_適用",
+    "rule_92": "strict_push_forbidden_flags_force_all_tags_mirror_Stage_5_適用",
+    "source_channel_decision_rule_ENAMETOOLONG_mitigation": {
+      "rule_a_under_27_KB": "here_string_approach",
+      "rule_b_27_to_30_KB": "here_string_+_Write_tool_fallback_ready",
+      "rule_c_over_30_KB": "Write_tool_channel_default",
+      "stage_3_pre_projection_mandatory": "OL_16_§1.7_main_rule_scope_cluster_member_6_operational_continuation"
+    },
+    "option_c_boundary_discipline": "scope_preserve_round_internal_instance_threshold_8"
+  },
+  "cross_reference_block": {
+    "handoff_memo_28_11_opening": {
+      "file": "claude_ai_handoff_memo.txt_iteration_11",
+      "scope": "8_section_narrative_format_+_Step_A_redundancy_+_claude_ai_to_Code_instruction_flow",
+      "consistency_status": "SHA_pins_100_percent_byte_exact_consistent_design",
+      "generation_ts": "2026-05-19T17:00:00+09:00"
+    },
+    "sync_memo_28_11_opening": {
+      "file": "claude_code_sync_memo_7.txt",
+      "scope": "Claude_Code_Windows_session_paste_target_paired_sync_verify_+_dispatch_v0.3_execute_baseline",
+      "consistency_status": "SHA_pins_100_percent_byte_exact_consistent_with_handoff_memo_§3",
+      "generation_ts": "2026-05-19T17:00:00+09:00"
+    },
+    "verification_pdf_28_10_closure": {
+      "file": "anchor_28_10_v0_1_verification_scripts_report.pdf",
+      "scope": "v4.4_spec_compliant_layout_3rd_source_of_truth_3_file_cross_reference_baseline",
+      "consistency_status": "SHA_pins_100_percent_byte_exact_consistent_with_両_txt_memo"
+    },
+    "paired_sync_10_gate_verdict_28_11_opening": {
+      "verify_ts_invariant_culture": "2026-05-19T17:22:41+09:00",
+      "overall": "10_of_10_state_PASS_+_working_tree_CLEAN_porc_count_0_+_state_divergence_0",
+      "v0_3_baseline_5_item_fix_全_effective": "U.2_distance_form_+_untracked_files_all_+_Get_CanonicalAttest_11_field_+_Test_SHAEqual_Ordinal_+_Pattern_48_forward_gate_ASCII_purity_6_codepoint_scan",
+      "p39_cwd_sync_status": "Tier_1_PS_+_Tier_2_NET_BCL_PASS"
+    },
+    "declaration_internal_cross_ref_28_11": {
+      "section_2_cross_reference_block": "parent_28.10_v0.1_4_artifacts_SHA_+_envelope_+_IMMUTABLE_pins_+_forensic_chain",
+      "section_5_1_abandoned_narrative_sha_carry": "28.7_to_28.11_inscribe_locations_cumulative_15_locations",
+      "section_B_1_size_projection_3_channel_triple_ground": "framework_self_validation_28.11_instance_1_PRIMARY_LOCKED_emergence_basis"
+    }
+  }
+}
