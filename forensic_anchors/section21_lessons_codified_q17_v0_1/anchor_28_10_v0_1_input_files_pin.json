@@ -1,0 +1,222 @@
+{
+  "schema_version": "0.1",
+  "artifact_identity": {
+    "round_id": "anchor_28_10_v0_1",
+    "q_codify_round": "Q17",
+    "anchor_series": "28",
+    "sub_round": "10",
+    "version": "v0.1",
+    "artifact_type": "input_files_pin",
+    "emit_ts_invariant_culture": "2026-05-19T15:08:44+09:00",
+    "author": "Sakaguchi Shinobu (坂口忍 / 坂口製麺所) / 宍粟市",
+    "license": "CC-BY 4.0"
+  },
+  "parent_baseline": {
+    "parent_round_id": "anchor_28_9_v0_1",
+    "parent_head": "924aa3fd92f198868ff086ec83552168825f6d9d",
+    "parent_q_tag_obj": "37b68501c6cc57777e8b7e1036f290e39b1d2824",
+    "parent_q_tag_name": "companion-v4.9-q16-codify-round-2026-05-19",
+    "parent_q_tag_type": "tag (annotated)",
+    "parent_q_tag_peel": "924aa3fd92f198868ff086ec83552168825f6d9d (== parent_head)",
+    "grand_parent_head": "117d9eef798f9ba46ebf7462d7b4e9726a08688e (anchor_28_8_v0_1)",
+    "forensic_chain_depth_at_parent": 16,
+    "linear_era_root": "491ff34cce22040e052f226e64adddc1669ea1b4"
+  },
+  "immutable_pins_rule_1_carry": {
+    "X1": {
+      "sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "size_bytes": 9561,
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+      "note": "SPECIAL pre-linear-era naming (anchor 22 v0.2)"
+    },
+    "X1_sib": {
+      "sha256": "4df652d6daebc0d06a7fe4a8b5e6771ae8fe6bf049d3a421d440e759fecc0a7a",
+      "size_bytes": 9379,
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_lessons_appendix.md"
+    },
+    "X2": {
+      "sha256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+      "size_bytes": 118226,
+      "path": "latex_v48/membrane_v48.tex"
+    },
+    "F_28_4_C": {
+      "sha256": "5d9beb04361e0b21f1b703e68ba90f8cbf28efbfa0ff56c84c9d4abffb048ef3",
+      "size_bytes": 11096,
+      "path": "E:\\Q-3_route_ii_discovery_2026-05-07\\Q-3_immutable_hsc_values.draft.json",
+      "scope": "out-of-repo (HSC values draft, Phase Q verification baseline)"
+    }
+  },
+  "abandoned_narrative_sha": {
+    "sha256": "a0d3e3c98cd04cd6a6fec728cc5b0f93eb4c70829605e61a71ad073ff5c7d942",
+    "status": "NEVER_materialize",
+    "reason": "memo (6).txt §1.1 narrative-only Stage 1 closure claim revoked",
+    "forensic_role": "Pattern 48 emergence primary evidence",
+    "carry_rounds": ["28.7", "28.8", "28.9", "28.10"],
+    "discipline": "retroactive modification PROHIBITED",
+    "inscribe_locations_28_10": [
+      "declaration §5.1",
+      "input_files_pin abandoned_narrative_sha entry (this field)",
+      "lessons_appendix §5 (28.7-28.9 carry forensic、planned)",
+      "verification_log §<TBD> (planned)"
+    ]
+  },
+  "parent_section20_artifacts_28_9_immutable": {
+    "declaration_v0_1": {
+      "sha256": "a231c1bd825de7dd7ee80beec8b731d5cf60540791fc0d0b80583e9586444c8f",
+      "size_bytes": 16872,
+      "lf": 212,
+      "p46": "3/3",
+      "ascii_purity": 0,
+      "p48_gate": "PASS",
+      "source_channel": "here-string"
+    },
+    "input_files_pin_v0_1": {
+      "sha256": "70ec14af033885c7e1172743ba438bb64c7c115f066edfd1b36df69dcf48b0f1",
+      "size_bytes": 13050,
+      "lf": 282,
+      "p46": "3/3",
+      "ascii_purity": 0,
+      "p48_gate": "PASS",
+      "source_channel": "here-string"
+    },
+    "lessons_appendix_v0_1": {
+      "sha256": "1a40a918b2690539fda491a9a6067b9f9a45b6b1ab9f9cf1c8c09ec03a71a84c",
+      "size_bytes": 30277,
+      "lf": 438,
+      "p46": "3/3",
+      "ascii_purity": 0,
+      "p48_gate": "PASS",
+      "source_channel": "Write tool (ENAMETOOLONG trigger)"
+    },
+    "verification_log_v0_1": {
+      "sha256": "81236d4e5f3d78f858c7a2ca0803a4d6f19719ff3c05dbd753885a4d1f54dbb0",
+      "size_bytes": 28065,
+      "lf": 411,
+      "p46": "3/3",
+      "ascii_purity": 0,
+      "p48_gate": "PASS",
+      "source_channel": "Write tool"
+    }
+  },
+  "envelope_post_28_9_closure": {
+    "gitattributes": {
+      "sha256": "49fc91d1edcdb1ca75d8d9244fab0b43222963672f07b3b0b2b79d65bbf9634c",
+      "size_bytes": 2784,
+      "note": "section20 -text directive added in 28.9 Stage 5"
+    },
+    "sha256sums": {
+      "sha256": "941e1d16dcfa3134de4ad97bd212cfc8556db64c9b4fb868fe9c9f927bdcb55c",
+      "size_bytes": 15411,
+      "entries_total_non_empty_lines": 118,
+      "entries_sha_pin_lines": 99,
+      "entries_comment_header_lines": 19,
+      "entries_arithmetic_verify": "99 + 19 = 118 (Code-side 4-method probe grounded: LF count / non-empty / regex SHA-pin / non-SHA non-empty)",
+      "baseline_status": "actual_grounded_baseline_inscribe (28.9 closure RESOLVED +19 documented drift, 28.10 §B review で +19 descriptor semantic disambiguate = 19 comment_header_lines NOT gap)",
+      "declaration_cross_ref_immutable": "declaration §2.3 '118 entries grounded baseline' preserve (Stage 1 closure 認定済 immutable within round, 28.10 layer hierarchy: declaration high-level 118 entries / input_files_pin structural breakdown 3-field)",
+      "ol_16_cluster_member_5_operational_emergence": "本 28.10 Stage 2 §B review でambiguity surface 化、scope-3 thematic closure direct evidence (lessons_appendix §3 main inscribe carry)"
+    }
+  },
+  "stage_1_canonical_28_10": {
+    "declaration_v0_1": {
+      "sha256": "b106e0e78b02672f839198f23d91e65eb8c8c4c75fce52e7500c0b9177d9fed6",
+      "size_bytes": 14972,
+      "lf": 188,
+      "cr": 0,
+      "bom": false,
+      "lf_term": true,
+      "p46": "3/3",
+      "ascii_purity_total": 0,
+      "p48_gate": "PASS",
+      "emit_ts": "2026-05-19T14:43:32+09:00",
+      "source_channel": "here-string (FINAL write mechanism [System.IO.File]::WriteAllBytes, Write tool intermediate path)",
+      "instance_label": "I (9th dataset member, 28.10 round 1st)"
+    }
+  },
+  "round_internal_instance_state_28_10": {
+    "framework_self_validation_instance_1": {
+      "grade": "PRIMARY (LOCKED)",
+      "type": "OL-16 inscribe-time grounding application (cluster member 2 size projection)",
+      "stage_origin": "Stage 1 §B review",
+      "double_ground_layer": {
+        "b_review_temp_probe_size_bytes": 13395,
+        "final_artifact_actual_size_bytes": 14972,
+        "claim_vs_b_review_gap_relative_percent_range": "-22% to -27%",
+        "b_review_vs_final_delta_bytes": 1577,
+        "b_review_vs_final_delta_relative_percent": "+11.8%"
+      },
+      "evidence_role": "M3 short-cycle refinement just-codified immediate sub-tier direct example",
+      "precedent_inheritance": "28.9 instance 1 (OL-16 inscribe-time grounding Stage 3+4 cross-stage triangulation) -> 28.10 instance 1 direct cross-round inheritance",
+      "inscribe_carry_target": "lessons_appendix §1 M3 evidence + verification_log §B observation echo"
+    },
+    "framework_self_validation_instance_2_secondary": {
+      "grade": "SECONDARY (LOCKED)",
+      "type": "OL-16 cluster member 5 (SHA256SUMS entry count drift) cross-cluster audit operational-level emergence",
+      "stage_origin": "Stage 2 §B review",
+      "ground_layer": {
+        "code_side_probe_methods": ["LF count = 118", "non-empty lines = 118", "regex ^[a-f0-9]{64} = 99", "non-SHA non-empty = 19"],
+        "arithmetic_verify": "99 + 19 = 118 (Code-side 4-method probe grounded)",
+        "semantic_disambiguate": "entries = non_empty_line_count semantic; sha_pin_count = 99; comment_header_count = 19"
+      },
+      "evidence_role": "scope-3 SHA256SUMS metadata re-pin direct evidence, OL-16 cluster member 5 thematic closure operational ground",
+      "precedent_relation": "instance 1 PRIMARY (OL-16 cluster member 2 size projection) との grade differentiation, cluster member axis differential preserve",
+      "inscribe_carry_target": "lessons_appendix §3 SHA256SUMS metadata re-pin main inscribe + verification_log §B observation echo"
+    },
+    "framework_self_validation_instance_candidates_pending": [
+      "instance 3 candidate: Stage 3 lessons_appendix refinement での OL-16 source channel differential observation (instance 1/2 と different cluster member)",
+      "instance 4 candidate: Stage 5 dispatch v0.3 re-verify + 28.9 instance 3 inheritance (quadruple operational continue)"
+    ],
+    "round_internal_instance_count_current": 2,
+    "option_c_boundary_threshold": 8,
+    "option_c_remaining_margin": 6,
+    "dataset_extension_progress": {
+      "baseline_8_instance": "A-H (28.8 A-D + 28.9 E-H)",
+      "28_10_progress": "I added (Stage 1 declaration, here-string)",
+      "28_10_projection_remaining": "J/K/L (Stage 2/3/4) 3-instance projection",
+      "target_dataset_size": 12
+    }
+  },
+  "axis_arithmetic_case_b": {
+    "case_classification": "case-B (M3 + OL-16 §1.7 parallel codify, axis 1 user judgment locked)",
+    "deltas": {
+      "ol_nominal": {"parent": 16, "target": 16, "delta": "preserve", "rationale": "OL-16 §1.7 internal scope extension"},
+      "m_axis": {"parent": 5, "target": 5, "delta": "preserve", "rationale": "M3 formal codify is existing M-axis 5-entry internal formalization"},
+      "pattern_axis": {"parent": 49, "target": 49, "delta": "preserve", "rationale": "no Pattern addition in this round"},
+      "forensic_chain": {"parent": 16, "target": 17, "delta": "+1", "rationale": "sequential round increment"},
+      "audit_layer": {"parent": 4, "target": 4, "delta": "preserve", "rationale": "D-1..D-4 maintained, no new layer"},
+      "l_q3_59_cumulative": {"parent": "deferred", "target": "deferred", "delta": "preserve", "rationale": "28.11+ carry"}
+    },
+    "stage_5_g3_hard_gate_target": "6/6 PASS (axis arithmetic verify form, 28.9 G3 precedent inheritance)",
+    "form_classification": "preserve-heavy (28.9 case-A OL_nominal +2 と異なる、scope formalization / extension primary form)"
+  },
+  "deferred_queue_28_11_carry": [
+    "U.9 Tier 1 actual audit execution (per-SHA-pin Pattern 47 Ordinal compare + Code-side paste-back grounded inscribe)",
+    "dispatch/verify script v0.4 candidate refinement (axis 2 defer confirmed、12-instance dataset 蓄積後 evidence-stronger judgment)",
+    "cumulative cross-round counter formal codify (per-round counter restart 代替 axis)",
+    "D-W / D-V / D-U (28.5 carry)",
+    "D-Y (vlog dual-clause refactoring)",
+    "per-OL -> L-Q3-59 sub-class fact-finding",
+    "Pattern axis canonical accumulator file",
+    "repository MEMORY.md anchor 28.8 + 28.9 + 28.10 closure entry inscribe (user authorization pending)"
+  ],
+  "discipline_active": {
+    "pattern_31": "UTF-8 no BOM / LF only / trailing LF mandatory",
+    "pattern_32": "push wrap with $ErrorActionPreference=Continue try/finally + 2>&1",
+    "pattern_35": "InvariantCulture binding for timestamp emission",
+    "pattern_39": "cwd_sync self-check (Tier 1 + Tier 2 .NET BCL CWD sync)",
+    "pattern_46": "LF terminator + CR=0 + no BOM 3-counter",
+    "pattern_47": "SHA equality discipline - [String]::Equals Ordinal MANDATORY",
+    "pattern_48": "attestation provenance discipline (forward-applied)",
+    "pattern_49": "post-state-mutation actual-state verify discipline (3-gate suite: post-commit / post-tag / post-push)",
+    "ol_15": "28.6 §6.7 single-instance formal codify (carry)",
+    "ol_16": "claude.ai-side measurement / estimation discipline cluster (forward-applied、§1.7 main rule scope 昇格 codify 本 round 履行中)",
+    "rule_92": "strict push (forbidden flags: --force / --all / --tags / --mirror)",
+    "option_c_boundary_discipline": "scope preserve, round-internal instance threshold 8"
+  },
+  "cross_reference_block": {
+    "handoff_memo_28_10_opening": "claude_ai_handoff_memo.txt (28.9 closure -> 28.10 opening, 8-section narrative format)",
+    "sync_memo_28_10_opening": "claude_code_sync_memo.txt (28.9 closure -> 28.10 opening)",
+    "verification_pdf_28_9_closure": "anchor_28_9_v0_1_verification_scripts_report.pdf (3rd source-of-truth, byte-exact consistent with both .txt memo)",
+    "paired_sync_10_gate_verdict_28_10_opening": "10/10 PASS + working_tree CLEAN (2026-05-19T13:56:07+09:00 InvariantCulture)",
+    "declaration_internal_cross_ref": "§2 (parent baseline + section20 + envelope + IMMUTABLE) + §5.2 (1') (framework self-validation 28.10 instance 1)"
+  }
+}
