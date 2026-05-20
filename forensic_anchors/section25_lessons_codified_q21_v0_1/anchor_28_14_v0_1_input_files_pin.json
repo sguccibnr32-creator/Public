@@ -1,0 +1,335 @@
+{
+  "_schema_metadata": {
+    "schema_name": "anchor_28_x_input_files_pin",
+    "schema_version": "v0.1",
+    "schema_basis": "28.13 inaugural pin-enumeration schema (P2 acknowledged form, L-Q3-65 candidate schema-design axis)",
+    "schema_continuity": "28.13 round inaugural emergence -> 28.14 round 2nd instance (L-Q3-65 candidate cross-round 2nd extension data point provider role)",
+    "schema_total_keys": 13,
+    "schema_form": "pin-enumeration (input files for this round's full lifecycle, byte-exact SHA grounded)"
+  },
+  "_artifact_metadata": {
+    "artifact_path": "forensic_anchors/section25_lessons_codified_q21_v0_1/anchor_28_14_v0_1_input_files_pin.json",
+    "artifact_form": "Stage 2 input_files_pin, instance Z candidate, 26th dataset member",
+    "framework_instance": "2 (obs LOCKED target, 4-channel quadruple-ground form)",
+    "emit_TS_placeholder": "2026-05-20T17:08:51+09:00",
+    "emit_TS_culture": "InvariantCulture (Pattern 35)",
+    "author": "Sakaguchi Shinobu",
+    "organization": "Sakaguchi Seimensho",
+    "location": "Hyogo Prefecture, Shiso City, Japan",
+    "license": "CC-BY 4.0",
+    "ground_form_target": "4-channel quadruple-ground (A here-string + B WriteAllBytes + C re-hash + D JSON well-formed PowerShell ConvertFrom-Json + Python json.tool)",
+    "P46_3_counter_target": "LF-only + CR=0 + no BOM + lf_term True",
+    "ASCII_purity_target": "0 / 6 forbidden codepoints",
+    "Pattern_48_target_dual_method_AND_conjunction": ">= 10 markers each method, 8-of-8 active types each method",
+    "src_side_P46_3_counter_inheritance": "28.13 round 1st instance carry -> 28.14 round 2nd instance (Stage 2+ baseline continuation)"
+  },
+  "key_01_anchor_round_metadata": {
+    "round_identifier": "anchor 28.14 v0.1",
+    "Q_tag_target": "Q21",
+    "Q_tag_name_target": "companion-v4.9-q21-codify-round-2026-05-20",
+    "round_role": "U.9 emergence centric scope (Option A LOCKED), 5/5 framework instance establishment target, cross-round 2nd extension data point provider for stratum B promotion candidate 4 axes",
+    "scope_decision_form": "Option A (U.9 emergence centric) LOCKED",
+    "scope_decision_concurrence": "3-way (Code-side recommend + claude.ai recommend + user lock 2026-05-20)",
+    "sub_form_C_classification_approach": "gamma LOCKED (Stage 3 internal final decision, axis-novelty criterion explicit pre-spec)"
+  },
+  "key_02_parent_state": {
+    "parent_commit": "ee457f85114755ca1fbae199a8b265f120a53538",
+    "parent_anchor": "28.13 v0.1 FULL CLOSURE",
+    "parent_closure_TS": "2026-05-20T15:08:02+09:00",
+    "parent_dispatch_form": "11-step ALL PASS (Code-side measurement grounded, P49 3-gate suite PASS)",
+    "Q20_tag_obj": "72d76659bbf1470e4bce61e11f8333b14ec19453",
+    "Q20_tag_name": "companion-v4.9-q20-codify-round-2026-05-20",
+    "Q20_tag_form": "annotated, peel == HEAD (ls-remote bit-exact verified)"
+  },
+  "key_03_linear_era_root_and_chain": {
+    "linear_era_root": "491ff34cce22040e052f226e64adddc1669ea1b4",
+    "linear_era_root_preservation": "byte-exact across 28.7-28.13 7 rounds (rule 1 IMMUTABLE, pre-28.14 Stage 1)",
+    "linear_era_root_28_14_target": "preservation across 28.7-28.14 8 rounds (Stage 5 dispatch post-execute expected)",
+    "forensic_chain_depth_28_13_closure": 20,
+    "forensic_chain_depth_28_14_target": 21,
+    "chain_depth_form": "distance form (root..HEAD distance + 1)"
+  },
+  "key_04_section_24_28_13_closure_pins": {
+    "directory": "forensic_anchors/section24_lessons_codified_q20_v0_1/",
+    "pin_source": "byte-exact carry from 28.13 closure (immutable baseline for 28.14 round)",
+    "anchor_28_13_v0_1_declaration_md": {
+      "sha256": "fcd6647f94ece743d8eb50515b293a32701bcf99ace90c6db8ba561a9f724d82",
+      "size_bytes": 29344,
+      "LF_count": 417,
+      "CR_count": 0,
+      "BOM": false,
+      "lf_term": true,
+      "P46_3_counter": "3/3 PASS",
+      "framework_instance": 1,
+      "instance_letter": "U",
+      "dataset_index": 21
+    },
+    "anchor_28_13_v0_1_input_files_pin_json": {
+      "sha256": "30a4cb01789c160498c51ef13a503dd80c80b71a8891fd127b7c1715ce8fde8f",
+      "size_bytes": 23888,
+      "LF_count": 299,
+      "CR_count": 0,
+      "BOM": false,
+      "lf_term": true,
+      "P46_3_counter": "3/3 PASS",
+      "JSON_well_formed": "PowerShell ConvertFrom-Json PASS + Python json.tool PASS (option A acceptance)",
+      "framework_instance": 2,
+      "instance_letter": "V",
+      "dataset_index": 22,
+      "schema_decision": "P2 LOCKED (28.13 inaugural pin-enumeration schema, L-Q3-65 candidate inaugural)"
+    },
+    "anchor_28_13_v0_1_lessons_appendix_md": {
+      "sha256": "6230a72c3f9be2d789ddc08dd0284ee0d94f0a8e0f2fd7ce3f7515677dcc35fd",
+      "size_bytes": 50771,
+      "LF_count": 484,
+      "CR_count": 0,
+      "BOM": false,
+      "lf_term": true,
+      "P46_3_counter": "3/3 PASS",
+      "framework_instance": 3,
+      "instance_letter": "W",
+      "dataset_index": 23,
+      "scope_form": "PRIMARY CODIFY (Option gamma scope, item 13 L-Q3 enumeration + item 16 case-D 3-scope prototype + L-Q3-65 organic)"
+    },
+    "anchor_28_13_v0_1_verification_log_md": {
+      "sha256": "d40730d4952d14a2322dccdb2d65c205959535b983f0f8070ff552233d1a157d",
+      "size_bytes": 45837,
+      "LF_count": 461,
+      "CR_count": 0,
+      "BOM": false,
+      "lf_term": true,
+      "P46_3_counter": "3/3 PASS",
+      "framework_instance": 4,
+      "instance_letter": "X",
+      "dataset_index": 24,
+      "revision_form": "option A revision applied (28.12 T precedent same form, section 4.2 row 4 4-field update)"
+    }
+  },
+  "key_05_section_23_28_12_grand_parent_ground_truth_pins": {
+    "directory": "forensic_anchors/section23_lessons_codified_q19_v0_1/",
+    "pin_source": "Get-FileHash empirical grounded measurement 2026-05-20T16:08:32+09:00 (Code-side execute, paste-back grounded) + SHA256SUMS in-repo canonical pin cross-verification (U.4 PASS path integrity guaranteed)",
+    "pin_form": "ground-truth section23 SHA register (canonical, 28.14+ memo carry baseline)",
+    "supersession_form": "supersedes sync_memo section 2.4 narrative-generated values (Pattern 48 sub-form C inaugural emergence locus)",
+    "anchor_28_12_v0_1_declaration_md": {
+      "sha256": "d90dadda6004f279dfc2d0834afecfe56408dbf04b245aaa4bd25f6124f99faf",
+      "size_bytes": 27713,
+      "ground_truth_source": "Get-FileHash empirical 2026-05-20T16:08:32+09:00 + SHA256SUMS canonical 372c01e5.."
+    },
+    "anchor_28_12_v0_1_input_files_pin_json": {
+      "sha256": "c635bbe2e73a87acad514d975613c5c0b9f36db13bd7ab93c313982ade984ff5",
+      "size_bytes": 33546,
+      "ground_truth_source": "Get-FileHash empirical 2026-05-20T16:08:32+09:00 + SHA256SUMS canonical 372c01e5.."
+    },
+    "anchor_28_12_v0_1_lessons_appendix_md": {
+      "sha256": "bb44ffb27cb4783c934318b723cea3c566a6a4be360cf1a9c44dd2efc5d0bdfe",
+      "size_bytes": 59702,
+      "ground_truth_source": "Get-FileHash empirical 2026-05-20T16:08:32+09:00 + SHA256SUMS canonical 372c01e5.."
+    },
+    "anchor_28_12_v0_1_verification_log_md": {
+      "sha256": "7ca82757b4f9b8e6eb24eda2a39cdd6a5960fa7fdedfa92f37deb8c8702a14d0",
+      "size_bytes": 52177,
+      "ground_truth_source": "Get-FileHash empirical 2026-05-20T16:08:32+09:00 + SHA256SUMS canonical 372c01e5.."
+    },
+    "forward_applied_discipline": "Pattern 48 sub-form C mitigation 1st operational instance: 28.14+ memo derivative artifacts MUST source section23 SHAs from (a) on-disk Get-FileHash empirical, OR (b) SHA256SUMS in-repo canonical pin extraction, OR (c) this ground-truth register key_05; narrative-quoted SHAs from prior memo files (handoff_memo, sync_memo, verification PDF) PROHIBITED as sole source"
+  },
+  "key_06_envelope_post_S5_28_13_state": {
+    "gitattributes": {
+      "sha256": "761f581f45d4c749f04435789cc4172e4be2e142ec39443b5556866781043cc7",
+      "state_note": "section24 -text directive added (section23 directive directly after, symmetry preserved), option (c) hybrid refresh complete (28.13 Stage 5 dispatch operational success)",
+      "L_Q3_61_relevance": "axis (b) operational evidence 4th instance LOCKED at 28.13 Stage 5 (cross-round 1st extension achievement)"
+    },
+    "SHA256SUMS": {
+      "sha256": "372c01e5436e43233559021c95fddeca9b33497044171ba1f9036111353735ff",
+      "entries_total_non_empty_lines": 134,
+      "entries_sha_pin_lines": 115,
+      "entries_comment_header_lines": 19,
+      "arithmetic_verify": "115 + 19 = 134 PASS",
+      "progression_from_28_12_closure": "130 -> 134 / 111 -> 115 / 19 preserve (+4 entries +1 refresh)",
+      "ground_truth_role": "U.4 PASS path canonical pin source for grand-parent section23 artifacts (Pattern 48 sub-form C mitigation operational evidence)"
+    }
+  },
+  "key_07_immutable_pins_rule_1": {
+    "preservation_scope": "byte-exact preserved across 28.7-28.13 7 rounds (pre-28.14 Stage 1)",
+    "preservation_target_28_14": "byte-exact preservation 28.7-28.14 8 rounds (Stage 5 dispatch post-execute expected)",
+    "X1": {
+      "sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "size_bytes": 9561,
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json"
+    },
+    "X1_sib": {
+      "sha256": "4df652d6daebc0d06a7fe4a8b5e6771ae8fe6bf049d3a421d440e759fecc0a7a",
+      "size_bytes": 9379,
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_lessons_appendix.md"
+    },
+    "X2": {
+      "sha256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+      "size_bytes": 118226,
+      "path": "latex_v48/membrane_v48.tex"
+    },
+    "F_28_4_C": {
+      "sha256": "5d9beb04361e0b21f1b703e68ba90f8cbf28efbfa0ff56c84c9d4abffb048ef3",
+      "size_bytes": 11096,
+      "path": "out-of-repo IMMUTABLE (E:\\Q-3_route_ii_discovery_2026-05-07\\Q-3_immutable_hsc_values.draft.json)"
+    }
+  },
+  "key_08_stage_0_paired_sync_verify_outcome": {
+    "verify_TS": "2026-05-20T16:08:32+09:00",
+    "verify_TS_form": "InvariantCulture, +09:00 JST, [DateTimeOffset]::UtcNow.ToOffset L-Q3-62 fix applied",
+    "execute_form": "10-gate baseline form PowerShell, [scriptblock]::Create + & sb (P38 workaround)",
+    "OVERALL": "9/10 state-PASS",
+    "working_tree": "CLEAN (porcelain 0 lines, post-cleanup of ephemeral verify_28_14_opening.ps1, no commit touch)",
+    "abandoned_SHA_state": "preserved (a0d3e3c98cd04cd6a6fec728cc5b0f93eb4c70829605e61a71ad073ff5c7d942 NEVER materialized, 28.7-28.14 8-round carry, Code-side commit log empirical grep grounded)",
+    "gate_results": {
+      "U_1_HEAD": "PASS ee457f85.. (Pattern 47 Ordinal compare)",
+      "U_2_chain_depth": "PASS 20 (distance form)",
+      "U_3_section24_28_13_closure": "PASS 4/4 byte-exact",
+      "U_4_envelope": "PASS .gitattributes 761f581f.. + SHA256SUMS 372c01e5..",
+      "U_5_F_28_4_C": "PASS 5d9beb04..",
+      "U_6_Q20_tag": "PASS type=tag, obj=72d76659.., peel == HEAD",
+      "U_7_origin_main": "PASS remote bit-exact (ls-remote grounded)",
+      "U_8_Q20_remote": "PASS remote tag obj bit-exact",
+      "U_9_section23_28_12_carry": "FAIL 0/4 (Pattern 48 sub-form C inaugural emergence locus, sync_memo section 2.4 narrative-SHA hallucination)",
+      "U_10_X1": "PASS 435bf4b6.. (rule 1 baseline preserved)"
+    },
+    "U_9_root_cause_form": "2-fold independent proof (Code-side analysis): Proof 1 statistical impossibility of 4-fold 8-char prefix-only match by random collision (compound vanishing); Proof 2 SHA256SUMS in-repo canonical pin cross-check matches on-disk Get-FileHash 4/4 byte-exact (envelope U.4 PASS path integrity guaranteed). claude.ai-side cross-attest concur 3-way (Code-side + claude.ai + user lock)."
+  },
+  "key_09_priority_codify_scope_decision_locked": {
+    "scope_decision_form": "Option A LOCKED (U.9 emergence centric scope)",
+    "scope_decision_TS": "2026-05-20 (post-paste-back cross-attest, user judgment grounded)",
+    "concurrence_form": "3-way (Code-side recommend + claude.ai recommend + user lock)",
+    "stage_1_scope": "U.9 emergence + sync_memo section 2.4 correction inscribe (instance Y obs LOCKED 2026-05-20T16:29:35+09:00, sha256 664b98462b719f5f3d482ed06bb569794c3f986547699148c58ea63e23e83603)",
+    "stage_2_scope": "13-key 28.13 inaugural pin-enumeration schema precedent inheritance (L-Q3-65 candidate cross-round 2nd extension data point provider) + section_2_4_correction_observation_28_14 sub-key inscription (this artifact)",
+    "stage_3_scope_PRIMARY_CODIFY": "Pattern 48 sub-form C formal codify + axis-classification final decision (alpha/beta/gamma per axis-novelty criterion) + R1 LOCK criterion formal reformulation (framework_instance_1 codify) + meta-finding axis-classification (isolation-integration revision pattern, bilateral pair) + meta-pattern 2 1st operational evidence formal codify + framework self-validation event formal codify + F-28.11 SHA-pin consistency discipline 1st operational evidence formal codify + dual-environment workflow architecture operational validity formal codify + Code-side review pass discipline 11th instance cumulative codify",
+    "stage_4_scope": "factor (e) class-specific 5th-class (memo-layer) extension candidate observation + R2 prefix-relaxed (>=8 char) empirical-grep methodology 3-step formal spec codify + R3 dual-method Pattern 48 marker counting + AND-conjunction LOCK form codify + meta-finding observation record + Code-side review pass methodology refinement observation",
+    "stage_5_scope": "v0.3 baseline + 28.14 operational extension execute, L-Q3-61 instance 5 LOCK candidate (cross-round 2nd extension), L-Q3-63 instance 7 LOCK candidate (cross-round 2nd extension), expected forensic chain depth 21"
+  },
+  "key_10_framework_instance_establishment_plan": {
+    "target_form": "5/5 framework instance establishment, epistemic 3:2 completion (3 observation + 1 co-attest + 1 operational-verify), 28.12-28.13 same form preserve",
+    "instance_Y_stage_1_declaration": {
+      "framework_instance": 1,
+      "instance_letter": "Y",
+      "dataset_index": 25,
+      "ground_form": "3-channel triple-ground (A here-string + B WriteAllBytes + C re-hash)",
+      "obs_LOCK_status": "LOCKED conditional (2026-05-20T16:29:35+09:00, channel B sha 664b9846..)",
+      "LOCK_conditional_items": "Stage 3 R1 codify + Stage 3 meta-finding axis classification + Stage 4 R2 + Stage 4 R3 + Stage 4 meta-finding observation"
+    },
+    "instance_Z_stage_2_input_files_pin": {
+      "framework_instance": 2,
+      "instance_letter": "Z",
+      "dataset_index": 26,
+      "ground_form_target": "4-channel quadruple-ground (A + B + C + D JSON 2-method well-formed verify)",
+      "obs_LOCK_status_target": "post Code-side review pass + Code-side execute",
+      "schema_form": "13-key 28.13 inaugural schema precedent inheritance (this artifact)"
+    },
+    "instance_AA_stage_3_lessons_appendix": {
+      "framework_instance": 3,
+      "instance_letter": "AA",
+      "dataset_index": 27,
+      "ground_form_target": "5-channel quintuple-ground (A + B + C + D structural + E Pattern 48 >=10 forced AND-conjunction)",
+      "scope_form": "PRIMARY CODIFY (Option A scope)",
+      "refinement_anchor_uniqueness_pre_check_target": "3rd instance preventive operational effect (28.13 Stage 3 emergence + Stage 4 revision baseline inheritance)"
+    },
+    "instance_AB_stage_4_verification_log": {
+      "framework_instance": 4,
+      "instance_letter": "AB",
+      "dataset_index": 28,
+      "ground_form_target": "5-channel co-attest baseline",
+      "role_form": "co-attest baseline (option beta role separation if applicable)",
+      "refinement_anchor_uniqueness_pre_check_target": "4th instance preventive operational effect"
+    },
+    "instance_AC_stage_5_dispatch": {
+      "framework_instance": 5,
+      "instance_letter": "AC",
+      "dataset_index": "operational (no file artifact, op-verify role)",
+      "ground_form_target": "11-step dispatch ALL PASS, P49 3-gate suite [1] post-commit + [2] post-tag + [3] post-push, Pattern 47 Ordinal SHA equality all gates"
+    }
+  },
+  "key_11_abandoned_narrative_SHA_state": {
+    "abandoned_SHA": "a0d3e3c98cd04cd6a6fec728cc5b0f93eb4c70829605e61a71ad073ff5c7d942",
+    "abandonment_origin": "memo (6).txt Section 1.1 narrative-only Stage 1 closure claim revoked, NEVER materialize, retroactive modification PROHIBITED, Pattern 48 emergence primary evidence",
+    "carry_rounds": "28.7 / 28.8 / 28.9 / 28.10 / 28.11 / 28.12 / 28.13 / 28.14 (this round baseline)",
+    "cumulative_pre_28_14": 32,
+    "cumulative_through_28_14_Stage_1": 33,
+    "Stage_1_carry_inscription_locus": "section 3.1 lines 125-126 (line-wrapped at column 81, prefix-relaxed empirical-grep methodology required per R2 Option beta forward-applied discipline)",
+    "Stage_2_carry_inscription_locus": "this key_11 (one empirical mention, +1 expected carry)",
+    "running_cumulative_through_Stage_2": 34,
+    "forward_projection_28_14_round": {
+      "Stage_3_lessons_appendix_Pattern_48_sub_form_C_codify_section": "+1 expected (PRIMARY CODIFY scope)",
+      "Stage_4_verification_log_Pattern_48_cumulative_section": "+1 expected",
+      "Stage_5_dispatch_in_memory_committed_scope_outside": "+0 (defer queue item 11 baseline)",
+      "post_28_14_closure_projected_cumulative": 36
+    },
+    "methodology_baseline": "empirical grep grounded (28.12 verification_log section 8.1 + 28.13 verification_log section 6.1 form baseline), refined 28.14+ to prefix-relaxed (>=8 char) + 3-step form per R2 Option beta",
+    "methodology_refinement_28_14_inaugural": "prefix-relaxed empirical-grep 3-step form: step 1 prefix match + step 2 context-window line-continuation reconstruction + step 3 reconstructed full 64-char SHA Ordinal compare"
+  },
+  "key_12_section_2_4_correction_observation_28_14_inaugural": {
+    "observation_form": "Pattern 48 sub-form C inaugural emergence locus identification (28.14 Stage 0 paired sync verify U.9 FAIL forensic verdict)",
+    "drift_locus_identification": "claude_code_sync_memo_28_14_v0_1.txt section 2.4 expected SHAs (memo-layer narrative authoring, prior chat anchor 28.13 v0.1 FULL CLOSURE claude.ai-side handoff package emit phase)",
+    "drift_mechanism_hypothesis": "short-SHA visual memory carry pathway: 8-char prefixes carried from prior git short-SHA visual output, 56-char suffixes hallucinated to look like valid SHA-256 hex (4-fold prefix preservation across unrelated artifacts is statistically impossible by random collision)",
+    "ground_truth_register_locus": "key_05 (section23 28.12 grand-parent ground-truth pins, Get-FileHash empirical + SHA256SUMS canonical cross-verification)",
+    "narrative_SHA_divergence_pattern": {
+      "anchor_28_12_v0_1_declaration_md": {
+        "narrative_SHA_sync_memo": "d90daddabdaff03c5f81d7d6def77e8e0b65a4be97fc7a1be65d04fffe2367a9",
+        "ground_truth_SHA": "d90dadda6004f279dfc2d0834afecfe56408dbf04b245aaa4bd25f6124f99faf",
+        "common_prefix_length": 8,
+        "suffix_divergence": "56 chars distinct"
+      },
+      "anchor_28_12_v0_1_input_files_pin_json": {
+        "narrative_SHA_sync_memo": "c635bbe2cd0aa48ff43a6a52e8b8b9a14f7da26ef1f17a91d34fdca169c52e51",
+        "ground_truth_SHA": "c635bbe2e73a87acad514d975613c5c0b9f36db13bd7ab93c313982ade984ff5",
+        "common_prefix_length": 8,
+        "suffix_divergence": "56 chars distinct"
+      },
+      "anchor_28_12_v0_1_lessons_appendix_md": {
+        "narrative_SHA_sync_memo": "bb44ffb23dec9d6ce1bf4c4e2dfa17ac3edd96d6e7d6e69f51c3e9f02b7e8d35",
+        "ground_truth_SHA": "bb44ffb27cb4783c934318b723cea3c566a6a4be360cf1a9c44dd2efc5d0bdfe",
+        "common_prefix_length": 8,
+        "suffix_divergence": "56 chars distinct"
+      },
+      "anchor_28_12_v0_1_verification_log_md": {
+        "narrative_SHA_sync_memo": "7ca82757b50d7cb1f6c95c1c0c95e0afaa37f5fa6fe7fe7c1e3a1bd7fb02a1c5",
+        "ground_truth_SHA": "7ca82757b4f9b8e6eb24eda2a39cdd6a5960fa7fdedfa92f37deb8c8702a14d0",
+        "common_prefix_length": 8,
+        "suffix_divergence": "56 chars distinct"
+      }
+    },
+    "axis_classification_status": "gamma LOCKED (Stage 3 internal final decision, axis-novelty criterion explicit pre-spec)",
+    "axis_novelty_criterion": "Does sub-form C violation require new mitigation pathway beyond existing Pattern 48 mitigation (envelope cross-check + Get-FileHash empirical grounded)? if NO -> alpha (Pattern 48 sub-class refinement, axis-purity preserve); if YES -> beta (new axis = L-Q3-66 inaugural emergence)",
+    "axis_evidence_preliminary": "alpha-leaning evidence preliminarily accumulated: existing Pattern 48 mitigation (SHA256SUMS canonical cross-check) was completely effective for detection and resolution; formal commit deferred to Stage 3 with full analytical depth",
+    "framework_self_validation_event_LOCKED": "1st non-trivial 10-gate assertion failure across 28.7-28.14 8 rounds, F-28.11 SHA-pin consistency discipline 1st operational evidence instance, meta-pattern 2 cross-domain audit essentiality 1st operational evidence instance, dual-environment workflow architecture operational validity empirically demonstrated"
+  },
+  "key_13_forward_applied_discipline_28_14_baseline": {
+    "discipline_1_section_23_ground_truth_supersession": {
+      "scope": "all 28.14+ memo derivative artifacts quoting section23 SHAs",
+      "permitted_sources": "(a) on-disk Get-FileHash empirical measurement (Code-side execute), OR (b) SHA256SUMS in-repo canonical pin extraction (envelope integrity path verified), OR (c) key_05 ground-truth section23 SHA register",
+      "prohibited_sources": "narrative-quoted SHAs from prior memo files (handoff_memo, sync_memo, verification PDF) as sole source",
+      "applicability_scope": "28.14 round Stages 2-5 internal references + 28.15+ round opening handoff package generation + all subsequent forward-derivative memo lineage"
+    },
+    "discipline_2_prefix_relaxed_empirical_grep_3_step": {
+      "step_1": "8-char prefix match against target SHA literal",
+      "step_2": "context-window (current line + adjacent lines) line-continuation marker reconstruction (whitespace + residual 56-char SHA hex structural match)",
+      "step_3": "reconstructed full 64-char SHA Ordinal compare against target SHA",
+      "false_positive_mitigation": "non-SHA literal 8-char collision rejection via context-window reconstruction step (step 2 fail -> count exclude)",
+      "applicability_scope": "Pattern 48 cumulative empirical-grep methodology, 28.14+ baseline (R2 Option beta forward-applied)"
+    },
+    "discipline_3_pattern_48_dual_method_AND_conjunction": {
+      "method_1_claude_ai_broad_heuristic_8_categories": "measured/measurement/empirical, byte-exact/bit-exact, Get-FileHash, ls-remote verified, Pattern XX PASS/APPLIED, operational evidence, cross-attest/concur/concurrence, grounded/ground form/ground-truth",
+      "method_2_code_side_narrow_heuristic_8_categories": "empirical/empirically, Get-FileHash, byte-exact, measurement[s], ground/grounded, SHA256SUMS, canonical pin/baseline/x-check, narrative-only/generated/wrap",
+      "LOCK_form": "AND-conjunction (both methods >= 10 markers AND each method 8-of-8 active types)",
+      "rationale": "OR-conjunction structurally violates meta-pattern 2 (cross-domain audit essentiality) self-application: extreme divergence scenarios allow LOCK with one-side-only PASS, cross-attest redundancy forensic value erodes, method-shopping pathway hazardous; AND-conjunction enforces true cross-attest, early-detects method divergence, conservative form integrity-preserving"
+    },
+    "discipline_4_LOCK_criterion_reformulation_intra_artifact": {
+      "scope": "channel A vs channel B/C equality LOCK criterion (Stage 1 declaration R1 finding)",
+      "correct_form": "channel B post-write SHA == channel C re-hash SHA (Code-side byte-exact, Pattern 47 Ordinal); channel A SHA preserved as informational provenance trace (claude.ai-side pre-substitution hash, expected divergent due to emit_TS placeholder substitution byte-mutation)",
+      "applicability_scope": "all forward-derivative Stage 1 declaration emits with emit_TS placeholder substitution form, 28.14+ baseline (R1 PATH 2 forward-applied)"
+    },
+    "discipline_5_isolation_integration_revision_meta_pattern_observation": {
+      "scope": "Code-side review pass + claude.ai cross-attest decision-making audit (28.14 round 1st bilateral pair instance)",
+      "pattern_form": "isolation-integration revision pattern (singular 1 pattern, bilateral pair instances): finding-isolation initial recommendation -> cross-finding integrated final revision",
+      "instance_1": "Q2 R2 Option alpha -> Option beta (Code-side revision, PATH 2 consistency grounded)",
+      "instance_2": "Q3 R3 OR-conjunction -> AND-conjunction (claude.ai revision, meta-pattern 2 self-application grounded)",
+      "bilateral_symmetric_audit_pathway_operational_verify": "1st pattern instance across 28.7-28.14",
+      "axis_classification_status": "observation-level Stage 4 record + decision-level Stage 3 lessons_appendix formal codify (Stage 3/4 cross-stage codify form, meta-pattern 1 axis specificity preservation + meta-pattern 2 self-application both integrity preserve)"
+    }
+  }
+}
