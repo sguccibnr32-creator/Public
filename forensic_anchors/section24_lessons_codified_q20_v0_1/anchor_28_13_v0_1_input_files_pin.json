@@ -1,0 +1,299 @@
+{
+  "anchor_round_identifier": {
+    "round_id": "anchor 28.13 v0.1",
+    "q_codify_round": "Q20",
+    "round_form_basis": "closure handoff form inherited (28.7-28.12 6-round lineage、F-28.11 formal codify 履行 28.12 round 適用後 2nd application、本 28.13 round 7th continuous single-chat closure)",
+    "license": "CC-BY 4.0",
+    "author": "Sakaguchi Shinobu (坂口忍) / 坂口製麺所 / 宍粟市 (Shiso City, Hyogo)"
+  },
+
+  "forensic_chain_state": {
+    "current_depth": 19,
+    "target_depth_after_stage_5": 20,
+    "linear_era_root_preserved_across_rounds": ["28.7", "28.8", "28.9", "28.10", "28.11", "28.12"],
+    "rounds_count_preserved": 6,
+    "this_round_continuation_index": 7,
+    "preservation_status": "linear-era root 491ff34cce22040e052f226e64adddc1669ea1b4 byte-exact carry confirmed"
+  },
+
+  "head_pin": {
+    "value": "dbc51fe0de13d1301748d82c7e5f5ee8172955ec",
+    "role": "anchor 28.12 v0.1 FULL CLOSURE baseline、28.13 round opening pre-state",
+    "stage_5_target": "atomic commit 後 new_head 進行予定 (TBD)",
+    "verify_method": "git rev-parse HEAD + Pattern 47 Ordinal compare"
+  },
+
+  "parent_chain_pins": {
+    "HEAD~0": {"sha": "dbc51fe0de13d1301748d82c7e5f5ee8172955ec", "anchor": "28.12", "q_tag": "Q19"},
+    "HEAD~1": {"sha": "9ad80945af2f3b8ffc995de78f8c63d0ec367bdc", "anchor": "28.11", "q_tag": "Q18"},
+    "HEAD~2": {"sha": "6337aed7bb05455297dc4609194ee49d6ca64dbf", "anchor": "28.10", "q_tag": "Q17"},
+    "HEAD~3": {"sha": "924aa3fd92f198868ff086ec83552168825f6d9d", "anchor": "28.9", "q_tag": "Q16"},
+    "HEAD~4": {"sha": "117d9eef798f9ba46ebf7462d7b4e9726a08688e", "anchor": "28.8", "q_tag": "Q15"},
+    "HEAD~5": {"sha": "838492bba87acf71f50a4d0ab6d39d45de2d2409", "anchor": "28.7", "q_tag": "Q14"}
+  },
+
+  "q_tag_pins": {
+    "q19_tag_name": "companion-v4.9-q19-codify-round-2026-05-20",
+    "q19_tag_obj": "b1dd2cb533dd68e580934d010ce83e2b38d2d7e2",
+    "q19_tag_type": "annotated",
+    "q19_tag_peel": "dbc51fe0de13d1301748d82c7e5f5ee8172955ec",
+    "q19_peel_equals_head": true,
+    "q_tag_pattern_28_series": "Q_n = sub_round + 7 (Q19 -> 28.12 / Q20 -> 28.13 / Q21 -> 28.14)",
+    "q20_target_tag_name": "companion-v4.9-q20-codify-round-2026-05-20",
+    "q20_tag_obj": "TBD (Stage 5 dispatch 後 annotated tag emit)"
+  },
+
+  "linear_era_root_pin": {
+    "value": "491ff34cce22040e052f226e64adddc1669ea1b4",
+    "role": "linear-era start、28.7+ all rounds carry baseline",
+    "preserved_across_rounds_count": 6,
+    "discipline": "rule 1 IMMUTABLE pins carry preserve、byte-exact across 28.7-28.12"
+  },
+
+  "section_artifacts": {
+    "section24_q20_28_13_in_progress": {
+      "directory": "forensic_anchors/section24_lessons_codified_q20_v0_1/",
+      "directory_created": "DIR CREATED inaugural at Stage 1 file-ize",
+      "declaration_v0_1": {
+        "path": "forensic_anchors/section24_lessons_codified_q20_v0_1/anchor_28_13_v0_1_declaration.md",
+        "sha_256": "fcd6647f94ece743d8eb50515b293a32701bcf99ace90c6db8ba561a9f724d82",
+        "size_bytes": 29344,
+        "instance_class": "U (21st dataset、framework instance 1 obs LOCKED)",
+        "ground_form": "3-channel triple-ground (A here-string + B WriteAllBytes + C re-hash)",
+        "p46_3_counter": "3/3 PASS (LF 417 / CR 0 / BOM False / lf_term True)",
+        "ascii_purity_total": 0,
+        "pattern_48_markers": "43 total / 8-of-8 active types (preserved=5 / verified=1 / confirmed=2 / LOCKED=4 / carry=12 / attest=13 / grounded=5 / inscribed=1)",
+        "emit_ts": "2026-05-20T13:04:21+09:00",
+        "lock_status": "framework instance 1 obs LOCKED",
+        "lock_timestamp": "2026-05-20T13:04:21+09:00"
+      },
+      "input_files_pin_v0_1": {
+        "status": "本 file emit in-progress、Stage 2 instance V candidate、22nd dataset"
+      },
+      "lessons_appendix_v0_1": {
+        "status": "Stage 3 PRIMARY CODIFY pending (Option γ scope: item 13 L-Q3-* enumeration + item 16 case-D 3-scope form prototype)"
+      },
+      "verification_log_v0_1": {
+        "status": "Stage 4 co-attest baseline pending"
+      }
+    },
+    "section23_q19_28_12_closure_carry_immutable": {
+      "directory": "forensic_anchors/section23_lessons_codified_q19_v0_1/",
+      "rule_1_preservation": "byte-exact、retroactive modification PROHIBITED",
+      "declaration": {
+        "path": "forensic_anchors/section23_lessons_codified_q19_v0_1/anchor_28_12_v0_1_declaration.md",
+        "sha_256": "d90dadda6004f279dfc2d0834afecfe56408dbf04b245aaa4bd25f6124f99faf",
+        "size_bytes": 27713,
+        "instance_class": "Q (17th dataset、framework instance 1 baseline)"
+      },
+      "input_files_pin": {
+        "path": "forensic_anchors/section23_lessons_codified_q19_v0_1/anchor_28_12_v0_1_input_files_pin.json",
+        "sha_256": "c635bbe2e73a87acad514d975613c5c0b9f36db13bd7ab93c313982ade984ff5",
+        "size_bytes": 33546,
+        "instance_class": "R (18th dataset、本 28.13 input_files_pin schema-level redesign precedent reference、process-flow oriented schema)"
+      },
+      "lessons_appendix": {
+        "path": "forensic_anchors/section23_lessons_codified_q19_v0_1/anchor_28_12_v0_1_lessons_appendix.md",
+        "sha_256": "bb44ffb27cb4783c934318b723cea3c566a6a4be360cf1a9c44dd2efc5d0bdfe",
+        "size_bytes": 59702,
+        "instance_class": "S (19th dataset、PRIMARY CODIFY)"
+      },
+      "verification_log": {
+        "path": "forensic_anchors/section23_lessons_codified_q19_v0_1/anchor_28_12_v0_1_verification_log.md",
+        "sha_256": "7ca82757b4f9b8e6eb24eda2a39cdd6a5960fa7fdedfa92f37deb8c8702a14d0",
+        "size_bytes": 52177,
+        "instance_class": "T (20th dataset、co-attest baseline、option A revision applied)"
+      }
+    },
+    "section22_q18_28_11_grand_parent_carry_immutable": {
+      "directory": "forensic_anchors/section22_lessons_codified_q18_v0_1/",
+      "declaration": {"sha_256": "9d6873b84b57f1fdec381ca474c0aabf1265c6daed9699f48bb8481be20015f0", "size_bytes": 20251},
+      "input_files_pin": {"sha_256": "45f13291a264f2df2b6e15198cbcf7b03008e09c73aa58de75c989a248f754f0", "size_bytes": 23928},
+      "lessons_appendix": {"sha_256": "928670f4c3d2a47f1b6c5cd926249583661626062b29b22fbe5dd235ddd7e672", "size_bytes": 46689},
+      "verification_log": {"sha_256": "f402347befdb5dcfec6515abc5fd0baf2f184c7854a4677c20ffe270b13f4c0c", "size_bytes": 30674}
+    }
+  },
+
+  "envelope_pins": {
+    "gitattributes": {
+      "sha_256": "e79e56c9ac99de31c915581d1936bbc0756cae3319d29a8a9d548f2a183e4aa8",
+      "state": "28.12 Stage 5 post-S5 final (section23 -text directive 追加、option (c) hybrid refresh 完了)",
+      "stage_5_target": "section24 -text directive 追加 + actual SHA refresh 進行予定"
+    },
+    "sha256sums": {
+      "sha_256": "5124921bab7521adeeba9c9866a81a9ab68ac6ab091d3ffbe616dc21f9dcc42b",
+      "entries_total_non_empty_lines": 130,
+      "entries_sha_pin_lines": 111,
+      "entries_comment_header_lines": 19,
+      "arithmetic_verify": "111 + 19 = 130",
+      "gitattributes_pin_in_sha256sums": "e79e56c9.. (post-S5 actual、L-Q3-61 axis (b) operational evidence 3rd instance LOCKED 28.12 Stage 5)",
+      "stage_5_target": "+4 entries (section24 4 artifacts) + 1 refresh (.gitattributes 行) -> 134/115/19 進行予定 (L-Q3-61 instance 4 candidate)"
+    }
+  },
+
+  "immutable_pins": {
+    "rule_1_discipline": "byte-exact preserved across 28.7-28.12 6 rounds、本 28.13 baseline 起点",
+    "x1": {
+      "sha_256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "size_bytes": 9561,
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json"
+    },
+    "x1_sib": {
+      "sha_256": "4df652d6daebc0d06a7fe4a8b5e6771ae8fe6bf049d3a421d440e759fecc0a7a",
+      "size_bytes": 9379,
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_lessons_appendix.md"
+    },
+    "x2": {
+      "sha_256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+      "size_bytes": 118226,
+      "path": "latex_v48/membrane_v48.tex"
+    },
+    "f_28_4_c": {
+      "sha_256": "5d9beb04361e0b21f1b703e68ba90f8cbf28efbfa0ff56c84c9d4abffb048ef3",
+      "size_bytes": 11096,
+      "path": "E:\\Q-3_route_ii_discovery_2026-05-07\\Q-3_immutable_hsc_values.draft.json",
+      "location": "out-of-repo"
+    }
+  },
+
+  "abandoned_narrative_sha_pin": {
+    "sha": "a0d3e3c98cd04cd6a6fec728cc5b0f93eb4c70829605e61a71ad073ff5c7d942",
+    "reason": "memo (6).txt section1.1 narrative-only Stage 1 closure claim revoked",
+    "status": "NEVER materialize、retroactive modification PROHIBITED",
+    "forensic_role": "Pattern 48 emergence primary evidence",
+    "carry_rounds": ["28.7", "28.8", "28.9", "28.10", "28.11", "28.12", "28.13"],
+    "cumulative_empirical_occurrences": {
+      "pre_28_13_baseline": 28,
+      "breakdown_per_round": {"28.7": 4, "28.8": 8, "28.9": 5, "28.10": 4, "28.11": 5, "28.12": 2},
+      "stage_1_declaration_28_13_add": 1,
+      "post_declaration_cumulative": 29,
+      "stage_2_input_files_pin_add_pending": "本 file inscribe で +1 candidate (本 key value 内 SHA inscribe + head-12 occurrence、empirical grep grounded methodology 28.13+ inheritance)"
+    },
+    "methodology_baseline": "verification_log section 8.1 empirical grep grounded form、28.12 M1 ADOPT 由来、28.13+ inheritance baseline 適用"
+  },
+
+  "discipline_inheritance": {
+    "pattern_axis": {
+      "p30": "ASCII purity discipline (commit/tag msg)",
+      "p31": "byte-discipline -F mandatory (commit/tag msg)",
+      "p32": "push-specific scope rejection (broaden rejection、L-Q3-62 axis-isomorphic case で axis-purity preserve)",
+      "p35": "InvariantCulture binding for timestamp emission",
+      "p38": "exec policy + scriptblock workaround ([scriptblock]::Create + & $sb)",
+      "p39": "cwd_sync self-check (Tier 1 PS Set-Location + Tier 2 .NET BCL SetCurrentDirectory)",
+      "p46": "per-file LF terminator + CR=0 + no BOM 3-counter",
+      "p47": "SHA equality discipline - [String]::Equals Ordinal MANDATORY",
+      "p48": "attestation provenance discipline (narrative-only attestation 排除)",
+      "p49": "post-state-mutation actual-state verify discipline (3-gate suite)"
+    },
+    "ol_axis": {
+      "ol_15": "28.6 section 6.7 single-instance formal codify carry",
+      "ol_16": "claude.ai-side measurement / estimation discipline cluster (28.10 codified、main rule scope 昇格 form)"
+    },
+    "m_axis": {
+      "m3": "short-cycle refinement 3-tier discipline (28.10 codified、sub-tier 1/2/3)"
+    },
+    "f_axis": {
+      "f_28_11": "round-mid checkpoint handoff methodology (28.12 round formal codify 履行、本 28.13 round 2nd application、SHA-pin consistency discipline operational evidence 2nd instance + Code-side review pass discipline maintaining operational value 2nd instance for 28.13 round)"
+    },
+    "l_axis": {
+      "l_q3_60": {"axis": "claude.ai estimation methodology refinement", "cumulative_instances": 8, "cross_round_instances": 4, "promotion_status": "threshold 大幅超過、cross-round audit essentiality preserve、28.13+ defer"},
+      "l_q3_61": {"axis": "envelope cascade axis (b) operational evidence", "cumulative_instances": 3, "promotion_status": "threshold 3+ reach、cross-round audit 経過後判断、28.13+ defer"},
+      "l_q3_62": {"axis": "L-Q3-62 cosmetic discipline", "cumulative_instances": "2 + instance 3 candidate observation", "promotion_status": "threshold 1 instance away"},
+      "l_q3_63": {"axis": "emit-layer hygiene discipline、Pattern 47 emit-layer counterpart", "cumulative_instances": 5, "promotion_status": "threshold 大幅超過、cross-round audit 経過後判断、28.13+ defer、form iii hybrid application継続"},
+      "l_q3_64": {"axis": "jq absence cross-environment tool availability constraint", "status": "candidate observation form Z defer LOCKED、cross-environment audit data accumulation 経過後 final form decision"},
+      "l_q3_65_candidate": {"axis": "input_files_pin schema-level redesign axis (cross-round template stability vs forensic optimization 軸 / schema-design 軸)", "status": "本 28.13 Stage 2 inaugural observation、observation level preserve、single-instance、cross-round audit data accumulation 不足、formal codify 28.13+ defer、L-Q3-64 broaden 回避 (meta-pattern 1 axis specificity preservation 整合)、independent new axis inaugural emergence form 採用"}
+    },
+    "rule_axis": {
+      "rule_92": "strict push (forbidden flags: --force / --all / --tags / --mirror)",
+      "rule_1": "IMMUTABLE pins carry preserve (X1 / X1_sib / X2 / F-28.4-C byte-exact)"
+    },
+    "meta_level_dimension": {
+      "emergence_round": "28.12 (tertiary meta-level achievement)",
+      "meta_pattern_1": {
+        "definition": "axis-broaden temptation rejection (specificity-over-convenience principle)",
+        "cumulative_instances_28_12_closure": "3 same-round multiplicity + instance 4 candidate observation level",
+        "promotion_status": "28.13+ formal codify candidate、cross-round audit essentiality preserve (meta-pattern 2 self-application)",
+        "stage_2_self_application_evidence_28_13": "L-Q3-65 candidate inaugural emergence 時 L-Q3-64 broaden 回避 (cross-environment 軸 vs schema-design 軸 axis-orthogonality preserve)、独立新軸として inaugural emergence 採用、axis specificity preservation 厳格 self-application、28.13 round meta-pattern 1 self-application evidence 1st instance"
+      },
+      "meta_pattern_2": {
+        "definition": "cross-domain audit essentiality (single-domain commitment 回避 discipline)",
+        "cumulative_instances_28_12_closure": "3 distinct-domain instances + 2 self-application case observations",
+        "domain_dimensions": ["round 軸 (L-Q3-60 cross-round)", "environment 軸 (L-Q3-64 cross-environment)", "class 軸 (cross-class transition)"],
+        "promotion_status": "28.13+ formal codify candidate、cross-round audit essentiality preserve (self-application case 整合)",
+        "stage_0_self_application_evidence_28_13": "Option α 3-item C focus rejection ground として直接 self-application (Stage 1 declaration section 3.3 (a))、Option γ 内 case-D form axis specificity preservation (meta-pattern 1 暗黙的 self-application)、両 meta-pattern Stage-0-level self-compliance 達成、28.13 round tertiary meta-level discipline operational evidence accumulation 1st instance",
+        "stage_2_self_application_evidence_28_13": "Stage 2 schema divergence decision P1 (refactor) rejection ground として self-application (28.12 R single precedent からの forced schema commitment territory + Stage 1 declaration content 重複 inscription + information redundancy +20-30% size inflation 推定 = meta-pattern 2 直接違反候補)、P2 (28.13 inaugural schema acknowledge) 採用 = single-data-point からの schema commitment 回避、observation level preserve form 整合、28.13 round meta-pattern 2 self-application evidence 2nd instance (Stage 0 1st instance + Stage 2 2nd instance)"
+      },
+      "orthogonality_verify": "axis specificity discipline (meta-pattern 1) vs data accumulation discipline (meta-pattern 2)、両 dimension separable、両 axes 上 independent emergence、28.13+ formal codify candidate 2-axis 確立"
+    }
+  },
+
+  "factor_e_class_baselines": {
+    "28_12_closure_4_class_baseline_carry_single_data_point": {
+      "declaration_class": {"inflation_point_estimate": "+43%", "observation_context": "Stage 1 instance 5 (cross-round 1st extension)", "data_point_status": "single data point"},
+      "input_files_pin_class": {"inflation_point_estimate": "~+21%", "observation_context": "Stage 2 instance 6 (JSON form mild attenuation、scenario C)", "data_point_status": "single data point"},
+      "lessons_appendix_class": {"inflation_point_estimate": "+25-30%", "observation_context": "Stage 3 instance 7 (cross-class transition territory)", "data_point_status": "single data point"},
+      "verification_log_class": {"inflation_point_estimate": "+15-25%", "observation_context": "Stage 4 instance 8 (same-class、scenario B)", "data_point_status": "single data point"}
+    },
+    "28_13_cross_round_2nd_extension_data_points": {
+      "declaration_class_28_13_data_point": {
+        "size_actual_bytes": 29344,
+        "size_actual_kb": 28.66,
+        "vs_28_12_baseline_27713_bytes_inflation": "+5.9%",
+        "vs_claude_ai_band_lower_bound_33256_bytes_at_plus_20_percent": "-11.76% (below band lower bound)",
+        "variance_band_2_instance_evidence": "[+5.9%, +43%]",
+        "variance_pp": 37.1,
+        "interpretation_note": "wide variance band preserve、point estimate collapse rejected per meta-pattern 2 self-application、2-instance average +24.5% second-order over-commit territory として中位値 label 留め (operational projection 固定化 不採用)",
+        "inscribe_form_decision_status": "deferred to Stage 4 pre-emit (Stage 2-3 4-class data accumulation pending)",
+        "forensic_role_candidate": "factor (e) declaration class baseline cross-round 2nd extension empirical data、meta-pattern 2 cross-domain audit essentiality discipline operational evidence accumulation 1st instance for 28.13 round"
+      },
+      "input_files_pin_class_28_13_data_point": {
+        "status": "本 file size を post-attest 後 inscribe (Stage 2 file-ize 完了後 update target)"
+      },
+      "lessons_appendix_class_28_13_data_point": {
+        "status": "Stage 3 file-ize 完了後 inscribe target"
+      },
+      "verification_log_class_28_13_data_point": {
+        "status": "Stage 4 file-ize 完了後 inscribe target"
+      }
+    },
+    "factor_g_candidate_observation_level_preserve": {
+      "definition": "cross-class methodology transition discipline、class-specific calibration essential before direct hypothesis transfer",
+      "28_12_closure_observation": "Stage 3 instance 7 1st empirical confirm + Stage 4 instance 8 部分立証 (same-class scenario B)",
+      "commit_status": "formal codify (factor (g) commit) は 28.13+ cross-class audit data accumulation 経過後判断、Q5 form Z defer LOCKED、observation level preserve (meta-pattern 2 cross-domain audit essentiality 整合)"
+    },
+    "src_side_p46_3_counter_extension_candidate_28_13_emerge": {
+      "axis_candidate": "src-side byte-discipline measurement (Pattern 46 emit-layer counterpart)",
+      "emergence_context": "28.13 Stage 1 declaration file-ize channel A->B delta -415 B decomposition reconstruct 不可性 由来 (em-dash 寄与 misattribution + source CR/LF measurement 未保存 attestation gap)",
+      "stage_2_baseline_establishment": "本 Stage 2 input_files_pin file-ize 時 src-side P46 3-counter measurement 適用済 (src=21525 B / CR=286 / LF=286 / BOM=False / lf_term=False、Windows-saved .txt 標準 CRLF + no trailing LF form confirmed)、Stage 2+ baseline 化済、channel A->B delta decomposition reconstructable form 確立",
+      "axis_orthogonality_judgment_pending": "L-Q3-63 emit-layer hygiene discipline と axis-orthogonality 判別必要、28.13+ defer queue add candidate、stratum A organic emerge",
+      "forensic_role_candidate": "L-Q3-* axis candidate territory、本 28.13 round 内 Stage 1 emerge + Stage 2 baseline establishment organic accumulation (Stage 5 closure 時点 record)"
+    }
+  },
+
+  "emit_metadata": {
+    "emit_ts_invariant_culture": "2026-05-20T13:39:11+09:00",
+    "author": "Sakaguchi Shinobu (坂口忍) / 坂口製麺所 / 宍粟市 (Shiso City, Hyogo)",
+    "license": "CC-BY 4.0",
+    "instance_class": "instance V (input_files_pin class、22nd dataset member、framework instance 2 obs candidate)",
+    "ground_form": "4-channel quadruple-ground (A here-string + B WriteAllBytes FINAL write + C post-attest re-hash + D JSON well-formed verify)",
+    "channel_d_jq_absence_form": "option A acceptance (PowerShell ConvertFrom-Json + Python json.tool 2-method、L-Q3-64 form Z defer LOCKED preserve)",
+    "key_order_template": "28.13 inaugural pin-enumeration schema (13-key count match with 28.12 R precedent、but schema-level redesign for forensic pin lookup audit-traceability efficiency、Pattern 47 Ordinal scope NOT applicable for schema-level redesign、本 schema divergence は L-Q3-65 candidate territory inaugural instance (L-Q3-64 broaden 回避、meta-pattern 1 axis specificity preservation 整合)、observation level preserve、cross-round audit data accumulation 経過後 axis-orthogonality 判別 + formal codify 判断 28.13+ defer、Stage 3 lessons_appendix item 13 retrospective enumeration scope 内 organic 補強 or Stage 4 verification_log section inscribe target preserve)",
+    "ascii_purity_target": "0 / 6 forbidden codepoints (em-dash 不使用、JSON quote ASCII double-quote のみ)",
+    "p46_3_counter_target": "3/3 PASS (LF-only + trailing LF + no BOM)",
+    "size_projection_band_wide_form": "claude.ai conservative band median ~38-42 KB、wide variance possibility preserve (修正 (3) 整合、declaration class +5.9%/+43% variance precedent 由来)",
+    "schema_divergence_observation_28_13_inaugural": {
+      "observation_type": "input_files_pin schema-level redesign from 28.12 R precedent (process-flow oriented) to 28.13 v0.1 (pin-enumeration oriented)",
+      "positional_match_with_28_12_r": "0/13",
+      "name_overlap_with_28_12_r": "0/13",
+      "schema_orientation_28_12_r": "process-flow oriented (artifact_identity -> generation_metadata -> forensic_chain_baseline_carry -> section_artifacts_carry -> envelope_state_carry -> immutable_pins_carry -> abandoned_narrative_sha -> technical_constraints -> priority_codify_scope -> framework_instance_projection -> axis_arithmetic_projection -> forensic_findings_active -> stage_1_attest_carry)",
+      "schema_orientation_28_13_v0_1": "pin-enumeration oriented (anchor_round_identifier -> forensic_chain_state -> head_pin -> parent_chain_pins -> q_tag_pins -> linear_era_root_pin -> section_artifacts -> envelope_pins -> immutable_pins -> abandoned_narrative_sha_pin -> discipline_inheritance -> factor_e_class_baselines -> emit_metadata)",
+      "axis_candidate_classification": "L-Q3-65 candidate territory inaugural instance (cross-round template stability vs forensic optimization 軸 / schema-design 軸)",
+      "axis_orthogonality_judgment_pending": "L-Q3-64 既存 form (jq absence cross-environment tool availability constraint、cross-environment 軸) との axis-orthogonality 判別必要、L-Q3-64 broaden 回避 (meta-pattern 1 axis specificity preservation 整合)、independent new axis (L-Q3-65) inaugural emergence form 採用",
+      "discovery_context": "Code-side review pass discipline counter-grounding 由来、Stage 2 pre-emit claude.ai 側 mis-specification (28.12 R precedent EXACT order match claim factually incorrect、Stage 2 13-key 表 自体が draft schema を 28.12 R precedent と誤標識) 発見",
+      "promotion_status": "observation level preserve、single-instance 観察、cross-round audit data accumulation 不足、formal codify は 28.13+ defer queue add candidate、stratum A organic emerge",
+      "f_28_11_inheritance_operational_evidence": "Code-side review pass discipline maintaining operational value 2nd instance for 28.13 round (Stage 1 修正 3 件 が 1st instance、本 schema mis-spec discovery が 2nd instance)、F-28.11 SHA-pin consistency discipline operational evidence の追加 1st instance",
+      "stage_3_integration_candidate": "lessons_appendix item 13 (L-Q3-* series internal enumeration completeness retrospective) scope 内 organic 補強 (axis-audit narrative arc に schema-divergence axis observation を natural integration、Option γ scope 拡張 不要)",
+      "stage_4_integration_candidate": "verification_log section inscribe target preserve (factor (e) declaration class data point と並ぶ cross-round 2nd extension empirical observation)"
+    }
+  }
+}
