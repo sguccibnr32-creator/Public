@@ -1,0 +1,439 @@
+{
+  "_schema": {
+    "name": "forensic_chain_input_files_pin",
+    "version": "0.1+",
+    "spec_provenance": "28.15 AE input_files_pin v0.2 schema inheritance, AC convention preserve form"
+  },
+  "_meta": {
+    "anchor": "anchor 28.16 v0.1",
+    "document_type": "input_files_pin",
+    "instance": "AJ candidate",
+    "dataset_position": "34th member, AD-AG continuation, AC convention preserve form, op-verify role 不算入",
+    "emit_ts": "2026-05-21T06:30:00+09:00",
+    "emit_ts_locale": "InvariantCulture",
+    "author": "Sakaguchi Shinobu / Sakaguchi Seimensho / Shiso City, Hyogo",
+    "license": "CC-BY 4.0",
+    "form_basis": "28.7-28.15 9 consecutive linear-era round closure precedent + 28.16 round 10th opening + F-28.11 6th application instance LOCKED (Stage 0 paste-back 12/12 Ordinal-equal baseline)",
+    "discipline_compliance": {
+      "P30_ascii_purity": "12-set forbidden codepoints 0/12 PASS expected",
+      "P35_invariant_culture": "all timestamps yyyy-MM-ddTHH:mm:ssK form",
+      "P46_3_counter": "CR=0 / BOM=False / lf_term=True expected",
+      "P47_ordinal_sha": "all SHA cross-attest String.Equals Ordinal form",
+      "P48_attestation_provenance": "sub-form A/B/C alpha LOCKED inheritance",
+      "R_S2_1_v0_2": "counting unit match-based form, line-based grep -ciE prohibited",
+      "L_Q3_68_caveat_inline": "convention 推定 portion has caveat for ground-truth precedence"
+    }
+  },
+
+  "_predecessor_closure_28_15": {
+    "anchor": "anchor 28.15 v0.1 FULL CLOSURE",
+    "closure_ts": "2026-05-21T04:41:12+09:00",
+    "head_sha": "c0418dc09e7f3c1ad293a0796fed1d79c067e674",
+    "parent_sha": "c7592a68c0033a44469c71ae37ad44fe1075563d",
+    "q22_annotated_tag": {
+      "tag_name": "companion-v4.9-q22-codify-round-2026-05-21",
+      "tag_obj_sha": "e35cf02486b5123b0aa49bd9db02d5e75ab21133",
+      "tag_type": "tag",
+      "tag_peel_eq_head": true,
+      "ls_remote_match": true
+    },
+    "linear_era_root": "491ff34cce22040e052f226e64adddc1669ea1b4",
+    "linear_era_root_preserve_rounds": "28.7-28.16 (10 consecutive rounds)",
+    "forensic_chain_depth": 22,
+    "chain_depth_form": "linear-era inclusive, root..HEAD distance 21 + 1",
+    "rule_92_strict_push_compliance": true,
+    "narrative_notes": "28.15 closure baseline preserved bit-exact through 28.16 round opening Stage 0; 12/12 Ordinal-equal cross-environment operational evidence at 2026-05-21T05:49:19+09:00 paste-back."
+  },
+
+  "_section26_codify_package_28_15_locked": {
+    "directory": "forensic_anchors/section26_lessons_codified_q22_v0_1/",
+    "naming_convention_caveat": "inferred from precedent (section{N}_lessons_codified_q{M}_v0_1 where N=section_number M=Q_tag_number), Code-side codebase convention preserves precedence if divergence detected",
+    "artifacts": [
+      {
+        "instance": "AD",
+        "dataset_member": 29,
+        "filename": "anchor_28_15_v0_1_declaration.md",
+        "sha256": "7416d161be2ebe6e7b421a1088295f351abfbddb7622c904657da3335d036d19",
+        "size_bytes": 63149,
+        "lf_count": 1053,
+        "byte_exact_preserve": true
+      },
+      {
+        "instance": "AE",
+        "dataset_member": 30,
+        "filename": "anchor_28_15_v0_1_input_files_pin.json",
+        "sha256": "66b26ea58cafde56cc78aaabf83d021c3e7566098163c708a4f29cb853d18d96",
+        "size_bytes": 29441,
+        "lf_count": 459,
+        "byte_exact_preserve": true
+      },
+      {
+        "instance": "AF",
+        "dataset_member": 31,
+        "filename": "anchor_28_15_v0_1_lessons_appendix.md",
+        "sha256": "6e48d90e93dca5322e1f152fb310a2184b8df69ec4f96c5e294e2b488847758f",
+        "size_bytes": 72804,
+        "lf_count": 1282,
+        "primary_codify": true,
+        "byte_exact_preserve": true
+      },
+      {
+        "instance": "AG",
+        "dataset_member": 32,
+        "filename": "anchor_28_15_v0_1_verification_log.md",
+        "sha256": "b25e340aae54986dcf85e8bfe40f248c18d0e7236738c585e926522e910212ae",
+        "size_bytes": 70322,
+        "lf_count": 1257,
+        "co_attest_baseline_round": "2nd round instance LOCK",
+        "zero_divergence_trajectory_intra_round": "7-instance trajectory final inscription",
+        "byte_exact_preserve": true
+      }
+    ],
+    "Stage_0_verification_status": "all 4 artifacts byte-exact at 2026-05-21T05:49:19+09:00, Get-FileHash measured ground-truth concur",
+    "narrative_notes": "section26 codify package 4 artifacts measured byte-exact through 28.16 round opening Stage 0; cross-attest operational evidence accumulated."
+  },
+
+  "_section25_codify_package_28_14_carry": {
+    "directory": "forensic_anchors/section25_lessons_codified_q21_v0_1/",
+    "artifacts": [
+      {
+        "instance": "Y",
+        "dataset_member": 25,
+        "filename": "anchor_28_14_v0_1_declaration.md",
+        "sha256": "664b98462b719f5f3d482ed06bb569794c3f986547699148c58ea63e23e83603"
+      },
+      {
+        "instance": "Z",
+        "dataset_member": 26,
+        "filename": "anchor_28_14_v0_1_input_files_pin.json",
+        "sha256": "e0f91bbe141c99fec7c5abbad3d64da1a34ce9e31ae1f8f89360a502160d789c"
+      },
+      {
+        "instance": "AA",
+        "dataset_member": 27,
+        "filename": "anchor_28_14_v0_1_lessons_appendix.md",
+        "sha256": "b303e61019267e7f83f6325965fe54ad0415868d06e082b579dba3275e3b51c8"
+      },
+      {
+        "instance": "AB",
+        "dataset_member": 28,
+        "filename": "anchor_28_14_v0_1_verification_log.md",
+        "sha256": "77a3e62eaf1d7de7ba4af3f638d7f918e5eedc7006178994d72b9135a203c2d1"
+      }
+    ],
+    "Stage_0_verification_status": "all 4 artifacts byte-exact at 2026-05-21T05:49:19+09:00 (U.9 gate PASS)"
+  },
+
+  "_immutable_pins_rule_1": {
+    "preservation_rounds": "28.7-28.16 (10 consecutive rounds, 28.16 opening 10th instance)",
+    "pins": [
+      {
+        "name": "X1",
+        "sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+        "size_bytes": 9561,
+        "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+        "location": "in-repo",
+        "Stage_0_verification": "measured byte-exact"
+      },
+      {
+        "name": "X1_sib",
+        "sha256": "4df652d6daebc0d06a7fe4a8b5e6771ae8fe6bf049d3a421d440e759fecc0a7a",
+        "size_bytes": 9379,
+        "location": "in-repo sibling",
+        "Stage_0_verification": "placement-pin inheritance form"
+      },
+      {
+        "name": "X2",
+        "sha256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+        "size_bytes": 118226,
+        "path": "membrane_v48.tex",
+        "location": "in-repo",
+        "Stage_0_verification": "placement-pin inheritance form"
+      },
+      {
+        "name": "F-28.4-C",
+        "sha256": "5d9beb04361e0b21f1b703e68ba90f8cbf28efbfa0ff56c84c9d4abffb048ef3",
+        "size_bytes": 11096,
+        "path": "E:\\Q-3_route_ii_discovery_2026-05-07\\Q-3_immutable_hsc_values.draft.json",
+        "location": "out-of-repo",
+        "Stage_0_verification": "measured byte-exact ground-truth"
+      }
+    ]
+  },
+
+  "_envelope_state_28_15_closure_preserve": {
+    "gitattributes": {
+      "sha256": "ceb63559149f186b61a41cb1cd42ec692f4a66679cb1c038f2778a4f79833fe0",
+      "convention_caveat": "inferred from precedent (`<path>/** -text` double-star recursive, 30+ entries uniform), Code-side codebase convention preserves precedence if divergence detected",
+      "L_Q3_68_instance_1_mitigation": "double-star recursive form preserve baseline"
+    },
+    "sha256sums": {
+      "sha256": "d164aba3ab2d34336ca64473994f479f24e56ace7e2199f4439ac6f0c97978e5",
+      "counts_total": 142,
+      "counts_data": 123,
+      "counts_meta": 19,
+      "classification_regex_form": "natural form (data=^[0-9a-f]{64}\\s+ / meta=^#)",
+      "L_Q3_68_instance_2_mitigation": "natural form regex preserve baseline"
+    },
+    "Stage_0_verification": "envelope state bit-exact at 2026-05-21T05:49:19+09:00 paste-back; U.4 gate + U.12 SHA256SUMS counts gate both PASS"
+  },
+
+  "_section27_codify_package_28_16_in_progress": {
+    "directory": "forensic_anchors/section27_lessons_codified_q23_v0_1/",
+    "naming_convention_caveat": "inferred from precedent (section26 -> section27 / q22 -> q23 progression), Code-side codebase convention preserves precedence if divergence detected",
+    "artifacts": [
+      {
+        "instance": "AI",
+        "dataset_member": 33,
+        "filename": "anchor_28_16_v0_1_declaration.md",
+        "sha256": "463f53e6c14382d563dbf9a90e2021465f90acc3ccb30ee651761ca7789fbb55",
+        "size_bytes": 37321,
+        "lf_count": 669,
+        "status": "LOCKED at 2026-05-21T06:17:18+09:00",
+        "Stage_1_verification": "triple-ground 3-way Ordinal-equal PASS + P46 3/3 PASS + Pattern 48 8/8 zero-divergence (71 markers total, 8/8 active)",
+        "F_28_11_application": "7th instance per Stage 1 paste-back, claude.ai self-measure concur PC source concur Code-side target"
+      },
+      {
+        "instance": "AJ",
+        "dataset_member": 34,
+        "filename": "anchor_28_16_v0_1_input_files_pin.json",
+        "sha256": "<self-reference, inscribed at AJ Stage 2 file-ize commit time>",
+        "status": "Stage 2 file-ize execute target (本 file)"
+      },
+      {
+        "instance": "AK",
+        "dataset_member": 35,
+        "filename": "anchor_28_16_v0_1_lessons_appendix.md",
+        "sha256": "<inscribed at AK Stage 3 file-ize commit time>",
+        "primary_codify": true,
+        "status": "Stage 3 file-ize pending (PRIMARY CODIFY, 30-item scope + emergent slot fill)"
+      },
+      {
+        "instance": "AL",
+        "dataset_member": 36,
+        "filename": "anchor_28_16_v0_1_verification_log.md",
+        "sha256": "<inscribed at AL Stage 4 file-ize commit time>",
+        "co_attest_baseline_round": "3rd round instance target",
+        "status": "Stage 4 file-ize pending (cross-round zero-divergence trajectory replication target)"
+      }
+    ]
+  },
+
+  "_forensic_chain_anchors_recent_rounds": {
+    "rounds": [
+      {"round": "28.7",  "head_sha_position": "linear-era root", "linear_distance_from_root": 0},
+      {"round": "28.8",  "linear_distance_from_root": "+1 (root..HEAD inclusive 2)"},
+      {"round": "28.9",  "linear_distance_from_root": "+2 (root..HEAD inclusive 3)"},
+      {"round": "28.10", "linear_distance_from_root": "+3 (root..HEAD inclusive 4)"},
+      {"round": "28.11", "linear_distance_from_root": "+4 (root..HEAD inclusive 5)"},
+      {"round": "28.12", "linear_distance_from_root": "+5 (root..HEAD inclusive 6)"},
+      {"round": "28.13", "linear_distance_from_root": "+6 (root..HEAD inclusive 7)", "f_28_11_application": "1st (sub-form alpha LOCK)"},
+      {"round": "28.14", "head_sha": "c7592a68c0033a44469c71ae37ad44fe1075563d", "linear_distance_from_root": "+19 (root..HEAD inclusive 20)", "f_28_11_application": "2nd"},
+      {"round": "28.15", "head_sha": "c0418dc09e7f3c1ad293a0796fed1d79c067e674", "linear_distance_from_root": "+20 (root..HEAD inclusive 21, chain depth 22)", "f_28_11_application": "3rd-4th-5th (Stage 0 + Stage 4 + mid-round migration)"},
+      {"round": "28.16_opening", "head_sha": "c0418dc09e7f3c1ad293a0796fed1d79c067e674", "linear_distance_from_root": "+20 (preserve unchanged until Stage 5 atomic commit)", "f_28_11_application": "6th (Stage 0 paste-back 12/12 Ordinal-equal) + 7th (Stage 1 AI LOCK 3-channel Ordinal-equal)"}
+    ]
+  },
+
+  "_priority_codify_scope_28_16_final_form": {
+    "lock_ts": "2026-05-21T06:00:00+09:00 (post Stage 0 paste-back + user editorial confirmation)",
+    "total_inscribed": 30,
+    "total_deferred": 2,
+    "total_full_scope": 32,
+    "categories": {
+      "A_carry_from_28_15": {
+        "count": 24,
+        "form": "group-level inheritance, conservative preservation principle",
+        "source_caveat": "inferred from precedent (28.15 AF lessons_appendix 6e48d90e..), Code-side codebase ground-truth precedence",
+        "inscription_target": "AK lessons_appendix §X carry inheritance form 1:1 transcribe"
+      },
+      "B_new_from_28_15_closure": {
+        "count": 2,
+        "items": [
+          "B-1: L-Q3-68 axis inaugural full codify (axis semantic + naming rationale + inaugural 2-instance + mitigation pathway 3-form + operational evidence)",
+          "B-2: F-28.11 5th + 6th application instance codify (sub-form alpha LOCKED inheritance + application instance trajectory)"
+        ],
+        "priority": "PRIMARY CODIFY high"
+      },
+      "C_promoted_from_defer_queue": {
+        "count": 4,
+        "items": [
+          "C-1: L-Q3-67 sub-item D codify (sha_256 schema field name semantic disambiguation)",
+          "C-2: L-Q3-67 sub-item E codify (memory-rule meta-reference vs identity-use)",
+          "C-3: L-Q3-67 6th instance codify (Japanese character classification spec)",
+          "C-4: grep false-positive mitigation formal LOCK"
+        ],
+        "ordering_rationale": "L-Q3-67 alphabetical D-E + 6th instance (R-S2-1 precedent thematic chain) + grep mitigation derived pattern"
+      },
+      "D_deferred_to_28_17_plus": {
+        "count": 2,
+        "items": [
+          "D-1: AH semantics audit + 28.7-28.14 letter audit (28.15 §9.2 deferred carry)",
+          "D-2: factor (e) baseline refute commit (4-class observation complete, scientific significance LOCK 後 inscription)"
+        ],
+        "rationale": "本 round capacity preservation, 28.17+ defer queue 継続"
+      }
+    },
+    "emergent_slot": {
+      "form": "AK lessons_appendix §X emergent slot, round 内 emergence vs pre-round scope structural separation",
+      "precedent": "28.15 L-Q3-67 sub-items B + C inaugural emergence form",
+      "1st_emergence_pre_lock": "L-Q3-68 round opening operational evidence 1st replication instance (Stage 0 paste-back 12/12 PASS, B-1 axis codify block inscription target)"
+    }
+  },
+
+  "_pattern_discipline_10_of_10": {
+    "P30_ascii_purity": "12-set forbidden codepoints 0/12 PASS, ASCII alternates (-> <- -- ... ' \") for all dash/arrow/quote/ellipsis forms",
+    "P31_F_byte_discipline": "commit_msg / tag_msg via -F file path, stdin prohibited",
+    "P32_push_specific_scope": "NativeCommandError wrap + ErrorActionPreference scope-limited form",
+    "P35_invariant_culture": "all timestamps yyyy-MM-ddTHH:mm:ssK InvariantCulture locale",
+    "P38_exec_policy_workaround": "scriptblock + & form: $sb = [scriptblock]::Create($s); & $sb",
+    "P39_cwd_sync_tier_1_2": "Set-Location + [System.IO.Directory]::SetCurrentDirectory both applied",
+    "P46_3_counter": "CR=0 / BOM=False / lf_term=True measured post all file writes",
+    "P47_ordinal_sha_equality": "[String]::Equals(a, b, [System.StringComparison]::Ordinal) form",
+    "P48_attestation_provenance": "sub-form A/B/C alpha LOCKED inheritance, claim ground 明示 (measured/asserted/inferred/propagated form distinct)",
+    "P49_3_gate_suite": "[1] post-commit + [2] post-tag + [3] post-push, each Ordinal compare; dispatch closure verification baseline"
+  },
+
+  "_r_s2_1_v0_2_spec": {
+    "form_lock": "v0.2 LOCKED at 28.15 round (counting unit semantics match-based form, line-based prohibited)",
+    "counting_unit_semantics": "match-based (PowerShell [regex]::Matches OR Python re.findall)",
+    "prohibited_form": "line-based bash grep -ciE form (divergence inducing pathology)",
+    "categories_8_regex": {
+      "cat1_measured": "(?i)(measured|measurement|empirical|empirically)",
+      "cat2_byte_bit": "(?i)(byte-exact|bit-exact)",
+      "cat3_GetFileHash": "(?i)Get-FileHash",
+      "cat4_lsremote": "(?i)ls-remote",
+      "cat5_PatternN": "(?i)Pattern\\s*\\d+",
+      "cat6_op_evidence": "(?i)operational\\s+(evidence|verify)",
+      "cat7_crossattest": "(?i)(cross-attest|cross\\s+attest|concur)",
+      "cat8_grounded": "(?i)(grounded|ground\\s+form|ground-truth)"
+    },
+    "trajectory": {
+      "intra_round_28_15": "7-instance zero-divergence ACHIEVED",
+      "cross_round_replication_28_13": "1st (inaugural)",
+      "cross_round_replication_28_14": "2nd",
+      "cross_round_replication_28_15_intra": "7-instance intra-round",
+      "cross_round_replication_28_16_target": "3rd cross-round replication (4-5 instance Stage 1-5 file-ize trajectory)",
+      "28_16_stage_1_AI_lock": "1st point LOCKED at 2026-05-21T06:17:18+09:00 (71 markers, 8/8 active)"
+    }
+  },
+
+  "_l_q3_67_axis_one_environment_internal": {
+    "axis_semantic": "methodology specification verification implementation divergence (claude.ai one-environment-internal axis)",
+    "established_sub_items": "A + B + C 統合 axis LOCKED in 28.15",
+    "codify_target_28_16": [
+      "sub-item D: sha_256 schema field name semantic disambiguation",
+      "sub-item E: memory-rule meta-reference vs identity-use disambiguation",
+      "6th instance: Japanese character classification spec disambiguation",
+      "grep false-positive mitigation formal LOCK (R-S2-1 derived)"
+    ]
+  },
+
+  "_l_q3_68_axis_cross_environment_inaugural_28_16_codify": {
+    "axis_semantic": "cross-environment convention drift (claude.ai precedent-inferred spec vs Code-side codebase ground-truth convention, environment-boundary axis)",
+    "naming_rationale": "L-Q3-67 既知 sub-items A-E は claude.ai 内部 one-environment-internal axis, L-Q3-68 は environment-boundary 跨ぐ axis, structurally separate axis taxonomic clarity preserve",
+    "inaugural_2_instance": [
+      {
+        "instance": 1,
+        "location": "28.15 Stage 5 step 3a (.gitattributes glob spec)",
+        "claude_ai_directive": "<path>/* -text (single-star)",
+        "code_side_convention": "<path>/** -text (double-star recursive, 30+ entries uniform)",
+        "mitigation": "** 採用, convention preserve auto-resolved"
+      },
+      {
+        "instance": 2,
+        "location": "28.15 Stage 5 step 3b (SHA256SUMS classification regex)",
+        "claude_ai_directive": "data prefix-narrowed (forensic_anchors|membrane_v|scripts|reports|companion)",
+        "code_side_convention": "natural form (data=^[0-9a-f]{64}\\s+ / meta=^#)",
+        "mitigation": "natural form 採用, convention preserve auto-resolved"
+      }
+    ],
+    "mitigation_pathway_3_form": {
+      "i": "claude.ai directive caveat inline mandatory (self-discipline, convention 推定 portion に 'inferred from precedent, Code-side codebase convention preserves precedence if divergence detected' inline)",
+      "ii": "Code-side script template convention preserve auto-detect form baseline 組込",
+      "iii": "28.16 round opening sync_memo §3 v0.2 spec inscribed baseline form LOCKED"
+    },
+    "operational_evidence_accumulation": [
+      "28.15 closure round 2-instance inaugural emergence (Code-side auto-resolve)",
+      "28.16 round opening Stage 0 (12/12 Ordinal-equal, 1st replication instance)",
+      "28.16 Stage 1 AI file-ize (3-channel Ordinal-equal, 2nd replication instance)"
+    ]
+  },
+
+  "_f_28_11_sha_pin_consistency_discipline": {
+    "framework": "cross-environment consistency operational framework, sub-form A/B/C alpha LOCKED",
+    "sub_forms": {
+      "A": "claude.ai chat 内 self-verify (Get-FileHash 互換 form)",
+      "B": "PC local file system measurement (mid-round preservation form)",
+      "C": "Code-side cross-attest re-measurement (ReadAllBytes -> WriteAllBytes byte-exact copy 後 Get-FileHash)"
+    },
+    "application_instance_trajectory": [
+      {"instance": 1, "round": "28.13", "form": "inaugural codify (sub-form alpha LOCK)"},
+      {"instance": 2, "round": "28.14", "form": "application"},
+      {"instance": 3, "round": "28.15 opening Stage 0", "form": "claude.ai concur Code-side cross-attest"},
+      {"instance": 4, "round": "28.15 Stage 4 file-ize", "form": "5-channel co-attest baseline 1st round instance"},
+      {"instance": 5, "round": "28.15 mid-round migration", "form": "chat 跨ぎ 4-link chain b25e340a.. preservation"},
+      {"instance": 6, "round": "28.16 opening Stage 0", "form": "12/12 Ordinal-equal at 2026-05-21T05:49:19+09:00"},
+      {"instance": 7, "round": "28.16 Stage 1 AI file-ize", "form": "3-channel Ordinal-equal at 2026-05-21T06:17:18+09:00"}
+    ],
+    "forward_target": "8th instance Stage 4 verification_log file-ize (co-attest baseline 3rd round) + 9th instance 28.16 closure handoff package emit"
+  },
+
+  "_l_q3_63_closure_paste_back_inheritance": {
+    "form_iii_hybrid_lock": "28.15 closure round instance 8 LOCKED (form iii hybrid)",
+    "28_16_target": "instance 9 form (本 28.16 closure paste-back, form iii hybrid continuation expected)"
+  },
+
+  "_stage_progression_28_16_round": {
+    "stage_0_paired_sync_verify": {
+      "status": "COMPLETE",
+      "ts": "2026-05-21T05:49:19+09:00",
+      "result": "OVERALL 12/12 state-PASS, 11 literal gate + 1 SHA256SUMS counts gate all PASS"
+    },
+    "stage_1_declaration_file_ize": {
+      "status": "COMPLETE (AI LOCKED)",
+      "ts": "2026-05-21T06:17:18+09:00",
+      "instance": "AI (33rd dataset member)",
+      "sha256": "463f53e6c14382d563dbf9a90e2021465f90acc3ccb30ee651761ca7789fbb55",
+      "result": "triple-ground 3-way Ordinal-equal + P46 3/3 PASS + Pattern 48 8/8 zero-divergence (71 markers)"
+    },
+    "stage_2_input_files_pin_file_ize": {
+      "status": "IN PROGRESS (本 file emit + execute)",
+      "instance": "AJ (34th dataset member)"
+    },
+    "stage_3_lessons_appendix_file_ize": {
+      "status": "PENDING",
+      "instance": "AK (35th dataset member)",
+      "primary_codify": true
+    },
+    "stage_4_verification_log_file_ize": {
+      "status": "PENDING",
+      "instance": "AL (36th dataset member)",
+      "co_attest_baseline": "3rd round instance target"
+    },
+    "stage_5_dispatch_v0_2_11_step": {
+      "status": "PENDING",
+      "q23_tag_name_template": "companion-v4.9-q23-codify-round-2026-05-21",
+      "chain_depth_progression_target": "22 -> 23 (linear-era inclusive form)",
+      "rule_92_strict_push_compliance": "main + Q23 tag explicit name push only"
+    },
+    "closure_handoff_emit": {
+      "status": "PENDING",
+      "form": "3-file redundant (handoff_memo + sync_memo + 28.16 closure verification PDF gamma hybrid form)",
+      "f_28_11_target_instance": "9th application instance"
+    }
+  },
+
+  "_document_discipline_footer": {
+    "ascii_purity_p30": "0/12 forbidden codepoints expected (pre-emit scan)",
+    "p46_3_counter": "CR=0 / BOM=False / lf_term=True expected",
+    "encoding": "UTF-8 no BOM",
+    "line_ending": "LF only",
+    "pattern_48_8_category_self_measure": "embedded narrative_notes fields ensure active 8/8 target (precedent inheritance 28.15 AE)",
+    "L_Q3_68_caveat_inline_locations": [
+      "_section26_codify_package_28_15_locked.naming_convention_caveat",
+      "_envelope_state_28_15_closure_preserve.gitattributes.convention_caveat",
+      "_section27_codify_package_28_16_in_progress.naming_convention_caveat",
+      "_priority_codify_scope_28_16_final_form.categories.A_carry_from_28_15.source_caveat"
+    ]
+  }
+}
