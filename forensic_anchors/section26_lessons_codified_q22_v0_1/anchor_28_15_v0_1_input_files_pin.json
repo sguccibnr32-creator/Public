@@ -1,0 +1,459 @@
+{
+  "_schema": {
+    "version": "13-key v0.1 (L-Q3-65 P2 LOCKED inheritance, 28.13 inaugural)",
+    "round_id": "anchor_28_15_v0_1",
+    "stage": "Stage 2 input_files_pin",
+    "instance": "AE (30th dataset member, 28.15 round 2nd primary codify)",
+    "emit_ts": "(file-ize at Code-side, [DateTimeOffset]::UtcNow.ToOffset InvariantCulture form inscribe)",
+    "form_basis": "13-key 28.13 inaugural pin-enumeration schema 3rd cross-round inheritance instance (28.13 inaugural + 28.14 1st inheritance + 28.15 2nd inheritance)",
+    "author": "坂口 忍 (Sakaguchi Shinobu) / 坂口製麺所 / 兵庫県 宍粟市 (Shiso City, Hyogo)",
+    "author_canonical_form_compliance": "declaration v0.2 line 8 form 同形 + memory entry 26 canonical (坂口製麺所 兵庫県 宍粟市) compliance, v0.1 'sakaguchi-noodles' transliteration variant (saka_seimensho form-equivalent, anchor 28.5 由来 do-not-inherit-forward category) を v0.2 で canonical 復元 LOCKED",
+    "license": "CC-BY 4.0",
+    "channel_ground_form": "4-channel quadruple-ground (A self-verify + B WriteAllBytes + C re-hash + D JSON 2-method via PowerShell ConvertFrom-Json + Python json.tool)",
+    "encoding_discipline": "UTF-8 no BOM, LF-only, lf_term True, P46 3-counter 3/3 PASS target"
+  },
+
+  "key_01_HEAD_baseline": {
+    "description": "28.14 closure HEAD baseline, byte-exact preserved at Stage 2 emit phase",
+    "commit_sha1": "c7592a68c0033a44469c71ae37ad44fe1075563d",
+    "id_type": "git SHA-1 commit object ID (40 hex chars, git 1.x default form)",
+    "commit_role": "anchor 28.14 v0.1 FULL CLOSURE commit",
+    "closure_ts": "2026-05-20T18:58:21+09:00",
+    "preservation_state": "unchanged at Stage 2 emit phase (Stage 5 dispatch atomic commit までは preserve LOCKED)",
+    "verification_method": "git rev-parse HEAD + Pattern 47 Ordinal SHA equality",
+    "grounded_by": "Stage 1 file-ize closure paste-back Code-side empirical confirm (HEAD c7592a68.. preserved)"
+  },
+
+  "key_02_Q21_tag": {
+    "description": "28.14 closure Q21 annotated tag object, peel == HEAD",
+    "tag_obj_sha1": "cf6cb8cf4c3c6dc3221c4d7cd417eea0dd82e80c",
+    "id_type": "git SHA-1 tag object ID (40 hex chars, annotated tag form)",
+    "tag_name": "companion-v4.9-q21-codify-round-2026-05-20",
+    "tag_type": "annotated",
+    "tag_peel_commit_sha1": "c7592a68c0033a44469c71ae37ad44fe1075563d (== HEAD)",
+    "origin_remote_state": "pushed bit-exact, ls-remote verified at 28.14 closure",
+    "preservation_state": "unchanged at Stage 2 emit phase",
+    "verification_method": "git cat-file -t + git rev-parse '<tag>^{}' + Pattern 47 Ordinal SHA equality"
+  },
+
+  "key_03_linear_era_root": {
+    "description": "linear-era root anchor 22 v0.2 closure commit, preserved across 28.7-28.14 8 rounds + 28.15 round opening 9th",
+    "commit_sha1": "491ff34cce22040e052f226e64adddc1669ea1b4",
+    "id_type": "git SHA-1 commit object ID (40 hex chars, anchor 22 v0.2 closure commit)",
+    "anchor_role": "anchor 22 v0.2 closure (X1 + X1_sib IMMUTABLE pins origin)",
+    "pre_linear_era_commits_count": 32,
+    "pre_linear_era_breakdown": {
+      "initial_commit": "daf4fc60.. (2026-04-15 13:47:52 +0900)",
+      "anchor_1_to_22_v0_1_closures": 31,
+      "total": 32
+    },
+    "linear_era_distance_to_head": 20,
+    "inclusive_depth_form": "linear-era distance + 1 = 21 (memo spec)",
+    "total_head_depth_arithmetic": "32 (pre-linear) + 20 (linear-era) = 52 (rev-list --count HEAD)",
+    "verification_method": "git merge-base --is-ancestor + git rev-list --count '<root>..HEAD' + first-parent 20-hop enumeration",
+    "cross_attest_source": "MEMORY.md 'anchor 24 v0.1 Q3 codify round v0.2 CLOSURE' entry 内 'grandparent 491ff34c anchor 22 v0.2 closure' 明記",
+    "grounded_by": "3-way independent grounding (Stage 1 declaration §2.3 + §5 inscribed)"
+  },
+
+  "key_04_section25_artifacts": {
+    "description": "section25 (28.14 closure) 4 paired artifacts SHA register, byte-exact carry baseline",
+    "directory": "forensic_anchors/section25_lessons_codified_q21_v0_1/",
+    "artifacts": {
+      "anchor_28_14_v0_1_declaration.md": {
+        "sha_256": "664b98462b719f5f3d482ed06bb569794c3f986547699148c58ea63e23e83603",
+        "size_bytes": 30249,
+        "lf_count": 632,
+        "p46_3_counter": "3/3 PASS",
+        "instance": "Y (25th dataset, 28.14 round 1st primary codify)"
+      },
+      "anchor_28_14_v0_1_input_files_pin.json": {
+        "sha_256": "e0f91bbe141c99fec7c5abbad3d64da1a34ce9e31ae1f8f89360a502160d789c",
+        "size_bytes": 25154,
+        "lf_count": 335,
+        "p46_3_counter": "3/3 PASS",
+        "instance": "Z (26th dataset, 28.14 round 2nd primary codify)"
+      },
+      "anchor_28_14_v0_1_lessons_appendix.md": {
+        "sha_256": "b303e61019267e7f83f6325965fe54ad0415868d06e082b579dba3275e3b51c8",
+        "size_bytes": 47282,
+        "lf_count": 1061,
+        "p46_3_counter": "3/3 PASS",
+        "instance": "AA (27th dataset, 28.14 round PRIMARY CODIFY)"
+      },
+      "anchor_28_14_v0_1_verification_log.md": {
+        "sha_256": "77a3e62eaf1d7de7ba4af3f638d7f918e5eedc7006178994d72b9135a203c2d1",
+        "size_bytes": 53967,
+        "lf_count": 1212,
+        "p46_3_counter": "3/3 PASS",
+        "instance": "AB (28th dataset, 28.14 round co-attest baseline)"
+      }
+    },
+    "verification_method": "Get-FileHash byte-exact + Pattern 47 Ordinal SHA equality",
+    "u3_gate_role": "paired sync verify U.3 baseline (section25 28.14 closure)",
+    "preservation_state": "byte-exact preserved at Stage 2 emit phase"
+  },
+
+  "key_05_section24_artifacts": {
+    "description": "section24 (28.13 closure) 4 paired artifacts ground-truth SHA register, U.9 gate baseline carry",
+    "directory": "forensic_anchors/section24_lessons_codified_q20_v0_1/",
+    "artifacts": {
+      "anchor_28_13_v0_1_declaration.md": {
+        "sha_256": "fcd6647f94ece743d8eb50515b293a32701bcf99ace90c6db8ba561a9f724d82",
+        "size_bytes": 29344,
+        "instance": "U (21st dataset alternate carry, 28.13 round)"
+      },
+      "anchor_28_13_v0_1_input_files_pin.json": {
+        "sha_256": "30a4cb01789c160498c51ef13a503dd80c80b71a8891fd127b7c1715ce8fde8f",
+        "size_bytes": 23888,
+        "instance": "(28.13 round 2nd primary codify)"
+      },
+      "anchor_28_13_v0_1_lessons_appendix.md": {
+        "sha_256": "6230a72c3f9be2d789ddc08dd0284ee0d94f0a8e0f2fd7ce3f7515677dcc35fd",
+        "size_bytes": 50771,
+        "instance": "(28.13 round PRIMARY CODIFY)"
+      },
+      "anchor_28_13_v0_1_verification_log.md": {
+        "sha_256": "d40730d4952d14a2322dccdb2d65c205959535b983f0f8070ff552233d1a157d",
+        "size_bytes": 45837,
+        "instance": "(28.13 round co-attest baseline)"
+      }
+    },
+    "verification_method": "Get-FileHash byte-exact + Pattern 47 Ordinal SHA equality",
+    "u9_gate_role": "paired sync verify U.9 grand-parent baseline ground-truth (sub-form C alpha mitigation forward-applied)",
+    "preservation_state": "byte-exact preserved at Stage 2 emit phase"
+  },
+
+  "key_06_envelope_post_s5": {
+    "description": "envelope state post-Stage-5 dispatch at 28.14 closure (.gitattributes + SHA256SUMS)",
+    "gitattributes": {
+      "sha_256": "27df4d4176d74348450baa95b6fc80877be64b9b10bcf4e6fdc5940425baba88",
+      "change_state": "section25 -text directive 追加 (section24 directive 直後 insertion, symmetry preserve)",
+      "verification_method": "Get-FileHash byte-exact"
+    },
+    "sha256sums": {
+      "sha_256": "6d33220b86ecba773094659996c376273de52ed3387ee6f717bc66ba9fe174d5",
+      "entries_total_non_empty": 138,
+      "entries_sha_pin": 119,
+      "entries_comment_header": 19,
+      "arithmetic_verify": "119 + 19 = 138 PASS",
+      "progression_from_28_13": "134/115/19 -> 138/119/19 (+4 entries +1 refresh, option c hybrid form)",
+      "verification_method": "Get-FileHash byte-exact + Pattern 47 Ordinal SHA equality"
+    },
+    "u4_gate_role": "paired sync verify U.4 baseline (envelope 28.14 closure)",
+    "preservation_state": "byte-exact preserved at Stage 2 emit phase"
+  },
+
+  "key_07_immutable_pins": {
+    "description": "rule 1 IMMUTABLE pins, byte-exact preserved across 28.7-28.14 8 rounds + 28.15 round opening 9th",
+    "pins": {
+      "X1": {
+        "sha_256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+        "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+        "size_bytes": 9561,
+        "role": "anchor 22 v0.2 input_files_pin baseline (linear-era root origin)"
+      },
+      "X1_sib": {
+        "sha_256": "4df652d6daebc0d06a7fe4a8b5e6771ae8fe6bf049d3a421d440e759fecc0a7a",
+        "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_lessons_appendix.md",
+        "size_bytes": 9379,
+        "role": "anchor 22 v0.2 lessons_appendix sibling baseline"
+      },
+      "X2": {
+        "sha_256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+        "path": "latex_v48/membrane_v48.tex",
+        "size_bytes": 118226,
+        "role": "membrane v4.8 LaTeX source IMMUTABLE baseline"
+      },
+      "F-28.4-C": {
+        "sha_256": "5d9beb04361e0b21f1b703e68ba90f8cbf28efbfa0ff56c84c9d4abffb048ef3",
+        "path": "E:/Q-3_route_ii_discovery_2026-05-07/Q-3_immutable_hsc_values.draft.json",
+        "size_bytes": 11096,
+        "role": "out-of-repo IMMUTABLE (HSC Q-3 route ii discovery baseline)",
+        "location_type": "out-of-repo"
+      }
+    },
+    "verification_method": "Get-FileHash byte-exact + Pattern 47 Ordinal SHA equality, 4-pin enumerated cross-attest",
+    "u5_u10_gate_role": "paired sync verify U.5 (F-28.4-C) + U.10 (X1)",
+    "preservation_state": "byte-exact preserved 9 rounds at Stage 2 emit phase"
+  },
+
+  "key_08_abandoned_narrative_sha_cumulative": {
+    "description": "R-S2-2 abandoned narrative SHA empirical grep cumulative state",
+    "cumulative_at_28_14_closure": 35,
+    "lock_state": "LOCKED at 35 (28.7-28.14 8 rounds cumulative baseline)",
+    "carry_form": "post-28.14 closure cumulative 35 baseline preserved",
+    "stage_2_measurement_state": "NOT MEASURED at Stage 2 emit phase (sync_memo §3 grep spec inline 化 path 採用、28.16 sync_memo §3 baseline 適用時 operational execute target)",
+    "mitigation_reference": "L-Q3-67 sub-item B (Stage 1 declaration §3.3) concrete PowerShell 全 executable 展開 LOCKED, operational execute defer 28.16 round",
+    "grep_spec_form": "R-S2-2 prefix-relaxed 3-step (step1 hex literal extract + step2 ground-truth register exclude + step3 prefix-relaxed sub-form C alpha classification)",
+    "verification_method": "deferred operational execute (28.16 sync_memo §3 baseline 適用時)"
+  },
+
+  "key_09_declaration_self_reference": {
+    "description": "Stage 1 declaration 28.15 v0.1 self-reference, byte-exact empirical confirmed",
+    "path": "forensic_anchors/section26_lessons_codified_q22_v0_1/anchor_28_15_v0_1_declaration.md",
+    "sha_256": "7416d161be2ebe6e7b421a1088295f351abfbddb7622c904657da3335d036d19",
+    "size_bytes": 63149,
+    "lf_count": 1053,
+    "cr_count": 0,
+    "bom_present": false,
+    "lf_term": true,
+    "p46_3_counter": "3/3 PASS (Code-side empirical Stage 1 closure paste-back grounded)",
+    "instance": "AD (29th dataset member, 28.15 round 1st primary codify)",
+    "version_form": "v0.2 revision (Code-side cross-attest 5 findings 全件反映 form)",
+    "ascii_purity": "0/12 forbidden codepoints PASS (U+2192 -> ASCII '->' self-fix LOCKED)",
+    "intentional_non_ascii_markup": {
+      "U+2194": 10,
+      "U+00A7": 83,
+      "note": "12-set forbidden 外, intentional technical markup (L-Q3-67 axis name + section reference)"
+    },
+    "verification_method": "Get-FileHash byte-exact + Pattern 47 Ordinal SHA equality + Stage 1 closure paste-back cross-attest",
+    "grounded_by": "Stage 1 file-ize @ 2026-05-20T21:05:41+09:00 (Code-side execute TS), source -> target SHA bit-exact copy PASS"
+  },
+
+  "key_10_pattern_48_markers": {
+    "description": "Pattern 48 8-category match-based marker count state (R-S2-1 v0.2 spec compliance, counting unit semantics match-based form)",
+    "spec_form": "R-S2-1 v0.2 spec (28.15 round sub-item C addition, counting unit semantics 明示拡張)",
+    "counting_unit": "match-based (each regex match counted individually, line-based form prohibited)",
+    "implementation_form": "PowerShell [regex]::Matches OR Python re.findall",
+    "prohibited_implementation": "bash 'grep -ciE' (line-based, divergence inducing form)",
+    "target_artifact": "Stage 1 declaration (anchor_28_15_v0_1_declaration.md, SHA 7416d161..)",
+    "category_counts": {
+      "cat1_measured": 63,
+      "cat2_byte_bit_exact": 16,
+      "cat3_GetFileHash": 11,
+      "cat4_lsremote": 8,
+      "cat5_PatternN": 40,
+      "cat6_op_evidence": 19,
+      "cat7_crossattest": 28,
+      "cat8_grounded": 22
+    },
+    "total": 207,
+    "active_types": "8/8 PASS",
+    "regex_specifications": {
+      "cat1": "(?i)(measured|measurement|empirical|empirically)",
+      "cat2": "(?i)(byte-exact|bit-exact)",
+      "cat3": "(?i)Get-FileHash",
+      "cat4": "(?i)ls-remote",
+      "cat5": "(?i)Pattern\\s*\\d+",
+      "cat6": "(?i)operational\\s+(evidence|verify)",
+      "cat7": "(?i)(cross-attest|cross\\s+attest|concur)",
+      "cat8": "(?i)(grounded|ground\\s+form|ground-truth)"
+    },
+    "cross_attest_state": {
+      "claude_ai_self_verify": 207,
+      "code_side_empirical": 207,
+      "delta": 0,
+      "verdict": "ZERO-DIVERGENCE ACHIEVED (R-S2-1 v0.2 spec 2nd replication intra-round)"
+    },
+    "forensic_finding": "R-S2-1 cross-round 2nd replication intra-round ACHIEVED (sub-item C mitigation closed-loop self-validation 1st operational evidence LOCK 確定, priority codify scope item 19 1st result)",
+    "verification_method": "Code-side PowerShell [regex]::Matches + claude.ai self-verify Python re.findall, AND-conjunction Ordinal equality"
+  },
+
+  "key_11_p46_3_counter_state": {
+    "description": "P46 3-counter state for current Stage 2 input_files_pin artifact (self-verify)",
+    "target_artifact": "anchor_28_15_v0_1_input_files_pin.json (本 file 自身, channel A self-verify form)",
+    "expected_form": {
+      "encoding": "UTF-8 no BOM",
+      "lf_count_target": "(file-ize 後 actual measurement, Finding 9 self-application form)",
+      "cr_count_target": 0,
+      "bom_present_target": false,
+      "lf_term_target": true,
+      "p46_3_counter_target": "3/3 PASS"
+    },
+    "verification_method": "Code-side empirical Get-FileHash + LF/CR/BOM/lf_term byte-level scan",
+    "stage_1_declaration_reference": {
+      "size_bytes": 63149,
+      "lf_count": 1053,
+      "cr_count": 0,
+      "bom_present": false,
+      "lf_term": true,
+      "p46_3_counter": "3/3 PASS"
+    },
+    "channel_b_writeallbytes_form": "[System.IO.File]::WriteAllBytes($path, [System.Text.UTF8Encoding]::new($false).GetBytes($json_text))",
+    "channel_d_json_2_method": "PowerShell ConvertFrom-Json + Python json.tool, both well-formed PASS target"
+  },
+
+  "key_12_forensic_chain_state": {
+    "description": "forensic chain state at Stage 2 emit phase (HEAD c7592a68.. preserved, depth 21)",
+    "head_baseline": "c7592a68c0033a44469c71ae37ad44fe1075563d (28.14 closure)",
+    "depth_inclusive": 21,
+    "depth_form": "linear-era inclusive (root..HEAD distance + 1, 20 + 1)",
+    "linear_era_root": "491ff34cce22040e052f226e64adddc1669ea1b4",
+    "linear_era_preservation_rounds": "28.7-28.14 8 rounds + 28.15 round opening 9th",
+    "working_tree_state": {
+      "git_status_porcelain": "?? forensic_anchors/section26_lessons_codified_q22_v0_1/anchor_28_15_v0_1_declaration.md",
+      "interpretation": "intentional staged state (Stage 1 file-ize complete, untracked LOCKED preserve until Stage 5 dispatch atomic commit)",
+      "forensic_chain_integrity": "INTACT (HEAD c7592a68.. unchanged, IMMUTABLE pins preserved, U.1-U.10 9/10 literal + spec-conforming 10/10 effective PASS state preserved)"
+    },
+    "expected_progression": {
+      "stage_5_target_head": "(post-S5 new commit SHA, file-ize 時点では未確定, Finding 9 self-application form)",
+      "stage_5_target_chain_depth": 22,
+      "stage_5_target_q22_tag": "companion-v4.9-q22-codify-round-2026-05-XX (XX = closure date, file-ize 時点では未確定)",
+      "stage_5_target_section26_artifacts_count": "4 paired artifacts (declaration + input_files_pin + lessons_appendix + verification_log, 28.13/28.14 inheritance form)"
+    },
+    "verification_method": "git rev-parse + git rev-list + git status --porcelain + Pattern 47 Ordinal compare"
+  },
+
+  "key_13_round_specific_specification": {
+    "description": "28.15 round-specific specification (Stage 2 emit phase 反映 form, declaration v0.2 inheritance)",
+
+    "l_q3_67_inaugural_emergence": {
+      "axis_name": "methodology specification verification implementation divergence (-> arrow ASCII form)",
+      "inaugural_source": "28.15 round opening paired sync verify U.2 SCRIPT-SPEC-GAP detection",
+      "axis_novelty_verdict": "PRESENT",
+      "formal_categorization": "independent axis (option beta, Code-side STRONG endorse)",
+      "sub_items": {
+        "sub_item_A": "U.2 gate git plumbing semantics disambiguation (--max-parents=0 absolute root vs linear-era root anchor concept)",
+        "sub_item_B": "abandoned narrative SHA grep spec inline 化 (R-S2-2 prefix-relaxed 3-step grep concrete spec, declaration §3.3 全 executable PowerShell 展開 LOCKED)",
+        "sub_item_C": "Pattern 48 marker counting unit semantics disambiguation (R-S2-1 v0.2 spec 拡張: match-based form 明示, line-based form 排除)"
+      },
+      "multi_recursive_manifestation": {
+        "1st_instance": "sub-item A inaugural (U.2 SCRIPT-SPEC-GAP detection at round opening)",
+        "2nd_instance": "sub-item C 駆動 (Pattern 48 counts line-based vs match-based delta=+14 divergence in v0.1)",
+        "3rd_instance": "sub-item B v0.1 non-concrete stop (step 2-3 Japanese-prose description form)",
+        "4th_instance_forward_inscribed_via_input_files_pin_v0_2": {
+          "description": "U+2192 self-detect+fix at declaration v0.2 pre-presentation (claude.ai narrative authoring が forbidden codepoint 内蔵、self-verify で検出+self-fix)",
+          "drift_locus": "declaration v0.2 line 445-446 (§6.1 item 19 + item 24)",
+          "fix_form": "U+2192 -> ASCII '->' 3 occurrences replacement",
+          "post_fix_state": "ASCII purity 0/12 PASS LOCKED (declaration v0.2 SHA 7416d161.. 確定)",
+          "r_s4_2_relation": "R-S4-2 option beta claude.ai self-correction events cross-round 2nd extension 1st instance LOCK target (priority codify scope item 17)",
+          "inscription_form": "declaration SHA preserve のため declaration §3.5 再 emit 不在、本 input_files_pin v0.2 key_13 内 forward-applied inscription form + Stage 4 verification_log formal codify target"
+        },
+        "5th_instance_inaugural_in_input_files_pin_v0_2": {
+          "description": "sha_256 field name semantic mismatch in input_files_pin v0.1 (Code-side rev2 cross-attest 由来 5th recursive manifestation)",
+          "drift_locus": "input_files_pin v0.1 key_01 + key_02 + key_03 内、sha_256 field 名が git SHA-1 commit/tag object ID (40 chars) と file content SHA-256 hash (64 chars) の 2 semantics で使い分けられていた schema-level type mismatch",
+          "axis_alignment": "L-Q3-67 sub-item C と同 class (specification ↔ implementation divergence form、schema field name spec ↔ actual value semantic divergence)",
+          "fix_form": "v0.2 で git SHA-1 fields rename: key_01 sha_256 -> commit_sha1 + key_02 tag_obj_sha_256 -> tag_obj_sha1 + key_03 sha_256 -> commit_sha1, id_type explicit field 追加 (schema-level type disambiguation form)",
+          "post_fix_state": "schema design discipline 維持 (sha_256 field は file content SHA-256 hash 専用 LOCKED、commit_sha1 / tag_obj_sha1 fields は git SHA-1 object ID 専用 LOCKED)",
+          "stage_4_formal_codify_target": "verification_log で 5th recursive manifestation formal codify, schema field name semantic disambiguation pattern を L-Q3-67 sub-item D candidate として 28.16+ defer queue 検討"
+        },
+        "6th_observation_candidate_deferred": {
+          "description": "Japanese character classification spec disambiguation (Code-side rev4 cross-attest 由来 minor observation)",
+          "drift_locus": "claude.ai self-verify (157) vs Code-side empirical (156), delta=-1",
+          "root_cause_estimate": "claude.ai は U+3000-303F (CJK Symbols/Punctuation) を含めて計測、Code-side は除外 (U+3040-309F + 30A0-30FF + 4E00-9FFF + FF00-FFEF range)",
+          "axis_alignment": "L-Q3-67 axis observation 6th candidate (Japanese-character-classification spec disambiguation form, sub-item C と form-class 類似)",
+          "deferral_judgment": "28.16+ defer queue observation item (本 round の minor noise、28.16 で spec 拡張統合 target)",
+          "priority_codify_scope_carry": "本 28.15 round 24-item scope に追加せず, 28.16+ defer queue item として preserve (declaration v0.2 §6 item structure preserve、本 input_files_pin v0.2 内 observation-only inscription)"
+        }
+      },
+      "mitigation_pathway_plan": {
+        "step_i": "28.15 Stage 5 dispatch 内 sync_memo §3 v0.2 spec codify",
+        "step_ii": "anchor 28.16 sync_memo baseline 適用 (cross-round 2nd extension 1st operational instance target)"
+      },
+      "cross_round_form": "R-S2-1 cross-axis 2nd extension candidate (form-level similarity, substantive divergence)",
+      "axis_purity_preservation_notation": "Pattern 48 sub-form C alpha = narrative SHA hallucination form (axis Pattern 48 family) / L-Q3-67 sub-item C = counting unit semantics disambiguation form (axis L-Q3-67 family), 両 axes 完全独立"
+    },
+
+    "r_s2_1_cross_round_replication_trajectory": {
+      "description": "R-S2-1 zero-divergence empirical validation cross-round replication observation (priority codify scope item 19)",
+      "stage_28_14_1st": {
+        "result": "zero-divergence empirical validation 1st operational evidence LOCK",
+        "claude_ai_self_verify": "178/137",
+        "code_side_empirical": "178/137",
+        "delta": 0,
+        "verdict": "ZERO-DIVERGENCE ACHIEVED"
+      },
+      "stage_28_15_v0_1_1st_replication": {
+        "result": "divergence-positive (zero-divergence NOT replicated)",
+        "claude_ai_self_verify": "131 (line-based form, bash grep -ciE)",
+        "code_side_empirical": "145 (match-based form, PowerShell regex Matches)",
+        "delta": "+14 across 5 categories",
+        "root_cause": "counting unit semantics gap (line-based vs match-based), R-S2-1 spec 非明示"
+      },
+      "stage_28_15_v0_2_2nd_replication_intra_round": {
+        "result": "ZERO-DIVERGENCE ACHIEVED intra-round",
+        "claude_ai_self_verify": 207,
+        "code_side_empirical": 207,
+        "delta": 0,
+        "mitigation_form_applied": "R-S2-1 v0.2 spec 拡張 (counting unit semantics 明示拡張, match-based form LOCKED, line-based form 排除)",
+        "forensic_significance": "sub-item C mitigation closed-loop self-validation 1st operational evidence LOCK 確定"
+      },
+      "stage_28_16_target": "cross-round 3rd replication (R-S2-1 v0.2 spec adoption 後 cross-round empirical replication form, 28.16 sync_memo baseline 適用時 operational target)"
+    },
+
+    "finding_9_self_application": {
+      "description": "Finding 9 (observation-to-projection conflation pathway meta-finding) self-application form",
+      "1st_operational_instance": "28.14 round inaugural codify (Stage 1 §9 projection-form divergence event)",
+      "2nd_operational_instance": "28.15 round Stage 1 declaration projection-form 構造的排除 + Pattern 48 counts file-ize 時 actual measurement form",
+      "current_stage_2_application": "key_11 p46_3_counter + key_12 forensic_chain_state 内の actual values は file-ize 後 measurement form, forward projection 排除",
+      "axis_classification_decision_status": "priority codify scope item 14, 28.15 round 内 cross-round 2nd extension instance emerge 観察後 promotion 判断 territory"
+    },
+
+    "instance_counting_form": {
+      "description": "framework instance lineage (v0.2 revised form, AC = op-verify operational role letter reserve)",
+      "letter_to_ordinal_mapping": "Y=25, Z=26, AA=27, AB=28, AC=29, AD=30, AE=31, AF=32, AG=33, AH=34 (alphabet position)",
+      "28_14_round_form": {
+        "file_instances": "Y/Z/AA/AB (file 25-28, 4 paired artifacts)",
+        "op_verify_role": "AC (letter reserve, instance count に算入しない)",
+        "cumulative_ends": "28th instance (AB file end)"
+      },
+      "28_15_round_form": {
+        "file_instance_AD": "29th dataset member (Stage 1 declaration, current LOCKED)",
+        "file_instance_AE": "30th dataset member (Stage 2 input_files_pin, 本 file emit phase target)",
+        "file_instance_AF": "31st dataset member (Stage 3 lessons_appendix, PRIMARY CODIFY scope)",
+        "file_instance_AG": "32nd dataset member (Stage 4 verification_log, co-attest baseline)",
+        "op_verify_role_AH": "letter reserve (op-verify role, instance count に算入しない, label-slot counter form '33rd reserve' = file-instance-count+1 form)",
+        "cumulative_target": "file instances ends at 32nd (AG), 9th 5/5 connected lineage 確立 target"
+      },
+      "ah_semantics_audit_deferral": "M1 cross-attest 2 由来 minor observation, §1.3 declaration 内 explicit notation defer to Stage 4 verification_log + 28.16+ defer queue 統合 audit territory"
+    },
+
+    "priority_codify_scope": {
+      "description": "28.15 round priority codify scope (24-item form, declaration v0.2 §6 由来)",
+      "total_items": 24,
+      "carry_items": 22,
+      "new_items": 2,
+      "new_items_detail": {
+        "item_23": "L-Q3-67 candidate (sub-item A+B+C 統合 axis, declaration §3 全体)",
+        "item_24": "R-S2-1 cross-round replication observation 1st result (declaration §6.1 item 24, divergence-positive -> v0.2 intra-round 2nd replication zero-divergence achievement)"
+      },
+      "scope_arithmetic_verify": "22 + 2 = 24 PASS"
+    },
+
+    "pattern_discipline_state": {
+      "description": "Pattern discipline 10/10 PASS application baseline (declaration v0.2 §8 revised label form)",
+      "label_form": "10/10 (Code-side rev4 cross-attest 由来 actual reflection)",
+      "historical_label_form": "9/9 (28.7-28.14 8 rounds historical record, immutable narrative preservation)",
+      "patterns_enumerated": ["P30", "P31", "P32", "P35", "P38", "P39", "P46", "P47", "P48", "P49"],
+      "patterns_count": 10,
+      "p48_sub_form_state": {
+        "sub_form_A_alpha": "LOCKED inherited",
+        "sub_form_B_alpha": "LOCKED inherited",
+        "sub_form_C_alpha": "LOCKED inaugural (28.14 round)"
+      }
+    },
+
+    "newly_established_baselines_carry": {
+      "R1": "channel B==C form (Get-FileHash empirical + Pattern 47 Ordinal SHA equality)",
+      "R2": "prefix-relaxed empirical-grep 3-step formal spec",
+      "R3": "dual-method + AND-conjunction LOCK form",
+      "R-S2-1": "Pattern 48 8-category explicit regex literal spec v0.2 (counting unit semantics 明示拡張 LOCKED, sub-item C inheritance)",
+      "R-S2-2": "abandoned-SHA +1 per stage form (cumulative 35 LOCKED carry)",
+      "R-S2-3": "counting unit form (i) findings-only METHODOLOGY-INFO+ level",
+      "R-S4-2": "option beta claude.ai self-correction events -> supplementary obs log (28.15 v0.2 U+2192 self-fix event = cross-round 2nd extension 1st instance LOCK target, Stage 4 verification_log codify)",
+      "hosyu_1": "intra-round backward update 3-condition formal spec"
+    },
+
+    "factor_e_cross_round_3rd_extension_observation": {
+      "description": "factor (e) class-specific single-data-point baseline structural unreliability hypothesis cross-round 3rd extension data accumulation",
+      "stage_1_declaration_size_trajectory": {
+        "28_13_baseline": "29344 B",
+        "28_14_actual": "30249 B (+3.08% vs 28.13)",
+        "28_15_v0_1": "42177 B (+39.4% vs 28.14)",
+        "28_15_v0_2": "63149 B (+108.8% vs 28.14, +49.7% vs v0.1)"
+      },
+      "1st_instance_lock_state": "28.15 v0.2 declaration size +108.8% vs 28.14 = cross-round 3rd extension data accumulation 1st instance LOCKED (declaration v0.2 §6 item 11 inscribed)",
+      "stage_2_input_files_pin_size_observation_target": "本 Stage 2 emit 後 actual size を Stage 4 verification_log で factor (e) cross-round 3rd extension data accumulation 2nd instance form として inscribe target (Finding 9 self-application: forward projection 排除)"
+    },
+
+    "stage_5_dispatch_v0_2_codify_target": {
+      "description": "Stage 5 dispatch 内 sync_memo §3 v0.2 spec codify form (L-Q3-67 mitigation form 適用)",
+      "u2_logic_replacement": "merge-base --is-ancestor + rev-list --count '<linear_era_root>..HEAD' + 1",
+      "abandoned_sha_grep_inline": "R-S2-2 3-step concrete PowerShell (declaration §3.3 inscribed)",
+      "r_s2_1_v0_2_spec_inline": "8-category regex literal + counting unit match-based form 明示拡張",
+      "expected_q22_tag_name_pattern": "companion-v4.9-q22-codify-round-2026-05-XX (XX = closure date)",
+      "expected_chain_depth_post_s5": 22,
+      "expected_section26_artifacts": "4 paired artifacts (declaration + input_files_pin + lessons_appendix + verification_log)"
+    }
+  }
+}
