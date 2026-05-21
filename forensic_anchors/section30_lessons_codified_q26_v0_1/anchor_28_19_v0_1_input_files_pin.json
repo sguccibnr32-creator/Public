@@ -1,0 +1,241 @@
+{
+  "schema_version": "v0.1",
+  "schema_basis": "precedent inheritance form from anchor_28_18_v0_1_input_files_pin.json (AT, 42nd dataset, SHA 23b2f1d7..)",
+  "anchor_id": "28.19",
+  "anchor_version": "v0.1",
+  "dataset_ordinal": 46,
+  "artifact_role": "input_files_pin",
+  "section_path": "forensic_anchors/section30_lessons_codified_q26_v0_1",
+  "generation_ts": "2026-05-21T<closure_TS>+09:00",
+  "author": "Sakaguchi Shinobu (Sakaguchi Seimensho, Hyogo Prefecture, Shiso City)",
+  "license": "CC-BY 4.0",
+  "form_basis": "mid-range scope form, precedent inheritance + 2-instance cosmetic caveat record N-15/N-16 inscription, paste-back pin excluded (AZ transcript-level capture form), section30 companion non-self-referential form",
+  "scope_declaration": "pure pin manifest form, input pins + carry pins + IMMUTABLE re-anchor + envelope baseline + linear-era chain summary, AY/AZ scope content (form_disciplines / phase_progression / paste_back_handling) excluded per role-appropriate codify package distribution",
+  "input_pins": {
+    "handoff_memo": {
+      "filename": "claude_ai_handoff_memo_28_19_round_opening_v0_1.txt",
+      "role": "claude.ai-side context grasp directive + paired re-sync verify baseline directive + 28.19 round work plan",
+      "sha256": "add7e839d42832f54792989daf80b2e4efadee02925327da896c3468852b2836",
+      "size_bytes": 27926,
+      "lf_count": 483,
+      "verify_form": "claude.ai-side received form, user-local Get-FileHash verify expected for F-28.11 cross-environment consistency"
+    },
+    "sync_memo_v0_3_spec": {
+      "filename": "claude_code_sync_memo_28_19_round_opening_v0_1.txt",
+      "role": "Code-side paired re-sync verify 16-gate baseline + Stage 5 dispatch v0.2 spec 11-step template + v0.3 spec inscription 3-caveat integrate (section 2.3 path explicit + section 2.4 line-category count form + section 4.2 elapsed 2-class taxonomy)",
+      "sha256": "a93da5bf1406edc3a4f99c3d6eeda5faa8a02b03cbf647a3b83840780ec0ced1",
+      "size_bytes": 44663,
+      "lf_count": 845,
+      "verify_form": "claude.ai-side received form, user-local Get-FileHash verify expected for F-28.11 cross-environment consistency"
+    }
+  },
+  "carry_pins": {
+    "section29_lessons_codified_q25_v0_1": {
+      "role": "28.18 closure in-tree LOCKED codify package, immediate predecessor reference",
+      "directory": "forensic_anchors/section29_lessons_codified_q25_v0_1",
+      "AS_declaration": {
+        "path": "forensic_anchors/section29_lessons_codified_q25_v0_1/anchor_28_18_v0_1_declaration.md",
+        "sha256": "769651872004cd01dd27ede454c9a5ce8eb6a79feda353432d911a29a93f332c",
+        "size_bytes": 45261,
+        "lf_count": 397,
+        "dataset_ordinal": 41
+      },
+      "AT_input_files_pin": {
+        "path": "forensic_anchors/section29_lessons_codified_q25_v0_1/anchor_28_18_v0_1_input_files_pin.json",
+        "sha256": "23b2f1d7396b568dc0ed73bfb9d1b4928b92c7cb7256878101244cf3b90e4d86",
+        "size_bytes": 10476,
+        "lf_count": 199,
+        "dataset_ordinal": 42,
+        "schema_parent_reference": true
+      },
+      "AU_lessons_appendix": {
+        "path": "forensic_anchors/section29_lessons_codified_q25_v0_1/anchor_28_18_v0_1_lessons_appendix.md",
+        "sha256": "a0bcc3a41b20edf4431124d50833a034610280d93a9f2e3afc66b00c528a6dc2",
+        "size_bytes": 99913,
+        "lf_count": 773,
+        "dataset_ordinal": 43,
+        "primary_codify": true
+      },
+      "AV_verification_log": {
+        "path": "forensic_anchors/section29_lessons_codified_q25_v0_1/anchor_28_18_v0_1_verification_log.md",
+        "sha256": "e8c9ba7942fffa4a0ef157b2e0b1933522f8fac5d2a0227b5110ed55f9f059b4",
+        "size_bytes": 49183,
+        "lf_count": 325,
+        "dataset_ordinal": 44,
+        "co_attest_channels": 5
+      },
+      "aggregate_bytes": 204833,
+      "aggregate_lf": 1694
+    },
+    "section28_lessons_codified_q24_v0_1": {
+      "role": "28.17 closure carry, byte-exact preserve through 28.18 + 28.19",
+      "directory": "forensic_anchors/section28_lessons_codified_q24_v0_1",
+      "AN_declaration": {
+        "path": "forensic_anchors/section28_lessons_codified_q24_v0_1/anchor_28_17_v0_1_declaration.md",
+        "sha256": "64f799b9af0cf0a48839155977fd4aca0deae703aad3fb76da970ade409552ec",
+        "size_bytes": 28878,
+        "lf_count": 354
+      },
+      "AO_input_files_pin": {
+        "path": "forensic_anchors/section28_lessons_codified_q24_v0_1/anchor_28_17_v0_1_input_files_pin.json",
+        "sha256": "fcd3940c9b5d72318091a8ffb0c0f9c0c09fa30d013079a396cdeb83a4b80d95",
+        "size_bytes": 28997,
+        "lf_count": 438
+      },
+      "AP_lessons_appendix": {
+        "path": "forensic_anchors/section28_lessons_codified_q24_v0_1/anchor_28_17_v0_1_lessons_appendix.md",
+        "sha256": "fd350b310d83d393fd43deecf1b691bf5c4e269f89297177e6c836bdff6aa82f",
+        "size_bytes": 44916,
+        "lf_count": 413,
+        "primary_codify": true
+      },
+      "AQ_verification_log": {
+        "path": "forensic_anchors/section28_lessons_codified_q24_v0_1/anchor_28_17_v0_1_verification_log.md",
+        "sha256": "b641132015075316e1d877e6a87059b5059e2fd6752c1f5ba4e8c3ea1ad9d2cf",
+        "size_bytes": 34015,
+        "lf_count": 320,
+        "co_attest_channels": 5
+      },
+      "aggregate_bytes": 136806,
+      "aggregate_lf": 1525
+    },
+    "section27_lessons_codified_q23_v0_1": {
+      "role": "28.16 closure carry, L-Q3-67 sub-letter series grand-parent reference",
+      "directory": "forensic_anchors/section27_lessons_codified_q23_v0_1",
+      "AI_declaration": {
+        "path": "forensic_anchors/section27_lessons_codified_q23_v0_1/anchor_28_16_v0_1_declaration.md",
+        "sha256": "463f53e6c14382d563dbf9a90e2021465f90acc3ccb30ee651761ca7789fbb55",
+        "size_bytes": 37321,
+        "lf_count": 669
+      },
+      "AJ_input_files_pin": {
+        "path": "forensic_anchors/section27_lessons_codified_q23_v0_1/anchor_28_16_v0_1_input_files_pin.json",
+        "sha256": "cbdb6d7b5d391c90908742c2ece51d4ddec62eacbe3a85ba3e1e6eeeae92259f",
+        "size_bytes": 22831,
+        "lf_count": 439
+      },
+      "AK_lessons_appendix": {
+        "path": "forensic_anchors/section27_lessons_codified_q23_v0_1/anchor_28_16_v0_1_lessons_appendix.md",
+        "sha256": "f50bbfa8a87c79d5fee882e47d6a4ace8098033c7723143448b5864a8f19f659",
+        "size_bytes": 74591,
+        "lf_count": 1212,
+        "primary_codify": true
+      },
+      "AL_verification_log": {
+        "path": "forensic_anchors/section27_lessons_codified_q23_v0_1/anchor_28_16_v0_1_verification_log.md",
+        "sha256": "42f8eca5cca098bd73238f29406b6afd07685482602f438495ace380d62a4356",
+        "size_bytes": 50115,
+        "lf_count": 884
+      },
+      "aggregate_bytes": 184858,
+      "aggregate_lf": 3204
+    }
+  },
+  "immutable_4_pin": {
+    "form_basis": "v0.3 spec section 2.3 IMMUTABLE 4-pin explicit path form, caveat record 2 applied, 13th round consecutive preserve target establishment via Phase C Stage 5 dispatch",
+    "X1": {
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+      "sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "size_bytes": 9561,
+      "role": "anchor 22 v0.2 input file pin manifest IMMUTABLE baseline",
+      "scope": "in-repo"
+    },
+    "X1_sib": {
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_lessons_appendix.md",
+      "sha256": "4df652d6daebc0d06a7fe4a8b5e6771ae8fe6bf049d3a421d440e759fecc0a7a",
+      "size_bytes": 9379,
+      "role": "anchor 22 v0.2 lessons appendix carry-level codify baseline",
+      "scope": "in-repo",
+      "caveat_record_2_form": "X1_sib explicit path disambiguation, SIBLING of X1 is lessons_appendix.md NOT input_files_pin.json"
+    },
+    "X2": {
+      "path": "latex_v48/membrane_v48.tex",
+      "sha256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+      "size_bytes": 118226,
+      "role": "membrane cosmology v4.8 LaTeX source IMMUTABLE baseline",
+      "scope": "in-repo"
+    },
+    "F_28_4_C": {
+      "path": "<out-of-repo, user-local>",
+      "sha256": "5d9beb04361e0b21f1b703e68ba90f8cbf28efbfa0ff56c84c9d4abffb048ef3",
+      "size_bytes": 11096,
+      "role": "F-28.4-C codify reference baseline IMMUTABLE",
+      "scope": "out-of-repo",
+      "verify_form": "user-local Get-FileHash verify separately, paired re-sync verify U.5 SKIP form if path unfilled"
+    }
+  },
+  "envelope_baseline": {
+    "form_basis": "28.18 v0.1 FULL CLOSURE state baseline, preserve LOCKED through Phase C Stage 5 step 4 atomic commit",
+    "gitattributes": {
+      "path": ".gitattributes",
+      "sha256": "6ff28102cd916e819e82921f577178bfbfe9b670bee729de58e74735021166c1",
+      "role": "section29 -text directive appended in 28.18 closure baseline",
+      "update_target_28_19": "section30 -text directive append at Phase C Stage 5 step 3a"
+    },
+    "sha256sums": {
+      "path": "SHA256SUMS",
+      "sha256": "ae69c2eac2afda08665b62fadcc13cafae4bc00b3fa930d967623009bc1d2652",
+      "counts_form_basis": "v0.3 spec section 2.4 line-category count form, caveat record 3 applied",
+      "counts": {
+        "total_lines": 154,
+        "hashed_lines": 135,
+        "comment_plus_blank_lines": 19
+      },
+      "parse_spec": {
+        "total_lines": "file LF count",
+        "hashed_lines": "SHA-prefix regex match (^[0-9a-fA-F]{64}\\s)",
+        "comment_plus_blank_lines": "total minus hashed"
+      },
+      "update_target_28_19": "4 section30 entries append + 1 gitattributes SHA refresh, projected target 158/139/19 at Phase C Stage 5 step 3b"
+    }
+  },
+  "linear_era_chain": {
+    "form_basis": "28.18 v0.1 FULL CLOSURE state baseline, chain depth 25, preserve LOCKED through Phase C Stage 5 step 4 atomic commit",
+    "main_head_28_18_closure": "4a7f23f5747b8b0e8a91c3353d169c52eccf521e",
+    "parent_28_17_closure": "585442eaa3f976871e235bb56b755b99b3e525ca",
+    "Q25_tag": {
+      "obj_sha": "6454222a48a204bb7525dfb068daf96efc55c5b9",
+      "name": "companion-v4.9-q25-codify-round-2026-05-21",
+      "type": "annotated",
+      "peel_equals_head": true
+    },
+    "linear_era_root": "491ff34cce22040e052f226e64adddc1669ea1b4",
+    "chain_depth": 25,
+    "chain_depth_form": "linear-era inclusive, root..HEAD distance 24 + 1",
+    "closure_ts": {
+      "commit": "2026-05-21T17:41:40+09:00",
+      "push_complete": "2026-05-21T17:43:42+09:00"
+    },
+    "linear_era_forensic_chain_summary": {
+      "form": "Q-tag sequence linear-era inclusive root..HEAD progression",
+      "root_to_28_18_closure": [
+        "linear-era root (depth 1)",
+        "28.7 closure : Q14 tag b82490cc.. (depth 14, post-recovery 1st linear-era round)",
+        "28.8 closure : Q15 tag (depth 15)",
+        "28.9 closure : Q16 tag (depth 16)",
+        "28.10 closure : Q17 tag (depth 17)",
+        "28.11 closure : Q18 tag (depth 18, F-28.11 origin instance)",
+        "28.12 closure : Q19 tag (depth 19)",
+        "28.13 closure : Q20 tag (depth 20, Pattern 48 1st instance baseline)",
+        "28.14 closure : Q21 tag (depth 21, Pattern 48 2nd instance)",
+        "28.15 closure : Q22 tag (depth 22, Pattern 48 3rd instance)",
+        "28.16 closure : Q23 tag (depth 23, Pattern 48 4th instance, section27 dataset)",
+        "28.17 closure : Q24 tag 68b967b7.. (depth 24, Pattern 48 5th instance candidate, section28 dataset)",
+        "28.18 closure : Q25 tag 6454222a.. (depth 25, Pattern 48 5-instance ESTABLISHED, section29 dataset)"
+      ],
+      "consecutive_linear_era_closure_count": 12,
+      "consecutive_round_range": "28.7 through 28.18"
+    },
+    "update_target_28_19": {
+      "new_head_sha": "<populated at Phase C Stage 5 step 6 P49 gate 1>",
+      "Q26_tag": {
+        "obj_sha": "<populated at Phase C Stage 5 step 7 P49 gate 2>",
+        "name": "companion-v4.9-q26-codify-round-<YYYY-MM-DD>",
+        "type": "annotated"
+      },
+      "chain_depth_target": 26,
+      "chain_depth_form_target": "linear-era inclusive, root..HEAD distance 25 + 1",
+      "consecutive_linear_era_closure_count_target": 13
+    }
+  }
+}
