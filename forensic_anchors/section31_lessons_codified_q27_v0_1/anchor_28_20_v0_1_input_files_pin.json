@@ -1,0 +1,252 @@
+{
+  "_meta": {
+    "schema": "anchor_input_files_pin v0.4",
+    "schema_parent_28_19_AX": "5cb5bff4.. / 12090 B / LF 241 (drift target +5-10% cumulative form)",
+    "schema_role_for_28_21": "本 BF が 28.21 round input_files_pin (CF) の direct schema parent",
+    "anchor_id": "28.20",
+    "round_version": "v0.1",
+    "dataset_ordinal": 50,
+    "artifact_id": "BF",
+    "section": "section31_lessons_codified_q27_v0_1",
+    "license": "CC-BY 4.0",
+    "author": "Sakaguchi Shinobu / Sakaguchi Seimensho / Hyogo Prefecture, Shiso City",
+    "generation_ts": "2026-05-22T<populated_post_emit_InvariantCulture_P35v0.2_form>+09:00",
+    "form_basis": "v4.4 layout spec (LF-only UTF-8 no BOM, P35 v0.2 InvariantCulture mandatory)"
+  },
+
+  "round_metadata": {
+    "linear_era_round_ordinal": 14,
+    "linear_era_root": "491ff34cce22040e052f226e64adddc1669ea1b4",
+    "parent_anchor": "28.19 v0.1 FULL CLOSURE",
+    "parent_HEAD": "cb62caffb503cc08fc8f61f287e46abeeb805a15",
+    "parent_Q26_tag_obj": "5b2a3c5aee625dc7077edebe51f9ceb50f691ae5",
+    "parent_Q26_tag_name": "companion-v4.9-q26-codify-round-2026-05-21",
+    "parent_Q26_tag_type": "annotated (peel == parent HEAD TRUE)",
+    "target_Q27_tag_name": "companion-v4.9-q27-codify-round-2026-05-22",
+    "target_Q27_tag_type": "annotated (peel == new HEAD TRUE, Phase C populated)",
+    "target_HEAD": "__TARGET_HEAD_PHASE_C_POPULATED__",
+    "target_chain_depth": 27,
+    "target_chain_depth_form": "linear-era inclusive (root..HEAD distance 26 + 1)",
+    "closure_ts_planned": "2026-05-22T<Phase_D_populated_InvariantCulture>+09:00 (same-day form 想定)"
+  },
+
+  "section31_4_artifact_pins": {
+    "BE_declaration": {
+      "path": "forensic_anchors/section31_lessons_codified_q27_v0_1/anchor_28_20_v0_1_declaration.md",
+      "sha256": "29ba9698d4255b36a65f803732f35efd70851d86a88e41cd33a227a4145eb1bd",
+      "size_bytes": 42113,
+      "lf_count": 780,
+      "cr_count": 0,
+      "encoding": "LF-only UTF-8 no BOM",
+      "dataset_ordinal": 49,
+      "emit_status": "EMITTED + placement byte-exact verify PASS at 2026-05-22T05:28:04+09:00",
+      "precedent_28_19_AW": {"sha_truncated": "c9ac1c95..", "size": 42486, "lf": 656},
+      "drift_pct": {"size": -0.88, "lf": 18.9, "density": -16.7},
+      "drift_verdict": "ACCEPT (size in band ±15%, density differential = sub-pattern B form transition, NOT applicable to INVESTIGATE arc trigger)"
+    },
+    "BF_input_files_pin": {
+      "path": "forensic_anchors/section31_lessons_codified_q27_v0_1/anchor_28_20_v0_1_input_files_pin.json",
+      "sha256": "__BF_SHA_UNFILLED__",
+      "size_bytes": -1,
+      "lf_count": -1,
+      "cr_count": 0,
+      "encoding": "LF-only UTF-8 no BOM",
+      "dataset_ordinal": 50,
+      "emit_status": "SELF-REFERENCE sentinel form (L-Q3-67 sub-H, post-emit fix at envelope ss inscribe)",
+      "precedent_28_19_AX": {"sha_truncated": "5cb5bff4..", "size": 12090, "lf": 241},
+      "target_band_bytes": "10277-13904 (precedent ±15%, +5-10% cumulative form 想定)"
+    },
+    "BG_lessons_appendix": {
+      "path": "forensic_anchors/section31_lessons_codified_q27_v0_1/anchor_28_20_v0_1_lessons_appendix.md",
+      "sha256": "__BG_SHA_UNFILLED__",
+      "size_bytes": -1,
+      "lf_count": -1,
+      "cr_count": 0,
+      "encoding": "LF-only UTF-8 no BOM",
+      "dataset_ordinal": 51,
+      "emit_status": "PENDING (Phase B 51st emit target, PRIMARY CODIFY)",
+      "precedent_28_19_AY": {"sha_truncated": "5999b862..", "size": 67988, "lf": 1065},
+      "target_band_bytes": "57790-78186 (precedent ±15%, over-shoot pre-commit form 適用済)",
+      "over_shoot_form": "BG §3 sub-J + §4 P35 v0.2 の 2 primary NEW 4-block structure (root cause + mitigation + applicable clause + operational evidence) を density form differential evidence として明示 → ACCEPT 域確定 commit"
+    },
+    "BH_verification_log": {
+      "path": "forensic_anchors/section31_lessons_codified_q27_v0_1/anchor_28_20_v0_1_verification_log.md",
+      "sha256": "__BH_SHA_UNFILLED__",
+      "size_bytes": -1,
+      "lf_count": -1,
+      "cr_count": 0,
+      "encoding": "LF-only UTF-8 no BOM",
+      "dataset_ordinal": 52,
+      "emit_status": "PENDING (Phase B 52nd emit target, 5-channel co-attest 7th round consecutive candidate)",
+      "precedent_28_19_AZ": {"sha_truncated": "8e3c6b1d..", "size": 38049, "lf": 517},
+      "target_band_bytes": "32342-43756 (precedent ±15%)",
+      "ch3_form": "option B 単独 form (Phase C dispatch §3 P35 v0.2 retrofit 適用版 embed)"
+    }
+  },
+
+  "parent_chain_section30_pins": {
+    "_carry_form": "byte-exact preserve required (formal carry verify at U.13-U.16 in 28.20 opening 17-gate baseline)",
+    "AW_declaration": {
+      "path": "forensic_anchors/section30_lessons_codified_q26_v0_1/anchor_28_19_v0_1_declaration.md",
+      "sha_truncated": "c9ac1c95..",
+      "size_bytes": 42486,
+      "lf": 656,
+      "dataset_ordinal": 45
+    },
+    "AX_input_files_pin": {
+      "path": "forensic_anchors/section30_lessons_codified_q26_v0_1/anchor_28_19_v0_1_input_files_pin.json",
+      "sha_truncated": "5cb5bff4..",
+      "size_bytes": 12090,
+      "lf": 241,
+      "dataset_ordinal": 46,
+      "schema_role": "本 BF の direct schema parent"
+    },
+    "AY_lessons_appendix": {
+      "path": "forensic_anchors/section30_lessons_codified_q26_v0_1/anchor_28_19_v0_1_lessons_appendix.md",
+      "sha_truncated": "5999b862..",
+      "size_bytes": 67988,
+      "lf": 1065,
+      "dataset_ordinal": 47,
+      "codify_role": "PRIMARY CODIFY parent (28.20 BG content direct precedent)"
+    },
+    "AZ_verification_log": {
+      "path": "forensic_anchors/section30_lessons_codified_q26_v0_1/anchor_28_19_v0_1_verification_log.md",
+      "sha_truncated": "8e3c6b1d..",
+      "size_bytes": 38049,
+      "lf": 517,
+      "dataset_ordinal": 48,
+      "co_attest_role": "5-channel co-attest 6-instance COMPLETE state precedent"
+    }
+  },
+
+  "IMMUTABLE_4pin_explicit_path_form": {
+    "_spec": "v0.3 spec §2.3 explicit path form (caveat record #2 forward application)",
+    "_preserve_target": "14-round consecutive preserve (28.7 through 28.20, 1-round delta from 13R baseline)",
+    "_verify_at_28_20_opening": "U.10 IMMUTABLE_3pin 3/3 byte-exact PASS (X1 + X1_sib + X2 in-repo verified)",
+    "X1": {
+      "label": "anchor 22 v0.2 input_files_pin (linear-era pre-cursor anchor reference)",
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+      "sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "size_bytes": 9561,
+      "location": "in-repo"
+    },
+    "X1_sib": {
+      "label": "anchor 22 v0.2 lessons_appendix (sibling of X1)",
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_lessons_appendix.md",
+      "sha256": "4df652d6daebc0d06a7fe4a8b5e6771ae8fe6bf049d3a421d440e759fecc0a7a",
+      "size_bytes": 9379,
+      "location": "in-repo"
+    },
+    "X2": {
+      "label": "membrane v48 LaTeX source (primary publication artifact)",
+      "path": "latex_v48/membrane_v48.tex",
+      "sha_truncated": "d43985b8..c212e5dd",
+      "size_bytes": 118226,
+      "location": "in-repo"
+    },
+    "F_28_4_C": {
+      "label": "F-28.4-C reference (out-of-repo, user-local)",
+      "path": "__F284C_PATH_UNFILLED__",
+      "sha_truncated": "5d9beb04..",
+      "size_bytes": 11096,
+      "location": "out-of-repo",
+      "verify_form": "U.5 SKIP intentional (L-Q3-67 sub-H sentinel form working as designed)"
+    }
+  },
+
+  "companion_files_28_20_round_opening": {
+    "_purpose": "28.20 round opening transition 3-file closure handoff package (28.19 round closure 時 emit)",
+    "file_1_handoff_memo": {
+      "filename": "claude_ai_handoff_memo_28_20_round_opening_v0_1.txt",
+      "sha256": "baeca05e6d1b8003a85faa4630644c9d70bd47ca5f9b0372c9c3897b1da9773f",
+      "size_bytes": 18182,
+      "lf_count": 327,
+      "role": "claude.ai-side context grasp directive + Phase A-D plan"
+    },
+    "file_2_sync_memo": {
+      "filename": "claude_code_sync_memo_28_20_round_opening_v0_1.txt",
+      "sha256": "1d261ffe643e6b9639e16e5bddacd30a2bc6e298bd2912d1a52d407905c840e5",
+      "size_bytes": 48772,
+      "lf_count": 927,
+      "spec_version": "v0.4",
+      "emit_revision": "v0.2 (post §3 functional gap remediation, INVESTIGATE arc resolution form)",
+      "role": "Code-side execute spec + 17-gate paired re-sync verify + Stage 5 dispatch v0.2 template"
+    },
+    "file_3_closure_verification_pdf": {
+      "filename": "anchor_28_19_v0_1_closure_verification.pdf",
+      "sha256": "__FILE3_SHA_PDF_REPORTLAB_POPULATED__",
+      "role": "28.19 v0.1 FULL CLOSURE verification record (v4.4 layout ReportLab generated form)"
+    }
+  },
+
+  "envelope_state_transition": {
+    "_caveat_record_3_form": "v0.3 spec §2.4 SHA256SUMS line-category count form (total/hashed/comment+blank 3-field form)",
+    "_verify_at_28_20_opening": "U.12 SHA256SUMS_counts 158/139/19 PASS (caveat record #3 2nd CONFIRMED form)",
+    "parent_28_19_closure": {
+      "ga_sha256": "bf1afd19a01aa9b4dff36781320fe3ac67e26e59fbdf3bdfbf7e21d2e8d8f893",
+      "ss_sha256": "d9771c2ae14ce3ff10625e4900199f09ee8cf93ddcb9b4d6ec266b2ca2efe39d",
+      "counts": {"total": 158, "hashed": 139, "comment_blank": 19}
+    },
+    "target_28_20_closure_projected": {
+      "ga_sha256": "__TARGET_GA_SHA_PHASE_C_POPULATED__",
+      "ss_sha256": "__TARGET_SS_SHA_PHASE_C_POPULATED__",
+      "counts": {"total": 162, "hashed": 143, "comment_blank": 19},
+      "delta_form": "+4/+4/+0 (4 section31 entries append + atomic commit + envelope edit same-commit form)"
+    }
+  },
+
+  "carry_section_baseline_28_20_round": {
+    "section27_AI_AJ_AK_AL": "4/4 byte-exact preserve (28.16 closure carry, formal, U.9 PASS)",
+    "section28_AN_AO_AP_AQ": "4/4 byte-exact preserve (28.17 closure carry, formal, U.3 PASS)",
+    "section29_AS_AT_AU_AV": "4/4 byte-exact preserve (28.18 closure carry, formal, U.17 PASS post ordinal シフト)",
+    "section30_AW_AX_AY_AZ": "4/4 byte-exact preserve (28.19 closure carry, U.13-U.16 NEW gate form at 28.20 opening verify PASS)"
+  },
+
+  "operational_evidence_captured_at_BE_placement": {
+    "_emit_ts": "2026-05-22T05:28:04+09:00 (P35 v0.2 InvariantCulture form)",
+    "_inscription_target": "BG primary codify content (詳細 inscription は BG §3-§9 にて)",
+    "instance_1_BE_byte_exact": {
+      "verify": "SHA256 src == dest == expected 29ba9698d4255b36a65f803732f35efd70851d86a88e41cd33a227a4145eb1bd",
+      "encoding": "LF=780 / CR=0 / BOM=absent strict preserve"
+    },
+    "instance_2_P35_v0_2_real_machine": {
+      "output": "2026-05-22T05:28:04+09:00 (正常 Gregorian)",
+      "drift_form_comparison": "verify script '08-05-22' (令和8 era year drift) 対照、v0.2 retrofit effectiveness confirmed"
+    },
+    "instance_3_P50_B_to_A_transition": {
+      "transition": "opening B (CLEAN 0/0) → post-BE A (DIRTY-EXPECTED-FORM, 1 untracked / 0 modified)",
+      "untracked": "?? forensic_anchors/section31_lessons_codified_q27_v0_1/anchor_28_20_v0_1_declaration.md",
+      "milestone": "1 round 内 3-class cycle 2nd milestone 達成、3rd (state-class C) は Phase D post atomic commit 見込み"
+    }
+  },
+
+  "phase_progression_state": {
+    "phase_A_scope_discussion": "COMPLETED (BE emit 時 9-item scope lock-in + 4-artifact emit plan + BG over-shoot pre-commit + BH ch.3 option B + Q27 tag date 2026-05-22)",
+    "phase_B_4artifact_emit": {
+      "status": "IN_PROGRESS",
+      "completed": ["BE declaration (49th, emit + placement + verify PASS)"],
+      "current": "BF input_files_pin (50th, this file, draft emit)",
+      "pending": ["BG lessons_appendix (51st, PRIMARY CODIFY)", "BH verification_log (52nd, 5-channel co-attest)"]
+    },
+    "phase_C_stage_5_dispatch": "PENDING (BG + BH emit + placement verify ALL PASS 後)",
+    "phase_D_closure": "PENDING (Phase C ALL PASS verdict 後 28.20 v0.1 FULL CLOSURE + 28.21 round opening 3-file handoff package emit)"
+  },
+
+  "discipline_continuity_declarations": {
+    "_note": "詳細 inscription は BG §7-§11、本 BF は declaration reference のみ",
+    "rule_92": "7R consecutive target 28.14-28.20",
+    "Pattern_33": "14R consecutive baseline target",
+    "Pattern_48": "7-instance trajectory candidate (Q27 tag marker form)",
+    "Pattern_49": "3-gate suite (F-28.11 25th application LOCK target)",
+    "Pattern_50": "B→A→C 3-class cycle 2nd round consecutive form",
+    "L_Q3_67_cluster": "4-sub-letter G/H/I/J self-application form",
+    "Pattern_35_v0_2": "InvariantCulture explicit mandatory across all PS timestamp",
+    "N_17_a_primary": "canonical name emit form establishment"
+  },
+
+  "v0_4_spec_inscription_items_reference": "11-category form (handoff_memo §7 9-cat + 28.20 emergent 2-cat: sub-J + P35 v0.2)、詳細 list は BG §6 inscribed",
+
+  "_epistemic_note": "本 BF は 28.19 v0.1 FULL CLOSURE state baseline + 28.20 round opening paired re-sync verify ALL PASS + BE placement byte-exact verify PASS の grounded form state 取得時点での SHA pin reference form。BG/BH の SHA + size + LF count は post-emit fix form (sentinel __BG_SHA_UNFILLED__ / __BH_SHA_UNFILLED__ / -1 form)、本 BF 自身の SHA は post-emit fix (envelope ss inscribe 時 atomic commit prerequisite form)。forensic chain integrity discipline 適用下、本 BF entry は 28.20 round 4-artifact 全 emit 完了 + Phase C atomic commit 時に full grounded form transition.",
+
+  "_end_marker": "END of anchor_28_20_v0_1_input_files_pin.json (BF, 50th dataset, section31 anchor 28.20 v0.1)"
+}
