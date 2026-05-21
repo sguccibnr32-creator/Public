@@ -1,0 +1,438 @@
+{
+  "anchor_id": "anchor_28_17_v0_1",
+  "instance_letter": "AO",
+  "dataset_ordinal": 38,
+  "emit_ts_jst_invariant": "2026-05-21T08:50:00+09:00",
+  "author_info": {
+    "name_jp": "坂口忍",
+    "name_romaji": "Sakaguchi Shinobu",
+    "organization_jp": "坂口製麺所",
+    "organization_romaji": "Sakaguchi Manufactory",
+    "location_jp": "兵庫県 宍粟市",
+    "location_romaji": "Shiso City, Hyogo Prefecture, Japan"
+  },
+  "repository_info": {
+    "github_path": "sguccibnr32-creator/Public",
+    "license": "CC-BY 4.0",
+    "framework": "membrane cosmology GitHub repository forensic chain verification protocol",
+    "repo_root_windows": "E:\\GitHub repo\\github_workspace\\Public"
+  },
+  "license": "CC-BY 4.0",
+  "round_position": {
+    "round_label": "anchor 28.17 v0.1",
+    "linear_era_round_number": 11,
+    "linear_era_round_description": "11th consecutive linear-era round (28.7-28.16 10 round closure trajectory + 28.17 11th)",
+    "chain_depth_at_opening": 23,
+    "chain_depth_at_closure_target": 24,
+    "chain_depth_form": "linear-era inclusive form, root..HEAD distance + 1",
+    "linear_era_root_preserve_round_count": 11,
+    "linear_era_root_preserve_form": "preserved unchanged 28.7-28.16 10 rounds + 28.17 opening 11th instance"
+  },
+  "forensic_chain_baseline_28_16_closure": {
+    "head_28_16_closure_sha_256": "e681cf1078c75208b4a67785b940b55afb07cbdd",
+    "parent_28_15_closure_sha_256": "c0418dc09e7f3c1ad293a0796fed1d79c067e674",
+    "q23_tag_obj_sha_256": "7de97bfb438f520269be18a955b788df7d9e83e6",
+    "q23_tag_name": "companion-v4.9-q23-codify-round-2026-05-21",
+    "q23_tag_type": "tag (annotated)",
+    "q23_tag_peel_equals_head": true,
+    "linear_era_root_sha_256": "491ff34cce22040e052f226e64adddc1669ea1b4",
+    "chain_depth_inclusive": 23,
+    "root_to_head_distance": 22,
+    "closure_ts_jst_invariant": "2026-05-21T07:16:12+09:00",
+    "origin_main_remote_sha_256": "e681cf1078c75208b4a67785b940b55afb07cbdd",
+    "origin_q23_tag_remote_sha_256": "7de97bfb438f520269be18a955b788df7d9e83e6",
+    "origin_sync_verify_method": "git ls-remote Ordinal-equal (P49 [3] post-push baseline form)",
+    "origin_sync_state": "bit-exact verified at Stage 0 paired sync verify 2026-05-21T08:24:02+09:00",
+    "preserve_lock_form": "Stage 5 dispatch atomic commit 達成までは preserve LOCKED form maintained"
+  },
+  "envelope_baseline_28_16_closure": {
+    "gitattributes_sha_256": "7b3b3431b952906bade7c5ebccf298e207b2b695dd01169272036b2d95a2d995",
+    "gitattributes_glob_convention": "** double-star recursive form (L-Q3-68 instance 1 mitigation preserve, 30+ existing entries uniform convention)",
+    "sha256sums_sha_256": "898c095c27fc3c2ead328c1699680057d0b9c3b66fa5d8af79b3070830a6c26c",
+    "sha256sums_counts_total": 146,
+    "sha256sums_counts_data": 127,
+    "sha256sums_counts_meta": 19,
+    "sha256sums_counts_form": "natural form classification: total = non-empty lines, data = ^[0-9a-f]{64}\\s+ pattern, meta = ^# pattern (L-Q3-68 instance 2 mitigation preserve)",
+    "stage_5_update_target_counts_total": 150,
+    "stage_5_update_target_counts_data": 131,
+    "stage_5_update_target_counts_meta": 19,
+    "stage_5_update_form": "section28 -text directive append + 4 new entries + 1 refresh, option (c) hybrid form continuation"
+  },
+  "immutable_pins_rule_1": {
+    "X1": {
+      "sha_256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "size_bytes": 9561,
+      "location": "in-repo, forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+      "role_description": "anchor 22 v0.2 input_files_pin, IMMUTABLE rule 1 root baseline pin"
+    },
+    "X1_sib": {
+      "sha_256": "4df652d6daebc0d06a7fe4a8b5e6771ae8fe6bf049d3a421d440e759fecc0a7a",
+      "size_bytes": 9379,
+      "location": "in-repo sibling form",
+      "role_description": "X1 sibling pin, IMMUTABLE rule 1 preserve baseline"
+    },
+    "X2": {
+      "sha_256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+      "size_bytes": 118226,
+      "location": "in-repo, membrane_v48.tex",
+      "role_description": "membrane cosmology v4.8 companion paper LaTeX source, IMMUTABLE rule 1 preserve"
+    },
+    "F_28_4_C": {
+      "sha_256": "5d9beb04361e0b21f1b703e68ba90f8cbf28efbfa0ff56c84c9d4abffb048ef3",
+      "size_bytes": 11096,
+      "location": "out-of-repo, E:\\Q-3_route_ii_discovery_2026-05-07\\Q-3_immutable_hsc_values.draft.json",
+      "role_description": "HSC route ii draft IMMUTABLE values, out-of-repo IMMUTABLE rule 1 baseline pin"
+    },
+    "preserve_trajectory_round_count": 11,
+    "preserve_trajectory_description": "10 rounds preserve (28.7-28.16) + 28.17 round opening 11th instance verified at Stage 0 paired sync verify (U.5_F_28_4_C + U.10_X1 PASS, byte-exact ground-truth verified)",
+    "verification_tool": "PowerShell Get-FileHash -Algorithm SHA256, Ordinal-equal comparison (P47 baseline form)"
+  },
+  "section_codify_carry": {
+    "section27_28_16_codify_package": {
+      "directory": "forensic_anchors/section27_lessons_codified_q23_v0_1",
+      "AI_declaration": {
+        "filename": "anchor_28_16_v0_1_declaration.md",
+        "sha_256": "463f53e6c14382d563dbf9a90e2021465f90acc3ccb30ee651761ca7789fbb55",
+        "size_bytes": 37321,
+        "lf_count": 669,
+        "dataset_ordinal": 33,
+        "pattern_48_total": 71,
+        "pattern_48_active_types": 8
+      },
+      "AJ_input_files_pin": {
+        "filename": "anchor_28_16_v0_1_input_files_pin.json",
+        "sha_256": "cbdb6d7b5d391c90908742c2ece51d4ddec62eacbe3a85ba3e1e6eeeae92259f",
+        "size_bytes": 22831,
+        "lf_count": 439,
+        "dataset_ordinal": 34,
+        "pattern_48_total": 52,
+        "pattern_48_active_types": 8,
+        "json_top_level_keys": 18,
+        "json_round_trip_preserve": true
+      },
+      "AK_lessons_appendix_PRIMARY_CODIFY": {
+        "filename": "anchor_28_16_v0_1_lessons_appendix.md",
+        "sha_256": "f50bbfa8a87c79d5fee882e47d6a4ace8098033c7723143448b5864a8f19f659",
+        "size_bytes": 74591,
+        "lf_count": 1212,
+        "dataset_ordinal": 35,
+        "pattern_48_total": 158,
+        "pattern_48_active_types": 8,
+        "inscription_scope_item_count": "30 (A 24 + B 2 + C 4) + emergent slot",
+        "max_density_category": "cat6_op_evidence with 58 markers"
+      },
+      "AL_verification_log": {
+        "filename": "anchor_28_16_v0_1_verification_log.md",
+        "sha_256": "42f8eca5cca098bd73238f29406b6afd07685482602f438495ace380d62a4356",
+        "size_bytes": 50115,
+        "lf_count": 884,
+        "dataset_ordinal": 36,
+        "pattern_48_total": 138,
+        "pattern_48_active_types": 8,
+        "co_attest_baseline_round_instance": "3rd round instance (28.13 1st + 28.15 2nd + 28.16 3rd cross-round establishment)"
+      },
+      "aggregate_size_bytes": 184858,
+      "aggregate_lf_count": 3204,
+      "byte_exact_preserve_state": "4-of-4 byte-exact verified at Stage 0 U.3_section27_28_16_codify PASS"
+    },
+    "section26_28_15_codify_package": {
+      "directory": "forensic_anchors/section26_lessons_codified_q22_v0_1",
+      "AD_declaration_sha_256": "7416d161be2ebe6e7b421a1088295f351abfbddb7622c904657da3335d036d19",
+      "AE_input_files_pin_sha_256": "66b26ea58cafde56cc78aaabf83d021c3e7566098163c708a4f29cb853d18d96",
+      "AF_lessons_appendix_PRIMARY_sha_256": "6e48d90e93dca5322e1f152fb310a2184b8df69ec4f96c5e294e2b488847758f",
+      "AG_verification_log_sha_256": "b25e340aae54986dcf85e8bfe40f248c18d0e7236738c585e926522e910212ae",
+      "byte_exact_preserve_state": "4-of-4 byte-exact verified at Stage 0 U.9_section26_28_15 PASS"
+    },
+    "section_lineage_form_description": "section25 (28.14 codify) + section26 (28.15 codify) + section27 (28.16 codify) + section28 (28.17 codify target) sequential lineage form, linear-era 11-round trajectory operational evidence"
+  },
+  "handoff_package_provenance": {
+    "computation_ts_jst_invariant": "2026-05-21T08:33:39+09:00",
+    "computation_tool": "PowerShell Get-FileHash -Algorithm SHA256 (Code-side, paren variant fallback not triggered)",
+    "f_28_11_application_instance": 12,
+    "cross_environment_consistency_form": "F-28.11 12th application instance LOCK evidence, 3-file SHA redundancy operational verify",
+    "file_1_handoff_memo": {
+      "path": "claude_ai_handoff_memo_28_17_round_opening_v0_1.txt",
+      "sha_256": "5f913b763d0495a5b1a90564892f9205715062e4933d456001731d8a68d3b31d",
+      "size_bytes": 37506,
+      "lf_count": 687,
+      "cr_count": 0,
+      "bom_present": false,
+      "lf_term": true,
+      "p46_verdict": "PASS",
+      "role_description": "claude.ai context grasp directive (Step A file 1/3), LF-only UTF-8 no BOM discipline grounded"
+    },
+    "file_2_sync_memo": {
+      "path": "claude_code_sync_memo_28_17_round_opening_v0_1.txt",
+      "sha_256": "438726d8ee499db3e94f1c02d0e16a424ebabd1e4fd2f44cf6cca6bde7fdedcd",
+      "size_bytes": 34429,
+      "lf_count": 668,
+      "cr_count": 0,
+      "bom_present": false,
+      "lf_term": true,
+      "p46_verdict": "PASS",
+      "role_description": "Code-side execute spec, sync_memo section 3 v0.2 spec inscribed baseline form (Step A file 2/3)"
+    },
+    "file_3_closure_verification_pdf": {
+      "path": "anchor_28_16_v0_1_closure_verification.pdf",
+      "sha_256": "92eee8f9ce9937225fa3ccaa14f23a6aad6ef0378a8ffbf619db7ca2359e0600",
+      "size_bytes": 151014,
+      "format": "PDF binary",
+      "lf_count_informational": 885,
+      "cr_count_informational": 377,
+      "p46_form_note": "CR and LF counts are informational for binary PDF format, not gate-binding; BOM=False and lf_term=True observed",
+      "role_description": "28.16 closure forensic record evidence (gamma) hybrid form layout, v4.4 spec compliance (Step A file 3/3)"
+    },
+    "sub_form_differentiation": {
+      "B_2_sha_pin_consistency": "Stage 0 paired sync verify 12/12 state-PASS baseline equality form (2026-05-21T08:24:02+09:00)",
+      "E_2_three_file_redundancy": "handoff package 3-file SHA inscription form (本 input_files_pin section), cross-environment consistency operational evidence concur with Stage 0"
+    },
+    "received_file_preservation_discipline": "received file 改変は forensic chain discipline と不整合のため未実施、本 AO input_files_pin 内 retrospective inscription form で record 確定 (AN declaration section 3 と並列の Path alpha realization form)"
+  },
+  "priority_codify_scope_final_form": {
+    "lock_ts_jst_invariant": "2026-05-21T08:30:00+09:00",
+    "scope_range_target": "28-32 item",
+    "scope_total_declared": 32,
+    "scope_inscription_target": 30,
+    "scope_form_description": "precedent inheritance form (28.16 round 30-item + slot 構造 baseline + 2 emergent slot ADOPT expansion form)",
+    "A_carry_from_28_16": {
+      "item_count": 24,
+      "form": "verbatim carry, 28.16 AK section 3 inscribed 24-item A区分 scope",
+      "rationale": "operationally LOCKED baseline, variance minimum, operational continuity preserve, 28.7-28.16 10 rounds linear-era trajectory preserve principle 同型",
+      "inscription_target": "Stage 3 AP lessons_appendix re-inscription, operational evidence update only form, individual item structural change (subsume/split/re-priority) 未実施"
+    },
+    "B_new_from_28_16_closure_round": {
+      "item_count": 4,
+      "items": {
+        "B_1_L_Q3_67_sub_item_F_codify": "per-file aggregate display -f format string Index out-of-range bug formal codify (28.16 Stage 4 paste-back observation, operational impact 不発生, observation-level carry from preserve に promotion)",
+        "B_2_F_28_11_11th_12th_codify": "P49 3-gate suite operational verify (11th, 28.16 Stage 5) + handoff package emit operation (12th, 28.17 round opening 3-file SHA redundancy) accumulation formal codify",
+        "B_3_pattern_48_cross_round_3rd_replication_complete_codify": "28.13 1st + 28.14 2nd + 28.15 intra 7-instance + 28.16 cross-round 3rd 4-instance COMPLETE trajectory formal codify (419 markers cumulative, 8/8 active types operational maturity)",
+        "B_4_co_attest_baseline_3rd_round_established_codify": "28.13 1st intra-round + 28.15 2nd intra-round + 28.16 3rd cross-round establishment baseline form (F-28.11 sub-form alpha LOCKED inheritance 11-instance trajectory)"
+      }
+    },
+    "C_defer_queue_conservative_preserve": {
+      "item_count": 2,
+      "inscription_this_round": false,
+      "items": {
+        "C_1_D_1_AH_semantics_audit": {
+          "description": "AH semantics audit + 28.7-28.14 letter audit",
+          "defer_rationale": "prerequisite work completion confirmation required, premature inscription induces amend/rework risk in subsequent rounds, conservative defer = zero cost, forensic chain churn 回避 discipline 整合",
+          "exception_path": "user editorial で prerequisite work 完了 + audit 結果 reproducible 確認後の round で inscribe (本 28.17 round 内 path 発動 evidence 不在)"
+        },
+        "C_2_D_2_factor_e_refute_commit": {
+          "description": "factor (e) baseline refute commit (4-class observation complete)",
+          "defer_rationale": "scientific significance LOCK 未達状態での inscribe は anchor 22-21 baseline LOCK discipline と不整合 (物理解釈側 conclusion 確定前の codify は anchor discipline と不整合)",
+          "exception_path": "user editorial で scientific significance LOCK 達成確認後の round で inscribe (本 28.17 round 内 path 発動 evidence 不在)"
+        }
+      }
+    },
+    "E_emergent_slot_adopt": {
+      "item_count": 2,
+      "items": {
+        "E_1_L_Q3_68_round_opening_inaugural": {
+          "description": "L-Q3-68 mitigation pathway (iii) sync_memo section 3 v0.2 spec inscribed baseline form round opening inaugural application 1st instance",
+          "operational_evidence": "Stage 0 paired sync verify 12/12 PASS で empirically grounded (U.4_envelope ga 7b3b3431.. + U.12_SHA256SUMS_counts 146/127/19 natural form classification regex, divergence 0 measured)",
+          "form_distinction": "28.16 closure-only application form vs 28.17 OPEN-side application form, sub-form differentiation establishment",
+          "inscription_target": "Stage 3 AP section 4 emergent slot inscription, L-Q3-68 trajectory に round opening application 1st instance entry 追加"
+        },
+        "E_2_three_file_sha_redundancy": {
+          "description": "handoff package 3-file SHA redundancy operational evidence",
+          "operational_evidence": "3-file 全 canonical path resolved + SHA-256 全 measured at 2026-05-21T08:33:39+09:00, F-28.11 12th application instance LOCK cross-environment consistency",
+          "form_distinction": "B-2 SHA-pin consistency 立証 form と並ぶ sub-form differentiation: B-2 (Stage 0 baseline equality) + E-2 (3-file redundancy provenance)",
+          "inscription_target": "Stage 3 AP section 4 emergent slot inscription, Path alpha (32-item scope) 採用 decision operational realization 立証 evidence"
+        }
+      }
+    },
+    "not_adopt_rationale": {
+      "co_attest_baseline_4th_round_candidate": "本 round closure 段階 (Stage 5 dispatch + Q24 tag emit 完了後 closure state) で B区分 migration が adequate, emergent slot inscription は state achieved 後の discipline 整合 (本 declaration emergent slot 範疇外, Stage 4 AQ co-attest baseline 4th round instance candidate と内的整合)"
+    },
+    "aggregate_summary": {
+      "A_carry": 24,
+      "B_new_inscribed": 4,
+      "C_defer_preserve": 2,
+      "E_emergent_adopt": 2,
+      "total_declared": 32,
+      "total_inscribed_target": 30
+    }
+  },
+  "stage_execution_plan": {
+    "stage_1_declaration_v0_1_plus": {
+      "instance_letter": "AN",
+      "dataset_ordinal": 37,
+      "filename": "anchor_28_17_v0_1_declaration.md",
+      "status": "LOCKED at 2026-05-21T08:45:26+09:00",
+      "sha_256": "64f799b9af0cf0a48839155977fd4aca0deae703aad3fb76da970ade409552ec",
+      "size_bytes": 28878,
+      "lf_count": 354,
+      "pattern_48_total": 67,
+      "pattern_48_active_types": 8,
+      "triple_ground_verify": "3/3 PASS (source == target == expected Ordinal-equal, P47 byte-exact discipline)",
+      "f_28_11_application_instance": 13
+    },
+    "stage_2_input_files_pin_v0_1_plus": {
+      "instance_letter": "AO",
+      "dataset_ordinal": 38,
+      "filename": "anchor_28_17_v0_1_input_files_pin.json",
+      "status_at_emit": "本 AO file 自己参照 inscription form",
+      "form_description": "JSON format file, 18 top-level keys precedent inheritance form (28.16 AJ baseline), JSON parse round-trip preserve",
+      "f_28_11_application_instance_target": 14
+    },
+    "stage_3_lessons_appendix_v0_1_plus_PRIMARY_CODIFY": {
+      "instance_letter": "AP",
+      "dataset_ordinal": 39,
+      "filename": "anchor_28_17_v0_1_lessons_appendix.md",
+      "status": "pending",
+      "form_description": "PRIMARY CODIFY central inscription, 30-item inscription target (A 24 + B 4 + E 2) + max density category cat6_op_evidence baseline form (28.16 AK 58 markers precedent)",
+      "f_28_11_application_instance_target": 15
+    },
+    "stage_4_verification_log_v0_1_plus": {
+      "instance_letter": "AQ",
+      "dataset_ordinal": 40,
+      "filename": "anchor_28_17_v0_1_verification_log.md",
+      "status": "pending",
+      "form_description": "verification_log form, 5-channel co-attest baseline (28.15 AG 5-channel inheritance + 28.16 AL 3rd round instance form), Stage 1-3 triple-ground + envelope + section28 codify package operational evidence accumulation",
+      "co_attest_baseline_round_instance_target": "4th round instance ESTABLISHED candidate (本 Stage 4 file-ize 完了で B区分 B_4 migration ADOPT 確定)",
+      "f_28_11_application_instance_target": 16
+    },
+    "stage_5_dispatch_v0_2_spec_11_step": {
+      "form_description": "11-step sequential dispatch form, 28.16 closure round operational evidence precedent inheritance",
+      "atomic_commit_target": "section28 codify package 4 artifacts + envelope (.gitattributes + SHA256SUMS) atomic commit",
+      "q24_tag_emit_target": {
+        "tag_name_form": "companion-v4.9-q24-codify-round-{dispatch_date_jst}",
+        "tag_type": "tag (annotated)",
+        "tag_msg_discipline": "P30 ASCII purity 0/12 + P31 -F byte-discipline form"
+      },
+      "chain_depth_progression": "23 (28.16 closure inclusive) -> 24 (28.17 closure inclusive)",
+      "push_compliance_form": "rule 92 strict push (`git push origin main` + `git push origin <Q24_tag>` only, forbidden flags --force/--all/--tags/--mirror 一切未使用)",
+      "p49_3_gate_suite": "[1] post-commit + [2] post-tag + [3] post-push, Ordinal compare verify",
+      "f_28_11_application_instance_target": 17,
+      "closure_form": "L-Q3-63 instance 10 candidate, closure paste-back form iii hybrid"
+    },
+    "f_28_11_total_application_instance_accumulation_target": "12-17 (6 instance accumulation, 28.16 closure round 6 instance precedent と parallel form)"
+  },
+  "discipline_reference_forward_locked": {
+    "pattern_discipline_10_of_10_mandatory": {
+      "P30_ascii_purity": "Pattern 30 ASCII purity: forbidden 12-set 0/12 (TM/R/C/right-arrow/left-arrow/em-dash/en-dash/ellipsis/4 smart quotes), U+2192 -> ASCII `->` form LOCKED",
+      "P31_F_byte_discipline": "Pattern 31 -F byte-discipline: commit_msg + tag_msg + 全 artifact, -F file path 経由 byte-exact form",
+      "P32_push_specific_scope": "Pattern 32 push-specific scope: NativeCommandError wrap with try/finally, ErrorActionPreference scope 限定",
+      "P35_invariant_culture": "Pattern 35 InvariantCulture: 全 TS yyyy-MM-ddTHH:mm:ssK form InvariantCulture grounded",
+      "P38_exec_policy_workaround": "Pattern 38 exec policy workaround: scriptblock + & form, [scriptblock]::Create($script_text); & $sb",
+      "P39_cwd_sync_tier_1_2": "Pattern 39 cwd_sync Tier 1+2: Set-Location + [System.IO.Directory]::SetCurrentDirectory 両方適用",
+      "P46_3_counter": "Pattern 46 3-counter: CR=0 / BOM=False / lf_term=True 全 file write 後 verify",
+      "P47_ordinal_sha_equality": "Pattern 47 Ordinal SHA equality: [String]::Equals + [StringComparison]::Ordinal form 全 SHA cross-attest",
+      "P48_attestation_provenance": "Pattern 48 attestation provenance: sub-form A/B/C alpha LOCKED inheritance, claim ground 明示 (sub-form A claude.ai self-measure baseline, sub-form B PC source measure, sub-form C Code-side post-WriteAllBytes measure)",
+      "P49_3_gate_suite": "Pattern 49 3-gate suite: [1] post-commit + [2] post-tag + [3] post-push, Ordinal compare"
+    },
+    "R_S2_1_v0_2_spec_match_based": {
+      "counting_unit_semantics": "match-based form, PowerShell [regex]::Matches OR Python re.findall",
+      "prohibited_form": "bash grep -ciE form (line-based, divergence inducing, 28.16 AK section 5.4 C-4 grep false-positive mitigation formal LOCK 継承)",
+      "pattern_48_8_category_regex_literal": {
+        "cat_1": "(?i)(measured|measurement|empirical|empirically)",
+        "cat_2": "(?i)(byte-exact|bit-exact)",
+        "cat_3": "(?i)Get-FileHash",
+        "cat_4": "(?i)ls-remote",
+        "cat_5": "(?i)Pattern\\s*\\d+",
+        "cat_6": "(?i)operational\\s+(evidence|verify)",
+        "cat_7": "(?i)(cross-attest|cross\\s+attest|concur)",
+        "cat_8": "(?i)(grounded|ground\\s+form|ground-truth)"
+      },
+      "cross_round_replication_trajectory": "28.13 1st + 28.14 2nd + 28.15 intra 7-instance + 28.16 cross-round 3rd 4-instance COMPLETE + 28.17 cross-round 4th 4-instance target"
+    },
+    "L_Q3_67_axis_7_sub_items": {
+      "axis_semantic": "methodology specification verification implementation divergence (claude.ai one-environment-internal axis)",
+      "sub_items": {
+        "A_chain_depth_gate_logic": "U.2 chain depth gate logic SCRIPT-SPEC-GAP, distance + ancestor 2-step composition mitigation (28.15 inaugural, 28.16-28.17 application)",
+        "B_abandoned_narrative_sha_grep": "abandoned narrative SHA grep spec divergence, 28.16 全 stage で廃止 form preserve (28.15 inaugural)",
+        "C_R_S2_1_counting_unit": "R-S2-1 counting unit line-based vs match-based, v0.2 spec match-based form LOCKED (28.15 inaugural, R-S2-1 v0.2 spec extension driver)",
+        "C_4_derived_grep_false_positive": "grep false-positive mitigation formal LOCK (28.16 AK section 5.4)",
+        "D_sha_256_schema_field_name": "sha_256 schema field name semantic disambiguation (28.16 formal codify, 本 AO file の sha_256 field naming convention に operational application form)",
+        "E_memory_rule_meta_vs_identity": "memory-rule meta-reference vs identity-use disambiguation (28.16 formal codify)",
+        "sixth_japanese_character_class": "Japanese character classification spec disambiguation (28.16 formal codify)",
+        "F_format_string_index_bug_target": "per-file aggregate display -f format string Index out-of-range bug (28.16 Stage 4 observation, 28.17 round formal codify target via B-1)"
+      }
+    },
+    "L_Q3_68_axis_mitigation_pathway_3_form": {
+      "axis_semantic": "cross-environment convention drift (claude.ai precedent-inferred spec vs Code-side codebase ground-truth convention, environment-boundary axis, L-Q3-67 とは structurally separate axis)",
+      "inaugural_2_instances": {
+        "instance_1_gitattributes_glob": "28.15 Stage 5 step 3a, single-star vs Code-side double-star ** recursive divergence, ** form 採用",
+        "instance_2_sha256sums_classification": "28.15 Stage 5 step 3b, prefix-narrowed vs natural form classification regex divergence, natural form 採用"
+      },
+      "mitigation_pathway_3_form_locked_28_16": {
+        "pathway_i_claude_ai_self_discipline": "directive 出力時 convention 推定 portion に inferred from precedent, Code-side codebase convention preserves precedence if divergence detected caveat inline 明示 mandatory",
+        "pathway_ii_code_side_template": "convention preserve auto-detect baseline 組込, Code-side script template form (28.15 closure operational evidence 提供)",
+        "pathway_iii_sync_memo_v0_2_spec": "各 round opening 用 sync_memo section 3 v0.2 spec 内 mandatory inscription baseline form preserve"
+      },
+      "operational_evidence_accumulation_count": "28.16 round 内 9 instances + 28.17 round opening 10th instance candidate (Stage 0 12/12 PASS round opening inaugural application 1st instance, E-1 emergent slot ADOPT trigger)"
+    },
+    "rule_92_strict_push_compliance": {
+      "allowed_commands": "`git push origin main` + `git push origin <tag_name>` only",
+      "forbidden_flags": "--force / --all / --tags / --mirror (history rewrite 禁止 / 全 branch 一括 push 禁止 / 全 tag 一括 push 禁止 / mirror push 禁止)",
+      "consecutive_compliance_round_target": "28.14-28.16 3 rounds 連続 compliance + 28.17 round 4th 連続 target"
+    },
+    "rule_1_immutable_preserve_form": "X1 + X1_sib + X2 + F-28.4-C 全 byte-exact preserve mandatory, 10 rounds 連続 preserve trajectory (28.7-28.16) + 28.17 round opening 11th instance verified (Stage 0 U.5_F_28_4_C + U.10_X1 PASS, byte-exact ground-truth)"
+  },
+  "round_closure_target": {
+    "chain_progression": {
+      "chain_depth_at_opening": 23,
+      "chain_depth_at_closure_target": 24,
+      "chain_form_description": "linear-era inclusive form, root..HEAD distance 22 + 1 = 23 at 28.16 closure -> 23 + 1 = 24 at 28.17 closure target",
+      "linear_era_root_preserve": "491ff34cce22.. preserved unchanged, 11 rounds 連続 + 28.18 opening 12th instance candidate forward target"
+    },
+    "q24_tag_emit_target": {
+      "tag_name_form_jst": "companion-v4.9-q24-codify-round-{dispatch_date_jst}",
+      "tag_type": "tag (annotated)",
+      "tag_peel_target": "new HEAD (P49 [2] post-tag verify mandatory)",
+      "tag_msg_discipline": "P30 ASCII purity 0/12 + P31 -F byte-discipline form, InvariantCulture TS embedded"
+    },
+    "section28_codify_package_target": {
+      "directory_path": "forensic_anchors/section28_lessons_codified_q24_v0_1",
+      "artifact_count": 4,
+      "artifacts": [
+        "anchor_28_17_v0_1_declaration.md (AN, LOCKED)",
+        "anchor_28_17_v0_1_input_files_pin.json (AO, 本 file, in-flight)",
+        "anchor_28_17_v0_1_lessons_appendix.md (AP, PRIMARY CODIFY, pending)",
+        "anchor_28_17_v0_1_verification_log.md (AQ, co-attest baseline 4th round instance candidate, pending)"
+      ],
+      "aggregate_target_form": "precedent 28.16 184858 B baseline form (32-item scope inscription form expansion)"
+    },
+    "envelope_update_target": {
+      "gitattributes_update": "section28 -text directive append (** double-star recursive form, L-Q3-68 instance 1 mitigation preserve)",
+      "sha256sums_counts_target": "150/131/19 (option (c) hybrid form continuation, natural form classification, L-Q3-68 instance 2 mitigation preserve, 146/127/19 + 4 entries section28)"
+    },
+    "f_28_11_application_instance_target_total": "12-17 cumulative (Stage 0 + Stage 1-4 + Stage 5 P49 3-gate, 6-instance round-level accumulation, 28.16 closure round precedent と parallel form)",
+    "pattern_48_cross_round_4th_replication_target": {
+      "trajectory_position": "28.17 cross-round 4th 4-instance target",
+      "intra_round_4_instance_zero_divergence_target": "Stage 1-4 全 stage で claude.ai sub-form A baseline と Code-side sub-form B/C re-measure の 8/8 active types match",
+      "cumulative_17_instance_target": "12 + 4 (intra-round 4) + 1 (Stage 4 5-channel co-attest baseline) = 17"
+    }
+  },
+  "declaration_AN_reference": {
+    "instance_letter": "AN",
+    "dataset_ordinal": 37,
+    "filename": "anchor_28_17_v0_1_declaration.md",
+    "target_path_in_repo": "forensic_anchors/section28_lessons_codified_q24_v0_1/anchor_28_17_v0_1_declaration.md",
+    "sha_256": "64f799b9af0cf0a48839155977fd4aca0deae703aad3fb76da970ade409552ec",
+    "size_bytes": 28878,
+    "lf_count": 354,
+    "cr_count": 0,
+    "bom_present": false,
+    "lf_term": true,
+    "p46_verdict": "PASS",
+    "ascii_purity_verdict": "PASS (0/12 forbidden codepoints)",
+    "pattern_48_total_markers": 67,
+    "pattern_48_active_types": 8,
+    "pattern_48_per_category": {
+      "cat1_measured": 10,
+      "cat2_byte_bit": 12,
+      "cat3_GetFileHash": 2,
+      "cat4_lsremote": 3,
+      "cat5_PatternN": 4,
+      "cat6_op_evidence": 22,
+      "cat7_crossattest": 6,
+      "cat8_grounded": 8
+    },
+    "file_ize_ts_jst_invariant": "2026-05-21T08:45:26+09:00",
+    "triple_ground_verify_verdict": "3/3 PASS (source == target == expected Ordinal-equal, sub-form A/B/C alpha LOCKED inheritance grounded)",
+    "f_28_11_application_instance_locked": 13,
+    "reference_role_description": "本 AO input_files_pin の anchor identification + chain baseline + handoff package provenance + priority codify scope content は AN declaration の structured JSON form representation, AN declaration の reference baseline として forward LOCKED, sub-form differentiation: AN narrative form vs AO structured data form, cross-attest concur form"
+  }
+}
