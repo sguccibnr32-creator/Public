@@ -1,0 +1,199 @@
+{
+  "anchor_id": "28.18",
+  "author_info": {
+    "name": "Sakaguchi Shinobu",
+    "name_jp": "坂口忍",
+    "affiliation": "坂口製麺所",
+    "location": "兵庫県 宍粟市"
+  },
+  "dataset_ordinal": 42,
+  "declaration_AS_reference": {
+    "instance_letter": "AS",
+    "target_path": "forensic_anchors/section29_lessons_codified_q25_v0_1/anchor_28_18_v0_1_declaration.md",
+    "sha_256": "769651872004cd01dd27ede454c9a5ce8eb6a79feda353432d911a29a93f332c",
+    "size_bytes": 45261,
+    "lf_count": 397,
+    "p46_3counter": { "cr": 0, "bom": false, "lf_term": true, "verdict": "PASS" },
+    "ascii_purity_14_set": "0/14 PASS",
+    "pattern_48_markers": { "total": 75, "active_types": "8/8" },
+    "lock_ts_jst_invariant": "2026-05-21T13:54:44+09:00"
+  },
+  "discipline_reference_forward_locked": {
+    "pattern_discipline_10": ["P30","P31","P32","P35","P38","P39","P46","P47","P48","P49"],
+    "expanded_unicode_self_audit": { "U+2194": 0, "U+2260": 0, "U+2026": 0 },
+    "r_series_baseline": {
+      "R-S2-1": "v0.2 spec",
+      "counting_form": "match-based ([regex]::Matches OR Python re.findall)",
+      "line_based_form": "prohibited (28.16 AK section5.4 C-4 formal LOCK)",
+      "8_category_regex": [
+        "(?i)(measured|measurement|empirical|empirically)",
+        "(?i)(byte-exact|bit-exact)",
+        "(?i)Get-FileHash",
+        "(?i)ls-remote",
+        "(?i)Pattern\\\\s*\\\\d+",
+        "(?i)operational\\\\s+(evidence|verify)",
+        "(?i)(cross-attest|cross\\\\s+attest|concur)",
+        "(?i)(grounded|ground\\\\s+form|ground-truth)"
+      ]
+    },
+    "l_q3_axis_state": {
+      "L-Q3-67": {
+        "established_sub_items_7": ["A","B","C","C-4_derived","D","E","F"],
+        "sixth_instance": "LOCKED",
+        "sub_G_candidate": { "instances": 2, "formal_codify": "pending 3+ instance criterion" }
+      },
+      "L-Q3-68": {
+        "mitigation_pathway_3_form": [
+          "(i) claude.ai self-discipline caveat inline mandatory",
+          "(ii) Code-side script template convention preserve auto-detect",
+          "(iii) sync_memo section3 v0.2 spec inscribed baseline form"
+        ],
+        "4_category_differentiation": {
+          "pre_differentiation_cumulative": 11,
+          "sub_form_alpha_cross_round_opening": 2,
+          "sub_form_beta_intra_round_inscription": 5,
+          "auxiliary_observation_strand": 2
+        }
+      },
+      "L-Q3-69_candidate": {
+        "semantic": "git tooling default mode enumeration completeness hazard",
+        "instances": 1,
+        "1st_instance_ts": "2026-05-21T14:36:04+09:00",
+        "formal_codify": "pending 2+ instance criterion"
+      }
+    },
+    "f_28_11_trajectory": {
+      "established_1_to_19": "LOCKED inheritance form",
+      "forward_target": {
+        "20th_Stage_2_AT": "this instance",
+        "21st_Stage_3_AU": "PRIMARY CODIFY phase",
+        "22nd_Stage_4_AV": "5-channel co-attest baseline 5th round candidate",
+        "23rd_Stage_5_dispatch": "P49 3-gate suite"
+      }
+    },
+    "pattern_50_candidate": {
+      "name": "Untracked Enumeration Completeness Gate",
+      "spec": "git status --porcelain --untracked-files=all (-uall) mandatory for file-path-level untracked enumeration verification gates",
+      "1st_instance_ts": "2026-05-21T14:36:04+09:00",
+      "forward_lock": "indefinite continuation"
+    }
+  },
+  "emit_ts_jst_invariant": "2026-05-21T14:55:37+09:00",
+  "envelope_baseline_28_17_closure": {
+    "gitattributes_sha_256": "e670a6b374f9de1bf40fd5e1ea77c6bbe411f3a5692dda82c61f2cfb577c426e",
+    "sha256sums_sha_256": "ec66658d7bb236a8ae52c911cec3b837785c09222f1b627a55d3bdada1606301",
+    "counts": { "file_total": 150, "hashed": 131, "defer": 19 },
+    "form": "natural form, 28.17 closure state",
+    "stage_5_update_target": { "file_total": 154, "hashed": 135, "defer": 19 }
+  },
+  "forensic_chain_baseline_28_17_closure": {
+    "head_sha": "585442eaa3f976871e235bb56b755b99b3e525ca",
+    "q24_tag_obj_sha": "68b967b7e66fd362a1d70a4f5f3451f86dcf5a53",
+    "q24_tag_name": "companion-v4.9-q24-codify-round-2026-05-21",
+    "q24_tag_type": "annotated",
+    "q24_tag_peel_eq_head": true,
+    "linear_era_root_sha": "491ff34cce22040e052f226e64adddc1669ea1b4",
+    "chain_depth": 24,
+    "chain_depth_form": "linear-era inclusive (root..HEAD distance 23 + 1)",
+    "closure_ts_jst_invariant": "2026-05-21T10:22:53+09:00",
+    "preserve_state": "LOCKED through Stage 5 atomic commit",
+    "origin_sync_state": "bit-exact MATCH (main + Q24 tag ls-remote verified)"
+  },
+  "handoff_package_provenance": {
+    "round_opening_form": "3-file (handoff + sync + 28.17 closure verification PDF)",
+    "mid_round_transition_form": "2-file (handoff + sync, closure PDF absent for round not closed)",
+    "current_form": "mid-round transition 2-file applied",
+    "anticipate_28_18_closure_form": "3-file (handoff + sync + 28.18 closure verification PDF) for 28.19 round opening"
+  },
+  "immutable_pins_rule_1": {
+    "X1": { "sha_256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be", "size_bytes": 9561, "location": "in-repo" },
+    "X1_sib": { "sha_256": "4df652d6daebc0d06a7fe4a8b5e6771ae8fe6bf049d3a421d440e759fecc0a7a", "size_bytes": 9379, "location": "in-repo sibling" },
+    "X2": { "sha_256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd", "size_bytes": 118226, "location": "in-repo (membrane_v48.tex)" },
+    "F-28.4-C": { "sha_256": "5d9beb04361e0b21f1b703e68ba90f8cbf28efbfa0ff56c84c9d4abffb048ef3", "size_bytes": 11096, "location": "out-of-repo" },
+    "preserve_trajectory": "11 rounds consecutive (28.7-28.17) + 28.18 opening 12th instance + mid-round state, byte-exact"
+  },
+  "instance_letter": "AT",
+  "license": "CC-BY 4.0",
+  "priority_codify_scope_final_form": {
+    "A_carry_from_28_17": 24,
+    "B_group_level_promote": 4,
+    "E_emergent_slot_adopt": 2,
+    "N_new_codify_incl_D1_promote": 5,
+    "C_defer_preserve": 1,
+    "total_declared": 36,
+    "total_inscription_target": 35,
+    "verbal_delta_arithmetic": "A+/-0 + B+/-0 + E+/-0 + N+5 + C-1 = +4 net (28.17 32 -> 28.18 36)",
+    "pattern_50_addition_pending_judgement": "scope expansion candidate (Stage 3 AU emit pre-LOCK final adjudication)"
+  },
+  "repository_info": {
+    "name": "sguccibnr32-creator/Public",
+    "url": "https://github.com/sguccibnr32-creator/Public",
+    "branch": "main",
+    "license": "CC-BY 4.0"
+  },
+  "round_closure_target": {
+    "target": "anchor 28.18 v0.1 FULL CLOSURE",
+    "via": "Stage 5 dispatch v0.2 spec 11-step execute",
+    "expected_outcome": {
+      "new_head_sha": "post-commit SHA",
+      "q25_tag_obj_sha": "post-tag obj SHA",
+      "q25_tag_name": "companion-v4.9-q25-codify-round-2026-05-21",
+      "chain_depth_progression": "24 -> 25",
+      "envelope_counts_target": "150/131/19 -> 154/135/19",
+      "rule_92_strict_push_compliance": "5th round consecutive target"
+    }
+  },
+  "round_position": {
+    "linear_era_round_number": 12,
+    "linear_era_sequence": "28.7 (1st) -> 28.8 -> 28.9 -> 28.10 -> 28.11 -> 28.12 -> 28.13 -> 28.14 -> 28.15 -> 28.16 -> 28.17 (11th) -> 28.18 (12th, in-progress)",
+    "round_phase": "Stage 1 COMPLETE, Stage 2 in-progress (AT self file-ize)",
+    "transition_form": "mid-round transition special (Stage 1 complete state)"
+  },
+  "section_codify_carry": {
+    "section27_28_16_closure_4_artifacts": {
+      "AI_declaration": { "sha_256": "463f53e6c14382d563dbf9a90e2021465f90acc3ccb30ee651761ca7789fbb55", "size_bytes": 37321, "lf_count": 669 },
+      "AJ_input_files_pin": { "sha_256": "cbdb6d7b5d391c90908742c2ece51d4ddec62eacbe3a85ba3e1e6eeeae92259f", "size_bytes": 22831, "lf_count": 439 },
+      "AK_lessons_appendix_primary": { "sha_256": "f50bbfa8a87c79d5fee882e47d6a4ace8098033c7723143448b5864a8f19f659", "size_bytes": 74591, "lf_count": 1212 },
+      "AL_verification_log": { "sha_256": "42f8eca5cca098bd73238f29406b6afd07685482602f438495ace380d62a4356", "size_bytes": 50115, "lf_count": 884 },
+      "aggregate": { "size_bytes": 184858, "lf_count": 3204 }
+    },
+    "section28_28_17_closure_4_artifacts": {
+      "AN_declaration": { "sha_256": "64f799b9af0cf0a48839155977fd4aca0deae703aad3fb76da970ade409552ec", "size_bytes": 28878, "lf_count": 354 },
+      "AO_input_files_pin": { "sha_256": "fcd3940c9b5d72318091a8ffb0c0f9c0c09fa30d013079a396cdeb83a4b80d95", "size_bytes": 28997, "lf_count": 438 },
+      "AP_lessons_appendix_primary": { "sha_256": "fd350b310d83d393fd43deecf1b691bf5c4e269f89297177e6c836bdff6aa82f", "size_bytes": 44916, "lf_count": 413 },
+      "AQ_verification_log_5channel_coattest": { "sha_256": "b641132015075316e1d877e6a87059b5059e2fd6752c1f5ba4e8c3ea1ad9d2cf", "size_bytes": 34015, "lf_count": 320 },
+      "aggregate": { "size_bytes": 136806, "lf_count": 1525 }
+    }
+  },
+  "stage_execution_plan": {
+    "stage_1_AS_declaration": {
+      "status": "COMPLETE",
+      "complete_ts_jst_invariant": "2026-05-21T13:54:44+09:00",
+      "instance": "AS (41st dataset)",
+      "sha_256": "769651872004cd01dd27ede454c9a5ce8eb6a79feda353432d911a29a93f332c"
+    },
+    "stage_2_AT_input_files_pin": {
+      "status": "IN-PROGRESS (this file emission self)",
+      "instance": "AT (42nd dataset)",
+      "schema_form": "AO canonical 18-key adapted (28.18 closure suffix increment + AS reference back-pointer)"
+    },
+    "stage_3_AU_lessons_appendix": {
+      "status": "PENDING",
+      "instance": "AU (43rd dataset, PRIMARY CODIFY)",
+      "inscription_scope": "35-item full + A 24-item explicit list (AK section3 verbatim carry via Stage 3 prerequisite delta-read 4th round) + N-5 AH semantics audit + L-Q3-68 4-category formal codify + sub-form beta 4th instance inscription + Pattern 50 candidate forward LOCK + L-Q3-69 candidate 1st instance log + auxiliary observation strand 2nd instance ESTABLISHMENT"
+    },
+    "stage_4_AV_verification_log": {
+      "status": "PENDING",
+      "instance": "AV (44th dataset, 5-channel co-attest baseline 5th round candidate)",
+      "f_28_11_trajectory_inscription": "instances 18 through 23"
+    },
+    "stage_5_dispatch": {
+      "status": "PENDING",
+      "spec_version": "v0.2 (11-step sequence)",
+      "atomic_commit_target": "section29 4 artifacts + envelope ga + ss update",
+      "q25_tag_emit_target": "annotated, name companion-v4.9-q25-codify-round-2026-05-21",
+      "rule_92_strict_push_compliance": "forbidden flags --force / --all / --tags / --mirror absent",
+      "p49_3_gate_suite_application_target": "post-commit + post-tag + post-push Ordinal verify"
+    }
+  }
+}
