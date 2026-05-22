@@ -1,0 +1,408 @@
+{
+  "_meta": {
+    "anchor": "28.22 v0.1",
+    "artifact": "input_files_pin",
+    "dataset_ordinal": 58,
+    "schema_parent": {
+      "ref": "anchor_28_21_v0_1_input_files_pin.json",
+      "ord": "CF (54th dataset)",
+      "sha256": "f61512916d434feaa54fc75a80c0c99fe7ded2dd76c760ddc22279785dc4d1ae"
+    },
+    "generation_ts": "2026-05-22T<populated_post_emit_InvariantCulture_P35v0.2_form>+09:00",
+    "author": "Sakaguchi Shinobu / Sakaguchi Seimensho / Hyogo Prefecture, Shiso City",
+    "license": "CC-BY 4.0",
+    "spec_version": "v0.5 emit_revision v0.2 (forward application)",
+    "form_basis": "anchor 28.21 v0.1 FULL CLOSURE state baseline + 28.22 round opening 19-gate verify ALL PASS (verify_ts 2026-05-22T10:47:12+09:00, state_verdict 19 PASS / 1 SKIP / 0 FAIL) + Phase A 10-item resolution ALL APPROVED form + turn B1 RESOLVED (CI flow[4] complete flow4_ts 2026-05-22T11:45:18+09:00)",
+    "discipline_forms_applied_at_emit": [
+      "P35 v0.2 InvariantCulture (timestamp emission)",
+      "L-Q3-67 5-letter cluster G/H/I/J/K self-application (sub-K 14th instance candidate)",
+      "sub-K primary preventive form (claude.ai-side pre-emit N-13 14-set scan + form A substitution)",
+      "directional drift criteria v0.2 self-check (forecast integ verify, content redistribution accounting applied)",
+      "Greek letter context disambiguation self-application (gamma_A-2 vs gamma_A-5 collapse prevention)",
+      "cross-reference inscription convention self-application (opt C dual form)"
+    ]
+  },
+  "chain_anchor_baseline": {
+    "main_head": "06ae7f3f15eaa40239739e53fb4b25d97c4212c4",
+    "parent_28_20_head": "5760aa59b9d63d7fb7143ce15fccd9898e3081b9",
+    "q28_tag_obj": "b663885bd1b7a65fe1c46ee1c50f19f0c50bfc75",
+    "q28_tag_name": "companion-v4.9-q28-codify-round-2026-05-22",
+    "q28_tag_type": "annotated",
+    "q28_peel_equals_head": true,
+    "q27_tag_obj_preserved": "cce3654029ca226d75a632f8e9b55b97c109edb4",
+    "linear_era_root": "491ff34cce22040e052f226e64adddc1669ea1b4",
+    "chain_depth_at_baseline": 28,
+    "linear_era_closure_count_at_baseline": 15,
+    "remote_main_bit_exact_at_verify": true,
+    "remote_q28_bit_exact_at_verify": true,
+    "f_28_11_lock_application_count_at_verify": 27,
+    "dispatch_elapsed_3rd_measurement_sec": 4.128,
+    "case_a_archival_migration_form_at_28_21_closure": true
+  },
+  "envelope_baseline": {
+    "gitattributes_sha256": "0a5dd6a10adad087d82096029bc912b9bd2e1a5eac7ffb8a3dcf33cadb83360e",
+    "sha256sums_sha256": "ac1e82b05a680ce0e653df5dc41313b7d83ba5d447f97a2da08ac3352ea0966e",
+    "counts_line_category": {
+      "total_lines": 166,
+      "hashed_lines": 147,
+      "comment_blank_lines": 19,
+      "form": "line-category form, v0.5 spec section 3 form"
+    },
+    "caveat_record_3_consec": 4,
+    "caveat_record_3_form": "line-category count form 4R ESTABLISHED at 28.22 round opening verify",
+    "transition_target_at_phase_c": {
+      "total_lines": 170,
+      "hashed_lines": 151,
+      "comment_blank_lines": 19,
+      "delta": "+4 / +4 / +0 (section33 4-artifact entries append)"
+    }
+  },
+  "immutable_4_pin": {
+    "x1": {
+      "sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "size_bytes": 9561,
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+      "preserve_count_at_verify": 15
+    },
+    "x1_sib": {
+      "sha256": "4df652d6daebc0d06a7fe4a8b5e6771ae8fe6bf049d3a421d440e759fecc0a7a",
+      "size_bytes": 9379,
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_lessons_appendix.md",
+      "preserve_count_at_verify": 15
+    },
+    "x2": {
+      "sha256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+      "size_bytes": 118226,
+      "path": "latex_v48/membrane_v48.tex",
+      "preserve_count_at_verify": 15,
+      "description": "membrane cosmology v4.8 LaTeX source baseline"
+    },
+    "f_28_4_c": {
+      "sha256": "5d9beb04",
+      "sha256_form": "prefix-only (8-hex) form preserve",
+      "size_bytes": 11096,
+      "path": "<out-of-repo, user-local>",
+      "status": "U.5 SKIP form sentinel (sub-H sentinel)",
+      "preserve_count_at_verify": 15
+    },
+    "caveat_record_2_consec": 4,
+    "caveat_record_2_form": "explicit path form 4R ESTABLISHED at 28.22 round opening verify",
+    "target_at_phase_c_closure": "16R consecutive preserve"
+  },
+  "section32_parent_codify_pins": {
+    "directory": "forensic_anchors/section32_lessons_codified_q28_v0_1/",
+    "codify_package_ordinal": 28,
+    "ce_declaration": {
+      "sha256": "92d74b971bd518213a655eb8f99d382f47ea19a62e42d878a78bbe629ccbb048",
+      "size_bytes": 32985,
+      "lf_count": 630,
+      "path": "anchor_28_21_v0_1_declaration.md",
+      "dataset_ordinal": 53,
+      "sub_pattern": "B (scope-clarity-driven)",
+      "drift_vs_28_20": "-21.68% byte / -19.23% LF"
+    },
+    "cf_input_files_pin": {
+      "sha256": "f61512916d434feaa54fc75a80c0c99fe7ded2dd76c760ddc22279785dc4d1ae",
+      "size_bytes": 19468,
+      "lf_count": 338,
+      "path": "anchor_28_21_v0_1_input_files_pin.json",
+      "dataset_ordinal": 54,
+      "sub_pattern": "A (spec-milestone-driven)",
+      "drift_vs_28_20": "+43.72% byte / +34.13% LF",
+      "schema_role_at_28_22": "parent schema for CJ 28.22 (this artifact)",
+      "spec_milestone_at_28_21": "v0.4 -> v0.5 transition 1st round, schema steady-state convergence target 28.22"
+    },
+    "cg_lessons_appendix": {
+      "sha256": "3cc1a0e79672bdea265718596fb10f83cc1231330b795ae21d8f49c4ba351119",
+      "size_bytes": 49742,
+      "lf_count": 899,
+      "path": "anchor_28_21_v0_1_lessons_appendix.md",
+      "dataset_ordinal": 55,
+      "sub_pattern": "B-prime NEW (compactification-driven)",
+      "drift_vs_28_20": "-30.03% byte / -38.42% LF",
+      "primary_codify_at_28_21": true,
+      "sub_pattern_b_prime_first_emergence": true
+    },
+    "ch_verification_log": {
+      "sha256": "73a3b15964753961d9d7714ee9a8047d368bfcef29f4392245c6c1e4708dd623",
+      "size_bytes": 41724,
+      "lf_count": 794,
+      "path": "anchor_28_21_v0_1_verification_log.md",
+      "dataset_ordinal": 56,
+      "sub_pattern": "- (near-baseline)",
+      "drift_vs_28_20": "+2.02% byte / +12.15% LF",
+      "co_attest_5_channel_consec": 8,
+      "cross_anchor_lock_reference_role_at_28_22": "section 7 LOCK content = 28.21 baseline inheritance pole of opt C dual reference (A-5 28.22 selection)"
+    },
+    "aggregate": {
+      "size_bytes": 143919,
+      "lf_count": 2661,
+      "drift_vs_28_20_section31": "-14.16% byte"
+    }
+  },
+  "six_section_carry_pins": {
+    "section27_28_16_q23": {
+      "codify_package_ordinal": 23,
+      "anchor": "28.16 v0.1",
+      "letter_prefix": "AI/AJ/AK/AL",
+      "carry_verdict_at_verify": "4/4 byte-exact preserve (U.9 PASS)"
+    },
+    "section28_28_17_q24": {
+      "codify_package_ordinal": 24,
+      "anchor": "28.17 v0.1",
+      "letter_prefix": "AN/AO/AP/AQ",
+      "carry_verdict_at_verify": "4/4 byte-exact preserve (U.3 PASS)"
+    },
+    "section29_28_18_q25": {
+      "codify_package_ordinal": 25,
+      "anchor": "28.18 v0.1",
+      "letter_prefix": "AS/AT/AU/AV",
+      "carry_verdict_at_verify": "4/4 byte-exact preserve (U.19 PASS, NEW gate at 28.22)"
+    },
+    "section30_28_19_q26": {
+      "codify_package_ordinal": 26,
+      "anchor": "28.19 v0.1",
+      "letter_prefix": "AW/AX/AY/AZ",
+      "carry_verdict_at_verify": "4/4 byte-exact preserve (U.18 PASS)"
+    },
+    "section31_28_20_q27": {
+      "codify_package_ordinal": 27,
+      "anchor": "28.20 v0.1",
+      "letter_prefix": "BE/BF/BG/BH",
+      "carry_verdict_at_verify": "4/4 byte-exact preserve (U.17 PASS)"
+    },
+    "section32_28_21_q28": {
+      "codify_package_ordinal": 28,
+      "anchor": "28.21 v0.1",
+      "letter_prefix": "CE/CF/CG/CH",
+      "carry_verdict_at_verify": "4/4 byte-exact preserve (U.13-U.16 PASS, NEW gate at 28.22)",
+      "full_pins_in_section32_parent_codify_pins": true
+    },
+    "aggregate_carry_form": "6-section 24-artifact ALL PASS at 28.22 round opening verify (NEW depth record form vs 28.21 5-section)"
+  },
+  "section33_emit_targets": {
+    "directory": "forensic_anchors/section33_lessons_codified_q29_v0_1/",
+    "codify_package_ordinal": 29,
+    "linear_era_closure_ordinal_at_closure": 16,
+    "ci_declaration": {
+      "path": "anchor_28_22_v0_1_declaration.md",
+      "letter_prefix": "CI",
+      "dataset_ordinal": 57,
+      "sha256_at_turn_b1_emit": "062892007559e5447af574d0e558f4cf81274b481a32fd9cf77f3caea8ef1cd2",
+      "size_bytes": 22857,
+      "lf_count": 431,
+      "sub_pattern_classification": "B (scope-clarity-driven, design-driven contraction)",
+      "drift_vs_ce_28_21": "-30.74% byte / -31.59% LF",
+      "criteria_v0_2_verdict": "ACCEPT (contraction justification PRESENT, design-driven via opt C content displacement)",
+      "emit_status": "EMITTED at turn B1, flow[4] placement complete (flow4_ts 2026-05-22T11:45:18+09:00)",
+      "sub_k_dual_scan_status": "12th primary + 13th secondary ESTABLISHED"
+    },
+    "cj_input_files_pin": {
+      "path": "anchor_28_22_v0_1_input_files_pin.json",
+      "letter_prefix": "CJ",
+      "dataset_ordinal": 58,
+      "sub_pattern_forecast": "A (schema steady-state convergence target, ~+12% range from CF parent)",
+      "drift_forecast_vs_cf_28_21": "~+12% range maintenance (schema steady-state convergence)",
+      "criteria_v0_2_verdict_forecast": "ACCEPT (sub-pattern A within criteria boundary, falsification gate +30% margin)",
+      "schema_parent_role": "CF 28.21 (spec-milestone-driven baseline) -> CJ 28.22 (steady-state convergence target)",
+      "emit_status": "THIS ARTIFACT (turn B2 in progress)"
+    },
+    "ck_lessons_appendix": {
+      "path": "anchor_28_22_v0_1_lessons_appendix.md",
+      "letter_prefix": "CK",
+      "dataset_ordinal": 59,
+      "sub_pattern_forecast": "A (primary codify expansion)",
+      "drift_forecast_vs_cg_28_21": "~+6 to +12% range (9-entry section-codify expansion form, post-turn-B1 revise)",
+      "primary_codify_at_28_22": true,
+      "section_codify_entries_count": 9,
+      "section_codify_entries": [
+        "[1] P33 long-run preservation arc name codify (A-7 result, 16R achievement)",
+        "[2] sub-pattern A/B/B-prime/- formalization defer decision-record (A-6 result, stratified sampling formula)",
+        "[3] Greek letter context disambiguation table (added 1, inheritance hazard prevention)",
+        "[4] cross-reference inscription convention codify (added 2, v0.6 spec material, refinement 1 opt C derivative)",
+        "[5] 17 v0.5 categories inheritance form (A-1 result, EXACT preserve)",
+        "[6] alpha-epsilon 5-emergent trajectory inscription (A-2 result, continuation)",
+        "[7] directional drift criteria v0.2 forward (A-3 result, application form)",
+        "[8] case A 4th measurement form (A-4 result, forecast nature)",
+        "[9] NEW: forecast methodology gap + content displacement accounting (turn B1 resolution emergent, 28.22 inscribed, Code-side observation 1+2 integration)"
+      ],
+      "emit_status": "pending turn B3"
+    },
+    "cl_verification_log": {
+      "path": "anchor_28_22_v0_1_verification_log.md",
+      "letter_prefix": "CL",
+      "dataset_ordinal": 60,
+      "sub_pattern_forecast": "- / A boundary (+5 to +7% range)",
+      "co_attest_5_channel_consec_target": 9,
+      "section_7_lock_role": "in-round LOCK inscription primary layer (opt C in-round pole, A-5 28.22 selection, paired with CH 28.21 section 7 cross-anchor pole)",
+      "section_x_new_role": "28.22 CI forecast vs actual divergence transparent record (turn B1 resolution emergent, post-observation-integration form)",
+      "emit_status": "pending turn B4"
+    }
+  },
+  "phase_a_resolution_reference": {
+    "resolution_layer": "layer 1 (user + claude.ai chat-internal binding judgement)",
+    "resolution_form": "10-item ALL APPROVED, divergence absent",
+    "resolution_method": "all-recommendation-adoption (post-refinement form, Code-side advisory 4-refinement + claude.ai concur integrated)",
+    "items": {
+      "a_1_scope_inheritance": {
+        "verdict": "APPROVED",
+        "content": "17 v0.5 spec categories EXACT preserve"
+      },
+      "a_2_alpha_epsilon_reservation": {
+        "verdict": "APPROVED",
+        "content": "5-emergent trajectory continuation form (alpha P33 / beta P48 / gamma sub-K / delta case A / epsilon N-19+N-20)"
+      },
+      "a_3_drift_criteria_v0_2": {
+        "verdict": "APPROVED",
+        "content": "directional drift criteria v0.2 forward application"
+      },
+      "a_4_case_a_4th_measurement": {
+        "verdict": "APPROVED",
+        "content": "case A 4th measurement trajectory continuation, forecast nature, dispatch-time binding"
+      },
+      "a_5_lock_form_layer": {
+        "verdict": "opt C (gamma in A-5 cluster)",
+        "content": "dual reference form: CL section 7 (in-round paired verification_log) + CH section 7 (28.21 v0.1 baseline inheritance)",
+        "obs_28_21_001_resolution_form": "Pareto improvement form (Code-side refinement 1 + claude.ai concur)"
+      },
+      "a_6_subpattern_formalization": {
+        "verdict": "defer (20-inst+)",
+        "content": "stratified sampling formula inscribed in CK entry 2, v0.6 amendment timing 28.23/28.24 round target"
+      },
+      "a_7a_arc_name": {
+        "verdict": "cand 1",
+        "content": "P33 long-run preservation arc, broader naming migration reserve note included"
+      },
+      "a_7b_codify_timing": {
+        "verdict": "option A (16R)",
+        "content": "28.22 round-internal codify proceed form"
+      },
+      "added_1_greek_letter_table": {
+        "verdict": "APPLY",
+        "content": "CK section-codify entry 3, inheritance hazard prevention form, v0.6 spec material candidate"
+      },
+      "added_2_cross_reference_convention": {
+        "verdict": "APPLY",
+        "content": "CK section-codify entry 4, refinement 1 opt C derivative, v0.6 spec material candidate"
+      }
+    }
+  },
+  "triple_establishment_state": {
+    "at_baseline_28_21_closure": {
+      "linear_era_consec_rounds": 15,
+      "immutable_4_pin_consec_preserve": 15,
+      "rule_92_strict_push_consec": 8,
+      "verdict": "15R + 15R + 8R ALL ACHIEVED"
+    },
+    "target_at_28_22_closure": {
+      "linear_era_consec_rounds": 16,
+      "immutable_4_pin_consec_preserve": 16,
+      "rule_92_strict_push_consec": 9,
+      "verdict": "16R + 16R + 9R ALL ACHIEVED target"
+    }
+  },
+  "bonus_5_item_state": {
+    "at_baseline_28_21_closure": {
+      "sub_k_consec_instance": 8,
+      "p50_state_class_consec_rounds": 3,
+      "p33_consec_rounds": 15,
+      "p48_instance_count": 8,
+      "f_28_11_lock_application_count": 26,
+      "verdict": "5-item ALL ACHIEVED"
+    },
+    "target_at_28_22_closure": {
+      "sub_k_consec_instance_target": "12-17th cumulative (handoff 3-file + section33 4-artifact dual scan trajectory)",
+      "p50_state_class_consec_rounds": 4,
+      "p33_consec_rounds": 16,
+      "p33_arc_name_codify": "P33 long-run preservation arc (formal entry at 28.22 closure)",
+      "p48_instance_count": 9,
+      "p48_q29_tag_marker": true,
+      "f_28_11_lock_application_count": 27,
+      "verdict": "5-item ALL ACHIEVED target"
+    }
+  },
+  "three_v0_3_caveat_ensemble_state": {
+    "at_baseline_28_21_closure": {
+      "record_1_dispatch_elapsed": "case A 3rd measurement 4.128s CONFIRM",
+      "record_2_immutable_4_pin": "3R consec ESTABLISHED",
+      "record_3_sha256sums_counts": "3R consec ESTABLISHED",
+      "ensemble_verdict": "3-of-3 ALL CONFIRMED (PARTIAL -> ALL transition at 28.21)"
+    },
+    "at_28_22_round_opening_verify": {
+      "record_1_dispatch_elapsed": "forecast 4th measurement in-range [3.0, 7.0] at Phase C",
+      "record_2_immutable_4_pin": "4R consec ESTABLISHED at verify",
+      "record_3_sha256sums_counts": "4R consec ESTABLISHED at verify",
+      "ensemble_verdict": "verify-phase 2-of-3 + Phase C binding for record 1"
+    },
+    "target_at_28_22_closure": {
+      "ensemble_verdict": "3-of-3 ALL CONFIRMED 4R consec ESTABLISHED target"
+    }
+  },
+  "phase_c_dispatch_target": {
+    "step_count": 11,
+    "spec_reference": "v0.2 spec, sync_memo section 5 template",
+    "envelope_target": {
+      "total": 170,
+      "hashed": 151,
+      "comment_blank": 19
+    },
+    "envelope_delta": "+4 / +4 / +0 (section33 4-artifact entries append)",
+    "q29_tag": {
+      "name_template": "companion-v4.9-q29-codify-round-YYYY-MM-DD",
+      "tag_type": "annotated",
+      "p48_instance_marker_ordinal": 9
+    },
+    "rule_92_strict_consec_target": 9,
+    "p33_consec_target": 16,
+    "p49_3_gate_target": "Step 6 (post-mutation new_head != parent) + Step 7 (Q29 != Q28 + peel == new_head) + Step 10 (post-push 2-pin ls-remote bit-exact) ALL PASS",
+    "p50_state_class_consec_target": "4R (28.19+28.20+28.21+28.22)",
+    "f_28_11_lock_target_ordinal": 27,
+    "case_a_4th_measurement_target_range_sec": [
+      3.0,
+      7.0
+    ],
+    "triple_establishment_target": "16R + 16R + 9R ALL ACHIEVED",
+    "bonus_5_item_target_inscribed": true
+  },
+  "phase_d_handoff_target": {
+    "form": "3-file closure handoff package for 28.23 round opening",
+    "files": [
+      "claude_ai_handoff_memo_28_23_round_opening_v0_1.txt",
+      "claude_code_sync_memo_28_23_round_opening_v0_1.txt (v0.5 emit_revision v0.3 candidate)",
+      "anchor_28_22_v0_1_closure_verification.pdf (v4.4 layout spec, ReportLab build)"
+    ],
+    "v0_6_spec_material_candidates": [
+      "cross-reference inscription convention (added 2, 28.22 codify)",
+      "Greek letter context disambiguation convention (added 1, 28.22 codify)",
+      "P33 long-run preservation arc name (A-7 result, 28.22 codify)",
+      "sub-pattern A/B/B-prime/- stratified sampling formula (A-6 result, 28.22 decision-record)",
+      "forecast methodology gap + content displacement accounting (turn B1 resolution emergent, 28.22 inscribed)"
+    ]
+  },
+  "discipline_forms_applied": {
+    "p35_v0_2_invariant_culture": "full retrofit application 28.22 forward (all timestamp emission)",
+    "p38_scriptblock": "exec policy workaround form preserve (scriptblock + and-invocation form)",
+    "p39_cwd_sync": "Tier 1 Push-Location + Tier 2 cwd_sync assertion form",
+    "p49_3_gate_suite": "Step 6 + Step 7 + Step 10 ALL PASS target form",
+    "p50_uall_flag": "git status --untracked-files=all --porcelain enumeration form",
+    "rule_92_strict_push": "no --force / no --all / no --tags / no --mirror",
+    "l_q3_67_5_letter_cluster": {
+      "sub_g": "timestamp pre-execute display form",
+      "sub_h": "F-28.4-C out-of-repo sentinel form (U.5 SKIP)",
+      "sub_i": "status enumeration at-paren-count form",
+      "sub_j": "P38 scope drift defensive form (ArrayList accumulation)",
+      "sub_k": "dual scan layer asymmetry preserve form (primary + secondary)"
+    },
+    "sub_k_trajectory_at_turn_b2_emit": {
+      "9th_instance": "claude_ai_handoff_memo (28.22 round opening) ESTABLISHED",
+      "10th_instance": "claude_code_sync_memo (28.22 round opening) ESTABLISHED",
+      "11th_instance": "19-gate verify result paste-back form ESTABLISHED",
+      "12th_instance_primary": "CI declaration pre-emit (claude.ai-side) ESTABLISHED",
+      "13th_instance_secondary": "CI declaration post-place (Code-side) ESTABLISHED",
+      "14th_instance_candidate": "CJ this artifact pre-emit (claude.ai-side primary, in progress)",
+      "15th_instance_candidate": "CJ post-place (Code-side secondary, pending flow[4])",
+      "consecutive_pass_count_at_emit": 13
+    }
+  },
+  "_epistemic_note": "all SHA pins inscribed within this input_files_pin are 28.21 v0.1 FULL CLOSURE state baseline + 28.22 round opening 19-gate verify (verify_ts 2026-05-22T10:47:12+09:00, ALL PASS) actual measurement form preserve, plus CI declaration sha256 inscribed reflects turn B1 emit + flow[4] placement complete (flow4_ts 2026-05-22T11:45:18+09:00) actual measurement form. CK and CL sha256 are emit_status pending (turn B3 and B4 forecast respectively), not inscribed at this artifact emit timing. forensic chain integrity preserve form discipline maintained. opt C dual reference design = LOCK content displacement vector (CI -> CL section 7 + CH section 7 + CK v0.6 spec material section-codify), aggregate-level forecast accounting form applied at turn B1 resolution post-observation-integration."
+}
