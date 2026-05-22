@@ -1,0 +1,338 @@
+{
+  "_meta": {
+    "schema": "anchor_input_files_pin v0.5",
+    "schema_parent_28_20_BF": "8c08938ee0f91997e02a5cfc64b1d924d70cbd6ddd53fba616ea1c3e2f2538a1 / 13546 B / LF 252 (CF direct schema parent)",
+    "schema_role_for_28_22": "CF is the direct schema parent for 28.22 round input_files_pin",
+    "anchor_id": "28.21",
+    "round_version": "v0.1",
+    "dataset_ordinal": 54,
+    "artifact_id": "CF",
+    "section": "section32_lessons_codified_q28_v0_1",
+    "license": "CC-BY 4.0",
+    "author": "Sakaguchi Shinobu / Sakaguchi Seimensho / Hyogo Prefecture, Shiso City",
+    "emit_form": "claude.ai-side source generation phase, sub-K primary preventive applied",
+    "sub_k_instance": "6th of 8-instance trajectory (1st BH + 2nd file 1 + 3rd file 2 + 4th file 3 build script + 5th CE + 6th CF + 7th CG pending + 8th CH pending)",
+    "p35_v0_2": "InvariantCulture form applied at all timestamp emission",
+    "encoding": "UTF-8 LF only no BOM"
+  },
+  "round_metadata": {
+    "linear_era_round_ordinal": 15,
+    "linear_era_root": "491ff34cce22040e052f226e64adddc1669ea1b4",
+    "parent_anchor": "28.20 v0.1 FULL CLOSURE",
+    "parent_HEAD": "5760aa59b9d63d7fb7143ce15fccd9898e3081b9",
+    "parent_Q27_tag_obj": "cce3654029ca226d75a632f8e9b55b97c109edb4",
+    "parent_Q27_tag_name": "companion-v4.9-q27-codify-round-2026-05-22",
+    "parent_Q26_tag_obj_preserved": "5b2a3c5aee625dc7077edebe51f9ceb50f691ae5",
+    "parent_chain_depth": 27,
+    "parent_envelope_counts": {
+      "total": 162,
+      "hashed": 143,
+      "comment_blank": 19
+    },
+    "parent_closure_ts": "2026-05-22T06:49:36+09:00 to 06:49:51+09:00 (14.618s wall-clock)",
+    "target_Q28_tag_name": "companion-v4.9-q28-codify-round-2026-05-22",
+    "target_Q28_tag_obj": "__TARGET_Q28_TAG_OBJ_PHASE_C_POPULATED__",
+    "target_HEAD": "__TARGET_HEAD_PHASE_C_POPULATED__",
+    "target_chain_depth": 28,
+    "target_linear_era_15R_ESTABLISHMENT": "in-progress, 15R consecutive (28.7 through 28.21) target"
+  },
+  "section32_4_artifact_pins": {
+    "_role": "28.21 round codify package (section32, 4-artifact form)",
+    "_dataset_ordinal_range": "53rd to 56th (cumulative section5..section32 sequential)",
+    "CE_declaration": {
+      "filename": "anchor_28_21_v0_1_declaration.md",
+      "path": "forensic_anchors/section32_lessons_codified_q28_v0_1/anchor_28_21_v0_1_declaration.md",
+      "sha256": "92d74b971bd518213a655eb8f99d382f47ea19a62e42d878a78bbe629ccbb048",
+      "size_bytes": 32985,
+      "lf_count": 630,
+      "dataset_ordinal": 53,
+      "emit_status": "EMITTED at claude.ai-side source generation phase, Code-side secondary verify PASS pending (option Y batch placement form)",
+      "precedent_28_20_BE": {
+        "sha_truncated": "29ba9698..",
+        "size_bytes": 42113,
+        "lf_count": 780,
+        "drift_baseline_form": "BE -0.88% / LF -0.0% (28.20 BE near-zero drift form)"
+      },
+      "drift_pct": {
+        "size": -21.68,
+        "lf": -19.23,
+        "density_bytes_per_lf": -3.03
+      },
+      "drift_verdict": "ACCEPT (sub-pattern B form, scope contraction justification PRESENT, lean form natural)",
+      "drift_justification_present": [
+        "J1 Phase A scope clarity",
+        "J2 separation of concerns (CE design / CH actual)",
+        "J3 17-category inheritance form"
+      ],
+      "direction_transition": "from 28.20 4-inst over-shoot streak (BF+12.04 / BG+4.56 / BH+7.49 / file1+6.74) to 28.21 1-inst under-shoot (mixed direction, 3-inst consec INVESTIGATE arc NOT triggered)",
+      "sub_k_layer": "primary preventive (claude.ai-side pre-emit) + secondary defensive (Code-side post-place pending)"
+    },
+    "CF_input_files_pin": {
+      "filename": "anchor_28_21_v0_1_input_files_pin.json",
+      "path": "forensic_anchors/section32_lessons_codified_q28_v0_1/anchor_28_21_v0_1_input_files_pin.json",
+      "sha256": "__CF_SHA_SELF_REF_SENTINEL__",
+      "size_bytes": -1,
+      "lf_count": -1,
+      "dataset_ordinal": 54,
+      "emit_status": "SELF-REFERENCE sentinel form (sub-H sentinel discipline, self-ref unmeasurable pre-emit)",
+      "precedent_28_20_BF": {
+        "sha_truncated": "8c08938e..",
+        "sha_full": "8c08938ee0f91997e02a5cfc64b1d924d70cbd6ddd53fba616ea1c3e2f2538a1",
+        "size_bytes": 13546,
+        "lf_count": 252
+      },
+      "drift_pct": {
+        "size": -999.0,
+        "lf": -999.0,
+        "_form": "self-ref pre-emit unmeasurable"
+      },
+      "drift_verdict_target": "ACCEPT default form (over-shoot direction possible due to NEW v0.5 spec content emergence: schema v0.5 update + section32 NEW + sub-K dual scan declaration + parent_chain_section31 carry replacement)",
+      "sub_k_layer": "primary preventive (本 file emit phase) + secondary defensive (Code-side post-place pending)"
+    },
+    "CG_lessons_appendix": {
+      "filename": "anchor_28_21_v0_1_lessons_appendix.md",
+      "path": "forensic_anchors/section32_lessons_codified_q28_v0_1/anchor_28_21_v0_1_lessons_appendix.md",
+      "sha256": "__CG_SHA_UNFILLED__",
+      "size_bytes": -1,
+      "lf_count": -1,
+      "dataset_ordinal": 55,
+      "emit_status": "PENDING (Phase B step-3 target, PRIMARY CODIFY mid-range form)",
+      "precedent_28_20_BG": {
+        "sha_truncated": "1773d552..",
+        "sha_full": "1773d5520ff53e53bf8d2dbca3ef2247174d806d543adcf6bd05f2ec8306965f",
+        "size_bytes": 71091,
+        "lf_count": 1460
+      },
+      "role": "PRIMARY CODIFY content, v0.5 spec 17-category inscription items + 28.21 round Phase B/C lessons + L-Q3-67 sub-K 6th instance",
+      "sub_k_layer": "primary preventive + secondary defensive dual scan target"
+    },
+    "CH_verification_log": {
+      "filename": "anchor_28_21_v0_1_verification_log.md",
+      "path": "forensic_anchors/section32_lessons_codified_q28_v0_1/anchor_28_21_v0_1_verification_log.md",
+      "sha256": "__CH_SHA_UNFILLED__",
+      "size_bytes": -1,
+      "lf_count": -1,
+      "dataset_ordinal": 56,
+      "emit_status": "PENDING (Phase B step-4 target, Phase C 11-step result inscribe form)",
+      "precedent_28_20_BH": {
+        "sha_truncated": "232ece8d..",
+        "sha_full": "232ece8daf0c47d231124b77c7735872b86a03231eea3e076fe3fec88ba03d2f",
+        "size_bytes": 40899,
+        "lf_count": 708
+      },
+      "role": "Phase C dispatch v0.2 spec 11-step verdict matrix + caveat record #1 §4.2 3rd measurement actual result + 5-channel co-attest 8th round consecutive candidate confirmation form",
+      "sub_k_layer": "primary preventive + secondary defensive dual scan target (8th instance ESTABLISHMENT)"
+    }
+  },
+  "parent_chain_section31_pins": {
+    "_role": "section31 (28.20 closure 4-artifact) byte-exact carry preserve at 28.21 round",
+    "_carry_form": "NEW gate form at 28.21 opening (18-gate U.13-U.16 PASS confirmed)",
+    "BE_declaration": {
+      "path": "forensic_anchors/section31_lessons_codified_q27_v0_1/anchor_28_20_v0_1_declaration.md",
+      "sha256": "29ba9698d4255b36a65f803732f35efd70851d86a88e41cd33a227a4145eb1bd",
+      "size_bytes": 42113,
+      "lf_count": 780,
+      "carry_status": "byte-exact preserve at 28.21 opening verify (U.13 PASS)"
+    },
+    "BF_input_files_pin": {
+      "path": "forensic_anchors/section31_lessons_codified_q27_v0_1/anchor_28_20_v0_1_input_files_pin.json",
+      "sha256": "8c08938ee0f91997e02a5cfc64b1d924d70cbd6ddd53fba616ea1c3e2f2538a1",
+      "size_bytes": 13546,
+      "lf_count": 252,
+      "carry_status": "byte-exact preserve at 28.21 opening verify (U.14 PASS)",
+      "schema_role": "direct schema parent of CF 28.21 (本 file)"
+    },
+    "BG_lessons_appendix": {
+      "path": "forensic_anchors/section31_lessons_codified_q27_v0_1/anchor_28_20_v0_1_lessons_appendix.md",
+      "sha256": "1773d5520ff53e53bf8d2dbca3ef2247174d806d543adcf6bd05f2ec8306965f",
+      "size_bytes": 71091,
+      "lf_count": 1460,
+      "carry_status": "byte-exact preserve at 28.21 opening verify (U.15 PASS, post form A sub form preserved)"
+    },
+    "BH_verification_log": {
+      "path": "forensic_anchors/section31_lessons_codified_q27_v0_1/anchor_28_20_v0_1_verification_log.md",
+      "sha256": "232ece8daf0c47d231124b77c7735872b86a03231eea3e076fe3fec88ba03d2f",
+      "size_bytes": 40899,
+      "lf_count": 708,
+      "carry_status": "byte-exact preserve at 28.21 opening verify (U.16 PASS)"
+    }
+  },
+  "IMMUTABLE_4pin_explicit_path_form": {
+    "_role": "IMMUTABLE 4-pin v0.5 §3 explicit path form, 15R consecutive preserve target at 28.21 closure",
+    "_preserve_target": "15R consecutive preserve (28.7 through 28.21 target), 14R ESTABLISHED at 28.20",
+    "_verify_at_28_21_opening": "U.10 IMMUTABLE_3pin 3/3 PASS confirmed, X2 full SHA captured form 2nd consecutive",
+    "_caveat_record_2_form": "v0.5 spec §3 explicit path form, 2nd consecutive PASS at 28.21 opening",
+    "X1": {
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_input_files_pin.json",
+      "sha256": "435bf4b68a48e251e7a591564ee870b94072f9573292579ddac0ead6f7eff2be",
+      "size_bytes": 9561,
+      "preserve_status": "byte-exact preserve at 28.21 opening (U.10 PASS, 15R target trajectory)"
+    },
+    "X1_sib": {
+      "path": "forensic_anchors/section5_axis_4_type_alpha/anchor_22_v0_2_lessons_appendix.md",
+      "sha256": "4df652d6daebc0d06a7fe4a8b5e6771ae8fe6bf049d3a421d440e759fecc0a7a",
+      "size_bytes": 9379,
+      "preserve_status": "byte-exact preserve at 28.21 opening (U.10 PASS, 15R target trajectory)"
+    },
+    "X2": {
+      "path": "latex_v48/membrane_v48.tex",
+      "sha256": "d43985b896b63e625718bd6d5d644abbfe6b2cee99721290d0165a39c212e5dd",
+      "size_bytes": 118226,
+      "preserve_status": "byte-exact preserve at 28.21 opening (U.10 PASS, full SHA inscribe form 2nd consec)"
+    },
+    "F_28_4_C": {
+      "path": "__F284C_PATH_UNFILLED_OUT_OF_REPO__",
+      "sha256": "5d9beb04...",
+      "size_bytes": 11096,
+      "preserve_status": "out-of-repo sentinel form (U.5 SKIP, sub-H sentinel discipline)"
+    }
+  },
+  "companion_files_28_21_round_opening": {
+    "_role": "28.20 closure handoff package (3-file form) for 28.21 round opening",
+    "_emit_phase": "28.20 Phase D closure handoff emit, claude.ai-side source generation",
+    "_paste_back_form": "user-mediated conversation paste-back (Code-side placement 対象外)",
+    "_code_side_measurement_ts": "post-28.21-opening Code-side measurement form",
+    "file_1_handoff_memo": {
+      "filename": "claude_ai_handoff_memo_28_21_round_opening_v0_1.txt",
+      "sha256": "b90a3cd3bb8203b1773e840b5f1fc61334a58236180e1c15bf35d93fea577606",
+      "size_bytes": 19408,
+      "lf_count": 336,
+      "cr_count": 0,
+      "bom": "ABSENT",
+      "encoding": "UTF-8 LF only no BOM",
+      "role": "claude.ai-side context grasp directive + Phase A-D work plan + 28.20 baseline inheritance + 18-gate paired re-sync verify baseline directive",
+      "sub_k_instance": "2nd of 8-instance trajectory",
+      "header_sha_self_pin_verify": "header inscribed b90a3cd3.. matches Code-side actual measurement (bit-exact confirmed)"
+    },
+    "file_2_sync_memo": {
+      "filename": "claude_code_sync_memo_28_21_round_opening_v0_1.txt",
+      "sha256": "0a36e3699dc66e0fa2add80037eaaafc067e5da8feb8dff1e2be1fc6ed638205",
+      "size_bytes": 42686,
+      "lf_count": 751,
+      "cr_count": 0,
+      "bom": "ABSENT",
+      "encoding": "UTF-8 LF only no BOM",
+      "spec_version": "v0.5",
+      "emit_revision": "v0.1",
+      "role": "Code-side execute spec, 18-gate paired re-sync verify PowerShell script template + Stage 5 dispatch v0.2 spec 11-step PowerShell script template + N-13 14-set strict scan helper function",
+      "sub_k_instance": "3rd of 8-instance trajectory"
+    },
+    "file_3_closure_verification_pdf": {
+      "filename": "anchor_28_20_v0_1_closure_verification.pdf",
+      "sha256": "05ffc41be324f64d385c78948abecbc5efe6058bd90dd95bde192621814ca0ff",
+      "size_bytes": 108190,
+      "encoding": "binary (PDF, no lf_count applicable)",
+      "layout_spec": "v4.4 (IPAGothic/IPAPGothic fonts, ReportLab generated, white BG colored headers, red emphasis #e94560)",
+      "role": "28.20 v0.1 FULL CLOSURE forensic chain verification record, 11-page document",
+      "sub_k_instance": "4th of 8-instance trajectory (build script Python source layer, PDF binary itself NOT text scan target)",
+      "build_script_form": "claude.ai-side ReportLab Python source emit + text-to-PDF encoding pass + final PDF binary output (build script ephemeral, primary preventive applied at source gen phase)"
+    }
+  },
+  "envelope_state_transition": {
+    "_role": "envelope (.gitattributes + SHA256SUMS) state transition pin form, parent + target form",
+    "parent_28_20_closure": {
+      "ga_sha256": "cd7c5ae04dfbbb399feea555d373efed4d42f07bed35c94ae368b838c156c112",
+      "ss_sha256": "9d0bf740c9aa490d7b027f6f12bc8d74de3491c3f0befd4ac766d0a45a462e10",
+      "counts": {
+        "total": 162,
+        "hashed": 143,
+        "comment_blank": 19
+      },
+      "counts_form": "line-category count form (caveat record #3 v0.5 §3 form, 2nd consecutive PASS)"
+    },
+    "target_28_21_closure_projected": {
+      "ga_sha256": "__TARGET_GA_SHA_PHASE_C_POPULATED__",
+      "ss_sha256": "__TARGET_SS_SHA_PHASE_C_POPULATED__",
+      "counts": {
+        "total": 166,
+        "hashed": 147,
+        "comment_blank": 19
+      },
+      "delta_form": "+4/+4/+0 (section32 4-artifact append at Phase C Step 3a/3b atomic commit)"
+    }
+  },
+  "carry_section_baseline_28_21_round": {
+    "_role": "section28 through section31 4-artifact carry baseline summary at 28.21 round opening",
+    "section28_AN_AO_AP_AQ": "4/4 carry preserve (28.17 closure, 18-gate U.3 PASS)",
+    "section29_AS_AT_AU_AV": "4/4 carry preserve (28.18 closure, 18-gate U.18 NEW gate PASS at 28.21 opening)",
+    "section30_AW_AX_AY_AZ": "4/4 carry preserve (28.19 closure, 18-gate U.17 PASS)",
+    "section31_BE_BF_BG_BH": "4/4 carry preserve (28.20 closure, 18-gate U.13-U.16 NEW gate PASS at 28.21 opening)"
+  },
+  "operational_evidence_captured_at_CE_placement": {
+    "_role": "operational evidence accumulation form, captured at CE batch placement TS",
+    "_emit_ts": "__CE_PLACEMENT_TS_BATCH_POPULATED__",
+    "_placement_form": "option Y (4-batch placement, CE through CH 全 emit 完了後の一括 placement form)",
+    "instance_1_CE_byte_exact": {
+      "form": "claude.ai-side emit SHA == Code-side post-place SHA bit-exact",
+      "claude_ai_side_sha": "92d74b971bd518213a655eb8f99d382f47ea19a62e42d878a78bbe629ccbb048",
+      "code_side_sha": "__CODE_SIDE_POST_PLACE_SHA_PHASE_B_END__",
+      "status": "PENDING (option Y batch placement after Phase B step-4 completion)"
+    },
+    "instance_2_P35_v0_2_real_machine": {
+      "form": "Phase C dispatch script execution time, InvariantCulture timestamp emission verify",
+      "status": "PENDING (Phase C dispatch execution time capture)"
+    },
+    "instance_3_P50_B_to_A_transition": {
+      "form": "state-class B (round opening clean 0/0) to A (untracked emit 4/0) transition log",
+      "status": "PENDING (Phase B step batch placement transition capture)"
+    }
+  },
+  "phase_progression_state": {
+    "phase_A": {
+      "status": "COMPLETED",
+      "outcome": "4-item all-OK default precedent form confirm",
+      "items": [
+        "v0.5 spec 17-category priority OK",
+        "scope inheritance + alpha-epsilon reservation OK",
+        "directional drift v0.2 default OK",
+        "caveat record #1 §4.2 3rd measurement 3-case form OK"
+      ]
+    },
+    "phase_B": {
+      "status": "IN_PROGRESS",
+      "completed": [
+        "CE (53rd, EMITTED + ACCEPT lean form natural)"
+      ],
+      "current": "CF (54th, 本 file emit phase)",
+      "pending": [
+        "CG (55th, PRIMARY CODIFY)",
+        "CH (56th, Phase C result inscribe)"
+      ]
+    },
+    "phase_C": {
+      "status": "PENDING",
+      "target_form": "Stage 5 dispatch v0.2 spec 11-step execute, Q28 annotated tag emission",
+      "target_outcomes": [
+        "chain 27 to 28",
+        "envelope 162/143/19 to 166/147/19",
+        "rule 92 8R consec",
+        "IMMUTABLE 4-pin 15R consec",
+        "F-28.11 26th application LOCK",
+        "P50 3R consec",
+        "caveat record #1 §4.2 3rd measurement"
+      ]
+    },
+    "phase_D": {
+      "status": "PENDING",
+      "target_form": "28.21 v0.1 FULL CLOSURE + 28.22 round opening handoff package emit (3-file form)",
+      "target_ESTABLISHMENT": "triple 15R + 15R + 8R ALL ACHIEVED form"
+    }
+  },
+  "discipline_continuity_declarations": {
+    "rule_92": "strict push, 8R consecutive target (28.14 through 28.21), forbidden flags ABSENT (no --force / --all / --tags / --mirror)",
+    "Pattern_33": "section32/** -text directive append + CRLF warning 4/4 emit, 15R consecutive target",
+    "Pattern_35_v0_2": "InvariantCulture explicit form mandatory at all timestamp emission, full retrofit 28.21",
+    "Pattern_48": "cross-round 5-channel co-attest 8-instance trajectory candidate, Q28 tag message 8-instance marker inscribe form",
+    "Pattern_49": "P49 3-gate suite (Step 6 post-commit + Step 7 post-tag + Step 10 post-push Ordinal), F-28.11 26th application LOCK target",
+    "Pattern_50": "state-class B->A->C 1-round 3-class cycle, 3R consecutive ESTABLISHMENT target (28.19 + 28.20 + 28.21)",
+    "L_Q3_67_5_letter_cluster": "G (string interp) / H (sentinel) / I (Count) / J (ArrayList Add) / K (sub-K pre-emit N-13 scan), 5-letter ensemble form self-application continuity",
+    "N_17_a_primary": "canonical name emit form continuity (anchor_28_21_v0_1_<role>.<ext> naming pattern)",
+    "sub_K_dual_scan": "8-instance trajectory ESTABLISHMENT target (v0.5 spec §5.3 form, option alpha adopted) + layer asymmetry note (primary 8-inst full / secondary 5-inst partial)",
+    "caveat_record_1": "§4.2 dispatch_elapsed CAVEAT form, 28.21 = 3rd measurement instance, 3-case form (case A in-range / case B marginal / case C significant) boundary 7.0s / 8.0s",
+    "caveat_record_2": "IMMUTABLE 4-pin explicit path form, 3R consecutive target at 28.22 opening (1R 28.20 + 2R 28.21)",
+    "caveat_record_3": "SHA256SUMS line-category count form (total/hashed/comment_blank), 3R consecutive target at 28.22 opening"
+  },
+  "v0_5_spec_inscription_items_reference": "17-category form (v0.4 inherited 11-cat + v0.5 NEW 6-cat §8.10 through §8.15). Detailed per-category operational evidence inscription target: CG lessons_appendix (55th, PRIMARY CODIFY). Phase A confirm: default precedence form, reorder NOT required, §8.15 sub-pattern A/B formalization timing pending (9-inst cumulative to 14-inst cumulative trajectory data acquisition).",
+  "_epistemic_note": "本 CF (54th dataset) は BF 28.20 (50th dataset) precedent strict inheritance form (14 top-level keys / 15 pins / 4 hierarchical sections) + v0.5 spec content emergence (schema v0.4 to v0.5 / section32 NEW / sub-K dual scan declaration / section31 carry replacement). All sentinel form values (__*_UNFILLED__ / __*_POPULATED__) are Phase C / batch placement post-emit fix target. claude.ai-side sub-K primary preventive (pre-emit N-13 14-set scan + form A substitution) applied at source generation phase, Code-side secondary defensive (post-place N-13 strict scan via Test-N13Strict function) target at batch placement phase. CF self-reference SHA emerges only after byte-exact write, inscribe form sentinel preserved at emit phase per sub-H discipline.",
+  "_end_marker": "END of anchor_28_21_v0_1_input_files_pin.json (CF, 54th dataset, section32 anchor 28.21 v0.1)"
+}
